@@ -1,0 +1,198 @@
+@font-face{
+	font-family: "pixel";
+	src: url('pixel.ttf');
+}
+@font-face{
+	font-family: "big_pixel";
+	src: url('big_pixel.ttf');
+}
+body {
+	position: relative;
+	margin: 8px 64px;
+	color: #40f0c0;
+	background-image: url("./img/water.png");
+	background-size: 8em;
+	background-color: #3148f4;
+	image-rendering: pixelated;
+	image-rendering: crisp-edges;/*One or the other will work, hopefully.*/
+	font-family: pixel;
+}
+a {
+	color: inherit;
+}
+a:hover {
+	color: #ffffff;
+}
+a:active {
+	color: inherit;
+}
+#center {
+	height: auto;
+	width: 100%;
+	background-image: url("./img/planks_birch.png");
+	background-size: 4em;
+	image-rendering: pixelated;
+	image-rendering: crisp-edges;/*One or the other will work, hopefully.*/
+	padding: 0.167em;
+}
+#title {
+	display: inline-block;
+	font-size: 2em;
+	font-family: big_pixel;
+	color: #219255;
+	padding: 2px;
+	margin: 0.167em;
+	text-shadow: -0.125em -0.125em 0 #000, 0.125em -0.125em 0 #000, -0.125em 0.125em 0 #000, 0.125em 0.125em 0 #000,
+		-0.125em -0.0625em 0 #000, 0.125em -0.0625em 0 #000, -0.125em 0.0625em 0 #000, 0.125em 0.0625em 0 #000;
+}
+#navigation {
+	display: inline-block;
+	font-size: 1.5em;
+	width: 100%;
+	position: relative;
+}
+p {
+	text-shadow: -0.0625em -0.0625em 0 #000, 0.0625em -0.0625em 0 #000, -0.0625em 0.0625em 0 #000, 0.0625em 0.0625em 0 #000;
+	margin: 0px 1em 1em;
+}
+#text {
+	/*position: absolute;
+	top: 5.5em;*/
+}
+.card {
+	width: 30%;
+	height: 24em;
+	margin: 1.66%;
+	background-image: url("./img/prismarine_bricks.png");
+	image-rendering: pixelated;
+	image-rendering: crisp-edges;/*One or the other will work, hopefully.*/
+	background-size: 4em;
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
+.imgHold {
+	height: 50%;
+	width: 100%;
+	overflow: hidden;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.cardTxt {
+	height: 50%;
+	width: 100%;
+	text-shadow: -0.0625em -0.0625em 0 #000, 0.0625em -0.0625em 0 #000, -0.0625em 0.0625em 0 #000, 0.0625em 0.0625em 0 #000;
+}
+.cardTxt>* {
+	margin: 0.5em;
+}
+.cardTxt>:nth-child(1) {
+	font-size: 1.5em;
+	text-shadow: -0.125em -0.125em 0 #000, 0.125em -0.125em 0 #000, -0.125em 0.125em 0 #000, 0.125em 0.125em 0 #000,
+		-0.125em -0px 0 #000, 0.125em -0px 0 #000, 0px 0.125em 0 #000, 0px -0.125em 0 #000;
+}
+@media (max-width: 58.6em) {
+	.card {
+		height: 28em;
+	}
+	.imgHold {
+		height: 42.857%;
+	}
+	.cardTxt {
+		top: 42.857%;
+		height: 53.571%;
+	}
+}
+@media (max-width: 48em) {
+	.card {
+		float: none;
+		width: 100%;
+		margin: 1.66% 0px;
+		height: 14em;
+	}
+	.imgHold {
+		width: 50%;
+		height: 100%;
+		background-size: 100%;
+		display: inline-block;
+	}
+	.cardTxt {
+		display: inline-block;
+		width: 50%;
+		height: 100%;
+		top: 0px;
+		position: absolute;
+		right: 0%;
+	}
+}
+@media (max-width: 36em) {
+	.imgHold {
+		background-size: auto 100%;
+	}
+}
+@media (max-width: 35.5em) {
+	body {
+		margin: 32px;
+	}
+	#title {
+		font-size: 2em;
+	}
+	#text p {
+		font-size: 0.75em;
+		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000,
+			-1px -0px 0 #000, 1px -0px 0 #000, -0px 1px 0 #000, 0px -1px 0 #000;
+	}
+	.cardTxt {
+		font-size: 0.75em;
+		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000,
+			-1px -0px 0 #000, 1px -0px 0 #000, -0px 1px 0 #000, 0px -1px 0 #000;
+	}
+	.cardTxt>:nth-child(1) {
+		font-size: 2em;
+	}
+	.imgHold {
+		background-size: 100%;
+	}
+}
+@media (max-width: 32em) {
+	.imgHold {
+		overflow: hidden;
+		background-size: auto 100%;
+	}
+}
+@media (max-width: 29em) {
+	body {
+		margin: 32px;
+	}
+	#title {
+		font-size: 1em;
+	}
+	#text p {
+		font-size: 0.5em;
+		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000,
+			-1px -0px 0 #000, 1px -0px 0 #000, -0px 1px 0 #000, 0px -1px 0 #000;
+	}
+	.cardTxt {
+		font-size: 0.5em;
+		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000,
+			-1px -0px 0 #000, 1px -0px 0 #000, -0px 1px 0 #000, 0px -1px 0 #000;
+	}
+	.cardTxt>:nth-child(1) {
+		font-size: 1.5em;
+	}
+	.imgHold {
+		background-size: auto 100%;
+	}
+}
+@media (max-width: 16.5em) {
+	body {
+		margin: 16px;
+	}
+	#title {
+		font-size: 0.7em;
+	}
+	#text p {
+		font-size: 0.25em;
+	}
+}
