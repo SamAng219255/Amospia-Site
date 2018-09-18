@@ -4,6 +4,5 @@
 			<div>x=<input type="text" id="JsMFunc2" placeholder="Function 2"></input>, y=<input type="text" id="JsMFunc2b" placeholder="Function 2"></input></div>
 			<div>x=<input type="text" id="JsMFunc3" placeholder="Function 3"></input>, y=<input type="text" id="JsMFunc3b" placeholder="Function 3"></input></div>
 			<div>x=<input type="text" id="JsMFunc4" placeholder="Function 4"></input>, y=<input type="text" id="JsMFunc4b" placeholder="Function 4"></input></div>
-			<p></p>
 			<div>Range:</div>
 			<div>Start:<input type="number" id="tStart"></input>, End:<input type="number" id="tEnd"></input></div>
