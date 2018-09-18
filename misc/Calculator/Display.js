@@ -1,6 +1,7 @@
 Range=[[NaN,NaN],[NaN,NaN]];
 graphMode="default";
 colours=["4400FF","FF4400","44FF00","CC00FF"];
+begun=false;
 function ShowGraph(range,precision,funcs) {
 	if(graphMode=="default") {
 		Range=range;
@@ -154,6 +155,9 @@ function ShowGraph(range,precision,funcs) {
 					funcTable[i].push([x,parseMath(funcs[i],"x",x)]);
 				}
 				ctx.stroke();
+			}
+			else {
+				delete Math[String.fromCharCode(97+i)];
 			}
 		}
 	}
@@ -316,7 +320,10 @@ function ShowGraph(range,precision,funcs) {
 function graphButton() {
 	if(Math.floor(parseFloat(document.getElementById("rangeA2").value))>parseFloat(document.getElementById("rangeA1").value) &&
 		 Math.floor(parseFloat(document.getElementById("rangeB2").value))>parseFloat(document.getElementById("rangeB1").value)) {
-		canvas.addEventListener("mousedown", check, false);
+		canvas.removeEventListener("mousedown", check, false);
+		canvas.removeEventListener("mousemove", check, false);
+		canvas.addEventListener(document.getElementById("detectMode").value, check, false);
+		begun=true;
 		if(graphMode=="default") {
 			ShowGraph(
 				[
@@ -395,7 +402,7 @@ function check(event) {
 	drawCircle(point[0],point[1],4,"#"+colours[document.getElementById("funcLetter").value.charCodeAt()-97]);
 	ctx.font="20px Ariel";
 	ctx.fillText("("+Math.round(10000*unconvertPoint(point,Range)[0])/10000+","+Math.round(10000*unconvertPoint(point,Range)[1])/10000+")",point[0],point[1]);
-	console.log("("+Math.round(10000*unconvertPoint(point,Range)[0])/10000+","+Math.round(10000*unconvertPoint(point,Range)[1])/10000+")");
+	//console.log("("+Math.round(10000*unconvertPoint(point,Range)[0])/10000+","+Math.round(10000*unconvertPoint(point,Range)[1])/10000+")");
 }
 function drawCircle(xPos,yPos,radius,color) {
 	ctx.beginPath()
@@ -405,6 +412,8 @@ function drawCircle(xPos,yPos,radius,color) {
 }
 function switchTranslate() {
 	switchMode(document.getElementById("graphMode").value);
+	canvas.removeEventListener("mousedown", check, false);
+	canvas.removeEventListener("mousemove", check, false);
 }
 function switchMode(mode) {
 	var xhttp = new XMLHttpRequest();

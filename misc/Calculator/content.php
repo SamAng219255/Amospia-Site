@@ -90,6 +90,21 @@
 					<option value="d">function d(x)</option>
 				</select>
 			</div>
+			<div>
+				<select id="detectMode" onchange="changeDetectMode()">
+					<option value="mousedown">Click</option>
+					<option value="mousemove">Hover</option>
+				</select>
+				<script>
+					function changeDetectMode() {
+						if(begun) {
+							canvas.removeEventListener("mousedown", check, false);
+							canvas.removeEventListener("mousemove", check, false);
+							canvas.addEventListener(document.getElementById("detectMode").value, check, false);
+						}
+					}
+				</script>
+			</div>
 		</div>
 	</div>
 </div>
