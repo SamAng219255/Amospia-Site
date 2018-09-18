@@ -1,1 +1,1 @@
-<p>Welcome to my server!</p>
+<p>Welcome to my site!</p>

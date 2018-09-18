@@ -1,3 +1,6 @@
+html, body {
+	overflow-x: hidden;
+}
 body {
 	position: relative;
 	padding: 8px 64px;
@@ -5,6 +8,8 @@ body {
 	font-family: Helvetica, Arial, sans-serif;
 	background-color: #101018;
 	color: #40f0c0;
+	overflow-x: hidden;
+	width: calc(100% - 128px);
 }
 a, a:active, a:visited {
 	color: inherit;
@@ -26,6 +31,16 @@ a:hover {
 	width: 100%;
 	background-color: #181824;
 	padding: 0.167em;
+	position: relative;
+}
+#mobilenavigation {
+	display: none;
+	font-size: 1.5em;
+	width: 100%;
+	background-color: #181824;
+	padding: 0.167em;
+	visibility: hidden;
+	position: relative;
 }
 .navButton {
 	position: relative;
@@ -43,7 +58,7 @@ a:hover {
 	color: inherit;
 	text-decoration: none;
 }
-.navButton:hover {
+#navigation>.navButton:hover {
 	background-color: #202030;
 }
 .dropdown {
@@ -73,14 +88,47 @@ a:hover {
 .dropdown>a>div {
 	margin: 0.5em;
 }
+.mobilemenu>a {
+	display: block;
+	width: 100%;
+	font-size: 0.75em;
+	color: inherit;
+	text-decoration: none;
+}
+.mobilemenu>a:nth-child(odd) {
+	background-color: #303040
+}
+.mobilemenu>a>div {
+	margin: 0.5em;
+}
 #content {
 	margin-top: 2em;
+}
+#content * {
+	white-space: pre-line;
+}
+.mobilemenu {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #0C0C10;
+	top: 0px;
+	right: 0px;
+	visibility: hidden;
+	font-size: 2em;
+}
+.mobilemenu>p:nth-child(1) {
+	font-size: 0.5em;
+	margin-bottom: -1em;
 }
 @media (max-width: 59em) {
 	#title {
 		top: -1.33em;
 	}
 	#navigation {
+		top: 3em;
+	}
+	#mobilenavigation {
 		top: 3em;
 	}
 	#content {
@@ -91,7 +139,15 @@ a:hover {
 	.navButton {
 		position: static;
 	}
-	.mobilemenu {
-		
+	.mobilemenu.shown {
+		visibility: visible;
+	}
+	#navigation {
+		visibility: hidden;
+		display: none;
+	}
+	#mobilenavigation {
+		visibility: visible;
+		display: inline-block;
 	}
 }

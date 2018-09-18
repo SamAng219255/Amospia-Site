@@ -153,11 +153,13 @@
 			function TextVisibler() {
 				if(document.getElementById("bright").value>=128) {
 					document.getElementById("body").style.color="#000000";
-					document.getElementById("entNote").style.color="#404040"
+					document.getElementById("entNote").style.color="#404040";
+					document.getElementById("line").style["border-color"]="#000000";
 				}
 				else {
 					document.getElementById("body").style.color="#FFFFFF";
-					document.getElementById("entNote").style.color="#D0D0D0"
+					document.getElementById("entNote").style.color="#D0D0D0";
+					document.getElementById("line").style["border-color"]="#FFFFFF";
 				}
 			}
 		</script>
@@ -169,10 +171,11 @@
 			<p>G<input type="range" min=0 max=255 id="G" onchange="slid(1)"></input><input type="text" id="g" onchange="return boxed(event,1)" value="128"></input></p>
 			<p>B<input type="range" min=0 max=255 id="B" onchange="slid(2)"></input><input type="text" id="b" onchange="return boxed(event,2)" value="128"></input></p>
 		</div>
-		<p>–––––––––––––––––––––––––––––––––––</p>
+		<hr id="line">
 		<div>
 			<p>Brightness <note id="entNote" style="font-size: 12.5px; color: #404040;">(Press 'Enter' to submit from box.)</note></p>
 			<p><input type="range" min=1 max=255 id="bright" onchange="britMod()"></input><input type="text" id="brightBox" onkeypress="return britBoxMod(event)" value="128"></input></p>
 		</div>
+		<?php if(isset($_GET['color'])) {echo '<script>document.getElementById("color").value="'.$_GET['color'].'"; recolour()</script>';} ?>
 	</body>
 </html>
