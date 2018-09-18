@@ -61,14 +61,14 @@
 		<div class="mobilemenu" id="simulationsMenu">
 			<p>Navigation Sub-Menu: Simulations</p>
 			<p onclick="hideMenu('simulations')">Close</p>
-			<a href="?target=.%2Fsimulations%2F"><div>Simulations</div></a>
+			<a href="?target=.%2Fsimulations%2F"><div>Simulations Description</div></a>
 			<a href="?target=.%2Fsimulations%2FGame_of_Life%2F"><div>Game of Life</div></a>
 			<a href="?target=.%2Fsimulations%2FGravity%2F"><div>Gravity</div></a>
 		</div>
 		<div class="mobilemenu" id="gamesMenu">
 			<p>Navigation Sub-Menu: Games</p>
 			<p onclick="hideMenu('games')">Close</p>
-			<a href="?target=.%2Fgames%2F"><div>Games</div></a>
+			<a href="?target=.%2Fgames%2F"><div>Games Description</div></a>
 			<a href="./games/aGreatAdventure/"><div>A Great Adventure</div></a>
 			<a href="./games/Alchahemistry/Home/"><div>Alchahemistry</div></a>
 			<a href="?target=.%2Fgames%2FDropBlock%2F"><div>DropBlock</div></a>
@@ -76,7 +76,7 @@
 		<div class="mobilemenu" id="miscMenu">
 			<p>Navigation Sub-Menu: Misc.</p>
 			<p onclick="hideMenu('misc')">Close</p>
-			<a href="?target=.%2Fmisc%2F"><div>Misc.</div></a>
+			<a href="?target=.%2Fmisc%2F"><div>Misc. Description</div></a>
 			<a href="?target=.%2Fmisc%2FCalculator%2F"><div>Calculator</div></a>
 			<a href="./misc/rgb/"><div>RGB Sliders</div></a>
 			<a href="./misc/Alchahemistry/"><div>Alchahemistry (WIP)</div></a>

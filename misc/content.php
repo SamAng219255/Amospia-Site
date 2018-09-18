@@ -1,5 +1,5 @@
 <p><a href="?target=.%2Fmisc%2FCalculator%2F">"Calculator"</a> is my attempt at building a graphing calculator in a browser.</p>
-<p>It has function and parametric modes. Higher precision values slow down calculations. It has no visual effect over 500. Default click detction will look at the point on the function directly in line with the cursor on the vertical axis. Nearest calculates the nearest point the grpah instead.</p>
+<p>It has function and parametric modes. Higher precision values slow down calculations. It has no visual effect over 500. Default click detection will look at the point on the function directly in line with the cursor on the vertical axis. Nearest calculates the nearest point on the graph instead.</p>
 <br>
 <p>The <a href="./misc/rgb/">RGB sliders page</a> is just a set of basic rgb sliders with not much else that set the background color of the page via the sliders.</p>
 <br>
