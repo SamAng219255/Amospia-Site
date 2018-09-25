@@ -356,7 +356,7 @@ function addFunc(bar,name) {Math[name] = function (x) {return parseMath(bar,"x",
 function addFuncs(bar,name) {Math[name] = function (t) {return [parseMath(bar[0],"t",t),parseMath(bar[0],"t",t)]}};
 function check(event) {
 	graphButton();
-	var xPos=[event.x-(canvas.offsetLeft-document.getElementById("body").scrollLeft),event.y-(canvas.offsetTop-document.getElementById("body").scrollTop)];
+	var xPos=[event.x-(canvas.offsetLeft-window.scrollX),event.y-(canvas.offsetTop-window.scrollY)];
 	var temp=unconvertPoint(xPos,Range);
 	var yPos=temp[1];
 	xPos[1]=temp[0]
