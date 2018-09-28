@@ -67,5 +67,14 @@
 	<div id="log">
 		
 	</div>
+	<div>
+	<h3>Example Saves:</h3>
+	<p>(Paste into the "load" box and click load.)</p>
+	<dl>
+		<dt>Sun, Planet, and Moon system.</dt>
+		<dd>{Earth:{color:"#00FF88",mass:81,radius:20,xPos:880,yPos:0,xVel:0,yVel:240},Sun:{color:"#FFFF88",mass:6561,radius:240,xPos:0,yPos:0,xVel:0,yVel:-3},Moon:{color:"#FFFFFF",mass:1,radius:5,xPos:910,yPos:0,xVel:0,yVel:400}}</dd>
+		<dt>Sun and two planets system.</dt>
+		<dd>{Sun:{mass:162,color:"#FFFF88",radius:40,xPos:0,yPos:0,xVel:-0.25,yVel:-3.5},Earth:{mass:4,color:"#00FF88",radius:10,xPos:100,yPos:0,xVel:0,yVel:120},Mars:{mass:1,color:"#880000",radius:5,xPos:350,yPos:0,xVel:0,yVel:60}}</dd>
+	</dl>
 	<script>draw()</script>
 </div>
