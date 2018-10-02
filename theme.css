@@ -121,6 +121,14 @@ a:hover {
 	font-size: 0.5em;
 	margin-bottom: -1em;
 }
+::selection {
+	background-color: #40f0c0;
+	color:#101018;
+}
+::-moz-selection {
+	background-color: #40f0c0;
+	color:#101018;
+}
 @media (max-width: 59em) {
 	#title {
 		top: -1.33em;

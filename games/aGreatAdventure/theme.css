@@ -1,0 +1,104 @@
+body {
+	margin: 0;
+	background-size: auto 100%;
+}
+#conversationBox {
+	height:38em;
+	width: 100%;
+	max-width: 54em;
+	margin: auto;
+	border-width:0.4%;
+	border-style:inset;
+	position: relative;
+	background-image: none !important;
+}
+.boxContents {
+	position: absolute;
+	bottom: 0px;
+	width:99.4%;
+	border-style: outset;
+	border-width: 0.4%;
+	background-image: none !important;
+}
+#forText {
+	overflow:scroll;
+	width:100%;
+	height:96%;
+	background-image:url(img/tree.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-color:#cccccc;
+}
+#rightSidebar {
+	visibility: hidden;
+}
+#leftSidebar {
+	visibility: hidden;
+}
+#center {
+	height: 100%;
+}
+#content {
+	height: 100%;
+	overflow: hidden;
+}
+#game {
+	position: relative;
+	width: 90%;
+	margin: 0 auto 2em;
+}
+#header {
+	height: 3em;
+	margin-bottom: 2em;
+	background-color: #404040;
+	width: 90%;
+	padding: 1em 5% 0;
+}
+#lnk-home {
+	float: left;
+}
+#lnk-help {
+	float: right;
+}
+h1 {
+	margin:0;
+	text-align: center;
+	font-size: 4em;
+	color: #157d41;
+	text-shadow: 0 0 0.5em #000, 0 0 0.25em #000, 0 0 0.125em #000, 0 0 0.0625em #000;
+}
+.lnk {
+	padding: 0.25em;
+	background-color: #157d41;
+	text-decoration: none;
+	color: #c0c0c0;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+.lnk:hover {
+	background-color: #c0c0c0;
+	color: #157d41;
+}
+.navigate {
+	border-style:ridge;
+	border-width:2;
+	margin:0px;
+	padding:0px;
+	border-color:#444444;
+	padding: 3px 5px;
+}
+#helpText {
+	background-image:url(../../fileStorage/in_use/tree.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-color:#cccccc;
+	height:38em;
+	width: 100%;
+	max-width: 54em;
+	margin: auto;
+}
+#helpSections {
+	width: 100%;
+	max-width: 54em;
+	margin: auto;
+}

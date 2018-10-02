@@ -1,5 +1,6 @@
 <html>
 	<head>
+		<meta name="google-site-verification" content="3bii4_HwGrsu32YgfDY5iQldwDtKiesjJYtWzAtz8sc" />
 		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<title>Amospia</title>
