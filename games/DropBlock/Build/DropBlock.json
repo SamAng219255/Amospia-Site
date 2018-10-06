@@ -1,0 +1,13 @@
+{
+"companyName": "TheClockMaker",
+"productName": "DropBlock",
+"dataUrl": "DropBlock.data.unityweb",
+"asmCodeUrl": "DropBlock.asm.code.unityweb",
+"asmMemoryUrl": "DropBlock.asm.memory.unityweb",
+"asmFrameworkUrl": "DropBlock.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
