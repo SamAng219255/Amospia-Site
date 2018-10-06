@@ -33,6 +33,8 @@
 	<li>Connect four or more blocks of the same color in any shape to remove them and gain points.</li>
 	<li>You get one point per block removed.</li>
 	<li>Connecting more than four blocks will cause the region around the last block to be removed as well and give you extra points.</li>
+	<li>Connecting ten or more blocks will give the normal extra points and clear the screen.</li>
+	<li>Clearing the screen will decrease the speed at which the blocks fall.</li>
 	<li>Every five matches that you make will increase the speed at which the blocks fall.</li>
 	<li>You lose when the blocks reach the top.</li>
 </ul>
