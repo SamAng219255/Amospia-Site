@@ -16,10 +16,10 @@
 			</div>
 		</div>
 		<div id="cards">
-			<a href="./resourcepack.zip"><div class="card">
+			<a href="./resources.zip"><div class="card">
 				<div class="imgHold" style="background-image: url('./img/pack.png');"></div>
 				<div class="cardTxt">
-					<div>Resource Pack (WIP)</div>
+					<div>Resource Pack</div>
 					<div>I've spent much work on this pack. Every texture and model was either selected from the upcoming official textures or built by me.</div>
 				</div>
 			</div></a>
