@@ -11,13 +11,13 @@ function setup() {
 	draw();
 }
 function draw() {
-	/*for(var i=-2; i<=2; i++) {
+	for(var i=-2; i<=2; i++) {
 		for(var j=-2; j<=2; j++) {
 			var x=(pos[0]+i);
 			var y=(pos[1]+j);
 			ctx.drawImage(document.getElementById("default-img"),(i+2)*128,(j+2)*128);
 		}
-	}*/
+	}
 	for(var i=-2; i<=2; i++) {
 		for(var j=-2; j<=2; j++) {
 			var x=(pos[0]+i);
