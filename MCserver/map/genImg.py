@@ -29,33 +29,32 @@ modeSin="s" in argv[1]
 
 
 for i in range(int(argv[2])+1):
-	if i not in exclusions:
-		try:
-			f=open(path+'map_'+str(i)+'.dat', 'rb')
-			nbt=pynbt.NBTFile(gzip.GzipFile(mode='r', fileobj=f))
-			f.close();
-			if nbt["data"]["scale"].value==0:
-				img=Image.new("RGBA",(128,128),(0,0,0,0))
-				imgData=[]
-				negatives=[]
-				completeness=0
-				for colId in nbt["data"]["colors"].value:
-					if colId<0 and colId not in negatives: negatives.append(colId)
-					if colId>4: completeness+=1
-					color,shade=divmod(colId,4)
-					r,g,b,a=palette[color]
-					shaMul=shades[shade]
-					imgData.append((((r*shaMul)//255),(g*shaMul)//255,(b*shaMul)//255,a))
-				if showNeg and len(negatives)>0: print("Negatives "+json.dumps(negatives)+" found on "+str(i)+" at ("+str(nbt["data"]["dimension"].value//128)+", "+str(nbt["data"]["xCenter"].value//128)+", "+str(nbt["data"]["zCenter"].value//128)+").")
-				img.putdata(imgData)
-				key=str(nbt["data"]["xCenter"].value//128)+'_'+str(nbt["data"]["zCenter"].value//128)
-				if showDup and nbt["data"]["dimension"].value==0 and key in regionsDone: print("Duplicate of "+key+" found.")
-				if nbt["data"]["dimension"].value==0 and ((key in regionsDone and completeness>=regionsDone[key]) or key not in regionsDone):
-					regionsDone[key]=completeness
-					tilesUsed[key]=i
-					img.save('img/tile.'+str(nbt["data"]["dimension"].value)+'.'+str(nbt["data"]["xCenter"].value//128)+'.'+str(nbt["data"]["zCenter"].value//128)+'.png')
-		except FileNotFoundError:
-			if showErr: print('File Not Found on '+str(i))
+	try:
+		f=open(path+'map_'+str(i)+'.dat', 'rb')
+		nbt=pynbt.NBTFile(gzip.GzipFile(mode='r', fileobj=f))
+		f.close();
+		if nbt["data"]["scale"].value==0:
+			img=Image.new("RGBA",(128,128),(0,0,0,0))
+			imgData=[]
+			negatives=[]
+			completeness=0
+			for colId in nbt["data"]["colors"].value:
+				if colId<0 and colId not in negatives: negatives.append(colId)
+				if colId>4: completeness+=1
+				color,shade=divmod(colId,4)
+				r,g,b,a=palette[color]
+				shaMul=shades[shade]
+				imgData.append((((r*shaMul)//255),(g*shaMul)//255,(b*shaMul)//255,a))
+			if showNeg and len(negatives)>0: print("Negatives "+json.dumps(negatives)+" found on "+str(i)+" at ("+str(nbt["data"]["dimension"].value//128)+", "+str(nbt["data"]["xCenter"].value//128)+", "+str(nbt["data"]["zCenter"].value//128)+").")
+			img.putdata(imgData)
+			key=str(nbt["data"]["xCenter"].value//128)+'_'+str(nbt["data"]["zCenter"].value//128)
+			if showDup and nbt["data"]["dimension"].value==0 and key in regionsDone: print("Duplicate of "+key+" found.")
+			if i not in exclusions and nbt["data"]["dimension"].value==0 and ((key in regionsDone and completeness>=regionsDone[key]) or key not in regionsDone):
+				regionsDone[key]=completeness
+				tilesUsed[key]=i
+				img.save('img/tile.'+str(nbt["data"]["dimension"].value)+'.'+str(nbt["data"]["xCenter"].value//128)+'.'+str(nbt["data"]["zCenter"].value//128)+'.png')
+	except FileNotFoundError:
+		if showErr: print('File Not Found on '+str(i))
 	if(i%unit==0):
 		if showPer: print(str(percent)+"% Complete.")
 		percent+=1
