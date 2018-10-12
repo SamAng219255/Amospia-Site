@@ -1,9 +1,13 @@
 pos=[0,0];
-loadedImages=[]
-document.addEventListener("keydown", move)
+loadedImages=[];
+lastTar=[5,5];
+document.addEventListener("keydown", move);
+$.getJSON("tileIds.json",function (data) {tileIds=data})
 function setup() {
 	canvas=$("#mcmap")[0];
 	ctx=canvas.getContext("2d");
+	oCanvas=$("#overlay")[0];
+	oCtx=oCanvas.getContext("2d");
 	draw();
 }
 function draw() {
@@ -32,6 +36,9 @@ function draw() {
 	}
 }
 function move(e) {
+	oCtx.clearRect(0,0,640,640);
+	lastTar=[5,5];
+		$("#infoTxt")[0].innerHTML="";
 	if(e.keyCode==37) {
 		pos[0]--;
 		draw();
@@ -49,3 +56,32 @@ function move(e) {
 		draw();
 	}
 }
+function highlight(e) {
+	var offset=$('#mapcontainer').offset();
+	var x = parseInt(((e.pageX - offset.left) + $(window).scrollLeft())/128);
+	var y = parseInt(((e.pageY - offset.top) + $(window).scrollTop())/128);
+	var xCor=x-2+pos[0];
+	var yCor=y-2+pos[1];
+	oCtx.clearRect(0,0,640,640);
+	if(!(lastTar[0]==x && lastTar[1]==y)) {
+		lastTar=[x,y];
+		oCtx.strokeStyle="#000000";
+		oCtx.lineWidth=8;
+		oCtx.strokeRect(x*128, y*128, 128, 128);
+		oCtx.strokeStyle="#FFFFFF";
+		oCtx.lineWidth=4;
+		oCtx.strokeRect(x*128, y*128, 128, 128);
+		$("#infoTxt")[0].innerHTML="Highlighted tile ("+xCor+", "+yCor+"), centered on ("+(xCor*128)+", "+(yCor*128)+"), coordinates ("+(xCor*128-64)+", "+(yCor*128-64)+") to ("+(xCor*128+63)+", "+(yCor*128+63)+").<br>Map ID: "+mapIds(xCor,yCor);
+	}
+	else {
+		$("#infoTxt")[0].innerHTML="";
+		lastTar=[5,5];
+	}
+}
+function mapIds(x,y) {
+	return tileIds[x+"_"+y];
+}
+
+
+
+

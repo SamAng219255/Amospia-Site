@@ -30,7 +30,7 @@
 					<div>This pack includes several tags, functions, loot tables, and recipes used on the server.</div>
 				</div>
 			</div></a>
-			<a href="./map/"><div class="card">
+			<a href="./map/" target="_blank"><div class="card">
 				<div class="imgHold" style="background-image: url('./img/map.png');"></div>
 				<div class="cardTxt">
 					<div>Server Map (WIP)</div>
