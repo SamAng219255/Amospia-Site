@@ -16,7 +16,7 @@
 </head>
 <body>
 	<canvas height=640 width=640 id="mcmap" onkeydown="move(event)"></canvas>
-	<div id="tileStorage"></div>
+	<div id="tileStorage"><img id="default-img" src="img/default.png"></div>
 	<script>setup();</script>
 </body>
 </html>

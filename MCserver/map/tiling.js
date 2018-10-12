@@ -11,8 +11,15 @@ function draw() {
 		for(var j=-2; j<=2; j++) {
 			var x=(pos[0]+i);
 			var y=(pos[1]+j);
+			ctx.drawImage(document.getElementById("default-img"),(i+2)*128,(j+2)*128);
+		}
+	}
+	for(var i=-2; i<=2; i++) {
+		for(var j=-2; j<=2; j++) {
+			var x=(pos[0]+i);
+			var y=(pos[1]+j);
 			if(loadedImages.indexOf(x+","+y)==-1) {
-				$("#tileStorage").append("<img id=\"x"+x+"y"+y+"\" src=\"img/tile.0."+x+"."+y+".png\" x=\""+x+"\" y=\""+y+"\" xpos=\""+i+"\" ypos=\""+j+"\">");
+				$("#tileStorage").append("<img id=\"x"+x+"y"+y+"\" src=\"img/tile.0."+x+"."+y+".png\" x=\""+x+"\" y=\""+y+"\" xpos=\""+i+"\" ypos=\""+j+"\" onerror=\"if (this.src != 'img/default.png') this.src = 'img/default.png';\">");
 				document.getElementById("x"+x+"y"+y).onload=function () {
 					ctx.drawImage(this,(parseInt(this.attributes.xpos.value)+2)*128,(parseInt(this.attributes.ypos.value)+2)*128);
 				}

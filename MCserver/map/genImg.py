@@ -12,21 +12,31 @@ path='/home/sam/minecraftServer/world/data/'
 if(len(argv)>2):
 	path=argv[2]
 
+regionsDone={}
+
 for i in range(int(argv[1])+1):
 	try:
 		f=open(path+'map_'+str(i)+'.dat', 'rb')
 		nbt=pynbt.NBTFile(gzip.GzipFile(mode='r', fileobj=f))
-		img=Image.new("RGBA",(128,128),(0,0,0,0))
-		imgData=[]
-		negatives=[];
-		for colId in nbt["data"]["colors"].value:
-			if colId<0 and colId not in negatives: negatives.append(colId)
-			color,shade=divmod(colId,4)
-			r,g,b,a=palette[color]
-			shaMul=shades[shade]
-			imgData.append((((r*shaMul)//255),(g*shaMul)//255,(b*shaMul)//255,a))
-		if len(negatives)>0: print("Negatives "+json.dumps(negatives)+" found on "+str(i)+" at ("+str(nbt["data"]["dimension"].value//128)+", "+str(nbt["data"]["xCenter"].value//128)+", "+str(nbt["data"]["zCenter"].value//128)+").")
-		img.putdata(imgData)
-		img.save('img/tile.'+str(nbt["data"]["dimension"].value//128)+'.'+str(nbt["data"]["xCenter"].value//128)+'.'+str(nbt["data"]["zCenter"].value//128)+'.png')
+		if nbt["data"]["scale"].value==0:
+			img=Image.new("RGBA",(128,128),(0,0,0,0))
+			imgData=[]
+			negatives=[]
+			completeness=0
+			for colId in nbt["data"]["colors"].value:
+				if colId<0 and colId not in negatives: negatives.append(colId)
+				if colId>4: completeness+=1
+				color,shade=divmod(colId,4)
+				r,g,b,a=palette[color]
+				shaMul=shades[shade]
+				imgData.append((((r*shaMul)//255),(g*shaMul)//255,(b*shaMul)//255,a))
+			if len(negatives)>0: print("Negatives "+json.dumps(negatives)+" found on "+str(i)+" at ("+str(nbt["data"]["dimension"].value//128)+", "+str(nbt["data"]["xCenter"].value//128)+", "+str(nbt["data"]["zCenter"].value//128)+").")
+			img.putdata(imgData)
+			key=str(nbt["data"]["xCenter"].value//128)+'_'+str(nbt["data"]["zCenter"].value//128)
+			if nbt["data"]["dimension"].value==0 and key in regionsDone: print("Duplicate of "+key+" found.")
+			if nbt["data"]["dimension"].value==0 and ((key in regionsDone and completeness>=regionsDone[key]) or key not in regionsDone):
+				regionsDone[key]=completeness
+				img.save('img/tile.'+str(nbt["data"]["dimension"].value)+'.'+str(nbt["data"]["xCenter"].value//128)+'.'+str(nbt["data"]["zCenter"].value//128)+'.png')
 	except FileNotFoundError:
 		print('File Not Found on '+str(i))
+print(str(len(regionsDone)))
