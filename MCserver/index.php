@@ -33,7 +33,7 @@
 			<a href="./map/" target="_blank"><div class="card">
 				<div class="imgHold" style="background-image: url('./img/map.png');"></div>
 				<div class="cardTxt">
-					<div>Server Map (WIP)</div>
+					<div>Server Map</div>
 					<div>Here you can look at a map of the server.</div>
 				</div>
 			</div></a>
