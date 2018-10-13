@@ -41,8 +41,8 @@ function move(e) {
 		oCtx.clearRect(0,0,1152,640);
 		lastTar=[5,5];
 		$("#infoTxt")[0].innerHTML="";
-		clearTimeout(curTim);
-		curTime=setTimeout(draw,1000);
+		clearInterval(curTim);
+		curTim=setInterval(draw,1000);
 	}
 	if(e.keyCode==37) {
 		pos[0]--;
