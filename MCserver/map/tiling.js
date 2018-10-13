@@ -1,6 +1,7 @@
 pos=[0,0];
 loadedImages=[];
 lastTar=[5,5];
+curTim=-1;
 document.addEventListener("keydown", move);
 $.getJSON("tileIds.json",function (data) {tileIds=data})
 function setup() {
@@ -36,9 +37,13 @@ function draw() {
 	}
 }
 function move(e) {
-	oCtx.clearRect(0,0,640,640);
-	lastTar=[5,5];
+	if(e.keyCode>36 && e.keyCode<41) {
+		oCtx.clearRect(0,0,1152,640);
+		lastTar=[5,5];
 		$("#infoTxt")[0].innerHTML="";
+		clearTimeout(curTim);
+		setTimeout(draw,1000);
+	}
 	if(e.keyCode==37) {
 		pos[0]--;
 		draw();
