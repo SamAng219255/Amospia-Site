@@ -42,7 +42,7 @@ function move(e) {
 		lastTar=[5,5];
 		$("#infoTxt")[0].innerHTML="";
 		clearInterval(curTim);
-		curTim=setInterval(draw,1000);
+		curTim=setInterval(draw,250);
 	}
 	if(e.keyCode==37) {
 		pos[0]--;
