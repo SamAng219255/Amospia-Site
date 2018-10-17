@@ -164,7 +164,7 @@ function drawPoints() {
 	}
 }
 function resetStuff() {
-	$("#infoTxt")[0].innerHTML="Use the <b>Arrow Keys</b> to move the map and press <b>Enter</b> to toggle locations.";
+	$("#infoTxt")[0].innerHTML="Use the <b>Arrow Keys</b> to move the map and press <b>Enter</b> to toggle locations.<br>Click on a pin to show information on that location.";
 	selectedPoint=0;
 	drawPoints();
 	lastTar=[5,5];
