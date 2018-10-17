@@ -49,7 +49,6 @@ function move(e) {
 		resetStuff();
 		clearInterval(curTim);
 		curTim=setInterval(draw,250);
-		checkMarkerVisibility()
 	}
 	if(e.keyCode==37) {
 		pos[0]--;
@@ -72,6 +71,9 @@ function move(e) {
 			resetStuff();
 		}
 		pointsVis=!pointsVis;
+	}
+	if(e.keyCode>36 && e.keyCode<41) {
+		checkMarkerVisibility();
 	}
 	drawPoints();
 }
