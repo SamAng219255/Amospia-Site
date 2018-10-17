@@ -36,6 +36,9 @@ body {
 #overlay {
 	pointer-events: none;
 }
+#points {
+	pointer-events: none;
+}
 #tileStorage {
 	display: none;
 }

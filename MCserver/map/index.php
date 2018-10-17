@@ -10,8 +10,9 @@
 	<div id="mapcontainer">
 		<canvas height=640 width=1152 id="mcmap" onkeydown="move(event)" onclick="highlight(event)"></canvas>
 		<canvas height=640 width=1152 id="overlay"></canvas>
+		<canvas height=640 width=1152 id="points"></canvas>
 		<div id="tileStorage"><img id="default-img" src="img/stone.png"></div>
-		<div id="infoTxt">Use the <b>Arrow Keys</b> to move the map.</div>
+		<div id="infoTxt">Use the <b>Arrow Keys</b> to move the map and press <b>Enter</b> to toggle locations.</div>
 	</div>
 	<script>setup();</script>
 </body>
