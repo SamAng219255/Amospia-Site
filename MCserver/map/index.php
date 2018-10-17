@@ -12,7 +12,7 @@
 		<canvas height=640 width=1152 id="overlay"></canvas>
 		<canvas height=640 width=1152 id="points"></canvas>
 		<div id="tileStorage"><img id="default-img" src="img/stone.png"></div>
-		<div id="infoTxt">Use the <b>Arrow Keys</b> to move the map and press <b>Enter</b> to toggle locations.</div>
+		<div id="infoTxt">Use the <b>Arrow Keys</b> to move the map and press <b>Enter</b> to toggle locations.<br>Click on a pin to show information on that location.</div>
 	</div>
 	<script>setup();</script>
 </body>

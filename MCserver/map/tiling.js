@@ -104,7 +104,7 @@ function highlight(e) {
 	if(clickedMark) {
 		if(selectedPoint!=markers[whichMark].id) {
 			selectedPoint=markers[whichMark].id;
-			$("#infoTxt")[0].innerHTML=markers[whichMark].name+": "+markers[whichMark].desc;
+			$("#infoTxt")[0].innerHTML="<b>"+markers[whichMark].name.toUpperCase()+"</b>: "+markers[whichMark].desc;
 		}
 		else {
 			selectedPoint=0;
