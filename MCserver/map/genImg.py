@@ -49,10 +49,14 @@ for i in range(int(argv[2])+1):
 			img.putdata(imgData)
 			key=str(nbt["data"]["xCenter"].value//128)+'_'+str(nbt["data"]["zCenter"].value//128)
 			if showDup and nbt["data"]["dimension"].value==0 and key in regionsDone: print("Duplicate of "+key+" found.")
-			if i not in exclusions and nbt["data"]["dimension"].value==0 and ((key in regionsDone and completeness>=regionsDone[key]) or key not in regionsDone):
+			if i not in exclusions and nbt["data"]["dimension"].value==0 and (((key in regionsDone) and completeness>=regionsDone[key]) or (key not in regionsDone)):
 				regionsDone[key]=completeness
 				tilesUsed[key]=i
 				img.save('img/tile.'+str(nbt["data"]["dimension"].value)+'.'+str(nbt["data"]["xCenter"].value//128)+'.'+str(nbt["data"]["zCenter"].value//128)+'.png')
+			elif i not in exclusions and nbt["data"]["dimension"].value!=0:
+				img.save('img/tile.'+str(nbt["data"]["dimension"].value)+'.'+str(nbt["data"]["xCenter"].value//128)+'.'+str(nbt["data"]["zCenter"].value//128)+'.png')
+			if i in exclusions:
+				img.save('img/excluded/tile_'+str(i)+'.'+str(nbt["data"]["dimension"].value)+'.'+str(nbt["data"]["xCenter"].value//128)+'.'+str(nbt["data"]["zCenter"].value//128)+'.png')
 	except FileNotFoundError:
 		if showErr: print('File Not Found on '+str(i))
 	if(i%unit==0):
