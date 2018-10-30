@@ -25,6 +25,9 @@ showErr="e" in argv[1]
 showNeg="n" in argv[1]
 showPer="p" in argv[1]
 showTot="t" in argv[1]
+showBla="b" in argv[1]
+modeInd="i" in argv[1]
+modeOut="o" in argv[1]
 modeSin="s" in argv[1]
 
 
@@ -49,14 +52,15 @@ for i in range(int(argv[2])+1):
 			img.putdata(imgData)
 			key=str(nbt["data"]["xCenter"].value//128)+'_'+str(nbt["data"]["zCenter"].value//128)
 			if showDup and nbt["data"]["dimension"].value==0 and key in regionsDone: print("Duplicate of "+key+" found.")
+			if showBla and completeness==0: print("Blank Found: "+str(i))
 			if i not in exclusions and nbt["data"]["dimension"].value==0 and (((key in regionsDone) and completeness>=regionsDone[key]) or (key not in regionsDone)):
 				regionsDone[key]=completeness
 				tilesUsed[key]=i
-				img.save('img/tile.'+str(nbt["data"]["dimension"].value)+'.'+str(nbt["data"]["xCenter"].value//128)+'.'+str(nbt["data"]["zCenter"].value//128)+'.png')
+				if not (modeInd or modeOut): img.save('img/tile.'+str(nbt["data"]["dimension"].value)+'.'+str(nbt["data"]["xCenter"].value//128)+'.'+str(nbt["data"]["zCenter"].value//128)+'.png')
 			elif i not in exclusions and nbt["data"]["dimension"].value!=0:
-				img.save('img/tile.'+str(nbt["data"]["dimension"].value)+'.'+str(nbt["data"]["xCenter"].value//128)+'.'+str(nbt["data"]["zCenter"].value//128)+'.png')
+				if not (modeInd or modeOut): img.save('img/tile.'+str(nbt["data"]["dimension"].value)+'.'+str(nbt["data"]["xCenter"].value//128)+'.'+str(nbt["data"]["zCenter"].value//128)+'.png')
 			if i in exclusions:
-				img.save('img/excluded/tile_'+str(i)+'.'+str(nbt["data"]["dimension"].value)+'.'+str(nbt["data"]["xCenter"].value//128)+'.'+str(nbt["data"]["zCenter"].value//128)+'.png')
+				if not (modeInd or modeOut): img.save('img/excluded/tile_'+str(i)+'.'+str(nbt["data"]["dimension"].value)+'.'+str(nbt["data"]["xCenter"].value//128)+'.'+str(nbt["data"]["zCenter"].value//128)+'.png')
 	except FileNotFoundError:
 		if showErr: print('File Not Found on '+str(i))
 	if(i%unit==0):
@@ -64,5 +68,5 @@ for i in range(int(argv[2])+1):
 		percent+=1
 if showTot: print(str(len(regionsDone)))
 tileF=open("tileIds.json","w")
-json.dump(tilesUsed,tileF);
+if not modeOut: json.dump(tilesUsed,tileF);
 tileF.close();
