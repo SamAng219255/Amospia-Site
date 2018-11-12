@@ -9,6 +9,8 @@ palette=[(0,0,0,0),(127, 178, 56,255),(247, 233, 163,255),(199, 199, 199,255),(2
 shades=[180,220,255,135]
 
 exclusions=[390,517,81,455,456,77,64,265,869,1298,759,780,468,153,157,172,398,406,417,422,423,424,795,921,922,1410,2129,2164,1426,1425,1433,920,919,69]
+pictures=[1349]
+exclusions.extend(pictures)
 
 path='/home/sam/minecraftServer/world/data/'
 if(len(argv)>3):
@@ -29,7 +31,29 @@ showBla="b" in argv[1]
 modeInd="i" in argv[1]
 modeOut="o" in argv[1]
 modeSin="s" in argv[1]
+modeLrg="l" in argv[1]
 
+
+if modeLrg:
+	lowest=[0,0]
+	highest=[0,0]
+	for i in range(int(argv[2])+1):
+		try:
+			f=open(path+'map_'+str(i)+'.dat', 'rb')
+			nbt=pynbt.NBTFile(gzip.GzipFile(mode='r', fileobj=f))
+			f.close();
+			if nbt["data"]["scale"].value==0 and i not in exclusions and nbt["data"]["dimension"].value==0:
+				x=(nbt["data"]["xCenter"].value//128)
+				z=(nbt["data"]["zCenter"].value//128)
+				if lowest[0]>x: lowest[0]=x
+				if highest[0]<x: highest[0]=x
+				if lowest[1]>z: lowest[1]=z
+				if highest[1]<z: highest[1]=z
+		except:
+			if 0==1: print("This shouldn't be printed.")
+			#Do Nothing
+	tileRange=[highest[0]-lowest[0]+1,highest[1]-lowest[1]+1]
+	finImg=Image.new("RGBA",(128*tileRange[0],128*tileRange[1]),(0,0,0,0))
 
 for i in range(int(argv[2])+1):
 	try:
@@ -49,23 +73,37 @@ for i in range(int(argv[2])+1):
 				shaMul=shades[shade]
 				imgData.append((((r*shaMul)//255),(g*shaMul)//255,(b*shaMul)//255,a))
 			if showNeg and len(negatives)>0: print("Negatives "+json.dumps(negatives)+" found on "+str(i)+" at ("+str(nbt["data"]["dimension"].value//128)+", "+str(nbt["data"]["xCenter"].value//128)+", "+str(nbt["data"]["zCenter"].value//128)+").")
-			img.putdata(imgData)
-			key=str(nbt["data"]["xCenter"].value//128)+'_'+str(nbt["data"]["zCenter"].value//128)
-			if showDup and nbt["data"]["dimension"].value==0 and key in regionsDone: print("Duplicate of "+key+" found.")
-			if showBla and completeness==0: print("Blank Found: "+str(i))
-			if i not in exclusions and nbt["data"]["dimension"].value==0 and (((key in regionsDone) and completeness>=regionsDone[key]) or (key not in regionsDone)):
-				regionsDone[key]=completeness
-				tilesUsed[key]=i
-				if not (modeInd or modeOut): img.save('img/tile.'+str(nbt["data"]["dimension"].value)+'.'+str(nbt["data"]["xCenter"].value//128)+'.'+str(nbt["data"]["zCenter"].value//128)+'.png')
-			elif i not in exclusions and nbt["data"]["dimension"].value!=0:
-				if not (modeInd or modeOut): img.save('img/tile.'+str(nbt["data"]["dimension"].value)+'.'+str(nbt["data"]["xCenter"].value//128)+'.'+str(nbt["data"]["zCenter"].value//128)+'.png')
-			if i in exclusions:
-				if not (modeInd or modeOut): img.save('img/excluded/tile_'+str(i)+'.'+str(nbt["data"]["dimension"].value)+'.'+str(nbt["data"]["xCenter"].value//128)+'.'+str(nbt["data"]["zCenter"].value//128)+'.png')
+			if modeLrg:
+				key=str(nbt["data"]["xCenter"].value//128)+'_'+str(nbt["data"]["zCenter"].value//128)
+				if showDup and nbt["data"]["dimension"].value==0 and key in regionsDone: print("Duplicate of "+key+" found.")
+				if showBla and completeness==0: print("Blank Found: "+str(i))
+				if i not in exclusions and nbt["data"]["dimension"].value==0 and (((key in regionsDone) and completeness>=regionsDone[key]) or (key not in regionsDone)):
+					img.putdata(imgData)
+					regionsDone[key]=completeness
+					tilesUsed[key]=i
+					xOffset=nbt["data"]["xCenter"].value-(lowest[0]*128)
+					zOffset=nbt["data"]["zCenter"].value-(lowest[1]*128)
+					if not (modeInd or modeOut): finImg.paste(img,box=(xOffset,zOffset))
+			else:
+				img.putdata(imgData)
+				key=str(nbt["data"]["xCenter"].value//128)+'_'+str(nbt["data"]["zCenter"].value//128)
+				if showDup and nbt["data"]["dimension"].value==0 and key in regionsDone: print("Duplicate of "+key+" found.")
+				if showBla and completeness==0: print("Blank Found: "+str(i))
+				if i not in exclusions and nbt["data"]["dimension"].value==0 and (((key in regionsDone) and completeness>=regionsDone[key]) or (key not in regionsDone)):
+					regionsDone[key]=completeness
+					tilesUsed[key]=i
+					if not (modeInd or modeOut): img.save('img/tile.'+str(nbt["data"]["dimension"].value)+'.'+str(nbt["data"]["xCenter"].value//128)+'.'+str(nbt["data"]["zCenter"].value//128)+'.png')
+				elif i not in exclusions and nbt["data"]["dimension"].value!=0:
+					if not (modeInd or modeOut): img.save('img/tile.'+str(nbt["data"]["dimension"].value)+'.'+str(nbt["data"]["xCenter"].value//128)+'.'+str(nbt["data"]["zCenter"].value//128)+'.png')
+				if i in exclusions:
+					if not (modeInd or modeOut): img.save('img/excluded/tile_'+str(i)+'.'+str(nbt["data"]["dimension"].value)+'.'+str(nbt["data"]["xCenter"].value//128)+'.'+str(nbt["data"]["zCenter"].value//128)+'.png')
 	except FileNotFoundError:
 		if showErr: print('File Not Found on '+str(i))
 	if(i%unit==0):
 		if showPer: print(str(percent)+"% Complete.")
 		percent+=1
+if modeLrg: finImg.save('img/full.png')
+if showTot and modeLrg: print(json.dumps(tileRange))
 if showTot: print(str(len(regionsDone)))
 tileF=open("tileIds.json","w")
 if not modeOut: json.dump(tilesUsed,tileF);
