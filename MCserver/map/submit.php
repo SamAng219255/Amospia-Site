@@ -50,7 +50,7 @@
 		if (isset($_SESSION['user'])) {
 			if(isset($_POST['name'])) {
 				require 'db.php';
-				$sql="INSERT INTO `mcstuff`.`mappoints` (`id`,`user`,`name`,`desc`,`x`,`z`) VALUES ('0','".$_SESSION['user']."','".$_POST['name']."','".$_POST['desc']."','".$_POST['x']."','".$_POST['z']."');";
+				$sql="INSERT INTO `mcstuff`.`mappoints` (`id`,`user`,`name`,`desc`,`x`,`z`) VALUES ('0','".$_SESSION['user']."','".mysqli_real_escape_string($conn,$_POST['name'])."','".mysqli_real_escape_string($conn,$_POST['desc'])."','".$_POST['x']."','".$_POST['z']."');";
 				mysqli_query($conn,$sql);
 			}
 			require 'form.php';
