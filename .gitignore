@@ -5,3 +5,4 @@ MCserver/map/dats/*
 MCserver/map/img/tile.*
 MCserver/map/img/excluded/*
 MCserver/map/img/full.png
+MCserver/map/tileIds.json
