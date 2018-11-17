@@ -4,7 +4,32 @@ require 'db.php';
 
 echo '[';
 
+$restrictions='';
+if(isset($_GET['xMin'])) {
+	$restrictions="`x`>".$_GET['xMin'];
+}
+if(isset($_GET['xMax'])) {
+	if($restrictions!=='') {
+		$restrictions.=' AND ';
+	}
+	$restrictions.="`x`<".$_GET['xMax'];
+}
+if(isset($_GET['zMin'])) {
+	if($restrictions!=='') {
+		$restrictions.=' AND ';
+	}
+	$restrictions.="`z`>".$_GET['zMin'];
+}
+if(isset($_GET['zMax'])) {
+	if($restrictions!=='') {
+		$restrictions.=' AND ';
+	}
+	$restrictions.="`z`<".$_GET['zMax'];
+}
 $query="SELECT * FROM `mcstuff`.`mappoints`;";
+if($restrictions!=='') {
+	$query="SELECT * FROM `mcstuff`.`mappoints` WHERE ".$restrictions.";";
+}
 $queryresult=mysqli_query($conn,$query);
 if($queryresult) {for($i=0; $i<$queryresult->num_rows; $i++) {
 	$row=mysqli_fetch_row($queryresult);

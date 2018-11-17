@@ -96,7 +96,7 @@ def main():
 		except FileNotFoundError:
 			if showErr: print('File Not Found on '+str(i))
 		if(i%unit==0):
-			if showPer: print(str(percent)+"% Complete.")
+			if showPer: print(argv[1]+":	"+str(percent)+"% Complete.")
 			percent+=1
 	if modeLrg: finImg.save('img/full.png')
 	if showTot and modeLrg: print(json.dumps(tileRange))
