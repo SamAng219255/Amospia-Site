@@ -1,5 +1,10 @@
 <?php
 	session_start();
+	if ((isset($_SESSION['last_active']) && (time() - $_SESSION['last_active'] > 1800)) || (!isset($_SESSION['last_active']) && isset($_SESSION['loggedin']))) {
+		session_unset();
+		session_destroy();
+	}
+	$_SESSION['last_active']=time();
 ?>
 <html>
 <head>
@@ -43,15 +48,53 @@
 			width: 30em;
 			resize: none;
 		}
+		.banner {
+			visibility: hidden;
+			background-color: blue;
+			width: 50%;
+			position: relative;
+			margin: auto;
+			padding: 1em;
+			text-align: center;
+			background-image: url("../img/planks_birch.png");
+			background-size: auto 100%;
+			animation: bannerfade 10s;
+			animation-timing-function: linear;
+		}
+		@keyframes bannerfade{
+			0% {visibility: visible; opacity: 1}
+			90% {visibility: visible; opacity: 1}
+			100% {visibility: visible; opacity: 0}
+		}
 	</style>
 </head>
 <body>
 	<?php
+		$bannerCount=0;
+		function addBanner($bannerTxt) {
+			echo '<div class="banner">'.$bannerTxt.'</div>';
+		}
+		//addBanner('test');
+		if(isset($_POST['name'])) {
+			$_SESSION['name']=mysqli_real_escape_string($conn,$_POST['name']);
+			$_SESSION['desc']=mysqli_real_escape_string($conn,$_POST['desc']);
+			$_SESSION['x']=$_POST['x'];
+			$_SESSION['z']=$_POST['z'];
+			if(!isset($_SESSION['user'])) {
+				addBanner('It appears that your session has expired. Please log in to finish submitting.');
+			}
+		}
 		if (isset($_SESSION['user'])) {
-			if(isset($_POST['name'])) {
+			if(isset($_SESSION['name'])) {
 				require 'db.php';
-				$sql="INSERT INTO `mcstuff`.`mappoints` (`id`,`user`,`name`,`desc`,`x`,`z`) VALUES ('0','".$_SESSION['user']."','".mysqli_real_escape_string($conn,$_POST['name'])."','".mysqli_real_escape_string($conn,$_POST['desc'])."','".$_POST['x']."','".$_POST['z']."');";
-				mysqli_query($conn,$sql);
+				$sql="INSERT INTO `mcstuff`.`mappoints` (`id`,`user`,`name`,`desc`,`x`,`z`) VALUES ('0','".$_SESSION['user']."','".$_SESSION['name']."','".$_SESSION['desc']."','".$_SESSION['x']."','".$_SESSION['z']."');";
+				if(mysqli_query($conn,$sql)) {
+					addBanner('You have successfully submitted the pin "'.$_SESSION['name'].'".');
+				}
+				else {
+					addBanner('An error has occured while submitting the pin "'.$_SESSION['name'].'".');
+				}
+				unset($_SESSION['name']);
 			}
 			require 'form.php';
 		}
@@ -71,6 +114,7 @@
 			$context = stream_context_create($options);
 			$result = json_decode(file_get_contents($url, false, $context));
 			if($result==false) {
+				addBanner('Invalid Login');
 				echo '<div id="login">
 		<p>You will need to login with your minecraft account:</p>
 		<form method="POST">
@@ -79,7 +123,6 @@
 			<input type="submit" value="Login">
 		</form>
 	</div>';
-				echo '<script>alert("Invalid Login")</script>';
 			}
 			else {
 				$profile = $result->selectedProfile;
@@ -87,9 +130,20 @@
 				if(in_array(strtolower($profile->name), $allowedUsers)) {
 					$_SESSION['user']=strtolower($profile->name);
 					require 'db.php';
+					if(isset($_SESSION['name'])) {
+						$sql="INSERT INTO `mcstuff`.`mappoints` (`id`,`user`,`name`,`desc`,`x`,`z`) VALUES ('0','".$_SESSION['user']."','".$_SESSION['name']."','".$_SESSION['desc']."','".$_SESSION['x']."','".$_SESSION['z']."');";
+						if(mysqli_query($conn,$sql)) {
+							addBanner('You have successfully submitted the pin "'.$_SESSION['name'].'".');
+						}
+						else {
+							addBanner('An error has occured while submitting the pin "'.$_SESSION['name'].'".');
+						}
+						unset($_SESSION['name']);
+					}
 					require 'form.php';
 				}
 				else {
+					addBanner('That user is not allowed to submit map locations.');
 					echo '<div id="login">
 		<p>You will need to login with your minecraft account:</p>
 		<form method="POST">
@@ -98,7 +152,6 @@
 			<input type="submit" value="Login">
 		</form>
 	</div>';
-					echo '<script>alert("That user is not allowed to submit map locations.")</script>';
 				}
 			}
 		}
