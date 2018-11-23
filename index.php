@@ -16,6 +16,7 @@
 				<div class="dropdown">
 					<a href="?target=.%2Fmisc%2FCalculator%2F"><div>Calculator</div></a>
 					<a href="./misc/rgb/"><div>RGB Sliders</div></a>
+					<a href="./misc/palette/"><div>Random Palette Generator</div></a>
 					<a href="./misc/Alchahemistry/"><div>Alchahemistry (WIP)</div></a>
 				</div>
 			</div>
@@ -80,6 +81,7 @@
 			<a href="?target=.%2Fmisc%2F"><div>Misc. Description</div></a>
 			<a href="?target=.%2Fmisc%2FCalculator%2F"><div>Calculator</div></a>
 			<a href="./misc/rgb/"><div>RGB Sliders</div></a>
+			<a href="./misc/palette/"><div>Random Palette Generator</div></a>
 			<a href="./misc/Alchahemistry/"><div>Alchahemistry (WIP)</div></a>
 		</div>
 		<div id="content">
