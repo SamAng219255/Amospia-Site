@@ -74,16 +74,16 @@ body {
 	text-align: center;
 }
 #jumpMenu>div>div {
+	margin: 1em 0;
+}
+.divider {
 	height: 0px;
 	border-style: solid;
 	border-width: 1px;
 }
-#jumpMenu>div>div>span {
+.divider>span {
 	background-color: #404040;
 	display: inline-block;
 	padding: 0px 0.5em;
 	transform: translate(0%,-0.5em);
-}
-form {
-	margin: 1em 0;
 }
