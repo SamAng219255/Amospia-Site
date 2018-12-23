@@ -37,7 +37,7 @@ a:active {
 }
 #title {
 	display: inline-block;
-	font-size: 2em;
+	font-size: 3em;
 	font-family: big_pixel;
 	color: #219255;
 	padding: 2px;
@@ -45,9 +45,13 @@ a:active {
 	text-shadow: -0.125em -0.125em 0 #000, 0.125em -0.125em 0 #000, -0.125em 0.125em 0 #000, 0.125em 0.125em 0 #000,
 		-0.125em -0.0625em 0 #000, 0.125em -0.0625em 0 #000, -0.125em 0.0625em 0 #000, 0.125em 0.0625em 0 #000;
 }
+#time {
+	display: inline-block;
+	float: right;
+	text-shadow: -0.0625em -0.0625em 0 #000, 0.0625em -0.0625em 0 #000, -0.0625em 0.0625em 0 #000, 0.0625em 0.0625em 0 #000;
+}
 #navigation {
 	display: inline-block;
-	font-size: 1.5em;
 	width: 100%;
 	position: relative;
 }
@@ -103,6 +107,10 @@ p {
 		top: 42.857%;
 		height: 53.571%;
 	}
+	#time {
+		float: none;
+		display: block;
+	}
 }
 @media (max-width: 48em) {
 	.card {
@@ -138,7 +146,7 @@ p {
 	#title {
 		font-size: 2em;
 	}
-	#text p {
+	p {
 		font-size: 0.75em;
 		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000,
 			-1px -0px 0 #000, 1px -0px 0 #000, -0px 1px 0 #000, 0px -1px 0 #000;
@@ -168,7 +176,7 @@ p {
 	#title {
 		font-size: 1em;
 	}
-	#text p {
+	p {
 		font-size: 0.5em;
 		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000,
 			-1px -0px 0 #000, 1px -0px 0 #000, -0px 1px 0 #000, 0px -1px 0 #000;
@@ -192,7 +200,7 @@ p {
 	#title {
 		font-size: 0.7em;
 	}
-	#text p {
+	p {
 		font-size: 0.25em;
 	}
 }
