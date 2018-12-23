@@ -40,8 +40,8 @@ function gotoPin(pinName) {
 	if(pinsFound) {
 		for(var i=0; i<markers.length; i++) {
 			if(markers[i].name==pinName) {
-				pos[0]=parseInt(parseInt(markers[i].x)/128);
-				pos[1]=parseInt(parseInt(markers[i].z)/128);
+				pos[0]=parseInt(parseInt(markers[i].x)/128+0.5);
+				pos[1]=parseInt(parseInt(markers[i].z)/128+0.5);
 			}
 		}
 		window.location.hash=pinName;
