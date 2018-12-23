@@ -6,17 +6,74 @@ markers=[];
 markersVisible=[];
 pointsVis=true;
 selectedPoint=0;
+pinsFound=false;
+gotoPinPending="";
+jumpMenuActive=false;
 document.addEventListener("keydown", move);
 $.getJSON("tileIds.json",function (data) {tileIds=data});
 function setup() {
+	var dataStr=window.location.hash.split("#");
+	if(dataStr.length>1) {
+		var dataArr=dataStr[1].split("&");
+		var data={};
+		for(var i=0; i<dataArr.length; i++) {
+			data[dataArr[i].split("=")[0]]=dataArr[i].split("=")[1];
+		}
+		if(data["x"]!==undefined && data["z"]!==undefined) {
+			pos[0]=parseInt(data["x"]);
+			pos[1]=parseInt(data["z"]);
+		}
+		else if(data["pin"]!==undefined) {
+			gotoPin(data["pin"]);
+		}
+	}
 	canvas=$("#mcmap")[0];
 	ctx=canvas.getContext("2d");
 	oCanvas=$("#overlay")[0];
 	oCtx=oCanvas.getContext("2d");
 	pCanvas=$("#points")[0];
 	pCtx=pCanvas.getContext("2d");
-	$.getJSON("getMarkers.php",function (data) {markers=data; checkMarkerVisibility(); drawPoints();});
+	$.getJSON("getMarkers.php",function (data) {markers=data; pinsFound=true; if(gotoPinPending!="") {gotoPin(gotoPinPending)} else {checkMarkerVisibility(); drawPoints();}});
 	draw();
+}
+function gotoPin(pinName) {
+	if(pinsFound) {
+		for(var i=0; i<markers.length; i++) {
+			if(markers[i].name==pinName) {
+				pos[0]=parseInt(parseInt(markers[i].x)/128);
+				pos[1]=parseInt(parseInt(markers[i].z)/128);
+			}
+		}
+		window.location.hash=pinName;
+		checkMarkerVisibility();
+		drawPoints();
+		draw();
+	}
+	else {
+		gotoPinPending=pinName;
+	}
+}
+function gotoPoint(x,z) {
+	pos[0]=x;
+	pos[1]=z;
+	window.location.hash="x="+pos[0]+"&z="+pos[1];
+	draw();
+	checkMarkerVisibility();
+	drawPoints();
+}
+function jumpPinFunc(e) {
+	if(jumpMenuActive && e.path[1].id=="jumpPinForm" && e.keyCode==13) {
+		gotoPin($("#jumpPin").val());
+		setTimeout(function(){jumpMenuActive=false},1);
+		$("#jumpMenu").removeClass("shown");
+	}
+}
+function jumpCoordFunc(e) {
+	if(jumpMenuActive && e.path[1].id=="jumpCoordForm" && e.keyCode==13) {
+		gotoPoint(parseInt(parseInt($("#jumpCoordX").val())/128),parseInt(parseInt($("#jumpCoordZ").val())/128));
+		setTimeout(function(){jumpMenuActive=false},1);
+		$("#jumpMenu").removeClass("shown");
+	}
 }
 function draw() {
 	for(var i=-4; i<=4; i++) {
@@ -44,38 +101,46 @@ function draw() {
 	}
 }
 function move(e) {
-	if(e.keyCode>36 && e.keyCode<41) {
-		oCtx.clearRect(0,0,1152,640);
-		resetStuff();
-		clearInterval(curTim);
-		curTim=setInterval(draw,250);
-	}
-	if(e.keyCode==37) {
-		pos[0]--;
-		draw();
-	}
-	else if(e.keyCode==38) {
-		pos[1]--;
-		draw();
-	}
-	else if(e.keyCode==39) {
-		pos[0]++;
-		draw();
-	}
-	else if(e.keyCode==40) {
-		pos[1]++;
-		draw();
-	}
-	else if(e.keyCode==13) {
-		if(pointsVis && selectedPoint!=0) {
+	if(!jumpMenuActive) {
+		if(e.keyCode>36 && e.keyCode<41) {
+			oCtx.clearRect(0,0,1152,640);
 			resetStuff();
+			clearInterval(curTim);
+			curTim=setInterval(draw,250);
 		}
-		pointsVis=!pointsVis;
+		if(e.keyCode==37) {
+			pos[0]--;
+		}
+		else if(e.keyCode==38) {
+			pos[1]--;
+		}
+		else if(e.keyCode==39) {
+			pos[0]++;
+		}
+		else if(e.keyCode==40) {
+			pos[1]++;
+		}
+		else if(e.keyCode==13) {
+			if(pointsVis && selectedPoint!=0) {
+				resetStuff();
+			}
+			pointsVis=!pointsVis;
+		}
+		else if(e.keyCode==16) {
+			$("#jumpMenu").addClass("shown");
+			jumpMenuActive=true;
+		}
+		if(e.keyCode>36 && e.keyCode<41) {
+			window.location.hash="x="+pos[0]+"&z="+pos[1];
+			draw();
+			checkMarkerVisibility();
+		}
+		drawPoints();
 	}
-	if(e.keyCode>36 && e.keyCode<41) {
-		checkMarkerVisibility();
+	else if(e.keyCode==27) {
+		$("#jumpMenu").removeClass("shown");
+		jumpMenuActive=false;
 	}
-	drawPoints();
 }
 function highlight(e) {
 	var offset=$('#mapcontainer').offset();
@@ -166,7 +231,7 @@ function drawPoints() {
 	}
 }
 function resetStuff() {
-	$("#infoTxt")[0].innerHTML="Use the <b>Arrow Keys</b> to move the map and press <b>Enter</b> to toggle locations.<br>Click on a pin to show information on that location.";
+	$("#infoTxt")[0].innerHTML="Use the <b>Arrow Keys</b> to move the map or press <b>Shift</b> to jump to a location and press <b>Enter</b> to toggle pins.<br>Click on a pin to show information on that location.";
 	selectedPoint=0;
 	drawPoints();
 	lastTar=[5,5];
