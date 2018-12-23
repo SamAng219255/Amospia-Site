@@ -16,18 +16,18 @@
 	</div>
 	<div id="jumpMenu">
 		<div>
-			<form onkeydown="jumpCoordFunc(event)" id="jumpCoordForm">
+			<div onkeydown="jumpCoordFunc(event)" id="jumpCoordForm">
 				<label for="jumpCoordX">X: </label>
 				<input type="number" placeholder="x" id="jumpCoordX" step="1">
 				&nbsp;&nbsp;
 				<label for="jumpCoordZ">Z: </label>
 				<input type="number" placeholder="z" id="jumpCoordZ" step="1">
-			</form>
-			<div><span>OR</span></div>
-			<form onkeydown="jumpPinFunc(event)" id="jumpPinForm">
+			</div>
+			<div class="divider"><span>OR</span></div>
+			<div onkeydown="jumpPinFunc(event)" id="jumpPinForm">
 				<label for="jumpPin">Pin Name: </label>
 				<input type="text" placeholder="Pin Name" id="jumpPin">
-			</form>
+			</div>
 		</div>
 	</div>
 	<script>setup();</script>
