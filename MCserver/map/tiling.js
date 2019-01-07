@@ -192,15 +192,19 @@ function move(e) {
 			}
 			if(e.keyCode==37) {
 				pos[0]-=Math.max(Math.floor(startingTileSize/tileSize),1);
+				Object.keys(tileDest).forEach(function(key){tileDest[key][0]++});
 			}
 			else if(e.keyCode==38) {
 				pos[1]-=Math.max(Math.floor(startingTileSize/tileSize),1);
+				Object.keys(tileDest).forEach(function(key){tileDest[key][1]++});
 			}
 			else if(e.keyCode==39) {
 				pos[0]+=Math.max(Math.floor(startingTileSize/tileSize),1);
+				Object.keys(tileDest).forEach(function(key){tileDest[key][0]--});
 			}
 			else if(e.keyCode==40) {
 				pos[1]+=Math.max(Math.floor(startingTileSize/tileSize),1);
+				Object.keys(tileDest).forEach(function(key){tileDest[key][1]--});
 			}
 			else if(e.keyCode==13) {
 				if(pointsVis && selectedPoint!=0) {
