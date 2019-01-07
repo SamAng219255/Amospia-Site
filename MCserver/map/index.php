@@ -1,7 +1,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="./theme.css">
-	<script src="../../chat/jquery.js"></script>
+	<script src="../../jquery.js"></script>
 	<script src="tiling.js"></script>
 	<title>Map - AmospiaCraft</title>
 	<link href="../img/icon.png" rel="shortcut icon">

@@ -12,7 +12,10 @@ instMenuActive=true;
 menuActive=true;
 lastButtonPress=(new Date()).getTime();
 tiles={};
+empty=[];
 tileDest={};
+defaultTile=document.createElement('img');
+defaultTile.src='img/default.png';
 document.addEventListener("keydown", move);
 $.getJSON("tileIds.json",function (data) {tileIds=data});
 window.onresize = function(event) {
@@ -36,8 +39,8 @@ function setup() {
 			data[dataArr[i].split("=")[0]]=dataArr[i].split("=")[1];
 		}
 		if(data["x"]!==undefined && data["z"]!==undefined) {
-			pos[0]=parseInt(data["x"]);
-			pos[1]=parseInt(data["z"]);
+			pos[0]=parseFloat(data["x"]);
+			pos[1]=parseFloat(data["z"]);
 		}
 		else if(data["pin"]!==undefined) {
 			gotoPin(data["pin"]);
@@ -100,8 +103,9 @@ function gotoPin(pinName) {
 	if(pinsFound) {
 		for(var i=0; i<markers.length; i++) {
 			if(markers[i].name==pinName) {
-				pos[0]=parseInt(parseInt(markers[i].x)/128+0.5);
-				pos[1]=parseInt(parseInt(markers[i].z)/128+0.5);
+				pos[0]=Math.floor(Math.floor(markers[i].x)/128+0.5);
+				pos[1]=Math.floor(Math.floor(markers[i].z)/128+0.5);
+				cornerPos=[pos[0]-width/(2*tileSize)+0.5,pos[1]-height/(2*tileSize)+0.5];
 			}
 		}
 		window.location.hash=pinName;
@@ -115,6 +119,7 @@ function gotoPin(pinName) {
 function gotoPoint(x,z) {
 	pos[0]=x;
 	pos[1]=z;
+	cornerPos=[pos[0]-width/(2*tileSize)+0.5,pos[1]-height/(2*tileSize)+0.5];
 	window.location.hash="x="+pos[0]+"&z="+pos[1];
 	draw();
 	drawPoints();
@@ -128,7 +133,7 @@ function jumpPinFunc(e) {
 }
 function jumpCoordFunc(e) {
 	if(jumpMenuActive && e.path[1].id=="jumpCoordForm" && e.keyCode==13) {
-		gotoPoint(parseInt(parseInt($("#jumpCoordX").val())/128),parseInt(parseInt($("#jumpCoordZ").val())/128));
+		gotoPoint(Math.floor(parseFloat($("#jumpCoordX").val())/128),Math.floor(parseFloat($("#jumpCoordZ").val())/128));
 		setTimeout(function(){jumpMenuActive=false; menuActive=false;},1);
 		$("#jumpMenu").removeClass("shown");
 	}
@@ -138,27 +143,33 @@ function draw() {
 	tileDelta=[pos[0]-cornerPos[0],pos[1]-cornerPos[1]];
 	for(var i=-Math.ceil(tileDelta[0]); i<=Math.ceil(tileDelta[0]); i++) {
 		for(var j=-Math.ceil(tileDelta[1]); j<=Math.ceil(tileDelta[1]); j++) {
-			var x=(parseInt(pos[0])+i);
-			var y=(parseInt(pos[1])+j);
-			if(tiles["x"+x+"y"+y]==undefined) {
-				tileDest["x"+x+"y"+y]=[i,j];
-				tiles["x"+x+"y"+y]=document.createElement('img');
-				tiles["x"+x+"y"+y].src="img/tile.0."+x+"."+y+".png";
-				tiles["x"+x+"y"+y].onerror=function() {
+			var x=(Math.floor(pos[0])+i);
+			var y=(Math.floor(pos[1])+j);
+			var key="x"+x+"y"+y;
+			if(empty.indexOf(key)>-1) {
+				mapCtx.drawImage(defaultTile,(i+tileDelta[0])*tileSize,(j+tileDelta[1])*tileSize,tileSize,tileSize);
+			}
+			else if(tiles[key]==undefined) {
+				tileDest[key]=[i,j];
+				tiles[key]=document.createElement('img');
+				tiles[key].src="img/tile.0."+x+"."+y+".png";
+				tiles[key].onerror=function() {
+					empty.push(key);
 					if (this.src != 'img/default.png') {
 						this.src = 'img/default.png'
 					};
+					preventDefault();
 				}
-				tiles["x"+x+"y"+y].onload=function () {
+				tiles[key].onload=function () {
 					var foo=this.src.split(".");
 					var bar=tileDest["x"+foo[foo.length-3]+"y"+foo[foo.length-2]];
 					delete tileDest["x"+foo[foo.length-3]+"y"+foo[foo.length-2]];
-					mapCtx.drawImage(this,(parseInt(bar[0])+tileDelta[0])*tileSize,(parseInt(bar[1])+tileDelta[1])*tileSize,tileSize,tileSize);
+					mapCtx.drawImage(this,(Math.floor(bar[0])+tileDelta[0])*tileSize,(Math.floor(bar[1])+tileDelta[1])*tileSize,tileSize,tileSize);
 					drawMain();
 				}
 			}
 			else {
-				mapCtx.drawImage(tiles["x"+x+"y"+y],(i+tileDelta[0])*tileSize,(j+tileDelta[1])*tileSize,tileSize,tileSize);
+				mapCtx.drawImage(tiles[key],(i+tileDelta[0])*tileSize,(j+tileDelta[1])*tileSize,tileSize,tileSize);
 			}
 		}
 	}
@@ -180,16 +191,16 @@ function move(e) {
 				resetStuff();
 			}
 			if(e.keyCode==37) {
-				pos[0]-=Math.max(parseInt(startingTileSize/tileSize),1);
+				pos[0]-=Math.max(Math.floor(startingTileSize/tileSize),1);
 			}
 			else if(e.keyCode==38) {
-				pos[1]-=Math.max(parseInt(startingTileSize/tileSize),1);
+				pos[1]-=Math.max(Math.floor(startingTileSize/tileSize),1);
 			}
 			else if(e.keyCode==39) {
-				pos[0]+=Math.max(parseInt(startingTileSize/tileSize),1);
+				pos[0]+=Math.max(Math.floor(startingTileSize/tileSize),1);
 			}
 			else if(e.keyCode==40) {
-				pos[1]+=Math.max(parseInt(startingTileSize/tileSize),1);
+				pos[1]+=Math.max(Math.floor(startingTileSize/tileSize),1);
 			}
 			else if(e.keyCode==13) {
 				if(pointsVis && selectedPoint!=0) {
@@ -252,20 +263,18 @@ function highlight(e) {
 	var markDist=Infinity;
 	if(pointsVis) {
 		for(var i=0; i<markers.length; i++) {
-			if(markersVisible.indexOf(markers[i].id)!=-1) {
-				var dist=Math.sqrt(Math.pow(xXct-markers[i].x/128*tileSize,2)+Math.pow(yXct-markers[i].z/128*tileSize,2));
-				if(dist<markDist && ((dist<15 && selectedPoint==markers[i].id) || dist<10)) {
-					clickedMark=true;
-					whichMark=i;
-					markDist=dist;
-				}
+			var dist=Math.sqrt(Math.pow(xXct-markers[i].x/128*tileSize-tileSize/2,2)+Math.pow(yXct-markers[i].z/128*tileSize-tileSize/2,2));
+			if(dist<markDist && ((dist<15 && selectedPoint==markers[i].id) || dist<10)) {
+				clickedMark=true;
+				whichMark=i;
+				markDist=dist;
 			}
 		}
 	}
 	if(clickedMark) {
 		if(selectedPoint!=markers[whichMark].id) {
 			selectedPoint=markers[whichMark].id;
-			$("#infoTxt")[0].innerHTML="<b>"+markers[whichMark].name.toUpperCase()+"</b>: "+markers[whichMark].desc;
+			$("#infoTxt")[0].innerHTML="<b>"+markers[whichMark].name+"</b>: "+markers[whichMark].desc;
 			$("#infoTxt").addClass("shown");
 		}
 		else {
@@ -329,7 +338,7 @@ function drawCircle(CTX,xPos,yPos,radius,color) {
 	CTX.arc(xPos, yPos, radius, 0, 2*Math.PI, true);
 	CTX.fill();
 }
-function checkMarkerVisibility() {
+function checkMarkerVisibility() {//removed feature: buggy and unnecessary
 	markersVisible=[];
 	var posRel=[pos[0]*128,pos[1]*128];
 	var delta=[(pos[0]-cornerPos[0])*128,(pos[1]-cornerPos[1])*128];
@@ -340,21 +349,19 @@ function checkMarkerVisibility() {
 	}
 }
 function drawPoints() {
-	checkMarkerVisibility();
+	//checkMarkerVisibility();
 	pinCtx.clearRect(0,0,width,height);
 	if(pointsVis) {
 		var posRel=[cornerPos[0]*tileSize,cornerPos[1]*tileSize];
 		for(var i=0; i<markers.length; i++) {
-			if(markersVisible.indexOf(markers[i].id)!=-1) {
-				var posAdj=[markers[i].x/128*tileSize-posRel[0],markers[i].z/128*tileSize-posRel[1]];
-				var sizeMod=1;
-				if(markers[i].id==selectedPoint) {
-					sizeMod=Math.sqrt(2);
-				}
-				drawCircle(pinCtx,posAdj[0]+(2*sizeMod),posAdj[1]+(2*sizeMod),10*sizeMod,"#000000");
-				drawCircle(pinCtx,posAdj[0],posAdj[1],10*sizeMod,"#ff0000");
-				drawCircle(pinCtx,posAdj[0]-(3*sizeMod),posAdj[1]-(3*sizeMod),4*sizeMod,"#ff8080");
+			var posAdj=[markers[i].x/128*tileSize-posRel[0]+tileSize/2,markers[i].z/128*tileSize-posRel[1]+tileSize/2];
+			var sizeMod=1;
+			if(markers[i].id==selectedPoint) {
+				sizeMod=Math.sqrt(2);
 			}
+			drawCircle(pinCtx,posAdj[0]+(2*sizeMod),posAdj[1]+(2*sizeMod),10*sizeMod,"#000000");
+			drawCircle(pinCtx,posAdj[0],posAdj[1],10*sizeMod,"#ff0000");
+			drawCircle(pinCtx,posAdj[0]-(3*sizeMod),posAdj[1]-(3*sizeMod),4*sizeMod,"#ff8080");
 		}
 	}
 	drawMain();
@@ -366,6 +373,5 @@ function resetStuff() {
 	drawPoints();
 	lastTar=[Infinity,Infinity];
 }
-
 
 

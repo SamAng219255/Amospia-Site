@@ -118,7 +118,7 @@
 				echo '<div id="login">
 		<p>You will need to login with your minecraft account:</p>
 		<form method="POST">
-			<input type="text" name="username" value="" required="" autocomplete="username" placeholder="Email/Username">
+			<input type="email" name="username" value="" required="" autocomplete="email" placeholder="Email">
 			<input type="password" name="password" required="" autocomplete="current-password" placeholder="Password">
 			<input type="submit" value="Login">
 		</form>
@@ -147,7 +147,7 @@
 					echo '<div id="login">
 		<p>You will need to login with your minecraft account:</p>
 		<form method="POST">
-			<input type="text" name="username" value="" required="" autocomplete="username" placeholder="Email/Username">
+			<input type="email" name="username" value="" required="" autocomplete="email" placeholder="Email">
 			<input type="password" name="password" required="" autocomplete="current-password" placeholder="Password">
 			<input type="submit" value="Login">
 		</form>
@@ -159,7 +159,7 @@
 			echo '<div id="login">
 		<p>You will need to login with your minecraft account:</p>
 		<form method="POST">
-			<input type="text" name="username" value="" required="" autocomplete="username" placeholder="Email/Username">
+			<input type="email" name="username" value="" required="" autocomplete="email" placeholder="Email">
 			<input type="password" name="password" required="" autocomplete="current-password" placeholder="Password">
 			<input type="submit" value="Login">
 		</form>

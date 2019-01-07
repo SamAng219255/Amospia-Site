@@ -44,7 +44,7 @@ body {
 	display: none;
 }
 #infoTxt {
-	height: 2rem;
+	height: 4rem;
 	width: 80%;
 	position: absolute;
 	bottom: 10%;
@@ -52,7 +52,7 @@ body {
 	text-align: center;
 	background-color: #404040;
 	color: #ffffff;
-	font-size: 0.5rem;
+	font-size: 0.75rem;
 	visibility: hidden;
 }
 #infoTxt.shown {
