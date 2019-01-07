@@ -1,7 +1,6 @@
 pos=[0,0];
-loadedImages=[];
-lastTar=[5,5];
-curTim=-1;
+cornerPos=[-576,-320]
+lastTar=[Infinity,Infinity];
 markers=[];
 markersVisible=[];
 pointsVis=true;
@@ -9,13 +8,30 @@ selectedPoint=0;
 pinsFound=false;
 gotoPinPending="";
 jumpMenuActive=false;
+instMenuActive=true;
+menuActive=true;
+lastButtonPress=(new Date()).getTime();
+tiles={};
+tileDest={};
 document.addEventListener("keydown", move);
 $.getJSON("tileIds.json",function (data) {tileIds=data});
+window.onresize = function(event) {
+	canvasResize();
+	moving();
+};
+window.onwheel=function(event) {event.preventDefault(); return false;};
+window.ontouchmove=function(event) {event.preventDefault(); return false;};
+lastMoved=(new Date()).getTime();
+function moving() {
+	lastMoved=(new Date()).getTime();
+	setTimeout(function(){if((new Date()).getTime()-lastMoved>=500){canvasResize(); draw();}},501)
+}
 function setup() {
+	setInterval(draw,1000)
 	var dataStr=window.location.hash.split("#");
+	var data={};
 	if(dataStr.length>1) {
 		var dataArr=dataStr[1].split("&");
-		var data={};
 		for(var i=0; i<dataArr.length; i++) {
 			data[dataArr[i].split("=")[0]]=dataArr[i].split("=")[1];
 		}
@@ -27,14 +43,58 @@ function setup() {
 			gotoPin(data["pin"]);
 		}
 	}
-	canvas=$("#mcmap")[0];
-	ctx=canvas.getContext("2d");
-	oCanvas=$("#overlay")[0];
-	oCtx=oCanvas.getContext("2d");
-	pCanvas=$("#points")[0];
-	pCtx=pCanvas.getContext("2d");
-	$.getJSON("getMarkers.php",function (data) {markers=data; pinsFound=true; if(gotoPinPending!="") {gotoPin(gotoPinPending)} else {checkMarkerVisibility(); drawPoints();}});
+	width=$(window).width();
+	height=$(window).height();
+	if(height/width>5/9) {
+		tileSize=width/9;
+		startingTileSize=width/9;
+	}
+	else {
+		tileSize=height/5;
+		startingTileSize=height/5;
+	}
+	if(data["zoom"]!==undefined) {
+		tileSize*=parseFloat(data["zoom"]);
+	}
+	canvasSetup();
+	$.getJSON("getMarkers.php",function (data) {markers=data; pinsFound=true; if(gotoPinPending!="") {gotoPin(gotoPinPending)} else {drawPoints();}});
 	draw();
+}
+function canvasSetup() {
+	canvasResize();
+	canvas.addEventListener('mousewheel', function(event) {zoom(event); return false;}, false);
+	mapCnv=document.createElement('canvas');
+	mapCnv.width=width;
+	mapCnv.height=height;
+	mapCtx=mapCnv.getContext('2d');
+	mapCtx.imageSmoothingEnabled=false;
+	boxCnv=document.createElement('canvas');
+	boxCnv.width=width;
+	boxCnv.height=height;
+	boxCtx=boxCnv.getContext('2d');
+	boxCtx.imageSmoothingEnabled=false;
+	pinCnv=document.createElement('canvas');
+	pinCnv.width=width;
+	pinCnv.height=height;
+	pinCtx=pinCnv.getContext('2d');
+	pinCtx.imageSmoothingEnabled=false;
+}
+function canvasResize() {
+	canvas=document.getElementById("mcmap");
+	if(typeof mapCnv != "undefined") {
+		width=mapCnv.width=boxCnv.width=pinCnv.width=canvas.width=$(window).width();
+		height=mapCnv.height=boxCnv.height=pinCnv.height=canvas.height=$(window).height();
+		mapCtx.imageSmoothingEnabled=false;
+		boxCtx.imageSmoothingEnabled=false;
+		pinCtx.imageSmoothingEnabled=false;
+	}
+	else {
+		width=canvas.width=$(window).width();
+		height=canvas.height=$(window).height();
+	}
+	ctx=canvas.getContext('2d');
+	ctx.imageSmoothingEnabled=false;
+	cornerPos=[pos[0]-width/(2*tileSize)+0.5,pos[1]-height/(2*tileSize)+0.5];
 }
 function gotoPin(pinName) {
 	if(pinsFound) {
@@ -45,7 +105,6 @@ function gotoPin(pinName) {
 			}
 		}
 		window.location.hash=pinName;
-		checkMarkerVisibility();
 		drawPoints();
 		draw();
 	}
@@ -58,108 +117,143 @@ function gotoPoint(x,z) {
 	pos[1]=z;
 	window.location.hash="x="+pos[0]+"&z="+pos[1];
 	draw();
-	checkMarkerVisibility();
 	drawPoints();
 }
 function jumpPinFunc(e) {
 	if(jumpMenuActive && e.path[1].id=="jumpPinForm" && e.keyCode==13) {
 		gotoPin($("#jumpPin").val());
-		setTimeout(function(){jumpMenuActive=false},1);
+		setTimeout(function(){jumpMenuActive=false; menuActive=false;},1);
 		$("#jumpMenu").removeClass("shown");
 	}
 }
 function jumpCoordFunc(e) {
 	if(jumpMenuActive && e.path[1].id=="jumpCoordForm" && e.keyCode==13) {
 		gotoPoint(parseInt(parseInt($("#jumpCoordX").val())/128),parseInt(parseInt($("#jumpCoordZ").val())/128));
-		setTimeout(function(){jumpMenuActive=false},1);
+		setTimeout(function(){jumpMenuActive=false; menuActive=false;},1);
 		$("#jumpMenu").removeClass("shown");
 	}
 }
 function draw() {
-	for(var i=-4; i<=4; i++) {
-		for(var j=-2; j<=2; j++) {
-			var x=(pos[0]+i);
-			var y=(pos[1]+j);
-			ctx.drawImage(document.getElementById("default-img"),(i+4)*128,(j+2)*128);
-		}
-	}
-	for(var i=-4; i<=4; i++) {
-		for(var j=-2; j<=2; j++) {
-			var x=(pos[0]+i);
-			var y=(pos[1]+j);
-			if(loadedImages.indexOf(x+","+y)==-1) {
-				$("#tileStorage").append("<img id=\"x"+x+"y"+y+"\" src=\"img/tile.0."+x+"."+y+".png\" x=\""+x+"\" y=\""+y+"\" xpos=\""+i+"\" ypos=\""+j+"\" onerror=\"if (this.src != 'img/default.png') this.src = 'img/default.png';\">");
-				document.getElementById("x"+x+"y"+y).onload=function () {
-					ctx.drawImage(this,(parseInt(this.attributes.xpos.value)+4)*128,(parseInt(this.attributes.ypos.value)+2)*128);
+	mapCtx.clearRect(0,0,width,height);
+	tileDelta=[pos[0]-cornerPos[0],pos[1]-cornerPos[1]];
+	for(var i=-Math.ceil(tileDelta[0]); i<=Math.ceil(tileDelta[0]); i++) {
+		for(var j=-Math.ceil(tileDelta[1]); j<=Math.ceil(tileDelta[1]); j++) {
+			var x=(parseInt(pos[0])+i);
+			var y=(parseInt(pos[1])+j);
+			if(tiles["x"+x+"y"+y]==undefined) {
+				tileDest["x"+x+"y"+y]=[i,j];
+				tiles["x"+x+"y"+y]=document.createElement('img');
+				tiles["x"+x+"y"+y].src="img/tile.0."+x+"."+y+".png";
+				tiles["x"+x+"y"+y].onerror=function() {
+					if (this.src != 'img/default.png') {
+						this.src = 'img/default.png'
+					};
 				}
-				loadedImages.push(x+","+y);
+				tiles["x"+x+"y"+y].onload=function () {
+					var foo=this.src.split(".");
+					var bar=tileDest["x"+foo[foo.length-3]+"y"+foo[foo.length-2]];
+					delete tileDest["x"+foo[foo.length-3]+"y"+foo[foo.length-2]];
+					mapCtx.drawImage(this,(parseInt(bar[0])+tileDelta[0])*tileSize,(parseInt(bar[1])+tileDelta[1])*tileSize,tileSize,tileSize);
+					drawMain();
+				}
 			}
 			else {
-				ctx.drawImage(document.getElementById("x"+x+"y"+y),(i+4)*128,(j+2)*128);
+				mapCtx.drawImage(tiles["x"+x+"y"+y],(i+tileDelta[0])*tileSize,(j+tileDelta[1])*tileSize,tileSize,tileSize);
 			}
 		}
 	}
+	drawPoints();
+}
+function drawMain() {
+	ctx.clearRect(0,0,width,height);
+	ctx.drawImage(mapCnv,0,0);
+	ctx.drawImage(boxCnv,0,0);
+	ctx.drawImage(pinCnv,0,0);
 }
 function move(e) {
-	if(!jumpMenuActive) {
-		if(e.keyCode>36 && e.keyCode<41) {
-			oCtx.clearRect(0,0,1152,640);
-			resetStuff();
-			clearInterval(curTim);
-			curTim=setInterval(draw,250);
-		}
-		if(e.keyCode==37) {
-			pos[0]--;
-		}
-		else if(e.keyCode==38) {
-			pos[1]--;
-		}
-		else if(e.keyCode==39) {
-			pos[0]++;
-		}
-		else if(e.keyCode==40) {
-			pos[1]++;
-		}
-		else if(e.keyCode==13) {
-			if(pointsVis && selectedPoint!=0) {
+	var allowNormalExecution=true;
+	var time=(new Date()).getTime();
+	if(time-lastButtonPress>10) {
+		if(!menuActive) {
+			if(e.keyCode>36 && e.keyCode<41) {
+				boxCtx.clearRect(0,0,width,height);
 				resetStuff();
 			}
-			pointsVis=!pointsVis;
+			if(e.keyCode==37) {
+				pos[0]-=Math.max(parseInt(startingTileSize/tileSize),1);
+			}
+			else if(e.keyCode==38) {
+				pos[1]-=Math.max(parseInt(startingTileSize/tileSize),1);
+			}
+			else if(e.keyCode==39) {
+				pos[0]+=Math.max(parseInt(startingTileSize/tileSize),1);
+			}
+			else if(e.keyCode==40) {
+				pos[1]+=Math.max(parseInt(startingTileSize/tileSize),1);
+			}
+			else if(e.keyCode==13) {
+				if(pointsVis && selectedPoint!=0) {
+					resetStuff();
+				}
+				pointsVis=!pointsVis;
+			}
+			else if(e.keyCode==16) {
+				$("#jumpMenu").addClass("shown");
+				jumpMenuActive=true;
+				menuActive=true;
+			}
+			else if(e.keyCode==9) {
+				$("#instr").removeClass("hide");
+				instMenuActive=true;
+				menuActive=true;
+				allowNormalExecution=false;
+			}
+			if(e.keyCode>36 && e.keyCode<41) {
+				cornerPos=[pos[0]-width/(2*tileSize)+0.5,pos[1]-height/(2*tileSize)+0.5];
+				window.location.hash="x="+pos[0]+"&z="+pos[1]+"&zoom="+tileSize/startingTileSize;
+				draw();
+			}
+			drawPoints();
 		}
-		else if(e.keyCode==16) {
-			$("#jumpMenu").addClass("shown");
-			jumpMenuActive=true;
+		else if(jumpMenuActive && e.keyCode==27) {
+			$("#jumpMenu").removeClass("shown");
+			jumpMenuActive=false;
+			menuActive=false;
 		}
-		if(e.keyCode>36 && e.keyCode<41) {
-			window.location.hash="x="+pos[0]+"&z="+pos[1];
-			draw();
-			checkMarkerVisibility();
+		else if(instMenuActive && (e.keyCode==27 || e.keyCode==9)) {
+			$("#instr").addClass("hide");
+			instMenuActive=false;
+			menuActive=false;
+			if(e.keyCode==9) {allowNormalExecution=false;}
 		}
-		drawPoints();
 	}
-	else if(e.keyCode==27) {
-		$("#jumpMenu").removeClass("shown");
-		jumpMenuActive=false;
-	}
+	lastButtonPress=time;
+	return allowNormalExecution;
+}
+function closeJumpMenu() {
+	$("#jumpMenu").removeClass("shown");
+	jumpMenuActive=false;
+	menuActive=false;
 }
 function highlight(e) {
-	var offset=$('#mapcontainer').offset();
-	var rawX=(e.pageX - offset.left) + $(window).scrollLeft() - 4;
-	var rawY=(e.pageY - offset.top) + $(window).scrollTop() - 4;
-	var x = parseInt(rawX/128);
-	var y = parseInt(rawY/128);
-	var xCor=x-4+pos[0];
-	var yCor=y-2+pos[1];
-	var xXct=rawX-576+(pos[0]*128);
-	var yXct=rawY-320+(pos[1]*128);
-	oCtx.clearRect(0,0,1152,640);
+	var rawX=e.pageX+$(window).scrollLeft();
+	var rawY=e.pageY+$(window).scrollTop();
+	var xf = Math.floor((rawX-width/2)/tileSize+0.5)-cornerPos[0]+pos[0];
+	var yf = Math.floor((rawY-height/2)/tileSize+0.5)-cornerPos[1]+pos[1];
+	var x = Math.floor(xf);
+	var y = Math.floor(yf);
+	var xCor=Math.floor(xf+cornerPos[0]);
+	var yCor=Math.floor(yf+cornerPos[1]);
+	var xXct=rawX+(cornerPos[0]*tileSize);
+	var yXct=rawY+(cornerPos[1]*tileSize);
+	boxCtx.clearRect(0,0,width,height);
 	var clickedMark=false;
 	var whichMark=-1;
-	var markDist=1000000;
+	var markDist=Infinity;
 	if(pointsVis) {
 		for(var i=0; i<markers.length; i++) {
 			if(markersVisible.indexOf(markers[i].id)!=-1) {
-				var dist=Math.sqrt(Math.pow(xXct-markers[i].x,2)+Math.pow(yXct-markers[i].z,2));
+				var dist=Math.sqrt(Math.pow(xXct-markers[i].x/128*tileSize,2)+Math.pow(yXct-markers[i].z/128*tileSize,2));
 				if(dist<markDist && ((dist<15 && selectedPoint==markers[i].id) || dist<10)) {
 					clickedMark=true;
 					whichMark=i;
@@ -172,6 +266,7 @@ function highlight(e) {
 		if(selectedPoint!=markers[whichMark].id) {
 			selectedPoint=markers[whichMark].id;
 			$("#infoTxt")[0].innerHTML="<b>"+markers[whichMark].name.toUpperCase()+"</b>: "+markers[whichMark].desc;
+			$("#infoTxt").addClass("shown");
 		}
 		else {
 			selectedPoint=0;
@@ -179,19 +274,50 @@ function highlight(e) {
 		}
 		drawPoints();
 	}
-	else if(!(lastTar[0]==x && lastTar[1]==y)) {
+	else if(!(lastTar[0]==xCor && lastTar[1]==yCor)) {
 		resetStuff();
-		lastTar=[x,y];
-		oCtx.strokeStyle="#000000";
-		oCtx.lineWidth=8;
-		oCtx.strokeRect(x*128, y*128, 128, 128);
-		oCtx.strokeStyle="#FFFFFF";
-		oCtx.lineWidth=4;
-		oCtx.strokeRect(x*128, y*128, 128, 128);
-		$("#infoTxt")[0].innerHTML="Highlighted tile ("+xCor+", "+yCor+"), centered on ("+(xCor*128)+", "+(yCor*128)+"), coordinates ("+(xCor*128-64)+", "+(yCor*128-64)+") to ("+(xCor*128+63)+", "+(yCor*128+63)+").<br>Map ID: "+mapIds(xCor,yCor);
+		lastTar=[xCor,yCor];
+		boxCtx.strokeStyle="#000000";
+		boxCtx.lineWidth=8;
+		boxCtx.strokeRect(xf*tileSize, yf*tileSize, tileSize, tileSize);
+		boxCtx.strokeStyle="#FFFFFF";
+		boxCtx.lineWidth=4;
+		boxCtx.strokeRect(xf*tileSize, yf*tileSize, tileSize, tileSize);
+		$("#infoTxt")[0].innerHTML="Highlighted tile ("+xCor+", "+yCor+"), centered on ("+(xCor*128)+", "+(yCor*128)+"), coordinates ("+((xCor*128)-64)+", "+((yCor*128)-64)+") to ("+((xCor*128)+63)+", "+((yCor*128)+63)+").<br>Map ID: "+mapIds(xCor,yCor);
+		$("#infoTxt").addClass("shown");
+		drawMain();
 	}
 	else {
 		resetStuff();
+	}
+}
+function redrawHighlight() {
+	if(lastTar[0]<Infinity) {
+		boxCtx.clearRect(0,0,width,height);
+		var xf = lastTar[0]-cornerPos[0];
+		var yf = lastTar[1]-cornerPos[1];
+		var x = Math.floor(xf);
+		var y = Math.floor(yf);
+		var xCor=lastTar[0];;
+		var yCor=lastTar[1];;
+		boxCtx.strokeStyle="#000000";
+		boxCtx.lineWidth=8;
+		boxCtx.strokeRect(xf*tileSize, yf*tileSize, tileSize, tileSize);
+		boxCtx.strokeStyle="#FFFFFF";
+		boxCtx.lineWidth=4;
+		boxCtx.strokeRect(xf*tileSize, yf*tileSize, tileSize, tileSize);
+		$("#infoTxt")[0].innerHTML="Highlighted tile ("+xCor+", "+yCor+"), centered on ("+(xCor*128)+", "+(yCor*128)+"), coordinates ("+((xCor*128)-64)+", "+((yCor*128)-64)+") to ("+((xCor*128)+63)+", "+((yCor*128)+63)+").<br>Map ID: "+mapIds(xCor,yCor);
+		$("#infoTxt").addClass("shown");
+		drawMain();
+	}
+}
+function zoom(e) {
+	if(Math.abs(e.deltaY)>Math.abs(e.deltaX)) {
+		tileSize*=Math.pow(2,-e.deltaY/100);
+		window.location.hash="x="+pos[0]+"&z="+pos[1]+"&zoom="+tileSize/startingTileSize;
+		cornerPos=[pos[0]-width/(2*tileSize)+0.5,pos[1]-height/(2*tileSize)+0.5];
+		draw();
+		redrawHighlight();
 	}
 }
 function mapIds(x,y) {
@@ -206,35 +332,39 @@ function drawCircle(CTX,xPos,yPos,radius,color) {
 function checkMarkerVisibility() {
 	markersVisible=[];
 	var posRel=[pos[0]*128,pos[1]*128];
+	var delta=[(pos[0]-cornerPos[0])*128,(pos[1]-cornerPos[1])*128];
 	for(var i=0; i<markers.length; i++) {
-		if(markers[i].x>=posRel[0]-576 && markers[i].x<posRel[0]+576 && markers[i].z>=posRel[1]-320 && markers[i].z<posRel[1]+320) {
+		if(markers[i].x>=cornerPos[0]-1 && markers[i].x<=cornerPos[0]+width/tileSize*128+1 && markers[i].z>=cornerPos[1]-1 && markers[i].z<=cornerPos[1]+height/tileSize*128+1) {
 			markersVisible.push(markers[i].id);
 		}
 	}
 }
 function drawPoints() {
-	pCtx.clearRect(0,0,1152,640);
+	checkMarkerVisibility();
+	pinCtx.clearRect(0,0,width,height);
 	if(pointsVis) {
-		var posRel=[pos[0]*128,pos[1]*128];
+		var posRel=[cornerPos[0]*tileSize,cornerPos[1]*tileSize];
 		for(var i=0; i<markers.length; i++) {
 			if(markersVisible.indexOf(markers[i].id)!=-1) {
-				var posAdj=[markers[i].x-(posRel[0]-576),markers[i].z-(posRel[1]-320)];
+				var posAdj=[markers[i].x/128*tileSize-posRel[0],markers[i].z/128*tileSize-posRel[1]];
 				var sizeMod=1;
 				if(markers[i].id==selectedPoint) {
 					sizeMod=Math.sqrt(2);
 				}
-				drawCircle(pCtx,posAdj[0]+(2*sizeMod),posAdj[1]+(2*sizeMod),10*sizeMod,"#000000");
-				drawCircle(pCtx,posAdj[0],posAdj[1],10*sizeMod,"#ff0000");
-				drawCircle(pCtx,posAdj[0]-(3*sizeMod),posAdj[1]-(3*sizeMod),4*sizeMod,"#ff8080");
+				drawCircle(pinCtx,posAdj[0]+(2*sizeMod),posAdj[1]+(2*sizeMod),10*sizeMod,"#000000");
+				drawCircle(pinCtx,posAdj[0],posAdj[1],10*sizeMod,"#ff0000");
+				drawCircle(pinCtx,posAdj[0]-(3*sizeMod),posAdj[1]-(3*sizeMod),4*sizeMod,"#ff8080");
 			}
 		}
 	}
+	drawMain();
 }
 function resetStuff() {
-	$("#infoTxt")[0].innerHTML="Use the <b>Arrow Keys</b> to move the map or press <b>Shift</b> to jump to a location and press <b>Enter</b> to toggle pins.<br>Click on a pin to show information on that location.";
+	$("#infoTxt")[0].innerHTML="";
+	$("#infoTxt").removeClass("shown");
 	selectedPoint=0;
 	drawPoints();
-	lastTar=[5,5];
+	lastTar=[Infinity,Infinity];
 }
 
 

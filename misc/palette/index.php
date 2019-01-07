@@ -24,11 +24,12 @@
 			$maxColor=0;
 			for($i=0; $i<3; $i++) {
 				$color[$i]=($GLOBALS['colorArr'][$ind%count($GLOBALS['colorArr'])][$i]*$prog)+($GLOBALS['colorArr'][($ind+1)%count($GLOBALS['colorArr'])][$i]*(1-$prog));
-				$color[$i]=pow($color[$i]/256,pow(2,$sat));
+				$color[$i]=$color[$i]/256;
 				$maxColor=max($maxColor,$color[$i]);
 			}
 			$strColor="";
 			for($i=0; $i<3; $i++) {
+				$color[$i]=1-((1-$color[$i])*$sat);
 				$color[$i]*=$val/$maxColor;
 				$color[$i]=floor($color[$i]*256)%256;
 				$thisStrColor=dechex($color[$i]);
@@ -42,10 +43,7 @@
 		function genRandColor() {
 			$hue=random();
 			$val=pow(random(),0.5);
-			$sat=($GLOBALS['LNLN2']-log(random()))/$GLOBALS['LN2'];
-			if(random()>0.5) {
-				$sat*=-1;
-			}
+			$sat=pow(random(),0.5);
 			$colorOut=genColor($hue,$sat,$val);
 			return $colorOut;
 		}
