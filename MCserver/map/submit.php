@@ -74,6 +74,7 @@
 		function addBanner($bannerTxt) {
 			echo '<div class="banner">'.$bannerTxt.'</div>';
 		}
+		require 'db.php';
 		//addBanner('test');
 		if(isset($_POST['name'])) {
 			$_SESSION['name']=mysqli_real_escape_string($conn,$_POST['name']);
@@ -84,9 +85,9 @@
 				addBanner('It appears that your session has expired. Please log in to finish submitting.');
 			}
 		}
+		var_dump($_SESSION);
 		if (isset($_SESSION['user'])) {
 			if(isset($_SESSION['name'])) {
-				require 'db.php';
 				$sql="INSERT INTO `mcstuff`.`mappoints` (`id`,`user`,`name`,`desc`,`x`,`z`) VALUES ('0','".$_SESSION['user']."','".$_SESSION['name']."','".$_SESSION['desc']."','".$_SESSION['x']."','".$_SESSION['z']."');";
 				if(mysqli_query($conn,$sql)) {
 					addBanner('You have successfully submitted the pin "'.$_SESSION['name'].'".');
