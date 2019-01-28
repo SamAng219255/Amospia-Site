@@ -159,6 +159,7 @@ function drag(e) {
 	window.location.hash="x="+(pos[0]+offsetPos[0])+"&z="+(pos[1]+offsetPos[1])+"&zoom="+tileSize/startingTileSize;
 	cornerPos=[pos[0]-width/(2*tileSize)+0.5,pos[1]-height/(2*tileSize)+0.5];
 	draw();
+	redrawHighlight();
 }
 function canvasSetup() {
 	canvasResize();
@@ -389,6 +390,7 @@ function highlight(e) {
 	}
 	if(clickedMark) {
 		if(selectedPoint!=markers[whichMark].id) {
+			lastTar=[Infinity,Infinity];
 			selectedPoint=markers[whichMark].id;
 			$("#infoTxt")[0].innerHTML="<b>"+markers[whichMark].name+"</b>: "+markers[whichMark].desc;
 			$("#infoTxt").addClass("shown");
