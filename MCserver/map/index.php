@@ -2,12 +2,15 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="./theme.css">
 	<script src="../../jquery.js"></script>
+	<script src="hammer.min.js"></script>
+	<script src="mobileDetect.js"></script>
 	<script src="tiling.js"></script>
 	<title>Map - AmospiaCraft</title>
 	<link href="../img/icon.png" rel="shortcut icon">
+	<!--<meta name="viewport">-->
 </head>
-<body onkeydown="return move(event)" onload="setup();">
-	<canvas height=640 width=1152 id="mcmap" onclick="highlight(event)"></canvas>
+<body onkeydown="return move(event)" onload="setup();" style="touch-action:none" id="body">
+	<canvas height=640 width=1152 id="mcmap"></canvas>
 	<div id="tileStorage"><img id="default-img" src="img/stone.png"></div>
 	<div id="infoTxt"></div>
 	<div id="jumpMenu">
@@ -21,9 +24,9 @@
 				<input type="number" placeholder="z" id="jumpCoordZ" step="1">
 			</div>
 			<div class="divider"><span>OR</span></div>
-			<div onkeydown="jumpPinFunc(event)" id="jumpPinForm">
+			<div id="jumpPinForm">
 				<label for="jumpPin">Pin Name: </label>
-				<input type="text" placeholder="Pin Name" id="jumpPin">
+				<select type="text" onchange="jumpPinFunc(event)" placeholder="Pin Name" id="jumpPin"><option value=''></option></select>
 			</div>
 		</div>
 	</div>
@@ -37,6 +40,28 @@
 				<li><b>Click</b> on a pin or map square to show information about that location.</li>
 				<li>Press <b>Tab</b> to toggle this menu.</li>
 			</ul>
+		</div>
+	</div>
+	<div id="sideMenu">
+		<!--<button id="jumpbutton"></button>-->
+		<button id="pinbutton"></button>
+	</div>
+	<div id="jumpMenuMobile">
+		<div onclick="closeJumpMenu()"></div>
+		<div>
+			<div onkeydown="jumpCoordFunc(event)" id="jumpCoordForm">
+				<small>Enter a coordinate to jump to that position on the map…</small><br>
+				<label for="jumpCoordXMobile">X: </label>
+				<input type="number" placeholder="x" id="jumpCoordXMobile" step="1">
+				&nbsp;&nbsp;
+				<label for="jumpCoordZMobile">Z: </label>
+				<input type="number" placeholder="z" id="jumpCoordZMobile" step="1">
+			</div>
+			<div class="divider"><span>OR</span></div>
+			<div id="jumpPinForm">
+				<small>choose a pin to jump to its location.</small><br>
+				<select type="text" onchange="jumpPinFunc(event)" placeholder="Pin Name" id="jumpPinMobile"><option value=''></option></select>
+			</div>
 		</div>
 	</div>
 </body>

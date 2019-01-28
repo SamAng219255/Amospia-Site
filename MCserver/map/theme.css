@@ -44,7 +44,7 @@ body {
 	display: none;
 }
 #infoTxt {
-	height: 4rem;
+	padding: 0.33333em 0 1em;
 	width: 80%;
 	position: absolute;
 	bottom: 10%;
@@ -86,6 +86,9 @@ body {
 	padding: 1em;
 	text-align: center;
 }
+#jumpMenu>div>div {
+	margin: 1em 0;
+}
 #infoMenu {
 	position: absolute;
 	top: 0;
@@ -113,9 +116,6 @@ body {
 	background-color: #404040;
 	padding: 1em;
 	text-align: center;
-}
-#jumpMenu>div>div {
-	margin: 1em 0;
 }
 .divider {
 	height: 0px;
@@ -149,4 +149,91 @@ body {
 	transform: translate(-50%, -50%);
 	background-color: #404040;
 	padding: 1em;
+}
+#sidemenu {
+	visibility: hidden;
+	position: absolute;
+	background-color: #202020;
+	border-radius: 0px 0px 0px 2rem;
+	right: 0;
+	top: 0;
+	opacity: 0.75;
+}
+#sidemenu.shown {
+	visibility: visible;
+}
+button {
+	all: unset;
+}
+input[type=number] {
+	all: unset;
+	background-color: #E0E0E0;
+	border-style: solid;
+	border-radius: 0.25em;
+	border-width: 1px;
+	border-color: #000000;
+	width: 5em;
+	height: 1em;
+	padding: 0.125em;
+	text-align: left;
+	display: inline-block;
+	color: #202020;
+}
+#sidemenu button {
+	display: block;
+	margin-top: 4rem;
+	width: 8rem;
+	height: 8rem;
+}
+#sidemenu #jumpButton {
+	background-image: url("img/jump.png");
+	background-size: 100%;
+}
+#sidemenu #pinButton {
+	background-image: url("img/pin.png");
+	background-size: 100%;
+}
+#sidemenu #pinButton.active {
+	background-image: url("img/pin2.png");
+}
+.mobile #infoTxt {
+	font-size: 1.5rem;
+}
+#jumpMenuMobile {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #404040;
+	visibility: hidden;
+	font-size: 3rem;
+}
+#jumpMenuMobile.shown {
+	visibility: visible;
+}
+#jumpMenuMobile>div:nth-child(1) {
+	float: right;
+	margin: 2rem;
+	background-image: url("img/X.png");
+	background-size: 100%;
+	width: 8rem;
+	height: 8rem;
+}
+#jumpMenuMobile>div:nth-child(2) {
+	position: absolute;
+	top: 50%;
+	left: 5%;
+	width: 90%;
+	transform: translate(0%, -50%);
+	text-align: center;
+}
+#jumpPinMobile {
+	font-size: 2rem;
+}
+#jumpMenuMobile>div>div {
+	margin: 1em 0;
+}
+#jumpMenuMobile input {
+	height: em;
 }

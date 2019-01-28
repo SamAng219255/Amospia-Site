@@ -26,9 +26,9 @@ if(isset($_GET['zMax'])) {
 	}
 	$restrictions.="`z`<".$_GET['zMax'];
 }
-$query="SELECT * FROM `mcstuff`.`mappoints`;";
+$query="SELECT * FROM `mcstuff`.`mappoints` ORDER BY `name` ASC;";
 if($restrictions!=='') {
-	$query="SELECT * FROM `mcstuff`.`mappoints` WHERE ".$restrictions.";";
+	$query="SELECT * FROM `mcstuff`.`mappoints` WHERE ".$restrictions." ORDER BY `name` ASC;";
 }
 $queryresult=mysqli_query($conn,$query);
 if($queryresult) {for($i=0; $i<$queryresult->num_rows; $i++) {
