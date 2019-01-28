@@ -43,7 +43,7 @@
 		</div>
 	</div>
 	<div id="sideMenu">
-		<!--<button id="jumpbutton"></button>-->
+		<button id="jumpbutton"></button>
 		<button id="pinbutton"></button>
 	</div>
 	<div id="jumpMenuMobile">

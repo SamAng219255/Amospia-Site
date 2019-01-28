@@ -42,7 +42,7 @@ function moving() {
 	setTimeout(function(){if((new Date()).getTime()-lastMoved>=500){canvasResize(); draw();}},501)
 }
 function setup() {
-	const viewportmeta = document.querySelector('meta[name=viewport]');
+	//const viewportmeta = document.querySelector('meta[name=viewport]');
 	//viewportmeta.setAttribute('content', "width=device-width, initial-scale=0");
 	if(isMobile) {
 		$("#body").addClass("mobile");
@@ -237,7 +237,7 @@ function jumpPinFunc(e) {
 		setTimeout(function(){jumpMenuActive=false; menuActive=false;},1);
 		$("#jumpMenu"+mobilePinCheck).removeClass("shown");
 		document.getElementById("jumpPin"+mobilePinCheck).selectedIndex=0;
-		viewportmeta.setAttribute('content', "width=device-width, initial-scale=0");
+		//viewportmeta.setAttribute('content', "width=device-width, initial-scale=0");
 	}
 }
 function jumpCoordFunc(e) {
