@@ -77,14 +77,8 @@ function setup() {
 	}
 	width=$(window).width();
 	height=$(window).height();
-	if(height/width>5/9) {
-		tileSize=width/9;
-		startingTileSize=width/9;
-	}
-	else {
-		tileSize=height/5;
-		startingTileSize=height/5;
-	}
+	tileSize=128;
+	startingTileSize=128;
 	if(data["zoom"]!==undefined) {
 		tileSize*=parseFloat(data["zoom"]);
 	}
@@ -129,7 +123,7 @@ function setup() {
 		tileSize=e.scale*pinchScale;
 		offsetPix[0]=-1*offsetPos[0]*tileSize;
 		offsetPix[1]=-1*offsetPos[1]*tileSize;
-		window.location.hash="x="+(pos[0]+offsetPos[0])+"&z="+(pos[1]+offsetPos[1])+"&zoom="+tileSize/startingTileSize;
+		window.location.hash="x="+(pos[0]+offsetPos[0])+"&z="+(pos[1]+offsetPos[1])+"&zoom="+tileSize/128;
 		cornerPos=[pos[0]-width/(2*tileSize)+0.5,pos[1]-height/(2*tileSize)+0.5];
 		draw();
 		redrawHighlight();
@@ -156,7 +150,7 @@ function drag(e) {
 		offsetPos[i]=tempPos[i]-pos[i];
 		offsetPix[i]=-1*offsetPos[i]*tileSize;
 	}
-	window.location.hash="x="+(pos[0]+offsetPos[0])+"&z="+(pos[1]+offsetPos[1])+"&zoom="+tileSize/startingTileSize;
+	window.location.hash="x="+(pos[0]+offsetPos[0])+"&z="+(pos[1]+offsetPos[1])+"&zoom="+tileSize/128;
 	cornerPos=[pos[0]-width/(2*tileSize)+0.5,pos[1]-height/(2*tileSize)+0.5];
 	draw();
 	redrawHighlight();
@@ -212,7 +206,7 @@ function gotoPin(pinName) {
 				cornerPos=[pos[0]-width/(2*tileSize)+0.5,pos[1]-height/(2*tileSize)+0.5];
 			}
 		}
-		window.location.hash="x="+(pos[0]+offsetPos[0])+"&z="+(pos[1]+offsetPos[1])+"&zoom="+tileSize/startingTileSize;
+		window.location.hash="x="+(pos[0]+offsetPos[0])+"&z="+(pos[1]+offsetPos[1])+"&zoom="+tileSize/128;
 		drawPoints();
 		draw();
 	}
@@ -228,7 +222,7 @@ function gotoPoint(x,z) {
 	offsetPix[0]=-1*offsetPos[0]*tileSize;
 	offsetPix[1]=-1*offsetPos[1]*tileSize;
 	cornerPos=[pos[0]-width/(2*tileSize)+0.5,pos[1]-height/(2*tileSize)+0.5];
-	window.location.hash="x="+(pos[0]+offsetPos[0])+"&z="+(pos[1]+offsetPos[1])+"&zoom="+tileSize/startingTileSize;
+	window.location.hash="x="+(pos[0]+offsetPos[0])+"&z="+(pos[1]+offsetPos[1])+"&zoom="+tileSize/128;
 	draw();
 	drawPoints();
 }
@@ -337,7 +331,7 @@ function move(e) {
 			}
 			if(e.keyCode>36 && e.keyCode<41) {
 				cornerPos=[pos[0]-width/(2*tileSize)+0.5,pos[1]-height/(2*tileSize)+0.5];
-				window.location.hash="x="+(pos[0]+offsetPos[0])+"&z="+(pos[1]+offsetPos[1])+"&zoom="+tileSize/startingTileSize;
+				window.location.hash="x="+(pos[0]+offsetPos[0])+"&z="+(pos[1]+offsetPos[1])+"&zoom="+tileSize/128;
 				draw();
 			}
 			drawPoints();
@@ -443,7 +437,7 @@ function zoom(e) {
 		tileSize*=Math.pow(2,-e.deltaY/100);
 		offsetPix[0]=-1*offsetPos[0]*tileSize;
 		offsetPix[1]=-1*offsetPos[1]*tileSize;
-		window.location.hash="x="+(pos[0]+offsetPos[0])+"&z="+(pos[1]+offsetPos[1])+"&zoom="+tileSize/startingTileSize;
+		window.location.hash="x="+(pos[0]+offsetPos[0])+"&z="+(pos[1]+offsetPos[1])+"&zoom="+tileSize/128;
 		cornerPos=[pos[0]-width/(2*tileSize)+0.5,pos[1]-height/(2*tileSize)+0.5];
 		draw();
 		redrawHighlight();
