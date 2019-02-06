@@ -34,11 +34,11 @@
 					<div>I've spent much work on this pack. Every texture and model was either selected from the upcoming official textures or built by me.</div>
 				</div>
 			</div></a>
-			<a href="./datapack.zip"><div class="card">
+			<a href="./blog/"><div class="card">
 				<div class="imgHold" style="background-image: url('./img/data.png');"></div>
 				<div class="cardTxt">
-					<div>Data Pack (WIP)</div>
-					<div>This pack includes several tags, functions, loot tables, and recipes used on the server.</div>
+					<div>Blog (Name WIP)</div>
+					<div>Here you can find information on current events and a record of the history.</div>
 				</div>
 			</div></a>
 			<a href="./map/" target="_blank"><div class="card">

@@ -2,11 +2,13 @@ startYear=1458;
 startTime=1543622400000;
 rate=60;
 
-function getTimeOnServer() {
+function getTimeOnServer(forTime) {
+	var now=(new Date()).getTime();
+	if(typeof forTime!="undefined") now=forTime;
 	var monthLen=[31,28,31,30,31,30,31,31,30,31,30,31,Infinity];
 	var monName=["January","February","March","April","May","June","July","August","September","October","November","December","Error"];
 	var wkdName=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-	var time={mil:rate*((new Date()).getTime()-startTime)};
+	var time={mil:rate*(now-startTime)};
 	time.sec=parseInt(time.mil/1000)
 	time.min=parseInt(time.sec/60);
 	time.sec%=60;
