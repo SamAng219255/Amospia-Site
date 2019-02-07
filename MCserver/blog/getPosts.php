@@ -27,17 +27,22 @@ if($_SESSION['permissions']==0) {
 $query="SELECT * FROM (SELECT `username`,`topic`,`tags`,`content`,`time`,`id` FROM `mcstuff`.`posts` WHERE id".$glt.$startId.$restriction." ORDER BY id DESC LIMIT ".$postCount.") AS `table` ORDER by id ".$order.";";
 $queryresult=mysqli_query($conn,$query);
 for($i=0; $i<$queryresult->num_rows; $i++) {
+	$row=mysqli_fetch_row($queryresult);
+	$owned='false';
+	if(isset($_SESSION['username']) && $_SESSION['username']==$row[0]) {
+		$owned='true';
+	}
 	if($i>0) {
 		echo ',';
 	}
-	$row=mysqli_fetch_row($queryresult);
 	echo '{"username":"'.$row[0].'",';
 	echo '"topic":"'.$row[1].'",';
 	echo '"tags":"'.$row[2].'",';
 	echo '"content":"'.htmlspecialchars(str_replace(array("\r\n","\r","\n",'
 '), "\\n", $row[3])).'",';
 	echo '"time":"'.$row[4].'",';
-	echo '"id":"'.$row[5].'"}';
+	echo '"id":"'.$row[5].'",';
+	echo '"owned":'.$owned.'}';
 }
 ?>],"styles":[<?php
 $stylequery="SELECT `username`,`forecolor`,`backcolor`,`permissions` FROM `mcstuff`.`users` WHERE `permissions`>0;";

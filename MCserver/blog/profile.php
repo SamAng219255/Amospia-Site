@@ -1,51 +1,9 @@
-<?php
-	session_start();
-	if ((isset($_SESSION['last_active']) && (time() - $_SESSION['last_active'] > 1800)) || (!isset($_SESSION['last_active']) && isset($_SESSION['loggedin']))) {
-		session_unset();
-		session_destroy();
-	}
-	if(isset($_POST['logout'])) {
-		session_unset();
-		session_destroy();
-	}
-	$_SESSION['last_active']=time();
-	$loggedin=false;
-	if(isset($_SESSION['username'])) {
-		require 'db.php';
-		$query="SELECT `username`,`uuid`,`permissions`,`forecolor`,`backcolor`,`nation`,`character`,`prefix`,`suffix` FROM `mcstuff`.`users` WHERE `username`='".$_SESSION['username']."';";
-		if($queryresult=mysqli_query($conn,$query)) {
-			$row=mysqli_fetch_row($queryresult);
-			$uuid=$row[1];
-			$permissions=intval($row[2]);
-			$forecolor=$row[3];
-			$backcolor=$row[4];
-			$nation=$row[5];
-			$character=$row[6];
-			$prefix=$row[7];
-			$suffix=$row[8];
-			$loggedin=true;
-		}
-	}
-	$topics=array('General','Announcements','War','Trade','Alliances','Politics','History','Meta');
-	if($loggedin && $permissions>0) {
-		array_push($topics,'Admin');
-	}
+<?php require 'pageSetup.php'; ?>
+<?php 
+	if(!$loggedin){echo  '<meta http-equiv="refresh" content="0; URL=./login.php">';}
 ?>
-<html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>AmospiaCraft</title>
-	<link rel="stylesheet" type="text/css" href="./theme.css">
-	<link href="./img/sign.png" rel="shortcut icon">
-	<script src="../../jquery.js"></script>
-	<script src="../getTimeOnServer.js"></script>
-	<script src="loadposts.js"></script>
-	<?php if($loggedin) {echo '<script>username="'.$_SESSION['username'].'"; loggedin=true;</script>';} else {echo '<script>loggedin=false;</script>';}
-		if(!$loggedin){echo  '<meta http-equiv="refresh" content="0; URL=./login.php">';}
-	?>
-	<style>#profile{cursor: initial;}</style>
-</head>
 <body onload="setupNoPosts()">
+	<style>#profile{cursor: initial;}</style>
 	<div id="wrapper"><div id="wrapper2">
 		<div id="stars1"></div>
 		<div id="stars2"></div>
@@ -90,18 +48,13 @@
 								updateskinstatus.innerHTML="Updating Skin. (This may take a while.)";
 							}
 						},5000);
-						$.get("getSkin.php",function(data) {
-							if((/^\.\/(skins|img)\/[a-zA-Z0-9_]+\.png$/).test(data)) {
-								if(data!="./img/steve.png") {
-									updateskinstatus.innerHTML="Your skin has been updated.";
-									profileIcon.style="background-image: url("+data+"), url("+data+");";
-								}
-								else {
-									updateskinstatus.innerHTML="I'm sorry. The server was not able to access your skin.";
-								}
+						$.get("getSkin.php?new",function(data) {
+							if(data.updated) {
+								updateskinstatus.innerHTML="Your skin has been updated.";
+								profileIcon.style="background-image: url("+data.skin+"), url("+data.skin+");";
 							}
 							else {
-								updateskinstatus.innerHTML="An error has occured.";
+								updateskinstatus.innerHTML="I'm sorry. The server was not able to access your skin.";
 							}
 						})
 					})

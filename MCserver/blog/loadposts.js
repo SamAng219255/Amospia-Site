@@ -9,6 +9,7 @@ function setStars() {
 }
 function setup() {
 	setupNoPosts();
+	posts={};
 	textBox=$("#text");
 	updatePosts();
 	updateInterval=setInterval(updatePosts,500);
@@ -16,15 +17,8 @@ function setup() {
 function setupNoPosts() {
 	if(loggedin) {
 		profileIcon=document.getElementById("profile");
-		$.get("skins/"+username+".png")
-		.done(function() { 
-			profileIcon.style="background-image: url(skins/"+username+".png), url(skins/"+username+".png);";
-		}).fail(function() { 
-			$.get("getSkin.php",function(data) {
-				if((/^\.\/(skins|img)\/[a-zA-Z0-9_]+\.png$/).test(data)) {
-					profileIcon.style="background-image: url("+data+"), url("+data+");";
-				}
-			})
+		$.getJSON("getSkin.php",function(data) {
+			profileIcon.style="background-image: url("+data.skin+"), url("+data.skin+");";
 		})
 	}
 	stellarInterval=setInterval(setStars,100);
@@ -48,25 +42,7 @@ loadFinished=false;
 function updatePosts() {
 	$.getJSON("getPosts.php",{start:latestId,count:25,sort:"ASC"},function(data) {
 		for(var i=0; i<data.posts.length; i++) {
-			var fullTime=data.posts[i].time.split(" ");
-			var sentTime=fullTime[0];
-			var time=new Date();
-			var yr=time.getFullYear()+"";
-			var mon=(time.getMonth()+1)+"";
-			var day=time.getDate()+"";
-			if(mon.length<2) {
-				mon=0+mon;
-			}
-			if(day.length<2) {
-				day=0+day;
-			}
-			var date=yr+"-"+mon+"-"+day;
-			if(date==fullTime[0]) {
-				sentTime=fullTime[1];
-			}
-			var t=data.posts[i].time.split(/[- :]/);
-			var d=Date.UTC(t[0], t[1]-1, t[2], t[3], t[4], t[5]);
-			textBox.prepend('<div class="card" user="'+data.posts[i].username+'"><div class="postmeta"><div class="h">'+data.posts[i].username+'</div> <div class="topic">'+data.posts[i].topic+'</div> <div class="time">'+sentTime+', '+getTimeOnServer(d).yr+'</div></div><div class="stuffing">'+data.posts[i].content+'</div></div>');
+			showPost(i,data,"prepend")
 		}
 		if(data.posts.length>0) {
 			oldestId=Math.min(data.posts[0].id,oldestId);
@@ -83,35 +59,63 @@ function updatePosts() {
 	});
 }
 function checkBottom(e) {
-	if(wrapper.scrollTop+wrapper.clientHeight>=wrapper.scrollHeight) {
+	if(loadFinished && wrapper.scrollTop+wrapper.clientHeight>=wrapper.scrollHeight) {
 		getOld();
 	}
 }
 function getOld() {
 	$.getJSON("getPosts.php",{start:oldestId,count:25,sort:"DESC"},function(data) {
 		for(var i=0; i<data.posts.length; i++) {
-			var fullTime=data.posts[i].time.split(" ");
-			var sentTime=fullTime[0];
-			var time=new Date();
-			var yr=time.getFullYear()+"";
-			var mon=(time.getMonth()+1)+"";
-			var day=time.getDate()+"";
-			if(mon.length<2) {
-				mon=0+mon;
-			}
-			if(day.length<2) {
-				day=0+day;
-			}
-			var date=yr+"-"+mon+"-"+day;
-			if(date==fullTime[0]) {
-				sentTime=fullTime[1];
-			}
-			var t=data.posts[i].time.split(/[- :]/);
-			var d=Date.UTC(t[0], t[1]-1, t[2], t[3], t[4], t[5]);
-			textBox.append('<div class="card" user="'+data.posts[i].username+'"><div class="postmeta"><div class="h">'+data.posts[i].username+'</div> <div class="topic">'+data.posts[i].topic+'</div> <div class="time">'+sentTime+', '+getTimeOnServer(d).yr+'</div></div><div class="stuffing">'+data.posts[i].content+'</div></div>');
+			showPost(i,data,"append");
 		}
 		if(data.posts.length>0) {
 			oldestId=data.posts[data.posts.length-1].id;
 		}
 	});
 }
+function showPost(i,data,side) {
+	var fullTime=data.posts[i].time.split(" ");
+	var sentTime=fullTime[0];
+	var time=new Date();
+	var yr=time.getFullYear()+"";
+	var mon=(time.getMonth()+1)+"";
+	var day=time.getDate()+"";
+	if(mon.length<2) {
+		mon=0+mon;
+	}
+	if(day.length<2) {
+		day=0+day;
+	}
+	var date=yr+"-"+mon+"-"+day;
+	if(date==fullTime[0]) {
+		sentTime=fullTime[1];
+	}
+	var t=data.posts[i].time.split(/[- :]/);
+	var d=Date.UTC(t[0], t[1]-1, t[2], t[3], t[4], t[5]);
+	var edit="";
+	if(data.posts[i].owned) edit='<div class="delete" card="'+data.posts[i].id+'">delete</div>&nbsp<a href="./edit.php?id='+data.posts[i].id+'" class="edit">edit</a>';
+	textBox[side]('<div class="card" user="'+data.posts[i].username+'" card="'+data.posts[i].id+'"><div class="postmeta"><div class="h">'+data.posts[i].username+'</div> <div class="topic">'+data.posts[i].topic+'</div> <div class="time">'+sentTime+', '+getTimeOnServer(d).yr+'</div></div><div class="stuffing">'+data.posts[i].content+'</div><div class="footer">'+edit+'</div></div>');
+	$(".delete[card="+data.posts[i].id+"]").click(deletePost);
+	var stuffing=$(".card[card="+data.posts[i].id+"] .stuffing");
+	if($(stuffing.height()).toEm()>10) {
+		stuffing.addClass("long");
+		stuffing.after("<div class=\"show\">Show More</div>");
+		$(".card[card="+data.posts[i].id+"] .show").click(toggleShow);
+	}
+}
+function deletePost(e) {
+	var target=e.target.attributes.card.value;
+	if(confirm("Are you sure you want to delete this post?")) {
+		$.get("./deletePost.php",{target:target},function(data){if(data=="true") {$(".card[card="+target+"]").remove()} else {console.log(data)}});
+	}
+}
+function toggleShow(e) {
+	$(".card[card="+e.target.parentElement.attributes.card.value+"] .stuffing").toggleClass("extended");
+	if(e.target.innerHTML=="Show More") {
+		e.target.innerHTML="Show Less"
+	}
+	else if(e.target.innerHTML=="Show Less") {
+		e.target.innerHTML="Show More"
+	}
+}
+

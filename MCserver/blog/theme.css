@@ -16,6 +16,9 @@ body {
 	font-family: pixel;
 	overflow: hidden;
 }
+input[type=hidden] {
+	display: none;
+}
 #wrapper {
 	height: 100%;
 	position: relative;
@@ -86,6 +89,8 @@ table {
 .card .topic {
 	display: inline-block;
 	position: absolute;
+	left: 50%;
+	transform: translate(-25%,0);
 	bottom: 0;
 }
 .card .time {
@@ -97,6 +102,16 @@ table {
 .card .stuffing{
 	white-space: pre-wrap;
 	padding: 1rem 1.5rem 1rem 1rem;
+}
+.card .stuffing.long:not(.extended) {
+	overflow: hidden;
+	height: 9.75em;
+}
+.card .show {
+	margin-left: 1rem;
+	opacity: 0.75;
+	cursor: pointer;
+	display: inline-block;
 }
 .card textarea {
 	all: unset;
@@ -113,6 +128,27 @@ table {
 }
 .card select {
 	all: unset;
+}
+.card .footer {
+	margin-top: -1.5rem;
+	padding: 1rem 1.5rem 1rem 1rem;
+	height: 1rem;
+}
+.card .footer>* {
+	display: inline-block;
+}
+.card .footer .edit, .card .footer .delete {
+	float: right;
+	visibility: hidden;
+	color: inherit;
+	text-decoration: none;
+	cursor: pointer;
+}
+.card .footer .delete {
+	margin-left: 0.5rem;
+}
+.card:hover .footer .edit, .card:hover .footer .delete {
+	visibility: visible;
 }
 input[type=submit], input[type=button] {
 	all: unset;
