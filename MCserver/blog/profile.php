@@ -48,7 +48,8 @@
 								updateskinstatus.innerHTML="Updating Skin. (This may take a while.)";
 							}
 						},5000);
-						$.get("getSkin.php?new",function(data) {
+						$.getJSON("getSkin.php?new",function(data) {
+							console.log(data);
 							if(data.updated) {
 								updateskinstatus.innerHTML="Your skin has been updated.";
 								profileIcon.style="background-image: url("+data.skin+"), url("+data.skin+");";
