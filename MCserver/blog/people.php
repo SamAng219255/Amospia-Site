@@ -55,7 +55,7 @@
 					addModel($row[0]);
 					echo '</div></td><td><div class="postmeta"><div class="h">'.$row[0].'</div></div></td></tr><tr><td><div class="stuffing">';
 					echo '<span>Character: '.$row[5].' '.$row[4].' '.$row[6].'</span><br><span>Nation: '.$row[3].'</span><br><a href="./?poster='.$row[0].'">Click here to see their posts.</a>';
-					echo '</div></td></tr></div>';
+					echo '</div></td></tr></table></div>';
 					$styles.='
 .card[user='.$row[0].'] {
 	color: #'.$row[1].';
