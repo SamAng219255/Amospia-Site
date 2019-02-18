@@ -32,20 +32,20 @@
 			padding: 2em;
 		}
 		input[name="name"] {
-			height: 1.5em;
 			width: 15em;
 		}
 		input[name="x"] {
-			height: 1.5em;
 			width: 6em;
 		}
 		input[name="z"] {
-			height: 1.5em;
 			width: 6em;
 		}
+		input[name="dim"] {
+			width: 7em;
+		}
 		textarea[name="desc"] {
-			height: 20em;
-			width: 30em;
+			height: 12em;
+			width: 20.25em;
 			resize: none;
 		}
 		.banner {
@@ -81,6 +81,7 @@
 			$_SESSION['desc']=mysqli_real_escape_string($conn,$_POST['desc']);
 			$_SESSION['x']=$_POST['x'];
 			$_SESSION['z']=$_POST['z'];
+			$_SESSION['dimension']=$_POST['dimension'];
 			if(!isset($_SESSION['user'])) {
 				addBanner('It appears that your session has expired. Please log in to finish submitting.');
 			}
@@ -88,7 +89,7 @@
 		var_dump($_SESSION);
 		if (isset($_SESSION['user'])) {
 			if(isset($_SESSION['name'])) {
-				$sql="INSERT INTO `mcstuff`.`mappoints` (`id`,`user`,`name`,`desc`,`x`,`z`) VALUES ('0','".$_SESSION['user']."','".$_SESSION['name']."','".$_SESSION['desc']."','".$_SESSION['x']."','".$_SESSION['z']."');";
+				$sql="INSERT INTO `mcstuff`.`mappoints` (`id`,`user`,`name`,`desc`,`x`,`z`,`dimension`) VALUES ('0','".$_SESSION['user']."','".$_SESSION['name']."','".$_SESSION['desc']."','".$_SESSION['x']."','".$_SESSION['z']."','".$_SESSION['dimension']."');";
 				if(mysqli_query($conn,$sql)) {
 					addBanner('You have successfully submitted the pin "'.$_SESSION['name'].'".');
 				}

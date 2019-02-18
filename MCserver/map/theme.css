@@ -165,19 +165,21 @@ body {
 button {
 	all: unset;
 }
-input[type=number] {
+input[type=number], input[type=text], textarea {
 	all: unset;
 	background-color: #E0E0E0;
 	border-style: solid;
 	border-radius: 0.25em;
 	border-width: 1px;
 	border-color: #000000;
-	width: 5em;
-	height: 1em;
 	padding: 0.125em;
 	text-align: left;
 	display: inline-block;
 	color: #202020;
+}
+input[type=number], input[type=text] {
+	width: 5em;
+	height: 1em;
 }
 #sidemenu button {
 	display: block;

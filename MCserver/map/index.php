@@ -22,6 +22,9 @@
 				&nbsp;&nbsp;
 				<label for="jumpCoordZ">Z: </label>
 				<input type="number" placeholder="z" id="jumpCoordZ" step="1">
+				<br>
+				<label for="jumpCoordD">Dimension: </label>
+				<input type="number" placeholder="Dim." id="jumpCoordD" step="1" value="0">
 			</div>
 			<div class="divider"><span>OR</span></div>
 			<div id="jumpPinForm">
@@ -56,6 +59,9 @@
 				&nbsp;&nbsp;
 				<label for="jumpCoordZMobile">Z: </label>
 				<input type="number" placeholder="z" id="jumpCoordZMobile" step="1">
+				<br>
+				<label for="jumpCoordDMobile">Dimension: </label>
+				<input type="number" placeholder="Dim." id="jumpCoordDMobile" step="1" value="0">
 			</div>
 			<div class="divider"><span>OR</span></div>
 			<div id="jumpPinForm">

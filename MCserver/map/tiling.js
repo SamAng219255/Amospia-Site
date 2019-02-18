@@ -1,4 +1,5 @@
 timer=(new Date()).getTime();
+dimension=0;
 pos=[0,0];
 offsetPos=[0,0];
 offsetPix=[0,0];
@@ -75,6 +76,9 @@ function setup() {
 			gotoPin(data["pin"]);
 		}
 	}
+	if(data["dimension"]!==undefined) {
+		dimension=parseInt(data["dimension"]);
+	}
 	width=$(window).width();
 	height=$(window).height();
 	tileSize=128;
@@ -123,7 +127,7 @@ function setup() {
 		tileSize=e.scale*pinchScale;
 		offsetPix[0]=-1*offsetPos[0]*tileSize;
 		offsetPix[1]=-1*offsetPos[1]*tileSize;
-		window.location.hash="x="+(pos[0]+offsetPos[0])+"&z="+(pos[1]+offsetPos[1])+"&zoom="+tileSize/128;
+		setHash();
 		cornerPos=[pos[0]-width/(2*tileSize)+0.5,pos[1]-height/(2*tileSize)+0.5];
 		draw();
 		redrawHighlight();
@@ -150,7 +154,7 @@ function drag(e) {
 		offsetPos[i]=tempPos[i]-pos[i];
 		offsetPix[i]=-1*offsetPos[i]*tileSize;
 	}
-	window.location.hash="x="+(pos[0]+offsetPos[0])+"&z="+(pos[1]+offsetPos[1])+"&zoom="+tileSize/128;
+	setHash();
 	cornerPos=[pos[0]-width/(2*tileSize)+0.5,pos[1]-height/(2*tileSize)+0.5];
 	draw();
 	redrawHighlight();
@@ -204,9 +208,10 @@ function gotoPin(pinName) {
 				offsetPix[0]=-1*offsetPos[0]*tileSize;
 				offsetPix[1]=-1*offsetPos[1]*tileSize;
 				cornerPos=[pos[0]-width/(2*tileSize)+0.5,pos[1]-height/(2*tileSize)+0.5];
+				dimension=markers[i].dimension;
 			}
 		}
-		window.location.hash="x="+(pos[0]+offsetPos[0])+"&z="+(pos[1]+offsetPos[1])+"&zoom="+tileSize/128;
+		setHash();
 		drawPoints();
 		draw();
 	}
@@ -214,7 +219,8 @@ function gotoPin(pinName) {
 		gotoPinPending=pinName;
 	}
 }
-function gotoPoint(x,z) {
+function gotoPoint(x,z,d) {
+	dimension=d;
 	pos[0]=Math.floor(x);
 	pos[1]=Math.floor(z);
 	offsetPos[0]=x-pos[0];
@@ -222,7 +228,7 @@ function gotoPoint(x,z) {
 	offsetPix[0]=-1*offsetPos[0]*tileSize;
 	offsetPix[1]=-1*offsetPos[1]*tileSize;
 	cornerPos=[pos[0]-width/(2*tileSize)+0.5,pos[1]-height/(2*tileSize)+0.5];
-	window.location.hash="x="+(pos[0]+offsetPos[0])+"&z="+(pos[1]+offsetPos[1])+"&zoom="+tileSize/128;
+	setHash();
 	draw();
 	drawPoints();
 }
@@ -237,7 +243,7 @@ function jumpPinFunc(e) {
 }
 function jumpCoordFunc(e) {
 	if(jumpMenuActive && e.path[1].id=="jumpCoordForm"+mobilePinCheck && e.keyCode==13) {
-		gotoPoint((parseFloat($("#jumpCoordX"+mobilePinCheck).val())/128),(parseFloat($("#jumpCoordZ"+mobilePinCheck).val())/128));
+		gotoPoint((parseFloat($("#jumpCoordX"+mobilePinCheck).val())/128),(parseFloat($("#jumpCoordZ"+mobilePinCheck).val())/128),(parseInt($("#jumpCoordD"+mobilePinCheck).val())));
 		setTimeout(function(){jumpMenuActive=false; menuActive=false;},1);
 		$("#jumpMenu"+mobilePinCheck).removeClass("shown");
 	}
@@ -249,8 +255,8 @@ function draw() {
 		for(var j=-Math.ceil(tileDelta[1]); j<=Math.ceil(tileDelta[1])+1; j++) {
 			var x=(Math.floor(pos[0])+i);
 			var y=(Math.floor(pos[1])+j);
-			var key="x"+x+"y"+y;
-			if(tileIds[x+"_"+y]==undefined) {
+			var key="d"+dimension+"x"+x+"y"+y;
+			if(tileIds[dimension+"_"+x+"_"+y]==undefined) {
 				if(!showMissingTiles) {
 					mapCtx.drawImage(defaultTile,offsetPix[0]+(Math.floor(i)+tileDelta[0])*tileSize,offsetPix[1]+(Math.floor(j)+tileDelta[1])*tileSize,tileSize,tileSize);
 				}
@@ -258,7 +264,7 @@ function draw() {
 			else if(tiles[key]==undefined) {
 				tileDest[key]=[i,j];
 				tiles[key]=document.createElement('img');
-				tiles[key].src="img/tile.0."+x+"."+y+".png";
+				tiles[key].src="img/tile."+dimension+"."+x+"."+y+".png";
 				tiles[key].onerror=function() {
 					empty.push(key);
 					if (this.src != 'img/default.png') {
@@ -268,8 +274,8 @@ function draw() {
 				}
 				tiles[key].onload=function () {
 					var foo=this.src.split(".");
-					var bar=tileDest["x"+foo[foo.length-3]+"y"+foo[foo.length-2]];
-					delete tileDest["x"+foo[foo.length-3]+"y"+foo[foo.length-2]];
+					var bar=tileDest["d"+dimension+"x"+foo[foo.length-3]+"y"+foo[foo.length-2]];
+					delete tileDest["d"+dimension+"x"+foo[foo.length-3]+"y"+foo[foo.length-2]];
 					mapCtx.drawImage(this,offsetPix[0]+(Math.floor(bar[0])+tileDelta[0])*tileSize,offsetPix[1]+(Math.floor(bar[1])+tileDelta[1])*tileSize,tileSize,tileSize);
 					drawMain();
 				}
@@ -290,7 +296,7 @@ function drawMain() {
 function move(e) {
 	var allowNormalExecution=true;
 	var time=(new Date()).getTime();
-	if(time-lastButtonPress>10) {
+	if(time-lastButtonPress>100) {
 		if(!menuActive) {
 			if(e.keyCode>36 && e.keyCode<41) {
 				boxCtx.clearRect(0,0,width,height);
@@ -329,9 +335,28 @@ function move(e) {
 				menuActive=true;
 				allowNormalExecution=false;
 			}
+			else if(e.keyCode==81) {
+				dimension--;
+				while(dimension<-1) {
+					dimension+=3
+				}
+				setHash();
+				draw();
+			}
+			else if(e.keyCode==69) {
+				dimension++;
+				while(dimension>1) {
+					dimension-=3
+				}
+				setHash();
+				draw();
+			}
+			else {
+				console.log(e.keyCode);
+			}
 			if(e.keyCode>36 && e.keyCode<41) {
 				cornerPos=[pos[0]-width/(2*tileSize)+0.5,pos[1]-height/(2*tileSize)+0.5];
-				window.location.hash="x="+(pos[0]+offsetPos[0])+"&z="+(pos[1]+offsetPos[1])+"&zoom="+tileSize/128;
+				setHash();
 				draw();
 			}
 			drawPoints();
@@ -437,14 +462,14 @@ function zoom(e) {
 		tileSize*=Math.pow(2,-e.deltaY/100);
 		offsetPix[0]=-1*offsetPos[0]*tileSize;
 		offsetPix[1]=-1*offsetPos[1]*tileSize;
-		window.location.hash="x="+(pos[0]+offsetPos[0])+"&z="+(pos[1]+offsetPos[1])+"&zoom="+tileSize/128;
+		setHash();
 		cornerPos=[pos[0]-width/(2*tileSize)+0.5,pos[1]-height/(2*tileSize)+0.5];
 		draw();
 		redrawHighlight();
 	}
 }
 function mapIds(x,y) {
-	return tileIds[x+"_"+y];
+	return tileIds[dimension+"_"+x+"_"+y];
 }
 function drawCircle(CTX,xPos,yPos,radius,color) {
 	CTX.beginPath()
@@ -468,15 +493,17 @@ function drawPoints() {
 	if(pointsVis) {
 		var posRel=[cornerPos[0]*tileSize,cornerPos[1]*tileSize];
 		for(var i=0; i<markers.length; i++) {
-			var posAdj=[offsetPix[0]+(markers[i].x+0.5)/128*tileSize-posRel[0]+tileSize/2,offsetPix[1]+(markers[i].z+0.5)/128*tileSize-posRel[1]+tileSize/2];
-			var sizeMod=1;
-			if(markers[i].id==selectedPoint) {
-				sizeMod=Math.sqrt(2);
+			if(markers[i].dimension==dimension) {
+				var posAdj=[offsetPix[0]+(markers[i].x+0.5)/128*tileSize-posRel[0]+tileSize/2,offsetPix[1]+(markers[i].z+0.5)/128*tileSize-posRel[1]+tileSize/2];
+				var sizeMod=1;
+				if(markers[i].id==selectedPoint) {
+					sizeMod=Math.sqrt(2);
+				}
+				if(isMobile) sizeMod*=2;
+				drawCircle(pinCtx,posAdj[0]+(2*sizeMod),posAdj[1]+(2*sizeMod),10*sizeMod,"#000000");
+				drawCircle(pinCtx,posAdj[0],posAdj[1],10*sizeMod,"#ff0000");
+				drawCircle(pinCtx,posAdj[0]-(3*sizeMod),posAdj[1]-(3*sizeMod),4*sizeMod,"#ff8080");
 			}
-			if(isMobile) sizeMod*=2;
-			drawCircle(pinCtx,posAdj[0]+(2*sizeMod),posAdj[1]+(2*sizeMod),10*sizeMod,"#000000");
-			drawCircle(pinCtx,posAdj[0],posAdj[1],10*sizeMod,"#ff0000");
-			drawCircle(pinCtx,posAdj[0]-(3*sizeMod),posAdj[1]-(3*sizeMod),4*sizeMod,"#ff8080");
 		}
 	}
 	drawMain();
@@ -487,6 +514,9 @@ function resetStuff() {
 	selectedPoint=0;
 	drawPoints();
 	lastTar=[Infinity,Infinity];
+}
+function setHash() {
+	window.location.hash="x="+(pos[0]+offsetPos[0])+"&z="+(pos[1]+offsetPos[1])+"&zoom="+tileSize/128+"&dimension="+dimension;
 }
 
 

@@ -11,7 +11,7 @@ shades=[180,220,255,135]
 while(len(palette)<64):
 	palette.append((255,255,255,0))
 
-exclusions=[390,517,81,455,456,77,64,265,869,1298,759,780,468,153,157,172,398,406,417,422,423,424,795,921,922,1410,2129,2164,1426,1425,1433,920,919,69,2264,19,13,620,2621,5,353,2400,33]
+exclusions=[390,517,81,455,456,77,64,265,869,1298,759,780,468,153,157,172,398,406,417,422,423,424,795,921,922,1410,2129,2164,1426,1425,1433,920,919,69,2264,19,13,620,2621,5,353,2400,33,878]
 pictures=[1349]
 exclusions.extend(pictures)
 allNegatives=[]
@@ -81,10 +81,10 @@ def main():
 						j+=1
 					if showNeg and len(negatives)>0: print("Negatives "+json.dumps(negatives)+" found on "+str(i)+" at ("+str(nbt["data"]["dimension"].value//128)+", "+str(nbt["data"]["xCenter"].value//128)+", "+str(nbt["data"]["zCenter"].value//128)+").")
 					if modeLrg:
-						key=str(nbt["data"]["xCenter"].value//128)+'_'+str(nbt["data"]["zCenter"].value//128)
+						key=str(nbt["data"]["dimension"].value)+"_"+str(nbt["data"]["xCenter"].value//128)+'_'+str(nbt["data"]["zCenter"].value//128)
 						if showDup and nbt["data"]["dimension"].value==0 and key in regionsDone: print("Duplicate of "+key+" found.")
 						if showBla and completeness==0: print("Blank Found: "+str(i))
-						if i not in exclusions and nbt["data"]["dimension"].value==0 and (((key in regionsDone) and completeness>=regionsDone[key]) or (key not in regionsDone)):
+						if i not in exclusions and (((key in regionsDone) and completeness>=regionsDone[key]) or (key not in regionsDone)):
 							img.putdata(imgData)
 							regionsDone[key]=completeness
 							tilesUsed[key]=i
@@ -93,10 +93,10 @@ def main():
 							if not (modeInd or modeOut): finImg.paste(img,box=(xOffset,zOffset))
 					else:
 						img.putdata(imgData)
-						key=str(nbt["data"]["xCenter"].value//128)+'_'+str(nbt["data"]["zCenter"].value//128)
+						key=str(nbt["data"]["dimension"].value)+"_"+str(nbt["data"]["xCenter"].value//128)+'_'+str(nbt["data"]["zCenter"].value//128)
 						if showDup and nbt["data"]["dimension"].value==0 and key in regionsDone: print("Duplicate of "+key+" found.")
 						if showBla and completeness==0: print("Blank Found: "+str(i))
-						if i not in exclusions and nbt["data"]["dimension"].value==0 and (((key in regionsDone) and completeness>=regionsDone[key]) or (key not in regionsDone)):
+						if i not in exclusions and (((key in regionsDone) and completeness>=regionsDone[key]) or (key not in regionsDone)):
 							regionsDone[key]=completeness
 							tilesUsed[key]=i
 							if not (modeInd or modeOut): img.save('img/tile.'+str(nbt["data"]["dimension"].value)+'.'+str(nbt["data"]["xCenter"].value//128)+'.'+str(nbt["data"]["zCenter"].value//128)+'.png')
