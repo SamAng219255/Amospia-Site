@@ -38,8 +38,8 @@ for($i=0; $i<$queryresult->num_rows; $i++) {
 	echo '{"username":"'.$row[0].'",';
 	echo '"topic":"'.$row[1].'",';
 	echo '"tags":"'.$row[2].'",';
-	echo '"content":"'.htmlspecialchars(str_replace(array("\r\n","\r","\n",'
-'), "\\n", $row[3])).'",';
+	echo '"content":"'.str_replace("	","\\t",htmlspecialchars(str_replace(array("\r\n","\r","\n",'
+'), "\\n", $row[3]))).'",';
 	echo '"time":"'.$row[4].'",';
 	echo '"id":"'.$row[5].'",';
 	echo '"owned":'.$owned.'}';

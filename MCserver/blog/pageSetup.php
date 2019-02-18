@@ -26,7 +26,7 @@
 			$loggedin=true;
 		}
 	}
-	$topics=array('General','War','Trade','Alliances','Politics','Characters','History','Meta');
+	$topics=array('General','War','Trade','Alliances','Politics','Characters','History','Physics','Meta');
 	if($loggedin && $permissions>0) {
 		array_push($topics,'Admin');
 	}
