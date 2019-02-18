@@ -37,7 +37,7 @@
 		<div>
 			<p>Controls:</p>
 			<ul>
-				<li>Use the <b>Arrow Keys</b> to move the map or press <b>Shift</b> to jump to a location.</li>
+				<li>Use the <b>Arrow Keys</b> or the <b>WASD</b> Keys to move the map and the <b>Q</b> and <b>E</b> keys to switch dimension or press <b>Shift</b> to jump to a location.</li>
 				<li>Use the <b>Scroll Wheel</b> to zoom the map in or out.</li>
 				<li>Press <b>Enter</b> to toggle pin visibility.</li>
 				<li><b>Click</b> on a pin or map square to show information about that location.</li>

@@ -298,23 +298,23 @@ function move(e) {
 	var time=(new Date()).getTime();
 	if(time-lastButtonPress>100) {
 		if(!menuActive) {
-			if(e.keyCode>36 && e.keyCode<41) {
+			if((e.keyCode>36 && e.keyCode<41) || e.keyCode==87 || e.keyCode==65 || e.keyCode==83 || e.keyCode==68) {
 				boxCtx.clearRect(0,0,width,height);
 				resetStuff();
 			}
-			if(e.keyCode==37) {
+			if(e.keyCode==37 || e.keyCode==65) {
 				pos[0]-=Math.max(Math.floor(startingTileSize/tileSize),1);
 				Object.keys(tileDest).forEach(function(key){tileDest[key][0]++});
 			}
-			else if(e.keyCode==38) {
+			else if(e.keyCode==38 || e.keyCode==87) {
 				pos[1]-=Math.max(Math.floor(startingTileSize/tileSize),1);
 				Object.keys(tileDest).forEach(function(key){tileDest[key][1]++});
 			}
-			else if(e.keyCode==39) {
+			else if(e.keyCode==39 || e.keyCode==68) {
 				pos[0]+=Math.max(Math.floor(startingTileSize/tileSize),1);
 				Object.keys(tileDest).forEach(function(key){tileDest[key][0]--});
 			}
-			else if(e.keyCode==40) {
+			else if(e.keyCode==40 || e.keyCode==83) {
 				pos[1]+=Math.max(Math.floor(startingTileSize/tileSize),1);
 				Object.keys(tileDest).forEach(function(key){tileDest[key][1]--});
 			}
@@ -354,7 +354,7 @@ function move(e) {
 			else {
 				console.log(e.keyCode);
 			}
-			if(e.keyCode>36 && e.keyCode<41) {
+			if((e.keyCode>36 && e.keyCode<41) || e.keyCode==87 || e.keyCode==65 || e.keyCode==83 || e.keyCode==68) {
 				cornerPos=[pos[0]-width/(2*tileSize)+0.5,pos[1]-height/(2*tileSize)+0.5];
 				setHash();
 				draw();
