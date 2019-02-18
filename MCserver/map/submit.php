@@ -133,7 +133,7 @@
 					$_SESSION['user']=strtolower($profile->name);
 					require 'db.php';
 					if(isset($_SESSION['name'])) {
-						$sql="INSERT INTO `mcstuff`.`mappoints` (`id`,`user`,`name`,`desc`,`x`,`z`) VALUES ('0','".$_SESSION['user']."','".$_SESSION['name']."','".$_SESSION['desc']."','".$_SESSION['x']."','".$_SESSION['z']."');";
+						$sql="INSERT INTO `mcstuff`.`mappoints` (`id`,`user`,`name`,`desc`,`x`,`z`,`dimension`) VALUES ('0','".$_SESSION['user']."','".$_SESSION['name']."','".$_SESSION['desc']."','".$_SESSION['x']."','".$_SESSION['z']."','".$_SESSION['dimension']."');";
 						if(mysqli_query($conn,$sql)) {
 							addBanner('You have successfully submitted the pin "'.$_SESSION['name'].'".');
 						}
