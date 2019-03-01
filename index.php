@@ -27,6 +27,7 @@
 					<a href="./games/aGreatAdventure/"><div>A Great Adventure</div></a>
 					<a href="./games/Alchahemistry/Home/"><div>Alchahemistry</div></a>
 					<a href="?target=.%2Fgames%2FDropBlock%2F"><div>DropBlock</div></a>
+					<a href="./games/military_minds/"><div>Military Minds</div></a>
 				</div>
 			</div>
 			<div class="navButton">
@@ -74,6 +75,7 @@
 			<a href="./games/aGreatAdventure/"><div>A Great Adventure</div></a>
 			<a href="./games/Alchahemistry/Home/"><div>Alchahemistry</div></a>
 			<a href="?target=.%2Fgames%2FDropBlock%2F"><div>DropBlock</div></a>
+			<a href="./games/military_minds/"><div>Military Minds</div></a>
 		</div>
 		<div class="mobilemenu" id="miscMenu">
 			<p>Navigation Sub-Menu: Misc.</p>

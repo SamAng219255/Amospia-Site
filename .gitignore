@@ -1,4 +1,6 @@
 chat
+games/military_minds/db.php
+games/military_minds/tables.sql
 misc/Alchahemistry
 MCserver/map/db.php
 MCserver/map/dats/*
@@ -7,3 +9,5 @@ MCserver/map/img/excluded/*
 MCserver/map/img/full.png
 MCserver/map/tileIds.json
 MCserver/map/upload.sh
+MCserver/blog/db.php
+MCserver/blog/skins/*
