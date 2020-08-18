@@ -1,6 +1,4 @@
 <?php
-	header('Content-Type: text/xml; charset=UTF-8');
-
 	$path=explode('/', $_GET['path']);
 	switch ($path[0]) {
 		case 'avatars':
