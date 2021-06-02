@@ -1,0 +1,39 @@
+body {
+	margin: 0;
+	background-color: #060a08;
+	color: #fff;
+	font-family: helvetica;
+	line-height: 1.333;
+}
+p {
+	margin: 0;
+	margin-bottom: 0.25em;
+}
+p.spaced {
+	margin-bottom: 1em;
+}
+b {
+	font-weight: bold;
+}
+i {
+	font-style: italic;
+}
+u {
+	text-decoration: underline;
+}
+.block {
+	padding: 0.5em;
+}
+.block-title {
+	font-size: 1.5em;
+	font-weight: bold;
+	background-color: #482818;
+	color: #cca94a;
+	padding-left: 0.25em;
+	margin-bottom: 0.25em;
+}
+.block-section-title {
+	border-style: solid none;
+	font-weight: bold;
+	margin-bottom: 0.25em;
+}
