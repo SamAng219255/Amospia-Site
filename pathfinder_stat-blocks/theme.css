@@ -37,8 +37,9 @@ span.inset {
 	min-width: 10rem;
 	width: 20vw;
 	max-width: 300px;
-	min-height: 100vh;
+	height: 100vh;
 	font-size: 1.25rem;
+	overflow-y: auto;
 }
 #center {
 	position: absolute;
