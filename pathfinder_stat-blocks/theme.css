@@ -10,7 +10,7 @@ p {
 	margin-bottom: 0.25em;
 }
 p.spaced {
-	margin-bottom: 1em;
+	margin-bottom: 0.5em;
 }
 b {
 	font-weight: bold;
@@ -20,6 +20,125 @@ i {
 }
 u {
 	text-decoration: underline;
+}
+span.enlarged {
+	font-size: 1.25em;
+}
+span.inset {
+	display: inline-block;
+	margin-left: 1em;
+}
+#sidebar {
+	background-color: #FFC87D;
+	color: #000;
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-width: 10rem;
+	width: 20vw;
+	max-width: 300px;
+	min-height: 100vh;
+	font-size: 1.25rem;
+}
+#center {
+	position: absolute;
+	top: 0;
+	right: 0;
+	max-width: calc(100vw - 10rem);
+	width: 80vw;
+	min-width: calc(100vw - 300px);
+	min-height: 100vh;
+}
+#top {
+	position: relative;
+}
+#content {
+	min-height: 100vh;
+}
+a {
+	color: inherit;
+}
+a:visited {
+	color: inherit;
+}
+a:active {
+	color: inherit;
+}
+table, th, td {
+	border: 1px solid black;
+}
+table {
+	border-collapse: collapse;
+	color: #000000;
+	margin: 1em;
+}
+th {
+	background-color: #000000;
+	color: #ffffff;
+}
+tr {
+	background-color: #c0c0c0;
+}
+tr:nth-child(odd) {
+	background-color: #808080;
+}
+ul.menu-vertical {
+	list-style-type: none;
+	padding: 0;
+	overflow: hidden;
+	/*padding-inline-start: 0.5em;*/
+}
+ul.menu-vertical p.label {
+	padding-left: 1em;
+}
+ul.menu-vertical li.has-dropdown>p.label {
+	cursor: pointer;
+}
+ul.menu-vertical li.has-dropdown>p.label:before {
+	content: "▸ "
+}
+ul.menu-vertical li.has-dropdown.open>p.label:before {
+	content: "▾ "
+}
+ul.menu-vertical li:not(li.has-dropdown)>a>p.label:before {
+	content: "\00a0\00a0\00a0"
+}
+ul.menu-vertical li>a {
+	text-decoration: none;
+	color: inherit;
+}
+ul.menu-vertical li.has-dropdown>p.label:hover, ul.menu-vertical li:not(li.has-dropdown)>a>p.label:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+ul.menu-vertical li.has-dropdown.open {
+	background-color: rgba(255, 255, 255, 0.25);
+	border-style: solid none;
+	border-width: 2px;
+}
+ul.menu-vertical li.has-dropdown.open>p.label {
+	background-color: rgba(255, 255, 255, 0.333);
+	border-style: none none solid;
+	border-width: 1px;
+}
+ul.menu-vertical li.has-dropdown>ul.menu-vertical {
+	height: 0;
+}
+ul.menu-vertical li.has-dropdown.open>ul.menu-vertical {
+	height: auto;
+}
+#sideber-label {
+	padding: 1em 1em 0;
+	text-align: center;
+	font-size: 1.5em;
+}
+.clickable {
+	cursor: pointer;
+}
+.sort-asc:after {
+	content: " ▾";
+}
+.sort-dec:after {
+	content: " ▴";
 }
 .block {
 	padding: 0.5em;

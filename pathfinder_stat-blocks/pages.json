@@ -1,0 +1,256 @@
+{
+	"entries": {
+		"casting_foci": {
+			"display_name": "Casting Foci",
+			"file_name": "casting_foci.php",
+			"directory": "/pathfinder_stat-blocks/items/",
+			"sort_path": [
+				"items",
+				"magic_items"
+			]
+		},
+		"barjoskadwaz": {
+			"display_name": "Barjoskadwaz",
+			"file_name": "barjoskadwaz.php",
+			"directory": "/pathfinder_stat-blocks/items/",
+			"sort_path": [
+				"items",
+				"artifacts"
+			]
+		},
+		"blade_of_the_forests_shadow": {
+			"display_name": "Blade of the Forest's Shadow",
+			"file_name": "botfs.php",
+			"directory": "/pathfinder_stat-blocks/items/",
+			"sort_path": [
+				"items",
+				"artifacts"
+			]
+		},
+		"forest_of_shadows": {
+			"display_name": "Forest of Shadows",
+			"file_name": "forest_of_shadows.php",
+			"directory": "/pathfinder_stat-blocks/planes/",
+			"sort_path": [
+				"planes"
+			]
+		},
+		"ring_of_morphic_steel": {
+			"display_name": "Ring of Morphic Steel",
+			"file_name": "morphic_ring.php",
+			"directory": "/pathfinder_stat-blocks/items/",
+			"sort_path": [
+				"items",
+				"magic_items"
+			]
+		},
+		"rod_of_planar_creation": {
+			"display_name": "Rod of Planar Creation",
+			"file_name": "planar_rod.php",
+			"directory": "/pathfinder_stat-blocks/items/",
+			"sort_path": [
+				"items",
+				"magic_items"
+			]
+		},
+		"rod_of_timeless_spells": {
+			"display_name": "Rod of Timeless Spells",
+			"file_name": "time_rod.php",
+			"directory": "/pathfinder_stat-blocks/items/",
+			"sort_path": [
+				"items",
+				"artifacts"
+			]
+		},
+		"money_changers_pouch": {
+			"display_name": "Money Changer's Pouch",
+			"file_name": "coin_purse.php",
+			"directory": "/pathfinder_stat-blocks/items/",
+			"sort_path": [
+				"items",
+				"magic_items"
+			]
+		},
+		"unprepared_wizards_component_pouch": {
+			"display_name": "Unprepared Wizard's Component Pouch",
+			"file_name": "component_pouch.php",
+			"directory": "/pathfinder_stat-blocks/items/",
+			"sort_path": [
+				"items",
+				"magic_items"
+			]
+		},
+		"shield_of_solid_force": {
+			"display_name": "Shield of Solid Force",
+			"file_name": "force_shield.php",
+			"directory": "/pathfinder_stat-blocks/items/",
+			"sort_path": [
+				"items",
+				"magic_items"
+			]
+		},
+		"void_plate": {
+			"display_name": "Void Plate",
+			"file_name": "void_plate.php",
+			"directory": "/pathfinder_stat-blocks/items/",
+			"sort_path": [
+				"items",
+				"non-magic_items"
+			]
+		},
+		"shade_silk_armor": {
+			"display_name": "Shade Silk Armor",
+			"file_name": "shade_silk_armor.php",
+			"directory": "/pathfinder_stat-blocks/items/",
+			"sort_path": [
+				"items",
+				"non-magic_items"
+			]
+		},
+		"runed_chain": {
+			"display_name": "Runed Chain",
+			"file_name": "runed_chain.php",
+			"directory": "/pathfinder_stat-blocks/items/",
+			"sort_path": [
+				"items",
+				"artifacts"
+			]
+		},
+		"staff_of_truthlight": {
+			"display_name": "Staff of Truthlight",
+			"file_name": "truthlight.php",
+			"directory": "/pathfinder_stat-blocks/items/",
+			"sort_path": [
+				"items",
+				"artifacts"
+			]
+		},
+		"deities": {
+			"display_name": "Deities",
+			"file_name": "deities.php",
+			"directory": "/pathfinder_stat-blocks/",
+			"sort_path": [
+			]
+		}
+	},
+	"sort_tree": [
+		{
+			"name": "deities",
+			"display_name": "Deities",
+			"type": "leaf"
+		},
+		{
+			"name": "items",
+			"display_name": "Items",
+			"type": "branch",
+			"nodes": [
+				{
+					"name": "artifacts",
+					"display_name": "Artifacts",
+					"type": "branch",
+					"nodes": [
+						{
+							"name": "barjoskadwaz",
+							"display_name": "Barjoskadwaz",
+							"type": "leaf"
+						},
+						{
+							"name": "blade_of_the_forests_shadow",
+							"display_name": "Blade of the Forest's Shadow",
+							"type": "leaf"
+						},
+						{
+							"name": "rod_of_timeless_spells",
+							"display_name": "Rod of Timeless Spells",
+							"type": "leaf"
+						},
+						{
+							"name": "runed_chain",
+							"display_name": "Runed Chain",
+							"type": "leaf"
+						},
+						{
+							"name": "staff_of_truthlight",
+							"display_name": "Staff of Truthlight",
+							"type": "leaf"
+						}
+					]
+				},
+				{
+					"name": "magic_items",
+					"display_name": "Magic Items",
+					"type": "branch",
+					"nodes": [
+						{
+							"name": "casting_foci",
+							"display_name": "Casting Foci",
+							"type": "leaf"
+						},
+						{
+							"name": "money_changers_pouch",
+							"display_name": "Money Changer's Pouch",
+							"type": "leaf"
+						},
+						{
+							"name": "ring_of_morphic_steel",
+							"display_name": "Ring of Morphic Steel",
+							"type": "leaf"
+						},
+						{
+							"name": "rod_of_planar_creation",
+							"display_name": "Rod of Planar Creation",
+							"type": "leaf"
+						},
+						{
+							"name": "shield_of_solid_force",
+							"display_name": "Shield of Solid Force",
+							"type": "leaf"
+						},
+						{
+							"name": "unprepared_wizards_component_pouch",
+							"display_name": "Unprepared Wizard's Component Pouch",
+							"type": "leaf"
+						}
+					]
+				},
+				{
+					"name": "non-magic_items",
+					"display_name": "Non-Magic Items",
+					"type": "branch",
+					"nodes": [
+						{
+							"name": "void_plate",
+							"display_name": "Void Plate",
+							"type": "leaf"
+						},
+						{
+							"name": "shade_silk_armor",
+							"display_name": "Shade Silk Armor",
+							"type": "leaf"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "planes",
+			"display_name": "Planes",
+			"type": "branch",
+			"nodes": [
+				{
+					"name": "forest_of_shadows",
+					"display_name": "Forest of Shadows",
+					"type": "leaf"
+				}
+			]
+		},
+		{
+			"name": "races",
+			"display_name": "Races",
+			"type": "branch",
+			"nodes": [
+				
+			]
+		}
+	]
+}
