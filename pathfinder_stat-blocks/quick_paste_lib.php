@@ -21,6 +21,7 @@
 
 		$lineCount=count($arr);
 		for($i=0; $i<$lineCount; $i++) {
+			$arr[$i]=trim($arr[$i]);
 			if(/*str_starts_with($arr[$i],'/mm/')*/substr($arr[$i], 0, 4)=='/mm/') {
 				$arr[$i]='<span class="inset">'.substr($arr[$i],4).'</span>';
 			}
@@ -85,7 +86,7 @@
 			$slot,
 			in_array($price,$dashes)?'—':(is_string($price)?$price:number_format($price)." gp"),
 			in_array($weight,$dashes)?'—':(is_string($weight)?$weight:number_format($weight).($weight==1 ? " lb." : " lbs.")),
-			is_array($description) ? $description : explode("\n", $description),
+			quick_array($description),
 			$isArtifact ? false : (is_array($extra) ? $extra : explode("\n", $extra)),
 			$isArtifact ? (is_array($extra) ? $extra : explode("\n", $extra)) : false
 		);
