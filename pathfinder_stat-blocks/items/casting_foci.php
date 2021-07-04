@@ -8,7 +8,7 @@
 			'Certain, specially created, items can be used focus the the power of a caster. Most of these items appear at first to resemble existing magic items and, in fact, many can have the functions of their corresponding item integrated into it or some other boon. Unless stated otherwise, upgrading a casting focus increases it\'s price by twice the cost to upgrade it. Each item grants a boon to the caster improving their magic.',
 			'Holding a casting focus does not prevent that hand from performing somatic spell components. Depending on the item, either normal somatic components are used or some manipulation of the item is used in place. Additionally if casting a touch spell, the charge becomes attached to both the caster\'s hand and the casting focus and can be discharged by touching either one.',
 			'All casting foci can be enchanted like a magic weapon. Enhancement bonuses add to any attack rolls or save DCs associated with the spell. Melee weapon properties only apply to damaging spells with a range of touch, while ranged weapon properties only apply to damaging spells with a range longer than touch that are a "ray" effect or that have a target or targets. Weapon properties with additional restrictions cannot be applied to casting foci. Certain exceptions do apply however. If a casting focus is enchanted with ii/ghost touch/ii all spells cast with it are unaffected by the incorporeal quality as per ii/ghost touch/ii. A casting focus can be enchanted with the ii/deadly/ii property which changes any non-lethal damage dealt by spells cast with the focus deal lethal damage instead but also makes every spell cast with the focus count as a "damaging" spell. If a casting focus is enchanted with the ii/keen/ii quality or is the subject of the ii/keen edge/ii spell, it doubles the threat range of all attack rolls associated with spells cast from using the focus. An enchanted casting foci has the higher caster level of its base caster level and the caster level of its enchantments.',
-			'Some casting foci can be wielded and enchanted as some type of weapon. Enchantments on these items apply separately to its use as a casting foci and as a weapon similar  to if it were a double weapon, listing enchantments on the casting focus functionality first. When applying an enchantment to either the casting focus or weapon functionality, the material component cost of making the item is reduced by the square of the overlapping equivalent enhancement bonus times 500 gp and the required time at the same rate. (i.e. Enchanting a +2 ii/bane/ii / +3 ii/ghost touch/ii ii/shocking burst/ii spell potency staff to +4 ii/bane/ii ii/shocking burst/ii / +3 ii/ghost touch/ii ii/shocking burst/ii would cost (49,000 - 12,500) - (9,000 - 2,000) = 36,500 - 7,000 = 29,500 gp and take 61 days instead of 49,000 - 9,000 = 40,000 gp taking 80 days.) (WIP, Subject to change.)'
+			'Some casting foci can be wielded and enchanted as some type of weapon. Enchantments on these items apply separately to its use as a casting foci and as a weapon similar  to if it were a double weapon, listing enchantments on the casting focus functionality first. When applying an enchantment to either the casting focus or weapon functionality, the material component cost of making the item is reduced by the square of the overlapping equivalent enhancement bonus times 1,000 gp and the required time at the same rate. (i.e. Enchanting a +2 ii/bane/ii / +3 ii/ghost touch/ii ii/shocking burst/ii spell potency staff to +4 ii/bane/ii ii/shocking burst/ii / +3 ii/ghost touch/ii ii/shocking burst/ii would cost (49,000 - 25,000) - (9,000 - 4,000) = 24,000 - 5,000 = 19,000 gp and take 38 days instead of 49,000 - 9,000 = 40,000 gp taking 80 days.) (WIP, Subject to change.)'
 		]),
 		false,
 		[]
@@ -233,7 +233,7 @@
 				<td>Resolute</td>
 			</tr>
 			<tr>
-				<td>True Netral-Aligned Planes</td>
+				<td>True Neutral-Aligned Planes</td>
 				<td>Counterpoised Creature</td>
 			</tr>
 			<tr>
@@ -417,6 +417,38 @@
 		"bb/Requirements/bb Craft Wondrous Item, ii/bestow curse/ii; bb/Cost/bb 14,000 gp
 		bb/Upgrade/bb:
 		bb/Requirements/bb Craft Wondrous Item; bb/Cost/bb 15,000 gp"
+	);
+	magicItemBlockAuto(
+		"Genesis Branch",
+		"Conjuration",
+		9,
+		"Focus",
+		18600,
+		"—",
+		"This branch appears to be an ordinary sprig of holly but exhibits magic far beyond an ordinary branch.
+		This branch can be used as a divine focus by a druid or similar divine casters in parallel with iᛏs use as a casting focus.
+		When used as a casting focus for a spell that affects or creates plant matter—such as entangle or spike growth—its magic manifests, causing numerous seeds of different types to suddenly grow from the branch, fall off, and bury themself into the ground nearby. They then spring up to create any vegetation or grass that the spell requires to function inside of the spell’s area of effect. The vegetation created by the branch grows regardless of the terrain, and lasts the full duration of the spell, allowing the user to cast plant-altering or plant-creating spells in deserts, badlands, and other harsh terrains.
+		The plants created are imbued with the power of nature and produce stronger effects. All spells that create or affect plants that are cast with this casting focus are cast at +1 caster level.
+		The branch can be upgraded to grow ii/goodberries/ii once per day as the spell. These berries are the size and shape of holly berries and even grow on the branch where the berries would naturally grow but are are light blue-white in color and have a lavender sheen on them.",
+		false,
+		"bb/Requirements/bb Craft Wondrous Item, ii/plant growth/ii; bb/Cost/bb 9,300 gp
+		bb/Upgrade/bb:
+		bb/Requirements/bb Craft Wondrous Item, ii/goodberry/ii; bb/Cost/bb 540 gp"
+	);
+	magicItemBlockAuto(
+		"Blessed Claw",
+		"Transmutation",
+		5,
+		"Focus",
+		18600,
+		"—",
+		"While normally this artifact takes the form of a claw, it can be created from any hard and sharp item taken from the body of an animal or magical beast such as a talon, fang, or beak. The item is then attached to a piece of leather strapped to the palm of the wearer's hand.
+		While wearing this item while under the effects of a polymorph effect, the caster receives a +5 bonus to concentration checks to cast spells in combat plus any enhancement bonus possessed by the item.
+		This item can be upgraded to empower the wearer's natural attacks. This grants the wearer a +1 enhancement bonus on attack rolls with one natural attack chosen when the wearer puts on the item or when the wearer is placed under a polymorph effect reverting to the previous choice when it ends. Once upgraded, the item can be enchanted as a melee weapon with the melee weapon enchantments applying to the effected natural attack. The Enhancement bonuses do not stack. Alternatively, the item can be upgraded for twice the normal cost to grant its effects to all natural weapons possessed by the wearer. This also doubles the cost of enchantments to the melee weapon functionality after the price is reduced for overlapping enchantments.",
+		false,
+		"bb/Requirements/bb Craft Wondrous Item; bb/Cost/bb 9,300 gp
+		bb/Upgrade/bb:
+		bb/Requirements/bb Craft Wondrous Item, ii/greater magic fang/ii; bb/Cost/bb 150 gp"
 	);
 	require '../pageEnd.php';
 ?>
