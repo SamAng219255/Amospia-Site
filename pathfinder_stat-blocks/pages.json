@@ -131,6 +131,46 @@
 			"directory": "/pathfinder_stat-blocks/",
 			"sort_path": [
 			]
+		},
+		"goodberry_sprig": {
+			"display_name": "Goodberry Sprig",
+			"file_name": "goodberry_sprig.php",
+			"directory": "/pathfinder_stat-blocks/items/",
+			"sort_path": [
+				"items"
+			]
+		},
+		"planewalkers": {
+			"display_name": "Plane Walkers",
+			"file_name": "planewalkers.php",
+			"directory": "/pathfinder_stat-blocks/races/",
+			"sort_path": [
+				"races"
+			]
+		},
+		"redeemed": {
+			"display_name": "Redeemed",
+			"file_name": "redeemed.php",
+			"directory": "/pathfinder_stat-blocks/races/",
+			"sort_path": [
+				"races"
+			]
+		},
+		"redeemed_full": {
+			"display_name": "Redeemed, Full Blooded",
+			"file_name": "redeemed_full.php",
+			"directory": "/pathfinder_stat-blocks/races/",
+			"sort_path": [
+				"races"
+			]
+		},
+		"redeemed_converted": {
+			"display_name": "Redeemed, Converted",
+			"file_name": "redeemed_converted.php",
+			"directory": "/pathfinder_stat-blocks/races/",
+			"sort_path": [
+				"races"
+			]
 		}
 	},
 	"sort_tree": [
@@ -184,6 +224,11 @@
 						{
 							"name": "casting_foci",
 							"display_name": "Casting Foci",
+							"type": "leaf"
+						},
+						{
+							"name": "goodberry_sprig",
+							"display_name": "Goodberry Sprig",
 							"type": "leaf"
 						},
 						{
@@ -249,7 +294,26 @@
 			"display_name": "Races",
 			"type": "branch",
 			"nodes": [
-				
+				{
+					"name": "planewalkers",
+					"display_name": "Plane Walkers",
+					"type": "leaf"
+				},
+				{
+					"name": "redeemed",
+					"display_name": "Redeemed",
+					"type": "leaf"
+				},
+				{
+					"name": "redeemed_converted",
+					"display_name": "Redeemed, Converted",
+					"type": "leaf"
+				},
+				{
+					"name": "redeemed_full",
+					"display_name": "Redeemed, Full Blooded",
+					"type": "leaf"
+				}
 			]
 		}
 	]

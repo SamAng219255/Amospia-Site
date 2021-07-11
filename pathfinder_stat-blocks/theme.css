@@ -24,6 +24,9 @@ u {
 span.enlarged {
 	font-size: 1.25em;
 }
+span.reduced {
+	font-size: 0.75em;
+}
 span.inset {
 	display: inline-block;
 	margin-left: 1em;
@@ -45,9 +48,9 @@ span.inset {
 	position: absolute;
 	top: 0;
 	right: 0;
-	max-width: calc(100vw - 10rem);
-	width: 80vw;
-	min-width: calc(100vw - 300px);
+	max-width: calc(100vw - 10rem - 5rem);
+	width: calc(80vw - 5rem);
+	min-width: calc(100vw - 300px - 5rem);
 	min-height: 100vh;
 }
 #top {
@@ -156,4 +159,13 @@ ul.menu-vertical li.has-dropdown.open>ul.menu-vertical {
 	border-style: solid none;
 	font-weight: bold;
 	margin-bottom: 0.25em;
+}
+
+/* Hide Scroll Bars */
+* {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }

@@ -16,7 +16,7 @@
 			$arr=$subject;
 		}
 		else {
-			$arr=explode("\n",$subject);
+			$arr=explode("\n",str_replace('/nn/', "\n", $subject));
 		}
 
 		$lineCount=count($arr);
@@ -28,10 +28,13 @@
 			if(/*str_starts_with($arr[$i],'/ee/')*/substr($arr[$i], 0, 4)=='/ee/') {
 				$arr[$i]='<span class="enlarged">'.substr($arr[$i],4).'</span>';
 			}
+			if(/*str_starts_with($arr[$i],'/rr/')*/substr($arr[$i], 0, 4)=='/rr/') {
+				$arr[$i]='<span class="reduced">'.substr($arr[$i],4).'</span>';
+			}
 		}
 		return quick_format($arr);
 	}
-	function block($name, $type, $texts, $spaced, $sections) {
+	function block($name="", $type="", $texts=[], $spaced=false, $sections=[]) {
 		echo '<div class="block '.$type.'" id="block-'.str_replace(' ', '-', $name).'">';
 		echo '<div class="block-title">'.$name.'</div>';
 		$textCount=count($texts);
@@ -124,6 +127,66 @@
 			$proficiency,
 			is_array($description) ? $description : explode("\n", $description)
 		);
+	}
+	function raceBlock($name, $description, $raceTraits, $subraces) {
+		block($name, 'race-desc', quick_array($description), true);
+		block("{$name} Racial Traits", 'race-traits', quick_array($raceTraits));
+		if($subraces) {
+			block("Subraces", 'race-traits', [], false, $subraces);
+		}
+	}
+	function raceBlockAuto($name, $racePoints, $loreDesc, $physDesc, $society, $relations, $alignRelig, $adventurers, $maleNames, $femaleNames, $stats, $statDesc, $racialTraits, $subraces) {
+		$description=$racePoints || $racePoints===0 ? ["/rr/Race Points: {$racePoints}"] : [];
+		array_push($description, ...quick_array($loreDesc));
+		array_push($description, ...quick_array("Physical Description: ".$physDesc));
+		array_push($description, ...quick_array("Society: ".$society));
+		array_push($description, ...quick_array("Relations: ".$relations));
+		array_push($description, ...quick_array("Alignment and Religion: ".$alignRelig));
+		array_push($description, ...quick_array("Adventurers: ".$adventurers));
+		array_push($description, ...quick_array("Male Names: ".$maleNames));
+		array_push($description, ...quick_array("Female Names: ".$femaleNames));
+		$statStr="";
+		if(($stat=(isset($stats["str"]) ? $stats["str"] : $stats[0]))!=0) {
+			$statStr.=sprintf("%+d Strength, ",$stat);
+		}
+		if(($stat=(isset($stats["dex"]) ? $stats["dex"] : $stats[1]))!=0) {
+			$statStr.=sprintf("%+d Dexterity, ",$stat);
+		}
+		if(($stat=(isset($stats["con"]) ? $stats["con"] : $stats[2]))!=0) {
+			$statStr.=sprintf("%+d Constitution, ",$stat);
+		}
+		if(($stat=(isset($stats["int"]) ? $stats["int"] : $stats[3]))!=0) {
+			$statStr.=sprintf("%+d Intelligence, ",$stat);
+		}
+		if(($stat=(isset($stats["wis"]) ? $stats["wis"] : $stats[4]))!=0) {
+			$statStr.=sprintf("%+d Wisdom, ",$stat);
+		}
+		if(($stat=(isset($stats["cha"]) ? $stats["cha"] : $stats[5]))!=0) {
+			$statStr.=sprintf("%+d Charisma, ",$stat);
+		}
+		if(strlen($statStr)>0) {
+			$statStr=substr($statStr, 0, -2);
+		}
+		if($statDesc) {
+			if(strlen($statStr)>0) {
+				$statStr.=": ";
+			}
+			$statStr.=$statDesc;
+		}
+		$raceTraits=strlen($statStr)>0 ? [$statStr] : [];
+		array_push($raceTraits, ...quick_array($racialTraits));
+		$subraceSections=false;
+		if($subraces) {
+			$subraceSections=[];
+			foreach($subraces as $subrace) {
+				array_push($subraceSections, [
+					"title" => $subrace[0],
+					"spaced" => false,
+					"texts" => quick_array($subrace[1])
+				]);
+			}
+		}
+		raceBlock($name, $description, $raceTraits, $subraceSections);
 	}
 	function table($headers, $rows, $horizontal=true) {
 		echo '<table>';
