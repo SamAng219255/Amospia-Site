@@ -1,5 +1,10 @@
 <?php
 	$dashes=['-','–','—'];
+	function array_append(&$arr,$elements) {
+		foreach($elements as $element) {
+			array_push($arr,$element);
+		}
+	}
 	function quick_format($subject) {
 		$str=$subject;
 		$str=str_replace('/bb', '</b>', $str);
@@ -137,14 +142,14 @@
 	}
 	function raceBlockAuto($name, $racePoints, $loreDesc, $physDesc, $society, $relations, $alignRelig, $adventurers, $maleNames, $femaleNames, $stats, $statDesc, $racialTraits, $subraces) {
 		$description=$racePoints || $racePoints===0 ? ["/rr/Race Points: {$racePoints}"] : [];
-		array_push($description, ...quick_array($loreDesc));
-		array_push($description, ...quick_array("Physical Description: ".$physDesc));
-		array_push($description, ...quick_array("Society: ".$society));
-		array_push($description, ...quick_array("Relations: ".$relations));
-		array_push($description, ...quick_array("Alignment and Religion: ".$alignRelig));
-		array_push($description, ...quick_array("Adventurers: ".$adventurers));
-		array_push($description, ...quick_array("Male Names: ".$maleNames));
-		array_push($description, ...quick_array("Female Names: ".$femaleNames));
+		array_append($description, quick_array($loreDesc));
+		array_append($description, quick_array("Physical Description: ".$physDesc));
+		array_append($description, quick_array("Society: ".$society));
+		array_append($description, quick_array("Relations: ".$relations));
+		array_append($description, quick_array("Alignment and Religion: ".$alignRelig));
+		array_append($description, quick_array("Adventurers: ".$adventurers));
+		array_append($description, quick_array("Male Names: ".$maleNames));
+		array_append($description, quick_array("Female Names: ".$femaleNames));
 		$statStr="";
 		if(($stat=(isset($stats["str"]) ? $stats["str"] : $stats[0]))!=0) {
 			$statStr.=sprintf("%+d Strength, ",$stat);
