@@ -179,7 +179,7 @@
 			$statStr.=$statDesc;
 		}
 		$raceTraits=strlen($statStr)>0 ? [$statStr] : [];
-		array_push($raceTraits, ...quick_array($racialTraits));
+		array_append($raceTraits, quick_array($racialTraits));
 		$subraceSections=false;
 		if($subraces) {
 			$subraceSections=[];
