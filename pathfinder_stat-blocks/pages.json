@@ -171,6 +171,30 @@
 			"sort_path": [
 				"races"
 			]
+		},
+		"tehswin": {
+			"display_name": "Tehswin",
+			"file_name": "tehswin.php",
+			"directory": "/pathfinder_stat-blocks/races/",
+			"sort_path": [
+				"races"
+			]
+		},
+		"doubles": {
+			"display_name": "Double Walkers",
+			"file_name": "doubles.php",
+			"directory": "/pathfinder_stat-blocks/races/",
+			"sort_path": [
+				"races"
+			]
+		},
+		"shapeshifters": {
+			"display_name": "Shape Shifters",
+			"file_name": "shapeshifters.php",
+			"directory": "/pathfinder_stat-blocks/races/",
+			"sort_path": [
+				"races"
+			]
 		}
 	},
 	"sort_tree": [
@@ -295,6 +319,11 @@
 			"type": "branch",
 			"nodes": [
 				{
+					"name": "doubles",
+					"display_name": "Double Walkers",
+					"type": "leaf"
+				},
+				{
 					"name": "planewalkers",
 					"display_name": "Plane Walkers",
 					"type": "leaf"
@@ -312,6 +341,16 @@
 				{
 					"name": "redeemed_full",
 					"display_name": "Redeemed, Full Blooded",
+					"type": "leaf"
+				},
+				{
+					"name": "shapeshifters",
+					"display_name": "Shape Shifters",
+					"type": "leaf"
+				},
+				{
+					"name": "tehswin",
+					"display_name": "Tehswin",
 					"type": "leaf"
 				}
 			]

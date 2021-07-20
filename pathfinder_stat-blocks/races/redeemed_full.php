@@ -41,4 +41,4 @@
 		false
 	);
 	require '../pageEnd.php';
-?>, Full Blooded
+?>
