@@ -195,6 +195,70 @@
 			"sort_path": [
 				"races"
 			]
+		},
+		"redwoods_ancient": {
+			"display_name": "Redwoods, Ancient",
+			"file_name": "redwoods_ancient.php",
+			"directory": "/pathfinder_stat-blocks/races/",
+			"sort_path": [
+				"races"
+			]
+		},
+		"redwoods_young": {
+			"display_name": "Redwoods, Young",
+			"file_name": "redwoods_young.php",
+			"directory": "/pathfinder_stat-blocks/races/",
+			"sort_path": [
+				"races"
+			]
+		},
+		"nightshades": {
+			"display_name": "Nightshades",
+			"file_name": "nightshades.php",
+			"directory": "/pathfinder_stat-blocks/races/",
+			"sort_path": [
+				"races"
+			]
+		},
+		"lorax": {
+			"display_name": "Lo'raks",
+			"file_name": "lorax.php",
+			"directory": "/pathfinder_stat-blocks/races/",
+			"sort_path": [
+				"races"
+			]
+		},
+		"aniflors": {
+			"display_name": "Aniflors",
+			"file_name": "aniflors.php",
+			"directory": "/pathfinder_stat-blocks/races/",
+			"sort_path": [
+				"races"
+			]
+		},
+		"tirn": {
+			"display_name": "Tirn",
+			"file_name": "tirn.php",
+			"directory": "/pathfinder_stat-blocks/races/",
+			"sort_path": [
+				"races"
+			]
+		},
+		"drem": {
+			"display_name": "Drem",
+			"file_name": "drem.php",
+			"directory": "/pathfinder_stat-blocks/races/",
+			"sort_path": [
+				"races"
+			]
+		},
+		"gumodeuza": {
+			"display_name": "Gumodeuza",
+			"file_name": "gumodeuza.php",
+			"directory": "/pathfinder_stat-blocks/races/",
+			"sort_path": [
+				"races"
+			]
 		}
 	},
 	"sort_tree": [
@@ -319,8 +383,33 @@
 			"type": "branch",
 			"nodes": [
 				{
+					"name": "aniflors",
+					"display_name": "Aniflors",
+					"type": "leaf"
+				},
+				{
+					"name": "drem",
+					"display_name": "Drem",
+					"type": "leaf"
+				},
+				{
 					"name": "doubles",
 					"display_name": "Double Walkers",
+					"type": "leaf"
+				},
+				{
+					"name": "gumodeuza",
+					"display_name": "Gumodeuza",
+					"type": "leaf"
+				},
+				{
+					"name": "lorax",
+					"display_name": "Lo'raks",
+					"type": "leaf"
+				},
+				{
+					"name": "nightshades",
+					"display_name": "Nightshades",
 					"type": "leaf"
 				},
 				{
@@ -344,6 +433,16 @@
 					"type": "leaf"
 				},
 				{
+					"name": "redwoods_ancient",
+					"display_name": "Redwoods, Ancient",
+					"type": "leaf"
+				},
+				{
+					"name": "redwoods_young",
+					"display_name": "Redwoods, Young",
+					"type": "leaf"
+				},
+				{
 					"name": "shapeshifters",
 					"display_name": "Shape Shifters",
 					"type": "leaf"
@@ -351,6 +450,11 @@
 				{
 					"name": "tehswin",
 					"display_name": "Tehswin",
+					"type": "leaf"
+				},
+				{
+					"name": "tirn",
+					"display_name": "Tirn",
 					"type": "leaf"
 				}
 			]

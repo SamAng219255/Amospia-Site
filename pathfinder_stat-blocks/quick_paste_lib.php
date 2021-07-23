@@ -13,6 +13,10 @@
 		$str=str_replace('ii/', '<i>', $str);
 		$str=str_replace('/uu', '</u>', $str);
 		$str=str_replace('uu/', '<u>', $str);
+		$str=str_replace('/ss', '</sup>', $str);
+		$str=str_replace('ss/', '<sup>', $str);
+		$str=str_replace('/__', '</sub>', $str);
+		$str=str_replace('__/', '<sub>', $str);
 		return $str;
 	}
 	function quick_array($subject) {
@@ -133,14 +137,17 @@
 			is_array($description) ? $description : explode("\n", $description)
 		);
 	}
-	function raceBlock($name, $description, $raceTraits, $subraces) {
+	function raceBlock($name, $description, $raceTraits, $subraces=false, $traitsSections=false) {
 		block($name, 'race-desc', quick_array($description), true);
-		block("{$name} Racial Traits", 'race-traits', quick_array($raceTraits));
+		if($traitsSections)
+			block("{$name} Racial Traits", 'race-traits', quick_array($raceTraits), false, $traitsSections);
+		else
+			block("{$name} Racial Traits", 'race-traits', quick_array($raceTraits));
 		if($subraces) {
 			block("Subraces", 'race-traits', [], false, $subraces);
 		}
 	}
-	function raceBlockAuto($name, $racePoints, $loreDesc, $physDesc, $society, $relations, $alignRelig, $adventurers, $maleNames, $femaleNames, $stats, $statDesc, $racialTraits, $subraces) {
+	function raceBlockAuto($name, $racePoints, $loreDesc, $physDesc, $society, $relations, $alignRelig, $adventurers, $maleNames, $femaleNames, $stats, $statDesc, $racialTraits, $subraces=false, $traitsSections=false) {
 		$description=$racePoints || $racePoints===0 ? ["/rr/Race Points: {$racePoints}"] : [];
 		array_append($description, quick_array($loreDesc));
 		array_append($description, quick_array("Physical Description: ".$physDesc));
@@ -191,25 +198,63 @@
 				]);
 			}
 		}
-		raceBlock($name, $description, $raceTraits, $subraceSections);
+		$traitSectionsNew=false;
+		if($traitsSections) {
+			$traitSectionsNew=[];
+			foreach($traitsSections as $traitSection) {
+				array_push($traitSectionsNew, [
+					"title" => $traitSection[0],
+					"spaced" => false,
+					"texts" => quick_array($traitSection[1])
+				]);
+			}
+		}
+		raceBlock($name, $description, $raceTraits, $subraceSections, $traitSectionsNew);
 	}
-	function table($headers, $rows, $horizontal=true) {
-		echo '<table>';
+	function raceBlockAutoSections($name, $racePoints, $loreDesc, $physDesc, $society, $relations, $alignRelig, $adventurers, $maleNames, $femaleNames, $stats, $statDesc, $racialTraits, $traitsSections, $subraces=false) {
+		raceBlockAuto($name, $racePoints, $loreDesc, $physDesc, $society, $relations, $alignRelig, $adventurers, $maleNames, $femaleNames, $stats, $statDesc, $racialTraits, $subraces, $traitsSections);
+	}
+	function feat($name, $desc, $benefit, $prereq=false, $special=false) {
+		$text=$desc;
+		if($prereq) {
+			$text.="/nn/Prerequisites: {$prereq}";
+		}
+		$text.="/nn/Benefit: {$benefit}";
+		if($special) {
+			$text.="/nn/Special: {$special}";
+		}
+		block(
+			$name,
+			"feat",
+			quick_array($text),
+			true
+		);
+	}
+	function racialFeats($race, $feats) {
+		echo '<div class="block racial-feats" id="block-Racial-Feats">';
+		echo '<div class="block-title">Racial Feats</div><div class="interior">';
+		foreach ($feats as $feat) {
+			feat($feat['name'],$feat['desc'],$feat['benefit'],$race.', '.$feat['prereq'],$feat['special']);
+		}
+		echo '</div></div>';
+	}
+	function sTable($headers, $rows, $horizontal=true) {
+		$str='<table>';
 		if($horizontal) {
 			$headerCount=count($headers);
-			echo '<tr>';
+			$str .= '<tr>';
 			for($i=0; $i<$headerCount; $i++) {
-				echo "<th>{$headers[$i]}</th>";
+				$str .= "<th>{$headers[$i]}</th>";
 			}
-			echo '</tr>';
+			$str .= '</tr>';
 			$rowCount=count($rows);
 			for($i=0; $i<$rowCount; $i++) {
 				$colCount=count($rows[$i]);
-				echo '<tr>';
+				$str .= '<tr>';
 				for($j=0; $j<$colCount; $j++) {
-					echo "<td>{$rows[$i][$j]}</td>";
+					$str .= "<td>{$rows[$i][$j]}</td>";
 				}
-				echo '</tr>';
+				$str .= '</tr>';
 			}
 		}
 		else {
@@ -217,19 +262,23 @@
 			$headerCount=count($headers);
 			$fullCount=max($rowCount,$headerCount);
 			for($i=0; $i<$fullCount; $i++) {
-				echo '<tr>';
+				$str .= '<tr>';
 				if($i<$headerCount) {
-					echo "<th>{$headers[$i]}</th>";
+					$str .= "<th>{$headers[$i]}</th>";
 				}
 				if($i<$rowCount) {
 					$colCount=count($rows[$i]);
 					for($j=0; $j<$colCount; $j++) {
-						echo "<td>{$rows[$i][$j]}</td>";
+						$str .= "<td>{$rows[$i][$j]}</td>";
 					}
 				}
-				echo '</tr>';
+				$str .= '</tr>';
 			}
 		}
-		echo '</table>';
+		$str .= '</table>';
+		return $str;
+	}
+	function table($headers, $rows, $horizontal=true) {
+		echo sTable($headers, $rows, $horizontal);
 	}
 ?>

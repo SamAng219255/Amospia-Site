@@ -31,5 +31,14 @@
 		],
 		false
 	);
+	racialFeats("double walker", [
+		[
+			"name" => "Improved Copying",
+			"desc" => "Doubles can learn to hone their ability to create and maintain a copy of an individual.",
+			"prereq" => "character level 7th, ii/assume appearance/ii racial spell-like ability",
+			"benefit" => "Your ii/assume appearance/ii spell-like ability becomes ii/assume appreance, greater/ii.",
+			"special" => false
+		]
+	]);
 	require '../pageEnd.php';
 ?>

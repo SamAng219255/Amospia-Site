@@ -31,5 +31,14 @@
 		],
 		false
 	);
+	racialFeats("shape shifter", [
+		[
+			"name" => "Improved Polymorphic",
+			"desc" => "With practice, Shape Shifters can expand their abilities and take on even greater forms.",
+			"prereq" => "character level 13th, Polymorphic racial trait",
+			"benefit" => "Polymorphic allows you to cast ii/polymorph, greater/ii instead as a supernatual ability.",
+			"special" => false
+		]
+	]);
 	require '../pageEnd.php';
 ?>
