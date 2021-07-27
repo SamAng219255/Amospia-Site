@@ -114,7 +114,7 @@
 						}
 						if($tree_index<$tree_count) {
 							$ptr=$tree_path[$depth][$tree_index];
-							$match=$ptr['name']==(isset($_GET['path'])?$get_path:$pages['entries'][$pageId]['sort_path'])[$depth];
+							$match=($ptr['name']==(isset($_GET['path'])?$get_path[$depth]:$pages['entries'][$pageId]['sort_path'][$depth]));
 							if($match) {
 								array_push($tree_path, $ptr['nodes']);
 								$next_node=$ptr;
