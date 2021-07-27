@@ -135,6 +135,19 @@ ul.menu-vertical li.has-dropdown.open>ul.menu-vertical {
 	text-align: center;
 	font-size: 1.5em;
 }
+#top-nav {
+	margin: 2.5vw 5vw;
+	font-size: 1.4rem;
+}
+.top-row {
+	text-align: center;
+}
+.top-label {
+	text-decoration: none;
+}
+.top-label:hover, .top-label.selected {
+	text-decoration: underline;
+}
 .clickable {
 	cursor: pointer;
 }

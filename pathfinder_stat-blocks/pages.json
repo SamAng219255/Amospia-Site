@@ -1,4 +1,5 @@
 {
+	"origin": "/pathfinder_stat-blocks/",
 	"entries": {
 		"casting_foci": {
 			"display_name": "Casting Foci",
@@ -259,6 +260,14 @@
 			"sort_path": [
 				"races"
 			]
+		},
+		"sprix": {
+			"display_name": "Sprix",
+			"file_name": "sprix.php",
+			"directory": "/pathfinder_stat-blocks/races/",
+			"sort_path": [
+				"races"
+			]
 		}
 	},
 	"sort_tree": [
@@ -445,6 +454,11 @@
 				{
 					"name": "shapeshifters",
 					"display_name": "Shape Shifters",
+					"type": "leaf"
+				},
+				{
+					"name": "sprix",
+					"display_name": "Sprix",
 					"type": "leaf"
 				},
 				{
