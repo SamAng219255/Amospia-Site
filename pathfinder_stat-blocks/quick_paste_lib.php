@@ -158,22 +158,22 @@
 		array_append($description, quick_array("Male Names: ".$maleNames));
 		array_append($description, quick_array("Female Names: ".$femaleNames));
 		$statStr="";
-		if(($stat=(isset($stats["str"]) ? $stats["str"] : $stats[0]))!=0) {
+		if(($stat=(isset($stats["str"]) ? $stats["str"] : (isset($stats[0]) ? $stats[0] : 0)))!=0) {
 			$statStr.=sprintf("%+d Strength, ",$stat);
 		}
-		if(($stat=(isset($stats["dex"]) ? $stats["dex"] : $stats[1]))!=0) {
+		if(($stat=(isset($stats["dex"]) ? $stats["dex"] : (isset($stats[1]) ? $stats[1] : 0)))!=0) {
 			$statStr.=sprintf("%+d Dexterity, ",$stat);
 		}
-		if(($stat=(isset($stats["con"]) ? $stats["con"] : $stats[2]))!=0) {
+		if(($stat=(isset($stats["con"]) ? $stats["con"] : (isset($stats[2]) ? $stats[2] : 0)))!=0) {
 			$statStr.=sprintf("%+d Constitution, ",$stat);
 		}
-		if(($stat=(isset($stats["int"]) ? $stats["int"] : $stats[3]))!=0) {
+		if(($stat=(isset($stats["int"]) ? $stats["int"] : (isset($stats[3]) ? $stats[3] : 0)))!=0) {
 			$statStr.=sprintf("%+d Intelligence, ",$stat);
 		}
-		if(($stat=(isset($stats["wis"]) ? $stats["wis"] : $stats[4]))!=0) {
+		if(($stat=(isset($stats["wis"]) ? $stats["wis"] : (isset($stats[4]) ? $stats[4] : 0)))!=0) {
 			$statStr.=sprintf("%+d Wisdom, ",$stat);
 		}
-		if(($stat=(isset($stats["cha"]) ? $stats["cha"] : $stats[5]))!=0) {
+		if(($stat=(isset($stats["cha"]) ? $stats["cha"] : (isset($stats[5]) ? $stats[5] : 0)))!=0) {
 			$statStr.=sprintf("%+d Charisma, ",$stat);
 		}
 		if(strlen($statStr)>0) {
