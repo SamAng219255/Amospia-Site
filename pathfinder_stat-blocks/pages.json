@@ -138,7 +138,8 @@
 			"file_name": "goodberry_sprig.php",
 			"directory": "/pathfinder_stat-blocks/items/",
 			"sort_path": [
-				"items"
+				"items",
+				"magic_items"
 			]
 		},
 		"planewalkers": {
