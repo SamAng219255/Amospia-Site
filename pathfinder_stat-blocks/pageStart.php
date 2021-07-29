@@ -8,6 +8,7 @@
 <html>
 <head>
 	<script src="/jquery.js"></script>
+	<script src="/pathfinder_stat-blocks/mobileDetect.js"></script>
 	<?php
 		echo '	<link rel="stylesheet" type="text/css" href="'.($currentDirectory!='pathfinder_stat-blocks' ? '../' : '').'theme.css">';
 		echo '	<script src="'.($currentDirectory!='pathfinder_stat-blocks' ? '../' : '').'menu.js"></script>';
@@ -15,7 +16,10 @@
 </head>
 <body onload="setup()">
 	<div id="sidebar">
-		<p id="sideber-label">Navigation</p>
+		<div id="nav-controls">
+			<div id="menu-close"></div>
+		</div>
+		<p id="sidebar-label">Navigation</p>
 		<ul class="menu-vertical">
 			<?php
 				$string=file_get_contents(($currentDirectory!='pathfinder_stat-blocks' ? '../' : '').'pages.json');
@@ -78,6 +82,9 @@
 	</div>
 	<div id="center">
 		<div id="top">
+			<div id="controls">
+				<div id="menu-open"></div>
+			</div>
 			<div id="top-nav">
 				<?php
 					function retrieveAtDepth($arr,$path,$initial_depth=0) {
