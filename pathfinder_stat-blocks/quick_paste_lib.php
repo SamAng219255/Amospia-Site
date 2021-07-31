@@ -45,7 +45,7 @@
 	}
 	function block($name="", $type="", $texts=[], $spaced=false, $sections=[]) {
 		echo '<div class="block '.$type.'" id="block-'.str_replace(' ', '-', $name).'">';
-		echo '<div class="block-title">'.$name.'</div>';
+		echo '<div class="block-title">'.$name.'<a href="#" class="goto-top">Back to Top</a></div>';
 		$textCount=count($texts);
 		for($i=0; $i<$textCount; $i++) {
 			echo '<p'.($spaced ? ' class="spaced"' : '').'>'.$texts[$i].'</p>';
@@ -280,5 +280,55 @@
 	}
 	function table($headers, $rows, $horizontal=true) {
 		echo sTable($headers, $rows, $horizontal);
+	}
+	function contents($items, $custom_title=false, $primary=true) {
+		echo '<div class="to-contents"'.($primary ? ' id="top"' : '').'>';
+		echo '<div class="toc-title">'.($custom_title ? $custom_title : 'Contents').'</div>';
+		echo '<ul class="toc-contents">';
+
+		$treeDepth=0;
+		$treePath=[$items];
+		$treeCounts=[count($treePath[$treeDepth])];
+		$treeIndicies=[0];
+
+		$sanity=100;
+		while($treeDepth>=0) {
+			if($sanity<1) {
+				echo '<p>Loop has gone insane after 100 iterations.</p>';
+				break;
+			}
+			if($treeIndicies[$treeDepth]<$treeCounts[$treeDepth]) {
+				$ptr=$treePath[$treeDepth][$treeIndicies[$treeDepth]];
+				if(is_string($ptr)) {
+					echo '<li><a class="toc-label" href="#block-'.str_replace(' ','-',$ptr).'">'.$ptr.'</a>';
+					$treeIndicies[$treeDepth]++;
+				}
+				else {
+					echo '<li><a class="toc-label" href="#'.$ptr['id'].'">'.$ptr['name'].'</a>';
+					if(isset($ptr['nodes'])) {
+						$treeDepth++;
+						$treePath[$treeDepth]=$ptr['nodes'];
+						$treeCounts[$treeDepth]=count($treePath[$treeDepth]);
+						$treeIndicies[$treeDepth]=0;
+						echo '<ul>';
+					}
+					else {
+						echo '</li>';
+						$treeIndicies[$treeDepth]++;
+					}
+				}
+			}
+			else {
+				echo '</ul></li>';
+				unset($treePath[$treeDepth]);
+				unset($treeIndicies[$treeDepth]);
+				unset($treeCounts[$treeDepth]);
+				$treeDepth--;
+				if($treeDepth>=0)
+					$treeIndicies[$treeDepth]++;
+			}
+			$sanity--;
+		}
+		echo '</ul></div>';
 	}
 ?>

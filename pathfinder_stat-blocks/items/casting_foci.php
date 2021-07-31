@@ -13,6 +13,27 @@
 		false,
 		[]
 	);
+	contents([
+		"Focusing Wand",
+		"Spell Potency Staff",
+		"Abjuring Rune Stone",
+		"Conjuring Key",
+		"Divining Sphere",
+		"Enchanting Rings",
+		"Evocation Rod",
+		"Illusory Glove",
+		"Transmuting Vial",
+		"Necromantic Skull",
+		"Blessed Holy Symbol",
+		"Hammer of Holy Light",
+		"Calling Key",
+		"Ophiuchus Staff",
+		"Radiant Lantern",
+		"Bleeding Bone",
+		"Curse Rod",
+		"Genesis Branch",
+		"Blessed Claw"
+	]);
 	magicItemBlockAuto(
 		"Focusing Wand",
 		"Divination",

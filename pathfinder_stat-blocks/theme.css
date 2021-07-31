@@ -133,6 +133,37 @@ ul.menu-vertical li.has-dropdown>ul.menu-vertical {
 ul.menu-vertical li.has-dropdown.open>ul.menu-vertical {
 	height: auto;
 }
+.to-contents {
+	border-style: solid;
+	border-color: #fff;
+	border-width: 1px;
+	display: inline-block;
+}
+.toc-title {
+	padding: 0.25em;
+	background-color: #333;
+	font-size: 1.25em;
+	cursor: pointer;
+}
+.toc-contents {
+	margin-block-start: 0;
+	margin-block-end: 0;
+	margin: 0;
+	margin-right: 1em;
+	height: 0;
+	overflow: hidden;
+}
+.to-contents.open>.toc-contents {
+	height: unset;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.to-contents>.toc-title:after {
+	content: " ◂"
+}
+.to-contents.open>.toc-title:after {
+	content: " ▾"
+}
 #sidebar-label {
 	padding: 1em 1em 0;
 	text-align: center;
@@ -176,12 +207,21 @@ ul.menu-vertical li.has-dropdown.open>ul.menu-vertical {
 	font-weight: bold;
 	margin-bottom: 0.25em;
 }
+.goto-top {
+	display: none;
+}
+.to-contents~.block .goto-top {
+	display: inline-block;
+	font-size: 0.667em;
+	float: right;
+}
 
 body.mobile {
 	font-size: 32px;
 }
 body.mobile #sidebar {
-	display: none;
+	display: block;
+	visibility: hidden;
 	font-size: 64px;
 	min-width: unset;
 	width: 100vw;
@@ -189,14 +229,21 @@ body.mobile #sidebar {
 	min-height: 100vh;
 	height: unset;
 	overflow: hidden;
-	position: static;
+	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: 1;
 	padding-bottom: 30px;
+	animation-name: slide-on;
+	transform: translate(-100vw, 0);
+}
+body.mobile-secondary #sidebar {
+	transition: transform 0.25s ease-in-out, visibility 0s linear 0.25s;
 }
 body.mobile #sidebar.open {
-	display: block;
+	visibility: visible;
+	transform: translate(0, 0);
+	transition: transform 0.25s ease-in-out;
 }
 body.mobile #center.hide {
 	display: none;
@@ -222,8 +269,11 @@ body.mobile #menu-open {
 }
 body.mobile #menu-close {
 	background: 
-		linear-gradient(to bottom right, transparent 0%, transparent 43%, #000 43%, #000 57%, transparent 57%, transparent 100%),
-		linear-gradient(to bottom left, transparent 0%, transparent 43%, #000 43%, #000 57%, transparent 57%, transparent 100%);
+		linear-gradient(140deg, transparent 0%, transparent 20%, #000 20%, #000 34.5%, transparent 34.5%, transparent 100%),
+		linear-gradient( 40deg, transparent 0%, transparent 20%, #000 20%, #000 34.5%, transparent 34.5%, transparent 100%),
+		linear-gradient(to bottom, transparent 0%, transparent 40%, #000 40%, #000 60%, transparent 60%, transparent 100%);
+		/*linear-gradient(to bottom right, transparent 0%, transparent 43%, #000 43%, #000 57%, transparent 57%, transparent 100%),
+		linear-gradient(to bottom left, transparent 0%, transparent 43%, #000 43%, #000 57%, transparent 57%, transparent 100%);*/
 }
 @media (max-resolution: 105dpi) {
 	body.mobile {
