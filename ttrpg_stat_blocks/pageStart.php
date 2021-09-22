@@ -16,6 +16,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<script src="/jquery.js"></script>
 	<script src="/ttrpg_stat_blocks/mobileDetect.js"></script>
 	<?php
