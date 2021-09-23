@@ -74,7 +74,7 @@
 	}
 	function block2($name="", $type="", $level=false, $traits=[], $texts=[], $spaced=false, $sections=[]) {
 		echo '<div class="block '.$type.'" id="block-'.str_replace(' ', '-', $name).'">';
-		echo '<div class="block-title">'.$name.'<span class="level-label">'.$type.' '.($level===false?'':$level).'</span></div>';
+		echo '<div class="block-title">'.$name.'&nbsp;<span class="level-label">'.$type.' '.($level===false?'':$level).'</span></div>';
 		echo '<a href="#" class="goto-top-2">Back to Top</a>';
 		echo '<div class="traits">';
 		foreach ($traits as $trait) {
