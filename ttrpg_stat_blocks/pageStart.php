@@ -23,6 +23,7 @@
 		echo '	<link rel="stylesheet" type="text/css" href="'.$rootDir.'theme.css">';
 		echo '	<script src="'.$rootDir.'menu.js"></script>';
 	?>
+	<script src="/ttrpg_stat_blocks/table_sort.js"></script>
 </head>
 <body onload="setup()">
 	<div id="sidebar">
@@ -122,6 +123,9 @@
 					$tree_count=count($tree_path[$depth]);
 					$next_node=[];
 					$get_path=explode(',', $_GET['path']);
+					$final_node=[];
+					$starting_flower=false;
+					$flower_node=[];
 
 					$sanity=100;
 					while($depth<count($tree_path)) {
@@ -131,15 +135,27 @@
 						}
 						if($tree_index<$tree_count) {
 							$ptr=$tree_path[$depth][$tree_index];
+							if($tree_index==0) {
+								echo '<p class="top-row">';
+								if($starting_flower) {
+									$starting_flower=false;
+									if(isset($flower_node['petal_display_name'])) {
+										$entry=$pages['entries'][$flower_node['name']];
+										echo '<a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'" class="top-label">'.$flower_node['petal_display_name'].'</a> | ';
+									}
+								}
+							}
+							else
+								echo ' | ';
 							$match=($ptr['name']==(isset($_GET['path'])?$get_path[$depth]:$pages['entries'][$pageId]['sort_path'][$depth]));
 							if($match) {
 								array_push($tree_path, $ptr['nodes']);
 								$next_node=$ptr;
+								if($next_node['type']=='flower') {
+									$starting_flower=true;
+									$flower_node=$ptr;
+								}
 							}
-							if($tree_index==0) 
-								echo '<p class="top-row">';
-							else
-								echo ' | ';
 							if($ptr['type']=='branch') {
 								$search_path='';
 								foreach($node_list as $node) {
@@ -152,6 +168,8 @@
 								$entry=$pages['entries'][$ptr['name']];
 								echo '<a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'" class="top-label'.($match || $ptr['name'] == $pageId ? ' selected' : '').'">'.$ptr['display_name'].'</a>';
 							}
+							if($ptr['name'] == $pageId)
+								$final_node=$ptr;
 							$tree_index++;
 						}
 						else {
@@ -164,6 +182,22 @@
 							array_push($node_list, $next_node);
 						}
 						$sanity--;
+					}
+					if($final_node['type']=='flower') {
+						echo '<p class="top-row">';
+						if(isset($final_node['petal_display_name'])) {
+							$entry=$pages['entries'][$final_node['name']];
+							echo '<a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'" class="top-label selected">'.$final_node['petal_display_name'].'</a> | ';
+						}
+						$node_count=count($final_node['nodes']);
+						for($i=0; $i<$node_count; $i++) {
+							if($i>0)
+								echo ' | ';
+							$ptr=$final_node['nodes'][$i];
+							$entry=$pages['entries'][$ptr['name']];
+							echo '<a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'" class="top-label">'.$ptr['display_name'].'</a>';
+						}
+						echo '</p><hr>';
 					}
 				?>
 			</div>

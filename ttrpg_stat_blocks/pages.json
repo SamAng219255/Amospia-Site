@@ -303,12 +303,52 @@
 			]
 		},
 		"casting_foci2": {
-			"display_name": "Ccasting Foci",
+			"display_name": "Casting Foci",
 			"file_name": "casting_foci.php",
 			"directory": "pathfinder_2e/equipment/",
 			"sort_path": [
 				"pathfinder_2e",
 				"equipment"
+			]
+		},
+		"enosrian": {
+			"display_name": "Thyllkthoron",
+			"file_name": "enosrian.php",
+			"directory": "pathfinder_2e/races/",
+			"sort_path": [
+				"pathfinder_2e",
+				"races_2e"
+			]
+		},
+		"enosrian_feats": {
+			"display_name": "Thyllkthoron Feats",
+			"file_name": "enosrian_feats.php",
+			"directory": "pathfinder_2e/races/",
+			"sort_path": [
+				"pathfinder_2e",
+				"races_2e",
+				"enosrian"
+			]
+		},
+		"enosrian_heritages": {
+			"display_name": "Thyllkthoron Heritages",
+			"file_name": "enosrian_heritages.php",
+			"directory": "pathfinder_2e/races/",
+			"sort_path": [
+				"pathfinder_2e",
+				"races_2e",
+				"enosrian"
+			]
+		},
+		"enosrian_feat_display": {
+			"display_name": "Thyllkthoron Feat Descriptions",
+			"file_name": "enosrian_feat_display.php",
+			"directory": "pathfinder_2e/races/",
+			"sort_path": [
+				"pathfinder_2e",
+				"races_2e",
+				"enosrian",
+				"enosrian_feats"
 			]
 		}
 	},
@@ -623,6 +663,38 @@
 									"nodes": [
 
 									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "races_2e",
+					"display_name": "Races",
+					"type": "branch",
+					"nodes": [
+						{
+							"name": "enosrian",
+							"display_name": "Thyllkthoron",
+							"petal_display_name": "Thyllkthoron Details",
+							"type": "flower",
+							"nodes": [
+								{
+									"name": "enosrian_feats",
+									"display_name": "Thyllkthoron Feats",
+									"type": "flower",
+									"nodes": [
+										{
+											"name": "enosrian_feat_display",
+											"display_name": "Feat Descriptions",
+											"type": "petal"
+										}
+									]
+								},
+								{
+									"name": "enosrian_heritages",
+									"display_name": "Thyllkthoron Heritages",
+									"type": "petal"
 								}
 							]
 						}

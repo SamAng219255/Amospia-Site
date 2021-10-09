@@ -1,6 +1,7 @@
 <?php require '../pageStart.php'; ?>
 <title>Deities</title>
 <script>
+	cancelDefaultTableSort=true;
 	function setupSort() {
 		var headers=$($("table").children().children()[0]).children();
 		headers.on("click", function(e) {
@@ -24,7 +25,7 @@
 
 	sort=false;
 	sortStatus={};
-	columnIndices={Name:0,Pantheon:1,Alignment:2,"Areas of Concern":3,Domains:4,"Favored Weapon":5};
+	columnIndices={"Name":0,"Pantheon":1,"Alignment":2,"Areas of Concern":3,"Domains":4,"Favored Weapon":5};
 
 	setupFuncs.push(setupSort);
 </script>

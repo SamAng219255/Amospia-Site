@@ -13,6 +13,9 @@ p {
 p.spaced {
 	margin-bottom: 1em;
 }
+pre {
+	font-size: 12px;
+}
 b {
 	font-weight: bold;
 }
@@ -31,6 +34,15 @@ span.reduced {
 span.inset {
 	display: inline-block;
 	margin-left: 1em;
+}
+span.subtitle {
+	display: block;
+	border-style: solid none;
+	font-weight: bold;
+	margin-bottom: 0.25em;
+}
+.block2 span.subtitle {
+	margin: 1em 0;
 }
 #sidebar {
 	background-color: #FFC87D;
@@ -87,6 +99,9 @@ tr {
 tr:nth-child(odd) {
 	background-color: #808080;
 }
+td, th {
+	padding: 0.25em;
+}
 ul.menu-vertical {
 	list-style-type: none;
 	padding: 0;
@@ -138,6 +153,7 @@ ul.menu-vertical li.has-dropdown.open>ul.menu-vertical {
 	border-color: #fff;
 	border-width: 1px;
 	display: inline-block;
+	margin: 0.5em;
 }
 .toc-title {
 	padding: 0.25em;
@@ -202,6 +218,9 @@ ul.menu-vertical li.has-dropdown.open>ul.menu-vertical {
 	padding: 0 0.25em;
 	margin-bottom: 0.25em;
 }
+.block2 .block-title {
+	margin-top: 1em;
+}
 .block-section-title {
 	border-style: solid none;
 	font-weight: bold;
@@ -211,23 +230,23 @@ ul.menu-vertical li.has-dropdown.open>ul.menu-vertical {
 	background-color: #a47800;
 	color: #000000;
 	padding: 0 0.25em;
-	margin-bottom: 0.25em;
+	margin: 1em 0;
 }
 .goto-top, .goto-top-2 {
 	display: none;
-	font-size: 0.667em;
+	float: right;
 }
 .to-contents~.block .goto-top, .to-contents~.block .goto-top-2 {
 	display: inline-block;
 }
 .goto-top {
-	float: right;
+	font-size: 0.667em;
 }
 .level-label {
 	display: inline-block;
 	float: right;
 }
-.trait {
+.trait, trt {
 	display: inline-block;
 	padding: 0.25em;
 	border-style: solid;
@@ -235,10 +254,10 @@ ul.menu-vertical li.has-dropdown.open>ul.menu-vertical {
 	border-color: #cca94a;
 	background-color: #482818;
 }
-.trait.trait-blue {
+.trait.trait-blue, trt.trait-blue {
 	background-color: #140050;
 }
-.trait.trait-orange {
+.trait.trait-orange, trt.trait-orange {
 	background-color: #803000;
 }
 .action-img {

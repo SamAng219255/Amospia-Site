@@ -1,4 +1,4 @@
-<?php require '../pageStart.php'; ?>
+<?php require '../../pageStart.php'; ?>
 <title>Redeemed</title>
 <?php
 	raceBlockAuto(

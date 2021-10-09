@@ -1,6 +1,6 @@
 <?php
 	if(!function_exists("table")) {
-		require 'quick_paste_lib.php';
+		require '../quick_paste_lib.php';
 	}
 
 	$deitiesObj=json_decode(file_get_contents('deities.json'), true);

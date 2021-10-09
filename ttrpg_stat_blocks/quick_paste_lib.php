@@ -27,6 +27,12 @@
 		$str=str_replace('/1l/', '<img src="https://2e.aonprd.com/Images/Actions/OneAction_I.png" alt="One Action" class="action-img">', $str);
 		$str=str_replace('/2l/', '<img src="https://2e.aonprd.com/Images/Actions/TwoActions_I.png" alt="Two Actions" class="action-img">', $str);
 		$str=str_replace('/3l/', '<img src="https://2e.aonprd.com/Images/Actions/ThreeActions_I.png" alt="Three Actions" class="action-img">', $str);
+		$str=str_replace('/qq', '</span>', $str);
+		$str=str_replace('qq/', '<span class="trait">', $str);
+		$str=str_replace('/qb', '</span>', $str);
+		$str=str_replace('qb/', '<span class="trait trait-blue">', $str);
+		$str=str_replace('/qo', '</span>', $str);
+		$str=str_replace('qo/', '<span class="trait trait-orange">', $str);
 		return $str;
 	}
 	function quick_array($subject) {
@@ -50,8 +56,21 @@
 			if(/*str_starts_with($arr[$i],'/rr/')*/substr($arr[$i], 0, 4)=='/rr/') {
 				$arr[$i]='<span class="reduced">'.substr($arr[$i],4).'</span>';
 			}
+			if(substr($arr[$i], 0, 4)=='/tt/') {
+				$arr[$i]='<span class="subtitle">'.substr($arr[$i],4).'</span>';
+			}
 		}
 		return quick_format($arr);
+	}
+	function quick_array_explode($subject, $delimiter) {
+		$arr=[];
+		if(is_array($subject)) {
+			$arr=$subject;
+		}
+		else {
+			$arr=explode($delimiter,$subject);
+		}
+		return quick_array($arr);
 	}
 	function block($name="", $type="", $texts=[], $spaced=false, $sections=[]) {
 		echo '<div class="block '.$type.'" id="block-'.str_replace(' ', '-', $name).'">';
@@ -73,7 +92,7 @@
 		echo '</div>';
 	}
 	function block2($name="", $type="", $level=false, $traits=[], $texts=[], $spaced=false, $sections=[]) {
-		echo '<div class="block '.$type.'" id="block-'.str_replace(' ', '-', $name).'">';
+		echo '<div class="block block2 '.$type.'" id="block-'.str_replace(' ', '-', $name).'">';
 		echo '<div class="block-title">'.$name.'&nbsp;<span class="level-label">'.$type.' '.($level===false?'':$level).'</span></div>';
 		echo '<a href="#" class="goto-top-2">Back to Top</a>';
 		echo '<div class="traits">';
@@ -394,6 +413,105 @@
 			$activate,
 			$description,
 			$variations
+		);
+	}
+	function race2eBlock($name, $typeTrait, $loreDesc, $youmight, $othersprobably, $physDesc, $society, $alignRelig, $adventurers, $hitpoints, $size, $speed, $boosts, $flaws, $languages, $racetraits) {
+		$opinions=[];
+		if(count($youmight)>0) {
+			$youmight_text='<ul>';
+			foreach ($youmight as $li) {
+				$youmight_text.="<li>{$li}</li>";
+			}
+			$youmight_text.='</ul>';
+			array_push($opinions, ["title" => "You Might...","spaced" => false,"texts" => [$youmight_text]]);
+		}
+		if(count($othersprobably)>0) {
+			$othersprobably_text='<ul>';
+			foreach ($othersprobably as $li) {
+				$othersprobably_text.="<li>{$li}</li>";
+			}
+			$othersprobably_text.='</ul>';
+			array_push($opinions, ["title" => "Others Probably...","spaced" => false,"texts" => [$othersprobably_text]]);
+		}
+		block2(
+			$name,
+			'Race',
+			false,
+			[$name, $typeTrait],
+			[
+				[
+					$loreDesc
+				]
+			],
+			false,
+			array_merge(
+				$opinions,
+				[
+					[
+						"title" => "Physical Description",
+						"spaced" => false,
+						"texts" => quick_array($physDesc)
+					],
+					[
+						"title" => "Society",
+						"spaced" => false,
+						"texts" => quick_array($society)
+					],
+					[
+						"title" => "Alignment and Religion",
+						"spaced" => false,
+						"texts" => quick_array($alignRelig)
+					],
+					[
+						"title" => "Adventurers",
+						"spaced" => false,
+						"texts" => quick_array($adventurers)
+					]
+				]
+			)
+		);
+		block2(
+			$name.' Mechanics',
+			'',
+			false,
+			[],
+			[],
+			false,
+			array_merge(
+				[
+					[
+						"title" => "Hit Points",
+						"spaced" => false,
+						"texts" => quick_array($hitpoints)
+					],
+					[
+						"title" => "Size",
+						"spaced" => false,
+						"texts" => quick_array($size)
+					],
+					[
+						"title" => "Speed",
+						"spaced" => false,
+						"texts" => quick_array($speed)
+					],
+					[
+						"title" => "Ability Boosts",
+						"spaced" => false,
+						"texts" => quick_array_explode($boosts, ', ')
+					],
+					[
+						"title" => "Ability Flaw(s)",
+						"spaced" => false,
+						"texts" => quick_array_explode($flaws, ', ')
+					],
+					[
+						"title" => "Languages",
+						"spaced" => false,
+						"texts" => quick_array($languages)
+					]
+				],
+				$racetraits
+			)
 		);
 	}
 	function sTable($headers, $rows, $horizontal=true) {
