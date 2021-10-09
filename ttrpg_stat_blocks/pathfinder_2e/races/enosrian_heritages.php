@@ -44,7 +44,7 @@
 				'texts' => [
 					'Most Thyllkthoron have adapted quite well to their home in the material plane and exhibit less demonic qualities.',
 					'A Native Thyllkthoron will usually have a one or two tiny horns if any or more rarely a long sinuous tail.',
-					'You become trained in Diplomacy (or another skill if you were already trained in Diplomacy), and you gain the No Cause For Alarm feat.'
+					'You become trained in Society (or another skill if you were already trained in Society), and you learn any two common languages you do not already know.'
 				]
 			]
 		]
