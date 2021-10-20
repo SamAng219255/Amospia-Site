@@ -350,6 +350,48 @@
 				"enosrian",
 				"enosrian_feats"
 			]
+		},
+		"focus_fundamental": {
+			"display_name": "Casting Channel Fundamental Runes",
+			"file_name": "focus_fundamental.php",
+			"directory": "pathfinder_2e/equipment/runes/",
+			"sort_path": [
+				"pathfinder_2e",
+				"equipment",
+				"runes"
+			]
+		},
+		"focus_property": {
+			"display_name": "Casting Channel Property Runes",
+			"file_name": "focus_property.php",
+			"directory": "pathfinder_2e/equipment/runes/",
+			"sort_path": [
+				"pathfinder_2e",
+				"equipment",
+				"runes"
+			]
+		},
+		"focus_potency": {
+			"display_name": "Casting Potency Rune",
+			"file_name": "focus_potency.php",
+			"directory": "pathfinder_2e/equipment/runes/",
+			"sort_path": [
+				"pathfinder_2e",
+				"equipment",
+				"runes",
+				"focus_fundamental"
+			]
+		},
+		"focus_fund": {
+			"display_name": "Heightening Rune",
+			"file_name": "focus_fund.php",
+			"directory": "pathfinder_2e/equipment/runes/",
+			"sort_path": [
+				"pathfinder_2e",
+				"equipment",
+				"runes",
+				"focus_fundamental"
+			]
 		}
 	},
 	"sort_tree": [
@@ -636,29 +678,29 @@
 						},
 						{
 							"name": "runes",
-							"display_name": "Runes (WIP)",
+							"display_name": "Runes",
 							"type": "branch",
 							"nodes": [
 								{
 									"name": "focus_fundamental",
-									"display_name": "Casting Focus Fundamental Runes",
+									"display_name": "Casting Channel Fundamental Runes",
 									"type": "flower",
 									"nodes": [
 										{
 											"name": "focus_potency",
-											"display_name": "Casting Focus Potency",
+											"display_name": "Casting Potency Rune",
 											"type": "petal"
 										},
 										{
 											"name": "focus_fund",
-											"display_name": "...",
+											"display_name": "Heightening Rune",
 											"type": "petal"
 										}
 									]
 								},
 								{
 									"name": "focus_property",
-									"display_name": "Casting Focus Property Runes",
+									"display_name": "Casting Channel Property Runes",
 									"type": "flower",
 									"nodes": [
 

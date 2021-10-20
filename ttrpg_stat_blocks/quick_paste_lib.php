@@ -146,7 +146,7 @@
 			}
 			$sectionTextCount=count($sections[$i]['texts']);
 			foreach ($sections[$i]['texts'] as $text) {
-				echo '<p'.($sections[$i]['spaced'] ? ' class="spaced"' : '').'>'.$text.'</p>';
+				echo '<p'.($sections[$i]['spaced'] ? ' class="spaced"' : '').'>'.quick_format($text).'</p>';
 			}
 			echo '</div>';
 		}

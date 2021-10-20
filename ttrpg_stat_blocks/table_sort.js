@@ -8,8 +8,8 @@ sort=false;
 sortColumn=0;
 
 function comp(a,b) {
-	let numA=parseInt(a);
-	let numB=parseInt(b);
+	let numA=parseInt(a.replaceAll(',',''));
+	let numB=parseInt(b.replaceAll(',',''));
 	if(isNaN(numA) || isNaN(numB))
 		return a.localeCompare(b);
 	return Math.sign(numA-numB);
