@@ -24,7 +24,7 @@
 		false,
 		false,
 		[
-			'Magical enhancements make your spells strike true. the DCs of spells cast with this channel gain a +1 item bonus, and the channel can be etched with one property rune.',
+			'Magical enhancements make your spells strike true. The DCs of spells cast with this channel gain a +1 item bonus, and the channel can be etched with one property rune.',
 			'You can upgrade the ii/casting potency/ii rune already etched on a channel to a stronger version, increasing the values of the existing rune to those of the new rune. You must have the formula of the stronger rune to do so, and the Price of the upgrade is the difference between the two runes’ Prices.'
 		],
 		[

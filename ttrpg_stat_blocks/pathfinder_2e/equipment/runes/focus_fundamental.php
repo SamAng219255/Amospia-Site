@@ -42,42 +42,42 @@
 		],
 		[
 			[
-				'Casting Potency (+1)',
+				'<a href="focus_potency.php">Casting Potency (+1)</a>',
 				'Common',
 				'2',
 				'35 gp',
 				'Grants a +1 bonus to spell DCs'
 			],
 			[
-				'Heightening',
+				'<a href="focus_fund.php">Heightening</a>',
 				'Common',
 				'5',
 				'125 gp',
 				'Heightens spells up to a maximum of 1 less than the highest level you can cast.'
 			],
 			[
-				'Casting Potency (+2)',
+				'<a href="focus_potency.php">Casting Potency (+2)</a>',
 				'Common',
 				'9',
 				'575 gp',
 				'Grants a +1 bonus to spell DCs'
 			],
 			[
-				'Heightening (Greater)',
+				'<a href="focus_fund.php">Heightening (Greater)</a>',
 				'Common',
 				'12',
 				'1,425 gp',
 				'Heightens spells up to a maximum of 1 less than the highest level you can cast.'
 			],
 			[
-				'Casting Potency (+3)',
+				'<a href="focus_potency.php">Casting Potency (+3)</a>',
 				'Common',
 				'16',
 				'8,575 gp',
 				'Grants a +1 bonus to spell DCs'
 			],
 			[
-				'Heightening (Major)',
+				'<a href="focus_fund.php">Heightening (Major)</a>',
 				'Common',
 				'20',
 				'61,425 gp',
