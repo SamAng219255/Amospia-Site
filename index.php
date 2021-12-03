@@ -21,6 +21,7 @@
 					<a href="./misc/Alchahemistry/"><div>Alchahemistry (WIP)</div></a>
 				</div>
 			</div>
+			<div class="navButton"><a href="./ttrpg_stat_blocks/">TTRPG Stats</a></div>
 			<div class="navButton"><a href="./MCserver/">Minecraft</a></div>
 			<div class="navButton">
 				<a href="?target=.%2Fgames%2F">Games</a>
@@ -50,6 +51,7 @@
 				<a onclick="showMenu('games')">Games</a>
 			</div>
 			<div class="navButton"><a href="./MCserver/">Minecraft</a></div>
+			<div class="navButton"><a href="./ttrpg_stat_blocks/">TTRPG Stats</a></div>
 			<div class="navButton">
 				<a onclick="showMenu('misc')">Misc.</a>
 			</div>

@@ -1,9 +1,41 @@
 <?php
 	$dashes=['-','–','—'];
+	function intPow($base,$exp) {
+		$res=1;
+		if($exp>0) {
+			for($i=0; $i<$exp; $i++) {
+				$res*=$base;
+			}
+		}
+		else {
+			for($i=0; $i>$exp; $i--) {
+				$res/=$base;
+			}
+		}
+		return $res;
+	}
 	function array_append(&$arr,$elements) {
 		foreach($elements as $element) {
 			array_push($arr,$element);
 		}
+	}
+	function addSign($x) {
+		return ($x<0?''.$x:'+'.$x);
+	}
+	function ordinalSuffix($x) {
+		if($x==0)
+			return '';
+		$x1=$x%100;
+		if($x1>10 && $x1<20)
+			return 'th';
+		$x2=$x1%10;
+		if($x2==1)
+			return 'st';
+		if($x2==2)
+			return 'nd';
+		if($x2==3)
+			return 'rd';
+		return 'th';
 	}
 	function quick_format($subject) {
 		$str=$subject;
@@ -72,7 +104,7 @@
 		}
 		return quick_array($arr);
 	}
-	function block($name="", $type="", $texts=[], $spaced=false, $sections=[]) {
+	function block($name='', $type='', $texts=[], $spaced=false, $sections=[]) {
 		echo '<div class="block '.$type.'" id="block-'.str_replace(' ', '-', $name).'">';
 		echo '<div class="block-title">'.$name.'<a href="#" class="goto-top">Back to Top</a></div>';
 		$textCount=count($texts);
@@ -91,7 +123,7 @@
 		}
 		echo '</div>';
 	}
-	function block2($name="", $type="", $level=false, $traits=[], $texts=[], $spaced=false, $sections=[]) {
+	function block2($name='', $type='', $level=false, $traits=[], $texts=[], $spaced=false, $sections=[]) {
 		echo '<div class="block block2 '.$type.'" id="block-'.str_replace(' ', '-', $name).'">';
 		echo '<div class="block-title">'.$name.'&nbsp;<span class="level-label">'.$type.' '.($level===false?'':$level).'</span></div>';
 		echo '<a href="#" class="goto-top-2">Back to Top</a>';
@@ -247,7 +279,7 @@
 		array_append($description, quick_array("Adventurers: ".$adventurers));
 		array_append($description, quick_array("Male Names: ".$maleNames));
 		array_append($description, quick_array("Female Names: ".$femaleNames));
-		$statStr="";
+		$statStr='';
 		if(($stat=(isset($stats["str"]) ? $stats["str"] : (isset($stats[0]) ? $stats[0] : 0)))!=0) {
 			$statStr.=sprintf("%+d Strength, ",$stat);
 		}
@@ -327,6 +359,551 @@
 			feat($feat['name'],$feat['desc'],$feat['benefit'],$race.', '.$feat['prereq'],$feat['special']);
 		}
 		echo '</div></div>';
+	}
+	function monsterBlockAuto($name='',$name2=false,$lore='',$cr=1,$mr=false,$customXp=false,$race='',$classes=[],$alignment="N",$size="Medium",$type='',$initMod=0,$mythInit=false,$senses='',$percMod=0,$aura='',$ac=[],$hdp=[1,8],$saves=[['good'=>false,'mod'=>0],['good'=>false,'mod'=>0],['good'=>false,'mod'=>0]],$defAb='',$weak='',$speed=30,$attacks=[],$reach=5,$specAtt='',$spelllike=false,$spellcast=[],$spellnote='',$stats=[],$bab=1,$cmbSpec=0,$cmdSpec=0,$feats='',$skills='',$lang='',$sq='',$enviro='',$organiz='',$treas='',$specAb=[],$desc='') {
+		/*echo '<pre>name ';
+		var_dump($name);
+		echo '<br>name2 ';
+		var_dump($name2);
+		echo '<br>lore ';
+		var_dump($lore);
+		echo '<br>cr ';
+		var_dump($cr);
+		echo '<br>mr ';
+		var_dump($mr);
+		echo '<br>customXp ';
+		var_dump($customXp);
+		echo '<br>race ';
+		var_dump($race);
+		echo '<br>classes ';
+		var_dump($classes);
+		echo '<br>alignment ';
+		var_dump($alignment);
+		echo '<br>size ';
+		var_dump($size);
+		echo '<br>type ';
+		var_dump($type);
+		echo '<br>initMod ';
+		var_dump($initMod);
+		echo '<br>mythInit ';
+		var_dump($mythInit);
+		echo '<br>senses ';
+		var_dump($senses);
+		echo '<br>percMod ';
+		var_dump($percMod);
+		echo '<br>aura ';
+		var_dump($aura);
+		echo '<br>ac ';
+		var_dump($ac);
+		echo '<br>hdp ';
+		var_dump($hdp);
+		echo '<br>saves ';
+		var_dump($saves);
+		echo '<br>defAb ';
+		var_dump($defAb);
+		echo '<br>weak ';
+		var_dump($weak);
+		echo '<br>speed ';
+		var_dump($speed);
+		echo '<br>attacks ';
+		var_dump($attacks);
+		echo '<br>reach ';
+		var_dump($reach);
+		echo '<br>specAtt ';
+		var_dump($specAtt);
+		echo '<br>spelllike ';
+		var_dump($spelllike);
+		echo '<br>spellcast ';
+		var_dump($spellcast);
+		echo '<br>spellnote ';
+		var_dump($spellnote);
+		echo '<br>stats ';
+		var_dump($stats);
+		echo '<br>bab ';
+		var_dump($bab);
+		echo '<br>cmbSpec ';
+		var_dump($cmbSpec);
+		echo '<br>cmdSpec ';
+		var_dump($cmdSpec);
+		echo '<br>feats ';
+		var_dump($feats);
+		echo '<br>skills ';
+		var_dump($skills);
+		echo '<br>lang ';
+		var_dump($lang);
+		echo '<br>sq ';
+		var_dump($sq);
+		echo '<br>enviro ';
+		var_dump($enviro);
+		echo '<br>organiz ';
+		var_dump($organiz);
+		echo '<br>treas ';
+		var_dump($treas);
+		echo '<br>specAb ';
+		var_dump($specAb);
+		echo '<br>desc ';
+		var_dump($desc);
+		echo '</pre>';*/
+		$sizes=['Fine'=>8,'Diminutive'=>4,'Tiny'=>2,'Small'=>1,'Medium'=>0,'Large'=>-1,'Huge'=>-2,'Gargantuan'=>-4,'Colossal'=>-8];
+		$spaces=['Fine'=>'1/2','Diminutive'=>'1','Tiny'=>'2-1/2','Small'=>'5','Medium'=>'5','Large'=>'10','Huge'=>'15','Gargantuan'=>'20','Colossal'=>'30'];
+		$sizeMod=$sizes[$size];
+		$subOneXp=['1/2'=>200,'1/3'=>135,'1/4'=>100,'1/6'=>65,'1/8'=>50];
+		$xp=($customXp?$customXp:(isset($subOneXp[$cr])?$subOneXp[$cr]:($cr%2==0?400*intPow(2,$cr/2):600*intPow(2,($cr-1)/2))));
+		$stats['non']=10;
+		$statMods=['non' => 0];
+		if(!isset($stats['str']))
+			$stats['str']=10;
+		if(!isset($stats['dex']))
+			$stats['dex']=10;
+		if(!isset($stats['con']))
+			$stats['con']=10;
+		if(!isset($stats['int']))
+			$stats['int']=10;
+		if(!isset($stats['wis']))
+			$stats['wis']=10;
+		if(!isset($stats['cha']))
+			$stats['cha']=10;
+		foreach ($stats as $stat => $val) {
+			if(is_string($val)) {
+				$statMods[$stat]=floor($stats[$val]/2)-5;
+				$stats[$stat]=0;
+			}
+			else
+				$statMods[$stat]=floor($val/2)-5;
+		}
+		$perc=$statMods['wis']+$percMod;
+		$acVals=[
+			'ac' => 10,
+			'touch' => 10,
+			'flat' => 10
+		];
+		$acVals['ac']+=$statMods['dex'];
+		$acVals['touch']+=$statMods['dex'];
+		$acVals['flat']=min($acVals['ac'],$acVals['flat']);
+		$no_touch=['armor','shield','natural'];
+		$no_flat=['dodge'];
+		$acModStr='(';
+		foreach ($ac as $modName => $val) {
+			$acModStr.=sprintf('%+d %s, ',$val,$modName);
+			$acVals['ac']+=$val;
+			if(!in_array($modName, $no_touch))
+				$acVals['touch']+=$val;
+			if(!in_array($modName, $no_flat))
+				$acVals['flat']+=$val;
+		}
+		$acModStr.=sprintf('%+d size, ',$sizeMod);
+		$acVals['ac']+=$sizeMod;
+		$acVals['touch']+=$sizeMod;
+		$acVals['flat']+=$sizeMod;
+		$acModStr.=sprintf('%+d Dex)',$statMods['dex']);
+		$babNum=floor($hdp[0]*$bab);
+		$cmbCaseStr='';
+		$cmbStr='';
+		$cmbVal=0;
+		if(is_string($cmbSpec)) {
+			$cmbStr=$cmbSpec;
+			$cmbCaseStr='';
+		}
+		else {
+			$cmbVal=$babNum+$statMods['str']-$sizeMod;
+			if(is_numeric($cmbSpec)) {
+				$cmbVal+=$cmbSpec;
+			}
+			else {
+				if(isset($cmbSpec['base']))
+					$cmbVal+=$cmbSpec['base'];
+				$cmbCaseStr=' (';
+				$first=true;
+				foreach ($cmbSpec as $case => $mod) {
+					if($case=='base')
+						continue;
+					if($case=='notes')
+						continue;
+					if($first) {
+						$first=false;
+					}
+					else {
+						$cmbCaseStr.=', ';
+					}
+					$cmbCaseStr.=sprintf('%+d %s',$cmbVal+$mod,$case);
+				}
+				if(isset($cmbSpec['notes']))
+					$cmbCaseStr.=($cmbCaseStr!=' ('?', ':'').$cmbSpec['notes'];
+				$cmbCaseStr.=')';
+			}
+			$cmbStr=addSign($cmbVal);
+		}
+		$cmdCaseStr='';
+		$cmdStr='';
+		$cmdVal=0;
+		if(is_string($cmdSpec)) {
+			$cmdStr=$cmdSpec;
+			$cmdCaseStr='';
+		}
+		else {
+			$cmdVal=10+$babNum+$statMods['str']+$statMods['dex']-$sizeMod;
+			if(is_numeric($cmdSpec)) {
+				$cmdVal+=$cmdSpec;
+			}
+			else {
+				if(isset($cmdSpec['base']))
+					$cmdVal+=$cmdSpec['base'];
+				$cmdCaseStr=' (';
+				$first=true;
+				foreach ($cmdSpec as $case => $mod) {
+					if($case=='base')
+						continue;
+					if($case=='notes')
+						continue;
+					if($first) {
+						$first=false;
+					}
+					else {
+						$cmdCaseStr.=', ';
+					}
+					$cmdCaseStr.=sprintf('%d vs. %s',$cmdVal+$mod,$case);
+				}
+				if(isset($cmdSpec['notes']))
+					$cmdCaseStr.=($cmdCaseStr!=' ('?', ':'').$cmdSpec['notes'];
+				$cmdCaseStr.=')';
+			}
+			$cmdStr=$cmdVal;
+		}
+		$sections=[
+			[
+				'title' => 'Defense',
+				'spaced' => false,
+				'texts' => quick_array([
+					"bb/AC/bb {$acVals['ac']}, bb/touch/bb {$acVals['touch']}, bb/flat-footed/bb {$acVals['flat']} {$acModStr}",
+					sprintf("bb/hp/bb %d (%dd%d%s)",
+						floor($hdp[0]*($hdp[1]+1)/2)+($hdp[2]+$statMods[isset($hdp['stat'])?$hdp['stat']:'con']*$hdp[0]),
+						$hdp[0],
+						$hdp[1],
+						sprintf('%+d',$hdp[2]+$statMods[isset($hdp['stat'])?$hdp['stat']:'con']*$hdp[0])
+					).(isset($hdp[3])?$hdp[3]:''),
+					sprintf('bb/Fort/bb %+d, bb/Ref/bb %+d, bb/Will/bb %+d',
+						$statMods['con'] + $saves[0]['mod'] + ($saves[0]['good'] ? floor($hdp[0]/2)+2 : floor($hdp[0]/3)),
+						$statMods['dex'] + $saves[1]['mod'] + ($saves[1]['good'] ? floor($hdp[0]/2)+2 : floor($hdp[0]/3)),
+						$statMods['wis'] + $saves[2]['mod'] + ($saves[2]['good'] ? floor($hdp[0]/2)+2 : floor($hdp[0]/3))
+					)
+				])
+			],
+			[
+				'title' => 'Offense',
+				'spaced' => false,
+				'texts' => quick_array([
+					'bb/Speed/bb '.(is_numeric($speed)?$speed.' ft.':$speed),
+					"bb/Space/bb {$spaces[$size]} ft., bb/Reach/bb {$reach} ft."
+				])
+			],
+			[
+				'title' => 'Statistics',
+				'spaced' => false,
+				'texts' => quick_array([
+					sprintf('bb/Str/bb %s, bb/Dex/bb %s, bb/Con/bb %s, bb/Int/bb %s, bb/Wis/bb %s, bb/Cha/bb %s',
+						$stats['str']==0?'—':$stats['str'],
+						$stats['dex']==0?'—':$stats['dex'],
+						$stats['con']==0?'—':$stats['con'],
+						$stats['int']==0?'—':$stats['int'],
+						$stats['wis']==0?'—':$stats['wis'],
+						$stats['cha']==0?'—':$stats['cha']
+					),
+					sprintf('bb/Base Atk/bb %+d; bb/CMB/bb %s%s; bb/CMD/bb %s%s',
+						$babNum,
+						$cmbStr,
+						$cmbCaseStr,
+						$cmdStr,
+						$cmdCaseStr
+					)
+				])
+			],
+			[
+				'title' => 'Ecology',
+				'spaced' => false,
+				'texts' => quick_array([
+					'bb/Environment/bb '.$enviro,
+					'bb/Organization/bb '.$organiz,
+					'bb/Treasure/bb '.$treas
+				])
+			]
+		];
+		if($defAb!='')
+			array_push($sections[0]['texts'], quick_format('bb/Defensive Abilities/bb '.$defAb));
+		if($weak!='')
+			array_push($sections[0]['texts'], quick_format('bb/Weaknesses/bb '.$weak));
+		$spliceInd=1;
+		foreach ($attacks as $attackSet) {
+			$attackSetStr='bb/'.$attackSet['type'].'/bb ';
+			$first=true;
+			foreach ($attackSet['list'] as $attack) {
+				if($first) {
+					$first=false;
+				}
+				else {
+					$attackSetStr.=', ';
+				}
+				if(isset($attack['auto']) && $attack['auto']) {
+					$attackSetStr.=sprintf('%s (%s)',
+						$attack['name'],
+						$attack['damage']
+					);
+				}
+				else {
+					$attackSetStr.=sprintf('%s %+d (%s)',
+						$attack['name'],
+						$attack['mod']+$statMods[$attack['stat']]+$babNum+$sizeMod,
+						$attack['damage']
+					);
+				}
+			}
+			array_splice($sections[1]['texts'],$spliceInd,0,[quick_format($attackSetStr)]);
+			$spliceInd++;
+		}
+		if($specAtt!='')
+			array_push($sections[1]['texts'], quick_format('bb/Special Attacks/bb '.$specAtt));
+		if($spelllike) {
+			$lines=[sprintf('Spell-Like Abilities (CL %d%s; concentration %+d)',
+				$spelllike['level'],
+				ordinalSuffix($spelllike['level']),
+				$spelllike['level']+$statMods['cha']+$spelllike['conc']
+			)];
+			foreach ($spelllike['spells'] as $spells) {
+				$spellLine=sprintf('/mm/%s—',$spells['perday'].(is_string($spells['perday'])?'':'/day'));
+				$first=true;
+				foreach ($spells['list'] as $spell) {
+					if($first) {
+						$first=false;
+					}
+					else {
+						$spellLine.=', ';
+					}
+					if(is_string($spell))
+						$spellLine.='ii/'.$spell.'/ii';
+					else {
+						$spellLine.='ii/'.$spell['name'].'/ii';
+						if(isset($spell['domain']) && $spell['domain'])
+							$spellLine.='ss/D/ss';
+						if(isset($spell['dc']) && $spell['dc'])
+							$spellLine.=sprintf(' (DC %d)',10+$spell['level']+$statMods['cha']+(isset($spell['dcMod'])?$spell['dcMod']:0));
+						if(isset($spell['note']))
+							$spellLine.=sprintf(' (%s)',$spell['note']);
+					}
+				}
+				array_push($lines, $spellLine);
+			}
+			$sections[1]['texts']=array_merge($sections[1]['texts'],quick_array($lines));
+		}
+		if(count($spellcast)>0) {
+			foreach ($spellcast as $class) {
+				$lines=[sprintf('%s Spells %s (CL %d%s; concentration %+d)',
+					$class['class'],
+					$class['prep'] ? 'Prepared' : 'Known',
+					$class['level'],
+					ordinalSuffix($class['level']),
+					$class['level']+$statMods[$class['stat']]+$class['conc']
+				)];
+				for($sl=10; $sl>=0; $sl--) {
+					if(!isset($class['spells'][$sl]))
+						continue;
+					$spells=$class['spells'][$sl];
+					$spellLine=sprintf('/mm/%d%s%s—',
+						$sl,
+						ordinalSuffix($sl),
+						isset($spells['perday'])?sprintf(' (%s)',$spells['perday'].(is_string($spells['perday'])?'':'/day')):''
+					);
+					$first=true;
+					foreach ($spells['list'] as $spell) {
+						if($first) {
+							$first=false;
+						}
+						else {
+							$spellLine.=', ';
+						}
+						if(is_string($spell))
+							$spellLine.='ii/'.$spell.'/ii';
+						else {
+							$spellLine.='ii/'.$spell['name'].'/ii';
+							if(isset($spell['domain']) && $spell['domain'])
+								$spellLine.='ss/D/ss';
+							if(isset($spell['dc']) && $spell['dc'])
+								$spellLine.=sprintf(' (DC %d)',10+$sl+$statMods[$class['stat']]+(isset($spell['dcMod'])?$spell['dcMod']:0));
+							if(isset($spell['note']))
+								$spellLine.=sprintf(' (%s)',$spell['note']);
+						}
+					}
+					array_push($lines, $spellLine);
+				}
+				$sections[1]['texts']=array_merge($sections[1]['texts'],quick_array($lines));
+			}
+		}
+		if($spellnote!='')
+			array_push($sections[1]['texts'], quick_format($spellnote));
+		if(is_string($feats)) {
+			if($feats!='')
+				array_push($sections[2]['texts'], quick_format('Feats '.$feats));
+		}
+		else {
+			if(count($feats)>0) {
+				$featStr='bb/Feats/bb ';
+				$first=true;
+				foreach ($feats as $key => $feat) {
+					if($key==='note')
+						continue;
+					if($first) {
+						$first=false;
+					}
+					else {
+						$featStr.=', ';
+					}
+					$featStr.=$feat;
+				}
+				array_push($sections[2]['texts'], quick_format($featStr));
+				if(isset($feats['note']))
+					array_push($sections[2]['texts'], quick_array($feats['note'])[0]);
+			}
+		}
+		if(is_string($skills)) {
+			if($skills!='')
+				array_push($sections[2]['texts'], quick_format('Skills '.$skills));
+		}
+		else {
+			if(count($skills)>0) {
+				$skillStr='bb/Skills/bb ';
+				$first=true;
+				foreach ($skills as $skill) {
+					if($first) {
+						$first=false;
+					}
+					else {
+						$skillStr.=', ';
+					}
+					$bonus=0;
+					$noteStr='';
+					if(is_numeric($skill['bonus'])) {
+						$bonus=$statMods[$skill['stat']]+$skill['bonus'];
+					}
+					else {
+						if(isset($skill['bonus']['base']))
+							$bonus=$statMods[$skill['stat']]+$skill['bonus']['base'];
+						foreach ($skill['bonus'] as $case => $val) {
+							if($case==='base')
+								continue;
+							if($case==='note')
+								continue;
+							if($noteStr!='')
+								$noteStr.=', ';
+							$noteStr.=sprintf('%+d %s',$bonus+$val,$case);
+						}
+						if(isset($skill['bonus']['note'])) {
+							if($noteStr!='')
+								$noteStr.=', ';
+							$noteStr.=$skill['bonus']['note'];
+						}
+					}
+					if($skill['skill']=='Perception')
+						$perc=$bonus;
+					if($noteStr==='')
+						$skillStr.=sprintf('%s %+d',$skill['skill'],$bonus);
+					else
+						$skillStr.=sprintf('%s %+d (%s)',$skill['skill'],$bonus,$noteStr);
+					if(isset($skill['note']))
+						$skillStr.=$skill['note'];
+				}
+				array_push($sections[2]['texts'], quick_format($skillStr));
+			}
+		}
+		if(is_string($lang)) {
+			if($lang!='')
+				array_push($sections[2]['texts'], quick_format('Languages '.$lang));
+		}
+		else {
+			if(count($lang)>0) {
+				$langStr='bb/Languages/bb ';
+				$first=true;
+				foreach ($lang as $languge) {
+					if($first) {
+						$first=false;
+					}
+					else {
+						$langStr.=', ';
+					}
+					$langStr.=$languge;
+				}
+				array_push($sections[2]['texts'], quick_format($langStr));
+			}
+		}
+		if(is_string($sq)) {
+			if($sq!='')
+				array_push($sections[2]['texts'], quick_format('bb/SQ/bb '.$sq));
+		}
+		else {
+			if(count($sq)>0) {
+				$sqStr='bb/SQ/bb ';
+				$first=true;
+				foreach ($sq as $languge) {
+					if($first) {
+						$first=false;
+					}
+					else {
+						$sqStr.=', ';
+					}
+					$sqStr.=$languge;
+				}
+				array_push($sections[2]['texts'], quick_format($sqStr));
+			}
+		}
+		if(count($specAb)>0) {
+			$section=[
+				'title' => 'Special Abilities',
+				'spaced' => true,
+				'texts' => []
+			];
+			foreach ($specAb as $specAbility) {
+				$specAbilityLines=quick_array($specAbility['desc']);
+				array_push($section['texts'], quick_format("bb/{$specAbility['name']}/bb ({$specAbility['type']}) {$specAbilityLines[0]}"));
+				$first=true;
+				foreach ($specAbilityLines as $specAbilityLine) {
+					if($first)
+						$first=false;
+					else
+						array_push($section['texts'], $specAbilityLine);
+				}
+			}
+			array_push($sections, $section);
+		}
+		if($desc!='')
+			array_push($sections, [
+				'title' => 'Description',
+				'spaced' => false,
+				'texts' => quick_array($desc)
+			]);
+		$vitals=[
+			'bb/XP/bb '.number_format($xp),
+			"{$alignment} {$size} {$type}",
+			sprintf('bb/Init/bb %+d',$statMods['dex']+$initMod).($mythInit?' ss/M/ss':'').($senses!=''?'; bb/Senses/bb '.$senses:'').sprintf('; bb/Perception/bb %+d',$perc)
+		];
+		if(count($classes)>0 || $race!='') {
+			$raceClassLine=$race==''?'':$race.' ';
+			$first=true;
+			foreach ($classes as $class => $level) {
+				if($first)
+					$first=false;
+				else
+					$raceClassLine.=', ';
+				$raceClassLine.=$class.' '.$level;
+			}
+			array_splice($vitals,1,0,[$raceClassLine]);
+		}
+		if($aura!='')
+			array_push($vitals,'bb/Aura/bb '.$aura);
+		block($name,'monster-header',[quick_format('ii/'.$lore.'/ii')]);
+		block(
+			quick_format(($name2?$name2:$name).' bb/CR '.$cr.($mr?'/MR '.$mr:'').'/bb'),
+			'monster',
+			quick_array($vitals),
+			false,
+			$sections
+		);
 	}
 	function item2eBlock($name, $level=false, $rarity="Common", $traits=[], $price=false, $hands=false, $usage=false, $bulk=0, $activate=false, $description=[], $variations=[]) {
 		$compTraits=quick_format($traits);
@@ -514,8 +1091,8 @@
 			)
 		);
 	}
-	function sTable($headers, $rows, $horizontal=true) {
-		$str='<table>';
+	function sTable($headers, $rows, $horizontal=true, $expand=true) {
+		$str='<table'.($expand?' class="expand"':'').'>';
 		if($horizontal) {
 			$headerCount=count($headers);
 			$str .= '<tr>';
@@ -528,7 +1105,12 @@
 				$colCount=count($rows[$i]);
 				$str .= '<tr>';
 				for($j=0; $j<$colCount; $j++) {
-					$str .= "<td>{$rows[$i][$j]}</td>";
+					if($j==0 && isset($rows[$i]['link'])) {
+						$str .= "<td><a href=\"{$rows[$i]['link']}\">{$rows[$i][$j]}</a></td>";
+						$colCount--;
+					}
+					else
+						$str .= "<td>{$rows[$i][$j]}</td>";
 				}
 				$str .= '</tr>';
 			}
@@ -545,7 +1127,12 @@
 				if($i<$rowCount) {
 					$colCount=count($rows[$i]);
 					for($j=0; $j<$colCount; $j++) {
-						$str .= "<td>{$rows[$i][$j]}</td>";
+						if($j==0 && isset($rows[$i]['link'])) {
+							$str .= "<td><a href=\"{$rows[$i]['link']}\">{$rows[$i][$j]}</a></td>";
+							$colCount--;
+						}
+						else
+							$str .= "<td>{$rows[$i][$j]}</td>";
 					}
 				}
 				$str .= '</tr>';
@@ -554,8 +1141,8 @@
 		$str .= '</table>';
 		return $str;
 	}
-	function table($headers, $rows, $horizontal=true) {
-		echo sTable($headers, $rows, $horizontal);
+	function table($headers, $rows, $horizontal=true, $expand=true) {
+		echo sTable($headers, $rows, $horizontal, $expand);
 	}
 	function contents($items, $custom_title=false, $primary=true) {
 		echo '<div class="to-contents"'.($primary ? ' id="top"' : '').'>';

@@ -351,6 +351,46 @@
 				"enosrian_feats"
 			]
 		},
+		"birdpeople": {
+			"display_name": "Piccilli",
+			"file_name": "birdpeople.php",
+			"directory": "pathfinder_2e/races/",
+			"sort_path": [
+				"pathfinder_2e",
+				"races_2e"
+			]
+		},
+		"birdpeople_feats": {
+			"display_name": "Piccilli Feats",
+			"file_name": "birdpeople_feats.php",
+			"directory": "pathfinder_2e/races/",
+			"sort_path": [
+				"pathfinder_2e",
+				"races_2e",
+				"birdpeople"
+			]
+		},
+		"birdpeople_heritages": {
+			"display_name": "Piccilli Heritages",
+			"file_name": "birdpeople_heritages.php",
+			"directory": "pathfinder_2e/races/",
+			"sort_path": [
+				"pathfinder_2e",
+				"races_2e",
+				"birdpeople"
+			]
+		},
+		"birdpeople_feat_display": {
+			"display_name": "Piccilli Feat Descriptions",
+			"file_name": "birdpeople_feat_display.php",
+			"directory": "pathfinder_2e/races/",
+			"sort_path": [
+				"pathfinder_2e",
+				"races_2e",
+				"birdpeople",
+				"birdpeople_feats"
+			]
+		},
 		"focus_fundamental": {
 			"display_name": "Casting Channel Fundamental Runes",
 			"file_name": "focus_fundamental.php",
@@ -391,6 +431,433 @@
 				"equipment",
 				"runes",
 				"focus_fundamental"
+			]
+		},
+		"monsters": {
+			"display_name": "Monsters",
+			"file_name": "monsters_index.php",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e"
+			]
+		},
+		"sleaj": {
+			"display_name": "Sleaj",
+			"file_name": "sleaj.php",
+			"directory": "pathfinder_1e/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"monsters"
+			]
+		},
+		"lazuli_band": {
+			"display_name": "Band of Lazuli and Iron",
+			"file_name": "lazuli_band.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items"
+			]
+		},
+		"endless_book": {
+			"display_name": "Book of Endless Pages",
+			"file_name": "endless_book.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items"
+			]
+		},
+		"lazuli_dragon": {
+			"display_name": "Book of Endless Pages",
+			"file_name": "lazuli_dragon.php",
+			"directory": "pathfinder_1e/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"monsters"
+			]
+		},
+		"topics": {
+			"display_name": "Topics",
+			"file_name": "topics.php",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e"
+			]
+		},
+		"minecraft": {
+			"display_name": "Minecraft",
+			"file_name": "minecraft.php",
+			"directory": "pathfinder_1e/topics/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics"
+			]
+		},
+		"monsters_mc": {
+			"display_name": "Monsters",
+			"file_name": "monsters_index.php",
+			"directory": "pathfinder_1e/topics/minecraft/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft"
+			]
+		},
+		"npcs_mc": {
+			"display_name": "NPCs",
+			"file_name": "npcs_index.php",
+			"directory": "pathfinder_1e/topics/minecraft/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"templates_mc": {
+			"display_name": "Templates",
+			"file_name": "templates_index.php",
+			"directory": "pathfinder_1e/topics/minecraft/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"bee": {
+			"display_name": "Dire Bee",
+			"file_name": "bee.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"blaze": {
+			"display_name": "Blaze",
+			"file_name": "blaze.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"cave_spider": {
+			"display_name": "Cave Spider",
+			"file_name": "cave_spider.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"creeper": {
+			"display_name": "Creeper",
+			"file_name": "creeper.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"endermite": {
+			"display_name": "Endermite",
+			"file_name": "endermite.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"ghast": {
+			"display_name": "Ghast",
+			"file_name": "ghast.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"goat": {
+			"display_name": "Goat",
+			"file_name": "goat.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"guardian": {
+			"display_name": "Guardian",
+			"file_name": "guardian.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"hoglin": {
+			"display_name": "Hoglin",
+			"file_name": "hoglin.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"iron_golem": {
+			"display_name": "Iron Guard",
+			"file_name": "iron_golem.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"llama": {
+			"display_name": "Dire Llama",
+			"file_name": "llama.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"magma_slime": {
+			"display_name": "Magma Cube",
+			"file_name": "magma_slime.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"phantom": {
+			"display_name": "Phantom",
+			"file_name": "phantom.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"polar_bear": {
+			"display_name": "Polar Bear",
+			"file_name": "polar_bear.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"pufferfish": {
+			"display_name": "Pufferfish",
+			"file_name": "pufferfish.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"rabbit_99": {
+			"display_name": "Killer Rabbit",
+			"file_name": "rabbit_99.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"ravager": {
+			"display_name": "Ravager",
+			"file_name": "ravager.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"shulker": {
+			"display_name": "Shulker",
+			"file_name": "shulker.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"silverfish": {
+			"display_name": "Silverfish",
+			"file_name": "silverfish.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"silverfish_swarm": {
+			"display_name": "Silverfish",
+			"file_name": "silverfish_swarm.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"slime": {
+			"display_name": "Green Cube",
+			"file_name": "slime.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"snow_golem": {
+			"display_name": "Snow Golem",
+			"file_name": "snow_golem.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"spider": {
+			"display_name": "Spider",
+			"file_name": "spider.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"vex": {
+			"display_name": "Vex",
+			"file_name": "vex.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"wolf": {
+			"display_name": "Wolf",
+			"file_name": "wolf.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"skeleton": {
+			"display_name": "Skeleton",
+			"file_name": "skeleton.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/templates/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc",
+				"templates_mc"
+			]
+		},
+		"zombie": {
+			"display_name": "Zombie",
+			"file_name": "zombie.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/templates/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc",
+				"templates_mc"
+			]
+		},
+		"illagers": {
+			"display_name": "Illagers",
+			"file_name": "illagers.php",
+			"directory": "pathfinder_1e/topics/minecraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"races_mc"
+			]
+		},
+		"knom": {
+			"display_name": "Knom",
+			"file_name": "knom.php",
+			"directory": "pathfinder_1e/topics/minecraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"races_mc"
+			]
+		},
+		"piglins": {
+			"display_name": "Piglins",
+			"file_name": "piglins.php",
+			"directory": "pathfinder_1e/topics/minecraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"races_mc"
 			]
 		}
 	},
@@ -510,6 +977,16 @@
 									"type": "leaf"
 								},
 								{
+									"name": "lazuli_band",
+									"display_name": "Band of Lazuli and Iron",
+									"type": "leaf"
+								},
+								{
+									"name": "endless_book",
+									"display_name": "Book of Endless Pages",
+									"type": "leaf"
+								},
+								{
 									"name": "goodberry_sprig",
 									"display_name": "Goodberry Sprig",
 									"type": "leaf"
@@ -557,6 +1034,23 @@
 									"type": "leaf"
 								}
 							]
+						}
+					]
+				},
+				{
+					"name": "monsters",
+					"display_name": "Monsters",
+					"type": "flower",
+					"nodes": [
+						{
+							"name": "lazuli_dragon",
+							"display_name": "Kundrak",
+							"type": "petal"
+						},
+						{
+							"name": "sleaj",
+							"display_name": "Sleaj",
+							"type": "petal"
 						}
 					]
 				},
@@ -658,6 +1152,122 @@
 							"type": "leaf"
 						}
 					]
+				},
+				{
+					"name": "topics",
+					"display_name": "Topics",
+					"type": "limb",
+					"nodes": [
+						{
+							"name": "minecraft",
+							"display_name": "Minecraft",
+							"type": "limb",
+							"nodes": [
+								{
+									"name": "equipment_mc",
+									"display_name": "Equipment",
+									"type": "branch",
+									"nodes": [
+										{
+											"name": "weapons_mc",
+											"display_name": "Weapons",
+											"type": "branch",
+											"nodes": [
+												
+											]
+										},
+										{
+											"name": "armor_mc",
+											"display_name": "Armor",
+											"type": "branch",
+											"nodes": [
+												
+											]
+										},
+										{
+											"name": "special_materials_mc",
+											"display_name": "Special Materials",
+											"type": "branch",
+											"nodes": [
+												
+											]
+										}
+									]
+								},
+								{
+									"name": "magic_items_mc",
+									"display_name": "Magic Items",
+									"type": "branch",
+									"nodes": [
+										{
+											"name": "magic_armor_mc",
+											"display_name": "Armor",
+											"type": "branch",
+											"nodes": [
+												
+											]
+										},
+										{
+											"name": "magic_weapons_mc",
+											"display_name": "Weapons",
+											"type": "branch",
+											"nodes": [
+												
+											]
+										},
+										{
+											"name": "wondrous_mc",
+											"display_name": "Wondrous Items",
+											"type": "branch",
+											"nodes": [
+												
+											]
+										}
+									]
+								},
+								{
+									"name": "monsters_mc",
+									"display_name": "Monsters",
+									"petal_display_name": "Monsters Index",
+									"type": "flower",
+									"nodes": [
+										{
+											"name": "npcs_mc",
+											"display_name": "NPCs",
+											"type": "petal"
+										},
+										{
+											"name": "templates_mc",
+											"display_name": "Templates",
+											"type": "petal"
+										}
+									]
+								},
+								{
+									"name": "races_mc",
+									"display_name": "Races",
+									"type": "branch",
+									"nodes": [
+										{
+											"name": "illagers",
+											"display_name": "Illagers",
+											"type": "leaf"
+										},
+										{
+											"name": "knom",
+											"display_name": "Knom",
+											"type": "leaf"
+										},
+										{
+											"name": "piglins",
+											"display_name": "Piglins",
+											"type": "leaf"
+										}
+									]
+								}
+							]
+						}
+					]
 				}
 			]
 		},
@@ -736,6 +1346,31 @@
 								{
 									"name": "enosrian_heritages",
 									"display_name": "Thyllkthoron Heritages",
+									"type": "petal"
+								}
+							]
+						},
+						{
+							"name": "birdpeople",
+							"display_name": "Piccilli",
+							"petal_display_name": "Piccilli Details",
+							"type": "flower",
+							"nodes": [
+								{
+									"name": "birdpeople_feats",
+									"display_name": "Piccilli Feats",
+									"type": "flower",
+									"nodes": [
+										{
+											"name": "birdpeople_feat_display",
+											"display_name": "Feat Descriptions",
+											"type": "petal"
+										}
+									]
+								},
+								{
+									"name": "birdpeople_heritages",
+									"display_name": "Piccilli Heritages",
 									"type": "petal"
 								}
 							]

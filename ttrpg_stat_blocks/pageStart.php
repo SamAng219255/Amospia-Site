@@ -3,7 +3,7 @@
 	$currentDirectory=$pathstuff[count($pathstuff)-2];
 	$currentPage=$pathstuff[count($pathstuff)-1];
 	$rootDir='';
-	for($i=0; $i<5; $i++) {
+	for($i=0; $i<20; $i++) {
 		if(file_exists($rootDir.'quick_paste_lib.php')) {
 			require $rootDir.'quick_paste_lib.php';
 			break;
@@ -22,6 +22,7 @@
 	<?php
 		echo '	<link rel="stylesheet" type="text/css" href="'.$rootDir.'theme.css">';
 		echo '	<script src="'.$rootDir.'menu.js"></script>';
+		//echo '	<link rel="shortcut icon" href="'.$rootDir.'../img/icon2_256.png">'
 	?>
 	<script src="/ttrpg_stat_blocks/table_sort.js"></script>
 </head>
@@ -54,6 +55,18 @@
 								echo '<li class="has-dropdown">';
 								echo '<p class="label">'.$ptr['display_name'].'</p>';
 								echo '<ul class="menu-vertical">';
+								$depth++;
+								$tree_path[$depth]=$ptr['nodes'];
+								$tree_indices[$depth]=0;
+								$tree_counts[$depth]=count($ptr['nodes']);
+								break;
+							
+							case 'limb':
+								echo '<li class="has-dropdown">';
+								echo '<p class="label">'.$ptr['display_name'].'</p>';
+								echo '<ul class="menu-vertical">';
+								$entry=$pages['entries'][$ptr['name']];
+								echo '<li><a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'"><p class="label">View Section Home</p></a></li>';
 								$depth++;
 								$tree_path[$depth]=$ptr['nodes'];
 								$tree_indices[$depth]=0;
@@ -127,10 +140,10 @@
 					$starting_flower=false;
 					$flower_node=[];
 
-					$sanity=100;
+					$sanity=1000;
 					while($depth<count($tree_path)) {
 						if($sanity<1) {
-							echo '<p>Loop has gone insane after 100 iterations.</p>';
+							echo '<p>Loop has gone insane after 1000 iterations.</p>';
 							break;
 						}
 						if($tree_index<$tree_count) {
@@ -147,15 +160,17 @@
 							}
 							else
 								echo ' | ';
-							$match=($ptr['name']==(isset($_GET['path'])?$get_path[$depth]:$pages['entries'][$pageId]['sort_path'][$depth]));
+							$match=($ptr['name']==(isset($_GET['path'])?$get_path[$depth]:(isset($pages['entries'][$pageId]) && $depth==count($pages['entries'][$pageId]['sort_path']) && $ptr['type']=='limb'?$pageId:$pages['entries'][$pageId]['sort_path'][$depth])));
 							if($match) {
-								array_push($tree_path, $ptr['nodes']);
+								if(isset($ptr['nodes']))
+									array_push($tree_path, $ptr['nodes']);
 								$next_node=$ptr;
-								if($next_node['type']=='flower') {
+								if($next_node['type']=='flower' || $next_node['type']=='limb') {
 									$starting_flower=true;
 									$flower_node=$ptr;
 								}
 							}
+							echo '<!--'.$ptr['type'].'-->';
 							if($ptr['type']=='branch') {
 								$search_path='';
 								foreach($node_list as $node) {

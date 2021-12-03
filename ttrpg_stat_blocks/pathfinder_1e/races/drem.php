@@ -4,7 +4,7 @@
 	raceBlockAuto(
 		"Drem",
 		8,
-		"An offshoot fo the race known as Tirn, Drem have considerably more physical strength and are far larger but their major advantage is their strong sense of community which ultimately allowed them to make the improvements to their lifestyle and diet which allowed their physical change.",
+		"An offshoot of the race known as Tirn, Drem have considerably more physical strength and are far larger but their major advantage is their strong sense of community which ultimately allowed them to make the improvements to their lifestyle and diet which allowed their physical change.",
 		"While far taller than their Tirn cousins, Drem only stand approximately four and half feet. Their overall appearance is that like a shorter human.",
 		"Drem form close knit communities that live in clusters in caves and will create small villages on the surface as well. These communities are often lead by a village elder. The communities get their food by farm edible mushrooms in the caves and tending berries and other plants in fields within the village walls as well as ones in the surrounding forest.",
 		"Drem rarely encounter other races though several halfling caravans stop by their villages and will bring supplies and other goods from elsewhere.",

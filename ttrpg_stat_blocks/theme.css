@@ -88,6 +88,9 @@ table {
 	border-collapse: collapse;
 	color: #000000;
 	margin: 1em;
+	max-width: calc(100% - 2em);
+}
+table.expand {
 	width: calc(100% - 2em);
 }
 th {

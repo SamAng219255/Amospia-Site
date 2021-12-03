@@ -43,133 +43,152 @@
 		],
 		[
 			[
-				'<a href="https://2e.aonprd.com/Equipment.aspx?ID=297">Ghost Touch</a>',
+				'Ghost Touch',
+				'link' => 'https://2e.aonprd.com/Equipment.aspx?ID=297',
 				'Common',
 				'4',
 				'75 gp',
 				'Your spells have inceased effectiveness against incorporeal creatures.'
 			],
 			[
-				'<a href="https://2e.aonprd.com/Equipment.aspx?ID=1041">Bane</a>',
+				'Bane',
+				'link' => 'https://2e.aonprd.com/Equipment.aspx?ID=1041',
 				'Uncommon',
 				'4',
 				'100 gp',
 				'You spells have inceased effectiveness against creatures of a specific type.'
 			],
 			[
-				'<a href="https://2e.aonprd.com/Equipment.aspx?ID=294">Disrupting</a>',
+				'Disrupting',
+				'link' => 'https://2e.aonprd.com/Equipment.aspx?ID=294',
 				'Common',
 				'5',
 				'150 gp',
 				'You spells deal extra damage against undead.'
 			],
 			[
-				'<a href="https://2e.aonprd.com/Equipment.aspx?ID=294">Disrupting (Greater)</a>',
+				'Disrupting (Greater)',
+				'link' => 'https://2e.aonprd.com/Equipment.aspx?ID=294',
 				'Uncommon',
 				'14',
 				'4,300 gp',
 				'You spells deal extra damage against undead.'
 			],
 			[
-				'<a href="https://2e.aonprd.com/Equipment.aspx?ID=292">Corrosive</a>',
+				'Corrosive',
+				'link' => 'https://2e.aonprd.com/Equipment.aspx?ID=292',
 				'Common',
 				'8',
 				'100 gp',
 				'You spells deal extra acid damage.'
 			],
 			[
-				'<a href="https://2e.aonprd.com/Equipment.aspx?ID=295">Flaming</a>',
+				'Flaming',
+				'link' => 'https://2e.aonprd.com/Equipment.aspx?ID=295',
 				'Common',
 				'8',
 				'100 gp',
 				'You spells deal extra fire damage.'
 			],
 			[
-				'<a href="https://2e.aonprd.com/Equipment.aspx?ID=296">Frost</a>',
+				'Frost',
+				'link' => 'https://2e.aonprd.com/Equipment.aspx?ID=296',
 				'Common',
 				'8',
 				'100 gp',
 				'You spells deal extra cold damage.'
 			],
 			[
-				'<a href="https://2e.aonprd.com/Equipment.aspx?ID=303">Shock</a>',
+				'Shock',
+				'link' => 'https://2e.aonprd.com/Equipment.aspx?ID=303',
 				'Common',
 				'8',
 				'100 gp',
 				'You spells deal extra electricity damage.'
 			],
 			[
-				'<a href="https://2e.aonprd.com/Equipment.aspx?ID=306">Thundering</a>',
+				'Thundering',
+				'link' => 'https://2e.aonprd.com/Equipment.aspx?ID=306',
 				'Common',
 				'8',
 				'100 gp',
 				'You spells deal extra sonic damage.'
 			],
 			[
-				'<a href="https://2e.aonprd.com/Equipment.aspx?ID=292">Corrosive (Greater)</a>',
+				'Corrosive (Greater)',
+				'link' => 'https://2e.aonprd.com/Equipment.aspx?ID=292',
 				'Common',
 				'15',
 				'6,500 gp',
 				'You spells deal extra acid damage.'
 			],
 			[
-				'<a href="https://2e.aonprd.com/Equipment.aspx?ID=295">Flaming (Greater)</a>',
+				'Flaming (Greater)',
+				'link' => 'https://2e.aonprd.com/Equipment.aspx?ID=295',
 				'Common',
 				'15',
 				'6,500 gp',
 				'You spells deal extra fire damage.'
 			],
 			[
-				'<a href="https://2e.aonprd.com/Equipment.aspx?ID=296">Frost (Greater)</a>',
+				'Frost (Greater)',
+				'link' => 'https://2e.aonprd.com/Equipment.aspx?ID=296',
 				'Common',
 				'15',
 				'6,500 gp',
 				'You spells deal extra cold damage.'
 			],
 			[
-				'<a href="https://2e.aonprd.com/Equipment.aspx?ID=303">Shock (Greater)</a>',
+				'Shock (Greater)',
+				'link' => 'https://2e.aonprd.com/Equipment.aspx?ID=303',
 				'Common',
 				'15',
 				'6,500 gp',
 				'You spells deal extra electricity damage.'
 			],
 			[
-				'<a href="https://2e.aonprd.com/Equipment.aspx?ID=306">Thundering (Greater)</a>',
+				'Thundering (Greater)',
+				'link' => 'https://2e.aonprd.com/Equipment.aspx?ID=306',
 				'Common',
 				'15',
 				'6,500 gp',
 				'You spells deal extra sonic damage.'
 			],
 			[
-				'<a href="https://2e.aonprd.com/Equipment.aspx?ID=299">Holy</a>',
+				'Holy',
+				'link' => 'https://2e.aonprd.com/Equipment.aspx?ID=299',
 				'Common',
 				'11',
 				'1,400 gp',
 				'You spells deal extra damage against evil creatures.'
 			],
 			[
-				'<a href="https://2e.aonprd.com/Equipment.aspx?ID=307">Unholy</a>',
+				'Unholy',
+				'link' => 'https://2e.aonprd.com/Equipment.aspx?ID=307',
 				'Common',
 				'11',
 				'1,400 gp',
 				'You spells deal extra damage against good creatures.'
 			],
 			[
-				'<a href="https://2e.aonprd.com/Equipment.aspx?ID=290">Anarchic</a>',
+				'Anarchic',
+				'link' => 'https://2e.aonprd.com/Equipment.aspx?ID=290',
 				'Common',
 				'11',
 				'1,400 gp',
 				'You spells deal extra damage against lawful creatures.'
 			],
 			[
-				'<a href="https://2e.aonprd.com/Equipment.aspx?ID=291">Axiomatic</a>',
+				'Axiomatic',
+				'link' => 'https://2e.aonprd.com/Equipment.aspx?ID=291',
 				'Common',
 				'11',
 				'1,400 gp',
 				'You spells deal extra damage against chaotic creatures.'
 			],
 			[
-				'<a href="https://2e.aonprd.com/Equipment.aspx?ID=291">Keen</a>',
+				'Keen',
+				'link' => 'https://2e.aonprd.com/Equipment.aspx?ID=291',
 				'Uncommon',
 				'13',
 				'1,400 gp',

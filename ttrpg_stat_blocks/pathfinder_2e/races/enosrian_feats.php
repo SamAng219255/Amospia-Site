@@ -47,7 +47,7 @@
 				'Your wings have begun to grow allowing you to fly through the air in short bursts at half your land Speed.'
 			],
 			[
-				'<a href="enosrian_feat_display.php#block-Strengthening Wings">Strengthening Wings</a>',
+				'<a href="enosrian_feat_display.php#block-Strengthening Wings">Strengthening-Wings</a>',
 				'Common',
 				'Enosrian',
 				'9',

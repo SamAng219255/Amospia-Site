@@ -8,8 +8,17 @@ sort=false;
 sortColumn=0;
 
 function comp(a,b) {
-	let numA=parseInt(a.replaceAll(',',''));
-	let numB=parseInt(b.replaceAll(',',''));
+	let numA=a.replaceAll(',','');
+	let numB=b.replaceAll(',','');
+	let match;
+	if(match=numA.match(/^[+-]? ?(\d+) ?\/ ?(\d+)/))
+		numA=parseInt(match[1])/parseInt(match[2]);
+	else
+		numA=parseInt(numA);
+	if(match=numB.match(/^[+-]? ?(\d+) ?\/ ?(\d+)/))
+		numB=parseInt(match[1])/parseInt(match[2]);
+	else
+		numB=parseInt(numB);
 	if(isNaN(numA) || isNaN(numB))
 		return a.localeCompare(b);
 	return Math.sign(numA-numB);

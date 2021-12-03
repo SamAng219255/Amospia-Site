@@ -83,7 +83,7 @@
 					"Treespeech: Plant Sprix have the ability to converse with plants as if subject to a continual speak with plants spell.",
 					"Goodberries: Three times per day, Plant Sprix can grow 2d4 magical berries as <i>goodberry</i>.",
 					"Fertile Soil: Sorcerer Plant Sprix with the verdant bloodline treat their Charisma score as 2 points higher for all sorcerer spells and class abilities. Clerics who are Plant Sprix with the Plant domain use their domain powers and spells at +1 caster level. This trait does not give Plant Sprix early access to level-based powers; it only affects powers that they could already use without this trait.",
-					"Climb: Metal Sprix have a climb speed of 30 feet."
+					"Climb: Plant Sprix have a climb speed of 30 feet."
 				]
 			],
 			[
