@@ -859,6 +859,240 @@
 				"minecraft",
 				"races_mc"
 			]
+		},
+		"totem": {
+			"display_name": "Totem of Undying",
+			"file_name": "totem.php",
+			"directory": "pathfinder_1e/topics/minecraft/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"magic_items_mc",
+				"wondrous_mc"
+			]
+		},
+		"gapple": {
+			"display_name": "Golden Apple",
+			"file_name": "gapple.php",
+			"directory": "pathfinder_1e/topics/minecraft/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"magic_items_mc",
+				"wondrous_mc"
+			]
+		},
+		"egapple": {
+			"display_name": "Enchanted Golden Apple",
+			"file_name": "egapple.php",
+			"directory": "pathfinder_1e/topics/minecraft/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"magic_items_mc",
+				"wondrous_mc"
+			]
+		},
+		"enderpearl": {
+			"display_name": "Ender Pearl",
+			"file_name": "enderpearl.php",
+			"directory": "pathfinder_1e/topics/minecraft/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"magic_items_mc",
+				"wondrous_mc"
+			]
+		},
+		"endereye": {
+			"display_name": "Eye of Ender",
+			"file_name": "endereye.php",
+			"directory": "pathfinder_1e/topics/minecraft/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"magic_items_mc",
+				"wondrous_mc"
+			]
+		},
+		"endportal": {
+			"display_name": "Ender Portal",
+			"file_name": "endportal.php",
+			"directory": "pathfinder_1e/topics/minecraft/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"magic_items_mc",
+				"artifacts_mc"
+			]
+		},
+		"compass": {
+			"display_name": "Redstone Compass",
+			"file_name": "compass.php",
+			"directory": "pathfinder_1e/topics/minecraft/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"magic_items_mc",
+				"wondrous_mc"
+			]
+		},
+		"lodestone": {
+			"display_name": "Netherite Lodestone",
+			"file_name": "lodestone.php",
+			"directory": "pathfinder_1e/topics/minecraft/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"magic_items_mc",
+				"wondrous_mc"
+			]
+		},
+		"elytra": {
+			"display_name": "Elytra",
+			"file_name": "elytra.php",
+			"directory": "pathfinder_1e/topics/minecraft/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"magic_items_mc",
+				"wondrous_mc"
+			]
+		},
+		"weapons_mc": {
+			"display_name": "Weapons",
+			"file_name": "weapons_index.php",
+			"directory": "pathfinder_1e/topics/minecraft/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"equipment_mc"
+			]
+		},
+		"armor_mc": {
+			"display_name": "Armor",
+			"file_name": "armor_index.php",
+			"directory": "pathfinder_1e/topics/minecraft/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"equipment_mc"
+			]
+		},
+		"special_materials_mc": {
+			"display_name": "Special Materials",
+			"file_name": "materials.php",
+			"directory": "pathfinder_1e/topics/minecraft/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"equipment_mc"
+			]
+		},
+		"misc_equip_mc": {
+			"display_name": "Miscellaneous",
+			"file_name": "misc_index.php",
+			"directory": "pathfinder_1e/topics/minecraft/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"equipment_mc"
+			]
+		},
+		"potions_mc": {
+			"display_name": "Potions",
+			"file_name": "potions.php",
+			"directory": "pathfinder_1e/topics/minecraft/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"magic_items_mc"
+			]
+		},
+		"turtle_shell": {
+			"display_name": "Enchanted Turtle Shell",
+			"file_name": "turtle_shell.php",
+			"directory": "pathfinder_1e/topics/minecraft/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"magic_items_mc",
+				"wondrous_mc"
+			]
+		},
+		"melee_qualities_mc": {
+			"display_name": "Melee Weapon Qualities",
+			"file_name": "melee_qualities.php",
+			"directory": "pathfinder_1e/topics/minecraft/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"magic_items_mc",
+				"magic_weapons_mc"
+			]
+		},
+		"ranged_qualities_mc": {
+			"display_name": "Ranged Weapon Qualities",
+			"file_name": "ranged_qualities.php",
+			"directory": "pathfinder_1e/topics/minecraft/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"magic_items_mc",
+				"magic_weapons_mc"
+			]
+		},
+		"armor_qualities_mc": {
+			"display_name": "Armor Qualities",
+			"file_name": "armor_qualities.php",
+			"directory": "pathfinder_1e/topics/minecraft/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"magic_items_mc",
+				"magic_armor_mc"
+			]
+		},
+		"shield_qualities_mc": {
+			"display_name": "Shield Qualities",
+			"file_name": "shield_qualities.php",
+			"directory": "pathfinder_1e/topics/minecraft/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"magic_items_mc",
+				"magic_armor_mc"
+			]
+		},
+		"enchants_mc": {
+			"display_name": "Enchantments",
+			"file_name": "enchants.php",
+			"directory": "pathfinder_1e/topics/minecraft/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"magic_items_mc"
+			]
 		}
 	},
 	"sort_tree": [
@@ -1171,7 +1405,7 @@
 										{
 											"name": "weapons_mc",
 											"display_name": "Weapons",
-											"type": "branch",
+											"type": "leaf",
 											"nodes": [
 												
 											]
@@ -1179,7 +1413,7 @@
 										{
 											"name": "armor_mc",
 											"display_name": "Armor",
-											"type": "branch",
+											"type": "leaf",
 											"nodes": [
 												
 											]
@@ -1187,7 +1421,15 @@
 										{
 											"name": "special_materials_mc",
 											"display_name": "Special Materials",
-											"type": "branch",
+											"type": "leaf",
+											"nodes": [
+												
+											]
+										},
+										{
+											"name": "misc_equip_mc",
+											"display_name": "Miscellaneous",
+											"type": "leaf",
 											"nodes": [
 												
 											]
@@ -1200,11 +1442,32 @@
 									"type": "branch",
 									"nodes": [
 										{
+											"name": "artifacts_mc",
+											"display_name": "Artifacts",
+											"type": "branch",
+											"nodes": [
+												{
+													"name": "endportal",
+													"display_name": "Ender Portal",
+													"type": "leaf"
+												}
+											]
+										},
+										{
 											"name": "magic_armor_mc",
 											"display_name": "Armor",
 											"type": "branch",
 											"nodes": [
-												
+												{
+													"name": "armor_qualities_mc",
+													"display_name": "Armor Qualities",
+													"type": "leaf"
+												},
+												{
+													"name": "shield_qualities_mc",
+													"display_name": "Shield Qualities",
+													"type": "leaf"
+												}
 											]
 										},
 										{
@@ -1212,15 +1475,73 @@
 											"display_name": "Weapons",
 											"type": "branch",
 											"nodes": [
-												
+												{
+													"name": "melee_qualities_mc",
+													"display_name": "Melee Weapon Qualities",
+													"type": "leaf"
+												},
+												{
+													"name": "ranged_qualities_mc",
+													"display_name": "Ranged Weapon Qualities",
+													"type": "leaf"
+												}
 											]
+										},
+										{
+											"name": "potions_mc",
+											"display_name": "Potions",
+											"type": "leaf"
 										},
 										{
 											"name": "wondrous_mc",
 											"display_name": "Wondrous Items",
 											"type": "branch",
 											"nodes": [
-												
+												{
+													"name": "elytra",
+													"display_name": "Elytra",
+													"type": "leaf"
+												},
+												{
+													"name": "egapple",
+													"display_name": "Enchanted Golden Apple",
+													"type": "leaf"
+												},
+												{
+													"name": "turtle_shell",
+													"display_name": "Enchanted Turtle Shell",
+													"type": "leaf"
+												},
+												{
+													"name": "enderpearl",
+													"display_name": "Ender Pearl",
+													"type": "leaf"
+												},
+												{
+													"name": "endereye",
+													"display_name": "Eye of Ender",
+													"type": "leaf"
+												},
+												{
+													"name": "gapple",
+													"display_name": "Golden Apple",
+													"type": "leaf"
+												},
+												{
+													"name": "lodestone",
+													"display_name": "Netherite Lodestone",
+													"type": "leaf"
+												},
+												{
+													"name": "compass",
+													"display_name": "Redstone Compass",
+													"type": "leaf"
+												},
+												{
+													"name": "totem",
+													"display_name": "Totem of Undying",
+													"type": "leaf"
+												}
 											]
 										}
 									]

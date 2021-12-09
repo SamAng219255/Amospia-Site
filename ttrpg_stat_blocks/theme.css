@@ -156,7 +156,8 @@ ul.menu-vertical li.has-dropdown.open>ul.menu-vertical {
 	border-style: solid;
 	border-color: #fff;
 	border-width: 1px;
-	display: inline-block;
+	display: block;
+	float: left;
 	margin: 0.5em;
 }
 .toc-title {
@@ -213,6 +214,7 @@ ul.menu-vertical li.has-dropdown.open>ul.menu-vertical {
 }
 .block {
 	padding: 0.5em;
+	clear: both;
 }
 .block-title {
 	font-size: 1.5em;

@@ -36,7 +36,7 @@
 			"Scent: Piglins have a strong sense of smell that can be used to identify the presence of nearby creatures.",
 			"Greed: Piglins receive a +2 racial bonus on appraise checks to determine the price of non-magical goods containing precious metals or gemstones.",
 			"Hatred: Piglins have a long standing fear and hatred of the many undead that call the Nehter their home and have learned to fight back. Piglins have a +1 racial bonus on attack rolls against undead.",
-			"Weapon Familiarity: Piglins are proficient with all crossbows and all piglin racial weapons.",
+			"Weapon Familiarity: Piglins are proficient with all crossbows and all piglin racial weapons. Piglins also treat their strength score as being 3 higher for the purpose of being able to wield piglin forged gold weapons.",
 			"Languages: Piglins begin play speaking Piglin. Piglins with high Intelligence scores can choose from the following languages: Abyssal, Common, Ignan, and Infernal."
 		],
 		false

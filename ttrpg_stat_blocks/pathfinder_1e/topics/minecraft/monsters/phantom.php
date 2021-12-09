@@ -90,7 +90,7 @@
 			[
 				'name' => 'Sunlight Flammability',
 				'type' => 'Ex',
-				'desc' => 'When exposed to direct sunlight, phantoms burst into flame take 1 point of fire damage per hit dice (normally 3) every round until they die. At which point their body burns to ash and is completely destroyed. If the phantom gets out of the sunlight before it dies, it is still on fire and will continue to take 1d6 points of fire damage, to a maximum of its number of hit dice, each round until it is extinguished.'
+				'desc' => 'When exposed to direct sunlight, phantoms burst into flame take 1 point of fire damage per hit dice (normally 3) every round until they die. At which point their body burns to ash and is completely destroyed. If the phantom gets out of the sunlight before it dies, it is still on fire and will continue to take 1d6 points of fire damage, to a maximum of its number of hit dice, each round until it is extinguished. Phantoms count as being vulnerable to sun light and bright light for the purpose of being affected by spells and abilities.'
 			],
 			[
 				'name' => 'Swoop',

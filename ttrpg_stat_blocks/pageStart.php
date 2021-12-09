@@ -42,10 +42,10 @@
 				$tree_indices=[0];
 				$tree_counts=[count($pages['sort_tree'])];
 
-				$sanity=100;
+				$sanity=1000;
 				while($depth>=0) {
 					if($sanity<1) {
-						echo '<p>Loop has gone insane after 100 iterations.</p>';
+						echo '<p>Loop has gone insane after 1000 iterations.</p>';
 						break;
 					}
 					if($tree_indices[$depth]<$tree_counts[$depth]) {
