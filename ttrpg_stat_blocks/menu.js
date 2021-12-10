@@ -3,6 +3,7 @@ lightActions=[];
 darkActions=[];
 
 function setup() {
+	console.log("Checkpoint");
 	$("li.has-dropdown>p.label").click({},function(e){
 		$(e.currentTarget.parentElement).toggleClass("open");
 	});
@@ -43,7 +44,6 @@ function setup() {
 }
 
 function setDarkMode() {
-	console.log("Checkpoint");
 	const lightMode=$("#light")[0].checked;
 	const options={
 		light: (lightMode?'true':'false')
