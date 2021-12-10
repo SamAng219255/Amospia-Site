@@ -229,3 +229,4 @@
 			</div>
 		</div>
 		<div id="content">
+				<?php var_dump($_COOKIE); ?>

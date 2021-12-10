@@ -1,4 +1,6 @@
 setupFuncs=[];
+lightActions=[];
+darkActions=[];
 
 function setup() {
 	$("li.has-dropdown>p.label").click({},function(e){
@@ -22,12 +24,22 @@ function setup() {
 		setTimeout(function(){$("body").addClass("mobile-secondary");},0)
 	}
 
+	// Light/Dark Mode
+	$("#light").click({},setDarkMode);
+	lightActions=[];
+	darkActions=[];
+	const actions=$(".action-img");
+	for(let i=0; i<actions.length; i++) {
+		const data=actions[i].src.split('/')[5].match(/([a-z]+)action(_I)?\.png/i);
+		if(data[2]==undefined)
+			darkActions.push(actions[i]);
+		else
+			lightActions.push(actions[i]);
+	}
+
 	for(var func of setupFuncs) {
 		func();
 	}
-
-	// Light/Dark Mode
-	$("#light").click({},setDarkMode);
 }
 
 function setDarkMode() {
@@ -41,9 +53,21 @@ function setDarkMode() {
 	$.post(rootDir+"lightMode.php",options,function (data) {console.log(data)});
 	if(lightMode){
 		$("body").addClass("light");
+		for(let i=0; i<lightActions.length; i++) {
+			lightActions[i].src=lightActions[i].src.replace(/([a-z]+action)(_I)?(\.png)/i,'$1$3');
+		}
+		for(let i=0; i<darkActions.length; i++) {
+			lightActions[i].src=lightActions[i].src.replace(/([a-z]+action)(_I)?(\.png)/i,'$1_I$3');
+		}
 	}
 	else{
 		$("body").removeClass("light");
+		for(let i=0; i<lightActions.length; i++) {
+			lightActions[i].src=lightActions[i].src.replace(/([a-z]+action)(_I)?(\.png)/i,'$1_I$3');
+		}
+		for(let i=0; i<darkActions.length; i++) {
+			lightActions[i].src=lightActions[i].src.replace(/([a-z]+action)(_I)?(\.png)/i,'$1$3');
+		}
 	}
 }
 setupFuncs.push(setDarkMode);
