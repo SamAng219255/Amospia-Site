@@ -25,4 +25,25 @@ function setup() {
 	for(var func of setupFuncs) {
 		func();
 	}
+
+	// Light/Dark Mode
+	$("#light").click({},setDarkMode);
 }
+
+function setDarkMode() {
+	const lightMode=$("#light")[0].checked;
+	const options={
+		light: (lightMode?'true':'false')
+	};
+	if(typeof devMode != 'undefined' && devMode){
+		options.devMode='true';
+	}
+	$.post(rootDir+"lightMode.php",options,function (data) {console.log(data)});
+	if(lightMode){
+		$("body").addClass("light");
+	}
+	else{
+		$("body").removeClass("light");
+	}
+}
+setupFuncs.push(setDarkMode);

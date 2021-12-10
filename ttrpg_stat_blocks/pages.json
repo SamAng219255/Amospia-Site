@@ -1093,6 +1093,52 @@
 				"minecraft",
 				"magic_items_mc"
 			]
+		},
+		"enderchest": {
+			"display_name": "Ender Chest",
+			"file_name": "enderchest.php",
+			"directory": "pathfinder_1e/topics/minecraft/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"magic_items_mc",
+				"wondrous_mc"
+			]
+		},
+		"lure_rod": {
+			"display_name": "Luring Fishing Rod",
+			"file_name": "lure_rod.php",
+			"directory": "pathfinder_1e/topics/minecraft/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"magic_items_mc",
+				"wondrous_mc"
+			]
+		},
+		"end": {
+			"display_name": "the End",
+			"file_name": "end.php",
+			"directory": "pathfinder_1e/topics/minecraft/planes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"planes_mc"
+			]
+		},
+		"nether": {
+			"display_name": "the Nether",
+			"file_name": "nether.php",
+			"directory": "pathfinder_1e/topics/minecraft/planes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"planes_mc"
+			]
 		}
 	},
 	"sort_tree": [
@@ -1513,6 +1559,11 @@
 													"type": "leaf"
 												},
 												{
+													"name": "enderchest",
+													"display_name": "Ender Chest",
+													"type": "leaf"
+												},
+												{
 													"name": "enderpearl",
 													"display_name": "Ender Pearl",
 													"type": "leaf"
@@ -1525,6 +1576,11 @@
 												{
 													"name": "gapple",
 													"display_name": "Golden Apple",
+													"type": "leaf"
+												},
+												{
+													"name": "lure_rod",
+													"display_name": "Luring Fishing Rod",
 													"type": "leaf"
 												},
 												{
@@ -1561,6 +1617,23 @@
 											"name": "templates_mc",
 											"display_name": "Templates",
 											"type": "petal"
+										}
+									]
+								},
+								{
+									"name": "planes_mc",
+									"display_name": "Planes",
+									"type": "branch",
+									"nodes": [
+										{
+											"name": "end",
+											"display_name": "the End",
+											"type": "leaf"
+										},
+										{
+											"name": "nether",
+											"display_name": "the Nether",
+											"type": "leaf"
 										}
 									]
 								},

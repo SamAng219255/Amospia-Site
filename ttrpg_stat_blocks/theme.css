@@ -5,6 +5,14 @@ body {
 	color: #fff;
 	font-family: helvetica;
 	line-height: 1.333;
+	letter-spacing: 0.03125em;
+	-webkit-transition: background-color .4s, color .4s;
+	transition: background-color .4s, color .4s;
+
+}
+body.light {
+	color: #000;
+	background-color: #f9f5f7;
 }
 p {
 	margin: 0;
@@ -96,6 +104,12 @@ table.expand {
 th {
 	background-color: #000000;
 	color: #ffffff;
+	-webkit-transition: background-color .4s, color .4s;
+	transition: background-color .4s, color .4s;
+}
+body.light th {
+	background-color: #fff;
+	color: #000;
 }
 tr {
 	background-color: #c0c0c0;
@@ -159,12 +173,22 @@ ul.menu-vertical li.has-dropdown.open>ul.menu-vertical {
 	display: block;
 	float: left;
 	margin: 0.5em;
+	-webkit-transition: border-color .4s;
+	transition: border-color .4s;
+}
+body.light .to-contents {
+	border-color: #000;
 }
 .toc-title {
 	padding: 0.25em;
 	background-color: #333;
 	font-size: 1.25em;
 	cursor: pointer;
+	-webkit-transition: background-color .4s;
+	transition: background-color .4s;
+}
+body.light .toc-title {
+	background-color: #bbb;
 }
 .toc-contents {
 	margin-block-start: 0;
@@ -223,6 +247,12 @@ ul.menu-vertical li.has-dropdown.open>ul.menu-vertical {
 	color: #cca94a;
 	padding: 0 0.25em;
 	margin-bottom: 0.25em;
+	-webkit-transition: background-color .4s, color .4s;
+	transition: background-color .4s, color .4s;
+}
+body.light .block-title {
+	background-color: #cca94a;
+	color: #482818;
 }
 .block2 .block-title {
 	margin-top: 1em;
@@ -259,12 +289,30 @@ ul.menu-vertical li.has-dropdown.open>ul.menu-vertical {
 	border-width: 2px;
 	border-color: #cca94a;
 	background-color: #482818;
+	-webkit-transition: border-color .4s, background-color .4s;
+	transition: border-color .4s, background-color .4s;
+}
+body.light .trait, body.light trt {
+	border-color: #482818;
+	background-color: #cca94a;
 }
 .trait.trait-blue, trt.trait-blue {
 	background-color: #140050;
+	-webkit-transition: border-color .4s, background-color .4s;
+	transition: border-color .4s, background-color .4s;
+}
+body.light .trait.trait-blue, body.light trt.trait-blue {
+	border-color: #482818;
+	background-color: #55f;
 }
 .trait.trait-orange, trt.trait-orange {
 	background-color: #803000;
+	-webkit-transition: border-color .4s, background-color .4s;
+	transition: border-color .4s, background-color .4s;
+}
+body.light .trait.trait-orange, body.light trt.trait-orange {
+	border-color: #482818;
+	background-color: #FF953F;
 }
 .action-img {
 	height: 1em;
@@ -313,7 +361,11 @@ body.mobile #center {
 	width: calc(100vw - 5rem);
 	min-width: unset;
 }
+#menu-open, #menu-close {
+	display: none;
+}
 body.mobile #menu-open, body.mobile #menu-close {
+	display: block;
 	margin: 2.5rem 2.5rem 1.25rem;
 	width: 0.5in;
 	height: 0.5in;
@@ -321,6 +373,11 @@ body.mobile #menu-open, body.mobile #menu-close {
 body.mobile #menu-open {
 	margin-left: 0;
 	background: linear-gradient(to bottom, #fff 0%, #fff 20%, transparent 20%, transparent 40%, #fff 40%, #fff 60%, transparent 60%, transparent 80%, #fff 80%, #fff 100%);
+	-webkit-transition: background .4s;
+	transition: background .4s;
+}
+body.light.mobile #menu-open {
+	background: linear-gradient(to bottom, #000 0%, #000 20%, transparent 20%, transparent 40%, #000 40%, #000 60%, transparent 60%, transparent 80%, #000 80%, #000 100%);
 }
 body.mobile #menu-close {
 	background: 
@@ -329,6 +386,88 @@ body.mobile #menu-close {
 		linear-gradient(to bottom, transparent 0%, transparent 40%, #000 40%, #000 60%, transparent 60%, transparent 100%);
 		/*linear-gradient(to bottom right, transparent 0%, transparent 43%, #000 43%, #000 57%, transparent 57%, transparent 100%),
 		linear-gradient(to bottom left, transparent 0%, transparent 43%, #000 43%, #000 57%, transparent 57%, transparent 100%);*/
+}
+#controls {
+	height: 0.5in;
+}
+
+#light-switch {
+	top: 0;
+	right: 0;
+	display: block;
+	position: absolute;
+	margin-top: 2.5rem;
+	margin-right: 2.5rem;
+}
+body.mobile #light-switch {
+	margin: 0;
+	width: 0.88235in;
+	height: 0.5in;
+}
+body.mobile #light-switch .slider {
+	border-radius: 0.5in;
+}
+body.mobile #light-switch .slider:before {
+	height: 0.38235in;
+	width: 0.38235in;
+	left: 0.05882in;
+	bottom: 0.05882in;
+}
+body.mobile input:checked + .slider:before {
+	-webkit-transform: translateX(0.38235in);
+	-ms-transform: translateX(0.38235in);
+	transform: translateX(0.38235in);
+}
+
+ /* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: background-color .4s;
+	transition: background-color .4s;
+	border-radius: 34px;
+}
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: #fff;
+	-webkit-transition: background-color .4s;
+	transition: background-color .4s;
+	border-radius: 50%;
+}
+input:checked + .slider {
+	background-color: #444;
+}
+input:focus + .slider {
+	box-shadow: 0 0 1px #444;
+}
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+	background-color: #000;
 }
 
 /*Attempted to vary font size to be consistent on all devices but devices continued to provide inaccurate values

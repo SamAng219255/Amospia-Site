@@ -1,4 +1,10 @@
 <?php
+	$devMode=true;
+
+	$lightMode=false;
+	if(isset($_COOKIE['lightMode']))
+		$lightMode=$_COOKIE['lightMode']=='true';
+
 	$pathstuff=explode('/',$_SERVER['SCRIPT_NAME']);
 	$currentDirectory=$pathstuff[count($pathstuff)-2];
 	$currentPage=$pathstuff[count($pathstuff)-1];
@@ -21,12 +27,13 @@
 	<script src="/ttrpg_stat_blocks/mobileDetect.js"></script>
 	<?php
 		echo '	<link rel="stylesheet" type="text/css" href="'.$rootDir.'theme.css">';
+		echo '	<script>rootDir="'.$rootDir.'";'.($devMode ? ' devMode=true;' : '').'</script>';
 		echo '	<script src="'.$rootDir.'menu.js"></script>';
 		//echo '	<link rel="shortcut icon" href="'.$rootDir.'../img/icon2_256.png">'
 	?>
 	<script src="/ttrpg_stat_blocks/table_sort.js"></script>
 </head>
-<body onload="setup()">
+<?php echo '<body onload="setup()"'.($lightMode?' class="light"':'').'>' ?>
 	<div id="sidebar">
 		<div id="nav-controls">
 			<div id="menu-close"></div>
@@ -108,6 +115,10 @@
 		<div id="top">
 			<div id="controls">
 				<div id="menu-open"></div>
+				<label class="switch" id="light-switch">
+					<?php echo '<input type="checkbox" id="light"'.($lightMode?'checked':'').'>' ?>
+					<span class="slider"></span>
+				</label>
 			</div>
 			<div id="top-nav">
 				<?php

@@ -63,21 +63,7 @@
 		],// Attacks
 		0,// Reach
 		'',// Special Attacks
-		[
-			'level' => 2,
-			'conc' => 0,
-			'spells' => [
-				[
-					'perday' => 'at-will',
-					'list' => [
-						[
-							'name' => 'plane shift',
-							'note' => 'self only, astral plane only'
-						]
-					]
-				]
-			]
-		],// Spell-like Abilities
+		[],// Spell-like Abilities
 		[],// Spell Casting
 		'',// Spell Casting Note
 		[
@@ -104,7 +90,7 @@
 			[
 				'name' => 'Dimensional Hitch-Hike',
 				'type' => 'Ex',
-				'desc' => 'Despite their name, endermites are native to the astral plane and often hitch rides with creatures teleporting through it emerging at the destination with the creature. Whenever a creature teleports to or from a region infested with endermites, there is a 5% chance that an endermite will also appear in their when they arrive.'
+				'desc' => 'Despite their name, endermites are native to the space outside of reality and often hitch rides with creatures travelling between planes such as when teleporting, emerging at the destination with the creature. Whenever a creature teleports to or from a region infested with endermites, there is a 5% chance that an endermite will also appear in their square when they arrive.'
 			],
 			[
 				'name' => 'Nimble Strikes',

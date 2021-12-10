@@ -79,17 +79,17 @@
 		$lineCount=count($arr);
 		for($i=0; $i<$lineCount; $i++) {
 			$arr[$i]=trim($arr[$i]);
-			if(/*str_starts_with($arr[$i],'/mm/')*/substr($arr[$i], 0, 4)=='/mm/') {
-				$arr[$i]='<span class="inset">'.substr($arr[$i],4).'</span>';
+			if(substr($arr[$i], 0, 4)=='/mm/') {
+				$arr[$i]='<span class="inset">'.trim(substr($arr[$i],4)).'</span>';
 			}
-			if(/*str_starts_with($arr[$i],'/ee/')*/substr($arr[$i], 0, 4)=='/ee/') {
-				$arr[$i]='<span class="enlarged">'.substr($arr[$i],4).'</span>';
+			if(substr($arr[$i], 0, 4)=='/ee/') {
+				$arr[$i]='<span class="enlarged">'.trim(substr($arr[$i],4)).'</span>';
 			}
-			if(/*str_starts_with($arr[$i],'/rr/')*/substr($arr[$i], 0, 4)=='/rr/') {
-				$arr[$i]='<span class="reduced">'.substr($arr[$i],4).'</span>';
+			if(substr($arr[$i], 0, 4)=='/rr/') {
+				$arr[$i]='<span class="reduced">'.trim(substr($arr[$i],4)).'</span>';
 			}
 			if(substr($arr[$i], 0, 4)=='/tt/') {
-				$arr[$i]='<span class="subtitle">'.substr($arr[$i],4).'</span>';
+				$arr[$i]='<span class="subtitle">'.trim(substr($arr[$i],4)).'</span>';
 			}
 		}
 		return quick_format($arr);
