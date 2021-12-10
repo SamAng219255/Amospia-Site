@@ -27,7 +27,7 @@
 					'samesite' => 'Strict'
 				]
 			);
-			echo 'setting cookie'
+			echo 'setting cookie';
 		}
 	}
 	var_dump($_POST);
