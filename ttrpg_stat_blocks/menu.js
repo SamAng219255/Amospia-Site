@@ -3,7 +3,6 @@ lightActions=[];
 darkActions=[];
 
 function setup() {
-	console.log("Checkpoint");
 	$("li.has-dropdown>p.label").click({},function(e){
 		$(e.currentTarget.parentElement).toggleClass("open");
 	});

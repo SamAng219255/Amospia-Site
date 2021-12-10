@@ -26,14 +26,14 @@
 	<script src="/jquery.js"></script>
 	<script src="/ttrpg_stat_blocks/mobileDetect.js"></script>
 	<?php
-		echo '	<link rel="stylesheet" type="text/css" href="'.$rootDir.'theme.css">';
+		echo '	<link rel="stylesheet" type="text/css" href="'.$rootDir.'theme.css?t='.time().'">';
 		echo '	<script>rootDir="'.$rootDir.'";'.($devMode ? ' devMode=true;' : '').'</script>';
-		echo '	<script src="'.$rootDir.'menu.js"></script>';
+		echo '	<script src="'.$rootDir.'menu.js?t='.time().'"></script>';
 		//echo '	<link rel="shortcut icon" href="'.$rootDir.'../img/icon2_256.png">'
 	?>
 	<script src="/ttrpg_stat_blocks/table_sort.js"></script>
 </head>
-<?php echo '<body onload="setup(); console.log(1)"'.($lightMode?' class="light"':'').'>' ?>
+<?php echo '<body onload="setup()"'.($lightMode?' class="light"':'').'>' ?>
 	<div id="sidebar">
 		<div id="nav-controls">
 			<div id="menu-close"></div>
