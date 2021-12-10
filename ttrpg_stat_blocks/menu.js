@@ -25,7 +25,7 @@ function setup() {
 	}
 
 	// Light/Dark Mode
-	$("#light").click({},setDarkMode);
+	$("#light").change({},setDarkMode);
 	lightActions=[];
 	darkActions=[];
 	const actions=$(".action-img");
