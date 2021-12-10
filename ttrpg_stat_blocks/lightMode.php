@@ -15,7 +15,7 @@
 			);
 		}
 		else {
-			var_sump(setcookie(
+			var_dump(setcookie(
 				'lightMode',
 				$_POST['light'],
 				[
@@ -27,6 +27,7 @@
 					'samesite' => 'Strict'
 				]
 			));
+			echo '\n';
 		}
 	}
 	var_dump($_POST);
