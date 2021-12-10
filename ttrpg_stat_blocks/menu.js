@@ -43,11 +43,12 @@ function setup() {
 }
 
 function setDarkMode() {
+	console.log("Checkpoint");
 	const lightMode=$("#light")[0].checked;
 	const options={
 		light: (lightMode?'true':'false')
 	};
-	if(typeof devMode != 'undefined' && devMode){
+	if(typeof devMode != 'undefined' && devMode) {
 		options.devMode='true';
 	}
 	$.post(rootDir+"lightMode.php",options,function (data) {console.log(data)});
