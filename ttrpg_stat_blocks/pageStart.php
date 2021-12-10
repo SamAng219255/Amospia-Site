@@ -33,7 +33,7 @@
 	?>
 	<script src="/ttrpg_stat_blocks/table_sort.js"></script>
 </head>
-<?php echo '<body onload="setup()"'.($lightMode?' class="light"':'').'>' ?>
+<?php echo '<body onload="setup(); alert()"'.($lightMode?' class="light"':'').'>' ?>
 	<div id="sidebar">
 		<div id="nav-controls">
 			<div id="menu-close"></div>
