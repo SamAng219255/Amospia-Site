@@ -27,8 +27,8 @@
 					'samesite' => 'Strict'
 				]
 			));
-			echo '\n';
 		}
 	}
 	var_dump($_POST);
+	phpversion();
 ?>
