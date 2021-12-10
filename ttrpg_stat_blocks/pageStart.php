@@ -1,5 +1,5 @@
 <?php
-	$devMode=true;
+	$devMode=false;
 
 	$lightMode=false;
 	if(isset($_COOKIE['lightMode']))
