@@ -15,7 +15,7 @@
 			);
 		}
 		else {
-			setcookie(
+			var_sump(setcookie(
 				'lightMode',
 				$_POST['light'],
 				[
@@ -26,8 +26,7 @@
 					'httponly' => true,
 					'samesite' => 'Strict'
 				]
-			);
-			echo 'setting cookie';
+			));
 		}
 	}
 	var_dump($_POST);
