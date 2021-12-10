@@ -30,5 +30,5 @@
 		}
 	}
 	var_dump($_POST);
-	phpversion();
+	echo phpversion();
 ?>
