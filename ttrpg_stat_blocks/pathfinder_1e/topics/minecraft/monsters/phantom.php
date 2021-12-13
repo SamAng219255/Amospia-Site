@@ -47,7 +47,7 @@
 		],// Fortitude/Reflex/Will save good/bad and misc bonuses
 		'bb/Immune/bb undead traits',// Defensive Abilities
 		'sunlight flammability',// Weaknesses
-		'fly 60 ft.',// Speed
+		'fly 60 ft. (clumsy)',// Speed
 		[
 			[
 				'type' => 'Melee',

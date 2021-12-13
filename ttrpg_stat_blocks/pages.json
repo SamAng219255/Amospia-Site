@@ -1139,6 +1139,149 @@
 				"minecraft",
 				"planes_mc"
 			]
+		},
+		"skeleton_block": {
+			"display_name": "Skeleton",
+			"file_name": "skeleton.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"wither_skeleton": {
+			"display_name": "Wither Skeleton",
+			"file_name": "wither_skeleton.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"stray": {
+			"display_name": "Stray",
+			"file_name": "stray.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"zombie_block": {
+			"display_name": "Zombie",
+			"file_name": "zombie.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"zombie_villager": {
+			"display_name": "Zombie Villager",
+			"file_name": "zombie_villager.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"husk": {
+			"display_name": "Husk",
+			"file_name": "husk.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"drowned": {
+			"display_name": "Drowned",
+			"file_name": "drowned.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"zombie_pigman": {
+			"display_name": "Zombified Piglin",
+			"file_name": "zombie_pigman.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"zoglin": {
+			"display_name": "Zoglin",
+			"file_name": "zoglin.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"piglin": {
+			"display_name": "Piglin",
+			"file_name": "piglin.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"piglin_crossbow": {
+			"display_name": "Piglin, Crossbow",
+			"file_name": "piglin_crossbow.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"piglin_brute": {
+			"display_name": "Piglin, Brute",
+			"file_name": "piglin_brute.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"blazing_shield": {
+			"display_name": "Blazing Shield",
+			"file_name": "blazing_shield.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"spells"
+			]
 		}
 	},
 	"sort_tree": [
@@ -1658,6 +1801,11 @@
 											"type": "leaf"
 										}
 									]
+								},
+								{
+									"name": "spells_mc",
+									"display_name": "Spells",
+									"type": "leaf"
 								}
 							]
 						}

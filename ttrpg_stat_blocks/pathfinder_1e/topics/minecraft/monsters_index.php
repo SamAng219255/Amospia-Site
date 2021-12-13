@@ -218,6 +218,90 @@
 				'5',
 				'aberration',
 				'any (The End)'
+			],
+			[
+				'Skeleton',
+				'link' => 'monsters/skeleton.php',
+				'3',
+				'undead',
+				'any'
+			],
+			[
+				'Wither Skeleton',
+				'link' => 'monsters/wither_skeleton.php',
+				'5',
+				'undead',
+				'the Nether (nether fortresses)'
+			],
+			[
+				'Stray',
+				'link' => 'monsters/stray.php',
+				'4',
+				'undead',
+				'any (cold areas)'
+			],
+			[
+				'Zombie',
+				'link' => 'monsters/zombie.php',
+				'2',
+				'undead',
+				'any'
+			],
+			[
+				'Zombie Villager',
+				'link' => 'monsters/zombie_villager.php',
+				'2',
+				'undead',
+				'any'
+			],
+			[
+				'Husk',
+				'link' => 'monsters/husk.php',
+				'3',
+				'undead',
+				'deserts'
+			],
+			[
+				'Drowned',
+				'link' => 'monsters/drowned.php',
+				'2',
+				'undead',
+				'near water or underwater'
+			],
+			[
+				'Drowned, Trident Thrower',
+				'link' => 'monsters/drowned.php#block-Drowned,-Trident-Thrower',
+				'2',
+				'undead',
+				'near water or underwater'
+			],
+			[
+				'Zombified Piglin',
+				'link' => 'monsters/zombie_pigman.php',
+				'4',
+				'undead',
+				'the Nether'
+			],
+			[
+				'Zoglin',
+				'link' => 'monsters/zoglin.php',
+				'5',
+				'undead',
+				'the Nether'
+			],
+			[
+				'Blaze, Lesser',
+				'link' => 'monsters/blaze_lesser.php',
+				'3',
+				'outsider',
+				'any (The Nether)'
+			],
+			[
+				'Inferno',
+				'link' => 'monsters/inferno.php',
+				'11',
+				'outsider',
+				'any (The Nether)'
 			]
 		]
 	);

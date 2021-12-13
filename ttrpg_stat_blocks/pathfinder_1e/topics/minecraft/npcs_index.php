@@ -30,9 +30,22 @@
 		],
 		[
 			[
-				'',
-				'',
-				''
+				'Piglin, Swordsman',
+				'link' => 'monsters/piglin.php',
+				'5',
+				'piglin fighter 5'
+			],
+			[
+				'Piglin, Crossbowman',
+				'link' => 'monsters/piglin_crossbow.php',
+				'4',
+				'piglin fighter 5'
+			],
+			[
+				'Piglin, Brute',
+				'link' => 'monsters/piglin_brute.php',
+				'7',
+				'piglin fighter 8'
 			]
 		]
 	);

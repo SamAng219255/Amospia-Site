@@ -360,7 +360,7 @@
 		}
 		echo '</div></div>';
 	}
-	function monsterBlockAuto($name='',$name2=false,$lore='',$cr=1,$mr=false,$customXp=false,$race='',$classes=[],$alignment="N",$size="Medium",$type='',$initMod=0,$mythInit=false,$senses='',$percMod=0,$aura='',$ac=[],$hdp=[1,8],$saves=[['good'=>false,'mod'=>0],['good'=>false,'mod'=>0],['good'=>false,'mod'=>0]],$defAb='',$weak='',$speed=30,$attacks=[],$reach=5,$specAtt='',$spelllike=false,$spellcast=[],$spellnote='',$stats=[],$bab=1,$cmbSpec=0,$cmdSpec=0,$feats='',$skills='',$lang='',$sq='',$enviro='',$organiz='',$treas='',$specAb=[],$desc='') {
+	function monsterBlockAuto($name='',$name2=false,$lore='',$cr=1,$mr=false,$customXp=false,$race='',$classes=[],$alignment="N",$size="Medium",$type='',$initMod=0,$mythInit=false,$senses='',$percMod=0,$aura='',$ac=[],$hdp=[1,8],$saves=[['good'=>false,'mod'=>0],['good'=>false,'mod'=>0],['good'=>false,'mod'=>0]],$defAb='',$weak='',$speed=30,$attacks=[],$reach=5,$specAtt='',$spelllike=false,$spellcast=[],$spellnote='',$stats=[],$bab=1,$cmbSpec=0,$cmdSpec=0,$feats='',$skills='',$lang='',$sq='',$enviro='',$organiz='',$treas='',$specAb=[],$desc='',$gear=[]) {
 		/*echo '<pre>name ';
 		var_dump($name);
 		echo '<br>name2 ';
@@ -464,6 +464,8 @@
 		if(!isset($stats['cha']))
 			$stats['cha']=10;
 		foreach ($stats as $stat => $val) {
+			if($stat=='maxDex')
+				continue;
 			if(is_string($val)) {
 				$statMods[$stat]=floor($stats[$val]/2)-5;
 				$stats[$stat]=0;
@@ -471,6 +473,8 @@
 			else
 				$statMods[$stat]=floor($val/2)-5;
 		}
+		if(isset($stats['maxDex']) && $stats['maxDex']<$statMods['dex'])
+			$statMods['dex']=$stats['maxDex'];
 		$perc=$statMods['wis']+$percMod;
 		$acVals=[
 			'ac' => 10,
@@ -496,7 +500,57 @@
 		$acVals['touch']+=$sizeMod;
 		$acVals['flat']+=$sizeMod;
 		$acModStr.=sprintf('%+d Dex)',$statMods['dex']);
-		$babNum=floor($hdp[0]*$bab);
+		$hdpTotal=[0,0,0];
+		$babNum=0;
+		$hp=0;
+		$hpStr='';
+		$fort=0;
+		$will=0;
+		$refl=0;
+		if(is_array($hdp[0])) {
+			$hdList='';
+			$ind=0;
+			foreach ($hdp as $key=>$hdPool) {
+				if($key==='note')
+					continue;
+				if($key==='stat')
+					continue;
+				$hdpTotal[0]+=$hdPool[0];
+				$hdpTotal[1]+=$hdPool[1]*$hdPool[0];
+				$hdpTotal[2]+=$hdPool[2];
+				$hp+=floor($hdPool[0]*($hdPool[1]+1)/2)+($hdPool[2]+$statMods[isset($hdp['stat'])?$hdp['stat']:'con']*$hdPool[0]);
+				if($ind>0)
+					$hdList.=', ';
+				$hdList.=sprintf('%dd%d',$hdPool[0],$hdPool[1]);
+				$babNum+=floor($hdPool[0]*$bab[$ind]);
+				$fort+=($saves[0]['good'][$ind] ? floor($hdPool[0]/2)+2 : floor($hdPool[0]/3));
+				$will+=($saves[1]['good'][$ind] ? floor($hdPool[0]/2)+2 : floor($hdPool[0]/3));
+				$refl+=($saves[2]['good'][$ind] ? floor($hdPool[0]/2)+2 : floor($hdPool[0]/3));
+				$ind++;
+			}
+			$hdpTotal[1]/=$hdpTotal[0];
+			$hpStr=sprintf('bb/hp/bb %d (%s %s)',
+				$hp,
+				$hdList,
+				sprintf('%+d',$hdpTotal[2]+$statMods[isset($hdp['stat'])?$hdp['stat']:'con']*$hdpTotal[0])
+			).(isset($hdp['note'])?$hdp['note']:'');
+		}
+		else {
+			$hdpTotal[0]=$hdp[0];
+			$hdpTotal[1]=$hdp[1];
+			$hdpTotal[2]=$hdp[2];
+			$babNum=floor($hdpTotal[0]*$bab);
+			$hp=floor($hdp[0]*($hdp[1]+1)/2)+($hdp[2]+$statMods[isset($hdp['stat'])?$hdp['stat']:'con']*$hdp[0]);
+			$hpStr=sprintf("bb/hp/bb %d (%dd%d%s)",
+				$hp,
+				$hdp[0],
+				$hdp[1],
+				sprintf('%+d',$hdp[2]+$statMods[isset($hdp['stat'])?$hdp['stat']:'con']*$hdp[0])
+			).(isset($hdp[3])?$hdp[3]:'');
+			$fort+=($saves[0]['good'] ? floor($hdpTotal[0]/2)+2 : floor($hdpTotal[0]/3));
+			$will+=($saves[1]['good'] ? floor($hdpTotal[0]/2)+2 : floor($hdpTotal[0]/3));
+			$refl+=($saves[2]['good'] ? floor($hdpTotal[0]/2)+2 : floor($hdpTotal[0]/3));
+		}
 		$cmbCaseStr='';
 		$cmbStr='';
 		$cmbVal=0;
@@ -575,16 +629,11 @@
 				'spaced' => false,
 				'texts' => quick_array([
 					"bb/AC/bb {$acVals['ac']}, bb/touch/bb {$acVals['touch']}, bb/flat-footed/bb {$acVals['flat']} {$acModStr}",
-					sprintf("bb/hp/bb %d (%dd%d%s)",
-						floor($hdp[0]*($hdp[1]+1)/2)+($hdp[2]+$statMods[isset($hdp['stat'])?$hdp['stat']:'con']*$hdp[0]),
-						$hdp[0],
-						$hdp[1],
-						sprintf('%+d',$hdp[2]+$statMods[isset($hdp['stat'])?$hdp['stat']:'con']*$hdp[0])
-					).(isset($hdp[3])?$hdp[3]:''),
+					$hpStr,
 					sprintf('bb/Fort/bb %+d, bb/Ref/bb %+d, bb/Will/bb %+d',
-						$statMods['con'] + $saves[0]['mod'] + ($saves[0]['good'] ? floor($hdp[0]/2)+2 : floor($hdp[0]/3)),
-						$statMods['dex'] + $saves[1]['mod'] + ($saves[1]['good'] ? floor($hdp[0]/2)+2 : floor($hdp[0]/3)),
-						$statMods['wis'] + $saves[2]['mod'] + ($saves[2]['good'] ? floor($hdp[0]/2)+2 : floor($hdp[0]/3))
+						$statMods['con'] + $saves[0]['mod'] + $fort,
+						$statMods['dex'] + $saves[1]['mod'] + $will,
+						$statMods['wis'] + $saves[2]['mod'] + $refl
 					)
 				])
 			],
@@ -649,9 +698,15 @@
 					);
 				}
 				else {
-					$attackSetStr.=sprintf('%s %+d (%s)',
+					$attackRoll=sprintf('%+d',$attack['mod']+$statMods[$attack['stat']]+$babNum+$sizeMod);
+					if(isset($attack['iterative'])) {
+						for($i=$babNum-5; $i>0; $i-=5) { 
+							$attackRoll.=sprintf('/%+d',$attack['mod']+$statMods[$attack['stat']]+$i+$sizeMod+$attack['iterative']);
+						}
+					}
+					$attackSetStr.=sprintf('%s %s (%s)',
 						$attack['name'],
-						$attack['mod']+$statMods[$attack['stat']]+$babNum+$sizeMod,
+						$attackRoll,
 						$attack['damage']
 					);
 				}
@@ -840,16 +895,46 @@
 			if(count($sq)>0) {
 				$sqStr='bb/SQ/bb ';
 				$first=true;
-				foreach ($sq as $languge) {
+				foreach ($sq as $quality) {
 					if($first) {
 						$first=false;
 					}
 					else {
 						$sqStr.=', ';
 					}
-					$sqStr.=$languge;
+					$sqStr.=$quality;
 				}
 				array_push($sections[2]['texts'], quick_format($sqStr));
+			}
+		}
+		if(is_string($gear)) {
+			if($gear!='')
+				array_push($sections[2]['texts'], quick_format($gear));
+		}
+		else {
+			if(count($gear)>0) {
+				$gearStr='';
+				$firstList=true;
+				foreach ($gear as $key=>$list) {
+					if($firstList) {
+						$firstList=false;
+					}
+					else {
+						$gearStr.='; ';
+					}
+					$gearStr.='bb/'.$key.'/bb ';
+					$firstItem=true;
+					foreach ($list as $item) {
+						if($firstItem) {
+							$firstItem=false;
+						}
+						else {
+							$gearStr.=', ';
+						}
+						$gearStr.=$item;
+					}
+				}
+				array_push($sections[2]['texts'], quick_format($gearStr));
 			}
 		}
 		if(count($specAb)>0) {
@@ -903,6 +988,103 @@
 			quick_array($vitals),
 			false,
 			$sections
+		);
+	}
+	function spellBlockAuto($name, $school, $descriptors=[], $levels=['wizard'=>0], $components=['V'=>0,'S'=>0,'M'=>0,'F'=>0,'DF'=>0], $time='1 standard action', $range='Close', $target=false, $effect=false, $area=false, $duration='instantaneous', $save='none', $sr=false, $desc='') {
+		$descriptorTxt='';
+		if(count($descriptors)>0) {
+			$descriptorTxt=' (';
+			$first=true;
+			foreach ($descriptors as $descriptor) {
+				if($first)
+					$first=false;
+				else
+					$descriptorTxt.=', ';
+				$descriptorTxt.=$descriptor;
+			}
+			$descriptorTxt.=')';
+		}
+		$levelTxt='';
+		$first=true;
+		foreach ($levels as $class=>$level) {
+			if($first)
+				$first=false;
+			else
+				$levelTxt.=', ';
+			$levelTxt.=$class.' '.$level;
+		}
+		if(!isset($components['V']))
+			$components['V']=0;
+		if(!isset($components['S']))
+			$components['S']=0;
+		if(!isset($components['M']))
+			$components['M']=0;
+		if(!isset($components['F']))
+			$components['F']=0;
+		if(!isset($components['DF']))
+			$components['DF']=0;
+		$compTxt='';
+		$first=true;
+		$componentList=['V','S','M','F','DF'];
+		foreach ($componentList as $comp) {
+			if($components[$comp]) {
+				if($first)
+					$first=false;
+				else
+					$compTxt.=', ';
+				$compTxt.=$comp;
+				if($components[$comp]===2)
+					$compTxt.='/DF';
+			}
+		}
+		$effects=[];
+		$ranges=['Personal'=>'personal','Touch'=>'touch','Close'=>'close (25 ft. + 5 ft./2 levels)','Medium'=>'medium (100 ft. + 10 ft./level)','Long'=>'long (400 ft. + 40 ft./level)','Unlimited'=>'unlimited'];
+		if(isset($ranges[$range]))
+			array_push($effects,'bb/Range/bb '.$ranges[$range]);
+		elseif(is_numeric($range))
+			array_push($effects,'bb/Range/bb '.$range.' ft.');
+		else
+			array_push($effects,'bb/Range/bb '.$range);
+		if($target)
+			array_push($effects,'bb/Target(s)/bb '.$target);
+		if($effect)
+			array_push($effects,'bb/Effect/bb '.$effect);
+		if($area)
+			array_push($effects,'bb/Area/bb '.$area);
+		array_push($effects,'bb/Duration/bb '.$duration);
+		array_push($effects,'bb/Saving Throw/bb '.$save.'; bb/Spell Resistance/bb '.($sr===true?'yes':($sr===false?'no':$sr)));
+		block(
+			$name,
+			'spell',
+			quick_array([
+				sprintf(
+					'bb/School/bb %s%s; bb/Level/bb %s',
+					$school,
+					$descriptorTxt,
+					$levelTxt
+				)
+			]),
+			false,
+			[
+				[
+					'title' => 'Casting',
+					'spaced' => false,
+					'texts' => quick_array([
+						'bb/Casting Time/bb '.$time,
+						'bb/Components/bb '.$compTxt
+					])
+				],
+				[
+					'title' => 'Effect',
+					'spaced' => false,
+					'texts' => quick_array($effects)
+				],
+				[
+					'title' => 'Description',
+					'spaced' => true,
+					'texts' => quick_array($desc)
+				]
+			]
 		);
 	}
 	function item2eBlock($name, $level=false, $rarity="Common", $traits=[], $price=false, $hands=false, $usage=false, $bulk=0, $activate=false, $description=[], $variations=[]) {

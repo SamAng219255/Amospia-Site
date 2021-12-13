@@ -155,7 +155,7 @@
 		'magic item quality',// Slot
 		'+8,000 gp',// Price
 		'—',// Weight
-		'ii/Curse of vanishing/ii can be applied to any magic item including magic weapons and armor with at least a +1 enhancement bonus. An odd curse, if a creature carrying an item enchanted with ii/curse of vanishing/ii dies the item is completely destroyed and reduced to dust. This effect occurs the moment the creature takes fatal damage before effects activate that would save them from death. ii/Curse of vanishing/ii is often placed on items when the owner doesn\'t want it found after they die.',// Desc
+		'ii/Curse of vanishing/ii can be applied to any magic item including magic weapons and armor with at least a +1 enhancement bonus. An odd curse, if the owner of an item enchanted with ii/curse of vanishing/ii dies the item is completely destroyed and reduced to dust. This effect occurs the moment the owner takes fatal damage before effects activate that would save them from death. A creature must be in possession of a ii/curse of vanishing/ii item for 24 hours before it they are counted as its owner. If the item leaves their possession for longer than 24 hours they are no longer considered its owner. ii/Curse of vanishing/ii is often placed on items when the owner doesn\'t want it found after they die.',// Desc
 		false,// Destruction
 		'bb/Requirements/bb Craft Magic Arms and Armor, ii/break, greater/ii; bb/Cost/bb +4,000 gp'// Construction
 	);
@@ -349,7 +349,7 @@
 		'weapon quality',// Slot
 		'varies',// Price
 		'—',// Weight
-		'This enchantment functions as an enhancement bonus for ranged weapons. This enchantment can only be placed on ranged weapons. This enchantment can be placed on any masterwork ranged weapon whether or not it already has an enhancement bonus. This enhancement stacks with any existing enhancement bonuses the weapon has and cannot increase the total enhancement bonus over the maximum limit. This enchantment can otherwise grant any degree of enhancement bonus and the cost is equal to adding an enhancement bonus of the same degree.',// Desc
+		'This enchantment functions as an enhancement bonus for ranged weapons. This enchantment can only be placed on ranged weapons. This enchantment can be placed on any masterwork ranged weapon whether or not it already has an enhancement bonus. This enhancement stacks with any existing enhancement bonuses the weapon has and cannot increase the total enhancement bonus over the maximum limit. This enchantment can otherwise grant any degree of enhancement bonus and the cost is equal to adding an enhancement bonus of the same degree. ii/Power/ii properties are generally written with the bonus in roman numerals following the property. (i.e. ii/power II/ii for a +2 bonus)',// Desc
 		false,// Destruction
 		'bb/Requirements/bb Craft Magic Arms and Armor, ii/magic weapon/ii or ii/magic weapon, greater/ii; bb/Cost/bb varies'// Construction
 	);
@@ -371,7 +371,7 @@
 		'armor quality',// Slot
 		'varies',// Price
 		'—',// Weight
-		'This enchantment functions as an enhancement bonus for armor. This enchantment can be placed on any masterwork armor whether or not it already has an enhancement bonus. This enhancement stacks with any existing enhancement bonuses the armor has and cannot increase the total enhancement bonus over the maximum limit. This enchantment can otherwise grant any degree of enhancement bonus and the cost is equal to adding an enhancement bonus of the same degree.',// Desc
+		'This enchantment functions as an enhancement bonus for armor. This enchantment can be placed on any masterwork armor whether or not it already has an enhancement bonus. This enhancement stacks with any existing enhancement bonuses the armor has and cannot increase the total enhancement bonus over the maximum limit. This enchantment can otherwise grant any degree of enhancement bonus and the cost is equal to adding an enhancement bonus of the same degree. ii/Protection/ii properties are generally written with the bonus in roman numerals following the property. (i.e. ii/protection II/ii for a +2 bonus)',// Desc
 		false,// Destruction
 		'bb/Requirements/bb Craft Magic Arms and Armor, ii/mage armor/ii; bb/Cost/bb varies'// Construction
 	);
@@ -426,7 +426,7 @@
 		'weapon quality',// Slot
 		'varies',// Price
 		'—',// Weight
-		'This enchantment functions as an enhancement bonus for melee weapons. This enchantment can only be placed on melee weapons. This enchantment can be placed on any masterwork melee weapon whether or not it already has an enhancement bonus. This enhancement stacks with any existing enhancement bonuses the weapon has and cannot increase the total enhancement bonus over the maximum limit. This enchantment can otherwise grant any degree of enhancement bonus and the cost is equal to adding an enhancement bonus of the same degree.',// Desc
+		'This enchantment functions as an enhancement bonus for melee weapons. This enchantment can only be placed on melee weapons. This enchantment can be placed on any masterwork melee weapon whether or not it already has an enhancement bonus. This enhancement stacks with any existing enhancement bonuses the weapon has and cannot increase the total enhancement bonus over the maximum limit. This enchantment can otherwise grant any degree of enhancement bonus and the cost is equal to adding an enhancement bonus of the same degree. ii/Sharpness/ii properties are generally written with the bonus in roman numerals following the property. (i.e. ii/sharpness II/ii for a +2 bonus)',// Desc
 		false,// Destruction
 		'bb/Requirements/bb Craft Magic Arms and Armor, ii/magic weapon/ii or ii/magic weapon, greater/ii; bb/Cost/bb varies'// Construction
 	);

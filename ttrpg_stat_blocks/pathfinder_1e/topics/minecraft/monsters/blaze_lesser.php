@@ -10,13 +10,13 @@
 		}
 	}
 ?>
-<title>Blaze</title>
+<title>Blaze, Lesser</title>
 <?php
 	monsterBlockAuto(
-		'Blaze',// name
-		false,// alt name
+		'Blaze, Lesser',// name
+		'Lesser Blaze',// alt name
 		'This swirling tornado of flame and smoke has a structure resembling a head with two, almost human-like, brown eyes.',// lore text
-		7,// CR
+		3,// CR
 		false,// MR
 		false,// Custom XP
 		'',// Race
@@ -24,16 +24,15 @@
 		'N',// Alignment
 		'Medium',// Size
 		'outsider (elemental, extraplanar, fire)',// Type
-		4,// Misc Initiative Mod
+		0,// Misc Initiative Mod
 		false,// Mythic Initiative
 		'darkvision 60 ft., smokesight',// Senses
-		12,// Misc Perception Mod
+		0,// Misc Perception Mod
 		'',// Aura
 		[
-			'dodge' => 1,
-			'natural' => 6
+			'natural' => 2
 		],// Misc AC bonuses
-		[9,10],// Number of hit dice, Hit dice size, <additional hp bonus>, <hp notes (fast healing/regen/etc)>
+		[4,10],// Number of hit dice, Hit dice size, <additional hp bonus>, <hp notes (fast healing/regen/etc)>
 		[
 			[
 				'good' => true,
@@ -70,7 +69,7 @@
 						'name' => '3 fire blasts',
 						'mod' => 0,
 						'stat' => 'dex',
-						'damage' => '2d8 fire'
+						'damage' => '1d8 fire'
 					]
 				]
 			]
@@ -83,7 +82,7 @@
 		[
 			'str' => 12,
 			'dex' => 16,
-			'con' => 18,
+			'con' => 14,
 			'int' => 2,
 			'wis' => 12,
 			'cha' => 2
@@ -94,22 +93,19 @@
 			'notes' => 'cannot be tripped'
 		],//CMD misc bonus and special cases
 		[
-			'Dodge',
 			'Far Shot',
-			'Improved Initiative',
-			'Mobility',
 			'Point-Blank Shot'
 		],// Feats
 		[
 			[
 				'skill' => 'Fly',
 				'stat' => 'dex',
-				'bonus' => 20
+				'bonus' => 15
 			],
 			[
 				'skill' => 'Perception',
 				'stat' => 'wis',
-				'bonus' => 12
+				'bonus' => 7
 			]
 		],// Skills
 		[],// Languages
@@ -121,7 +117,7 @@
 			[
 				'name' => 'Fire Blasts',
 				'type' => 'Ex',
-				'desc' => 'As a standard action, blaze can launch 3 blasts of flame at targets that each deal 2d8 points of fire damage. These are ranged touch attacks with a range increment of 25 feet. On a successful hit the target is also set on fire.'
+				'desc' => 'As a standard action, blaze can launch 3 blasts of flame at targets that deal 1d8 points of fire damage. These are ranged touch attacks with a range increment of 25 feet. On a successful hit the target is also set on fire.'
 			],
 			[
 				'name' => 'Smokesight',

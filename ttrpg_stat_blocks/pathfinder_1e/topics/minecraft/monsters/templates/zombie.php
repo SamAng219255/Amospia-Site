@@ -24,7 +24,7 @@
 			'Zombies are unthinking automatons, and can do little more than follow orders. When left unattended, zombies tend to mill about in search of living creatures to slaughter and devour. Zombies attack until destroyed, having no regard for their own safety.',
 			'Although capable of following orders, zombies are more often unleashed into an area with no command other than to kill living creatures. As a result, zombies are often encountered in packs, wandering around places the living frequent, looking for victims. Most zombies are created using animate dead. Such zombies are always of the standard type.',
 			'"Zombie" is an acquired template that can be added to any corporeal creature (other than an undead), referred to hereafter as the base creature.',
-			'bb/Challenge Rating/bb: The challenge rating may or may not change depending on the original creatures type and its number of racial hit dice. See ii/Table 1-2: Creature Hit Dice/ii under monster creation on page 290 of the ii/Pathfinder RPG Bestiary/ii for more details.',
+			'bb/Challenge Rating/bb: The challenge rating may or may not change depending on the original creatures type, its number of racial hit dice, and its reliance on feats, but is generally 1 less than the base creature. See ii/Table 1-2: Creature Hit Dice/ii and ii/Table 1-1: Monster Statistics by CR/ii under monster creation on page 290 of the ii/Pathfinder RPG Bestiary/ii for more details.',
 			'bb/Alignment/bb: Always neutral evil.',
 			'bb/Type/bb: The creature\'s type changes to undead. It retains any subtype except for alignment subtypes (such as good) and subtypes that indicate kind. It does not gain the augmented subtype. It uses all the base creature\'s statistics and special abilities except as noted here.',
 			'bb/Armor Class/bb: The creature gains additional natural armor based on its size. If the creature already had natural armor it is increased by the following amount instead.',
@@ -74,8 +74,8 @@
 			'bb/Speed/bb: All speeds possessed by the base creature are retained by the zombie at a -10 feet penalty (minimum 5 feet).',
 			'bb/Attacks/bb: A zombie retains all the attacks and weapon proficiencies of the base creature. It also gains a slam attack that deals damage based on the zombie\'s size, but as if it were one size category larger than its actual size.',
 			'bb/Special Attacks/bb: A zombie retains all special attacks of the base creature and gains the fire spreader special attack:',
-			'ii/Fire Spreader/ii (Ex): If a zombie is on fire for any reason including due to sunlight flammability, all of the zombie\'s natural attacks deal 1d6 fire damage. There is also a 33% chance that that any creature struck by the zombie\'s natural attacks will automatically catch on fire taking 1d6 points of fire damage each round for 2d4 rounds.',
-			'bb/Abilities/bb: Str +2, Dex –2. A zombie has no Con or Int score. If a zombie possesses class levels requiring an intelligence or constitution score, use the zombie\'s charisma score and increase it to the associated score of the base creature if it is greater.',
+			'ii/Fire Spreader/ii (Ex): If a zombie is on fire for any reason, including due to sunlight flammability, all of the zombie\'s natural attacks deal 1d6 fire damage. There is also a 33% chance that that any creature struck by the zombie\'s natural attacks will automatically catch on fire taking 1d6 points of fire damage each round for 2d4 rounds.',
+			'bb/Abilities/bb: Str +2, Dex –2. A zombie has no Con or Int score. Zombies have a minimum charisma score of 10. If a zombie possesses class levels requiring an intelligence or constitution score, use the zombie\'s charisma score and increase it to the associated score of the base creature if it is greater.',
 			'bb/BAB/bb: A zombie\'s base attack from any racial hit dice it possesses is equal to 3/4 its racial Hit Dice. It retains any base attack bonuses from class levels.',
 			'bb/Skills/bb: A zombie has no skill ranks.',
 			'bb/Feats/bb: A zombie loses all feats from Hit Dice and class levels possessed by the base creature, and does not gain feats as its Hit Dice increase, but it does retain any bonus feats it has and gains Toughness as a additional bonus feat.',
@@ -97,14 +97,15 @@
 				'spaced' => true,
 				'texts' => quick_array([
 					'Native to the Nether these zombies are better suited to their hot environment.',
-					'bb/Challenge Rating/bb: The CR of a nether zombie is the same as a typical zombie plus one.'
+					'bb/Challenge Rating/bb: The CR of a nether zombie is the same as a typical zombie plus one.',
 					'bb/Alignment/bb: Never Lawful, Chaotic, or Good. Unlike Typical zombies, nether zombies are not required to be evil, but creating one is still an evil act.',
 					'bb/Type/bb: The creature\'s type changes to undead and it gains the extraplanar subtype. It retains any subtype except for alignment subtypes (such as good) and subtypes that indicate kind. It does not gain the augmented subtype.',
-					'bb/Hit Dice/bb: Preserve HD from class levels, change racial HD to d8s, and inrease the number of racial hit dice by 1. Nether zombies use their Charisma modifiers to determine bonus hit points (instead of Constitution).',
+					'bb/Hit Dice/bb: Preserve HD from class levels, change racial HD to d8s, and increase the number of racial hit dice by 1. Nether zombies use their Charisma modifiers to determine bonus hit points (instead of Constitution).',
 					'bb/Defensive Abilities/bb: Nether zombies possess immunity to fire in addition to the defenses possessed by a typical zombie.',
 					'bb/Weaknesses/bb: Nether zombies lack the sunlight flammability weakness of typical zombies but retain all other weaknesses they possess.',
 					'bb/Special Attacks/bb: Nether zombies lack the fire spreader special attack of typical zombies but retain all other special attacks they possess.',
-					'bb/Abilities/bb: Str +2, Dex –2, Cha +2. A zombie has no Con or Int score. If a zombie possesses class levels requiring an intelligence or constitution score, use the zombie\'s charisma score and increase it to the associated score of the base creature if it is greater before increasing it by 2.'
+					'bb/Abilities/bb: Str +2, Dex –2, Cha +2. A zombie has no Con or Int score. Nether zombies have a minimum charisma score of 12. If a zombie possesses class levels requiring an intelligence or constitution score, use the zombie\'s charisma score and increase it to the associated score of the base creature if it is greater before increasing it by 2.',
+					'bb/Special Qualities/bb: Nether zombies lack the staggered quality of typical zombies but retain all other special qualities.'
 				])
 			],
 			[
@@ -112,11 +113,10 @@
 				'spaced' => true,
 				'texts' => quick_array([
 					'Native to the Desert these zombies are designed to take advantage of the desolate environment.',
-					'bb/Challenge Rating/bb: The CR of a husk is the same as a typical zombie plus one.',
+					'bb/Challenge Rating/bb: The CR of a husk is the same as a typical zombie.',
 					'bb/Type/bb: The creature\'s type changes to undead. It retains any subtype except for the aquatic or water subtypes, alignment subtypes (such as good), and subtypes that indicate kind. It does not gain the augmented subtype.',
-					'bb/Hit Dice/bb: Preserve HD from class levels, change racial HD to d8s, and inrease the number of racial hit dice by 1. Husks use their Charisma modifiers to determine bonus hit points (instead of Constitution).',
 					'bb/Weaknesses/bb: Husks lack the sunlight flammability weakness of typical zombies but retain all other weaknesses they possess.',
-					'bb/Attacks/bb: A husk retains all the attacks and weapon proficiencies of the base creature. It also gains two claw attacks that deals damage based on the husk\'s size, but as if it were one size category smaller than its actual size.',
+					'bb/Attacks/bb: A husk retains all the attacks and weapon proficiencies of the base creature. It also gains a bite attack that deals damage based on the husk\'s size.',
 					'bb/Special Attacks/bb: Husks lack the fire spreader special attack of typical zombies but retain all other special attacks they possess and gain the desiccating touch special attack.',
 					'ii/Desiccating Touch/ii (Su): Any creature hit by one of a husk\'s natural attacks must make a fortitude save with a DC equal to 10 plus half the husk\'s HD plus the husk\'s charisma modifier. If the creature fails the save it becomes fatigued and grows hungry and thirsty, requiring half again the normal amount of food and water for that day. If the creature fails the save against the attack a second time, the additional food and water requirement stacks, adding half again as much food and water as normal needed for each failure. Creatures of the water or aquatic subtypes take 1d6 desiccating damage from this ability regardless of the save. A husk can also deliver the effects of their desiccating touch by making a melee touch attack as a standard action.'
 				])
@@ -126,12 +126,11 @@
 				'spaced' => true,
 				'texts' => quick_array([
 					'An aquatic variant of zombies, these zombies plague the seas.',
-					'bb/Challenge Rating/bb: The CR of a drowned is the same as a typical zombie plus one.',
+					'bb/Challenge Rating/bb: The CR of a drowned is the same as a typical zombie, though drowned carrying magic tridents may have a higher CR.',
 					'bb/Type/bb: The creature\'s type changes to undead and it gains the aquatic subtype. It retains any subtype except for the fire subtype, alignment subtypes (such as good), and subtypes that indicate kind. It does not gain the augmented subtype.',
-					'bb/Hit Dice/bb: Preserve HD from class levels, change racial HD to d8s, and inrease the number of racial hit dice by 1. Drowned use their Charisma modifiers to determine bonus hit points (instead of Constitution).',
-					'bb/Weaknesses/bb: drowned lack the sunlight flammability weakness of typical zombies but retain all other weaknesses they possess.',
-					'bb/Speed/bb: Drowned retain any fly speed the base creature possessed but the speed is reduced by 10 feet to a minimum of 5 feet and the maneuverability drops to clumsy. Drowned gain a swim speed of 40 feet or retain any swim speed the base creature possessed if it is greater. All other speeds possessed by the base creature are retained by the drowned at a -10 feet penalty (minimum 5 feet).',
-					'bb/Attacks/bb: A drowned retains all the attacks and weapon proficiencies of the base creature and gains proficiency with tridents. Approximately 10% of all drowned wield tridents, these tridents may be magic and often have the frost, icy busrt, returning, shock, and shocking burst qualities. It also gains two claw attacks that deals damage based on the drowned\'s size, but as if it were one size category smaller than its actual size.',
+					'bb/Weaknesses/bb: Drowned lack the sunlight flammability weakness of typical zombies but retain all other weaknesses they possess.',
+					'bb/Speed/bb: Drowned retain any fly speed the base creature possessed but the speed is reduced by 20 feet to a minimum of 5 feet and the maneuverability drops to clumsy. Drowned gain a swim speed of 40 feet or retain any swim speed the base creature possessed if it is greater. All other speeds possessed by the base creature are retained by the drowned at a -10 feet penalty (minimum 5 feet).',
+					'bb/Attacks/bb: A drowned retains all the attacks and weapon proficiencies of the base creature and gains proficiency with tridents. Approximately 10% of all drowned wield tridents, these tridents may be magic and often have the channeling, frost, icy burst, and loyalty qualities. Drowned can have have oddly highly enchanted equipment without offsetting wealth as almost all tridents carried by drowned have to curse of vanishing quality preventing the items from being looted. Be warned however, as players may not appreciate having expensive loot dangled in front of them that simply turns to dust when the fight is over. It also gains a slam attack that deals damage based on the drowned\'s size, but as if it were one size category larger than its actual size.',
 					'bb/Special Attacks/bb: Drowned lack the fire spreader special attack of typical zombies but retain all other special attacks they possess.',
 					'bb/Special Qualities/bb: Drowned retain all the special qualities of a typical zombie and gain the following special quality.',
 					'ii/Trident Mastery/ii (Ex): Drowned treat a trident as having a range increment of 20 feet when underwater, even though throwing weapons underwater is normally ineffective for most combatants.'

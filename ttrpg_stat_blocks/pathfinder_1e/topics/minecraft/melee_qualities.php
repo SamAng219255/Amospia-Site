@@ -10,7 +10,7 @@
 		}
 	}
 ?>
-<title>Shield Qualities</title>
+<title>Melee Weapon Qualities</title>
 <script>
 	bonusRegEx=/(?:((?:\+|-)\d) bonus|((?:\+|-)\d{1,3}(?:,\d{3})*) gp)/;
 	initialSort=true;
