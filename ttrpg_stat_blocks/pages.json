@@ -1275,7 +1275,28 @@
 		"blazing_shield": {
 			"display_name": "Blazing Shield",
 			"file_name": "blazing_shield.php",
-			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"directory": "pathfinder_1e/topics/minecraft/spells/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"spells"
+			]
+		},
+		"spells_mc": {
+			"display_name": "Spells",
+			"file_name": "spells.php",
+			"directory": "pathfinder_1e/topics/minecraft/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft"
+			]
+		},
+		"lesser_blind": {
+			"display_name": "Blindness, Lesser",
+			"file_name": "lesser_blind.php",
+			"directory": "pathfinder_1e/topics/minecraft/spells/",
 			"sort_path": [
 				"pathfinder_1e",
 				"topics",

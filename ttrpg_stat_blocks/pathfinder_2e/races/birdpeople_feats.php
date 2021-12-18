@@ -70,6 +70,54 @@
 				'Piccilli Weapon Familiarity',
 				'You are attuned to the weapons of your Piccilli ancestors and are particularly deadly when using them.'
 			],
+			[
+				'<a href="birdpeople_feat_display.php#block-Sharpened-Talons">Sharpened Talons</a>',
+				'Common',
+				'piccilli',
+				'1',
+				'',
+				'Your talons are sharper than normal.'
+			],
+			[
+				'<a href="birdpeople_feat_display.php#block-Nesting">Nesting</a>',
+				'Common',
+				'piccilli',
+				'1',
+				'',
+				'You are skilled at building soft and safe nests from common materials found in the wild.'
+			],
+			[
+				'<a href="birdpeople_feat_display.php#block-Pecking">Pecking</a>',
+				'Common',
+				'piccilli',
+				'1',
+				'',
+				'Your beak is sharp and can be used to peck at creatures that come too close.'
+			],
+			[
+				'<a href="birdpeople_feat_display.php#block-Strengthened-Feet">Strengthened Feet</a>',
+				'Common',
+				'piccilli',
+				'1',
+				'',
+				'Your feet are stronger and can be used to hold objects, even while walking or flying.'
+			],
+			[
+				'<a href="birdpeople_feat_display.php#block-Kleptomaniac">Kleptomaniac</a>',
+				'Common',
+				'piccilli',
+				'5',
+				'Magpie heritage',
+				'You are skilled at covertly swiping items that attract your attention.'
+			],
+			[
+				'<a href="birdpeople_feat_display.php#block-Polarized-Vision">Polarized Vision</a>',
+				'Common',
+				'piccilli',
+				'5',
+				'',
+				'Like many birds, your vision is polarized such that reflections are often hidden from view allowing you to see through the surface of water or through fog without issue.'
+			]
 		]
 	);
 	require '../../pageEnd.php';

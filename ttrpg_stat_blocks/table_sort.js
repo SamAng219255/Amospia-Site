@@ -70,6 +70,8 @@ function setupTableSort() {
 			$($("table").children().children()[0].children[sortIndex]).removeClass("sort-asc").removeClass("sort-dec");
 		}
 		else {
+			if(sortStatus.sort!==undefined)
+				$($("table").children().children()[0].children[sortStatus.sort]).removeClass("sort-asc").removeClass("sort-dec")
 			sortStatus={sort:sortIndex,asc:(!sort || sortIndex!=sortStatus.sort || !sortStatus.asc)?1:0};
 			$($("table").children().children()[0].children[sortStatus.sort]).removeClass("sort-asc").removeClass("sort-dec").addClass(sortStatus.asc ? "sort-asc" : "sort-dec");
 			let rows=$($("table").children()[0].children).get();

@@ -36,9 +36,9 @@
 				'spaced' => false,
 				'texts' => quick_array([
 					'Piccilli who resemble eagles or other power hunters often inherit their skill and prowess, and talons.',
-					'You gain a talon melee unarmed attack that deals 1d6 slashing damage made with the talons on your feet. Your talon attack is in the brawling group and has the agile, finesse, and unarmed traits.',
+					'You gain a talon melee unarmed attack that deals 1d6 slashing damage made with the talons on your feet. Your talon attack is in the brawling group and has the agile, finesse, and unarmed traits. When you attack with these talons, you generally flap once to push yourself into the air before rotating your body and reaching up with your feet before raking back downwards and landing back on your feet, using your wings to help maneuver, though a clever piccilli can generally devise other methods for succesfully clawing with their feet.',
 					'/tt/1st Ed. Hybrid Description:',
-					'You gain talons natural attack that deals 1d6 slashing damage and is a primary attack.'
+					'You gain a talons natural attack that deals 1d6 slashing damage and is a primary attack. When you attack with these talons, you generally flap once to push yourself into the air before rotating your body and reaching up with your feet before raking back downwards and landing back on your feet, using your wings to help maneuver, though a clever piccilli can generally devise other methods for succesfully clawing with their feet.'
 				])
 			],
 			[

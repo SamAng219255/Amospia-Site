@@ -79,18 +79,30 @@
 		$lineCount=count($arr);
 		for($i=0; $i<$lineCount; $i++) {
 			$arr[$i]=trim($arr[$i]);
-			if(substr($arr[$i], 0, 4)=='/mm/') {
-				$arr[$i]='<span class="inset">'.trim(substr($arr[$i],4)).'</span>';
+			$temp=$arr[$i];
+			$head='';
+			$foot='';
+			if(substr($temp, 0, 4)=='/mm/') {
+				$head.='<span class="inset">';
+				$tail='</span>'.$tail;
+				$temp=trim(substr($temp,4));
 			}
-			if(substr($arr[$i], 0, 4)=='/ee/') {
-				$arr[$i]='<span class="enlarged">'.trim(substr($arr[$i],4)).'</span>';
+			if(substr($temp, 0, 4)=='/ee/') {
+				$head.='<span class="enlarged">';
+				$tail='</span>'.$tail;
+				$temp=trim(substr($temp,4));
 			}
-			if(substr($arr[$i], 0, 4)=='/rr/') {
-				$arr[$i]='<span class="reduced">'.trim(substr($arr[$i],4)).'</span>';
+			if(substr($temp, 0, 4)=='/rr/') {
+				$head.='<span class="reduced">';
+				$tail='</span>'.$tail;
+				$temp=trim(substr($temp,4));
 			}
-			if(substr($arr[$i], 0, 4)=='/tt/') {
-				$arr[$i]='<span class="subtitle">'.trim(substr($arr[$i],4)).'</span>';
+			if(substr($temp, 0, 4)=='/tt/') {
+				$head.='<span class="subtitle">';
+				$tail='</span>'.$tail;
+				$temp=trim(substr($temp,4));
 			}
+			$arr[$i]=$head.$temp.$foot;
 		}
 		return quick_format($arr);
 	}

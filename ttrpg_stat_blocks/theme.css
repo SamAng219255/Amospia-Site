@@ -40,7 +40,7 @@ span.reduced {
 	font-size: 0.75em;
 }
 span.inset {
-	display: inline-block;
+	display: block;
 	margin-left: 1em;
 }
 span.subtitle {

@@ -19,6 +19,24 @@
 			'Potions come with many different effects. Each different effect can be found in regular, splash, and lingering variants. Splash potions can be thrown as throwing weapons with a range increment of 10 feet except that they deal no damage, instead a splash potion affects all creatures who are splashed by the potion though they had drank the potion. Lingering potions behave similarly except that they can only be thrown targetting grid intersections and they leave an alchemical mist behind that lasts for 3d6 rounds afterward. This mist does not obscure vision but, any creature who passes through this mist, or ends their turn in it, take, are affected by the original potion, however each time a creature receives this effect the duration of the mist is reduced by one round. If the duration is reduced to zero, the mist ends. Alchemical ammunition can also be created that carry the properties of the properties of the potion. Any creature hit with an attack from one of these pieces of ammunition is affected as though they had drank the potion. Splash potions cost an additional 300 gp plus 400 gp per caster level of the potion unless specified otherwise. Lingering potions cost an additional 1,400 gp plus 800 gp per caster level of the potion unless specified otherwise. Alchemical ammunition costs the same as a splash potion of the same type unless specified otherwise. Any effect that has a duration can be bought in an extended duration version that increases the duration and doubles the price. All lingering potions can be bought with an extended duration and doing so also doubles the duration of the resulting mist.'
 		]
 	);
+	contents(
+		[
+			'Potion of Regeneration',
+			'Potion of Swiftness',
+			'Potion of Energy Resistance',
+			'Potion of Healing',
+			'Potion of Night Vision',
+			'Potion of Strength',
+			'Potion of Leaping',
+			'Potion of Water Breathing',
+			'Potion of Invisibility',
+			'Potion of Slow Falling',
+			'Potion of Poison',
+			'Potion of Weakness',
+			'Potion of Slowness',
+			'Potion of Harming'
+		]
+	);
 	magicItemBlockAuto(
 		'Potion of Regeneration',// Name
 		'Conjuration',// School
