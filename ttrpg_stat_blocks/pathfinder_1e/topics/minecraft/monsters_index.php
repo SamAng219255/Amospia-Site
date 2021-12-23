@@ -302,6 +302,27 @@
 				'11',
 				'outsider',
 				'any (The Nether)'
+			],
+			[
+				'Skeletal Horse',
+				'link' => 'monsters/skeleton_horse.php',
+				'2',
+				'undead',
+				'any'
+			],
+			[
+				'Zombified Horse',
+				'link' => 'monsters/zombie_horse.php',
+				'2',
+				'undead',
+				'any'
+			],
+			[
+				'Skeletal Horse Archer',
+				'link' => 'monsters/skeleton_archer.php',
+				'4',
+				'undead',
+				'any'
 			]
 		]
 	);

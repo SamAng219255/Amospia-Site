@@ -21,7 +21,7 @@
 		false,// Custom XP
 		'',// Race
 		[],// Class
-		'N',// Alignment
+		'NE',// Alignment
 		'Tiny',// Size
 		'outsider (extraplanar, incorporeal)',// Type
 		0,// Misc Initiative Mod

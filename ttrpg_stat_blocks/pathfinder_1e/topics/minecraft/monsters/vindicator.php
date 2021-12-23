@@ -10,36 +10,36 @@
 		}
 	}
 ?>
-<title>Piglin, Brute</title>
+<title>Vindicator</title>
 <?php
 	monsterBlockAuto(
-		'Piglin, Brute',// name
-		'Piglin',// alt name
-		'This large porcine humanoid comes charging toward you, a large, golden, single-bladed, bearded axe raised in the air.',// lore text
+		'Vindicator',// name
+		false,// alt name
+		'This gray skinned humanoid stares you down as he raises his axe and charges towards you.',// lore text
 		7,// CR
 		false,// MR
 		false,// Custom XP
-		'Piglin',// Race
+		'Illager',// Race
 		[
 			'fighter' => 8
 		],// Class
-		'CN',// Alignment
+		'NE',// Alignment
 		'Medium',// Size
-		'monstrous humanoid (extraplanar)',// Type
+		'humanoid (illager)',// Type
 		0,// Misc Initiative Mod
 		false,// Mythic Initiative
-		'darkvision 60 ft., scent',// Senses
+		'',// Senses
 		0,// Misc Perception Mod
 		'',// Aura
 		[
-			'armor' => 9,
+			'armor' => 10,
 			'dodge' => 1
 		],// Misc AC bonuses
 		[8,10,8],// Number of hit dice, Hit dice size, <additional hp bonus>, <hp notes (fast healing/regen/etc)>
 		[
 			[
 				'good' => true,
-				'mod' => 1
+				'mod' => 3
 			],
 			[
 				'good' => false,
@@ -47,7 +47,7 @@
 			],
 			[
 				'good' => false,
-				'mod' => 1
+				'mod' => 2
 			]
 		],// Fortitude/Reflex/Will save good/bad and misc bonuses
 		'bravery +2',// Defensive Abilities
@@ -74,12 +74,12 @@
 		'',// Spell Casting Note
 		[
 			'str' => 18,
-			'dex' => 13,
-			'maxDex' => 2,
-			'con' => 12,
+			'dex' => 14,
+			'maxDex' => 3,
+			'con' => 16,
 			'int' => 10,
-			'wis' => 14,
-			'cha' => 8
+			'wis' => 8,
+			'cha' => 12
 		],// Stats
 		1,// BAB (1=full, 0.75=3/4 or medium, 0.5=half or slow)
 		[
@@ -92,6 +92,7 @@
 			'Cleave',
 			'Dodge*',
 			'Great Cleave',
+			'Great Fortitude*',
 			'Improved Critical* (Greataxe)',
 			'Improved Sunder',
 			'Power Attack*',
@@ -102,51 +103,43 @@
 		],// Feats
 		[
 			[
+				'skill' => 'Intimidate',
+				'stat' => 'cha',
+				'bonus' => 11
+			],
+			[
 				'skill' => 'Perception',
 				'stat' => 'wis',
 				'bonus' => 8
-			],
-			[
-				'skill' => 'Survival',
-				'stat' => 'wis',
-				'bonus' => 11
 			]
 		],// Skills
 		[
-			'Piglin'
+			'Illager'
 		],// Languages
-		'armor training 2, greed',// Special Qualities
-		'the Nether (bastion remnants)',// Environment
+		'armor training 2',// Special Qualities
+		'any (Illager Mansions)',// Environment
 		'any',// Organization
 		'NPC gear',// Treasure
 		[
 			[
-				'name' => 'Greed',
-				'type' => 'Ex',
-				'desc' => 'Piglins receive a +2 racial bonus on appraise checks to determine the price of non-magical goods containing precious metals or gemstones.'
-			],
-			[
 				'name' => 'Hatred',
 				'type' => 'Ex',
-				'desc' => 'Piglins have a long standing fear and hatred of the many undead that call the Nether their home and have learned to fight back. Piglins have a +1 racial bonus on attack rolls against undead.'
+				'desc' => 'While Illagers hate all other races, the illagers have a particular hatred for their human and knom cousins. Illagers have a +1 racial bonus on attack rolls against humans and knom.'
 			]
 		],// Special Abilities
 		$desc='',// Description
 		[
 			'Combat Gear' => [
-				'ii/ as/potions_mc|Potion of Regeneration| potion of regeneration II /as /ii',
-				'ii/ as/potions_mc|Potion of Healing| potion of healing II /as /ii',
-				'ii/ as/potions_mc|Potion of Strength| potion of strength I /as /ii',
-				'ii/ as/potions_mc|Potion of Swiftness| potions of swiftness I /as /ii (2)',
-				'ii/ as/potions_mc|Potion of Leaping| potion of leaping I /as /ii'
+				'ii/ as/potions_mc|Potion of Regeneration| potion of regeneration III /as /ii',
+				'ii/ as/potions_mc|Potion of Swiftness| potions of swiftness II /as /ii'
 			],
 			'Gear' => [
-				'ii/ as/enchants_mc|Sharpness| sharpness I /as as/special_materials_mc|Piglin Forged Gold| piglin forged gold /as greataxes/ii (2)',
-				'ii/ as/enchants_mc|Protection| protection I /as stone lamellar/ii',
-				'ii/cloak of resistance/ii (+1)',
-				'ii/muleback cords/ii',
-				'250 gp in mundane equipment',
-				'250 gp in gold jewelry'
+				'ii/ as/enchants_mc|Sharpness| sharpness I /as greataxe/ii',
+				'ii/ as/enchants_mc|Protection| protection I /as full plate/ii',
+				'ii/+1 protean cloak/ii (Will)',
+				'ii/ aa/ compass|redstone compass /aa /ii (tuned to a ii/ aa/lodestone| netherite lodestone /aa /ii in the mansion)',
+				'100 gp mundane equipment',
+				'a collection of emeralds in three sizes together worth approximately 400 gp'
 			]
 		]
 	);

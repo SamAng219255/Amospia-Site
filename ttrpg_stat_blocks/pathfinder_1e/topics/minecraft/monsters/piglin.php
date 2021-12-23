@@ -128,13 +128,13 @@
 		$desc='',// Description
 		[
 			'Combat Gear' => [
-				'ii/<a href="../items/potions.php#block-Potion-of-Regeneration" target="_blank">potion of regeneration II</a>/ii',
-				'ii/<a href="../items/potions.php#block-Potion-of-Swiftness" target="_blank">potions of swiftness I</a>/ii (2)',
-				'ii/<a href="../items/potions.php#block-Potion-of-Leaping" target="_blank">potion of leaping I</a>/ii'
+				'ii/ as/potions_mc|Potion of Regeneration| potion of regeneration II /as /ii',
+				'ii/ as/potions_mc|Potion of Swiftness| potions of swiftness I /as /ii (2)',
+				'ii/ as/potions_mc|Potion of Leaping| potion of leaping I /as /ii'
 			],
 			'Gear' => [
-				'ii/<a href="../enchants.php#block-Sharpness" target="_blank">sharpness I</a> <a href="../materials.php#block-Piglin-Forged-Gold" target="_blank">piglin forged gold</a> greatsword/ii',
-				'ii/<a href="../enchants.php#block-Protection" target="_blank">protection I</a> stone lamellar/ii',
+				'ii/ as/enchants_mc|Sharpness| sharpness I /as as/special_materials_mc|Piglin Forged Gold| piglin forged gold /as greatsword/ii',
+				'ii/ as/enchants_mc|Protection| protection I /as stone lamellar/ii',
 				'100 gp mundane equipment',
 				'100 gp of golden jewelry'
 			]

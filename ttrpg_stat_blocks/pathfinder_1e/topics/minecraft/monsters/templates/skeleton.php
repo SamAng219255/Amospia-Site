@@ -100,6 +100,7 @@
 					'bb/Abilities/bb: A skeleton\'s Dexterity and Charisma increase by +2. It has no Constitution score. Wither skeletons have a minimum charisma score of 12. If a skeleton possesses class levels requiring a constitution score, use the skeleton\'s charisma score and increases it to the constitution score of the base creature if it is greater, before increasing it by 2. A wither skeleton cannot have a charisma of less than 14.',
 					'bb/Skills/bb: A wither skeleton has a number of skill ranks from racial hit dice equal to 4 + its intelligence modifier. It generally spends a number of skill ranks in Knowledge (religion) equal to its number of hit dice but otherwise retains as many skill ranks from racial hit dice as possible in skills they are in on the base creature. Extra skill ranks can be spent as normal.',
 					'bb/Feats/bb: A wither skeleton retains all feats possessed by the base creature and gains Improved Initiative as a bonus feat.',
+					'bb/Languages/bb: A wither skeleton retains all its languages and learns Necril.'
 				])
 			],
 			[

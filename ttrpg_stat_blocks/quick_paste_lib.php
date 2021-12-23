@@ -22,6 +22,15 @@
 	function addSign($x) {
 		return ($x<0?''.$x:'+'.$x);
 	}
+	function endsWith($haystack, $needle) {
+		$length = strlen($needle);
+		return $length > 0 ? substr($haystack, -$length) === $needle : true;
+	}
+	function debugPrint($val) {
+		echo '<pre>';
+		var_dump($val);
+		echo '</pre>';
+	}
 	function ordinalSuffix($x) {
 		if($x==0)
 			return '';
@@ -37,34 +46,70 @@
 			return 'rd';
 		return 'th';
 	}
+	function quick_link_format(&$str) {
+		global $pages;
+		$matches=[];
+		if(preg_match_all('/aa\/(.+?)\|/', $str, $matches)) {
+			foreach ($matches[1] as $match) {
+				$entry=$pages['entries'][$match];
+				$str=preg_replace('/aa\/(.+?)\|/', '<a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'" target="_blank">', $str, 1);
+				$str=preg_replace('/ ?\/aa/', '</a>', $str, 1);
+			}
+		}
+		$matches=[];
+		if(preg_match_all('/as\/(.+?)\|(.+?)\|/', $str, $matches)) {
+			foreach ($matches[1] as $ind=>$match) {
+				$entry=$pages['entries'][$match];
+				$str=preg_replace('/as\/(.+?)\|(.+?)\|/', '<a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'#block-'.str_replace(' ','-',$matches[2][$ind]).'" target="_blank">', $str, 1);
+				$str=preg_replace('/ ?\/as/', '</a>', $str, 1);
+			}
+		}
+	}
+	function quick_format_string($subject) {
+		$str=$subject;
+		$str=preg_replace('/ ?\/bb/', '</b>', $str);
+		$str=preg_replace('/bb\/ ?/', '<b>', $str);
+		$str=preg_replace('/ ?\/ii/', '</i>', $str);
+		$str=preg_replace('/ii\/ ?/', '<i>', $str);
+		$str=preg_replace('/ ?\/uu/', '</u>', $str);
+		$str=preg_replace('/uu\/ ?/', '<u>', $str);
+		$str=preg_replace('/ ?\/ss/', '</sup>', $str);
+		$str=preg_replace('/ss\/ ?/', '<sup>', $str);
+		$str=preg_replace('/ ?\/__/', '</sub>', $str);
+		$str=preg_replace('/__\/ ?/', '<sub>', $str);
+		$str=preg_replace('/\/fa\//', '<img src="https://2e.aonprd.com/Images/Actions/FreeAction.png" alt="Free Action" class="action-img">', $str);
+		$str=preg_replace('/\/ra\//', '<img src="https://2e.aonprd.com/Images/Actions/Reaction.png" alt="Rection" class="action-img">', $str);
+		$str=preg_replace('/\/1a\//', '<img src="https://2e.aonprd.com/Images/Actions/OneAction.png" alt="One Action" class="action-img">', $str);
+		$str=preg_replace('/\/2a\//', '<img src="https://2e.aonprd.com/Images/Actions/TwoActions.png" alt="Two Actions" class="action-img">', $str);
+		$str=preg_replace('/\/3a\//', '<img src="https://2e.aonprd.com/Images/Actions/ThreeActions.png" alt="Three Actions" class="action-img">', $str);
+		$str=preg_replace('/\/fl\//', '<img src="https://2e.aonprd.com/Images/Actions/FreeAction_I.png" alt="Free Action" class="action-img">', $str);
+		$str=preg_replace('/\/rl\//', '<img src="https://2e.aonprd.com/Images/Actions/Reaction_I.png" alt="Rection" class="action-img">', $str);
+		$str=preg_replace('/\/1l\//', '<img src="https://2e.aonprd.com/Images/Actions/OneAction_I.png" alt="One Action" class="action-img">', $str);
+		$str=preg_replace('/\/2l\//', '<img src="https://2e.aonprd.com/Images/Actions/TwoActions_I.png" alt="Two Actions" class="action-img">', $str);
+		$str=preg_replace('/\/3l\//', '<img src="https://2e.aonprd.com/Images/Actions/ThreeActions_I.png" alt="Three Actions" class="action-img">', $str);
+		$str=preg_replace('/ ?\/qq/', '</span>', $str);
+		$str=preg_replace('/qq\/ ?/', '<span class="trait">', $str);
+		$str=preg_replace('/ ?\/qb/', '</span>', $str);
+		$str=preg_replace('/qb\/ ?/', '<span class="trait trait-blue">', $str);
+		$str=preg_replace('/ ?\/qo/', '</span>', $str);
+		$str=preg_replace('/qo\/ ?/', '<span class="trait trait-orange">', $str);
+
+		quick_link_format($str);
+
+		return $str;
+	}
 	function quick_format($subject) {
 		$str=$subject;
-		$str=str_replace('/bb', '</b>', $str);
-		$str=str_replace('bb/', '<b>', $str);
-		$str=str_replace('/ii', '</i>', $str);
-		$str=str_replace('ii/', '<i>', $str);
-		$str=str_replace('/uu', '</u>', $str);
-		$str=str_replace('uu/', '<u>', $str);
-		$str=str_replace('/ss', '</sup>', $str);
-		$str=str_replace('ss/', '<sup>', $str);
-		$str=str_replace('/__', '</sub>', $str);
-		$str=str_replace('__/', '<sub>', $str);
-		$str=str_replace('/fa/', '<img src="https://2e.aonprd.com/Images/Actions/FreeAction.png" alt="Free Action" class="action-img">', $str);
-		$str=str_replace('/ra/', '<img src="https://2e.aonprd.com/Images/Actions/Reaction.png" alt="Rection" class="action-img">', $str);
-		$str=str_replace('/1a/', '<img src="https://2e.aonprd.com/Images/Actions/OneAction.png" alt="One Action" class="action-img">', $str);
-		$str=str_replace('/2a/', '<img src="https://2e.aonprd.com/Images/Actions/TwoActions.png" alt="Two Actions" class="action-img">', $str);
-		$str=str_replace('/3a/', '<img src="https://2e.aonprd.com/Images/Actions/ThreeActions.png" alt="Three Actions" class="action-img">', $str);
-		$str=str_replace('/fl/', '<img src="https://2e.aonprd.com/Images/Actions/FreeAction_I.png" alt="Free Action" class="action-img">', $str);
-		$str=str_replace('/rl/', '<img src="https://2e.aonprd.com/Images/Actions/Reaction_I.png" alt="Rection" class="action-img">', $str);
-		$str=str_replace('/1l/', '<img src="https://2e.aonprd.com/Images/Actions/OneAction_I.png" alt="One Action" class="action-img">', $str);
-		$str=str_replace('/2l/', '<img src="https://2e.aonprd.com/Images/Actions/TwoActions_I.png" alt="Two Actions" class="action-img">', $str);
-		$str=str_replace('/3l/', '<img src="https://2e.aonprd.com/Images/Actions/ThreeActions_I.png" alt="Three Actions" class="action-img">', $str);
-		$str=str_replace('/qq', '</span>', $str);
-		$str=str_replace('qq/', '<span class="trait">', $str);
-		$str=str_replace('/qb', '</span>', $str);
-		$str=str_replace('qb/', '<span class="trait trait-blue">', $str);
-		$str=str_replace('/qo', '</span>', $str);
-		$str=str_replace('qo/', '<span class="trait trait-orange">', $str);
+
+		if(is_array($str)) {
+			foreach ($str as $ind=>$trueStr) {
+				$str[$ind]=quick_format_string($str[$ind]);
+			}
+		}
+		else {
+			$str=quick_format_string($str);
+		}
+
 		return $str;
 	}
 	function quick_array($subject) {
@@ -536,8 +581,8 @@
 				$hdList.=sprintf('%dd%d',$hdPool[0],$hdPool[1]);
 				$babNum+=floor($hdPool[0]*$bab[$ind]);
 				$fort+=($saves[0]['good'][$ind] ? floor($hdPool[0]/2)+2 : floor($hdPool[0]/3));
-				$will+=($saves[1]['good'][$ind] ? floor($hdPool[0]/2)+2 : floor($hdPool[0]/3));
-				$refl+=($saves[2]['good'][$ind] ? floor($hdPool[0]/2)+2 : floor($hdPool[0]/3));
+				$refl+=($saves[1]['good'][$ind] ? floor($hdPool[0]/2)+2 : floor($hdPool[0]/3));
+				$will+=($saves[2]['good'][$ind] ? floor($hdPool[0]/2)+2 : floor($hdPool[0]/3));
 				$ind++;
 			}
 			$hdpTotal[1]/=$hdpTotal[0];
@@ -560,8 +605,59 @@
 				sprintf('%+d',$hdp[2]+$statMods[isset($hdp['stat'])?$hdp['stat']:'con']*$hdp[0])
 			).(isset($hdp[3])?$hdp[3]:'');
 			$fort+=($saves[0]['good'] ? floor($hdpTotal[0]/2)+2 : floor($hdpTotal[0]/3));
-			$will+=($saves[1]['good'] ? floor($hdpTotal[0]/2)+2 : floor($hdpTotal[0]/3));
-			$refl+=($saves[2]['good'] ? floor($hdpTotal[0]/2)+2 : floor($hdpTotal[0]/3));
+			$refl+=($saves[1]['good'] ? floor($hdpTotal[0]/2)+2 : floor($hdpTotal[0]/3));
+			$will+=($saves[2]['good'] ? floor($hdpTotal[0]/2)+2 : floor($hdpTotal[0]/3));
+		}
+		$fortFinal=$statMods['con'] + $saves[0]['mod'] + $fort;
+		$fortNote='';
+		if(isset($saves[0]['cases'])) {
+			$fortNote=' (';
+			$first=true;
+			foreach ($saves[0]['cases'] as $case => $val) {
+				if($first)
+					$first=false;
+				else
+					$fortNote.=', ';
+				$fortNote.=sprintf('%+d vs. %s',$fortFinal+$val,$case);
+			}
+			if($first)
+				$fortNote='';
+			else
+				$fortNote.=')';
+		}
+		$reflFinal=$statMods['dex'] + $saves[1]['mod'] + $refl;
+		$reflNote='';
+		if(isset($saves[1]['cases'])) {
+			$reflNote=' (';
+			$first=true;
+			foreach ($saves[1]['cases'] as $case => $val) {
+				if($first)
+					$first=false;
+				else
+					$reflNote.=', ';
+				$reflNote.=sprintf('%+d vs. %s',$reflFinal+$val,$case);
+			}
+			if($first)
+				$reflNote='';
+			else
+				$reflNote.=')';
+		}
+		$willFinal=$statMods['wis'] + $saves[2]['mod'] + $will;
+		$willNote='';
+		if(isset($saves[2]['cases'])) {
+			$willNote=' (';
+			$first=true;
+			foreach ($saves[2]['cases'] as $case => $val) {
+				if($first)
+					$first=false;
+				else
+					$willNote.=', ';
+				$willNote.=sprintf('%+d vs. %s',$willFinal+$val,$case);
+			}
+			if($first)
+				$willNote='';
+			else
+				$willNote.=')';
 		}
 		$cmbCaseStr='';
 		$cmbStr='';
@@ -642,10 +738,14 @@
 				'texts' => quick_array([
 					"bb/AC/bb {$acVals['ac']}, bb/touch/bb {$acVals['touch']}, bb/flat-footed/bb {$acVals['flat']} {$acModStr}",
 					$hpStr,
-					sprintf('bb/Fort/bb %+d, bb/Ref/bb %+d, bb/Will/bb %+d',
-						$statMods['con'] + $saves[0]['mod'] + $fort,
-						$statMods['dex'] + $saves[1]['mod'] + $will,
-						$statMods['wis'] + $saves[2]['mod'] + $refl
+					sprintf('bb/Fort/bb %+d%s, bb/Ref/bb %+d%s, bb/Will/bb %+d%s%s',
+						$fortFinal,
+						$fortNote,
+						$reflFinal,
+						$reflNote,
+						$willFinal,
+						$willNote,
+						isset($saves[3])?'; '.$saves[3]:''
 					)
 				])
 			],
@@ -762,8 +862,9 @@
 		}
 		if(count($spellcast)>0) {
 			foreach ($spellcast as $class) {
-				$lines=[sprintf('%s Spells %s (CL %d%s; concentration %+d)',
+				$lines=[sprintf('%s %s %s (CL %d%s; concentration %+d)',
 					$class['class'],
+					isset($class['spellForm'])?$class['spellForm']:'Spells',
 					$class['prep'] ? 'Prepared' : 'Known',
 					$class['level'],
 					ordinalSuffix($class['level']),
@@ -792,6 +893,8 @@
 							$spellLine.='ii/'.$spell['name'].'/ii';
 							if(isset($spell['domain']) && $spell['domain'])
 								$spellLine.='ss/D/ss';
+							if(isset($spell['count']) && $spell['count']>1)
+								$spellLine.=' x'.$spell['count'];
 							if(isset($spell['dc']) && $spell['dc'])
 								$spellLine.=sprintf(' (DC %d)',10+$sl+$statMods[$class['stat']]+(isset($spell['dcMod'])?$spell['dcMod']:0));
 							if(isset($spell['note']))
@@ -1005,7 +1108,7 @@
 	function spellBlockAuto($name, $school, $descriptors=[], $levels=['wizard'=>0], $components=['V'=>0,'S'=>0,'M'=>0,'F'=>0,'DF'=>0], $time='1 standard action', $range='Close', $target=false, $effect=false, $area=false, $duration='instantaneous', $save='none', $sr=false, $desc='') {
 		$descriptorTxt='';
 		if(count($descriptors)>0) {
-			$descriptorTxt=' (';
+			$descriptorTxt=' [';
 			$first=true;
 			foreach ($descriptors as $descriptor) {
 				if($first)
@@ -1014,7 +1117,7 @@
 					$descriptorTxt.=', ';
 				$descriptorTxt.=$descriptor;
 			}
-			$descriptorTxt.=')';
+			$descriptorTxt.=']';
 		}
 		$levelTxt='';
 		$first=true;
@@ -1047,6 +1150,8 @@
 				$compTxt.=$comp;
 				if($components[$comp]===2)
 					$compTxt.='/DF';
+				if(isset($components[$comp.'Note']))
+					$compTxt.=" ({$components[$comp.'Note']})";
 			}
 		}
 		$effects=[];

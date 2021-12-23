@@ -20,11 +20,6 @@
 			While many of Minecraft\'s mechanics focus on survival and tech progression through acquiring materials to craft better equipment, the portions of the game that I have translated over primarily focus on the combat and exploration portions of the game as that is what Pathfinder 1st Edition (PF1E) is most compatible with. I have included all of the creatures in the game capable of combat and the three races of npcs that can be found. I have created translations of all of the game\'s enchantments hat can be converted to PF1E. I have also included a list of alchemical items that mirror the effects of Minecraft\'s potion system and several special materials to compensate for exotic tool materials found in Minecraft. Explanations for how the materials make sense and what they do are included with their descriptions.
 			Minecraft\'s most well known special materials for making tools is diamond and try as I might I cannot imagine an actual sword made of solid diamond nor how such a thing would be manufactured. As such, given the nature of diamond tools and the fact that diamonds etymologically owe their name to adamantine, in my default setting for these rules adamantine will replace diamonds as a material. If you wish to include diamond tools I reccomend using the same statistics as adamaentine.
 			bb/TODO:/bb
-			Skeleton horse stat block
-			Skeleton horseman stat block
-			Zombie horse stat block
-			NPC stat blocks (Evoker, Illusioner, Vindicator, Pillager)
-			Spells (Vexxing Call, Evoker\'s Fangs, Lesser Blindness)
 			Wither
 			Ender Dragon
 			Soul Torch/Lantern'

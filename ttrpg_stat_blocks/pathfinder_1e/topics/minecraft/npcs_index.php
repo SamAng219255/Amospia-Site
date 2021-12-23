@@ -46,6 +46,36 @@
 				'link' => 'monsters/piglin_brute.php',
 				'7',
 				'piglin fighter 8'
+			],
+			[
+				'Evoker',
+				'link' => 'monsters/evoker.php',
+				'8',
+				'illager conjurer 9'
+			],
+			[
+				'Illusioner',
+				'link' => 'monsters/illusioner.php',
+				'8',
+				'illager wizard 9'
+			],
+			[
+				'Pillager',
+				'link' => 'monsters/pillager.php',
+				'6',
+				'illager fighter 7'
+			],
+			[
+				'Vindicator',
+				'link' => 'monsters/vindicator.php',
+				'7',
+				'illager fighter 8'
+			],
+			[
+				'Witch',
+				'link' => 'monsters/witch.php',
+				'7',
+				'illager alchemist 8'
 			]
 		]
 	);

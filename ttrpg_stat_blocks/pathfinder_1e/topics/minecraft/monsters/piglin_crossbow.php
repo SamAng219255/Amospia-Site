@@ -26,14 +26,13 @@
 		'CN',// Alignment
 		'Medium',// Size
 		'monstrous humanoid (extraplanar)',// Type
-		4,// Misc Initiative Mod
+		0,// Misc Initiative Mod
 		false,// Mythic Initiative
 		'darkvision 60 ft., scent',// Senses
 		0,// Misc Perception Mod
 		'',// Aura
 		[
-			'armor' => 5,
-			'dodge' => 1
+			'armor' => 5
 		],// Misc AC bonuses
 		[5,10,5],// Number of hit dice, Hit dice size, <additional hp bonus>, <hp notes (fast healing/regen/etc)>
 		[
@@ -85,9 +84,7 @@
 		0,//CMD misc bonus and special cases
 		[
 			'Deadly Aim*',
-			'Improved Initiative*',
 			'Point-Blank Shot',
-			'Precise Shot',
 			'Rapid Reload',
 			'Toughness*',
 			'Vital Strike*',
@@ -128,14 +125,14 @@
 		$desc='',// Description
 		[
 			'Combat Gear' => [
-				'ii/<a href="../items/potions.php#block-Potion-of-Regeneration" target="_blank">potion of regeneration II</a>/ii',
-				'ii/<a href="../items/potions.php#block-Potion-of-Swiftness" target="_blank">potions of swiftness I</a>/ii (2)',
-				'ii/<a href="../items/potions.php#block-Potion-of-Leaping" target="_blank">potion of leaping I</a>/ii'
+				'ii/ as/potions_mc|Potion of Regeneration| potion of regeneration II /as /ii',
+				'ii/ as/potions_mc|Potion of Swiftness| potions of swiftness I /as /ii (2)',
+				'ii/ as/potions_mc|Potion of Leaping| potion of leaping I /as /ii'
 			],
 			'Gear' => [
 				'heavy crossbow with 100 bolts',
-				'ii/+1 <a href="../materials.php#block-Netherite" target="_blank">netherite</a> bolts/ii (10)',
-				'ii/<a href="../enchants.php#block-Protection" target="_blank">protection I</a> hide armor/ii',
+				'ii/+1 as/special_materials_mc|Netherite| netherite /as bolts/ii (10)',
+				'ii/ as/enchants_mc|Protection| protection I /as hide armor/ii',
 				'100 gp mundane equipment',
 				'100 gp of golden jewelry'
 			]

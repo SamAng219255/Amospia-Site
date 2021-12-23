@@ -139,7 +139,10 @@
 				'bonus' => 2
 			]
 		],// Skills
-		[],// Languages
+		[
+			'Common',
+			'Necril'
+		],// Languages
 		'armor training 1',// Special Qualities
 		'the Nether (nether fortresses)',// Environment
 		'any',// Organization

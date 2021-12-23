@@ -133,9 +133,9 @@
 
 					$pageId="";
 					$pageCount=count($pages['entries']);
-					$filename=pathinfo(debug_backtrace()[0]['file'])['basename'];
+					$filePathInfo=pathinfo(debug_backtrace()[0]['file']);
 					foreach($pages['entries'] as $id => $entry) {
-						if($entry['file_name']==$filename) {
+						if($entry['file_name']===$filePathInfo['basename'] && endsWith($filePathInfo['dirname'],substr($entry['directory'],0,-1))) {
 							$pageId=$id;
 						}
 					}

@@ -1303,6 +1303,116 @@
 				"minecraft",
 				"spells"
 			]
+		},
+		"vexing_call": {
+			"display_name": "Vexing Call",
+			"file_name": "vexing_call.php",
+			"directory": "pathfinder_1e/topics/minecraft/spells/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"spells"
+			]
+		},
+		"evoker_fangs": {
+			"display_name": "Evoker's Fangs",
+			"file_name": "evoker_fangs.php",
+			"directory": "pathfinder_1e/topics/minecraft/spells/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"spells"
+			]
+		},
+		"evoker": {
+			"display_name": "Evoker",
+			"file_name": "evoker.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"pillager": {
+			"display_name": "Pillager",
+			"file_name": "pillager.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"vindicator": {
+			"display_name": "Vindicator",
+			"file_name": "vindicator.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"witch": {
+			"display_name": "Witch",
+			"file_name": "witch.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"illusioner": {
+			"display_name": "Illusioner",
+			"file_name": "illusioner.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"skeleton_horse": {
+			"display_name": "Skeletal Horse",
+			"file_name": "skeleton_horse.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"zombie_horse": {
+			"display_name": "Zombified Horse",
+			"file_name": "zombie_horse.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"skeleton_archer": {
+			"display_name": "Skeletal Horse Archer",
+			"file_name": "skeleton_archer.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
 		}
 	},
 	"sort_tree": [

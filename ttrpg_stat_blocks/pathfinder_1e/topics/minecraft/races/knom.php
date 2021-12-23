@@ -36,7 +36,7 @@
 			"Greed: Knom receive a +2 racial bonus on appraise checks to determine the price of non-magical goods containing precious metals or gemstones.",
 			"Focused Study: At 1st, 8th, and 16th level, knom gain Skill Focus in a skill of their choice as a bonus feat.",
 			"Flexible Bonus Feat: Knom receive an extra feat of their choice at first level.",
-			"Languages: Knom begin play speaking Common. Knom with high Intelligence scores can choose from the following languages: Dwarven, Elven, Gnoll, Gnome, Goblin, Halfling, Orcish."
+			"Languages: Knom begin play speaking Knom and Common. Knom with high Intelligence scores can choose from the following languages: Dwarven, Elven, Gnoll, Gnome, Goblin, Halfling, Orcish."
 		],
 		false
 	);

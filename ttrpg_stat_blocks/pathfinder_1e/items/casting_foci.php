@@ -32,7 +32,8 @@
 		"Bleeding Bone",
 		"Curse Rod",
 		"Genesis Branch",
-		"Blessed Claw"
+		"Blessed Claw",
+		"Casting Weapon"
 	]);
 	magicItemBlockAuto(
 		"Focusing Wand",
@@ -470,6 +471,17 @@
 		"bb/Requirements/bb Craft Wondrous Item; bb/Cost/bb 2,500 gp
 		bb/Upgrade/bb:
 		bb/Requirements/bb Craft Wondrous Item, ii/greater magic fang/ii; bb/Cost/bb 150 gp, see text"
+	);
+	magicItemBlockAuto(
+		"Casting Weapon",
+		"Transmutation",
+		5,
+		"Focus",
+		"+2,000 gp",
+		"—",
+		"This quality can be applied to any weapon. A weapon with this quality conjers all the benefits of, and possesses all of the properties of, a ii/<a href=\"#block-Focusing-Wand\">focusing wand</a>/ii.",
+		false,
+		"bb/Requirements/bb Craft Wondrous Item, ii/magic weapon/ii, ii/weaponwand/ii; bb/Cost/bb +1,000 gp"
 	);
 	require '../../pageEnd.php';
 ?>
