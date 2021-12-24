@@ -21,8 +21,7 @@
 			Minecraft\'s most well known special materials for making tools is diamond and try as I might I cannot imagine an actual sword made of solid diamond nor how such a thing would be manufactured. As such, given the nature of diamond tools and the fact that diamonds etymologically owe their name to adamantine, in my default setting for these rules adamantine will replace diamonds as a material. If you wish to include diamond tools I reccomend using the same statistics as adamaentine.
 			bb/TODO:/bb
 			Wither
-			Ender Dragon
-			Soul Torch/Lantern'
+			Ender Dragon'
 		)
 	);
 	require $startDir.'pageEnd.php';

@@ -1545,6 +1545,19 @@
 				"items",
 				"magic_items"
 			]
+		},
+		"soul_soil": {
+			"display_name": "Prepared Soul Soil",
+			"file_name": "soul_soil.php",
+			"directory": "pathfinder_1e/topics/minecraft/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"items",
+				"equipment_mc",
+				"misc_equip_mc"
+			]
 		}
 	},
 	"sort_tree": [
