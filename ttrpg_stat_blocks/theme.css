@@ -204,10 +204,10 @@ body.light .toc-title {
 	margin-bottom: 1em;
 }
 .to-contents>.toc-title:after {
-	content: " ◂"
+	content: "\00a0◂"
 }
 .to-contents.open>.toc-title:after {
-	content: " ▾"
+	content: "\00a0▾"
 }
 #sidebar-label {
 	padding: 1em 1em 0;
@@ -231,10 +231,10 @@ body.light .toc-title {
 	cursor: pointer;
 }
 .sort-asc:after {
-	content: " ▾";
+	content: "\00a0▾";
 }
 .sort-dec:after {
-	content: " ▴";
+	content: "\00a0▴";
 }
 .block {
 	padding: 0.5em;

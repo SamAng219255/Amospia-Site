@@ -8,7 +8,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"items",
-				"magic_items"
+				"magic_items",
+				"magic_weapons"
 			]
 		},
 		"barjoskadwaz": {
@@ -18,6 +19,7 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"items",
+				"magic_items",
 				"artifacts"
 			]
 		},
@@ -28,6 +30,7 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"items",
+				"magic_items",
 				"artifacts"
 			]
 		},
@@ -47,7 +50,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"items",
-				"magic_items"
+				"magic_items",
+				"wondrous"
 			]
 		},
 		"rod_of_planar_creation": {
@@ -57,7 +61,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"items",
-				"magic_items"
+				"magic_items",
+				"wondrous"
 			]
 		},
 		"rod_of_timeless_spells": {
@@ -67,6 +72,7 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"items",
+				"magic_items",
 				"artifacts"
 			]
 		},
@@ -77,7 +83,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"items",
-				"magic_items"
+				"magic_items",
+				"wondrous"
 			]
 		},
 		"unprepared_wizards_component_pouch": {
@@ -87,7 +94,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"items",
-				"magic_items"
+				"magic_items",
+				"wondrous"
 			]
 		},
 		"shield_of_solid_force": {
@@ -97,7 +105,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"items",
-				"magic_items"
+				"magic_items",
+				"magic_armor"
 			]
 		},
 		"void_plate": {
@@ -107,7 +116,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"items",
-				"non-magic_items"
+				"equipment",
+				"armor"
 			]
 		},
 		"shade_silk_armor": {
@@ -117,7 +127,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"items",
-				"non-magic_items"
+				"equipment",
+				"armor"
 			]
 		},
 		"runed_chain": {
@@ -127,6 +138,7 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"items",
+				"magic_items",
 				"artifacts"
 			]
 		},
@@ -137,6 +149,7 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"items",
+				"magic_items",
 				"artifacts"
 			]
 		},
@@ -155,7 +168,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"items",
-				"magic_items"
+				"magic_items",
+				"wondrous"
 			]
 		},
 		"planewalkers": {
@@ -305,10 +319,10 @@
 		"casting_foci2": {
 			"display_name": "Casting Foci",
 			"file_name": "casting_foci.php",
-			"directory": "pathfinder_2e/equipment/",
+			"directory": "pathfinder_2e/equipment_2e/",
 			"sort_path": [
 				"pathfinder_2e",
-				"equipment"
+				"equipment_2e"
 			]
 		},
 		"enosrian": {
@@ -394,30 +408,30 @@
 		"focus_fundamental": {
 			"display_name": "Casting Channel Fundamental Runes",
 			"file_name": "focus_fundamental.php",
-			"directory": "pathfinder_2e/equipment/runes/",
+			"directory": "pathfinder_2e/equipment_2e/runes/",
 			"sort_path": [
 				"pathfinder_2e",
-				"equipment",
+				"equipment_2e",
 				"runes"
 			]
 		},
 		"focus_property": {
 			"display_name": "Casting Channel Property Runes",
 			"file_name": "focus_property.php",
-			"directory": "pathfinder_2e/equipment/runes/",
+			"directory": "pathfinder_2e/equipment_2e/runes/",
 			"sort_path": [
 				"pathfinder_2e",
-				"equipment",
+				"equipment_2e",
 				"runes"
 			]
 		},
 		"focus_potency": {
 			"display_name": "Casting Potency Rune",
 			"file_name": "focus_potency.php",
-			"directory": "pathfinder_2e/equipment/runes/",
+			"directory": "pathfinder_2e/equipment_2e/runes/",
 			"sort_path": [
 				"pathfinder_2e",
-				"equipment",
+				"equipment_2e",
 				"runes",
 				"focus_fundamental"
 			]
@@ -425,10 +439,10 @@
 		"focus_fund": {
 			"display_name": "Heightening Rune",
 			"file_name": "focus_fund.php",
-			"directory": "pathfinder_2e/equipment/runes/",
+			"directory": "pathfinder_2e/equipment_2e/runes/",
 			"sort_path": [
 				"pathfinder_2e",
-				"equipment",
+				"equipment_2e",
 				"runes",
 				"focus_fundamental"
 			]
@@ -457,7 +471,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"items",
-				"magic_items"
+				"magic_items",
+				"wondrous"
 			]
 		},
 		"endless_book": {
@@ -467,7 +482,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"items",
-				"magic_items"
+				"magic_items",
+				"wondrous"
 			]
 		},
 		"lazuli_dragon": {
@@ -1413,6 +1429,122 @@
 				"minecraft",
 				"monsters_mc"
 			]
+		},
+		"armor": {
+			"display_name": "Armor",
+			"file_name": "armor_index.php",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment"
+			]
+		},
+		"weapons": {
+			"display_name": "Weapons",
+			"file_name": "weapons_index.php",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment"
+			]
+		},
+		"special_materials": {
+			"display_name": "Special Materials",
+			"file_name": "materials.php",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment"
+			]
+		},
+		"misc_equip": {
+			"display_name": "Miscellaneous",
+			"file_name": "misc_index.php",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment"
+			]
+		},
+		"armor_qualities": {
+			"display_name": "Armor Qualities",
+			"file_name": "armor_qualities.php",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_armor"
+			]
+		},
+		"shield_qualities": {
+			"display_name": "Shield Qualities",
+			"file_name": "shield_qualities.php",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_armor"
+			]
+		},
+		"specific_armors": {
+			"display_name": "Specific Magic Armors",
+			"file_name": "specific_armors.php",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_armor"
+			]
+		},
+		"melee_qualities": {
+			"display_name": "Melee Weapon Qualities",
+			"file_name": "melee_qualities.php",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons"
+			]
+		},
+		"ranged_qualities": {
+			"display_name": "Ranged Weapon Qualities",
+			"file_name": "ranged_qualities.php",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons"
+			]
+		},
+		"specific_weapons": {
+			"display_name": "Specific Magic Armors",
+			"file_name": "specific_weapons.php",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons"
+			]
+		},
+		"wondrous": {
+			"display_name": "Wondrous Items",
+			"file_name": "wondrous_index.php",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items"
+			]
 		}
 	},
 	"sort_tree": [
@@ -1489,33 +1621,28 @@
 					"type": "branch",
 					"nodes": [
 						{
-							"name": "artifacts",
-							"display_name": "Artifacts",
+							"name": "equipment",
+							"display_name": "Equipment",
 							"type": "branch",
 							"nodes": [
 								{
-									"name": "barjoskadwaz",
-									"display_name": "Barjoskadwaz",
+									"name": "armor",
+									"display_name": "Armor",
 									"type": "leaf"
 								},
 								{
-									"name": "blade_of_the_forests_shadow",
-									"display_name": "Blade of the Forest's Shadow",
+									"name": "weapons",
+									"display_name": "Weapons",
 									"type": "leaf"
 								},
 								{
-									"name": "rod_of_timeless_spells",
-									"display_name": "Rod of Timeless Spells",
+									"name": "special_materials",
+									"display_name": "Special Materials",
 									"type": "leaf"
 								},
 								{
-									"name": "runed_chain",
-									"display_name": "Runed Chain",
-									"type": "leaf"
-								},
-								{
-									"name": "staff_of_truthlight",
-									"display_name": "Staff of Truthlight",
+									"name": "misc_equip",
+									"display_name": "Miscellaneous",
 									"type": "leaf"
 								}
 							]
@@ -1526,66 +1653,149 @@
 							"type": "branch",
 							"nodes": [
 								{
-									"name": "casting_foci",
-									"display_name": "Casting Foci",
-									"type": "leaf"
+									"name": "artifacts",
+									"display_name": "Artifacts",
+									"type": "branch",
+									"nodes": [
+										{
+											"name": "barjoskadwaz",
+											"display_name": "Barjoskadwaz",
+											"type": "leaf"
+										},
+										{
+											"name": "blade_of_the_forests_shadow",
+											"display_name": "Blade of the Forest's Shadow",
+											"type": "leaf"
+										},
+										{
+											"name": "rod_of_timeless_spells",
+											"display_name": "Rod of Timeless Spells",
+											"type": "leaf"
+										},
+										{
+											"name": "runed_chain",
+											"display_name": "Runed Chain",
+											"type": "leaf"
+										},
+										{
+											"name": "staff_of_truthlight",
+											"display_name": "Staff of Truthlight",
+											"type": "leaf"
+										}
+									]
 								},
 								{
-									"name": "lazuli_band",
-									"display_name": "Band of Lazuli and Iron",
-									"type": "leaf"
+									"name": "magic_armor",
+									"display_name": "Armor",
+									"type": "branch",
+									"nodes": [
+										{
+											"name": "armor_qualities",
+											"display_name": "Armor Qualities",
+											"type": "limb",
+											"nodes": [
+												
+											]
+										},
+										{
+											"name": "shield_qualities",
+											"display_name": "Shield Qualities",
+											"type": "limb",
+											"nodes": [
+												
+											]
+										},
+										{
+											"name": "specific_armors",
+											"display_name": "Specific Magic Armors",
+											"type": "limb",
+											"nodes": [
+												{
+													"name": "shield_of_solid_force",
+													"display_name": "Shield of Solid Force",
+													"type": "leaf"
+												}
+											]
+										}
+									]
 								},
 								{
-									"name": "endless_book",
-									"display_name": "Book of Endless Pages",
-									"type": "leaf"
+									"name": "magic_weapons",
+									"display_name": "Weapons",
+									"type": "branch",
+									"nodes": [
+										{
+											"name": "casting_foci",
+											"display_name": "Casting Foci",
+											"type": "leaf"
+										},
+										{
+											"name": "melee_qualities",
+											"display_name": "Melee Weapon Qualities",
+											"type": "limb",
+											"nodes": [
+												
+											]
+										},
+										{
+											"name": "ranged_qualities",
+											"display_name": "Ranged Weapon Qualities",
+											"type": "limb",
+											"nodes": [
+												
+											]
+										},
+										{
+											"name": "specific_weapons",
+											"display_name": "Specific Magic Weapons",
+											"type": "limb",
+											"nodes": [
+												
+											]
+										}
+									]
 								},
 								{
-									"name": "goodberry_sprig",
-									"display_name": "Goodberry Sprig",
-									"type": "leaf"
-								},
-								{
-									"name": "money_changers_pouch",
-									"display_name": "Money Changer's Pouch",
-									"type": "leaf"
-								},
-								{
-									"name": "ring_of_morphic_steel",
-									"display_name": "Ring of Morphic Steel",
-									"type": "leaf"
-								},
-								{
-									"name": "rod_of_planar_creation",
-									"display_name": "Rod of Planar Creation",
-									"type": "leaf"
-								},
-								{
-									"name": "shield_of_solid_force",
-									"display_name": "Shield of Solid Force",
-									"type": "leaf"
-								},
-								{
-									"name": "unprepared_wizards_component_pouch",
-									"display_name": "Unprepared Wizard's Component Pouch",
-									"type": "leaf"
-								}
-							]
-						},
-						{
-							"name": "non-magic_items",
-							"display_name": "Non-Magic Items",
-							"type": "branch",
-							"nodes": [
-								{
-									"name": "void_plate",
-									"display_name": "Void Plate",
-									"type": "leaf"
-								},
-								{
-									"name": "shade_silk_armor",
-									"display_name": "Shade Silk Armor",
-									"type": "leaf"
+									"name": "wondrous",
+									"display_name": "Wondrous Items",
+									"type": "limb",
+									"nodes": [
+										{
+											"name": "lazuli_band",
+											"display_name": "Band of Lazuli and Iron",
+											"type": "leaf"
+										},
+										{
+											"name": "endless_book",
+											"display_name": "Book of Endless Pages",
+											"type": "leaf"
+										},
+										{
+											"name": "goodberry_sprig",
+											"display_name": "Goodberry Sprig",
+											"type": "leaf"
+										},
+										{
+											"name": "money_changers_pouch",
+											"display_name": "Money Changer's Pouch",
+											"type": "leaf"
+										},
+										{
+											"name": "ring_of_morphic_steel",
+											"display_name": "Ring of Morphic Steel",
+											"type": "leaf"
+										},
+										{
+											"name": "rod_of_planar_creation",
+											"display_name": "Rod of Planar Creation",
+											"type": "leaf"
+										},
+										{
+											"name": "unprepared_wizards_component_pouch",
+											"display_name": "Unprepared Wizard's Component Pouch",
+											"type": "leaf"
+										}
+									]
 								}
 							]
 						}
@@ -1950,7 +2160,7 @@
 			"type": "branch",
 			"nodes": [
 				{
-					"name": "equipment",
+					"name": "equipment_2e",
 					"display_name": "Equipment",
 					"type": "branch",
 					"nodes": [

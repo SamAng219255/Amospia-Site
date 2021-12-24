@@ -8,8 +8,10 @@ sort=false;
 sortColumn=0;
 
 function comp(a,b) {
-	let numA=a.replaceAll(',','');
-	let numB=b.replaceAll(',','');
+	const A=a.toString();
+	const B=b.toString();
+	let numA=A.replaceAll(',','');
+	let numB=B.replaceAll(',','');
 	let match;
 	if(match=numA.match(/^[+-]? ?(\d+) ?\/ ?(\d+)/))
 		numA=parseInt(match[1])/parseInt(match[2]);
@@ -20,7 +22,7 @@ function comp(a,b) {
 	else
 		numB=parseInt(numB);
 	if(isNaN(numA) || isNaN(numB))
-		return a.localeCompare(b);
+		return A.localeCompare(B);
 	return Math.sign(numA-numB);
 }
 function setupTableSort() {

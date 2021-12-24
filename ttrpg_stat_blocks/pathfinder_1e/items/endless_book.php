@@ -10,7 +10,7 @@
 		}
 	}
 ?>
-<title>Goodberry Sprig</title>
+<title>Book of Endless Pages</title>
 <?php
 	magicItemBlockAuto(
 		'Book of Endless Pages',
