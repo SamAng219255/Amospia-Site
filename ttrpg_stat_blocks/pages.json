@@ -4,7 +4,7 @@
 		"casting_foci": {
 			"display_name": "Casting Foci",
 			"file_name": "casting_foci.php",
-			"directory": "pathfinder_1e/items/",
+			"directory": "pathfinder_1e/",
 			"sort_path": [
 				"pathfinder_1e",
 				"items",
@@ -319,7 +319,7 @@
 		"casting_foci2": {
 			"display_name": "Casting Foci",
 			"file_name": "casting_foci.php",
-			"directory": "pathfinder_2e/equipment_2e/",
+			"directory": "pathfinder_2e/equipment/",
 			"sort_path": [
 				"pathfinder_2e",
 				"equipment_2e"
@@ -408,7 +408,7 @@
 		"focus_fundamental": {
 			"display_name": "Casting Channel Fundamental Runes",
 			"file_name": "focus_fundamental.php",
-			"directory": "pathfinder_2e/equipment_2e/runes/",
+			"directory": "pathfinder_2e/equipment/runes/",
 			"sort_path": [
 				"pathfinder_2e",
 				"equipment_2e",
@@ -418,7 +418,7 @@
 		"focus_property": {
 			"display_name": "Casting Channel Property Runes",
 			"file_name": "focus_property.php",
-			"directory": "pathfinder_2e/equipment_2e/runes/",
+			"directory": "pathfinder_2e/equipment/runes/",
 			"sort_path": [
 				"pathfinder_2e",
 				"equipment_2e",
@@ -428,7 +428,7 @@
 		"focus_potency": {
 			"display_name": "Casting Potency Rune",
 			"file_name": "focus_potency.php",
-			"directory": "pathfinder_2e/equipment_2e/runes/",
+			"directory": "pathfinder_2e/equipment/runes/",
 			"sort_path": [
 				"pathfinder_2e",
 				"equipment_2e",
@@ -439,7 +439,7 @@
 		"focus_fund": {
 			"display_name": "Heightening Rune",
 			"file_name": "focus_fund.php",
-			"directory": "pathfinder_2e/equipment_2e/runes/",
+			"directory": "pathfinder_2e/equipment/runes/",
 			"sort_path": [
 				"pathfinder_2e",
 				"equipment_2e",
@@ -948,6 +948,18 @@
 				"artifacts_mc"
 			]
 		},
+		"end_gateway": {
+			"display_name": "End Gateway",
+			"file_name": "end_gateway.php",
+			"directory": "pathfinder_1e/topics/minecraft/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"magic_items_mc",
+				"artifacts_mc"
+			]
+		},
 		"compass": {
 			"display_name": "Redstone Compass",
 			"file_name": "compass.php",
@@ -1320,6 +1332,17 @@
 				"spells"
 			]
 		},
+		"illusory_dark": {
+			"display_name": "Illusory Darkness",
+			"file_name": "illusory_dark.php",
+			"directory": "pathfinder_1e/topics/minecraft/spells/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"spells"
+			]
+		},
 		"vexing_call": {
 			"display_name": "Vexing Call",
 			"file_name": "vexing_call.php",
@@ -1554,9 +1577,270 @@
 				"pathfinder_1e",
 				"topics",
 				"minecraft",
-				"items",
 				"equipment_mc",
 				"misc_equip_mc"
+			]
+		},
+		"ender_dragon": {
+			"display_name": "Ender Dragon",
+			"file_name": "ender_dragon.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"wither": {
+			"display_name": "Wither",
+			"file_name": "wither.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			]
+		},
+		"focusing_wand": {
+			"display_name": "Focusing Wand",
+			"file_name": "focusing_wand.php",
+			"directory": "pathfinder_1e/items/casting_foci/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons",
+				"casting_foci"
+			]
+		},
+		"spell_potency_staff": {
+			"display_name": "Spell Potency Staff",
+			"file_name": "spell_potency_staff.php",
+			"directory": "pathfinder_1e/items/casting_foci/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons",
+				"casting_foci"
+			]
+		},
+		"abjuration_stone": {
+			"display_name": "Abjuring Rune Stone",
+			"file_name": "abjuration_stone.php",
+			"directory": "pathfinder_1e/items/casting_foci/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons",
+				"casting_foci"
+			]
+		},
+		"conjuration_key": {
+			"display_name": "Conjuring Key",
+			"file_name": "conjuration_key.php",
+			"directory": "pathfinder_1e/items/casting_foci/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons",
+				"casting_foci"
+			]
+		},
+		"divination_sphere": {
+			"display_name": "Divining Sphere",
+			"file_name": "divination_sphere.php",
+			"directory": "pathfinder_1e/items/casting_foci/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons",
+				"casting_foci"
+			]
+		},
+		"enchantment_rings": {
+			"display_name": "Enchanting Rings",
+			"file_name": "enchantment_rings.php",
+			"directory": "pathfinder_1e/items/casting_foci/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons",
+				"casting_foci"
+			]
+		},
+		"evocation_rod": {
+			"display_name": "Evocation Rod",
+			"file_name": "evocation_rod.php",
+			"directory": "pathfinder_1e/items/casting_foci/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons",
+				"casting_foci"
+			]
+		},
+		"illusion_glove": {
+			"display_name": "Illusory Glove",
+			"file_name": "illusion_glove.php",
+			"directory": "pathfinder_1e/items/casting_foci/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons",
+				"casting_foci"
+			]
+		},
+		"transmutation_vial": {
+			"display_name": "Transmuting Vial",
+			"file_name": "transmutation_vial.php",
+			"directory": "pathfinder_1e/items/casting_foci/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons",
+				"casting_foci"
+			]
+		},
+		"necromancy_skull": {
+			"display_name": "Necromantic Skull",
+			"file_name": "necromancy_skull.php",
+			"directory": "pathfinder_1e/items/casting_foci/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons",
+				"casting_foci"
+			]
+		},
+		"divine_symbol": {
+			"display_name": "Blessed Holy Symbol",
+			"file_name": "divine_symbol.php",
+			"directory": "pathfinder_1e/items/casting_foci/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons",
+				"casting_foci"
+			]
+		},
+		"channelling_hammer": {
+			"display_name": "Hammer of Holy Light",
+			"file_name": "channelling_hammer.php",
+			"directory": "pathfinder_1e/items/casting_foci/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons",
+				"casting_foci"
+			]
+		},
+		"summoning_key": {
+			"display_name": "Calling Key",
+			"file_name": "summoning_key.php",
+			"directory": "pathfinder_1e/items/casting_foci/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons",
+				"casting_foci"
+			]
+		},
+		"healing_staff": {
+			"display_name": "Ophiuchus Staff",
+			"file_name": "healing_staff.php",
+			"directory": "pathfinder_1e/items/casting_foci/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons",
+				"casting_foci"
+			]
+		},
+		"channelling_lantern": {
+			"display_name": "Radiant Lantern",
+			"file_name": "channelling_lantern.php",
+			"directory": "pathfinder_1e/items/casting_foci/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons",
+				"casting_foci"
+			]
+		},
+		"necromancy_bone": {
+			"display_name": "Bleeding Bone",
+			"file_name": "necromancy_bone.php",
+			"directory": "pathfinder_1e/items/casting_foci/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons",
+				"casting_foci"
+			]
+		},
+		"curse_rod": {
+			"display_name": "Curse Rod",
+			"file_name": "curse_rod.php",
+			"directory": "pathfinder_1e/items/casting_foci/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons",
+				"casting_foci"
+			]
+		},
+		"plants_branch": {
+			"display_name": "Genesis Branch",
+			"file_name": "plants_branch.php",
+			"directory": "pathfinder_1e/items/casting_foci/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons",
+				"casting_foci"
+			]
+		},
+		"polymorph_claw": {
+			"display_name": "Blessed Claw",
+			"file_name": "polymorph_claw.php",
+			"directory": "pathfinder_1e/items/casting_foci/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons",
+				"casting_foci"
+			]
+		},
+		"casting_weapon": {
+			"display_name": "Casting Weapon",
+			"file_name": "casting_weapon.php",
+			"directory": "pathfinder_1e/items/casting_foci/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons",
+				"casting_foci"
 			]
 		}
 	},
@@ -1948,34 +2232,22 @@
 										{
 											"name": "weapons_mc",
 											"display_name": "Weapons",
-											"type": "leaf",
-											"nodes": [
-												
-											]
+											"type": "leaf"
 										},
 										{
 											"name": "armor_mc",
 											"display_name": "Armor",
-											"type": "leaf",
-											"nodes": [
-												
-											]
+											"type": "leaf"
 										},
 										{
 											"name": "special_materials_mc",
 											"display_name": "Special Materials",
-											"type": "leaf",
-											"nodes": [
-												
-											]
+											"type": "leaf"
 										},
 										{
 											"name": "misc_equip_mc",
 											"display_name": "Miscellaneous",
-											"type": "leaf",
-											"nodes": [
-												
-											]
+											"type": "leaf"
 										}
 									]
 								},
@@ -1992,6 +2264,11 @@
 												{
 													"name": "endportal",
 													"display_name": "Ender Portal",
+													"type": "leaf"
+												},
+												{
+													"name": "end_gateway",
+													"display_name": "End Gateway",
 													"type": "leaf"
 												}
 											]

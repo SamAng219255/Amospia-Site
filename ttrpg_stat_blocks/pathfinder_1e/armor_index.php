@@ -10,7 +10,6 @@
 		}
 	}
 ?>
-<title>Armor</title>
 <script>
 	initialSort=true;
 	profNum={'light':0,'medium':1,'heavy':2,'shield':3};

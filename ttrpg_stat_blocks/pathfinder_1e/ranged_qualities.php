@@ -57,7 +57,7 @@
 		[
 			[
 				'Casting',
-				'link' => 'items/casting_foci.php#block-Casting-Weapon',
+				'link' => 'items/casting_foci/casting_weapon.php',
 				'+2,000 gp'
 			]
 		],

@@ -1,5 +1,4 @@
 <?php require '../pageStart.php'; ?>
-<title>Deities</title>
 <script>
 	cancelDefaultTableSort=true;
 	function setupSort() {

@@ -15,7 +15,7 @@
 	monsterBlockAuto(
 		'Ghast',// name
 		false,// alt name
-		'This large, pale, and bulbous floats aimlessly, a dozen or so tendrils hang down and sway forward and back. Its tear stained eyes are closed and an occasional eerie whimper can be heard escaping it that travels unnaturally far.',// lore text
+		'This large, pale, and bulbous entity floats aimlessly, a dozen or so tendrils hang down and sway forward and back. Its tear stained eyes are closed and an occasional eerie whimper can be heard escaping it that travels unnaturally far.',// lore text
 		4,// CR
 		false,// MR
 		false,// Custom XP

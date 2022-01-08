@@ -21,7 +21,7 @@
 		else if(b.children[0].tagName=='TH')
 			return 1;
 		return 8 * comp(profNum[a.children[2].innerText.toLowerCase()],profNum[b.children[2].innerText.toLowerCase()]) +
-			4 * comp(handsNum[a.children[2].innerText.toLowerCase()],handsNum[b.children[2].innerText.toLowerCase()]) +
+			4 * comp(handsNum[a.children[3].innerText.toLowerCase()],handsNum[b.children[3].innerText.toLowerCase()]) +
 			2 * comp(a.children[1].innerText.toLowerCase(),b.children[1].innerText.toLowerCase()) +
 			1 * comp(a.children[0].innerText.toLowerCase(),b.children[0].innerText.toLowerCase());
 	};

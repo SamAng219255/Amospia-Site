@@ -479,7 +479,7 @@
 		"Focus",
 		"+2,000 gp",
 		"—",
-		"This quality can be applied to any weapon. A weapon with this quality conjers all the benefits of, and possesses all of the properties of, a ii/<a href=\"#block-Focusing-Wand\">focusing wand</a>/ii.",
+		"This quality can be applied to any weapon. This weapon acts as a casting focus and can receive a seperate set of enhancement bonuses and special qualities that apply to spells cast using the weapon. Any enhancement bonus added to its functionality as a casting focus also apply to concentration checks and all other checks made as part of casting the spell.",
 		false,
 		"bb/Requirements/bb Craft Wondrous Item, ii/magic weapon/ii, ii/weaponwand/ii; bb/Cost/bb +1,000 gp"
 	);

@@ -754,7 +754,7 @@
 				'spaced' => false,
 				'texts' => quick_array([
 					'bb/Speed/bb '.(is_numeric($speed)?$speed.' ft.':$speed),
-					"bb/Space/bb {$spaces[$size]} ft., bb/Reach/bb {$reach} ft."
+					'bb/Space/bb '.$spaces[$size].' ft., bb/Reach/bb '.$reach.(is_string($reach)?'':' ft.')
 				])
 			],
 			[

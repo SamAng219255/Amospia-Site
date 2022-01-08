@@ -323,6 +323,20 @@
 				'4',
 				'undead',
 				'any'
+			],
+			[
+				'Ender Dragon',
+				'link' => 'monsters/ender_dragon.php',
+				'15',
+				'dragon',
+				'the central island in the End'
+			],
+			[
+				'Wither',
+				'link' => 'monsters/wither.php',
+				'21',
+				'undead',
+				'any'
 			]
 		]
 	);

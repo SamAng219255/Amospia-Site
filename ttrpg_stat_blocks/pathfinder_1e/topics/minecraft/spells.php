@@ -66,20 +66,20 @@
 				'Summons four tower shields made of force and fire to protect the targets.'
 			],
 			[
-				'Blindness, Lesser',
-				'link' => 'spells/lesser_blind.php',
-				'1',
-				'Necromancy',
+				'Illusory Darkness',
+				'link' => 'spells/illusory_dark.php',
+				'5',
+				'Illusion',
 				'antipaladin, bard, bloodrager, psychic, sorcerer, witch, wizard',
-				'You call upon the powers of unlife to render the subject temporarily blinded.'
+				'Affected creatures have all of their senses obscured by what appears to be a dark fog.'
 			],
 			[
-				'Blindness, Lesser',
-				'link' => 'spells/lesser_blind.php',
-				'2',
-				'Necromancy',
+				'Illusory Darkness',
+				'link' => 'spells/illusory_dark.php',
+				'6',
+				'Illusion',
 				'cleric, oracle, shaman',
-				'You call upon the powers of unlife to render the subject temporarily blinded.'
+				'Affected creatures have all of their senses obscured by what appears to be a dark fog.'
 			],
 			[
 				'Vexing Call',

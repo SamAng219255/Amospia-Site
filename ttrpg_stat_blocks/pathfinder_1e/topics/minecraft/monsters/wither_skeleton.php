@@ -23,7 +23,7 @@
 		[
 			'fighter' => 5
 		],// Class
-		'NE',// Alignment
+		'CE',// Alignment
 		'Medium',// Size
 		'undead (extraplanar)',// Type
 		0,// Misc Initiative Mod

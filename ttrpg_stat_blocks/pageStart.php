@@ -137,6 +137,7 @@
 					foreach($pages['entries'] as $id => $entry) {
 						if($entry['file_name']===$filePathInfo['basename'] && endsWith($filePathInfo['dirname'],substr($entry['directory'],0,-1))) {
 							$pageId=$id;
+							echo '<title>'.$entry['display_name'].'</title>';
 						}
 					}
 
