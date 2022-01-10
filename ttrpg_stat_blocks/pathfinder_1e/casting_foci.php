@@ -192,7 +192,7 @@
 			],
 			[
 				'Illusory Glove, Shadowy (3rd)',
-				'link' => 'items/casting_foci/illusion_glove.php',
+				'link' => 'items/casting_foci/illusion_glove_shadow.php',
 				'5,000 gp',
 				'Arcane School',
 				'Increases the realness of shadow spells you cast by 20%.',
@@ -200,7 +200,7 @@
 			],
 			[
 				'Illusory Glove, Shadowy (6th)',
-				'link' => 'items/casting_foci/illusion_glove.php',
+				'link' => 'items/casting_foci/illusion_glove_shadow.php',
 				'18,300 gp',
 				'Arcane School',
 				'Increases the realness of shadow spells you cast by 20%.',
@@ -208,7 +208,7 @@
 			],
 			[
 				'Illusory Glove, Shadowy (9th)',
-				'link' => 'items/casting_foci/illusion_glove.php',
+				'link' => 'items/casting_foci/illusion_glove_shadow.php',
 				'40,800 gp',
 				'Arcane School',
 				'Increases the realness of shadow spells you cast by 20%.',
@@ -257,9 +257,25 @@
 			[
 				'Necromantic Skull',
 				'link' => 'items/casting_foci/necromancy_skull.php',
-				'TODO gp',
+				'15,000 gp',
 				'Arcane School',
-				'TODO',
+				'Empowers undead you create and makes it harder to resist your spells to control undead.',
+				'Animates as a dread skull animus.'
+			],
+			[
+				'Necromantic Skull',
+				'link' => 'items/casting_foci/necromancy_skull.php',
+				'60,000 gp',
+				'Arcane School',
+				'Empowers undead you create and makes it harder to resist your spells to control undead.',
+				'Animates as a dread skull animus.'
+			],
+			[
+				'Necromantic Skull',
+				'link' => 'items/casting_foci/necromancy_skull.php',
+				'120,000 gp',
+				'Arcane School',
+				'Empowers undead you create and makes it harder to resist your spells to control undead.',
 				'Animates as a dread skull animus.'
 			],
 			[
@@ -372,7 +388,7 @@
 				'18,600 gp',
 				'Natural',
 				'Create magical plant life to enable and empower plant-based spells.',
-				'Grows ii/goodberries/ii.'
+				quick_format('Grows ii/goodberries/ii.')
 			],
 			[
 				'Blessed Claw',

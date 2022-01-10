@@ -23,7 +23,7 @@
 		false,
 		"bb/Requirements/bb Craft Wondrous Item; bb/Cost/bb (+2) 11,250 gp, (+4) 22,500 gp, (+6) 33,750 gp
 		bb/Upgrade/bb:
-		Same as a crystal ball with any additional powers chosen."
+		Same as a ii/crystal ball/ii with any additional powers chosen."
 	);
 	require $startDir.'pageEnd.php';
 ?>

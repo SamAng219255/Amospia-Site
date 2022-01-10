@@ -1483,16 +1483,6 @@
 				"equipment"
 			]
 		},
-		"misc_equip": {
-			"display_name": "Miscellaneous",
-			"file_name": "misc_index.php",
-			"directory": "pathfinder_1e/",
-			"sort_path": [
-				"pathfinder_1e",
-				"items",
-				"equipment"
-			]
-		},
 		"armor_qualities": {
 			"display_name": "Armor Qualities",
 			"file_name": "armor_qualities.php",
@@ -1842,6 +1832,61 @@
 				"magic_weapons",
 				"casting_foci"
 			]
+		},
+		"dread_skull_animus": {
+			"display_name": "Dread Skull Animus",
+			"file_name": "dread_skull_animus.php",
+			"directory": "pathfinder_1e/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"monsters"
+			]
+		},
+		"alchemical_oils": {
+			"display_name": "Alchemical Oils",
+			"file_name": "alchemical_oils.php",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"misc_equip"
+			]
+		},
+		"adventuring_gear": {
+			"display_name": "Adventuring Gear",
+			"file_name": "adventuring_gear.php",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"misc_equip"
+			]
+		},
+		"image_plate": {
+			"display_name": "Blank Image Capture Plate",
+			"file_name": "image_plate.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"misc_equip",
+				"adventuring_gear"
+			]
+		},
+		"camera": {
+			"display_name": "Camera",
+			"file_name": "camera.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"misc_equip",
+				"adventuring_gear"
+			]
 		}
 	},
 	"sort_tree": [
@@ -1940,7 +1985,19 @@
 								{
 									"name": "misc_equip",
 									"display_name": "Miscellaneous",
-									"type": "leaf"
+									"type": "branch",
+									"nodes": [
+										{
+											"name": "alchemical_oils",
+											"display_name": "Alchemical Oils",
+											"type": "leaf"
+										},
+										{
+											"name": "adventuring_gear",
+											"display_name": "Adventuring Gear",
+											"type": "leaf"
+										}
+									]
 								}
 							]
 						},
@@ -2103,6 +2160,11 @@
 					"display_name": "Monsters",
 					"type": "flower",
 					"nodes": [
+						{
+							"name": "dread_skull_animus",
+							"display_name": "Dread Skull Animus",
+							"type": "petal"
+						},
 						{
 							"name": "lazuli_dragon",
 							"display_name": "Kundrak",

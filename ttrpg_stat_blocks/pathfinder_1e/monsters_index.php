@@ -33,6 +33,13 @@
 				'?? (35+)',
 				'dragon',
 				'Deep Space (Hall of Stars)'
+			],
+			[
+				'Dread Skull Animus',
+				'link' => 'monsters/dread_skull_animus.php',
+				'varies',
+				'undead',
+				'any'
 			]
 		]
 	);
