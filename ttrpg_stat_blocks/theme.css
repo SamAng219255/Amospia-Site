@@ -470,6 +470,12 @@ input:checked + .slider:before {
 	background-color: #000;
 }
 
+#setting-note {
+	border-style: solid none none;
+	border-width: 1px;
+	margin-bottom: 2em;
+}
+
 /*Attempted to vary font size to be consistent on all devices but devices continued to provide inaccurate values
 @media (max-resolution: 105dpi) {
 	body.mobile {

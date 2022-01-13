@@ -4,7 +4,7 @@
 	race2eBlock(
 		'Thyllkthoron',
 		'Humanoid',
-		'Many centuries ago, the ancestors of the Thyllkthoron were succubi and incubi exiled to the material plane, in a place they would com to call Enosria, following a failed coup of a demon lord and the subsequent death of their queen. After some time their essence was slowly replaced by that of the material plane eventually allowing them to birth mortal children. These children were less inclined to the parents evil ways and after a few generations they overthrew them. In time they became more and more diverse in their alignments though their appearance has changed little and they have preserved some portion of their gifts. Thyllkthoron have made themselves many demonic enemies in their history as they have foght to diffrentiate themselves from their demonic ancestors.',
+		'Many centuries ago, the ancestors of the Thyllkthoron were succubi and incubi exiled to the material plane, in a place they would com to call Enosria, following a failed coup of a demon lord and the subsequent death of their queen. After some time their essence was slowly replaced by that of the material plane eventually allowing them to birth mortal children. These children were less inclined to the parents evil ways and after a few generations they overthrew them. In time they became more and more diverse in their alignments though their appearance has changed little and they have preserved some portion of their gifts. Thyllkthoron have made themselves many demonic enemies in their history as they have fought to diffrentiate themselves from their demonic ancestors.',
 		[
 			
 		],

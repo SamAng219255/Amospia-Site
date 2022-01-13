@@ -21,7 +21,8 @@
 				"items",
 				"magic_items",
 				"artifacts"
-			]
+			],
+			"setting": "forest"
 		},
 		"blade_of_the_forests_shadow": {
 			"display_name": "Blade of the Forest's Shadow",
@@ -32,7 +33,8 @@
 				"items",
 				"magic_items",
 				"artifacts"
-			]
+			],
+			"setting": "forest"
 		},
 		"forest_of_shadows": {
 			"display_name": "Forest of Shadows",
@@ -41,7 +43,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"planes"
-			]
+			],
+			"setting": "forest"
 		},
 		"ring_of_morphic_steel": {
 			"display_name": "Ring of Morphic Steel",
@@ -118,7 +121,8 @@
 				"items",
 				"equipment",
 				"armor"
-			]
+			],
+			"setting": "amospia"
 		},
 		"shade_silk_armor": {
 			"display_name": "Shade Silk Armor",
@@ -129,7 +133,8 @@
 				"items",
 				"equipment",
 				"armor"
-			]
+			],
+			"setting": "amospia"
 		},
 		"runed_chain": {
 			"display_name": "Runed Chain",
@@ -161,6 +166,115 @@
 				"pathfinder_1e"
 			]
 		},
+		"skadwalth": {
+			"display_name": "Skadwalth",
+			"file_name": "deity_view.php?name=Skadwalth",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"deities"
+			],
+			"setting": "forest"
+		},
+		"kyrodya": {
+			"display_name": "Kyrodya",
+			"file_name": "deity_view.php?name=Kyrodya",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"deities"
+			],
+			"setting": "forest"
+		},
+		"vulrigi": {
+			"display_name": "Vulrigi",
+			"file_name": "deity_view.php?name=Vulrigi",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"deities"
+			],
+			"setting": "forest"
+		},
+		"aralyth": {
+			"display_name": "Aralyth",
+			"file_name": "deity_view.php?name=Aralyth",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"deities"
+			],
+			"setting": "forest"
+		},
+		"sminca": {
+			"display_name": "Sminca",
+			"file_name": "deity_view.php?name=Sminca",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"deities"
+			],
+			"setting": "forest"
+		},
+		"knul": {
+			"display_name": "Knul",
+			"file_name": "deity_view.php?name=Knul",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"deities"
+			],
+			"setting": "forest"
+		},
+		"valthar": {
+			"display_name": "Valthar",
+			"file_name": "deity_view.php?name=Valthar",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"deities"
+			],
+			"setting": "forest"
+		},
+		"freorn": {
+			"display_name": "Freorn",
+			"file_name": "deity_view.php?name=Freorn",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"deities"
+			],
+			"setting": "forest"
+		},
+		"trang": {
+			"display_name": "Trang",
+			"file_name": "deity_view.php?name=Trang",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"deities"
+			],
+			"setting": "forest"
+		},
+		"demning": {
+			"display_name": "Demning",
+			"file_name": "deity_view.php?name=Demning",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"deities"
+			],
+			"setting": "forest"
+		},
+		"vorpmalcide": {
+			"display_name": "Vorpmalcide",
+			"file_name": "deity_view.php?name=Vorpmalcide",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"deities"
+			]
+		},
 		"goodberry_sprig": {
 			"display_name": "Goodberry Sprig",
 			"file_name": "goodberry_sprig.php",
@@ -188,7 +302,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"races"
-			]
+			],
+			"setting": "redeemed_setting"
 		},
 		"redeemed_full": {
 			"display_name": "Redeemed, Full Blooded",
@@ -197,7 +312,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"races"
-			]
+			],
+			"setting": "redeemed_setting"
 		},
 		"redeemed_converted": {
 			"display_name": "Redeemed, Converted",
@@ -206,7 +322,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"races"
-			]
+			],
+			"setting": "redeemed_setting"
 		},
 		"tehswin": {
 			"display_name": "Tehswin",
@@ -242,7 +359,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"races"
-			]
+			],
+			"setting": "tangled_grove"
 		},
 		"redwoods_young": {
 			"display_name": "Redwoods, Young",
@@ -251,7 +369,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"races"
-			]
+			],
+			"setting": "tangled_grove"
 		},
 		"nightshades": {
 			"display_name": "Nightshades",
@@ -260,7 +379,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"races"
-			]
+			],
+			"setting": "tangled_grove"
 		},
 		"lorax": {
 			"display_name": "Lo'raks",
@@ -269,7 +389,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"races"
-			]
+			],
+			"setting": "tangled_grove"
 		},
 		"aniflors": {
 			"display_name": "Aniflors",
@@ -278,7 +399,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"races"
-			]
+			],
+			"setting": "tangled_grove"
 		},
 		"tirn": {
 			"display_name": "Tirn",
@@ -332,7 +454,8 @@
 			"sort_path": [
 				"pathfinder_2e",
 				"races_2e"
-			]
+			],
+			"setting": "redeemed_setting_2e"
 		},
 		"enosrian_feats": {
 			"display_name": "Thyllkthoron Feats",
@@ -342,7 +465,8 @@
 				"pathfinder_2e",
 				"races_2e",
 				"enosrian"
-			]
+			],
+			"setting": "redeemed_setting_2e"
 		},
 		"enosrian_heritages": {
 			"display_name": "Thyllkthoron Heritages",
@@ -352,7 +476,8 @@
 				"pathfinder_2e",
 				"races_2e",
 				"enosrian"
-			]
+			],
+			"setting": "redeemed_setting_2e"
 		},
 		"enosrian_feat_display": {
 			"display_name": "Thyllkthoron Feat Descriptions",
@@ -363,7 +488,8 @@
 				"races_2e",
 				"enosrian",
 				"enosrian_feats"
-			]
+			],
+			"setting": "redeemed_setting_2e"
 		},
 		"birdpeople": {
 			"display_name": "Piccilli",
@@ -372,7 +498,8 @@
 			"sort_path": [
 				"pathfinder_2e",
 				"races_2e"
-			]
+			],
+			"setting": "great_tree"
 		},
 		"birdpeople_feats": {
 			"display_name": "Piccilli Feats",
@@ -382,7 +509,8 @@
 				"pathfinder_2e",
 				"races_2e",
 				"birdpeople"
-			]
+			],
+			"setting": "great_tree"
 		},
 		"birdpeople_heritages": {
 			"display_name": "Piccilli Heritages",
@@ -392,7 +520,8 @@
 				"pathfinder_2e",
 				"races_2e",
 				"birdpeople"
-			]
+			],
+			"setting": "great_tree"
 		},
 		"birdpeople_feat_display": {
 			"display_name": "Piccilli Feat Descriptions",
@@ -403,7 +532,8 @@
 				"races_2e",
 				"birdpeople",
 				"birdpeople_feats"
-			]
+			],
+			"setting": "great_tree"
 		},
 		"focus_fundamental": {
 			"display_name": "Casting Channel Fundamental Runes",
@@ -473,7 +603,8 @@
 				"items",
 				"magic_items",
 				"wondrous"
-			]
+			],
+			"setting": "kundrak"
 		},
 		"endless_book": {
 			"display_name": "Book of Endless Pages",
@@ -487,13 +618,14 @@
 			]
 		},
 		"lazuli_dragon": {
-			"display_name": "Book of Endless Pages",
+			"display_name": "Kundrak",
 			"file_name": "lazuli_dragon.php",
 			"directory": "pathfinder_1e/monsters/",
 			"sort_path": [
 				"pathfinder_1e",
 				"monsters"
-			]
+			],
+			"setting": "kundrak"
 		},
 		"topics": {
 			"display_name": "Topics",
@@ -553,7 +685,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"blaze": {
 			"display_name": "Blaze",
@@ -564,7 +697,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"cave_spider": {
 			"display_name": "Cave Spider",
@@ -575,7 +709,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"creeper": {
 			"display_name": "Creeper",
@@ -586,7 +721,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"endermite": {
 			"display_name": "Endermite",
@@ -597,7 +733,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"ghast": {
 			"display_name": "Ghast",
@@ -608,7 +745,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"goat": {
 			"display_name": "Goat",
@@ -619,7 +757,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"guardian": {
 			"display_name": "Guardian",
@@ -630,7 +769,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"hoglin": {
 			"display_name": "Hoglin",
@@ -641,7 +781,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"iron_golem": {
 			"display_name": "Iron Guard",
@@ -652,7 +793,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"llama": {
 			"display_name": "Dire Llama",
@@ -663,7 +805,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"magma_slime": {
 			"display_name": "Magma Cube",
@@ -674,7 +817,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"phantom": {
 			"display_name": "Phantom",
@@ -685,7 +829,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"polar_bear": {
 			"display_name": "Polar Bear",
@@ -696,7 +841,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"pufferfish": {
 			"display_name": "Pufferfish",
@@ -707,7 +853,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"rabbit_99": {
 			"display_name": "Killer Rabbit",
@@ -718,7 +865,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"ravager": {
 			"display_name": "Ravager",
@@ -729,7 +877,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"shulker": {
 			"display_name": "Shulker",
@@ -740,7 +889,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"silverfish": {
 			"display_name": "Silverfish",
@@ -751,7 +901,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"silverfish_swarm": {
 			"display_name": "Silverfish",
@@ -762,7 +913,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"slime": {
 			"display_name": "Green Cube",
@@ -773,7 +925,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"snow_golem": {
 			"display_name": "Snow Golem",
@@ -784,7 +937,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"spider": {
 			"display_name": "Spider",
@@ -795,7 +949,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"vex": {
 			"display_name": "Vex",
@@ -806,7 +961,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"wolf": {
 			"display_name": "Wolf",
@@ -817,7 +973,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"skeleton": {
 			"display_name": "Skeleton",
@@ -829,7 +986,8 @@
 				"minecraft",
 				"monsters_mc",
 				"templates_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"zombie": {
 			"display_name": "Zombie",
@@ -841,7 +999,8 @@
 				"minecraft",
 				"monsters_mc",
 				"templates_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"illagers": {
 			"display_name": "Illagers",
@@ -852,7 +1011,8 @@
 				"topics",
 				"minecraft",
 				"races_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"knom": {
 			"display_name": "Knom",
@@ -863,7 +1023,8 @@
 				"topics",
 				"minecraft",
 				"races_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"piglins": {
 			"display_name": "Piglins",
@@ -874,7 +1035,8 @@
 				"topics",
 				"minecraft",
 				"races_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"totem": {
 			"display_name": "Totem of Undying",
@@ -886,7 +1048,8 @@
 				"minecraft",
 				"magic_items_mc",
 				"wondrous_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"gapple": {
 			"display_name": "Golden Apple",
@@ -898,7 +1061,8 @@
 				"minecraft",
 				"magic_items_mc",
 				"wondrous_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"egapple": {
 			"display_name": "Enchanted Golden Apple",
@@ -910,7 +1074,8 @@
 				"minecraft",
 				"magic_items_mc",
 				"wondrous_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"enderpearl": {
 			"display_name": "Ender Pearl",
@@ -922,7 +1087,8 @@
 				"minecraft",
 				"magic_items_mc",
 				"wondrous_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"endereye": {
 			"display_name": "Eye of Ender",
@@ -934,7 +1100,8 @@
 				"minecraft",
 				"magic_items_mc",
 				"wondrous_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"endportal": {
 			"display_name": "Ender Portal",
@@ -946,7 +1113,8 @@
 				"minecraft",
 				"magic_items_mc",
 				"artifacts_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"end_gateway": {
 			"display_name": "End Gateway",
@@ -958,7 +1126,8 @@
 				"minecraft",
 				"magic_items_mc",
 				"artifacts_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"compass": {
 			"display_name": "Redstone Compass",
@@ -970,7 +1139,8 @@
 				"minecraft",
 				"magic_items_mc",
 				"wondrous_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"lodestone": {
 			"display_name": "Netherite Lodestone",
@@ -982,7 +1152,8 @@
 				"minecraft",
 				"magic_items_mc",
 				"wondrous_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"elytra": {
 			"display_name": "Elytra",
@@ -994,7 +1165,8 @@
 				"minecraft",
 				"magic_items_mc",
 				"wondrous_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"weapons_mc": {
 			"display_name": "Weapons",
@@ -1049,7 +1221,8 @@
 				"topics",
 				"minecraft",
 				"magic_items_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"turtle_shell": {
 			"display_name": "Enchanted Turtle Shell",
@@ -1061,7 +1234,8 @@
 				"minecraft",
 				"magic_items_mc",
 				"wondrous_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"melee_qualities_mc": {
 			"display_name": "Melee Weapon Qualities",
@@ -1120,7 +1294,8 @@
 				"topics",
 				"minecraft",
 				"magic_items_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"enderchest": {
 			"display_name": "Ender Chest",
@@ -1132,7 +1307,8 @@
 				"minecraft",
 				"magic_items_mc",
 				"wondrous_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"lure_rod": {
 			"display_name": "Luring Fishing Rod",
@@ -1144,7 +1320,8 @@
 				"minecraft",
 				"magic_items_mc",
 				"wondrous_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"end": {
 			"display_name": "the End",
@@ -1155,7 +1332,8 @@
 				"topics",
 				"minecraft",
 				"planes_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"nether": {
 			"display_name": "the Nether",
@@ -1166,7 +1344,8 @@
 				"topics",
 				"minecraft",
 				"planes_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"skeleton_block": {
 			"display_name": "Skeleton",
@@ -1177,7 +1356,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"wither_skeleton": {
 			"display_name": "Wither Skeleton",
@@ -1188,7 +1368,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"stray": {
 			"display_name": "Stray",
@@ -1199,7 +1380,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"zombie_block": {
 			"display_name": "Zombie",
@@ -1210,7 +1392,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"zombie_villager": {
 			"display_name": "Zombie Villager",
@@ -1221,7 +1404,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"husk": {
 			"display_name": "Husk",
@@ -1232,7 +1416,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"drowned": {
 			"display_name": "Drowned",
@@ -1243,7 +1428,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"zombie_pigman": {
 			"display_name": "Zombified Piglin",
@@ -1254,7 +1440,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"zoglin": {
 			"display_name": "Zoglin",
@@ -1265,7 +1452,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"piglin": {
 			"display_name": "Piglin",
@@ -1276,7 +1464,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"piglin_crossbow": {
 			"display_name": "Piglin, Crossbow",
@@ -1287,7 +1476,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"piglin_brute": {
 			"display_name": "Piglin, Brute",
@@ -1298,7 +1488,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"blazing_shield": {
 			"display_name": "Blazing Shield",
@@ -1309,7 +1500,8 @@
 				"topics",
 				"minecraft",
 				"spells"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"spells_mc": {
 			"display_name": "Spells",
@@ -1330,7 +1522,8 @@
 				"topics",
 				"minecraft",
 				"spells"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"illusory_dark": {
 			"display_name": "Illusory Darkness",
@@ -1341,7 +1534,8 @@
 				"topics",
 				"minecraft",
 				"spells"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"vexing_call": {
 			"display_name": "Vexing Call",
@@ -1352,7 +1546,8 @@
 				"topics",
 				"minecraft",
 				"spells"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"evoker_fangs": {
 			"display_name": "Evoker's Fangs",
@@ -1363,7 +1558,8 @@
 				"topics",
 				"minecraft",
 				"spells"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"evoker": {
 			"display_name": "Evoker",
@@ -1374,7 +1570,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"pillager": {
 			"display_name": "Pillager",
@@ -1385,7 +1582,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"vindicator": {
 			"display_name": "Vindicator",
@@ -1396,7 +1594,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"witch": {
 			"display_name": "Witch",
@@ -1407,7 +1606,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"illusioner": {
 			"display_name": "Illusioner",
@@ -1418,7 +1618,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"skeleton_horse": {
 			"display_name": "Skeletal Horse",
@@ -1429,7 +1630,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"zombie_horse": {
 			"display_name": "Zombified Horse",
@@ -1440,7 +1642,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"skeleton_archer": {
 			"display_name": "Skeletal Horse Archer",
@@ -1451,7 +1654,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"armor": {
 			"display_name": "Armor",
@@ -1569,7 +1773,8 @@
 				"minecraft",
 				"equipment_mc",
 				"misc_equip_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"ender_dragon": {
 			"display_name": "Ender Dragon",
@@ -1580,7 +1785,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"wither": {
 			"display_name": "Wither",
@@ -1591,7 +1797,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"setting": "minecraft"
 		},
 		"focusing_wand": {
 			"display_name": "Focusing Wand",
@@ -1886,6 +2093,69 @@
 				"equipment",
 				"misc_equip",
 				"adventuring_gear"
+			]
+		},
+		"forest": {
+			"display_name": "Forest of Shadows",
+			"file_name": "forest.php",
+			"directory": "pathfinder_1e/settings/",
+			"sort_path": [
+				"pathfinder_1e",
+				"settings"
+			]
+		},
+		"amospia": {
+			"display_name": "Amospia",
+			"file_name": "amospia.php",
+			"directory": "pathfinder_1e/settings/",
+			"sort_path": [
+				"pathfinder_1e",
+				"settings"
+			]
+		},
+		"kundrak": {
+			"display_name": "Kundrak",
+			"file_name": "kundrak.php",
+			"directory": "pathfinder_1e/settings/",
+			"sort_path": [
+				"pathfinder_1e",
+				"settings"
+			]
+		},
+		"redeemed_setting": {
+			"display_name": "Redeemed",
+			"file_name": "redeemed.php",
+			"directory": "pathfinder_1e/settings/",
+			"sort_path": [
+				"pathfinder_1e",
+				"settings"
+			]
+		},
+		"tangled_grove": {
+			"display_name": "Tangled Grove",
+			"file_name": "tangled_grove.php",
+			"directory": "pathfinder_1e/settings/",
+			"sort_path": [
+				"pathfinder_1e",
+				"settings"
+			]
+		},
+		"redeemed_setting_2e": {
+			"display_name": "Redeemed",
+			"file_name": "redeemed.php",
+			"directory": "pathfinder_2e/settings/",
+			"sort_path": [
+				"pathfinder_2e",
+				"settings_2e"
+			]
+		},
+		"great_tree": {
+			"display_name": "Geldrine",
+			"file_name": "great_tree.php",
+			"directory": "pathfinder_2e/settings/",
+			"sort_path": [
+				"pathfinder_2e",
+				"settings_2e"
 			]
 		}
 	},
@@ -2277,6 +2547,33 @@
 					]
 				},
 				{
+					"name": "settings",
+					"display_name": "Settings",
+					"type": "branch",
+					"nodes": [
+						{
+							"name": "forest",
+							"display_name": "Forest of Shadows",
+							"type": "leaf"
+						},
+						{
+							"name": "amospia",
+							"display_name": "Amospia",
+							"type": "leaf"
+						},
+						{
+							"name": "redeemed_setting",
+							"display_name": "Redeemed",
+							"type": "leaf"
+						},
+						{
+							"name": "tangled_grove",
+							"display_name": "Tangled Grove",
+							"type": "leaf"
+						}
+					]
+				},
+				{
 					"name": "topics",
 					"display_name": "Topics",
 					"type": "limb",
@@ -2609,6 +2906,23 @@
 									"type": "petal"
 								}
 							]
+						}
+					]
+				},
+				{
+					"name": "settings_2e",
+					"display_name": "Settings",
+					"type": "branch",
+					"nodes": [
+						{
+							"name": "redeemed_setting_2e",
+							"display_name": "Redeemed",
+							"type": "leaf"
+						},
+						{
+							"name": "great_tree",
+							"display_name": "Geldrine",
+							"type": "leaf"
 						}
 					]
 				}

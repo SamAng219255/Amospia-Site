@@ -131,11 +131,23 @@
 						return $ptr;
 					}
 
-					$pageId="";
+					$pageId='';
 					$pageCount=count($pages['entries']);
 					$filePathInfo=pathinfo(debug_backtrace()[0]['file']);
+					$getStr='';
+					if(count($_GET)>0) {
+						$getStr='?';
+						$first=true;
+						foreach ($_GET as $name => $val) {
+							if($first)
+								$first=false;
+							else
+								$getStr.='&';
+							$getStr.=$name.'='.urlencode($val);
+						}
+					}
 					foreach($pages['entries'] as $id => $entry) {
-						if($entry['file_name']===$filePathInfo['basename'] && endsWith($filePathInfo['dirname'],substr($entry['directory'],0,-1))) {
+						if($entry['file_name']===$filePathInfo['basename'].$getStr && endsWith($filePathInfo['dirname'],substr($entry['directory'],0,-1))) {
 							$pageId=$id;
 							echo '<title>'.$entry['display_name'].'</title>';
 						}
