@@ -9,9 +9,6 @@
 			$startDir='../'.$startDir;
 		}
 	}
-?>
-<title>Special Materials</title>
-<?php
 	block(
 		'Special Materials',
 		'intro',
@@ -21,6 +18,38 @@
 		],
 		true
 	);
-	echo '<p>None yet.</p>';
+	block(
+		'Annort',
+		'material',
+		quick_array([
+			'Annort is an alchemically engineered metal that opposes necromantic forces of undeath and can be used to overcome many of the resistances of undead. Annort weapons are treated as good, silver, and magic for the purposes of overcoming the damage reduction of undead creatures. Annort weapons also overcome half the damage reduction of undead that would be overcome if the weapon were piercing, slashing, or bludgeoning, as well as half the damage reduction that does not have a listed method to overcome it (DR /—).',
+			'Annort weapons can also be used to better strike incorporeal undead. Non-magic annort weapons are treated as magic for the purpose of harming incorporeal undead and magic annort weapons are treated as having the ii/ghost touch/ii property for the purpose of harming incorporeal undead.',
+			'Weapons made of annort are always considered masterwork, and the masterwork costs are included in the listed prices. Items without metal parts cannot be made from annort. An arrow could be made of annort, but a quarterstaff could not. Adding any magical enhancements to a annort weapon increases its price by 2,000 gp. This increase is applied the first time the item is enhanced, not once per ability added.',
+			'Annort has 30 hit points per inch of thickness and hardness 10. The same as steel.',
+			sTable(
+				[
+					'Type of Annort Item',
+					'Item Price Modifier'
+				],
+				[
+					[
+						'Ammunition',
+						'+20 gp per item'
+					],
+					[
+						'Weapon',
+						'+1,000 gp'
+					],
+					[
+						'Other Items',
+						'+500 gp/lb.'
+					]
+				],
+				true,
+				false
+			)
+		]),
+		true
+	);
 	require $startDir.'pageEnd.php';
 ?>

@@ -2157,6 +2157,25 @@
 				"pathfinder_2e",
 				"settings_2e"
 			]
+		},
+		"special_materials_2e": {
+			"display_name": "Materials",
+			"file_name": "materials.php",
+			"directory": "pathfinder_2e/",
+			"sort_path": [
+				"pathfinder_2e",
+				"equipment_2e"
+			]
+		},
+		"annort_2e": {
+			"display_name": "Annort",
+			"file_name": "annort.php",
+			"directory": "pathfinder_2e/equipment/materials/",
+			"sort_path": [
+				"pathfinder_2e",
+				"equipment_2e",
+				"special_materials_2e"
+			]
 		}
 	},
 	"sort_tree": [
@@ -2816,6 +2835,11 @@
 						{
 							"name": "casting_foci2",
 							"display_name": "Casting Channels",
+							"type": "leaf"
+						},
+						{
+							"name": "special_materials_2e",
+							"display_name": "Materials",
 							"type": "leaf"
 						},
 						{

@@ -1390,8 +1390,15 @@
 			)
 		);
 	}
-	function sTable($headers, $rows, $horizontal=true, $expand=true) {
-		$str='<table'.($expand?' class="expand"':'').'>';
+	function sTable($headers, $rows, $horizontal=true, $expand=true, $allowSort=true) {
+		$classes='';
+		if($expand)
+			$classes.=($classes===''?'':' ').'expand';
+		if(!$horizontal)
+			$classes.=($classes===''?'':' ').'vertical';
+		if(!$allowSort)
+			$classes.=($classes===''?'':' ').'no-sort';
+		$str='<table'.($classes!==''?' class="'.$classes.'"':'').'>';
 		if($horizontal) {
 			$headerCount=count($headers);
 			$str .= '<tr>';
@@ -1440,8 +1447,8 @@
 		$str .= '</table>';
 		return $str;
 	}
-	function table($headers, $rows, $horizontal=true, $expand=true) {
-		echo sTable($headers, $rows, $horizontal, $expand);
+	function table($headers, $rows, $horizontal=true, $expand=true, $allowSort=true) {
+		echo sTable($headers, $rows, $horizontal, $expand, $allowSort);
 	}
 	function contents($items, $custom_title=false, $primary=true) {
 		echo '<div class="to-contents"'.($primary ? ' id="top"' : '').'>';

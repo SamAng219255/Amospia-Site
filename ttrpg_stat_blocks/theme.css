@@ -99,7 +99,9 @@ table {
 	max-width: calc(100% - 2em);
 }
 table.expand {
-	width: calc(100% - 2em);
+	margin: 1em 1em 1em 0;
+	width: calc(100% - 1em);
+	max-width: calc(100% - 1em);
 }
 th {
 	background-color: #000000;

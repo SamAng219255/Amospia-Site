@@ -13,11 +13,15 @@ function comp(a,b) {
 	let numA=A.replaceAll(',','');
 	let numB=B.replaceAll(',','');
 	let match;
-	if(match=numA.match(/^[+-]? ?(\d+) ?\/ ?(\d+)/))
+	if(numA==='—')
+		numA=0;
+	else if(match=numA.match(/^[+-]? ?(\d+) ?\/ ?(\d+)/))
 		numA=parseInt(match[1])/parseInt(match[2]);
 	else
 		numA=parseInt(numA);
-	if(match=numB.match(/^[+-]? ?(\d+) ?\/ ?(\d+)/))
+	if(numB==='—')
+		numB=0;
+	else if(match=numB.match(/^[+-]? ?(\d+) ?\/ ?(\d+)/))
 		numB=parseInt(match[1])/parseInt(match[2]);
 	else
 		numB=parseInt(numB);
@@ -29,7 +33,7 @@ function setupTableSort() {
 	if(cancelDefaultTableSort)
 		return;
 
-	let findTable=$("table");
+	let findTable=$("table:not(.vertical):not(.no-sort)");
 	if(findTable.length<1)
 		return;
 	theTable=findTable[0];
@@ -42,8 +46,10 @@ function setupTableSort() {
 	}
 	tableStorage=findTable.children().children().get();
 	columnIndices={};
-	for(let i=0; i<theTable.children[0].children[0].childElementCount; i++) {
-		columnIndices[theTable.children[0].children[0].children[i].innerText]=i;
+	for(let j=0; j<findTable.length; j++) {
+		for(let i=0; i<findTable[j].children[0].children[0].childElementCount; i++) {
+			columnIndices[findTable[j].children[0].children[0].children[i].innerText]=i;
+		}
 	}
 
 	let sortFuncAsc = function(a, b) {
@@ -61,31 +67,40 @@ function setupTableSort() {
 		return -comp(a.children[sortColumn].innerText.toLowerCase(),b.children[sortColumn].innerText.toLowerCase());
 	}
 
-	let headers=$($("table").children().children()[0]).children();
-	headers.on("click", function(e) {
-		let sortIndex=columnIndices[this.textContent];
-		sortColumn=sortIndex;
-		let tarOrder=tableStorage.slice();
-		if(sortStatus.sort==sortIndex && sortStatus.asc==0) {
-			sortStatus={};
-			sort=false;
-			$($("table").children().children()[0].children[sortIndex]).removeClass("sort-asc").removeClass("sort-dec");
-		}
-		else {
-			if(sortStatus.sort!==undefined)
-				$($("table").children().children()[0].children[sortStatus.sort]).removeClass("sort-asc").removeClass("sort-dec")
-			sortStatus={sort:sortIndex,asc:(!sort || sortIndex!=sortStatus.sort || !sortStatus.asc)?1:0};
-			$($("table").children().children()[0].children[sortStatus.sort]).removeClass("sort-asc").removeClass("sort-dec").addClass(sortStatus.asc ? "sort-asc" : "sort-dec");
-			let rows=$($("table").children()[0].children).get();
-			tarOrder.sort(sortStatus.asc ? sortFuncAsc : sortFuncDec);
-		}
+	const tables=$("table:not(.vertical):not(.no-sort)");
+	for(let i=0; i<tables.length; i++) {
+		let headers=$($(tables[i]).children().children()[0]).children();
+		headers.on("click", function(e) {
+			let sortIndex=columnIndices[this.textContent];
+			sortColumn=sortIndex;
+			let tarOrder=tableStorage.slice();
+			if(sortStatus.sort==sortIndex && sortStatus.asc==0) {
+				sortStatus={};
+				sort=false;
+				const tables=$("table:not(.vertical):not(.no-sort)");
+				for(let i=0; i<tables.length; i++)
+					$($(tables[i]).children().children()[0].children[sortIndex]).removeClass("sort-asc").removeClass("sort-dec");
+			}
+			else {
+				const tables=$("table:not(.vertical):not(.no-sort)");
+				if(sortStatus.sort!==undefined) {
+					for(let i=0; i<tables.length; i++)
+						$($(tables[i]).children().children()[0].children[sortStatus.sort]).removeClass("sort-asc").removeClass("sort-dec")
+				}
+				sortStatus={sort:sortIndex,asc:(!sort || sortIndex!=sortStatus.sort || !sortStatus.asc)?1:0};
+				for(let i=0; i<tables.length; i++)
+					$($(tables[i]).children().children()[0].children[sortStatus.sort]).removeClass("sort-asc").removeClass("sort-dec").addClass(sortStatus.asc ? "sort-asc" : "sort-dec");
+				let rows=$($("table:not(.vertical):not(.no-sort)").children()[0].children).get();
+				tarOrder.sort(sortStatus.asc ? sortFuncAsc : sortFuncDec);
+			}
 
-		for (let i = 0; i < tarOrder.length; i++) {
-			tarOrder[i].parentNode.appendChild(tarOrder[i]);
-		}
-		sort=true;
-	});
-	headers.addClass("clickable");
+			for (let i = 0; i < tarOrder.length; i++) {
+				tarOrder[i].parentNode.appendChild(tarOrder[i]);
+			}
+			sort=true;
+		});
+		headers.addClass("clickable");
+	}
 }
 
 setupFuncs.push(setupTableSort);

@@ -10,7 +10,6 @@
 		}
 	}
 ?>
-<title>Wondrous Items</title>
 <script>
 	initialSort=true;
 	initialSortFunc=function(a,b) {
