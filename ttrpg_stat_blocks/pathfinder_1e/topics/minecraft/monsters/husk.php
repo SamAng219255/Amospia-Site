@@ -100,7 +100,7 @@
 			[
 				'name' => 'Staggered',
 				'type' => 'Ex',
-				'desc' => 'Husks have poor reflexes and can only perform a single move action or standard action each round. A zombie can move up to its speed and attack in the same round as a charge action.'
+				'desc' => 'Husks have poor reflexes and can only perform a single move action or standard action each round. A husk can move up to its speed and attack in the same round as a charge action.'
 			]
 		],// Special Abilities
 		''// Description

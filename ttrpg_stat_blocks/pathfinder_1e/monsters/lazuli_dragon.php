@@ -432,7 +432,7 @@
 			[
 				'name' => 'Arcane Barrier',
 				'type' => 'Sp',
-				'desc' => 'Kundrak is surrounded in a protective barrier of force that grants protection as though wearing +6 heavy fortification full plate without conferring any penalties. This effect also negates ii/magic missile/ii and similar effects aimed at Kundrak saving Kundrak from the whims of pure poor luck. Natural 20 attack rolls against Kundrak are not treated as guranteed hits unless the attacking creature misses by 5 or less and natural 1 rolls on saves are not treated as automatic fails unless he beat the DC by 5 or less. If Kundrak is subject to an effect that would instantly kill him, either directly, such as ii/power word kill/ii or a coup de grace, or indirectly, such as a vorpal weapon, Kundrak may make a fortitude save equal to 5 plus 1 for every 12 points of damage he has taken. If he succeeds the save he is unaffected. If he fails he suffers 10 points of constitution damage.'
+				'desc' => 'Kundrak is surrounded in a protective barrier of force that grants protection as though wearing +6 heavy fortification full plate without conferring any penalties. This effect also negates ii/magic missile/ii and similar effects aimed at Kundrak as well as saving Kundrak from the whims of pure poor luck. Natural 20 attack rolls against Kundrak are not treated as guranteed hits unless the attacking creature misses by 5 or less and natural 1 rolls on saves are not treated as automatic fails unless he beat the DC by 5 or less. If Kundrak is subject to an effect that would instantly kill him, either directly, such as ii/power word kill/ii or a coup de grace, or indirectly, such as a vorpal weapon, Kundrak may make a fortitude save equal to 5 plus 1 for every 12 points of damage he has taken. If he succeeds the save he is unaffected. If he fails he suffers 10 points of constitution damage.'
 			],
 			[
 				'name' => 'Arcane Weapons',
@@ -482,7 +482,7 @@
 			[
 				'name' => 'Selective Disjunction',
 				'type' => 'Ex',
-				'desc' => 'As a standard action, Kundrak can name up to 16 magic effects, such as a spell or supernatural ability, or sources of magic, such as casters or magic items. These effects or all effects produced by these sources are negated within 30 feet of Kundrak as by ii/aroden\'s spellbane/ii except it is able to negate effects from artifacts are deities.'
+				'desc' => 'As a standard action, Kundrak can name up to 16 magic effects, such as a spell or supernatural ability, or sources of magic, such as casters or magic items. These effects or all effects produced by these sources are negated within 30 feet of Kundrak as by ii/aroden\'s spellbane/ii except it is able to negate effects from artifacts and deities.'
 			],
 			[
 				'name' => 'Spell Combat',
