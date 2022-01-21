@@ -12,17 +12,35 @@ function comp(a,b) {
 	const B=b.toString();
 	let numA=A.replaceAll(',','');
 	let numB=B.replaceAll(',','');
-	let match;
+	let fractionMatch;
+	let diceMatches;
+	let nextDiceMatch;
+	nextDiceMatch=(diceMatches=numA.matchAll(/(\d+)d(\d+)/g)).next();
 	if(numA==='—')
 		numA=0;
-	else if(match=numA.match(/^[+-]? ?(\d+) ?\/ ?(\d+)/))
-		numA=parseInt(match[1])/parseInt(match[2]);
+	else if(!nextDiceMatch.done) {
+		numA=0;
+		do {
+			numA+=parseInt(nextDiceMatch.value[1])*(1+parseInt(nextDiceMatch.value[2]))/2;
+		}
+		while(!(nextDiceMatch=diceMatches.next()).done);
+	}
+	else if(fractionMatch=numA.match(/^[+-]? ?(\d+) ?\/ ?(\d+)/))
+		numA=parseInt(fractionMatch[1])/parseInt(fractionMatch[2]);
 	else
 		numA=parseInt(numA);
+	nextDiceMatch=(diceMatches=numB.matchAll(/(\d+)d(\d+)/g)).next();
 	if(numB==='—')
 		numB=0;
-	else if(match=numB.match(/^[+-]? ?(\d+) ?\/ ?(\d+)/))
-		numB=parseInt(match[1])/parseInt(match[2]);
+	else if(!nextDiceMatch.done) {
+		numB=0;
+		do {
+			numB+=parseInt(nextDiceMatch.value[1])*(1+parseInt(nextDiceMatch.value[2]))/2;
+		}
+		while(!(nextDiceMatch=diceMatches.next()).done);
+	}
+	else if(fractionMatch=numB.match(/^[+-]? ?(\d+) ?\/ ?(\d+)/))
+		numB=parseInt(fractionMatch[1])/parseInt(fractionMatch[2]);
 	else
 		numB=parseInt(numB);
 	if(isNaN(numA) || isNaN(numB))

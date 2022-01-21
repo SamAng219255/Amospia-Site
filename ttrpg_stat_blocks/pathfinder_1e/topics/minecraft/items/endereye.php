@@ -9,9 +9,6 @@
 			$startDir='../'.$startDir;
 		}
 	}
-?>
-<title>Eye of Ender</title>
-<?php
 	magicItemBlockAuto(
 		"Eye of Ender",// Name
 		"Divination",// School

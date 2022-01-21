@@ -245,7 +245,7 @@
 		$sections=[
 			[
 				"title" => "Description",
-				"spaced" => false,
+				"spaced" => true,
 				"texts" => quick_format($description)
 			]
 		];

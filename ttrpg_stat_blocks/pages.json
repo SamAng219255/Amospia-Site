@@ -1743,7 +1743,7 @@
 			]
 		},
 		"specific_weapons": {
-			"display_name": "Specific Magic Armors",
+			"display_name": "Specific Magic Weapons",
 			"file_name": "specific_weapons.php",
 			"directory": "pathfinder_1e/",
 			"sort_path": [
@@ -2176,6 +2176,88 @@
 				"equipment_2e",
 				"special_materials_2e"
 			]
+		},
+		"spells": {
+			"display_name": "Spells",
+			"file_name": "spells.php",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e"
+			]
+		},
+		"meteor1": {
+			"display_name": "Micro Meteor",
+			"file_name": "micro_meteor.php",
+			"directory": "pathfinder_1e/spells/",
+			"sort_path": [
+				"pathfinder_1e",
+				"spells"
+			]
+		},
+		"meteor2": {
+			"display_name": "Shooting Stars",
+			"file_name": "shooting_stars.php",
+			"directory": "pathfinder_1e/spells/",
+			"sort_path": [
+				"pathfinder_1e",
+				"spells"
+			]
+		},
+		"meteor3": {
+			"display_name": "Meteor Stone",
+			"file_name": "meteor_Stone.php",
+			"directory": "pathfinder_1e/spells/",
+			"sort_path": [
+				"pathfinder_1e",
+				"spells"
+			]
+		},
+		"meteor_sling": {
+			"display_name": "Meteor Sling",
+			"file_name": "meteor_sling.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons",
+				"specific_weapons"
+			]
+		},
+		"comet_sling": {
+			"display_name": "Comet Sling",
+			"file_name": "comet_sling.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons",
+				"specific_weapons"
+			]
+		},
+		"cobalt_spheres": {
+			"display_name": "Cobalt Sphere",
+			"file_name": "cobalt_spheres.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons",
+				"specific_weapons"
+			]
+		},
+		"boulder_of_annihilation": {
+			"display_name": "Boulder of Annihilation",
+			"file_name": "boulder_of_annihilation.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"wondrous"
+			]
 		}
 	},
 	"sort_tree": [
@@ -2375,25 +2457,33 @@
 										{
 											"name": "melee_qualities",
 											"display_name": "Melee Weapon Qualities",
-											"type": "limb",
-											"nodes": [
-												
-											]
+											"type": "leaf"
 										},
 										{
 											"name": "ranged_qualities",
 											"display_name": "Ranged Weapon Qualities",
-											"type": "limb",
-											"nodes": [
-												
-											]
+											"type": "leaf"
 										},
 										{
 											"name": "specific_weapons",
 											"display_name": "Specific Magic Weapons",
 											"type": "limb",
 											"nodes": [
-												
+												{
+													"name": "comet_sling",
+													"display_name": "Comet Sling",
+													"type": "leaf"
+												},
+												{
+													"name": "cobalt_spheres",
+													"display_name": "Cobalt Sphere",
+													"type": "leaf"
+												},
+												{
+													"name": "meteor_sling",
+													"display_name": "Meteor Sling",
+													"type": "leaf"
+												}
 											]
 										}
 									]
@@ -2406,6 +2496,11 @@
 										{
 											"name": "lazuli_band",
 											"display_name": "Band of Lazuli and Iron",
+											"type": "leaf"
+										},
+										{
+											"name": "boulder_of_annihilation",
+											"display_name": "Boulder of Annihilation",
 											"type": "leaf"
 										},
 										{
@@ -2564,6 +2659,11 @@
 							"type": "leaf"
 						}
 					]
+				},
+				{
+					"name": "spells",
+					"display_name": "Spells",
+					"type": "leaf"
 				},
 				{
 					"name": "settings",

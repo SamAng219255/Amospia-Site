@@ -10,7 +10,6 @@
 		}
 	}
 ?>
-<title>Specific Weapons</title>
 <script>
 	initialSort=true;
 	initialSortFunc=function(a,b) {
@@ -18,8 +17,8 @@
 			return -1;
 		else if(b.children[0].tagName=='TH')
 			return 1;
-		return 4 * comp(a.children[2].innerText.toLowerCase(),b.children[2].innerText.toLowerCase()) +
-			2 * comp(a.children[1].innerText.toLowerCase(),b.children[1].innerText.toLowerCase()) +
+		return 4 * comp(a.children[1].innerText.toLowerCase(),b.children[1].innerText.toLowerCase()) +
+			2 * comp(a.children[2].innerText.toLowerCase(),b.children[2].innerText.toLowerCase()) +
 			1 * comp(a.children[0].innerText.toLowerCase(),b.children[0].innerText.toLowerCase());
 	};
 </script>
@@ -41,19 +40,64 @@
 		],
 		[
 			[
-				'',
-				'link' => '',
-				'',
-				'',
-				'',
-				'',
-				'',
-				'',
-				'',
-				'',
-				'',
-				'',
-				''
+				'Meteor Sling',
+				'link' => 'items/meteor_sling.php',
+				'30,000 gp',
+				'6th',
+				'Simple',
+				'Ranged',
+				'2d3 + 1d6 Fire',
+				'2d4 + 1d6 Fire',
+				'19-20/x2',
+				'80 ft.',
+				'—',
+				'P or B',
+				'—'
+			],
+			[
+				'Comet Sling',
+				'link' => 'items/comet_sling.php',
+				'30,000 gp',
+				'6th',
+				'Simple',
+				'Ranged',
+				'2d3 + 1d6 Cold',
+				'2d4 + 1d6 Cold',
+				'19-20/x2',
+				'80 ft.',
+				'—',
+				'P or B',
+				'—'
+			],
+			[
+				'Cobalt Sphere (master)',
+				'link' => 'items/cobalt_spheres.php',
+				'7,200 gp',
+				'7th',
+				'Exotic',
+				'Ranged',
+				'1d4',
+				'1d6',
+				'x2',
+				'varies',
+				'—',
+				'B',
+				'—'
+			],
+			[
+				'Cobalt Sphere (trailing)',
+				'link' => 'items/cobalt_spheres.php',
+				'288 gp',
+				'7th',
+				'Exotic',
+				'Ranged',
+				'1d4',
+				'1d6',
+				'x2',
+				'varies',
+				'—',
+				'B',
+				'—'
 			]
 		]
 	);
