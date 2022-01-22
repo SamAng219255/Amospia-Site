@@ -15,15 +15,19 @@
 		[],// Descriptors
 		[
 			'antipaladin' => 3,
+			'arcanist' => 3,
 			'bloodrager' => 3,
 			'cleric' => 4,
 			'druid' => 4,
 			'inquisitor' => 3,
 			'magus' => 3,
+			'occultist' => 3,
 			'oracle' => 4,
 			'paladin' => 3,
+			'redmantisassassin' => 3,
 			'shaman' => 4,
 			'sorcerer' => 3,
+			'warpriest' => 3,
 			'wizard' => 3 
 		],// Levels
 		[

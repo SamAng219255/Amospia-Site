@@ -2258,6 +2258,15 @@
 				"magic_items",
 				"wondrous"
 			]
+		},
+		"metal_bead_storm": {
+			"display_name": "Metal Bead Storm",
+			"file_name": "metal_bead_storm.php",
+			"directory": "pathfinder_1e/spells/",
+			"sort_path": [
+				"pathfinder_1e",
+				"spells"
+			]
 		}
 	},
 	"sort_tree": [

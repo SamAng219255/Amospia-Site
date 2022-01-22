@@ -37,7 +37,7 @@
 				'link' => 'spells/micro_meteor.php',
 				'1',
 				'Transmutation',
-				'antipaladin, bloodrager, cleric, druid, inquisitor, magus, oracle, paladin, shaman, sorcerer, wizard',
+				'antipaladin, arcanist, bloodrager, cleric, druid, inquisitor, magus, occultist, oracle, paladin, redmantisassassin, shaman, sorcerer, warpriest, wizard',
 				'Up to 3 pebbles gain a +1 bonus and deal 1d6 damage.'
 			],
 			[
@@ -45,7 +45,7 @@
 				'link' => 'spells/shooting_stars.php',
 				'3',
 				'Transmutation',
-				'antipaladin, bloodrager, inquisitor, magus, paladin, sorcerer, wizard',
+				'antipaladin, arcanist, bloodrager, inquisitor, magus, occultist, paladin, redmantisassassin, sorcerer, wizard',
 				'Up to 3 stones per level gain a +1 bonus/four levels (max +5) and deal 1d6 damage.'
 			],
 			[
@@ -53,7 +53,7 @@
 				'link' => 'spells/shooting_stars.php',
 				'4',
 				'Transmutation',
-				'cleric, druid, oracle, shaman',
+				'cleric, druid, oracle, shaman, warpriest',
 				'Up to 3 stones per level gain a +1 bonus/four levels (max +5) and deal 1d6 damage.'
 			],
 			[
@@ -61,7 +61,7 @@
 				'link' => 'spells/meteor_stone.php',
 				'6',
 				'Evocation',
-				'antipaladin, bloodrager, inquisitor, magus, paladin, sorcerer, wizard',
+				'antipaladin, arcanist, bloodrager, inquisitor, magus, occultist, paladin, redmantisassassin, sorcerer, wizard',
 				'Throw a meteor or comet at an enemy.'
 			],
 			[
@@ -69,8 +69,16 @@
 				'link' => 'spells/meteor_stone.php',
 				'7',
 				'Evocation',
-				'cleric, druid, oracle, shaman',
+				'cleric, druid, oracle, shaman, warpriest',
 				'Throw a meteor or comet at an enemy.'
+			],
+			[
+				'Metal Bead Storm',
+				'link' => 'spells/metal_bead_storm.php',
+				'5',
+				'Evocation',
+				'arcanist, bloodrager, cleric, inquisitor, magus, occultist, oracle, psychic, redmantisassassin, sorcerer, wizard',
+				'Creates a swirling tornado of small metal beads.'
 			]
 		]
 	);
