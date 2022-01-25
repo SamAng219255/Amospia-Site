@@ -252,12 +252,17 @@ body.light .toc-title {
 	-webkit-transition: background-color .4s, color .4s;
 	transition: background-color .4s, color .4s;
 }
-body.light .block-title {
+body.light .block:not(.block-sf) .block-title {
 	background-color: #cca94a;
 	color: #482818;
 }
 .block2 .block-title {
 	margin-top: 1em;
+}
+.block-sf .block-title {
+	margin: 1em 0 0.5em;
+	background-color: #9A0800;
+	color: #f0f0ff;
 }
 .block-section-title {
 	border-style: solid none;
@@ -269,6 +274,15 @@ body.light .block-title {
 	color: #000000;
 	padding: 0 0.25em;
 	margin: 1em 0;
+}
+.block-sf .block-section-title {
+	font-size: 1.25em;
+	background-color: #0D117C;
+	color: #f0f0ff;
+	border-style: none;
+	font-weight: bold;
+	padding: 0 0.25em;
+	margin: 0.75em 0 0.5em;
 }
 .goto-top, .goto-top-2 {
 	display: none;
@@ -287,6 +301,7 @@ body.light .block-title {
 .trait, trt {
 	display: inline-block;
 	padding: 0.25em;
+	margin: 0.125em;
 	border-style: solid;
 	border-width: 2px;
 	border-color: #cca94a;

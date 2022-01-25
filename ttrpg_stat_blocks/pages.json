@@ -2267,6 +2267,117 @@
 				"pathfinder_1e",
 				"spells"
 			]
+		},
+		"armor_sf": {
+			"display_name": "Armor",
+			"file_name": "armor_index.php",
+			"directory": "starfinder/",
+			"sort_path": [
+				"starfinder",
+				"equipment_sf"
+			]
+		},
+		"weapons_sf": {
+			"display_name": "Weapons",
+			"file_name": "weapons_index.php",
+			"directory": "starfinder/",
+			"sort_path": [
+				"starfinder",
+				"equipment_sf"
+			]
+		},
+		"magic_sf": {
+			"display_name": "Magic Items",
+			"file_name": "magic_index.php",
+			"directory": "starfinder/",
+			"sort_path": [
+				"starfinder",
+				"equipment_sf"
+			]
+		},
+		"hybrid_sf": {
+			"display_name": "Hybrid Items",
+			"file_name": "hybrid_index.php",
+			"directory": "starfinder/",
+			"sort_path": [
+				"starfinder",
+				"equipment_sf"
+			]
+		},
+		"techno_sf": {
+			"display_name": "Technological Items",
+			"file_name": "techno_index.php",
+			"directory": "starfinder/",
+			"sort_path": [
+				"starfinder",
+				"equipment_sf"
+			]
+		},
+		"properties_sf": {
+			"display_name": "Weapon Special Properties",
+			"file_name": "weapon_properties.php",
+			"directory": "starfinder/",
+			"sort_path": [
+				"starfinder",
+				"equipment_sf"
+			]
+		},
+		"cobalt_spheres_sf": {
+			"display_name": "Cobalt Spheres",
+			"file_name": "cobalt_spheres.php",
+			"directory": "starfinder/items/",
+			"sort_path": [
+				"starfinder",
+				"equipment_sf",
+				"weapons_sf"
+			]
+		},
+		"specific_weapons_2e": {
+			"display_name": "Specific Magic Weapons",
+			"file_name": "specific_weapons.php",
+			"directory": "pathfinder_2e/",
+			"sort_path": [
+				"pathfinder_2e",
+				"equipment_2e",
+				"weapons_2e"
+			]
+		},
+		"weapons_2e": {
+			"display_name": "Weapons",
+			"file_name": "weapons_index.php",
+			"directory": "pathfinder_2e/",
+			"sort_path": [
+				"pathfinder_2e",
+				"equipment_2e"
+			]
+		},
+		"cobalt_spheres_2e": {
+			"display_name": "Cobalt Spheres",
+			"file_name": "cobalt_spheres.php",
+			"directory": "pathfinder_2e/equipment/",
+			"sort_path": [
+				"pathfinder_2e",
+				"equipment_2e",
+				"weapons_2e",
+				"specific_weapons_2e"
+			]
+		},
+		"magic_5e": {
+			"display_name": "Magic Items",
+			"file_name": "magic_index.php",
+			"directory": "dnd_5e/",
+			"sort_path": [
+				"dnd_5e"
+			]
+		},
+		"cobalt_spheres_5e": {
+			"display_name": "Cobalt Spheres",
+			"file_name": "cobalt_spheres.php",
+			"directory": "dnd_5e/items/",
+			"sort_path": [
+				"dnd_5e",
+				"magic_5e"
+			]
 		}
 	},
 	"sort_tree": [
@@ -2932,6 +3043,53 @@
 			]
 		},
 		{
+			"name": "starfinder",
+			"display_name": "Starfinder",
+			"type": "branch",
+			"nodes": [
+				{
+					"name": "equipment_sf",
+					"display_name": "Equipment",
+					"type": "branch",
+					"nodes": [
+						{
+							"name": "armor_sf",
+							"display_name": "Armor",
+							"type": "leaf"
+						},
+						{
+							"name": "weapons_sf",
+							"display_name": "Weapons",
+							"petal_display_name": "Weapons Index",
+							"type": "flower",
+							"nodes": [
+								{
+									"name": "properties_sf",
+									"display_name": "Special Properties",
+									"type": "petal"
+								}
+							]
+						},
+						{
+							"name": "magic_sf",
+							"display_name": "Magic Items",
+							"type": "leaf"
+						},
+						{
+							"name": "hybrid_sf",
+							"display_name": "Hybrid Items",
+							"type": "leaf"
+						},
+						{
+							"name": "techno_sf",
+							"display_name": "Technological Items",
+							"type": "leaf"
+						}
+					]
+				}
+			]
+		},
+		{
 			"name": "pathfinder_2e",
 			"display_name": "Pathfinder 2nd Ed.",
 			"type": "branch",
@@ -2980,6 +3138,19 @@
 									"nodes": [
 
 									]
+								}
+							]
+						},
+						{
+							"name": "weapons_2e",
+							"display_name": "Weapons",
+							"petal_display_name": "Base Weapons",
+							"type": "flower",
+							"nodes": [
+								{
+									"name": "specific_weapons_2e",
+									"display_name": "Specific Magic Weapons",
+									"type": "petal"
 								}
 							]
 						}
@@ -3066,7 +3237,11 @@
 			"display_name": "D&D 5th Ed.",
 			"type": "branch",
 			"nodes": [
-
+				{
+					"name": "magic_5e",
+					"display_name": "Magic Items",
+					"type": "leaf"
+				}
 			]
 		}
 	]

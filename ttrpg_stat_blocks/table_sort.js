@@ -18,6 +18,8 @@ function comp(a,b) {
 	nextDiceMatch=(diceMatches=numA.matchAll(/(\d+)d(\d+)/g)).next();
 	if(numA==='—')
 		numA=0;
+	else if(numA==='L')
+		numA=0.1;
 	else if(!nextDiceMatch.done) {
 		numA=0;
 		do {
@@ -32,6 +34,8 @@ function comp(a,b) {
 	nextDiceMatch=(diceMatches=numB.matchAll(/(\d+)d(\d+)/g)).next();
 	if(numB==='—')
 		numB=0;
+	else if(numB==='L')
+		numB=0.1;
 	else if(!nextDiceMatch.done) {
 		numB=0;
 		do {

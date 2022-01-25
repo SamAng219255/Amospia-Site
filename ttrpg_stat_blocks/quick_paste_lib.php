@@ -64,6 +64,14 @@
 				$str=preg_replace('/ ?\/as/', '</a>', $str, 1);
 			}
 		}
+		$matches=[];
+		if(preg_match_all('/ab\/(.+?)\|(.+?)\|/', $str, $matches)) {
+			foreach ($matches[1] as $ind=>$match) {
+				$entry=$pages['entries'][$match];
+				$str=preg_replace('/ab\/(.+?)\|(.+?)\|/', '<a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'#section-'.str_replace(' ','-',$matches[2][$ind]).'" target="_blank">', $str, 1);
+				$str=preg_replace('/ ?\/ab/', '</a>', $str, 1);
+			}
+		}
 	}
 	function quick_format_string($subject) {
 		$str=$subject;
@@ -236,6 +244,25 @@
 			$sectionTextCount=count($sections[$i]['texts']);
 			foreach ($sections[$i]['texts'] as $text) {
 				echo '<p'.($sections[$i]['spaced'] ? ' class="spaced"' : '').'>'.quick_format($text).'</p>';
+			}
+			echo '</div>';
+		}
+		echo '</div>';
+	}
+	function blockSF($name='', $type='', $texts=[], $spaced=false, $sections=[], $anchorSections=true) {
+		echo '<div class="block block-sf '.$type.'" id="block-'.str_replace(' ', '-', $name).'">';
+		echo '<div class="block-title">'.$name.'<a href="#" class="goto-top">Back to Top</a></div>';
+		$textCount=count($texts);
+		for($i=0; $i<$textCount; $i++) {
+			echo '<p'.($spaced ? ' class="spaced"' : '').'>'.$texts[$i].'</p>';
+		}
+		$sectionCount=count($sections);
+		for($i=0; $i<$sectionCount; $i++) {
+			echo '<div class="block-section">';
+			echo '<div class="block-section-title"'.($anchorSections?' id="section-'.str_replace(' ', '-', $sections[$i]['title']).'"':'').'>'.$sections[$i]['title'].'</div>';
+			$sectionTextCount=count($sections[$i]['texts']);
+			for($j=0; $j<$sectionTextCount; $j++) {
+				echo '<p'.($sections[$i]['spaced'] ? ' class="spaced"' : '').'>'.$sections[$i]['texts'][$j].'</p>';
 			}
 			echo '</div>';
 		}
@@ -1388,6 +1415,170 @@
 				],
 				$racetraits
 			)
+		);
+	}
+	function itemSFBlock($name='', $properties=[], $desc=false, $variants=[]) {
+		$textLines=[];
+		foreach($properties as $propertyLine) {
+			$line='';
+			$first=true;
+			foreach ($propertyLine as $property => $val) {
+				if($first)
+					$first=false;
+				else
+					$line.='; ';
+				$line.='bb/'.$property.'/bb '.$val;
+			}
+			array_push($textLines, $line);
+		}
+		if($desc!==false) {
+			if(count($textLines)>0)
+				array_push($textLines, '/tt/ Description');
+			array_append($textLines,quick_array($desc));
+		}
+		$sections=[];
+		if(count($variants)>0) {
+			foreach($variants as $variant) {
+				$sectionPropLines=[];
+				foreach($variant['properties'] as $propertyLine) {
+					$line='';
+					$first=true;
+					foreach ($propertyLine as $property => $val) {
+						if($first)
+							$first=false;
+						else
+							$line.='; ';
+						$line.='bb/'.$property.'/bb '.$val;
+					}
+					array_push($sectionPropLines, $line);
+				}
+				if(count($sectionPropLines)>0 && count($variant['texts'])>0)
+					array_push($sectionPropLines, '/tt/ Description');
+				array_push($sections, [
+					'title' => $variant['title'],
+					'spaced' => false,
+					'texts' => array_merge(quick_array($sectionPropLines),quick_array($variant['texts']))
+				]);
+			}
+		}
+		blockSF(
+			$name,
+			'item',
+			$textLines,
+			false,
+			$sections
+		);
+	}
+	function itemSFBlockAuto($name='', $properties=[], $desc=false, $variants=[], $level=1, $price=0, $hands='—', $bulk='—', $charges=false) {
+		$prop=[];
+		if(count($properties)>0) {
+			$prop=array_merge([['Level'=>$level, 'Price'=>$price]],$properties);
+			if($charges)
+				array_push($prop, ['Capacity'=>$charges['capacity'], 'Usage'=>$charges['usage']]);
+			array_push($prop, ['Hands'=>$hands, 'Bulk'=>$bulk]);
+		}
+		$varnts=[];
+		foreach ($variants as $ind=>$variant) {
+			array_push($varnts,[
+				'title' => $variant['title'],
+				'title' => array_slice($variant['properties'],0),
+				'texts' => array_slice($variant['texts'],0)
+			]);
+			if(count($variant['properties'])>0) {
+				$varnts[$ind]['properties']=array_merge(
+					[[
+						'Level'=>$variant['level'],
+						'Price'=>$variant['price']
+					]],
+					$variant['properties']
+				);
+				if(isset($variant['capacity'])) {
+					array_push($prop, [
+						'Capacity'=>$variant['capacity'],
+						'Usage'=>$variant['usage']]
+					);
+				}
+				array_push($varnts[$ind]['properties'], [
+					'Hands'=>$variant['hands'],
+					'Bulk'=>$variant['bulk']
+				]);
+			}
+		}
+		itemSFBlock(
+			$name,
+			$prop,
+			$desc,
+			$variants
+		);
+	}
+	function weaponSFBlockAuto($name='', $properties=false, $desc=false, $variants=[], $level=1, $price=0, $hands='—', $prof='', $dmg='', $range=false, $crit='', $bulk='—', $special='', $charges=false) {
+		$prop=[];
+		if($properties!==false) {
+			$dmgLine=[
+				'Damage'=>$dmg
+			];
+			if($range!==false)
+				$dmgLine['Range']=(is_numeric($range)?$range.' ft.':$range);
+			$dmgLine['Critical']=$crit;
+			$prop=array_merge([
+				[
+					'Level'=>$level,
+					'Price'=>(is_numeric($price)?number_format($price):$price)
+				],
+				[
+					'Hands'=>$hands,
+					'Proficiency'=>$prof
+				]
+			],[$dmgLine],$properties);
+			if($charges)
+				array_push($prop, ['Capacity'=>$charges['capacity'], 'Usage'=>$charges['usage']]);
+			array_push($prop, ['Bulk'=>$bulk, 'Special'=>$special]);
+		}
+		$varnts=[];
+		foreach ($variants as $ind=>$variant) {
+			array_push($varnts,[
+				'title' => $variant['title'],
+				'properties' => array_slice($variant['properties'],0),
+				'texts' => array_slice($variant['texts'],0)
+			]);
+			if($variant['properties']!==false) {
+				$varDmgLine=['Damage'=>$variant['dmg']];
+				if($variant['range']!==false)
+					$varDmgLine['Range']=(is_numeric($variant['range'])?$variant['range'].' ft.':$variant['range']);
+				$varDmgLine['Critical']=$variant['crit'];
+				$varnts[$ind]['properties']=array_merge(
+					[
+						[
+							'Level'=>$variant['level'],
+							'Price'=>(is_numeric($variant['price'])?number_format($variant['price']):$variant['price'])
+						],
+						[
+							'Hands'=>$variant['hands'],
+							'Proficiency'=>$variant['prof']
+						]
+					],
+					[$varDmgLine],
+					$variant['properties']
+				);
+				if(isset($variant['capacity'])) {
+					array_push($prop,
+						[
+							'Capacity'=>$variant['capacity'],
+							'Usage'=>$variant['usage']
+						]
+					);
+				}
+				array_push($varnts[$ind]['properties'], [
+					'Bulk'=>$variant['bulk'],
+					'Special'=>$variant['special']
+				]);
+			}
+		}
+		itemSFBlock(
+			$name,
+			$prop,
+			$desc,
+			$varnts
 		);
 	}
 	function sTable($headers, $rows, $horizontal=true, $expand=true, $allowSort=true) {
