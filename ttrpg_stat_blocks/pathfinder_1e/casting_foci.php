@@ -255,7 +255,7 @@
 				'Allows the creation of a number of temporary alchemical items each day.'
 			],
 			[
-				'Necromantic Skull',
+				'Necromantic Skull (3rd)',
 				'link' => 'items/casting_foci/necromancy_skull.php',
 				'15,000 gp',
 				'Arcane School',
@@ -263,7 +263,7 @@
 				'Animates as a dread skull animus.'
 			],
 			[
-				'Necromantic Skull',
+				'Necromantic Skull (6th)',
 				'link' => 'items/casting_foci/necromancy_skull.php',
 				'60,000 gp',
 				'Arcane School',
@@ -271,7 +271,7 @@
 				'Animates as a dread skull animus.'
 			],
 			[
-				'Necromantic Skull',
+				'Necromantic Skull (9th)',
 				'link' => 'items/casting_foci/necromancy_skull.php',
 				'120,000 gp',
 				'Arcane School',

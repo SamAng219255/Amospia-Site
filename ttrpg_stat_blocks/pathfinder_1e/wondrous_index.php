@@ -32,37 +32,72 @@
 		],
 		[
 			[
-				'Band of Lazuli and Iron (+1)',
+				quick_format('Band of Lazuli and Iron (+1, with 1 ii/miracle/ii)'),
 				'link' => 'items/lazuli_band.php',
-				'78,000 gp',
+				'278,000 gp',
 				'ring',
 				'20th'
 			],
 			[
-				'Band of Lazuli and Iron (+2)',
+				quick_format('Band of Lazuli and Iron (+2, with 1 ii/miracle/ii)'),
 				'link' => 'items/lazuli_band.php',
-				'90,000 gp',
+				'290,000 gp',
 				'ring',
 				'20th'
 			],
 			[
-				'Band of Lazuli and Iron (+3)',
+				quick_format('Band of Lazuli and Iron (+3, with 1 ii/miracle/ii)'),
 				'link' => 'items/lazuli_band.php',
-				'110,000 gp',
+				'310,000 gp',
 				'ring',
 				'20th'
 			],
 			[
-				'Band of Lazuli and Iron (+4)',
+				quick_format('Band of Lazuli and Iron (+4, with 1 ii/miracle/ii)'),
 				'link' => 'items/lazuli_band.php',
-				'138,000 gp',
+				'338,000 gp',
 				'ring',
 				'20th'
 			],
 			[
-				'Band of Lazuli and Iron (+5)',
+				quick_format('Band of Lazuli and Iron (+5, with 1 ii/miracle/ii)'),
 				'link' => 'items/lazuli_band.php',
-				'174,000 gp',
+				'374,000 gp',
+				'ring',
+				'20th'
+			],
+			[
+				quick_format('Band of Lazuli and Iron (+1)'),
+				'link' => 'items/lazuli_band.php',
+				'88,000 gp',
+				'ring',
+				'20th'
+			],
+			[
+				quick_format('Band of Lazuli and Iron (+2)'),
+				'link' => 'items/lazuli_band.php',
+				'100,000 gp',
+				'ring',
+				'20th'
+			],
+			[
+				quick_format('Band of Lazuli and Iron (+3)'),
+				'link' => 'items/lazuli_band.php',
+				'120,000 gp',
+				'ring',
+				'20th'
+			],
+			[
+				quick_format('Band of Lazuli and Iron (+4)'),
+				'link' => 'items/lazuli_band.php',
+				'148,000 gp',
+				'ring',
+				'20th'
+			],
+			[
+				quick_format('Band of Lazuli and Iron (+5)'),
+				'link' => 'items/lazuli_band.php',
+				'184,000 gp',
 				'ring',
 				'20th'
 			],
@@ -83,7 +118,7 @@
 			[
 				'Money Changer\'s Pouch',
 				'link' => 'items/coin_purse.php',
-				'2,000 gp gp',
+				'2,000 gp',
 				'none',
 				'9th'
 			],
