@@ -25,8 +25,8 @@
 <p></p>
 <?php
 	block(
-		"Casting Foci",
-		"",
+		'Casting Foci',
+		'',
 		quick_format([
 			'Certain, specially created, items can be used focus the the power of a caster. Most of these items appear at first to resemble existing magic items and, in fact, many can have the functions of their corresponding item integrated into it or some other boon. Unless stated otherwise, upgrading a casting focus increases it\'s price by twice the cost to upgrade it. Each item grants a boon to the caster improving their magic.',
 			'Holding a casting focus does not prevent that hand from performing somatic spell components. Depending on the item, either normal somatic components are used or some manipulation of the item is used in place. Additionally if casting a touch spell, the charge becomes attached to both the caster\'s hand and the casting focus and can be discharged by touching either one.',
@@ -143,11 +143,27 @@
 				'Either magically locks/unlocks or blocks/enables teleportation.'
 			],
 			[
-				'Divining Sphere',
+				'Divining Sphere (3rd)',
 				'link' => 'items/casting_foci/divination_sphere.php',
-				'TODO gp',
+				'18,000 gp',
 				'Arcane School',
-				'TODO',
+				'Allows you revert time once per day after the casting a spell to before the spell was cast.',
+				'Functions as a crystal ball.'
+			],
+			[
+				'Divining Sphere (6th)',
+				'link' => 'items/casting_foci/divination_sphere.php',
+				'72,000 gp',
+				'Arcane School',
+				'Allows you revert time once per day after the casting a spell to before the spell was cast.',
+				'Functions as a crystal ball.'
+			],
+			[
+				'Divining Sphere (9th)',
+				'link' => 'items/casting_foci/divination_sphere.php',
+				'162,000 gp',
+				'Arcane School',
+				'Allows you revert time once per day after the casting a spell to before the spell was cast.',
 				'Functions as a crystal ball.'
 			],
 			[
@@ -159,11 +175,27 @@
 				'Allows switching between up to 12 other magic rings.'
 			],
 			[
-				'Evocation Rod',
+				'Evocation Rod (3rd)',
 				'link' => 'items/casting_foci/evocation_rod.php',
-				'TODO gp',
+				'3,000 gp',
 				'Arcane School',
-				'TODO',
+				'Infuses your spells with destructive power that allows you to overcome some or all of target\'s energy resistances and immunities.',
+				'Can either add additional energy damage to spells or function as a metamagic rod.'
+			],
+			[
+				'Evocation Rod (6th)',
+				'link' => 'items/casting_foci/evocation_rod.php',
+				'11,000 gp',
+				'Arcane School',
+				'Infuses your spells with destructive power that allows you to overcome some or all of target\'s energy resistances and immunities.',
+				'Can either add additional energy damage to spells or function as a metamagic rod.'
+			],
+			[
+				'Evocation Rod (9th)',
+				'link' => 'items/casting_foci/evocation_rod.php',
+				'24,500 gp',
+				'Arcane School',
+				'Infuses your spells with destructive power that allows you to overcome some or all of target\'s energy resistances and immunities.',
 				'Can either add additional energy damage to spells or function as a metamagic rod.'
 			],
 			[
