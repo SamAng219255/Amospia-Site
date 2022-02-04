@@ -1318,7 +1318,7 @@
 			$variations
 		);
 	}
-	function race2eBlock($name, $typeTrait, $loreDesc, $youmight, $othersprobably, $physDesc, $society, $alignRelig, $adventurers, $hitpoints, $size, $speed, $boosts, $flaws, $languages, $racetraits) {
+	function race2eBlock($name, $rarity, $typeTrait, $loreDesc, $youmight, $othersprobably, $physDesc, $society, $alignRelig, $adventurers, $hitpoints, $size, $speed, $boosts, $flaws, $languages, $racetraits) {
 		$opinions=[];
 		if(count($youmight)>0) {
 			$youmight_text='<ul>';
@@ -1340,7 +1340,7 @@
 			$name,
 			'Race',
 			false,
-			[$name, $typeTrait],
+			array_merge($rarity==='Common' ? [] : [$rarity], is_string($typeTrait) ? [$name, $typeTrait] : array_merge([$name], $typeTrait)),
 			[
 				[
 					$loreDesc
@@ -1401,12 +1401,14 @@
 						"title" => "Ability Boosts",
 						"spaced" => false,
 						"texts" => quick_array_explode($boosts, ', ')
-					],
-					[
+					]
+				],
+				($flaws!='' ? [[
 						"title" => "Ability Flaw(s)",
 						"spaced" => false,
 						"texts" => quick_array_explode($flaws, ', ')
-					],
+					]] : []),
+				[
 					[
 						"title" => "Languages",
 						"spaced" => false,

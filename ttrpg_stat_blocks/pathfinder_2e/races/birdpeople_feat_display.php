@@ -1,14 +1,26 @@
-<?php require '../../pageStart.php'; ?>
-<title>Piccilli Feats</title>
-<?php
+<?php 
+	$startDir='';
+	for($i=0; $i<20; $i++) {
+		if(file_exists($startDir.'pageStart.php')) {
+			require $startDir.'pageStart.php';
+			break;
+		}
+		else {
+			$startDir='../'.$startDir;
+		}
+	}
 	block2('Piccilli Racial Feats');
 	contents([
 		'Full Flight',
+		'Kleptomaniac',
+		'Nesting',
+		'Pecking',
 		'Piccilli Lore',
 		'Piccilli Weapon Expertise',
 		'Piccilli Weapon Familiarity',
 		'Piccilli Weapon Finesse',
 		'Sharpened Talons',
+		'Strengthened Feet',
 		'Strengthening Wings'
 	]);
 	block2(
@@ -19,7 +31,9 @@
 			'Piccilli'
 		],
 		[
-			[],
+			[
+				'Prerequisites Strengthening Wings'
+			],
 			quick_array(
 				'You gain the effects of Strengthening Wings at all times, rather than just once per day for 10 minutes.'
 			)
@@ -226,5 +240,5 @@
 			)
 		]
 	);
-	require '../../pageEnd.php';
+	require $startDir.'pageEnd.php';
 ?>

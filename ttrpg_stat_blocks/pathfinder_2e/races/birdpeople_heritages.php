@@ -1,8 +1,16 @@
-<?php require '../../pageStart.php'; ?>
-<title>Piccilli Heritages</title>
-<?php
+<?php 
+	$startDir='';
+	for($i=0; $i<20; $i++) {
+		if(file_exists($startDir.'pageStart.php')) {
+			require $startDir.'pageStart.php';
+			break;
+		}
+		else {
+			$startDir='../'.$startDir;
+		}
+	}
 	block2(
-		'Piccilli Heritages',
+		'Gardinian Heritages',
 		'',
 		false,
 		[],
@@ -63,5 +71,5 @@
 			]
 		]
 	);
-	require '../../pageEnd.php';
+	require $startDir.'pageEnd.php';
 ?>

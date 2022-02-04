@@ -1,6 +1,14 @@
-<?php require '../../pageStart.php'; ?>
-<title>Thyllkthoron Feats</title>
-<?php
+<?php 
+	$startDir='';
+	for($i=0; $i<20; $i++) {
+		if(file_exists($startDir.'pageStart.php')) {
+			require $startDir.'pageStart.php';
+			break;
+		}
+		else {
+			$startDir='../'.$startDir;
+		}
+	}
 	block2('Enosrian Racial Feats');
 	contents([
 		'Abyssal Claws',
@@ -153,7 +161,9 @@
 			'Enosrian'
 		],
 		[
-			[],
+			[
+				'Prerequisites Strengthening Wings'
+			],
 			quick_array(
 				'You gain the effects of Strengthening Wings at all times, rather than just once per day for 10 minutes.'
 			)
@@ -203,7 +213,7 @@
 		[
 			[],
 			quick_array(
-				'You unfold your wings /2l/ for travel and can keep them unfolded for 10 minutes. You gain a fly Speed equal to your land Speed while your wings are unfurled. You can only gain the benfits of this feat while in your true form. If you have Enlarged Wings, you gain a +10-foot status bonus to your fly Speed with Juvenile Flight. As normal, since your fly Speed is derived from your land Speed, this status bonus isn\'t cumulative with a status bonus to your land Speed, if you have one.'
+				'You unfold your wings /2l/ for travel and can keep them unfolded for 10 minutes. You gain a fly Speed equal to your land Speed while your wings are unfurled. You can only gain the benfits of this feat while in your true form. If you have Enlarged Wings, you gain a +10-foot status bonus to your fly Speed with Strengthening Wings. As normal, since your fly Speed is derived from your land Speed, this status bonus isn\'t cumulative with a status bonus to your land Speed, if you have one.'
 			)
 		]
 	);
@@ -282,5 +292,5 @@
 			)
 		]
 	);
-	require '../../pageEnd.php';
+	require $startDir.'pageEnd.php';
 ?>

@@ -1,6 +1,6 @@
 <?php 
 	$startDir='';
-	for($i=0; $i<5; $i++) {
+	for($i=0; $i<20; $i++) {
 		if(file_exists($startDir.'pageStart.php')) {
 			require $startDir.'pageStart.php';
 			break;
@@ -9,8 +9,6 @@
 			$startDir='../'.$startDir;
 		}
 	}
-?>
-<?php
 	monsterBlockAuto(
 		'Kundrak',// name
 		'Lapis Lazuli Dragon',// alt name

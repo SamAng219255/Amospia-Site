@@ -2378,6 +2378,222 @@
 				"dnd_5e",
 				"magic_5e"
 			]
+		},
+		"gardinian": {
+			"display_name": "Gardinian",
+			"file_name": "gardinian.php",
+			"directory": "pathfinder_2e/races/",
+			"sort_path": [
+				"pathfinder_2e",
+				"races_2e"
+			],
+			"setting": "great_tree"
+		},
+		"gardinian_feats": {
+			"display_name": "Gardinian Feats",
+			"file_name": "gardinian_feats.php",
+			"directory": "pathfinder_2e/races/",
+			"sort_path": [
+				"pathfinder_2e",
+				"races_2e",
+				"gardinian"
+			],
+			"setting": "great_tree"
+		},
+		"gardinian_heritages": {
+			"display_name": "Gardinian Heritages",
+			"file_name": "gardinian_heritages.php",
+			"directory": "pathfinder_2e/races/",
+			"sort_path": [
+				"pathfinder_2e",
+				"races_2e",
+				"gardinian"
+			],
+			"setting": "great_tree"
+		},
+		"gardinian_feat_display": {
+			"display_name": "Gardinian Feat Descriptions",
+			"file_name": "gardinian_feat_display.php",
+			"directory": "pathfinder_2e/races/",
+			"sort_path": [
+				"pathfinder_2e",
+				"races_2e",
+				"gardinian",
+				"gardinian_feats"
+			],
+			"setting": "great_tree"
+		},
+		"burrowing_insects": {
+			"display_name": "Mathine",
+			"file_name": "burrowing_insects.php",
+			"directory": "pathfinder_2e/races/",
+			"sort_path": [
+				"pathfinder_2e",
+				"races_2e"
+			],
+			"setting": "great_tree"
+		},
+		"burrowing_insects_feats": {
+			"display_name": "Mathine Feats",
+			"file_name": "burrowing_insects_feats.php",
+			"directory": "pathfinder_2e/races/",
+			"sort_path": [
+				"pathfinder_2e",
+				"races_2e",
+				"burrowing_insects"
+			],
+			"setting": "great_tree"
+		},
+		"burrowing_insects_heritages": {
+			"display_name": "Mathine Heritages",
+			"file_name": "burrowing_insects_heritages.php",
+			"directory": "pathfinder_2e/races/",
+			"sort_path": [
+				"pathfinder_2e",
+				"races_2e",
+				"burrowing_insects"
+			],
+			"setting": "great_tree"
+		},
+		"burrowing_insects_feat_display": {
+			"display_name": "Mathine Feat Descriptions",
+			"file_name": "burrowing_insects_feat_display.php",
+			"directory": "pathfinder_2e/races/",
+			"sort_path": [
+				"pathfinder_2e",
+				"races_2e",
+				"burrowing_insects",
+				"burrowing_insects_feats"
+			],
+			"setting": "great_tree"
+		},
+		"flying_insects": {
+			"display_name": "Muuyine",
+			"file_name": "flying_insects.php",
+			"directory": "pathfinder_2e/races/",
+			"sort_path": [
+				"pathfinder_2e",
+				"races_2e"
+			],
+			"setting": "great_tree"
+		},
+		"flying_insects_feats": {
+			"display_name": "Muuyine Feats",
+			"file_name": "flying_insects_feats.php",
+			"directory": "pathfinder_2e/races/",
+			"sort_path": [
+				"pathfinder_2e",
+				"races_2e",
+				"flying_insects"
+			],
+			"setting": "great_tree"
+		},
+		"flying_insects_heritages": {
+			"display_name": "Muuyine Heritages",
+			"file_name": "flying_insects_heritages.php",
+			"directory": "pathfinder_2e/races/",
+			"sort_path": [
+				"pathfinder_2e",
+				"races_2e",
+				"flying_insects"
+			],
+			"setting": "great_tree"
+		},
+		"flying_insects_feat_display": {
+			"display_name": "Muuyine Feat Descriptions",
+			"file_name": "flying_insects_feat_display.php",
+			"directory": "pathfinder_2e/races/",
+			"sort_path": [
+				"pathfinder_2e",
+				"races_2e",
+				"flying_insects",
+				"flying_insects_feats"
+			],
+			"setting": "great_tree"
+		},
+		"wernan": {
+			"display_name": "Wernan",
+			"file_name": "wernan.php",
+			"directory": "pathfinder_2e/races/",
+			"sort_path": [
+				"pathfinder_2e",
+				"races_2e"
+			],
+			"setting": "great_tree"
+		},
+		"wernan_feats": {
+			"display_name": "Wernan Feats",
+			"file_name": "wernan_feats.php",
+			"directory": "pathfinder_2e/races/",
+			"sort_path": [
+				"pathfinder_2e",
+				"races_2e",
+				"wernan"
+			],
+			"setting": "great_tree"
+		},
+		"wernan_heritages": {
+			"display_name": "Wernan Heritages",
+			"file_name": "wernan_heritages.php",
+			"directory": "pathfinder_2e/races/",
+			"sort_path": [
+				"pathfinder_2e",
+				"races_2e",
+				"wernan"
+			],
+			"setting": "great_tree"
+		},
+		"wernan_feat_display": {
+			"display_name": "Wernan Feat Descriptions",
+			"file_name": "wernan_feat_display.php",
+			"directory": "pathfinder_2e/races/",
+			"sort_path": [
+				"pathfinder_2e",
+				"races_2e",
+				"wernan",
+				"wernan_feats"
+			],
+			"setting": "great_tree"
+		},
+		"ettinkin": {
+			"display_name": "Ettinkin",
+			"file_name": "ettinkin.php",
+			"directory": "pathfinder_2e/races/",
+			"sort_path": [
+				"pathfinder_2e",
+				"races_2e"
+			]
+		},
+		"ettinkin_feats": {
+			"display_name": "Ettinkin Feats",
+			"file_name": "ettinkin_feats.php",
+			"directory": "pathfinder_2e/races/",
+			"sort_path": [
+				"pathfinder_2e",
+				"races_2e",
+				"ettinkin"
+			]
+		},
+		"ettinkin_heritages": {
+			"display_name": "Ettinkin Heritages",
+			"file_name": "ettinkin_heritages.php",
+			"directory": "pathfinder_2e/races/",
+			"sort_path": [
+				"pathfinder_2e",
+				"races_2e",
+				"ettinkin"
+			]
+		},
+		"ettinkin_feat_display": {
+			"display_name": "Ettinkin Feat Descriptions",
+			"file_name": "ettinkin_feat_display.php",
+			"directory": "pathfinder_2e/races/",
+			"sort_path": [
+				"pathfinder_2e",
+				"races_2e",
+				"ettinkin",
+				"ettinkin_feats"
+			]
 		}
 	},
 	"sort_tree": [
@@ -3162,26 +3378,101 @@
 					"type": "branch",
 					"nodes": [
 						{
-							"name": "enosrian",
-							"display_name": "Thyllkthoron",
-							"petal_display_name": "Thyllkthoron Details",
+							"name": "gardinian",
+							"display_name": "Gardinian",
+							"petal_display_name": "Gardinian Details",
 							"type": "flower",
 							"nodes": [
 								{
-									"name": "enosrian_feats",
-									"display_name": "Thyllkthoron Feats",
+									"name": "gardinian_feats",
+									"display_name": "Gardinian Feats",
 									"type": "flower",
 									"nodes": [
 										{
-											"name": "enosrian_feat_display",
+											"name": "gardinian_feat_display",
 											"display_name": "Feat Descriptions",
 											"type": "petal"
 										}
 									]
 								},
 								{
-									"name": "enosrian_heritages",
-									"display_name": "Thyllkthoron Heritages",
+									"name": "gardinian_heritages",
+									"display_name": "Gardinian Heritages",
+									"type": "petal"
+								}
+							]
+						},
+						{
+							"name": "ettinkin",
+							"display_name": "Ettinkin",
+							"petal_display_name": "Ettinkin Details",
+							"type": "flower",
+							"nodes": [
+								{
+									"name": "ettinkin_feats",
+									"display_name": "Ettinkin Feats",
+									"type": "flower",
+									"nodes": [
+										{
+											"name": "ettinkin_feat_display",
+											"display_name": "Feat Descriptions",
+											"type": "petal"
+										}
+									]
+								},
+								{
+									"name": "ettinkin_heritages",
+									"display_name": "Ettinkin Heritages",
+									"type": "petal"
+								}
+							]
+						},
+						{
+							"name": "flying_insect",
+							"display_name": "Mathine",
+							"petal_display_name": "Mathine Details",
+							"type": "flower",
+							"nodes": [
+								{
+									"name": "flying_insect_feats",
+									"display_name": "Mathine Feats",
+									"type": "flower",
+									"nodes": [
+										{
+											"name": "flying_insect_feat_display",
+											"display_name": "Feat Descriptions",
+											"type": "petal"
+										}
+									]
+								},
+								{
+									"name": "flying_insect_heritages",
+									"display_name": "Mathine Heritages",
+									"type": "petal"
+								}
+							]
+						},
+						{
+							"name": "burrowing_insects",
+							"display_name": "Muuyine",
+							"petal_display_name": "Muuyine Details",
+							"type": "flower",
+							"nodes": [
+								{
+									"name": "burrowing_insects_feats",
+									"display_name": "Muuyine Feats",
+									"type": "flower",
+									"nodes": [
+										{
+											"name": "burrowing_insects_feat_display",
+											"display_name": "Feat Descriptions",
+											"type": "petal"
+										}
+									]
+								},
+								{
+									"name": "burrowing_insects_heritages",
+									"display_name": "Muuyine Heritages",
 									"type": "petal"
 								}
 							]
@@ -3207,6 +3498,56 @@
 								{
 									"name": "birdpeople_heritages",
 									"display_name": "Piccilli Heritages",
+									"type": "petal"
+								}
+							]
+						},
+						{
+							"name": "enosrian",
+							"display_name": "Thyllkthoron",
+							"petal_display_name": "Thyllkthoron Details",
+							"type": "flower",
+							"nodes": [
+								{
+									"name": "enosrian_feats",
+									"display_name": "Thyllkthoron Feats",
+									"type": "flower",
+									"nodes": [
+										{
+											"name": "enosrian_feat_display",
+											"display_name": "Feat Descriptions",
+											"type": "petal"
+										}
+									]
+								},
+								{
+									"name": "enosrian_heritages",
+									"display_name": "Thyllkthoron Heritages",
+									"type": "petal"
+								}
+							]
+						},
+						{
+							"name": "wernan",
+							"display_name": "Wernan",
+							"petal_display_name": "Wernan Details",
+							"type": "flower",
+							"nodes": [
+								{
+									"name": "wernan_feats",
+									"display_name": "Wernan Feats",
+									"type": "flower",
+									"nodes": [
+										{
+											"name": "wernan_feat_display",
+											"display_name": "Feat Descriptions",
+											"type": "petal"
+										}
+									]
+								},
+								{
+									"name": "wernan_heritages",
+									"display_name": "Wernan Heritages",
 									"type": "petal"
 								}
 							]

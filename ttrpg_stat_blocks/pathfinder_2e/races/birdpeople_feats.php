@@ -1,5 +1,15 @@
-<?php require '../../pageStart.php'; ?>
-<title>Piccilli Feats</title>
+<?php 
+	$startDir='';
+	for($i=0; $i<20; $i++) {
+		if(file_exists($startDir.'pageStart.php')) {
+			require $startDir.'pageStart.php';
+			break;
+		}
+		else {
+			$startDir='../'.$startDir;
+		}
+	}
+?>
 <script>
 	initialSort=true;
 	initialSortFunc=function(a,b) {
@@ -120,5 +130,5 @@
 			]
 		]
 	);
-	require '../../pageEnd.php';
+	require $startDir.'pageEnd.php';
 ?>
