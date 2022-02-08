@@ -10,7 +10,6 @@
 		}
 	}
 ?>
-<title>Templates Index</title>
 <script>
 	initialSort=true;
 	initialSortFunc=function(a,b) {
@@ -31,16 +30,16 @@
 		],
 		[
 			[
-				'Skeleton',
-				'link' => 'monsters/templates/skeleton.php',
-				'Varies',
+				'Half-Shadow',
+				'link' => 'monsters/templates/halfshadow.php',
+				'+0',
 				'False',
 				'False'
 			],
 			[
-				'Zombie',
-				'link' => 'monsters/templates/zombie.php',
-				'Varies',
+				'Shadow',
+				'link' => 'monsters/templates/shadow.php',
+				'+0',
 				'False',
 				'False'
 			]

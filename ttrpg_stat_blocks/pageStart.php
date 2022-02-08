@@ -44,6 +44,9 @@
 				$string=file_get_contents($rootDir.'pages.json');
 				$pages=json_decode($string, true);
 
+				$string_entries=file_get_contents($rootDir.'pages_entries.json');
+				$pages['entries']=json_decode($string_entries, true)['entries'];
+
 				$depth=0;
 				$tree_path=[$pages['sort_tree']];
 				$tree_indices=[0];

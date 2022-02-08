@@ -18,7 +18,7 @@
 		else if(b.children[0].tagName=='TH')
 			return 1;
 		return 4 * comp(a.children[1].innerText.toLowerCase(),b.children[1].innerText.toLowerCase()) + 
-			2 * comp(a.children[2].innerText.toLowerCase(),b.children[2].innerText.toLowerCase()) + 
+			//2 * comp(a.children[2].innerText.toLowerCase(),b.children[2].innerText.toLowerCase()) + 
 			1 * comp(a.children[0].innerText.toLowerCase(),b.children[0].innerText.toLowerCase());
 	};
 </script>
@@ -79,6 +79,62 @@
 				'Evocation',
 				'arcanist, bloodrager, cleric, inquisitor, magus, occultist, oracle, psychic, redmantisassassin, sorcerer, wizard',
 				'Creates a swirling tornado of small metal beads.'
+			],
+			[
+				'Brighter Light',
+				'link' => 'spells/brighter_light.php',
+				'3',
+				'Evocation',
+				'adept, paladin, cleric, inquisitor, occultist, oracle, shaman, warpriest',
+				'Object sheds supernatural light in 60-ft. radius.'
+			],
+			[
+				'Veil of Light',
+				'link' => 'spells/veil_of_light.php',
+				'4',
+				'Evocation',
+				'antipaladin, mesmerist, paladin',
+				'Affected creatures have their vision impaired by light.'
+			],
+			[
+				'Veil of Light',
+				'link' => 'spells/veil_of_light.php',
+				'5',
+				'Evocation',
+				'arcanist, bard, cleric, inquisitor, oracle, shaman, skald, sorcerer, warpriest, wizard',
+				'Affected creatures have their vision impaired by light.'
+			],
+			[
+				'Shroud of Darkness',
+				'link' => 'spells/shroud_of_darkness.php',
+				'4',
+				'Evocation',
+				'antipaladin, mesmerist, paladin',
+				'Affected creatures have their vision impaired by light.'
+			],
+			[
+				'Shroud of Darkness',
+				'link' => 'spells/shroud_of_darkness.php',
+				'5',
+				'Evocation',
+				'arcanist, bard, cleric, inquisitor, oracle, shaman, skald, sorcerer, warpriest, wizard',
+				'Affected creatures have their vision impaired by darkness. This is a modification of an existing spell.'
+			],
+			[
+				'Flickering Lights',
+				'link' => 'spells/flickering_lights.php',
+				'2',
+				'Evocation',
+				'arcanist, bard, cleric, inquisitor, magus, occultist, oracle, shaman, skald, sorcerer, warpriest, wizard',
+				'Create an area of inconsistent lighting. This is a modification of an existing spell.'
+			],
+			[
+				'Touch of Blindness',
+				'link' => 'spells/touch_of_blindness.php',
+				'1',
+				'Necromancy',
+				'antipaladin, arcanist, bard, cleric, oracle, shaman, skald, sorcerer, warpriest, witch, wizard',
+				'Coat a creature’s eyes in darkness or light, blinding them. This is a modification of an existing spell.'
 			]
 		]
 	);

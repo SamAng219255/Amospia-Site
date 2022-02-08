@@ -33,6 +33,13 @@ i {
 u {
 	text-decoration: underline;
 }
+ul {
+	list-style-position: inside;
+	padding-left: 0;
+}
+ul>li>ul {
+	padding-left: 1em;
+}
 span.enlarged {
 	font-size: 1.25em;
 }

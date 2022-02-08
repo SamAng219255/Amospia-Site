@@ -268,6 +268,58 @@
 		}
 		echo '</div>';
 	}
+	function blockList($tree) {
+		if(!isset($tree['children'])) {
+			block(isset($tree['link'])?'<a href="'.$tree['link'].'">'.quick_format($tree['name']).'</a>':quick_format($tree['name']));
+			return;
+		}
+		$sections=[];
+		foreach ($tree['children'] as $toplvl_child) {
+			$section=[
+				'title' => isset($toplvl_child['link']) ? '<a href="'.$toplvl_child['link'].'">'.quick_format($toplvl_child['name']).'</a>' : quick_format($toplvl_child['name']),
+				'spaced' => false,
+				'texts' => []
+			];
+			if(isset($toplvl_child['children'])) {
+				$text='<ul>';
+
+				$depth=0;
+				$path=[$toplvl_child];
+				$ind=[0];
+				$sanity=10000;
+				while($depth>=0 && $sanity-->0) {
+					if(isset($path[$depth]['children'][$ind[$depth]])) {
+						$here=$path[$depth]['children'][$ind[$depth]++];
+						$text .= '<li>';
+						$text .= isset($here['link']) ? '<a href="'.$here['link'].'">'.quick_format($here['name']).'</a>' : '<span>'.quick_format($here['name']).'</span>';
+						if(isset($here['children'])) {
+							$depth++;
+							$path[$depth]=$here;
+							$ind[$depth]=0;
+							$text.='<ul>';
+						}
+						else {
+							$text.='</li>';
+						}
+					}
+					else {
+						$depth--;
+						$text.='</ul></li>';
+					}
+				}
+
+				$section['texts']=[quick_format($text)];
+			}
+			array_push($sections, $section);
+		}
+		block(
+			isset($tree['link']) ? '<a href="'.$tree['link'].'">'.quick_format($tree['name']).'</a>' : quick_format($tree['name']),
+			'list',
+			[],
+			false,
+			$sections
+		);
+	}
 	function magicItemBlock($name, $aura, $cl, $slot, $price, $weight, $description, $construction, $destruction) {
 		$sections=[
 			[

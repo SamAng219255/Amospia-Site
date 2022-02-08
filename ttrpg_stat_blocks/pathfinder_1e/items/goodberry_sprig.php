@@ -1,6 +1,14 @@
-<?php require '../../pageStart.php'; ?>
-<title>Goodberry Sprig</title>
-<?php
+<?php 
+	$startDir='';
+	for($i=0; $i<20; $i++) {
+		if(file_exists($startDir.'pageStart.php')) {
+			require $startDir.'pageStart.php';
+			break;
+		}
+		else {
+			$startDir='../'.$startDir;
+		}
+	}
 	magicItemBlockAuto(
 		"Goodberry Sprig",
 		"Conjuration",
@@ -12,5 +20,5 @@
 		false,
 		"bb/Requirements/bb Craft Wondrous Item, ii/goodberry/ii; bb/Cost/bb 360 gp"
 	);
-	require '../../pageEnd.php';
+	require $startDir.'pageEnd.php';
 ?>
