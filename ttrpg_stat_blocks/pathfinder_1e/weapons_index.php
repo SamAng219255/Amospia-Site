@@ -10,7 +10,6 @@
 		}
 	}
 ?>
-<title>Weapons</title>
 <script>
 	initialSort=true;
 	profNum={'simple':0,'martial':1,'exotic':2,'firearm':3};

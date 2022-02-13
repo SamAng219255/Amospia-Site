@@ -14,6 +14,10 @@ body.light {
 	color: #000;
 	background-color: #f9f5f7;
 }
+h1, h2, h3, h4, h5, h6 {
+	all: unset;
+	display: block;
+}
 p {
 	margin: 0;
 	margin-bottom: 0.25em;
@@ -24,10 +28,10 @@ p.spaced {
 pre {
 	font-size: 12px;
 }
-b {
+b, h4 {
 	font-weight: bold;
 }
-i {
+i, h5 {
 	font-style: italic;
 }
 u {
@@ -39,6 +43,10 @@ ul {
 }
 ul>li>ul {
 	padding-left: 1em;
+}
+h1 {
+	font-size: 2em;
+	font-weight: bold;
 }
 span.enlarged {
 	font-size: 1.25em;
@@ -249,8 +257,10 @@ body.light .toc-title {
 	padding: 0.5em;
 	clear: both;
 }
-.block-title {
+.block-title, h2 {
 	font-size: 1.5em;
+}
+.block-title, h1, h2 {
 	font-weight: bold;
 	background-color: #482818;
 	color: #cca94a;
@@ -259,7 +269,7 @@ body.light .toc-title {
 	-webkit-transition: background-color .4s, color .4s;
 	transition: background-color .4s, color .4s;
 }
-body.light .block:not(.block-sf) .block-title {
+body.light .block:not(.block-sf) .block-title, body.light h1, body.light h2 {
 	background-color: #cca94a;
 	color: #482818;
 }
@@ -271,7 +281,7 @@ body.light .block:not(.block-sf) .block-title {
 	background-color: #9A0800;
 	color: #f0f0ff;
 }
-.block-section-title {
+.block-section-title, h3 {
 	border-style: solid none;
 	font-weight: bold;
 	margin-bottom: 0.25em;

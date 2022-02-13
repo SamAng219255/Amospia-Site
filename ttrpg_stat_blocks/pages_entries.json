@@ -2754,6 +2754,38 @@
 			"sort_path": [
 				"pathfinder_1e"
 			]
+		},
+		"siege_weapons": {
+			"display_name": "Siege Weapons",
+			"file_name": "siege_index.php",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment"
+			]
+		},
+		"spell_prism": {
+			"display_name": "Spell Prism",
+			"file_name": "spell_prism.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"siege_weapons"
+			]
+		},
+		"spell_lenses": {
+			"display_name": "Amplifying Lenses",
+			"file_name": "spell_lens.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"siege_weapons"
+			]
 		}
 	}
 }

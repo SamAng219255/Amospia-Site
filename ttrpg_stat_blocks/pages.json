@@ -109,6 +109,11 @@
 											"type": "leaf"
 										}
 									]
+								},
+								{
+									"name": "siege_weapons",
+									"display_name": "Siege Weapons",
+									"type": "leaf"
 								}
 							]
 						},
