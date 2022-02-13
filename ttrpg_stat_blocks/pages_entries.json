@@ -2786,6 +2786,32 @@
 				"equipment",
 				"siege_weapons"
 			]
+		},
+		"deconstruction": {
+			"display_name": "Deconstruction",
+			"file_name": "deconstruction.php",
+			"directory": "pathfinder_1e/skills/",
+			"sort_path": [
+				"pathfinder_1e",
+				"skills"
+			]
+		},
+		"feats": {
+			"display_name": "Feats",
+			"file_name": "feats.php",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e"
+			]
+		},
+		"deconstruct_magic": {
+			"display_name": "Deconstruct Magic",
+			"file_name": "deconstruct_magic.php",
+			"directory": "pathfinder_1e/feats/",
+			"sort_path": [
+				"pathfinder_1e",
+				"feats"
+			]
 		}
 	}
 }

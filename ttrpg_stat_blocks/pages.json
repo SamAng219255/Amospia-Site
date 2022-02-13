@@ -69,6 +69,11 @@
 					]
 				},
 				{
+					"name": "feats",
+					"display_name": "Feats",
+					"type": "leaf"
+				},
+				{
 					"name": "items",
 					"display_name": "Items",
 					"type": "branch",
@@ -410,6 +415,18 @@
 					"name": "rules",
 					"display_name": "Rules",
 					"type": "leaf"
+				},
+				{
+					"name": "skills",
+					"display_name": "Skills",
+					"type": "branch",
+					"nodes": [
+						{
+							"name": "deconstruction",
+							"display_name": "Deconstruction",
+							"type": "leaf"
+						}
+					]
 				},
 				{
 					"name": "spells",
