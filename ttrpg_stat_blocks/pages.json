@@ -9,64 +9,7 @@
 				{
 					"name": "deities",
 					"display_name": "Deities",
-					"type": "flower",
-					"nodes": [
-						{
-							"name": "skadwalth",
-							"display_name": "Skadwalth",
-							"type": "petal"
-						},
-						{
-							"name": "kyrodya",
-							"display_name": "Kyrodya",
-							"type": "petal"
-						},
-						{
-							"name": "vulrigi",
-							"display_name": "Vulrigi",
-							"type": "petal"
-						},
-						{
-							"name": "aralyth",
-							"display_name": "Aralyth",
-							"type": "petal"
-						},
-						{
-							"name": "sminca",
-							"display_name": "Sminca",
-							"type": "petal"
-						},
-						{
-							"name": "knul",
-							"display_name": "Knul",
-							"type": "petal"
-						},
-						{
-							"name": "valthar",
-							"display_name": "Valthar",
-							"type": "petal"
-						},
-						{
-							"name": "freorn",
-							"display_name": "Freorn",
-							"type": "petal"
-						},
-						{
-							"name": "trang",
-							"display_name": "Trang",
-							"type": "petal"
-						},
-						{
-							"name": "demning",
-							"display_name": "Demning",
-							"type": "petal"
-						},
-						{
-							"name": "vorpmalcide",
-							"display_name": "Vorpmalcide",
-							"type": "petal"
-						}
-					]
+					"type": "leaf"
 				},
 				{
 					"name": "feats",

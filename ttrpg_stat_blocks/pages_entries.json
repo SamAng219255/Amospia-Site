@@ -2794,7 +2794,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"skills"
-			]
+			],
+			"setting": "forest"
 		},
 		"feats": {
 			"display_name": "Feats",
@@ -2811,7 +2812,18 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"feats"
-			]
+			],
+			"setting": "forest"
+		},
+		"kundrak_deity": {
+			"display_name": "Kundrak",
+			"file_name": "deity_view.php?name=Kundrak",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"deities"
+			],
+			"setting": "kundrak"
 		}
 	}
 }
