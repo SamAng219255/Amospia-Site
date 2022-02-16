@@ -1,0 +1,68 @@
+[
+	{
+		"name": "Oberron",
+		"title": "Keeper of the Tree",
+		"pantheon": "Gods of Geldrine",
+		"alignment": "LG",
+		"follower_alignments": "LG, NG, LN",
+		"divine_font": "heal",
+		"areas_of_concern": "Geldrine, Solidity, Reliability",
+		"domains": "Duty, Might, Nature, Protection",
+		"favored_weapon": "TODO",
+		"edicts": "",
+		"anathema": "",
+		"desc": "",
+		"abilties": "",
+		"skill": "",
+		"alt_domains": "Time",
+		"spells": {
+			"1": "TODO",
+			"3": "TODO",
+			"4": "TODO"
+		}
+	},
+	{
+		"name": "Titania",
+		"title": "Mother of Life",
+		"pantheon": "Gods of Geldrine",
+		"alignment": "CG",
+		"follower_alignments": "NG, CG, CN",
+		"divine_font": "heal",
+		"areas_of_concern": "Plants, Animals, Life, and Beauty",
+		"domains": "Healing, Nature, TODO",
+		"favored_weapon": "TODO",
+		"edicts": "",
+		"anathema": "",
+		"desc": "",
+		"abilties": "",
+		"skill": "",
+		"alt_domains": "Change",
+		"spells": {
+			"1": "TODO",
+			"3": "TODO",
+			"4": "TODO"
+		}
+	},
+	{
+		"name": "Fluut",
+		"title": "Lady of Flight",
+		"pantheon": "Gods of Geldrine",
+		"alignment": "NG",
+		"follower_alignments": "LG, NG, CG, N",
+		"divine_font": "heal",
+		"areas_of_concern": "Freedom, Flying things, and the Wind",
+		"domains": "Air, Freedom, Nature, Weather",
+		"favored_weapon": "Spear",
+		"edicts": "Enjoy your life, free the enslaved and imprisoned, and ",
+		"anathema": "Enslave, imprison, or cage any animal of person, clip the wings of a flying creature, or ",
+		"desc": "Goddess of Freedom, Flight, and Weather, Fluut is one of the three gods of the high bows of Geldrine. Fluut is the patron goddess of the Piccilli to whom she granted the ability to fly. Fluut generally graces Geldrine with light winds and lcear sky with the occasional nourishing sprinkle of rain.",
+		"abilties": "Dexerity or Intelligence",
+		"skill": "Acrobatics",
+		"alt_domains": "Luck",
+		"spells": {
+			"1": "TODO",
+			"3": "TODO",
+			"4": "TODO"
+		}
+	}
+]

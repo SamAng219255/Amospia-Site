@@ -2824,6 +2824,44 @@
 				"deities"
 			],
 			"setting": "kundrak"
+		},
+		"deities_2e": {
+			"display_name": "Deities",
+			"file_name": "deities.php",
+			"directory": "pathfinder_2e/",
+			"sort_path": [
+				"pathfinder_2e"
+			]
+		},
+		"fluut": {
+			"display_name": "Fluut",
+			"file_name": "deity_view.php?name=Fluut",
+			"directory": "pathfinder_2e/",
+			"sort_path": [
+				"pathfinder_2e",
+				"deities"
+			],
+			"setting": "great_tree"
+		},
+		"oberron": {
+			"display_name": "Oberron",
+			"file_name": "deity_view.php?name=Oberron",
+			"directory": "pathfinder_2e/",
+			"sort_path": [
+				"pathfinder_2e",
+				"deities"
+			],
+			"setting": "great_tree"
+		},
+		"titania": {
+			"display_name": "Titania",
+			"file_name": "deity_view.php?name=Titania",
+			"directory": "pathfinder_2e/",
+			"sort_path": [
+				"pathfinder_2e",
+				"deities"
+			],
+			"setting": "great_tree"
 		}
 	}
 }

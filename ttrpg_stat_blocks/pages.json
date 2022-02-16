@@ -686,6 +686,11 @@
 			"type": "branch",
 			"nodes": [
 				{
+					"name": "deities_2e",
+					"display_name": "Deities",
+					"type": "leaf"
+				},
+				{
 					"name": "equipment_2e",
 					"display_name": "Equipment",
 					"type": "branch",
