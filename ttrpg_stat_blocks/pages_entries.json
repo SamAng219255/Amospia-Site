@@ -2862,6 +2862,43 @@
 				"deities"
 			],
 			"setting": "great_tree"
+		},
+		"snap": {
+			"display_name": "Snap",
+			"file_name": "snap.php",
+			"directory": "pathfinder_1e/spells/",
+			"sort_path": [
+				"pathfinder_1e",
+				"spells"
+			]
+		},
+		"thunderous_snap": {
+			"display_name": "Thunderous Snap",
+			"file_name": "thunderous_snap.php",
+			"directory": "pathfinder_1e/spells/",
+			"sort_path": [
+				"pathfinder_1e",
+				"spells"
+			]
+		},
+		"artifacts": {
+			"display_name": "Artifacts",
+			"file_name": "artifact_index.php",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items"
+			]
+		},
+		"badizon_relics": {
+			"display_name": "Badizon Relics",
+			"file_name": "badizon_index.php",
+			"directory": "pathfinder_1e/items/badizon/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"artifacts"
+			]
 		}
 	}
 }

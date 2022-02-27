@@ -135,7 +135,39 @@
 				'Necromancy',
 				'antipaladin, arcanist, bard, cleric, oracle, shaman, skald, sorcerer, warpriest, witch, wizard',
 				'Coat a creature’s eyes in darkness or light, blinding them. This is a modification of an existing spell.'
-			]
+			],
+			[
+				'Snap',
+				'link' => 'spells/snap.php#block-Snap',
+				'3',
+				'Evocation',
+				'bard, bloodrager, cleric, magus, occultist, oracle, psychic, sorcerer, wizard',
+				'Snap your fingers and unleash a destructive pulse that uses an object\'s hardness against it.'
+			],
+			[
+				'Snap, Lesser',
+				'link' => 'spells/snap.php#block-Snap,-Lesser',
+				'0',
+				'Evocation',
+				'bard, bloodrager, cleric, magus, occultist, oracle, psychic, sorcerer, wizard',
+				'Snap your fingers and unleash a destructive pulse that uses an object\'s hardness against it.'
+			],
+			[
+				'Snap, Greater',
+				'link' => 'spells/snap.php#block-Snap,-Greater',
+				'6',
+				'Evocation',
+				'bard, bloodrager, cleric, magus, occultist, oracle, psychic, sorcerer, wizard',
+				'Snap your fingers and unleash a destructive pulse that uses an object\'s hardness against it.'
+			],
+			[
+				'Thunderous Snap',
+				'link' => 'spells/thunderous_snap.php',
+				'9',
+				'Evocation',
+				'bard, bloodrager, cleric, magus, occultist, oracle, psychic, sorcerer, wizard',
+				'Snap your fingers and unleash a destructive pulse that uses objects\' hardness against them.'
+			],
 		]
 	);
 	require $startDir.'pageEnd.php';
