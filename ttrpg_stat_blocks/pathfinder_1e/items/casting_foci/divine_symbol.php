@@ -23,7 +23,7 @@
 		A ii/blessed holy symbol/ii can be upgraded to grant the follower an additional use of a prepared spell.
 		When the item is upgraded, the crafter must choose a caster level to create the holy symbol at. This can be increased later like adding a new ability.
 		If the wielder of an upgraded ii/blessed holy symbol/ii is capable of casting divine spells in a class devoted to the god associated with the holy symbol, once per day on command, the holy symbol enables the possessor to recall any one spell that they had prepared and then cast that day. The spell is then prepared again, just as if it had not been cast. The spell can be any level up to the maximum spell level of the holy symbol which is half the caster level rounded up.
-		The cost of upgrading a ii/blessed holy symbol/ii is (the caster level plus 1) squared, times 100 gp.',
+		The price of an upgraded a ii/blessed holy symbol/ii increses by (the caster level plus 1) squared, times 200 gp.',
 		false,
 		'bb/Requirements/bb Craft Wondrous Item, ii/fallback strategy/ii; bb/Cost/bb 700 gp
 		bb/Upgrade/bb:

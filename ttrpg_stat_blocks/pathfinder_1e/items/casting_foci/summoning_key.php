@@ -113,12 +113,12 @@
 		</table>
 
 		A ii/calling key/ii can be upgraded to provide a more permanent link to a creature stored in a unique interdimensional space linked to the key.
-		When it is upgraded a creature is chosen from the ii/summon monster/ii list. The creature must be from level at or below the max level of the key. This creature can be summoned as a full round action and remains until it is dismissed as an immediate action, killed, or banished, at which point it returns to its interdimensional space. If it returns for any reason other than being dismissed until the next time the wielder of the ii/calling key/ii prepares spells following a rest.
+		When it is upgraded a creature is chosen from the ii/summon monster/ii list. The creature must be from level at or below the max level of the key. This creature can be summoned as a full round action and remains until it is dismissed as an immediate action, killed, or banished, at which point it returns to its interdimensional space. If it returns for any reason other than being dismissed, it cannot be summoned until the next time the wielder of the ii/calling key/ii prepares spells following a rest.
 		',
 		false,
 		'bb/Requirements/bb Craft Wondrous Item; bb/Cost/bb 7,500 gp (3rd), 30,000 gp (6th), 60,000 gp (9th)
 		bb/Upgrade/bb:
-		bb/Requirements/bb Craft Wondrous Item, ii/summon mosnter/ii; bb/Cost/bb 15,000 gp (3rd), 66,000 gp (6th), 153,000 gp (9th)'
+		bb/Requirements/bb Craft Wondrous Item, ii/summon monster/ii; bb/Cost/bb 15,000 gp (3rd), 66,000 gp (6th), 153,000 gp (9th)'
 	);
 	require $startDir.'pageEnd.php';
 ?>

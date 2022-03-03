@@ -64,7 +64,7 @@
 		false,
 		'bb/Requirements/bb Craft Wondrous Item, ii/moment of greatness/ii, ii/cleanse/ii; bb/Cost/bb 22,500 gp (3rd), 36,000 gp (6th), 49,500 gp (9th)
 		bb/Upgrade/bb:
-		bb/Requirements/bb Craft Wondrous Item, ii/reincarnate/ii; bb/Cost/bb 54,250 gp'
+		bb/Requirements/bb Craft Wondrous Item, ii/reincarnate/ii; bb/Cost/bb 50,000 gp'
 	);
 	require $startDir.'pageEnd.php';
 ?>
