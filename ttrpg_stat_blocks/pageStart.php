@@ -181,7 +181,7 @@
 									$starting_flower=false;
 									if(isset($flower_node['petal_display_name'])) {
 										$entry=$pages['entries'][$flower_node['name']];
-										echo '<a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'" class="top-label">'.$flower_node['petal_display_name'].'</a> | ';
+										echo '<a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'" class="top-label status-'.$entry['status'].'">'.$flower_node['petal_display_name'].'</a> | ';
 									}
 								}
 							}
@@ -204,11 +204,11 @@
 									$search_path.=$node['name'].',';
 								}
 								$search_path.=$ptr['name'];
-								echo '<a href="'.$pages['origin'].'?path='.$search_path.'" class="top-label'.($match || $ptr['name'] == $pageId ? ' selected' : '').'">'.$ptr['display_name'].'</a>';
+								echo '<a href="'.$pages['origin'].'?path='.$search_path.'" class="top-label'.($match || $ptr['name'] == $pageId ? ' selected' : '').' status-'.$pages['entries'][$ptr['name']]['status'].'">'.$ptr['display_name'].'</a>';
 							}
 							else {
 								$entry=$pages['entries'][$ptr['name']];
-								echo '<a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'" class="top-label'.($match || $ptr['name'] == $pageId ? ' selected' : '').'">'.$ptr['display_name'].'</a>';
+								echo '<a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'" class="top-label'.($match || $ptr['name'] == $pageId ? ' selected' : '').' status-'.(isset($ptr['petal_display_name'])?'done':$entry['status']).'">'.$ptr['display_name'].'</a>';
 							}
 							if($ptr['name'] == $pageId)
 								$final_node=$ptr;
@@ -229,7 +229,7 @@
 						echo '<p class="top-row">';
 						if(isset($final_node['petal_display_name'])) {
 							$entry=$pages['entries'][$final_node['name']];
-							echo '<a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'" class="top-label selected">'.$final_node['petal_display_name'].'</a> | ';
+							echo '<a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'" class="top-label selected status-'.$entry['status'].'">'.$final_node['petal_display_name'].'</a> | ';
 						}
 						$node_count=count($final_node['nodes']);
 						for($i=0; $i<$node_count; $i++) {
@@ -237,7 +237,7 @@
 								echo ' | ';
 							$ptr=$final_node['nodes'][$i];
 							$entry=$pages['entries'][$ptr['name']];
-							echo '<a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'" class="top-label">'.$ptr['display_name'].'</a>';
+							echo '<a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'" class="top-label status-'.$entry['status'].'">'.$ptr['display_name'].'</a>';
 						}
 						echo '</p><hr>';
 					}
@@ -245,3 +245,8 @@
 			</div>
 		</div>
 		<div id="content">
+			<?php
+				if($pageId!='' && $pages['entries'][$pageId]['status']=='wip') {
+					echo '<div id="wip-note"><p>This page is currently a Work In Progress and may have unfinished, placeholder, and missing information.</p></div>';
+				}
+			?>

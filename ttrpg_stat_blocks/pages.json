@@ -73,32 +73,13 @@
 								{
 									"name": "artifacts",
 									"display_name": "Artifacts",
-									"type": "branch",
+									"petal_display_name": "Artifacts Index",
+									"type": "flower",
 									"nodes": [
 										{
-											"name": "barjoskadwaz",
-											"display_name": "Barjoskadwaz",
-											"type": "leaf"
-										},
-										{
-											"name": "blade_of_the_forests_shadow",
-											"display_name": "Blade of the Forest's Shadow",
-											"type": "leaf"
-										},
-										{
-											"name": "rod_of_timeless_spells",
-											"display_name": "Rod of Timeless Spells",
-											"type": "leaf"
-										},
-										{
-											"name": "runed_chain",
-											"display_name": "Runed Chain",
-											"type": "leaf"
-										},
-										{
-											"name": "staff_of_truthlight",
-											"display_name": "Staff of Truthlight",
-											"type": "leaf"
+											"name": "badizon_relics",
+											"display_name": "Badizon Relics",
+											"type": "petal"
 										}
 									]
 								},

@@ -37,6 +37,9 @@ function setup() {
 			lightActions.push(actions[i]);
 	}
 
+	$(".status-empty").attr("title","This page currently has no content.")
+	$(".status-wip").attr("title","Work In Progress")
+
 	for(var func of setupFuncs) {
 		func();
 	}

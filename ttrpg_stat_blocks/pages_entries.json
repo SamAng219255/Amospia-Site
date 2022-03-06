@@ -9,7 +9,8 @@
 				"items",
 				"magic_items",
 				"magic_weapons"
-			]
+			],
+			"status": "done"
 		},
 		"barjoskadwaz": {
 			"display_name": "Barjoskadwaz",
@@ -21,7 +22,8 @@
 				"magic_items",
 				"artifacts"
 			],
-			"setting": "forest"
+			"setting": "forest",
+			"status": "done"
 		},
 		"blade_of_the_forests_shadow": {
 			"display_name": "Blade of the Forest's Shadow",
@@ -33,7 +35,8 @@
 				"magic_items",
 				"artifacts"
 			],
-			"setting": "forest"
+			"setting": "forest",
+			"status": "done"
 		},
 		"forest_of_shadows": {
 			"display_name": "Forest of Shadows",
@@ -43,7 +46,8 @@
 				"pathfinder_1e",
 				"planes"
 			],
-			"setting": "forest"
+			"setting": "forest",
+			"status": "done"
 		},
 		"ring_of_morphic_steel": {
 			"display_name": "Ring of Morphic Steel",
@@ -54,7 +58,8 @@
 				"items",
 				"magic_items",
 				"wondrous"
-			]
+			],
+			"status": "done"
 		},
 		"rod_of_planar_creation": {
 			"display_name": "Rod of Planar Creation",
@@ -65,7 +70,8 @@
 				"items",
 				"magic_items",
 				"wondrous"
-			]
+			],
+			"status": "done"
 		},
 		"rod_of_timeless_spells": {
 			"display_name": "Rod of Timeless Spells",
@@ -76,7 +82,8 @@
 				"items",
 				"magic_items",
 				"artifacts"
-			]
+			],
+			"status": "done"
 		},
 		"money_changers_pouch": {
 			"display_name": "Money Changer's Pouch",
@@ -87,7 +94,8 @@
 				"items",
 				"magic_items",
 				"wondrous"
-			]
+			],
+			"status": "done"
 		},
 		"unprepared_wizards_component_pouch": {
 			"display_name": "Unprepared Wizard's Component Pouch",
@@ -98,7 +106,8 @@
 				"items",
 				"magic_items",
 				"wondrous"
-			]
+			],
+			"status": "done"
 		},
 		"shield_of_solid_force": {
 			"display_name": "Shield of Solid Force",
@@ -109,7 +118,8 @@
 				"items",
 				"magic_items",
 				"magic_armor"
-			]
+			],
+			"status": "done"
 		},
 		"void_plate": {
 			"display_name": "Void Plate",
@@ -121,7 +131,8 @@
 				"equipment",
 				"armor"
 			],
-			"setting": "amospia"
+			"setting": "amospia",
+			"status": "done"
 		},
 		"shade_silk_armor": {
 			"display_name": "Shade Silk Armor",
@@ -133,7 +144,8 @@
 				"equipment",
 				"armor"
 			],
-			"setting": "amospia"
+			"setting": "amospia",
+			"status": "done"
 		},
 		"runed_chain": {
 			"display_name": "Runed Chain",
@@ -144,7 +156,8 @@
 				"items",
 				"magic_items",
 				"artifacts"
-			]
+			],
+			"status": "done"
 		},
 		"staff_of_truthlight": {
 			"display_name": "Staff of Truthlight",
@@ -155,7 +168,8 @@
 				"items",
 				"magic_items",
 				"artifacts"
-			]
+			],
+			"status": "done"
 		},
 		"deities": {
 			"display_name": "Deities",
@@ -163,7 +177,8 @@
 			"directory": "pathfinder_1e/",
 			"sort_path": [
 				"pathfinder_1e"
-			]
+			],
+			"status": "done"
 		},
 		"skadwalth": {
 			"display_name": "Skadwalth",
@@ -173,7 +188,8 @@
 				"pathfinder_1e",
 				"deities"
 			],
-			"setting": "forest"
+			"setting": "forest",
+			"status": "done"
 		},
 		"kyrodya": {
 			"display_name": "Kyrodya",
@@ -183,7 +199,8 @@
 				"pathfinder_1e",
 				"deities"
 			],
-			"setting": "forest"
+			"setting": "forest",
+			"status": "done"
 		},
 		"vulrigi": {
 			"display_name": "Vulrigi",
@@ -193,7 +210,8 @@
 				"pathfinder_1e",
 				"deities"
 			],
-			"setting": "forest"
+			"setting": "forest",
+			"status": "done"
 		},
 		"aralyth": {
 			"display_name": "Aralyth",
@@ -203,7 +221,8 @@
 				"pathfinder_1e",
 				"deities"
 			],
-			"setting": "forest"
+			"setting": "forest",
+			"status": "done"
 		},
 		"sminca": {
 			"display_name": "Sminca",
@@ -213,7 +232,8 @@
 				"pathfinder_1e",
 				"deities"
 			],
-			"setting": "forest"
+			"setting": "forest",
+			"status": "done"
 		},
 		"knul": {
 			"display_name": "Knul",
@@ -223,7 +243,8 @@
 				"pathfinder_1e",
 				"deities"
 			],
-			"setting": "forest"
+			"setting": "forest",
+			"status": "done"
 		},
 		"valthar": {
 			"display_name": "Valthar",
@@ -233,7 +254,8 @@
 				"pathfinder_1e",
 				"deities"
 			],
-			"setting": "forest"
+			"setting": "forest",
+			"status": "done"
 		},
 		"freorn": {
 			"display_name": "Freorn",
@@ -243,7 +265,8 @@
 				"pathfinder_1e",
 				"deities"
 			],
-			"setting": "forest"
+			"setting": "forest",
+			"status": "done"
 		},
 		"trang": {
 			"display_name": "Trang",
@@ -253,7 +276,8 @@
 				"pathfinder_1e",
 				"deities"
 			],
-			"setting": "forest"
+			"setting": "forest",
+			"status": "done"
 		},
 		"demning": {
 			"display_name": "Demning",
@@ -263,7 +287,8 @@
 				"pathfinder_1e",
 				"deities"
 			],
-			"setting": "forest"
+			"setting": "forest",
+			"status": "done"
 		},
 		"vorpmalcide": {
 			"display_name": "Vorpmalcide",
@@ -272,7 +297,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"deities"
-			]
+			],
+			"status": "done"
 		},
 		"goodberry_sprig": {
 			"display_name": "Goodberry Sprig",
@@ -283,7 +309,8 @@
 				"items",
 				"magic_items",
 				"wondrous"
-			]
+			],
+			"status": "done"
 		},
 		"planewalkers": {
 			"display_name": "Plane Walkers",
@@ -292,7 +319,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"races"
-			]
+			],
+			"status": "done"
 		},
 		"redeemed": {
 			"display_name": "Redeemed",
@@ -302,7 +330,8 @@
 				"pathfinder_1e",
 				"races"
 			],
-			"setting": "redeemed_setting"
+			"setting": "redeemed_setting",
+			"status": "done"
 		},
 		"redeemed_full": {
 			"display_name": "Redeemed, Full Blooded",
@@ -312,7 +341,8 @@
 				"pathfinder_1e",
 				"races"
 			],
-			"setting": "redeemed_setting"
+			"setting": "redeemed_setting",
+			"status": "done"
 		},
 		"redeemed_converted": {
 			"display_name": "Redeemed, Converted",
@@ -322,7 +352,8 @@
 				"pathfinder_1e",
 				"races"
 			],
-			"setting": "redeemed_setting"
+			"setting": "redeemed_setting",
+			"status": "done"
 		},
 		"tehswin": {
 			"display_name": "Tehswin",
@@ -331,7 +362,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"races"
-			]
+			],
+			"status": "done"
 		},
 		"doubles": {
 			"display_name": "Double Walkers",
@@ -340,7 +372,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"races"
-			]
+			],
+			"status": "done"
 		},
 		"shapeshifters": {
 			"display_name": "Shape Shifters",
@@ -349,7 +382,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"races"
-			]
+			],
+			"status": "done"
 		},
 		"redwoods_ancient": {
 			"display_name": "Redwoods, Ancient",
@@ -359,7 +393,8 @@
 				"pathfinder_1e",
 				"races"
 			],
-			"setting": "tangled_grove"
+			"setting": "tangled_grove",
+			"status": "done"
 		},
 		"redwoods_young": {
 			"display_name": "Redwoods, Young",
@@ -369,7 +404,8 @@
 				"pathfinder_1e",
 				"races"
 			],
-			"setting": "tangled_grove"
+			"setting": "tangled_grove",
+			"status": "done"
 		},
 		"nightshades": {
 			"display_name": "Nightshades",
@@ -379,7 +415,8 @@
 				"pathfinder_1e",
 				"races"
 			],
-			"setting": "tangled_grove"
+			"setting": "tangled_grove",
+			"status": "done"
 		},
 		"lorax": {
 			"display_name": "Lo'raks",
@@ -389,7 +426,8 @@
 				"pathfinder_1e",
 				"races"
 			],
-			"setting": "tangled_grove"
+			"setting": "tangled_grove",
+			"status": "done"
 		},
 		"aniflors": {
 			"display_name": "Aniflors",
@@ -399,7 +437,8 @@
 				"pathfinder_1e",
 				"races"
 			],
-			"setting": "tangled_grove"
+			"setting": "tangled_grove",
+			"status": "done"
 		},
 		"tirn": {
 			"display_name": "Tirn",
@@ -408,7 +447,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"races"
-			]
+			],
+			"status": "done"
 		},
 		"drem": {
 			"display_name": "Drem",
@@ -417,7 +457,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"races"
-			]
+			],
+			"status": "done"
 		},
 		"gumodeuza": {
 			"display_name": "Gumodeuza",
@@ -426,7 +467,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"races"
-			]
+			],
+			"status": "done"
 		},
 		"sprix": {
 			"display_name": "Sprix",
@@ -435,7 +477,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"races"
-			]
+			],
+			"status": "done"
 		},
 		"casting_foci2": {
 			"display_name": "Casting Foci",
@@ -444,7 +487,8 @@
 			"sort_path": [
 				"pathfinder_2e",
 				"equipment_2e"
-			]
+			],
+			"status": "done"
 		},
 		"enosrian": {
 			"display_name": "Thyllkthoron",
@@ -454,7 +498,8 @@
 				"pathfinder_2e",
 				"races_2e"
 			],
-			"setting": "redeemed_setting_2e"
+			"setting": "redeemed_setting_2e",
+			"status": "done"
 		},
 		"enosrian_feats": {
 			"display_name": "Thyllkthoron Feats",
@@ -465,7 +510,8 @@
 				"races_2e",
 				"enosrian"
 			],
-			"setting": "redeemed_setting_2e"
+			"setting": "redeemed_setting_2e",
+			"status": "done"
 		},
 		"enosrian_heritages": {
 			"display_name": "Thyllkthoron Heritages",
@@ -476,7 +522,8 @@
 				"races_2e",
 				"enosrian"
 			],
-			"setting": "redeemed_setting_2e"
+			"setting": "redeemed_setting_2e",
+			"status": "done"
 		},
 		"enosrian_feat_display": {
 			"display_name": "Thyllkthoron Feat Descriptions",
@@ -488,7 +535,8 @@
 				"enosrian",
 				"enosrian_feats"
 			],
-			"setting": "redeemed_setting_2e"
+			"setting": "redeemed_setting_2e",
+			"status": "done"
 		},
 		"birdpeople": {
 			"display_name": "Piccilli",
@@ -498,7 +546,8 @@
 				"pathfinder_2e",
 				"races_2e"
 			],
-			"setting": "great_tree"
+			"setting": "great_tree",
+			"status": "done"
 		},
 		"birdpeople_feats": {
 			"display_name": "Piccilli Feats",
@@ -509,7 +558,8 @@
 				"races_2e",
 				"birdpeople"
 			],
-			"setting": "great_tree"
+			"setting": "great_tree",
+			"status": "wip"
 		},
 		"birdpeople_heritages": {
 			"display_name": "Piccilli Heritages",
@@ -520,7 +570,8 @@
 				"races_2e",
 				"birdpeople"
 			],
-			"setting": "great_tree"
+			"setting": "great_tree",
+			"status": "done"
 		},
 		"birdpeople_feat_display": {
 			"display_name": "Piccilli Feat Descriptions",
@@ -532,7 +583,8 @@
 				"birdpeople",
 				"birdpeople_feats"
 			],
-			"setting": "great_tree"
+			"setting": "great_tree",
+			"status": "wip"
 		},
 		"focus_fundamental": {
 			"display_name": "Casting Channel Fundamental Runes",
@@ -542,7 +594,8 @@
 				"pathfinder_2e",
 				"equipment_2e",
 				"runes"
-			]
+			],
+			"status": "done"
 		},
 		"focus_property": {
 			"display_name": "Casting Channel Property Runes",
@@ -552,7 +605,8 @@
 				"pathfinder_2e",
 				"equipment_2e",
 				"runes"
-			]
+			],
+			"status": "done"
 		},
 		"focus_potency": {
 			"display_name": "Casting Potency Rune",
@@ -563,7 +617,8 @@
 				"equipment_2e",
 				"runes",
 				"focus_fundamental"
-			]
+			],
+			"status": "done"
 		},
 		"focus_fund": {
 			"display_name": "Heightening Rune",
@@ -574,7 +629,8 @@
 				"equipment_2e",
 				"runes",
 				"focus_fundamental"
-			]
+			],
+			"status": "done"
 		},
 		"monsters": {
 			"display_name": "Monsters",
@@ -582,7 +638,8 @@
 			"directory": "pathfinder_1e/",
 			"sort_path": [
 				"pathfinder_1e"
-			]
+			],
+			"status": "done"
 		},
 		"sleaj": {
 			"display_name": "Sleaj",
@@ -591,7 +648,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"monsters"
-			]
+			],
+			"status": "done"
 		},
 		"lazuli_band": {
 			"display_name": "Band of Lazuli and Iron",
@@ -603,7 +661,8 @@
 				"magic_items",
 				"wondrous"
 			],
-			"setting": "kundrak"
+			"setting": "kundrak",
+			"status": "done"
 		},
 		"endless_book": {
 			"display_name": "Book of Endless Pages",
@@ -614,7 +673,8 @@
 				"items",
 				"magic_items",
 				"wondrous"
-			]
+			],
+			"status": "done"
 		},
 		"lazuli_dragon": {
 			"display_name": "Kundrak",
@@ -624,7 +684,8 @@
 				"pathfinder_1e",
 				"monsters"
 			],
-			"setting": "kundrak"
+			"setting": "kundrak",
+			"status": "done"
 		},
 		"topics": {
 			"display_name": "Topics",
@@ -632,7 +693,8 @@
 			"directory": "pathfinder_1e/",
 			"sort_path": [
 				"pathfinder_1e"
-			]
+			],
+			"status": "done"
 		},
 		"minecraft": {
 			"display_name": "Minecraft",
@@ -641,7 +703,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"topics"
-			]
+			],
+			"status": "done"
 		},
 		"monsters_mc": {
 			"display_name": "Monsters",
@@ -651,7 +714,8 @@
 				"pathfinder_1e",
 				"topics",
 				"minecraft"
-			]
+			],
+			"status": "done"
 		},
 		"npcs_mc": {
 			"display_name": "NPCs",
@@ -662,7 +726,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"status": "done"
 		},
 		"templates_mc": {
 			"display_name": "Templates",
@@ -673,7 +738,8 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
-			]
+			],
+			"status": "done"
 		},
 		"bee": {
 			"display_name": "Dire Bee",
@@ -685,7 +751,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"blaze": {
 			"display_name": "Blaze",
@@ -697,7 +764,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"cave_spider": {
 			"display_name": "Cave Spider",
@@ -709,7 +777,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"creeper": {
 			"display_name": "Creeper",
@@ -721,7 +790,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"endermite": {
 			"display_name": "Endermite",
@@ -733,7 +803,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"ghast": {
 			"display_name": "Ghast",
@@ -745,7 +816,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"goat": {
 			"display_name": "Goat",
@@ -757,7 +829,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"guardian": {
 			"display_name": "Guardian",
@@ -769,7 +842,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"hoglin": {
 			"display_name": "Hoglin",
@@ -781,7 +855,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"iron_golem": {
 			"display_name": "Iron Guard",
@@ -793,7 +868,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"llama": {
 			"display_name": "Dire Llama",
@@ -805,7 +881,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"magma_slime": {
 			"display_name": "Magma Cube",
@@ -817,7 +894,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"phantom": {
 			"display_name": "Phantom",
@@ -829,7 +907,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"polar_bear": {
 			"display_name": "Polar Bear",
@@ -841,7 +920,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"pufferfish": {
 			"display_name": "Pufferfish",
@@ -853,7 +933,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"rabbit_99": {
 			"display_name": "Killer Rabbit",
@@ -865,7 +946,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"ravager": {
 			"display_name": "Ravager",
@@ -877,7 +959,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"shulker": {
 			"display_name": "Shulker",
@@ -889,7 +972,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"silverfish": {
 			"display_name": "Silverfish",
@@ -901,7 +985,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"silverfish_swarm": {
 			"display_name": "Silverfish",
@@ -913,7 +998,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"slime": {
 			"display_name": "Green Cube",
@@ -925,7 +1011,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"snow_golem": {
 			"display_name": "Snow Golem",
@@ -937,7 +1024,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"spider": {
 			"display_name": "Spider",
@@ -949,7 +1037,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"vex": {
 			"display_name": "Vex",
@@ -961,7 +1050,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"wolf": {
 			"display_name": "Wolf",
@@ -973,7 +1063,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"skeleton": {
 			"display_name": "Skeleton",
@@ -986,7 +1077,8 @@
 				"monsters_mc",
 				"templates_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"zombie": {
 			"display_name": "Zombie",
@@ -999,7 +1091,8 @@
 				"monsters_mc",
 				"templates_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"illagers": {
 			"display_name": "Illagers",
@@ -1011,7 +1104,8 @@
 				"minecraft",
 				"races_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"knom": {
 			"display_name": "Knom",
@@ -1023,7 +1117,8 @@
 				"minecraft",
 				"races_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"piglins": {
 			"display_name": "Piglins",
@@ -1035,7 +1130,8 @@
 				"minecraft",
 				"races_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"totem": {
 			"display_name": "Totem of Undying",
@@ -1048,7 +1144,8 @@
 				"magic_items_mc",
 				"wondrous_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"gapple": {
 			"display_name": "Golden Apple",
@@ -1061,7 +1158,8 @@
 				"magic_items_mc",
 				"wondrous_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"egapple": {
 			"display_name": "Enchanted Golden Apple",
@@ -1074,7 +1172,8 @@
 				"magic_items_mc",
 				"wondrous_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"enderpearl": {
 			"display_name": "Ender Pearl",
@@ -1087,7 +1186,8 @@
 				"magic_items_mc",
 				"wondrous_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"endereye": {
 			"display_name": "Eye of Ender",
@@ -1100,7 +1200,8 @@
 				"magic_items_mc",
 				"wondrous_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"endportal": {
 			"display_name": "Ender Portal",
@@ -1113,7 +1214,8 @@
 				"magic_items_mc",
 				"artifacts_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"end_gateway": {
 			"display_name": "End Gateway",
@@ -1126,7 +1228,8 @@
 				"magic_items_mc",
 				"artifacts_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"compass": {
 			"display_name": "Redstone Compass",
@@ -1139,7 +1242,8 @@
 				"magic_items_mc",
 				"wondrous_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"lodestone": {
 			"display_name": "Netherite Lodestone",
@@ -1152,7 +1256,8 @@
 				"magic_items_mc",
 				"wondrous_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"elytra": {
 			"display_name": "Elytra",
@@ -1165,7 +1270,8 @@
 				"magic_items_mc",
 				"wondrous_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"weapons_mc": {
 			"display_name": "Weapons",
@@ -1176,7 +1282,8 @@
 				"topics",
 				"minecraft",
 				"equipment_mc"
-			]
+			],
+			"status": "done"
 		},
 		"armor_mc": {
 			"display_name": "Armor",
@@ -1187,7 +1294,8 @@
 				"topics",
 				"minecraft",
 				"equipment_mc"
-			]
+			],
+			"status": "done"
 		},
 		"special_materials_mc": {
 			"display_name": "Special Materials",
@@ -1198,7 +1306,8 @@
 				"topics",
 				"minecraft",
 				"equipment_mc"
-			]
+			],
+			"status": "done"
 		},
 		"misc_equip_mc": {
 			"display_name": "Miscellaneous",
@@ -1209,7 +1318,8 @@
 				"topics",
 				"minecraft",
 				"equipment_mc"
-			]
+			],
+			"status": "done"
 		},
 		"potions_mc": {
 			"display_name": "Potions",
@@ -1221,7 +1331,8 @@
 				"minecraft",
 				"magic_items_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"turtle_shell": {
 			"display_name": "Enchanted Turtle Shell",
@@ -1234,7 +1345,8 @@
 				"magic_items_mc",
 				"wondrous_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"melee_qualities_mc": {
 			"display_name": "Melee Weapon Qualities",
@@ -1246,7 +1358,8 @@
 				"minecraft",
 				"magic_items_mc",
 				"magic_weapons_mc"
-			]
+			],
+			"status": "done"
 		},
 		"ranged_qualities_mc": {
 			"display_name": "Ranged Weapon Qualities",
@@ -1258,7 +1371,8 @@
 				"minecraft",
 				"magic_items_mc",
 				"magic_weapons_mc"
-			]
+			],
+			"status": "done"
 		},
 		"armor_qualities_mc": {
 			"display_name": "Armor Qualities",
@@ -1270,7 +1384,8 @@
 				"minecraft",
 				"magic_items_mc",
 				"magic_armor_mc"
-			]
+			],
+			"status": "done"
 		},
 		"shield_qualities_mc": {
 			"display_name": "Shield Qualities",
@@ -1282,7 +1397,8 @@
 				"minecraft",
 				"magic_items_mc",
 				"magic_armor_mc"
-			]
+			],
+			"status": "done"
 		},
 		"enchants_mc": {
 			"display_name": "Enchantments",
@@ -1294,7 +1410,8 @@
 				"minecraft",
 				"magic_items_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"enderchest": {
 			"display_name": "Ender Chest",
@@ -1307,7 +1424,8 @@
 				"magic_items_mc",
 				"wondrous_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"lure_rod": {
 			"display_name": "Luring Fishing Rod",
@@ -1320,7 +1438,8 @@
 				"magic_items_mc",
 				"wondrous_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"end": {
 			"display_name": "the End",
@@ -1332,7 +1451,8 @@
 				"minecraft",
 				"planes_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"nether": {
 			"display_name": "the Nether",
@@ -1344,7 +1464,8 @@
 				"minecraft",
 				"planes_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"skeleton_block": {
 			"display_name": "Skeleton",
@@ -1356,7 +1477,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"wither_skeleton": {
 			"display_name": "Wither Skeleton",
@@ -1368,7 +1490,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"stray": {
 			"display_name": "Stray",
@@ -1380,7 +1503,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"zombie_block": {
 			"display_name": "Zombie",
@@ -1392,7 +1516,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"zombie_villager": {
 			"display_name": "Zombie Villager",
@@ -1404,7 +1529,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"husk": {
 			"display_name": "Husk",
@@ -1416,7 +1542,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"drowned": {
 			"display_name": "Drowned",
@@ -1428,7 +1555,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"zombie_pigman": {
 			"display_name": "Zombified Piglin",
@@ -1440,7 +1568,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"zoglin": {
 			"display_name": "Zoglin",
@@ -1452,7 +1581,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"piglin": {
 			"display_name": "Piglin",
@@ -1464,7 +1594,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"piglin_crossbow": {
 			"display_name": "Piglin, Crossbow",
@@ -1476,7 +1607,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"piglin_brute": {
 			"display_name": "Piglin, Brute",
@@ -1488,7 +1620,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"blazing_shield": {
 			"display_name": "Blazing Shield",
@@ -1500,7 +1633,8 @@
 				"minecraft",
 				"spells"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"spells_mc": {
 			"display_name": "Spells",
@@ -1510,7 +1644,8 @@
 				"pathfinder_1e",
 				"topics",
 				"minecraft"
-			]
+			],
+			"status": "done"
 		},
 		"lesser_blind": {
 			"display_name": "Blindness, Lesser",
@@ -1522,7 +1657,8 @@
 				"minecraft",
 				"spells"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"illusory_dark": {
 			"display_name": "Illusory Darkness",
@@ -1534,7 +1670,8 @@
 				"minecraft",
 				"spells"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"vexing_call": {
 			"display_name": "Vexing Call",
@@ -1546,7 +1683,8 @@
 				"minecraft",
 				"spells"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"evoker_fangs": {
 			"display_name": "Evoker's Fangs",
@@ -1558,7 +1696,8 @@
 				"minecraft",
 				"spells"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"evoker": {
 			"display_name": "Evoker",
@@ -1570,7 +1709,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"pillager": {
 			"display_name": "Pillager",
@@ -1582,7 +1722,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"vindicator": {
 			"display_name": "Vindicator",
@@ -1594,7 +1735,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"witch": {
 			"display_name": "Witch",
@@ -1606,7 +1748,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"illusioner": {
 			"display_name": "Illusioner",
@@ -1618,7 +1761,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"skeleton_horse": {
 			"display_name": "Skeletal Horse",
@@ -1630,7 +1774,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"zombie_horse": {
 			"display_name": "Zombified Horse",
@@ -1642,7 +1787,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"skeleton_archer": {
 			"display_name": "Skeletal Horse Archer",
@@ -1654,7 +1800,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"armor": {
 			"display_name": "Armor",
@@ -1664,7 +1811,8 @@
 				"pathfinder_1e",
 				"items",
 				"equipment"
-			]
+			],
+			"status": "done"
 		},
 		"weapons": {
 			"display_name": "Weapons",
@@ -1674,7 +1822,8 @@
 				"pathfinder_1e",
 				"items",
 				"equipment"
-			]
+			],
+			"status": "empty"
 		},
 		"special_materials": {
 			"display_name": "Special Materials",
@@ -1684,7 +1833,8 @@
 				"pathfinder_1e",
 				"items",
 				"equipment"
-			]
+			],
+			"status": "done"
 		},
 		"armor_qualities": {
 			"display_name": "Armor Qualities",
@@ -1695,7 +1845,8 @@
 				"items",
 				"magic_items",
 				"magic_armor"
-			]
+			],
+			"status": "empty"
 		},
 		"shield_qualities": {
 			"display_name": "Shield Qualities",
@@ -1706,7 +1857,8 @@
 				"items",
 				"magic_items",
 				"magic_armor"
-			]
+			],
+			"status": "empty"
 		},
 		"specific_armors": {
 			"display_name": "Specific Magic Armors",
@@ -1717,7 +1869,8 @@
 				"items",
 				"magic_items",
 				"magic_armor"
-			]
+			],
+			"status": "done"
 		},
 		"melee_qualities": {
 			"display_name": "Melee Weapon Qualities",
@@ -1728,7 +1881,8 @@
 				"items",
 				"magic_items",
 				"magic_weapons"
-			]
+			],
+			"status": "done"
 		},
 		"ranged_qualities": {
 			"display_name": "Ranged Weapon Qualities",
@@ -1739,7 +1893,8 @@
 				"items",
 				"magic_items",
 				"magic_weapons"
-			]
+			],
+			"status": "done"
 		},
 		"specific_weapons": {
 			"display_name": "Specific Magic Weapons",
@@ -1750,7 +1905,8 @@
 				"items",
 				"magic_items",
 				"magic_weapons"
-			]
+			],
+			"status": "done"
 		},
 		"wondrous": {
 			"display_name": "Wondrous Items",
@@ -1760,7 +1916,8 @@
 				"pathfinder_1e",
 				"items",
 				"magic_items"
-			]
+			],
+			"status": "done"
 		},
 		"soul_soil": {
 			"display_name": "Prepared Soul Soil",
@@ -1773,7 +1930,8 @@
 				"equipment_mc",
 				"misc_equip_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"ender_dragon": {
 			"display_name": "Ender Dragon",
@@ -1785,7 +1943,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"wither": {
 			"display_name": "Wither",
@@ -1797,7 +1956,8 @@
 				"minecraft",
 				"monsters_mc"
 			],
-			"setting": "minecraft"
+			"setting": "minecraft",
+			"status": "done"
 		},
 		"focusing_wand": {
 			"display_name": "Focusing Wand",
@@ -1809,7 +1969,8 @@
 				"magic_items",
 				"magic_weapons",
 				"casting_foci"
-			]
+			],
+			"status": "done"
 		},
 		"spell_potency_staff": {
 			"display_name": "Spell Potency Staff",
@@ -1821,7 +1982,8 @@
 				"magic_items",
 				"magic_weapons",
 				"casting_foci"
-			]
+			],
+			"status": "done"
 		},
 		"abjuration_stone": {
 			"display_name": "Abjuring Rune Stone",
@@ -1833,7 +1995,8 @@
 				"magic_items",
 				"magic_weapons",
 				"casting_foci"
-			]
+			],
+			"status": "done"
 		},
 		"conjuration_key": {
 			"display_name": "Conjuring Key",
@@ -1845,7 +2008,8 @@
 				"magic_items",
 				"magic_weapons",
 				"casting_foci"
-			]
+			],
+			"status": "done"
 		},
 		"divination_sphere": {
 			"display_name": "Divining Sphere",
@@ -1857,7 +2021,8 @@
 				"magic_items",
 				"magic_weapons",
 				"casting_foci"
-			]
+			],
+			"status": "done"
 		},
 		"enchantment_rings": {
 			"display_name": "Enchanting Rings",
@@ -1869,7 +2034,8 @@
 				"magic_items",
 				"magic_weapons",
 				"casting_foci"
-			]
+			],
+			"status": "wip"
 		},
 		"evocation_rod": {
 			"display_name": "Evocation Rod",
@@ -1881,7 +2047,8 @@
 				"magic_items",
 				"magic_weapons",
 				"casting_foci"
-			]
+			],
+			"status": "done"
 		},
 		"illusion_glove": {
 			"display_name": "Illusory Glove",
@@ -1893,7 +2060,8 @@
 				"magic_items",
 				"magic_weapons",
 				"casting_foci"
-			]
+			],
+			"status": "done"
 		},
 		"transmutation_vial": {
 			"display_name": "Transmuting Vial",
@@ -1905,7 +2073,8 @@
 				"magic_items",
 				"magic_weapons",
 				"casting_foci"
-			]
+			],
+			"status": "done"
 		},
 		"necromancy_skull": {
 			"display_name": "Necromantic Skull",
@@ -1917,7 +2086,8 @@
 				"magic_items",
 				"magic_weapons",
 				"casting_foci"
-			]
+			],
+			"status": "done"
 		},
 		"divine_symbol": {
 			"display_name": "Blessed Holy Symbol",
@@ -1929,7 +2099,8 @@
 				"magic_items",
 				"magic_weapons",
 				"casting_foci"
-			]
+			],
+			"status": "done"
 		},
 		"channelling_hammer": {
 			"display_name": "Hammer of Holy Light",
@@ -1941,7 +2112,8 @@
 				"magic_items",
 				"magic_weapons",
 				"casting_foci"
-			]
+			],
+			"status": "done"
 		},
 		"summoning_key": {
 			"display_name": "Calling Key",
@@ -1953,7 +2125,8 @@
 				"magic_items",
 				"magic_weapons",
 				"casting_foci"
-			]
+			],
+			"status": "done"
 		},
 		"healing_staff": {
 			"display_name": "Ophiuchus Staff",
@@ -1965,7 +2138,8 @@
 				"magic_items",
 				"magic_weapons",
 				"casting_foci"
-			]
+			],
+			"status": "done"
 		},
 		"channelling_lantern": {
 			"display_name": "Radiant Lantern",
@@ -1977,7 +2151,8 @@
 				"magic_items",
 				"magic_weapons",
 				"casting_foci"
-			]
+			],
+			"status": "done"
 		},
 		"necromancy_bone": {
 			"display_name": "Bleeding Bone",
@@ -1989,7 +2164,8 @@
 				"magic_items",
 				"magic_weapons",
 				"casting_foci"
-			]
+			],
+			"status": "done"
 		},
 		"curse_rod": {
 			"display_name": "Curse Rod",
@@ -2001,7 +2177,8 @@
 				"magic_items",
 				"magic_weapons",
 				"casting_foci"
-			]
+			],
+			"status": "done"
 		},
 		"plants_branch": {
 			"display_name": "Genesis Branch",
@@ -2013,7 +2190,8 @@
 				"magic_items",
 				"magic_weapons",
 				"casting_foci"
-			]
+			],
+			"status": "done"
 		},
 		"polymorph_claw": {
 			"display_name": "Blessed Claw",
@@ -2025,7 +2203,8 @@
 				"magic_items",
 				"magic_weapons",
 				"casting_foci"
-			]
+			],
+			"status": "done"
 		},
 		"casting_weapon": {
 			"display_name": "Casting Weapon",
@@ -2037,7 +2216,8 @@
 				"magic_items",
 				"magic_weapons",
 				"casting_foci"
-			]
+			],
+			"status": "done"
 		},
 		"dread_skull_animus": {
 			"display_name": "Dread Skull Animus",
@@ -2046,7 +2226,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"monsters"
-			]
+			],
+			"status": "done"
 		},
 		"alchemical_oils": {
 			"display_name": "Alchemical Oils",
@@ -2057,7 +2238,8 @@
 				"items",
 				"equipment",
 				"misc_equip"
-			]
+			],
+			"status": "empty"
 		},
 		"adventuring_gear": {
 			"display_name": "Adventuring Gear",
@@ -2068,7 +2250,8 @@
 				"items",
 				"equipment",
 				"misc_equip"
-			]
+			],
+			"status": "done"
 		},
 		"image_plate": {
 			"display_name": "Blank Image Capture Plate",
@@ -2080,7 +2263,8 @@
 				"equipment",
 				"misc_equip",
 				"adventuring_gear"
-			]
+			],
+			"status": "done"
 		},
 		"camera": {
 			"display_name": "Camera",
@@ -2092,7 +2276,8 @@
 				"equipment",
 				"misc_equip",
 				"adventuring_gear"
-			]
+			],
+			"status": "done"
 		},
 		"forest": {
 			"display_name": "Forest of Shadows",
@@ -2101,7 +2286,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"settings"
-			]
+			],
+			"status": "done"
 		},
 		"amospia": {
 			"display_name": "Amospia",
@@ -2110,7 +2296,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"settings"
-			]
+			],
+			"status": "done"
 		},
 		"kundrak": {
 			"display_name": "Kundrak",
@@ -2119,7 +2306,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"settings"
-			]
+			],
+			"status": "done"
 		},
 		"redeemed_setting": {
 			"display_name": "Redeemed",
@@ -2128,7 +2316,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"settings"
-			]
+			],
+			"status": "done"
 		},
 		"tangled_grove": {
 			"display_name": "Tangled Grove",
@@ -2137,7 +2326,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"settings"
-			]
+			],
+			"status": "done"
 		},
 		"redeemed_setting_2e": {
 			"display_name": "Redeemed",
@@ -2146,7 +2336,8 @@
 			"sort_path": [
 				"pathfinder_2e",
 				"settings_2e"
-			]
+			],
+			"status": "done"
 		},
 		"great_tree": {
 			"display_name": "Geldrine",
@@ -2155,7 +2346,8 @@
 			"sort_path": [
 				"pathfinder_2e",
 				"settings_2e"
-			]
+			],
+			"status": "done"
 		},
 		"special_materials_2e": {
 			"display_name": "Materials",
@@ -2164,7 +2356,8 @@
 			"sort_path": [
 				"pathfinder_2e",
 				"equipment_2e"
-			]
+			],
+			"status": "done"
 		},
 		"annort_2e": {
 			"display_name": "Annort",
@@ -2174,7 +2367,8 @@
 				"pathfinder_2e",
 				"equipment_2e",
 				"special_materials_2e"
-			]
+			],
+			"status": "done"
 		},
 		"spells": {
 			"display_name": "Spells",
@@ -2182,7 +2376,8 @@
 			"directory": "pathfinder_1e/",
 			"sort_path": [
 				"pathfinder_1e"
-			]
+			],
+			"status": "done"
 		},
 		"meteor1": {
 			"display_name": "Micro Meteor",
@@ -2191,7 +2386,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"spells"
-			]
+			],
+			"status": "done"
 		},
 		"meteor2": {
 			"display_name": "Shooting Stars",
@@ -2200,7 +2396,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"spells"
-			]
+			],
+			"status": "done"
 		},
 		"meteor3": {
 			"display_name": "Meteor Stone",
@@ -2209,7 +2406,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"spells"
-			]
+			],
+			"status": "done"
 		},
 		"meteor_sling": {
 			"display_name": "Meteor Sling",
@@ -2221,7 +2419,8 @@
 				"magic_items",
 				"magic_weapons",
 				"specific_weapons"
-			]
+			],
+			"status": "done"
 		},
 		"comet_sling": {
 			"display_name": "Comet Sling",
@@ -2233,7 +2432,8 @@
 				"magic_items",
 				"magic_weapons",
 				"specific_weapons"
-			]
+			],
+			"status": "done"
 		},
 		"cobalt_spheres": {
 			"display_name": "Cobalt Sphere",
@@ -2245,7 +2445,8 @@
 				"magic_items",
 				"magic_weapons",
 				"specific_weapons"
-			]
+			],
+			"status": "done"
 		},
 		"boulder_of_annihilation": {
 			"display_name": "Boulder of Annihilation",
@@ -2256,7 +2457,8 @@
 				"items",
 				"magic_items",
 				"wondrous"
-			]
+			],
+			"status": "done"
 		},
 		"metal_bead_storm": {
 			"display_name": "Metal Bead Storm",
@@ -2265,7 +2467,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"spells"
-			]
+			],
+			"status": "done"
 		},
 		"armor_sf": {
 			"display_name": "Armor",
@@ -2274,7 +2477,8 @@
 			"sort_path": [
 				"starfinder",
 				"equipment_sf"
-			]
+			],
+			"status": "empty"
 		},
 		"weapons_sf": {
 			"display_name": "Weapons",
@@ -2283,7 +2487,8 @@
 			"sort_path": [
 				"starfinder",
 				"equipment_sf"
-			]
+			],
+			"status": "done"
 		},
 		"magic_sf": {
 			"display_name": "Magic Items",
@@ -2292,7 +2497,8 @@
 			"sort_path": [
 				"starfinder",
 				"equipment_sf"
-			]
+			],
+			"status": "empty"
 		},
 		"hybrid_sf": {
 			"display_name": "Hybrid Items",
@@ -2301,7 +2507,8 @@
 			"sort_path": [
 				"starfinder",
 				"equipment_sf"
-			]
+			],
+			"status": "empty"
 		},
 		"techno_sf": {
 			"display_name": "Technological Items",
@@ -2310,7 +2517,8 @@
 			"sort_path": [
 				"starfinder",
 				"equipment_sf"
-			]
+			],
+			"status": "empty"
 		},
 		"properties_sf": {
 			"display_name": "Weapon Special Properties",
@@ -2319,7 +2527,8 @@
 			"sort_path": [
 				"starfinder",
 				"equipment_sf"
-			]
+			],
+			"status": "done"
 		},
 		"cobalt_spheres_sf": {
 			"display_name": "Cobalt Spheres",
@@ -2329,7 +2538,8 @@
 				"starfinder",
 				"equipment_sf",
 				"weapons_sf"
-			]
+			],
+			"status": "done"
 		},
 		"specific_weapons_2e": {
 			"display_name": "Specific Magic Weapons",
@@ -2339,7 +2549,8 @@
 				"pathfinder_2e",
 				"equipment_2e",
 				"weapons_2e"
-			]
+			],
+			"status": "done"
 		},
 		"weapons_2e": {
 			"display_name": "Weapons",
@@ -2348,7 +2559,8 @@
 			"sort_path": [
 				"pathfinder_2e",
 				"equipment_2e"
-			]
+			],
+			"status": "empty"
 		},
 		"cobalt_spheres_2e": {
 			"display_name": "Cobalt Spheres",
@@ -2359,7 +2571,8 @@
 				"equipment_2e",
 				"weapons_2e",
 				"specific_weapons_2e"
-			]
+			],
+			"status": "done"
 		},
 		"magic_5e": {
 			"display_name": "Magic Items",
@@ -2367,7 +2580,8 @@
 			"directory": "dnd_5e/",
 			"sort_path": [
 				"dnd_5e"
-			]
+			],
+			"status": "done"
 		},
 		"cobalt_spheres_5e": {
 			"display_name": "Cobalt Spheres",
@@ -2376,7 +2590,8 @@
 			"sort_path": [
 				"dnd_5e",
 				"magic_5e"
-			]
+			],
+			"status": "done"
 		},
 		"gardinian": {
 			"display_name": "Gardinian",
@@ -2386,7 +2601,8 @@
 				"pathfinder_2e",
 				"races_2e"
 			],
-			"setting": "great_tree"
+			"setting": "great_tree",
+			"status": "wip"
 		},
 		"gardinian_feats": {
 			"display_name": "Gardinian Feats",
@@ -2397,7 +2613,8 @@
 				"races_2e",
 				"gardinian"
 			],
-			"setting": "great_tree"
+			"setting": "great_tree",
+			"status": "wip"
 		},
 		"gardinian_heritages": {
 			"display_name": "Gardinian Heritages",
@@ -2408,7 +2625,8 @@
 				"races_2e",
 				"gardinian"
 			],
-			"setting": "great_tree"
+			"setting": "great_tree",
+			"status": "wip"
 		},
 		"gardinian_feat_display": {
 			"display_name": "Gardinian Feat Descriptions",
@@ -2420,7 +2638,8 @@
 				"gardinian",
 				"gardinian_feats"
 			],
-			"setting": "great_tree"
+			"setting": "great_tree",
+			"status": "wip"
 		},
 		"burrowing_insects": {
 			"display_name": "Mathine",
@@ -2430,7 +2649,8 @@
 				"pathfinder_2e",
 				"races_2e"
 			],
-			"setting": "great_tree"
+			"setting": "great_tree",
+			"status": "wip"
 		},
 		"burrowing_insects_feats": {
 			"display_name": "Mathine Feats",
@@ -2441,7 +2661,8 @@
 				"races_2e",
 				"burrowing_insects"
 			],
-			"setting": "great_tree"
+			"setting": "great_tree",
+			"status": "wip"
 		},
 		"burrowing_insects_heritages": {
 			"display_name": "Mathine Heritages",
@@ -2452,7 +2673,8 @@
 				"races_2e",
 				"burrowing_insects"
 			],
-			"setting": "great_tree"
+			"setting": "great_tree",
+			"status": "wip"
 		},
 		"burrowing_insects_feat_display": {
 			"display_name": "Mathine Feat Descriptions",
@@ -2464,7 +2686,8 @@
 				"burrowing_insects",
 				"burrowing_insects_feats"
 			],
-			"setting": "great_tree"
+			"setting": "great_tree",
+			"status": "wip"
 		},
 		"flying_insects": {
 			"display_name": "Muuyine",
@@ -2474,7 +2697,8 @@
 				"pathfinder_2e",
 				"races_2e"
 			],
-			"setting": "great_tree"
+			"setting": "great_tree",
+			"status": "wip"
 		},
 		"flying_insects_feats": {
 			"display_name": "Muuyine Feats",
@@ -2485,7 +2709,8 @@
 				"races_2e",
 				"flying_insects"
 			],
-			"setting": "great_tree"
+			"setting": "great_tree",
+			"status": "wip"
 		},
 		"flying_insects_heritages": {
 			"display_name": "Muuyine Heritages",
@@ -2496,7 +2721,8 @@
 				"races_2e",
 				"flying_insects"
 			],
-			"setting": "great_tree"
+			"setting": "great_tree",
+			"status": "wip"
 		},
 		"flying_insects_feat_display": {
 			"display_name": "Muuyine Feat Descriptions",
@@ -2508,7 +2734,8 @@
 				"flying_insects",
 				"flying_insects_feats"
 			],
-			"setting": "great_tree"
+			"setting": "great_tree",
+			"status": "wip"
 		},
 		"wernan": {
 			"display_name": "Wernan",
@@ -2518,7 +2745,8 @@
 				"pathfinder_2e",
 				"races_2e"
 			],
-			"setting": "great_tree"
+			"setting": "great_tree",
+			"status": "wip"
 		},
 		"wernan_feats": {
 			"display_name": "Wernan Feats",
@@ -2529,7 +2757,8 @@
 				"races_2e",
 				"wernan"
 			],
-			"setting": "great_tree"
+			"setting": "great_tree",
+			"status": "wip"
 		},
 		"wernan_heritages": {
 			"display_name": "Wernan Heritages",
@@ -2540,7 +2769,8 @@
 				"races_2e",
 				"wernan"
 			],
-			"setting": "great_tree"
+			"setting": "great_tree",
+			"status": "wip"
 		},
 		"wernan_feat_display": {
 			"display_name": "Wernan Feat Descriptions",
@@ -2552,7 +2782,8 @@
 				"wernan",
 				"wernan_feats"
 			],
-			"setting": "great_tree"
+			"setting": "great_tree",
+			"status": "wip"
 		},
 		"ettinkin": {
 			"display_name": "Ettinkin",
@@ -2561,7 +2792,8 @@
 			"sort_path": [
 				"pathfinder_2e",
 				"races_2e"
-			]
+			],
+			"status": "wip"
 		},
 		"ettinkin_feats": {
 			"display_name": "Ettinkin Feats",
@@ -2571,7 +2803,8 @@
 				"pathfinder_2e",
 				"races_2e",
 				"ettinkin"
-			]
+			],
+			"status": "wip"
 		},
 		"ettinkin_heritages": {
 			"display_name": "Ettinkin Heritages",
@@ -2581,7 +2814,8 @@
 				"pathfinder_2e",
 				"races_2e",
 				"ettinkin"
-			]
+			],
+			"status": "wip"
 		},
 		"ettinkin_feat_display": {
 			"display_name": "Ettinkin Feat Descriptions",
@@ -2592,7 +2826,8 @@
 				"races_2e",
 				"ettinkin",
 				"ettinkin_feats"
-			]
+			],
+			"status": "wip"
 		},
 		"npcs": {
 			"display_name": "NPCs",
@@ -2601,7 +2836,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"monsters"
-			]
+			],
+			"status": "done"
 		},
 		"templates": {
 			"display_name": "Templates",
@@ -2610,7 +2846,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"monsters"
-			]
+			],
+			"status": "done"
 		},
 		"shadow": {
 			"display_name": "Shadow",
@@ -2620,7 +2857,8 @@
 				"pathfinder_1e",
 				"monsters"
 			],
-			"setting": "forest"
+			"setting": "forest",
+			"status": "done"
 		},
 		"halfshadow": {
 			"display_name": "Half-Shadow",
@@ -2630,7 +2868,8 @@
 				"pathfinder_1e",
 				"monsters"
 			],
-			"setting": "forest"
+			"setting": "forest",
+			"status": "done"
 		},
 		"plague_child_adept": {
 			"display_name": "Plague Child Priest of Niva",
@@ -2639,7 +2878,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"monsters"
-			]
+			],
+			"status": "done"
 		},
 		"plague_child_craftsman": {
 			"display_name": "Plague Child Craftsman",
@@ -2648,7 +2888,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"monsters"
-			]
+			],
+			"status": "done"
 		},
 		"plague_child_warrior": {
 			"display_name": "Plague Child Village Guard",
@@ -2657,7 +2898,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"monsters"
-			]
+			],
+			"status": "done"
 		},
 		"plague_child": {
 			"display_name": "Plague Child",
@@ -2666,7 +2908,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"monsters"
-			]
+			],
+			"status": "done"
 		},
 		"bandages": {
 			"display_name": "Bandages of Quarantine",
@@ -2677,7 +2920,8 @@
 				"items",
 				"magic_items",
 				"wondrous"
-			]
+			],
+			"status": "done"
 		},
 		"brighter_light": {
 			"display_name": "Brighter Light",
@@ -2687,7 +2931,8 @@
 				"pathfinder_1e",
 				"spells"
 			],
-			"setting": "forest"
+			"setting": "forest",
+			"status": "done"
 		},
 		"veil_of_light": {
 			"display_name": "Veil of Light",
@@ -2697,7 +2942,8 @@
 				"pathfinder_1e",
 				"spells"
 			],
-			"setting": "forest"
+			"setting": "forest",
+			"status": "done"
 		},
 		"shroud_of_darkness": {
 			"display_name": "Shroud of Darkness",
@@ -2707,7 +2953,8 @@
 				"pathfinder_1e",
 				"spells"
 			],
-			"setting": "forest"
+			"setting": "forest",
+			"status": "done"
 		},
 		"flickering_lights": {
 			"display_name": "Flickering Lights",
@@ -2717,7 +2964,8 @@
 				"pathfinder_1e",
 				"spells"
 			],
-			"setting": "forest"
+			"setting": "forest",
+			"status": "done"
 		},
 		"touch_of_blindness": {
 			"display_name": "Touch of Blindess",
@@ -2727,7 +2975,8 @@
 				"pathfinder_1e",
 				"spells"
 			],
-			"setting": "forest"
+			"setting": "forest",
+			"status": "done"
 		},
 		"blinding_light": {
 			"display_name": "Blinding Light",
@@ -2737,7 +2986,8 @@
 				"pathfinder_1e",
 				"rules"
 			],
-			"setting": "forest"
+			"setting": "forest",
+			"status": "done"
 		},
 		"rules": {
 			"display_name": "Rules",
@@ -2745,7 +2995,8 @@
 			"directory": "pathfinder_1e/",
 			"sort_path": [
 				"pathfinder_1e"
-			]
+			],
+			"status": "done"
 		},
 		"rules_settings": {
 			"display_name": "Rules",
@@ -2753,7 +3004,8 @@
 			"directory": "pathfinder_1e/",
 			"sort_path": [
 				"pathfinder_1e"
-			]
+			],
+			"status": "done"
 		},
 		"siege_weapons": {
 			"display_name": "Siege Weapons",
@@ -2763,7 +3015,8 @@
 				"pathfinder_1e",
 				"items",
 				"equipment"
-			]
+			],
+			"status": "done"
 		},
 		"spell_prism": {
 			"display_name": "Spell Prism",
@@ -2774,7 +3027,8 @@
 				"items",
 				"equipment",
 				"siege_weapons"
-			]
+			],
+			"status": "done"
 		},
 		"spell_lenses": {
 			"display_name": "Amplifying Lenses",
@@ -2785,7 +3039,8 @@
 				"items",
 				"equipment",
 				"siege_weapons"
-			]
+			],
+			"status": "done"
 		},
 		"deconstruction": {
 			"display_name": "Deconstruction",
@@ -2795,7 +3050,8 @@
 				"pathfinder_1e",
 				"skills"
 			],
-			"setting": "forest"
+			"setting": "forest",
+			"status": "done"
 		},
 		"feats": {
 			"display_name": "Feats",
@@ -2803,7 +3059,8 @@
 			"directory": "pathfinder_1e/",
 			"sort_path": [
 				"pathfinder_1e"
-			]
+			],
+			"status": "done"
 		},
 		"deconstruct_magic": {
 			"display_name": "Deconstruct Magic",
@@ -2813,7 +3070,8 @@
 				"pathfinder_1e",
 				"feats"
 			],
-			"setting": "forest"
+			"setting": "forest",
+			"status": "done"
 		},
 		"kundrak_deity": {
 			"display_name": "Kundrak",
@@ -2823,7 +3081,8 @@
 				"pathfinder_1e",
 				"deities"
 			],
-			"setting": "kundrak"
+			"setting": "kundrak",
+			"status": "done"
 		},
 		"deities_2e": {
 			"display_name": "Deities",
@@ -2831,7 +3090,8 @@
 			"directory": "pathfinder_2e/",
 			"sort_path": [
 				"pathfinder_2e"
-			]
+			],
+			"status": "done"
 		},
 		"fluut": {
 			"display_name": "Fluut",
@@ -2841,7 +3101,8 @@
 				"pathfinder_2e",
 				"deities"
 			],
-			"setting": "great_tree"
+			"setting": "great_tree",
+			"status": "wip"
 		},
 		"oberron": {
 			"display_name": "Oberron",
@@ -2851,7 +3112,8 @@
 				"pathfinder_2e",
 				"deities"
 			],
-			"setting": "great_tree"
+			"setting": "great_tree",
+			"status": "wip"
 		},
 		"titania": {
 			"display_name": "Titania",
@@ -2861,7 +3123,8 @@
 				"pathfinder_2e",
 				"deities"
 			],
-			"setting": "great_tree"
+			"setting": "great_tree",
+			"status": "wip"
 		},
 		"snap": {
 			"display_name": "Snap",
@@ -2870,7 +3133,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"spells"
-			]
+			],
+			"status": "done"
 		},
 		"thunderous_snap": {
 			"display_name": "Thunderous Snap",
@@ -2879,7 +3143,8 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"spells"
-			]
+			],
+			"status": "done"
 		},
 		"artifacts": {
 			"display_name": "Artifacts",
@@ -2887,8 +3152,10 @@
 			"directory": "pathfinder_1e/",
 			"sort_path": [
 				"pathfinder_1e",
-				"items"
-			]
+				"items",
+				"magic_items"
+			],
+			"status": "done"
 		},
 		"badizon_relics": {
 			"display_name": "Badizon Relics",
@@ -2897,8 +3164,23 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"items",
+				"magic_items",
 				"artifacts"
-			]
+			],
+			"status": "done"
+		},
+		"badizon_key": {
+			"display_name": "Badizon Key",
+			"file_name": "key.php",
+			"directory": "pathfinder_1e/items/badizon/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"artifacts",
+				"badizon_relics"
+			],
+			"status": "wip"
 		}
 	}
 }

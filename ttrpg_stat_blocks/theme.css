@@ -241,6 +241,17 @@ body.light .toc-title {
 .top-label {
 	text-decoration: none;
 }
+.top-label.status-empty {
+	color: #888
+}
+body.light .top-label.status-empty {
+	color: #888
+}
+.top-label.status-wip:before {
+	content: "WIP\00a0";
+	font-size: 0.5em;
+	vertical-align: super;
+}
 .top-label:hover, .top-label.selected {
 	text-decoration: underline;
 }
@@ -508,6 +519,15 @@ input:checked + .slider:before {
 	border-style: solid none none;
 	border-width: 1px;
 	margin-bottom: 2em;
+}
+#wip-note {
+	border-style: none none solid;
+	border-width: 1px;
+	margin-bottom: 2em;
+}
+#wip-note>*:before {
+	content: "WIP\00a0";
+	font-size: 2em;
 }
 
 /*Attempted to vary font size to be consistent on all devices but devices continued to provide inaccurate values
