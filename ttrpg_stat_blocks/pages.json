@@ -165,54 +165,7 @@
 								{
 									"name": "wondrous",
 									"display_name": "Wondrous Items",
-									"type": "limb",
-									"nodes": [
-										{
-											"name": "bandages",
-											"display_name": "Bandages of Quarantine",
-											"type": "leaf"
-										},
-										{
-											"name": "lazuli_band",
-											"display_name": "Band of Lazuli and Iron",
-											"type": "leaf"
-										},
-										{
-											"name": "boulder_of_annihilation",
-											"display_name": "Boulder of Annihilation",
-											"type": "leaf"
-										},
-										{
-											"name": "endless_book",
-											"display_name": "Book of Endless Pages",
-											"type": "leaf"
-										},
-										{
-											"name": "goodberry_sprig",
-											"display_name": "Goodberry Sprig",
-											"type": "leaf"
-										},
-										{
-											"name": "money_changers_pouch",
-											"display_name": "Money Changer's Pouch",
-											"type": "leaf"
-										},
-										{
-											"name": "ring_of_morphic_steel",
-											"display_name": "Ring of Morphic Steel",
-											"type": "leaf"
-										},
-										{
-											"name": "rod_of_planar_creation",
-											"display_name": "Rod of Planar Creation",
-											"type": "leaf"
-										},
-										{
-											"name": "unprepared_wizards_component_pouch",
-											"display_name": "Unprepared Wizard's Component Pouch",
-											"type": "leaf"
-										}
-									]
+									"type": "leaf"
 								}
 							]
 						}
@@ -535,6 +488,16 @@
 												{
 													"name": "compass",
 													"display_name": "Redstone Compass",
+													"type": "leaf"
+												},
+												{
+													"name": "soul_speed",
+													"display_name": "Soul Speed Boots",
+													"type": "leaf"
+												},
+												{
+													"name": "swift_sneak",
+													"display_name": "Swift Sneak Boots",
 													"type": "leaf"
 												},
 												{
