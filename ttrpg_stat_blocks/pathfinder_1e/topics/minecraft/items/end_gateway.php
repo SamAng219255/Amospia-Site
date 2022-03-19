@@ -9,9 +9,6 @@
 			$startDir='../'.$startDir;
 		}
 	}
-?>
-<title>End Gateway</title>
-<?php
 	magicItemBlockAuto(
 		"End Gateway",// Name
 		"Conjuration",// School

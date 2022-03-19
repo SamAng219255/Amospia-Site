@@ -9,9 +9,6 @@
 			$startDir='../'.$startDir;
 		}
 	}
-?>
-<title>Ender Pearl</title>
-<?php
 	magicItemBlockAuto(
 		"Ender Pearl",// Name
 		"Conjuration",// School

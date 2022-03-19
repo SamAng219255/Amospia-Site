@@ -9,9 +9,6 @@
 			$startDir='../'.$startDir;
 		}
 	}
-?>
-<title>Wither</title>
-<?php
 	monsterBlockAuto(
 		'Wither',// name
 		false,// alt name
@@ -28,7 +25,7 @@
 		false,// Mythic Initiative
 		'darkvision 60 ft., lifesense 1 mile',// Senses
 		0,// Misc Perception Mod
-		'frightful presense (120 ft., DC 33)',// Aura
+		'frightful presence (120 ft., DC 33)',// Aura
 		[
 			'dodge' => 1,
 			'natural' => 20
@@ -111,7 +108,7 @@
 				'bonus' => 35
 			],
 			[
-				'skill' => 'Percpetion',
+				'skill' => 'Perception',
 				'stat' => 'wis',
 				'bonus' => 35
 			]
@@ -138,12 +135,12 @@
 			[
 				'name' => 'Projectile Shield',
 				'type' => 'Su',
-				'desc' => 'As a swift action, the Wither can activate a barrier around itself that make it immune to projectiles and that lasts until the Wither disbles it as another swift action. While the Wither has this barrier active however the Wither cannot fly while the barrier is active though it still doesn\'t take any damage from falling.'
+				'desc' => 'As a swift action, the Wither can activate a barrier around itself that make it immune to projectiles and that lasts until the Wither disables it as another swift action. While the Wither has this barrier active however the Wither cannot fly while the barrier is active though it still doesn\'t take any damage from falling.'
 			],
 			[
 				'name' => 'Wither Skull',
 				'type' => 'Su',
-				'desc' => 'The Wither can make up to 3 ranged touch attacks, with range increments of 120 feet, as a standard action or as part of a full attack action. These attacks fire blasts of necrotic energies in the shape of one of the Wither\'s skulls. On a hit the target takes 5d6 points of damage that results directly from unholy power and ignores all resistance and immunity and every creaure within 5 of the target, except for the Wither, takes 5d6 points of force damage as the skull explodes. Creatures hit by the force damage can make a DC 33 Reflex save to reduce the damage by half. The original target must also make a DC 33 Will save or be inflicted by ii/withering/ii for a number of rounds equal to twice the Wither\'s charisma modifier (normally 14). These DCs are charisma based. If the Wither rolled a critical hit on its attack roll; the projectile turns blue, the target takes three times as much unholy damage, the DCs increase by 5, and the force damage ignores all hardness.
+				'desc' => 'The Wither can make up to 3 ranged touch attacks, with range increments of 120 feet, as a standard action or as part of a full attack action. These attacks fire blasts of necrotic energies in the shape of one of the Wither\'s skulls. On a hit the target takes 5d6 points of damage that results directly from unholy power and ignores all resistance and immunity and every creature within 5 of the target, except for the Wither, takes 5d6 points of force damage as the skull explodes. Creatures hit by the force damage can make a DC 33 Reflex save to reduce the damage by half. The original target must also make a DC 33 Will save or be inflicted by ii/withering/ii for a number of rounds equal to twice the Wither\'s charisma modifier (normally 14). These DCs are charisma based. If the Wither rolled a critical hit on its attack roll; the projectile turns blue, the target takes three times as much unholy damage, the DCs increase by 5, and the force damage ignores all hardness.
 				ii/Withering/ii: ii/Withering/ii is a curse effect inflicted by wither skeletons and the Wither that drains the life of the creature. Every round, a creature with ii/withering/ii takes 1d4 points of strength, dexterity, and constitution damage. A creature that dies from constitution damage due to ii/withering/ii cannot be raised by most means as though they died to a death effect. Any ability damage from ii/withering/ii that is not restored within 24 hours becomes ability drain. Undead afflicted with ii/withering/ii take 1d2 points of charisma damage each round instead. ii/Wish/ii, ii/remove curse/ii, and similar spells that can dispel curses can end the ii/withering/ii effect. If the spell is cast within 24 hours of the ii/withering/ii effect after it has ended it instead removes all ability damage from the ii/withering/ii effect.'
 			]
 		],// Special Abilities

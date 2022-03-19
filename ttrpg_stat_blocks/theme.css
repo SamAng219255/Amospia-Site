@@ -526,7 +526,7 @@ input:checked + .slider:before {
 	margin-bottom: 2em;
 }
 #wip-note>*:before {
-	content: "WIP\00a0";
+	content: "WIP ";
 	font-size: 2em;
 }
 

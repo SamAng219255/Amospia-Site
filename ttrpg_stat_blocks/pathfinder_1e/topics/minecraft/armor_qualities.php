@@ -116,11 +116,6 @@
 				'+2 bonus'
 			],
 			[
-				'Soul Speed',
-				'link' => 'enchants.php#block-Soul-Speed',
-				'+1 bonus'
-			],
-			[
 				'Thorns',
 				'link' => 'enchants.php#block-Thorns',
 				'+3 bonus'

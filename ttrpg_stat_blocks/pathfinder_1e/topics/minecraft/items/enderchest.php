@@ -9,9 +9,6 @@
 			$startDir='../'.$startDir;
 		}
 	}
-?>
-<title>Ender Chest</title>
-<?php
 	magicItemBlockAuto(
 		"Ender Chest",// Name
 		"Conjuration",// School

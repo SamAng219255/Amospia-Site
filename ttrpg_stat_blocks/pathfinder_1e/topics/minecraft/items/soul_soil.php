@@ -9,9 +9,6 @@
 			$startDir='../'.$startDir;
 		}
 	}
-?>
-<title>Prepared Soul Soil</title>
-<?php
 	block(
 		'Prepared Soul Soil',
 		'item',

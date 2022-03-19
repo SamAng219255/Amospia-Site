@@ -9,9 +9,6 @@
 			$startDir='../'.$startDir;
 		}
 	}
-?>
-<title>Enchanted Turtle Shell</title>
-<?php
 	magicItemBlockAuto(
 		"Enchanted Turtle Shell",// Name
 		"Transmutation",// School

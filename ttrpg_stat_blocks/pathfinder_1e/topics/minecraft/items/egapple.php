@@ -9,9 +9,6 @@
 			$startDir='../'.$startDir;
 		}
 	}
-?>
-<title>Enchanted Golden Apple</title>
-<?php
 	magicItemBlockAuto(
 		"Enchanted Golden Apple",// Name
 		"Universal",// School

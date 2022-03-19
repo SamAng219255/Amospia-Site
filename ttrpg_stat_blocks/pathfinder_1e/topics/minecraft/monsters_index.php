@@ -337,6 +337,13 @@
 				'21',
 				'undead',
 				'any'
+			],
+			[
+				'Warden',
+				'link' => 'monsters/warden.php',
+				'23',
+				'undead',
+				'any (Deep Underground)'
 			]
 		]
 	);

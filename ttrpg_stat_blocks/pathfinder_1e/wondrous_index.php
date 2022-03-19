@@ -149,6 +149,48 @@
 				'150,000 gp',
 				'none',
 				'7th'
+			],
+			[
+				'Bandages of Quarantine',
+				'link' => 'items/bandages.php',
+				'3,000 gp',
+				'body',
+				'3rd'
+			],
+			[
+				'Token of Domination',
+				'link' => 'items/domination_jewelry.php',
+				'45,000 gp',
+				'none',
+				'9th'
+			],
+			[
+				'Phantom Mount Whistle',
+				'link' => 'items/phantom_mount.php',
+				'24,000 gp',
+				'none',
+				'5th'
+			],
+			[
+				'Shadow Companion Whistle',
+				'link' => 'items/shadow_companion.php',
+				'30,000 gp',
+				'none',
+				'13th'
+			],
+			[
+				'Shadow Companion Whistle, Lesser',
+				'link' => 'items/shadow_companion.php#block-Shadow-Companion-Whistle,-Lesser',
+				'9,000 gp',
+				'none',
+				'7th'
+			],
+			[
+				'Shadow Companion Whistle, Greater',
+				'link' => 'items/shadow_companion.php#block-Shadow-Companion-Whistle,-Greater',
+				'50,000 gp',
+				'none',
+				'17th'
 			]
 		]
 	);

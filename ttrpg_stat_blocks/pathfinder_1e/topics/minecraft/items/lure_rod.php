@@ -9,9 +9,6 @@
 			$startDir='../'.$startDir;
 		}
 	}
-?>
-<title>Luring Fishing Rod</title>
-<?php
 	magicItemBlockAuto(
 		'Luring Fishing Rod',// Name
 		'Enchantment',// School

@@ -9,9 +9,6 @@
 			$startDir='../'.$startDir;
 		}
 	}
-?>
-<title>Elytra</title>
-<?php
 	magicItemBlockAuto(
 		"Elytra",// Name
 		"Transmutation",// School

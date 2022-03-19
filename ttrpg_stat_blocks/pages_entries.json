@@ -1273,6 +1273,34 @@
 			"setting": "minecraft",
 			"status": "done"
 		},
+		"soul_speed": {
+			"display_name": "Soul Speed Boots",
+			"file_name": "soul_speed.php",
+			"directory": "pathfinder_1e/topics/minecraft/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"magic_items_mc",
+				"wondrous_mc"
+			],
+			"setting": "minecraft",
+			"status": "done"
+		},
+		"swift_sneak": {
+			"display_name": "Swift Sneak Boots",
+			"file_name": "swift_sneak.php",
+			"directory": "pathfinder_1e/topics/minecraft/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"magic_items_mc",
+				"wondrous_mc"
+			],
+			"setting": "minecraft",
+			"status": "done"
+		},
 		"weapons_mc": {
 			"display_name": "Weapons",
 			"file_name": "weapons_index.php",
@@ -1949,6 +1977,19 @@
 		"wither": {
 			"display_name": "Wither",
 			"file_name": "wither.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			],
+			"setting": "minecraft",
+			"status": "done"
+		},
+		"warden": {
+			"display_name": "Warden",
+			"file_name": "warden.php",
 			"directory": "pathfinder_1e/topics/minecraft/monsters/",
 			"sort_path": [
 				"pathfinder_1e",
@@ -3181,6 +3222,42 @@
 				"badizon_relics"
 			],
 			"status": "wip"
+		},
+		"domination_jewelry": {
+			"display_name": "Token of Domination",
+			"file_name": "domination_jewelry.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"wondrous"
+			],
+			"status": "done"
+		},
+		"phantom_mount": {
+			"display_name": "Phantom Mount Whistle",
+			"file_name": "phantom_mount.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"wondrous"
+			],
+			"status": "done"
+		},
+		"shadow_companion": {
+			"display_name": "Shadow Companion Whistle",
+			"file_name": "shadow_companion.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"wondrous"
+			],
+			"status": "done"
 		}
 	}
 }

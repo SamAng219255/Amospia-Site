@@ -9,9 +9,6 @@
 			$startDir='../'.$startDir;
 		}
 	}
-?>
-<title>Potions</title>
-<?php
 	block(
 		'Potions',
 		'intro',

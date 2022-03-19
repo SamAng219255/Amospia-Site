@@ -9,9 +9,6 @@
 			$startDir='../'.$startDir;
 		}
 	}
-?>
-<title>Totem Of Undying</title>
-<?php
 	magicItemBlockAuto(
 		"Totem Of Undying",// Name
 		"Necromancy",// School

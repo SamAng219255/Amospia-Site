@@ -9,9 +9,6 @@
 			$startDir='../'.$startDir;
 		}
 	}
-?>
-<title>Netherite Lodestone</title>
-<?php
 	magicItemBlockAuto(
 		"Netherite Lodestone",// Name
 		"Divination",// School

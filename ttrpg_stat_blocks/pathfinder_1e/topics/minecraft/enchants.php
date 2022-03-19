@@ -16,7 +16,7 @@
 		'Enchantments',
 		'intro',
 		[
-			'Enchantments are the key to getting more out of your armor and weapons. In Minecraft you have the ability to apply differing enchantments to each piece of your armor with some being locked one slot. As Pathfinder lacks this concpet of piecemeal armor, magic effects are applied to the armor as a whole. Some enchantments from Minecraft, which are designed for tools, are not represented here though some have been made into wondrous items. The looting enchantment has also not been included due to system incompatibilities. All other enchantments from Minecraft have been listed below for clarity and completeness though some will refer to existing armor and weapon properties and three enchantments (protection, sharpness, and power) I have judged to be equivalent to enhancement bonuses.'
+			'Enchantments are the key to getting more out of your armor and weapons. In Minecraft you have the ability to apply differing enchantments to each piece of your armor with some being locked to one slot. As Pathfinder lacks this concept of piecemeal armor, magic effects are applied to the armor as a whole. Some enchantments from Minecraft, which are designed for tools, are not represented here though some have been made into wondrous items. The looting enchantment has also not been included due to system incompatibilities. All other enchantments from Minecraft have been listed below for clarity and completeness though some will refer to existing armor and weapon properties and three enchantments (protection, sharpness, and power) I have judged to be equivalent to enhancement bonuses.'
 		]
 	);
 	contents(
@@ -28,11 +28,11 @@
 			'Depth Strider',
 			'Feather Falling',
 			'Fire Protection',
+			'Frost Walker',
 			'Mending',
 			'Projectile Protection',
 			'Protection',
 			'Respiration',
-			'Soul Speed',
 			'Thorns',
 			'Unbreaking'
 		],
@@ -45,7 +45,6 @@
 			'Curse of Vanishing',
 			'Efficiency',
 			'Fire Aspect',
-			'Frost Walker',
 			'Impaling',
 			'Knockback',
 			'Mending',
@@ -122,7 +121,7 @@
 		'armor quality',// Slot
 		'+1 bonus',// Price
 		'—',// Weight
-		'Armor with this property creates a momentary barrier in response to incoming waves of energy granting the wearer a bonus equal to its enhancement bonus to saves against instantaneous spells and effects with that effect an area.',// Desc
+		'Armor with this property creates a momentary barrier in response to incoming waves of energy granting the wearer a bonus equal to its enhancement bonus to saves against instantaneous spells and effects that effect an area.',// Desc
 		false,// Destruction
 		'bb/Requirements/bb Craft Magic Arms and Armor, ii/resistance/ii; bb/Cost/bb +1 bonus'// Construction
 	);
@@ -144,7 +143,7 @@
 		'magic item quality',// Slot
 		'+1,000 gp',// Price
 		'—',// Weight
-		'ii/Curse of binding/ii can be applied to any magic item that can be worn including magic armor with at least a +1 enhancement bonus. The most simple and annoying curse. Any wearable item enchanted with ii/curse of binding/ii cannot be removed once equipped. This is a curse effect and cannot be dispelled, but it can be removed with a ii/break enchantment/ii, ii/limited wish/ii, ii/miracle/ii, ii/remove curse/ii, or ii/wish/ii spell.',// Desc
+		'ii/Curse of binding/ii can be applied to any magic item that can be worn including magic armor with at least a +1 enhancement bonus. The most simple and annoying curse, any wearable item enchanted with ii/curse of binding/ii cannot be removed once equipped. This is a curse effect and cannot be dispelled, but it can be removed with a ii/break enchantment/ii, ii/limited wish/ii, ii/miracle/ii, ii/remove curse/ii, or ii/wish/ii spell.',// Desc
 		false,// Destruction
 		'bb/Requirements/bb Craft Magic Arms and Armor, ii/bestow curse/ii; bb/Cost/bb +1,500 gp'// Construction
 	);
@@ -166,7 +165,7 @@
 		'armor quality',// Slot
 		'+1 bonus',// Price
 		'—',// Weight
-		'This armor is designed to ease movement while underwater. While wearer armor with ii/depth strider/ii your speed is not reduced for being underwater.',// Desc
+		'This armor is designed to ease movement while underwater. While wearing armor with ii/depth strider/ii your speed is not reduced for being underwater.',// Desc
 		false,// Destruction
 		'bb/Requirements/bb Craft Magic Arms and Armor, ii/freedom of movement/ii; bb/Cost/bb +1 bonus'// Construction
 	);
@@ -188,7 +187,7 @@
 		'armor quality',// Slot
 		'+1 bonus',// Price
 		'—',// Weight
-		'While whearing this armor you reduce damage from falling by half.',// Desc
+		'While wearing this armor you reduce damage from falling by half.',// Desc
 		false,// Destruction
 		'bb/Requirements/bb Craft Magic Arms and Armor, ii/feather fall/ii; bb/Cost/bb +1 bonus'// Construction
 	);
@@ -200,7 +199,7 @@
 		'+2 bonus',// Price
 		'—',// Weight
 		'This enchantment functions as the ii/igniting/ii property.
-		A ii/fire aspect/ii weapon functions as a flaming weapon that also causes the target to catch fire upon striking it with a successful critical hit. The target does not get a saving throw to avoid catching fire, but can make a save each round on its turn to put out the fire. The flaming ability must be active for the weapon to set enemies on fire.',// Desc
+		A ii/fire aspect/ii weapon functions as a ii/flaming/ii weapon that also causes the target to catch fire upon striking it with a successful critical hit. The target does not get a saving throw to avoid catching fire, but can make a save each round on its turn to put out the fire. The ii/flaming/ii ability must be active for the weapon to set enemies on fire.',// Desc
 		false,// Destruction
 		'bb/Requirements/bb Craft Magic Arms and Armor, ii/flame blade/ii, ii/flame strike/ii, or ii/fireball/ii; bb/Cost/bb +2 bonus'// Construction
 	);
@@ -224,7 +223,7 @@
 		'+2 bonus',// Price
 		'—',// Weight
 		'This enchantment functions as the ii/igniting/ii property.
-		A ii/flame/ii weapon functions as a flaming weapon that also causes the target to catch fire upon striking it with a successful critical hit. The target does not get a saving throw to avoid catching fire, but can make a save each round on its turn to put out the fire. The flaming ability must be active for the weapon to set enemies on fire.',// Desc
+		A ii/flame/ii weapon functions as a ii/flaming/ii weapon that also causes the target to catch fire upon striking it with a successful critical hit. The target does not get a saving throw to avoid catching fire, but can make a save each round on its turn to put out the fire. The ii/flaming/ii ability must be active for the weapon to set enemies on fire.',// Desc
 		false,// Destruction
 		'bb/Requirements/bb Craft Magic Arms and Armor, ii/flame blade/ii, ii/flame strike/ii, or ii/fireball/ii; bb/Cost/bb +2 bonus'// Construction
 	);
@@ -258,7 +257,7 @@
 		'+2 bonus',// Price
 		'—',// Weight
 		'This enchantment functions as the ii/endless ammunition/ii property.
-		Only bows and crossbows can be made into endless ammunition weapons—firearms and other projectile weapons cannot. Each time an endless ammunition weapon is nocked, a single nonmagical arrow or bolt is spontaneously created by the magic, so the weapon\'s wielder never needs to load the weapon with ammunition.
+		Only bows and crossbows can be made into infinity weapons—firearms and other projectile weapons cannot. Each time an infinity weapon is nocked, a single nonmagical arrow or bolt is spontaneously created by the magic, so the weapon\'s wielder never needs to load the weapon with ammunition.
 		If the wielder attempts to load the weapon with other ammunition, the created arrow or bolt immediately vanishes and the wielder can load the weapon as normal. This ability does not reduce the amount of time required to load or fire the weapon. The created arrow or bolt vanishes if removed from the weapon; it persists only if fired. Unlike normal bow and crossbow ammunition, these arrows and bolts are always destroyed when fired.',// Desc
 		false,// Destruction
 		'bb/Requirements/bb Craft Magic Arms and Armor, ii/minor creation/ii; bb/Cost/bb +2 bonus'// Construction
@@ -270,7 +269,7 @@
 		'weapon quality',// Slot
 		'+2 bonus',// Price
 		'—',// Weight
-		'This enchantment can only be applied to bludgeoning or slashing melee weapons. Blows from this weapon tend to throw opponents backward. Whenever you hit with an attack with this weapon you may make a bull rush attempt using your as a free action adding this weapon\'s enhancment bonus to your CMB. If you make a full attack using this weapon you can attempt a check after every hit but the target does not move until after your attack finishes and only the highest check determines success. You cannot choose to move with the creature when you perform this bull rush.',// Desc
+		'This enchantment can only be applied to bludgeoning or slashing melee weapons. Blows from this weapon tend to throw opponents backward. Whenever you hit with an attack with this weapon you may make a bull rush attempt as a free action adding this weapon\'s enhancment bonus to your CMB. If you make a full attack using this weapon you can attempt a check after every hit but the target does not move until after your attack finishes and only the highest check determines success. You cannot choose to move with the creature when you perform this bull rush.',// Desc
 		false,// Destruction
 		'bb/Requirements/bb Craft Magic Arms and Armor, ii/battering blast/ii; bb/Cost/bb +2 bonus'// Construction
 	);
@@ -281,7 +280,7 @@
 		'weapon quality',// Slot
 		'+1 bonus',// Price
 		'—',// Weight
-		'This special ability can only be placed on a weapon that can be thrown. A ii/loyalty/ii weapon flies through the air back to the creature that threw it. It returns to the thrower just before the creature\'s next turn (and is therefore ready to use again in that turn). Catching a ii/loyalty/ii weapon when it comes back is a free action. If the character can\'t catch it the weapon drops to the ground in the square the character is in. The weapon will attempt to fly back to the character wherever the character is. If the character is more than 10 times the range increment of the weapon away, or is in a another dimension, the weapon instead returns to the square it was thrown from.',// Desc
+		'This special ability can only be placed on a weapon that can be thrown. A ii/loyalty/ii weapon flies through the air back to the creature that threw it. It returns to the thrower just before the creature\'s next turn (and is therefore ready to use again in that turn). Catching a ii/loyalty/ii weapon when it comes back is a free action. If the character can\'t catch it, the weapon drops to the ground in the square the character is in. The weapon will attempt to fly back to the character wherever the character is. If the character is more than 10 times the range increment of the weapon away, or is in a another dimension, the weapon instead returns to the square it was thrown from.',// Desc
 		false,// Destruction
 		'bb/Requirements/bb Craft Magic Arms and Armor, ii/telekinesis/ii; bb/Cost/bb +1 bonus'// Construction
 	);
@@ -292,7 +291,7 @@
 		'magic item quality',// Slot
 		'+12,000 gp',// Price
 		'—',// Weight
-		'ii/Mending/ii can be applied to any magic item including magic weapons and armor with at least a +1 enhancement bonus. Objects given the ii/mending/ii enchantment have an uncanny ability to restore themselves as their owners grow more powerful. Whenever a character wielding a weapon, wearing armor, or othereise carrying or using an item with the ii/mending/ii would gain experience (gernerally from enemies being defeated) the item gains 1d6 hit points plus an additional 1d6 hit points per two hit dice of the character over the first.',// Desc
+		'ii/Mending/ii can be applied to any magic item including magic weapons and armor with at least a +1 enhancement bonus. Objects given the ii/mending/ii enchantment have an uncanny ability to restore themselves as their owners grow more powerful. Whenever a character wielding a weapon, wearing armor, or otherwise carrying or using an item with the ii/mending/ii enchantment would gain experience (generally from enemies being defeated) the item gains 1d6 hit points. If the experience was gained for an encounter with a given CR, the item is restored by an additional 1d6 hit points per two CR of the successful encounter over the first.',// Desc
 		false,// Destruction
 		'bb/Requirements/bb Craft Magic Arms and Armor, ii/make whole/ii; bb/Cost/bb +6,000 gp'// Construction
 	);
@@ -314,7 +313,7 @@
 		'weapon quality',// Slot
 		'+2 bonus',// Price
 		'—',// Weight
-		'This special ability can only be placed on crossbows. A weapon cannot be given the ii/piercing/ii quality if it possesses the ii/multishot/ii quality. When you make an attack with this crossbow draw a straight line from the target extending away from you. This line extends for two range increments. You can designate as many creatures in this line beside the original target as you want, but you take a -2 penalty to your attack for each target you designate. The nearest two designated creatures, including the target, whose AC is less than or equal to your attack roll are both hit by your attack. If a spell or other limited-use magical effect is augmenting the damage from your attack, it only applies to the nearest target hit. Otherwise both targts take the same damage.',// Desc
+		'This special ability can only be placed on crossbows. A weapon cannot be given the ii/piercing/ii quality if it possesses the ii/multishot/ii quality. When you make an attack with this crossbow draw a straight line from the target extending away from you. This line extends for two range increments. You can designate as many creatures in this line beside the original target as you want, but you take a -2 penalty to your attack for each target you designate. The nearest two designated creatures, including the target, whose AC is less than or equal to your attack roll are both hit by your attack. If a spell or other limited-use magical effect is augmenting the damage from your attack, it only applies to the nearest target hit. Otherwise both targets take the same damage.',// Desc
 		false,// Destruction
 		'bb/Requirements/bb Craft Magic Arms and Armor; bb/Cost/bb +2 bonus'// Construction
 	);
@@ -382,7 +381,7 @@
 		'weapon quality',// Slot
 		'+2 bonus',// Price
 		'—',// Weight
-		'Projectiles from this weapon tend to throw opponents backward. Whenever you hit with an attack with this weapon you may make a bull rush attempt using your as a free action adding this weapon\'s enhancment bonus to your CMB. If you make a full attack using this weapon you can attempt a check after every hit but the target does not move until after your attack finishes and only the highest check determines success. You cannot choose to move with the creature when you perform this bull rush.',// Desc
+		'Projectiles from this weapon tend to throw opponents backward. Whenever you hit with an attack with this weapon you may make a bull rush attempt as a free action adding this weapon\'s enhancment bonus to your CMB. If you make a full attack using this weapon you can attempt a check after every hit but the target does not move until after your attack finishes and only the highest check determines success. You cannot choose to move with the creature when you perform this bull rush.',// Desc
 		false,// Destruction
 		'bb/Requirements/bb Craft Magic Arms and Armor, ii/battering blast/ii; bb/Cost/bb +2 bonus'// Construction
 	);
@@ -393,9 +392,20 @@
 		'weapon quality',// Slot
 		'+1 bonus',// Price
 		'—',// Weight
-		'This special ability can only be placed on crossbows or firearms. This crossbow can be reloaded as if the wielder had the Rapid Reload feat. The time required for them to reload this weapon is reduced to a free action (for a hand or light crossbow), a move action (for heavy crossbow or one-handed firearm), or a standard action (two-handed firearm). Reloading this weapon still provokes attacks of opportunity. If this weapon a hand crossbow or light crossbow, the wielder may fire this weapon as many times in a full-attack action as they could attack if they were using a bow.',// Desc
+		'This special ability can only be placed on crossbows or firearms. This weapon can be reloaded as if the wielder had the Rapid Reload feat. The time required for them to reload this weapon is reduced to a free action (for a hand or light crossbow), a move action (for heavy crossbow or one-handed firearm), or a standard action (two-handed firearm). Reloading this weapon still provokes attacks of opportunity. If this weapon is a hand crossbow or light crossbow, the wielder may fire this weapon as many times in a full-attack action as they could attack if they were using a bow.',// Desc
 		false,// Destruction
 		'bb/Requirements/bb Craft Magic Arms and Armor, ii/reloading hands/ii; bb/Cost/bb +1 bonus'// Construction
+	);
+	magicItemBlockAuto(
+		'Improved Quick Charge',// Name
+		'Transmutation',// School
+		5,// CL
+		'weapon quality',// Slot
+		'+2 bonus',// Price
+		'—',// Weight
+		'This special ability can only be placed on crossbows or firearms. This ability is a stronger version of the ii/quick charge/ii ability that reduces the time required to reload the weapon even more. The time required for them to reload this weapon is reduced to a free action (for a hand, light, or heavy crossbow or for a one-handed firearm) or a move action (for a two-handed firearm). Reloading this weapon still provokes attacks of opportunity. If this weapon is a hand, light, or heavy crossbow or a one-handed firearm, the wielder may fire this weapon as many times in a full-attack action as they could attack if they were using a bow.',// Desc
+		false,// Destruction
+		'bb/Requirements/bb Craft Magic Arms and Armor, ii/reloading hands/ii; bb/Cost/bb +2 bonus'// Construction
 	);
 	magicItemBlockAuto(
 		'Respiration',// Name
@@ -404,7 +414,7 @@
 		'armor quality',// Slot
 		'+2 bonus',// Price
 		'—',// Weight
-		'This enchantment allows the creature limited ability to breath in airless environments. This ability can sustain the wearer for a number of rounds equal to two times their constitution score after which they must hold their breath or seek air to avoid suffocation or drowning. This duration resets when the creature is in breathable air.',// Desc
+		'This enchantment allows the creature limited ability to breathe in airless environments. This ability can sustain the wearer for a number of rounds equal to two times their constitution score after which they must hold their breath or seek air to avoid suffocation or drowning. This duration resets when the creature is in breathable air.',// Desc
 		false,// Destruction
 		'bb/Requirements/bb Craft Magic Arms and Armor, ii/water breathing/ii; bb/Cost/bb +2 bonus'// Construction
 	);
@@ -415,7 +425,7 @@
 		'weapon quality',// Slot
 		'+2 bonus',// Price
 		'—',// Weight
-		'This enchantment can be placed on melee piercing weapons. As long as you are in water or heavy rain you can activate this ability as a standard action launching yourself, weapon forward, in a direction. You move 60 feet in any direction, including up and down, but only in a straight line. You can pass through any creatures in your path and any creature you pass through you can roll an attack against using this weapon. You provoke attacks of opportunity as normal along this movement. This ability overwise counts as an overrun combat maneuver.',// Desc
+		'This enchantment can be placed on melee piercing weapons. As long as you are in water or heavy rain you can activate this ability as a standard action launching yourself, weapon forward, in a direction. You move 60 feet in any direction, including up and down, but only in a straight line. You can pass through any creatures in your path and any creature you pass through you can roll an attack against using this weapon. You provoke attacks of opportunity as normal along this movement. This ability otherwise counts as an overrun combat maneuver.',// Desc
 		false,// Destruction
 		'bb/Requirements/bb Craft Magic Arms and Armor, ii/hydraulic torrent/ii; bb/Cost/bb +2 bonus'// Construction
 	);
@@ -454,17 +464,6 @@
 		'bb/Requirements/bb Craft Magic Arms and Armor, ii/searing light/ii; bb/Cost/bb +1 bonus'// Construction
 	);
 	magicItemBlockAuto(
-		'Soul Speed',// Name
-		'Necromancy',// School
-		6,// CL
-		'armor quality',// Slot
-		'+1 bonus',// Price
-		'—',// Weight
-		'A rather situational and almost perverse enchantment, armor with the ii/soul speed/ii enchantment takes energy from the concentrated and corrupted souls found in soul sand and soul soil in the Nether to increase the wearers speed. You no longer treat soul sand as difficult terrain and your speed is increased 50% while on soul sand or soul soil.',// Desc
-		false,// Destruction
-		'bb/Requirements/bb Craft Magic Arms and Armor, ii/death knell/ii; bb/Cost/bb +1 bonus'// Construction
-	);
-	magicItemBlockAuto(
 		'Sweeping Edge',// Name
 		'Transmutation',// School
 		8,// CL
@@ -493,9 +492,9 @@
 		'magic item quality',// Slot
 		'+3,000 gp',// Price
 		'—',// Weight
-		'ii/Unbreaking/ii can be applied to any magic item including magic weapons and armor with at least a +1 enhancement bonus. An ii/unbreaking/ii item is warded from damage and decay. A metallic item cannot rust and a wooden item cannot rot or warp, even by magical or supernatural means. An impervious item gains double the normal bonus to its hardness and hit points for each point of its enhancement bonus. The break DC for an impervious item and the wielder\'s combat maneuver defense against sunder maneuvers against the impervious item each gain a bonus equal to twice the item\'s enhancement bonus and it gains a bonus on saving throws against direct attacks (such as a rust monster\'s rust ability) equal to its enhancement bonus.',// Desc
+		'ii/Unbreaking/ii can be applied to any magic item including magic weapons and armor with at least a +1 enhancement bonus. An ii/unbreaking/ii item is warded from damage and decay. A metallic item cannot rust and a wooden item cannot rot or warp, even by magical or supernatural means. An ii/unbreaking/ii item gains double the normal bonus to its hardness and hit points for each point of its enhancement bonus. The break DC for an ii/unbreaking/ii item and the wielder\'s combat maneuver defense against sunder maneuvers against the ii/unbreaking/ii item each gain a bonus equal to twice the item\'s enhancement bonus and it gains a bonus on saving throws against direct attacks (such as a rust monster\'s rust ability) equal to its enhancement bonus.',// Desc
 		false,// Destruction
-		'bb/Requirements/bb Craft Magic Arms and Armor, ii/waterbreathing/ii; bb/Cost/bb +1,500 gp'// Construction
+		'bb/Requirements/bb Craft Magic Arms and Armor; bb/Cost/bb +1,500 gp'// Construction
 	);
 	require $startDir.'pageEnd.php';
 ?>
