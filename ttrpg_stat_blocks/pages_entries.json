@@ -2280,7 +2280,267 @@
 				"equipment",
 				"misc_equip"
 			],
-			"status": "empty"
+			"status": "done"
+		},
+		"cold_iron_oil": {
+			"display_name": "Alchemical Oil, Cold Iron",
+			"file_name": "cold_iron.php",
+			"directory": "pathfinder_1e/items/alchemical_oils/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"misc_equip",
+				"alchemical_oils"
+			],
+			"status": "done"
+		},
+		"silver_oil": {
+			"display_name": "Alchemical Oil, Silver",
+			"file_name": "silver.php",
+			"directory": "pathfinder_1e/items/alchemical_oils/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"misc_equip",
+				"alchemical_oils"
+			],
+			"status": "done"
+		},
+		"adamantine_oil": {
+			"display_name": "Alchemical Oil, Adamantine",
+			"file_name": "adamantine.php",
+			"directory": "pathfinder_1e/items/alchemical_oils/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"misc_equip",
+				"alchemical_oils"
+			],
+			"status": "done"
+		},
+		"noqual_oil": {
+			"display_name": "Alchemical Oil, Noqual",
+			"file_name": "noqual.php",
+			"directory": "pathfinder_1e/items/alchemical_oils/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"misc_equip",
+				"alchemical_oils"
+			],
+			"status": "done"
+		},
+		"annort_oil": {
+			"display_name": "Alchemical Oil, Annort",
+			"file_name": "annort.php",
+			"directory": "pathfinder_1e/items/alchemical_oils/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"misc_equip",
+				"alchemical_oils"
+			],
+			"status": "done"
+		},
+		"luminescent_oil": {
+			"display_name": "Alchemical Oil, Luminescent",
+			"file_name": "luminescent.php",
+			"directory": "pathfinder_1e/items/alchemical_oils/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"misc_equip",
+				"alchemical_oils"
+			],
+			"status": "done"
+		},
+		"force_oil": {
+			"display_name": "Alchemical Oil, Force",
+			"file_name": "force.php",
+			"directory": "pathfinder_1e/items/alchemical_oils/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"misc_equip",
+				"alchemical_oils"
+			],
+			"status": "done"
+		},
+		"corrosive_oil": {
+			"display_name": "Weapon Oil, Corrosive",
+			"file_name": "corrosive.php",
+			"directory": "pathfinder_1e/items/alchemical_oils/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"misc_equip",
+				"alchemical_oils"
+			],
+			"status": "done"
+		},
+		"flaming_oil": {
+			"display_name": "Weapon Oil, Flaming",
+			"file_name": "flaming.php",
+			"directory": "pathfinder_1e/items/alchemical_oils/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"misc_equip",
+				"alchemical_oils"
+			],
+			"status": "done"
+		},
+		"frost_oil": {
+			"display_name": "Alchemical Oil, Frost",
+			"file_name": "frost.php",
+			"directory": "pathfinder_1e/items/alchemical_oils/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"misc_equip",
+				"alchemical_oils"
+			],
+			"status": "done"
+		},
+		"shock_oil": {
+			"display_name": "Weapon Oil, Shock",
+			"file_name": "shock.php",
+			"directory": "pathfinder_1e/items/alchemical_oils/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"misc_equip",
+				"alchemical_oils"
+			],
+			"status": "done"
+		},
+		"sticky_oil": {
+			"display_name": "Weapon Oil, Sticky",
+			"file_name": "sticky.php",
+			"directory": "pathfinder_1e/items/alchemical_oils/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"misc_equip",
+				"alchemical_oils"
+			],
+			"status": "done"
+		},
+		"bitter_oil": {
+			"display_name": "Armor Oil, Bitter",
+			"file_name": "bitter_oil.php",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"misc_equip",
+				"alchemical_oils"
+			],
+			"status": "done"
+		},
+		"mirror_oil": {
+			"display_name": "Armor Oil, Mirror Polish",
+			"file_name": "mirror.php",
+			"directory": "pathfinder_1e/items/alchemical_oils/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"misc_equip",
+				"alchemical_oils"
+			],
+			"status": "done"
+		},
+		"resist_acid_oil": {
+			"display_name": "Armor Oil, Acid Resistance",
+			"file_name": "resist_acid.php",
+			"directory": "pathfinder_1e/items/alchemical_oils/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"misc_equip",
+				"alchemical_oils"
+			],
+			"status": "done"
+		},
+		"resist_cold_oil": {
+			"display_name": "Armor Oil, Cold Resistance",
+			"file_name": "resist_cold.php",
+			"directory": "pathfinder_1e/items/alchemical_oils/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"misc_equip",
+				"alchemical_oils"
+			],
+			"status": "done"
+		},
+		"resist_electricity_oil": {
+			"display_name": "Armor Oil, Electricity Resistance",
+			"file_name": "resist_electricity.php",
+			"directory": "pathfinder_1e/items/alchemical_oils/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"misc_equip",
+				"alchemical_oils"
+			],
+			"status": "done"
+		},
+		"resist_fire_oil": {
+			"display_name": "Armor Oil, Fire Resistance",
+			"file_name": "resist_fire.php",
+			"directory": "pathfinder_1e/items/alchemical_oils/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"misc_equip",
+				"alchemical_oils"
+			],
+			"status": "done"
+		},
+		"slick_oil": {
+			"display_name": "Armor Oil, Slick",
+			"file_name": "slick.php",
+			"directory": "pathfinder_1e/items/alchemical_oils/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"misc_equip",
+				"alchemical_oils"
+			],
+			"status": "done"
+		},
+		"putrid_oil": {
+			"display_name": "Armor Oil, Putrid",
+			"file_name": "putrid.php",
+			"directory": "pathfinder_1e/items/alchemical_oils/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"misc_equip",
+				"alchemical_oils"
+			],
+			"status": "done"
 		},
 		"adventuring_gear": {
 			"display_name": "Adventuring Gear",
