@@ -28,7 +28,7 @@
 				'title' => 'Construction',
 				'spaced' => true,
 				'texts' => quick_array([
-					'bb/Craft (Alchemy)/bb DC WIP'
+					'bb/Craft (Alchemy)/bb DC 28'
 				])
 			]
 		]

@@ -2516,6 +2516,19 @@
 			],
 			"status": "done"
 		},
+		"resist_energy_oil": {
+			"display_name": "Armor Oil, Energy Resistance",
+			"file_name": "resist_energy.php",
+			"directory": "pathfinder_1e/items/alchemical_oils/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"misc_equip",
+				"alchemical_oils"
+			],
+			"status": "done"
+		},
 		"slick_oil": {
 			"display_name": "Armor Oil, Slick",
 			"file_name": "slick.php",
