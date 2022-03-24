@@ -121,32 +121,6 @@
 			],
 			"status": "done"
 		},
-		"void_plate": {
-			"display_name": "Void Plate",
-			"file_name": "void_plate.php",
-			"directory": "pathfinder_1e/items/",
-			"sort_path": [
-				"pathfinder_1e",
-				"items",
-				"equipment",
-				"armor"
-			],
-			"setting": "amospia",
-			"status": "done"
-		},
-		"shade_silk_armor": {
-			"display_name": "Shade Silk Armor",
-			"file_name": "shade_silk_armor.php",
-			"directory": "pathfinder_1e/items/",
-			"sort_path": [
-				"pathfinder_1e",
-				"items",
-				"equipment",
-				"armor"
-			],
-			"setting": "amospia",
-			"status": "done"
-		},
 		"runed_chain": {
 			"display_name": "Runed Chain",
 			"file_name": "runed_chain.php",
@@ -1840,7 +1814,7 @@
 				"items",
 				"equipment"
 			],
-			"status": "done"
+			"status": "empty"
 		},
 		"weapons": {
 			"display_name": "Weapons",
@@ -3700,7 +3674,7 @@
 		},
 		"races_am": {
 			"display_name": "Races",
-			"file_name": "races.php",
+			"file_name": "races_index.php",
 			"directory": "pathfinder_1e/topics/amospia/",
 			"sort_path": [
 				"pathfinder_1e",
@@ -3718,6 +3692,126 @@
 				"topics",
 				"amospia"
 			],
+			"status": "done"
+		},
+		"void_plate": {
+			"display_name": "Void Plate",
+			"file_name": "void_plate.php",
+			"directory": "pathfinder_1e/topics/amospia/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"equipment_am",
+				"armor_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"shade_silk_armor": {
+			"display_name": "Shade Silk Armor",
+			"file_name": "shade_silk_armor.php",
+			"directory": "pathfinder_1e/topics/amospia/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"equipment_am",
+				"armor_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"void_drow": {
+			"display_name": "Void Drow",
+			"file_name": "void_drow.php",
+			"directory": "pathfinder_1e/topics/amospia/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"races_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"void_driders": {
+			"display_name": "Void Drider",
+			"file_name": "void_driders.php",
+			"directory": "pathfinder_1e/topics/amospia/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"races_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"void_drow_craftsmen": {
+			"display_name": "Void Drow Craftsmen",
+			"file_name": "void_drow_craftsmen.php",
+			"directory": "pathfinder_1e/topics/amospia/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"races_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"void_drow_nobles": {
+			"display_name": "Void Drow Nobles",
+			"file_name": "void_drow_nobles.php",
+			"directory": "pathfinder_1e/topics/amospia/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"races_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"void_drow_shadows": {
+			"display_name": "Void Drow Shadows",
+			"file_name": "void_drow_shadows.php",
+			"directory": "pathfinder_1e/topics/amospia/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"races_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"void_drow_stalkers": {
+			"display_name": "Void Drow Stalkers",
+			"file_name": "void_drow_stalkers.php",
+			"directory": "pathfinder_1e/topics/amospia/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"races_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"voidstone": {
+			"display_name": "Voidstone",
+			"file_name": "voidstone.php",
+			"directory": "pathfinder_1e/topics/amospia/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"magic_items_am",
+				"wondrous_am"
+			],
+			"setting": "amospia",
 			"status": "done"
 		}
 	}

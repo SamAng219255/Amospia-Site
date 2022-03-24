@@ -40,30 +40,17 @@
 		],
 		[
 			[
-				'Void Plate',
-				'link' => 'items/void_plate.php',
-				'14,400 gp',
-				'Heavy',
-				'+9',
-				'+7',
-				'-3',
-				'10%',
-				'30 ft.',
-				'20 ft.',
-				'10 lbs.'
-			],
-			[
-				'Shade Silk Armor',
-				'link' => 'items/shade_silk_armor.php',
-				'5,850 gp',
-				'Light',
-				'+6',
-				'+8',
-				'0',
-				'0%',
-				'30 ft.',
-				'20 ft.',
-				'4 lbs.'
+				'',
+				'link' => 'items/',
+				'',
+				'',
+				'',
+				'',
+				'',
+				'',
+				'',
+				'',
+				'' 
 			]
 		]
 	);

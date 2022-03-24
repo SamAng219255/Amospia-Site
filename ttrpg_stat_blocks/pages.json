@@ -570,7 +570,11 @@
 											"display_name": "Wondrous Items",
 											"type": "branch",
 											"nodes": [
-
+												{
+													"name": "voidstone",
+													"display_name": "Voidstone",
+													"type": "leaf"
+												}
 											]
 										}
 									]
@@ -604,10 +608,7 @@
 								{
 									"name": "races_am",
 									"display_name": "Races",
-									"type": "branch",
-									"nodes": [
-										
-									]
+									"type": "leaf"
 								},
 								{
 									"name": "spells_am",
