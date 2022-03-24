@@ -1,6 +1,6 @@
 <?php 
 	$startDir='';
-	for($i=0; $i<5; $i++) {
+	for($i=0; $i<10; $i++) {
 		if(file_exists($startDir.'pageStart.php')) {
 			require $startDir.'pageStart.php';
 			break;
@@ -24,17 +24,17 @@
 	table(
 		[
 			'Name',
+			'CR',
 			'Type',
-			'Cost',
-			'Weight'
+			'Environment'
 		],
 		[
 			[
-				'Prepared Soul Soil',
-				'link' => 'items/soul_soil.php',
-				'Alchemical Power Component',
-				'75 gp',
-				'—'
+				'',
+				'link' => 'monsters/',
+				'',
+				'',
+				'' 
 			]
 		]
 	);

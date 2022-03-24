@@ -55,24 +55,9 @@
 		],
 		[
 			[
-				'Curse of Binding',
-				'link' => 'enchants.php#block-Curse-of-Binding',
-				'+1,000 gp'
-			],
-			[
-				'Curse of Vanishing',
-				'link' => 'enchants.php#block-Curse-of-Vanishing',
-				'+8,000 gp'
-			],
-			[
-				'Mending',
-				'link' => 'enchants.php#block-Mending',
-				'+12,000 gp'
-			],
-			[
-				'Unbreaking',
-				'link' => 'enchants.php#block-Unbreaking',
-				'+3,000 gp'
+				'',
+				'link' => '',
+				''
 			]
 		],
 		true,

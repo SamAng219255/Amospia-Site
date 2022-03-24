@@ -9,9 +9,6 @@
 			$startDir='../'.$startDir;
 		}
 	}
-?>
-<title>Minecraft</title>
-<?php 
 	block(
 		'Minecraft',
 		'info',

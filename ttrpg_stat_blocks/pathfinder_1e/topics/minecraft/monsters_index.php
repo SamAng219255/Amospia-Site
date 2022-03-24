@@ -10,7 +10,6 @@
 		}
 	}
 ?>
-<title>Monsters Index</title>
 <script>
 	initialSort=true;
 	initialSortFunc=function(a,b) {

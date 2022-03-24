@@ -239,11 +239,6 @@
 							"type": "leaf"
 						},
 						{
-							"name": "amospia",
-							"display_name": "Amospia",
-							"type": "leaf"
-						},
-						{
 							"name": "redeemed_setting",
 							"display_name": "Redeemed",
 							"type": "leaf"
@@ -486,6 +481,136 @@
 								},
 								{
 									"name": "spells_mc",
+									"display_name": "Spells",
+									"type": "leaf"
+								}
+							]
+						},
+						{
+							"name": "amospia",
+							"display_name": "Amospia",
+							"type": "limb",
+							"nodes": [
+								{
+									"name": "equipment_am",
+									"display_name": "Equipment",
+									"type": "branch",
+									"nodes": [
+										{
+											"name": "weapons_am",
+											"display_name": "Weapons",
+											"type": "leaf"
+										},
+										{
+											"name": "armor_am",
+											"display_name": "Armor",
+											"type": "leaf"
+										},
+										{
+											"name": "special_materials_am",
+											"display_name": "Special Materials",
+											"type": "leaf"
+										},
+										{
+											"name": "misc_equip_am",
+											"display_name": "Miscellaneous",
+											"type": "leaf"
+										}
+									]
+								},
+								{
+									"name": "magic_items_am",
+									"display_name": "Magic Items",
+									"type": "branch",
+									"nodes": [
+										{
+											"name": "artifacts_am",
+											"display_name": "Artifacts",
+											"type": "branch",
+											"nodes": [
+												
+											]
+										},
+										{
+											"name": "magic_armor_am",
+											"display_name": "Armor",
+											"type": "branch",
+											"nodes": [
+												{
+													"name": "armor_qualities_am",
+													"display_name": "Armor Qualities",
+													"type": "leaf"
+												},
+												{
+													"name": "shield_qualities_am",
+													"display_name": "Shield Qualities",
+													"type": "leaf"
+												}
+											]
+										},
+										{
+											"name": "magic_weapons_am",
+											"display_name": "Weapons",
+											"type": "branch",
+											"nodes": [
+												{
+													"name": "melee_qualities_am",
+													"display_name": "Melee Weapon Qualities",
+													"type": "leaf"
+												},
+												{
+													"name": "ranged_qualities_am",
+													"display_name": "Ranged Weapon Qualities",
+													"type": "leaf"
+												}
+											]
+										},
+										{
+											"name": "wondrous_am",
+											"display_name": "Wondrous Items",
+											"type": "branch",
+											"nodes": [
+
+											]
+										}
+									]
+								},
+								{
+									"name": "monsters_am",
+									"display_name": "Monsters",
+									"petal_display_name": "Monsters Index",
+									"type": "flower",
+									"nodes": [
+										{
+											"name": "npcs_am",
+											"display_name": "NPCs",
+											"type": "petal"
+										},
+										{
+											"name": "templates_am",
+											"display_name": "Templates",
+											"type": "petal"
+										}
+									]
+								},
+								{
+									"name": "planes_am",
+									"display_name": "Planes",
+									"type": "branch",
+									"nodes": [
+
+									]
+								},
+								{
+									"name": "races_am",
+									"display_name": "Races",
+									"type": "branch",
+									"nodes": [
+										
+									]
+								},
+								{
+									"name": "spells_am",
 									"display_name": "Spells",
 									"type": "leaf"
 								}

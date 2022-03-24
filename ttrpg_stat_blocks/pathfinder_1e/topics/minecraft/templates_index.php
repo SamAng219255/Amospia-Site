@@ -10,7 +10,6 @@
 		}
 	}
 ?>
-<title>Templates Index</title>
 <script>
 	initialSort=true;
 	initialSortFunc=function(a,b) {

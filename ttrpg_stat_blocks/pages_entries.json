@@ -3540,6 +3540,185 @@
 				"pathfinder_1e"
 			],
 			"status": "done"
+		},
+		"amospia": {
+			"display_name": "Amospia",
+			"file_name": "amospia.php",
+			"directory": "pathfinder_1e/topics/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics"
+			],
+			"status": "wip"
+		},
+		"weapons_am": {
+			"display_name": "Weapons",
+			"file_name": "weapons_index.php",
+			"directory": "pathfinder_1e/topics/amospia/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"equipment_am"
+			],
+			"status": "empty"
+		},
+		"armor_am": {
+			"display_name": "Armor",
+			"file_name": "armor_index.php",
+			"directory": "pathfinder_1e/topics/amospia/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"equipment_am"
+			],
+			"status": "done"
+		},
+		"special_materials_am": {
+			"display_name": "Special Materials",
+			"file_name": "materials.php",
+			"directory": "pathfinder_1e/topics/amospia/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"equipment_am"
+			],
+			"status": "empty"
+		},
+		"misc_equip_am": {
+			"display_name": "Miscellaneous Equipment",
+			"file_name": "misc_index.php",
+			"directory": "pathfinder_1e/topics/amospia/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"equipment_am"
+			],
+			"status": "empty"
+		},
+		"armor_qualities_am": {
+			"display_name": "Armor Qualities",
+			"file_name": "armor_qualities.php",
+			"directory": "pathfinder_1e/topics/amospia/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"magic_items_am",
+				"magic_armor_am"
+			],
+			"status": "empty"
+		},
+		"shield_qualities_am": {
+			"display_name": "Shield Qualities",
+			"file_name": "shield_qualities.php",
+			"directory": "pathfinder_1e/topics/amospia/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"magic_items_am",
+				"magic_armor_am"
+			],
+			"status": "empty"
+		},
+		"melee_qualities_am": {
+			"display_name": "Melee Qualities",
+			"file_name": "melee_qualities.php",
+			"directory": "pathfinder_1e/topics/amospia/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"magic_items_am",
+				"magic_weapons_am"
+			],
+			"status": "empty"
+		},
+		"ranged_qualities_am": {
+			"display_name": "Ranged Qualities",
+			"file_name": "ranged_qualities.php",
+			"directory": "pathfinder_1e/topics/amospia/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"magic_items_am",
+				"magic_weapons_am"
+			],
+			"status": "empty"
+		},
+		"wondrous_am": {
+			"display_name": "Wondrous Items",
+			"file_name": "wondrous_index.php",
+			"directory": "pathfinder_1e/topics/amospia/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"magic_items_am"
+			],
+			"status": "done"
+		},
+		"monsters_am": {
+			"display_name": "Monsters Index",
+			"file_name": "monsters_index.php",
+			"directory": "pathfinder_1e/topics/amospia/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia"
+			],
+			"status": "empty"
+		},
+		"npcs_am": {
+			"display_name": "NPCs Index",
+			"file_name": "npcs_index.php",
+			"directory": "pathfinder_1e/topics/amospia/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"monsters_am"
+			],
+			"status": "empty"
+		},
+		"templates_am": {
+			"display_name": "Templates Index",
+			"file_name": "templates_index.php",
+			"directory": "pathfinder_1e/topics/amospia/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"monsters_am"
+			],
+			"status": "empty"
+		},
+		"races_am": {
+			"display_name": "Races",
+			"file_name": "races.php",
+			"directory": "pathfinder_1e/topics/amospia/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia"
+			],
+			"status": "done"
+		},
+		"spells_am": {
+			"display_name": "Spells",
+			"file_name": "spells.php",
+			"directory": "pathfinder_1e/topics/amospia/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia"
+			],
+			"status": "done"
 		}
 	}
 }

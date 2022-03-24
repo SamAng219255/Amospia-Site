@@ -10,7 +10,6 @@
 		}
 	}
 ?>
-<title>Spells</title>
 <script>
 	initialSort=true;
 	initialSortFunc=function(a,b) {

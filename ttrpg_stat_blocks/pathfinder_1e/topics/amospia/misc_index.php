@@ -30,11 +30,11 @@
 		],
 		[
 			[
-				'Prepared Soul Soil',
-				'link' => 'items/soul_soil.php',
-				'Alchemical Power Component',
-				'75 gp',
-				'—'
+				'',
+				'link' => 'items/',
+				'',
+				'',
+				'' 
 			]
 		]
 	);

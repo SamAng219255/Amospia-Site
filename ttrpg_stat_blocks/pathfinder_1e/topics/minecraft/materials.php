@@ -1,6 +1,6 @@
 <?php 
 	$startDir='';
-	for($i=0; $i<5; $i++) {
+	for($i=0; $i<20; $i++) {
 		if(file_exists($startDir.'pageStart.php')) {
 			require $startDir.'pageStart.php';
 			break;
@@ -9,9 +9,6 @@
 			$startDir='../'.$startDir;
 		}
 	}
-?>
-<title>Special Materials</title>
-<?php
 	block(
 		'Special Materials',
 		'intro',

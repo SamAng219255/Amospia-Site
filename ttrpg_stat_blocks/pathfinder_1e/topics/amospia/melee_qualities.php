@@ -26,7 +26,7 @@
 		if(matchA!=null) {
 			if(matchA[1]!=undefined) {
 				const x=parseInt(matchA[1]);
-				valA=x*x*1000;
+				valA=x*x*2000;
 			}
 			else {
 				valA=parseInt(matchA[2].replaceAll(',',''));
@@ -36,7 +36,7 @@
 		if(matchB!=null) {
 			if(matchB[1]!=undefined) {
 				const x=parseInt(matchB[1]);
-				valB=x*x*1000;
+				valB=x*x*2000;
 			}
 			else {
 				valB=parseInt(matchB[2].replaceAll(',',''));
@@ -55,24 +55,9 @@
 		],
 		[
 			[
-				'Curse of Binding',
-				'link' => 'enchants.php#block-Curse-of-Binding',
-				'+1,000 gp'
-			],
-			[
-				'Curse of Vanishing',
-				'link' => 'enchants.php#block-Curse-of-Vanishing',
-				'+8,000 gp'
-			],
-			[
-				'Mending',
-				'link' => 'enchants.php#block-Mending',
-				'+12,000 gp'
-			],
-			[
-				'Unbreaking',
-				'link' => 'enchants.php#block-Unbreaking',
-				'+3,000 gp'
+				'',
+				'link' => '',
+				's'
 			]
 		],
 		true,
