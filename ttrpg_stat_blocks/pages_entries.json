@@ -3813,6 +3813,110 @@
 			],
 			"setting": "amospia",
 			"status": "done"
+		},
+		"narmen": {
+			"display_name": "Narmen",
+			"file_name": "narmen.php",
+			"directory": "pathfinder_1e/topics/amospia/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"races_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"narmen_preflood": {
+			"display_name": "Pre-Flood Narmen",
+			"file_name": "narmen_preflood.php",
+			"directory": "pathfinder_1e/topics/amospia/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"races_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"narmen_nobles": {
+			"display_name": "Narmen Nobles",
+			"file_name": "narmen_nobles.php",
+			"directory": "pathfinder_1e/topics/amospia/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"races_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"narmen_darkened": {
+			"display_name": "Darkened Narmen",
+			"file_name": "narmen_darkened.php",
+			"directory": "pathfinder_1e/topics/amospia/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"races_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"narmen_demonic": {
+			"display_name": "Demonic Narmen",
+			"file_name": "narmen_demonic.php",
+			"directory": "pathfinder_1e/topics/amospia/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"races_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"narmen_enlightened": {
+			"display_name": "Enlightened Narmen",
+			"file_name": "narmen_enlightened.php",
+			"directory": "pathfinder_1e/topics/amospia/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"races_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"narmen_saints": {
+			"display_name": "Narmen Saints",
+			"file_name": "narmen_saints.php",
+			"directory": "pathfinder_1e/topics/amospia/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"races_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"vandalusians": {
+			"display_name": "Vandalusian Knom",
+			"file_name": "vandalusians.php",
+			"directory": "pathfinder_1e/topics/amospia/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"races_am"
+			],
+			"setting": "amospia",
+			"status": "done"
 		}
 	}
 }
