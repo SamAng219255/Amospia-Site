@@ -3531,6 +3531,15 @@
 				"wondrous"
 			],
 			"status": "done"
+		},
+		"races": {
+			"display_name": "Races",
+			"file_name": "races_index.php",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e"
+			],
+			"status": "done"
 		}
 	}
 }

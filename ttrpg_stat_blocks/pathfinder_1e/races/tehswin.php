@@ -3,7 +3,7 @@
 <?php
 	raceBlockAuto(
 		"Tehswin",
-		14,
+		18,
 		"While far from common it is not unheard of in some circles for proteans to have relations with mortals some of which result in children called Tehswin. Tehswin are often agents of chaos like their protean parents and their forms are quite malleable allowing them to take a wide variety of forms.",
 		"Tehswin have a humanoid form that looks like their mortal parent's race with various uncanny changes but they often transform into various forms on a whim.",
 		"Tehswin generally don't have their own society, rather they often sow chaos among those of other mortals. Tehswin will often adopt warped versions of the customs and mannerisms of their mortal parents.",
@@ -23,8 +23,7 @@
 			"Normal Speed: Tehswin have a base speed of 30 feet.",
 			"Darkvision: Tehswin can see in the dark up to 60 feet.",
 			"Skill Bonus: Tehswin often find themself having to lie to pull off their \"plans\" and are therefore quite familiar with it. Tehswin receive a +2 racial bonus to bluff.",
-			"Malleable Form: Tehswin gain the following spell-like ability (the caster level is equal to the user’s character level):",
-			"/mm/1/day—ii/polymorph/ii",
+			"Malleable Form: Tehswin can cast ii/alter self/ii as a spell-like ability at-will except that their ability scores do not change. Tehswin can also cast ii/polymorph/ii on themself once per day as a spell-like ability.",
 			"Entropic Resistances: Tehswin have acid resistance 5, electricity resistance 5, and fire resistance 5.",
 			"Languages: Tehswin begin play speaking Common and Protean. Tehswin with high Intelligence scores can choose any languages they want (except secret languages, such as Druidic)."
 		],
