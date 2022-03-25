@@ -12,7 +12,7 @@
 	raceBlockAuto(
 		"Pre-Flood Narmen",// Name
 		"100; Pre-Flood Narmen are not recommended for player characters.",// Race Points
-		"",// Desc
+		"Narmen were tall with super human speed strength and grace that made the ultimate warriors against the forces of the void. Additionally they were fair skinned with glowing runes that covered their skin and prismatic hair that shimmered all different pastel tones. Standing upright and regal, defiant against their adversaries. The runes glowed a different color on each individual and changed based on strong emotions. These runes acted as a conduit for the the Narmen’s innate magical powers that were tied to their very soul. Using these runes they could gain access to spell casting similar to that of a trained cleric.",// Desc
 		"",// Physical Desc
 		"",// Society
 		"",// Relations

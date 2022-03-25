@@ -12,11 +12,72 @@
 	raceBlockAuto(
 		"Narman Nobles",// Name
 		41,// Race Points
-		"",// Desc
-		"",// Physical Desc
-		"",// Society
-		"",// Relations
-		"",// Alignment and Religion
+		"Through a combination of natural selection and arcane enhancements, those descendant from the upper echelons of Narmen society generally possess a greater affinity for the arcane arts.
+		bb/Table: Random Starting Ages/bb".sTable(
+			[
+				'Adulthood',
+				'Intuitive',
+				'Self-Taught',
+				'Trained'
+			],
+			[
+				[
+					'15 years',
+					'+1d4 years<br>(16 - 19 years)',
+					'+1d6 years<br>(16 - 21 years)',
+					'+2d6 years<br>(17 - 27 years)',
+				]
+			],
+			true,
+			false
+		).'bb/Table: Aging/bb'.sTable(
+			[
+				'Middle Age',
+				'Old',
+				'Venerable',
+				'Maximum Age'
+			],
+			[
+				[
+					'35 years',
+					'53 years',
+					'70 years',
+					'70 + 3d20 years',
+				]
+			],
+			true,
+			false
+		).'bb/Table: Random Height and Weight/bb'.sTable(
+			[
+				'Gender',
+				'Base Height',
+				'Height Modifier',
+				'Base Weight',
+				'Weight Modifier'
+			],
+			[
+				[
+					'Male',
+					'5\' 11"',
+					'+2d12 in.<br>(6\' 1" - 7\' 11")',
+					'100 lbs.',
+					'+(2d12x3 lbs.)<br>(106 - 172 lbs.)'
+				],
+				[
+					'Female',
+					'5\' 5"',
+					'+2d12 in.<br>(5\' 7" - 7\' 5")',
+					'90 lbs.',
+					'+(2d12x3 lbs.)<br>(96 - 162 lbs.)'
+				]
+			],
+			true,
+			false
+		),// Desc
+		"Taller than humans, elves, or orcs, Narmen stand at an average of 7 feet tall with a build similar to an elf who has spent too much time sitting at their desk. Narmen have coal black skin with a network of grey scars that vaguely resemble arcane runes, a remnant of their ancient powers. Due to their arcane modification, Narmen have lack all hair and possess a single long tusk jutting straight out of their mouth which they are quite familiar with not running into things, much to the perplexing of other races. Narmen nobles are visually distinguished by having longer, pointier ears, narrower eyes, more delicate fingers, and an even greater air of pomp. Nobles also claim that their scars are a lighter coloration than those of most.",// Physical Desc
+		"Most narmen are citizens of the First Amospian Empire which has divided into a number of sects and created colonies across the world. Narmen society is organized into a strict hierarchy and narmen generally follow their higher ups unquestioningly and expect those below them to do the same.",// Society
+		"Narmen generally see themselves as superior to other races though they are not cruel only patronizing. Narmen wish to uplift the world though they generally believe that the other races will never reach them. The other races find this behavior something of a nuissance but are not afraid to take advantage of their aid as the Narmen do possess knowledge that has been collected over their millenia of research that can be of significant use.",// Relations
+		"Narmen are gnerally lawful and good and follow Zovilla but a growing number reject her teachings though most are still lawful.",// Alignment and Religion
 		"",// Adventurers
 		"WIP",// Male Names
 		"WIP",// Female Names

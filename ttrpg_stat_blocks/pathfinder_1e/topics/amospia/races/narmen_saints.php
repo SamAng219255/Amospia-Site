@@ -12,11 +12,72 @@
 	raceBlockAuto(
 		"Narmen Saints",// Name
 		41,// Race Points
-		"",// Desc
-		"",// Physical Desc
-		"",// Society
-		"",// Relations
-		"",// Alignment and Religion
+		"While it can be rarely passed on genetically, narmen saints are those who have earned the right to undergo the Rite of Ascension and receover a larger portion of their ancient glory.
+		bb/Table: Random Starting Ages/bb".sTable(
+			[
+				'Adulthood',
+				'Intuitive',
+				'Self-Taught',
+				'Trained'
+			],
+			[
+				[
+					'15 years',
+					'+1d6 years<br>(16 - 21 years)',
+					'+2d6 years<br>(17 - 27 years)',
+					'+3d6 years<br>(18 - 33 years)',
+				]
+			],
+			true,
+			false
+		).'bb/Table: Aging/bb'.sTable(
+			[
+				'Middle Age',
+				'Old',
+				'Venerable',
+				'Maximum Age'
+			],
+			[
+				[
+					'70 years',
+					'186 years',
+					'700 years',
+					'700 + 8d100 years',
+				]
+			],
+			true,
+			false
+		).'bb/Table: Random Height and Weight/bb'.sTable(
+			[
+				'Gender',
+				'Base Height',
+				'Height Modifier',
+				'Base Weight',
+				'Weight Modifier'
+			],
+			[
+				[
+					'Male',
+					'5\' 11"',
+					'+2d12 in.<br>(6\' 1" - 7\' 11")',
+					'100 lbs.',
+					'+(2d12x3 lbs.)<br>(106 - 172 lbs.)'
+				],
+				[
+					'Female',
+					'5\' 5"',
+					'+2d12 in.<br>(5\' 7" - 7\' 5")',
+					'90 lbs.',
+					'+(2d12x3 lbs.)<br>(96 - 162 lbs.)'
+				]
+			],
+			true,
+			false
+		),// Desc
+		"Taller than humans, elves, or orcs, narmen saints stand at an average of 7 feet tall with a build similar to a muscular elf. Narmen saints have, almost white, pale skin with golden, brightly glowing runes across their skin. Narmen saints have regrown their hair and possess long, flowing, golden locks. The tusk, that was zcquired by the narmen as a side-effect of their arcane adaptation to the depth of the sea, is dramatically shorter on an narmen saints than on most, being only about a quater of the length, or about 3 inches.",// Physical Desc
+		"Most narmen saints are members of the Return sect of the First Amospian Empire. The Return sect functions as a theocracy with Zovilla's highest priests at its head. Every member knows their place and completes their assigned duties without hesitation.",// Society
+		"Narmen saints are often looked up to by some of the other narmen generally for their devoation and priviledge. Healers often travel to grand cathedral-fortress cities of the narmen saints to train and hone their art. Narmen saints, in turn, often travel outside of their grand cities to visit the cities of other races and provide aid, generally in the form of healing or the slaying of demons, as well as to spread the word of Zovilla. Other races tend to find these wandering priests a bit stuck up though quite helpful.",// Relations
+		"Narmen saints are almost exclusively good aligned and the large majority are lawful. Almost all narmen saints pay respects in some form or another to the goddess Zovilla.",// Alignment and Religion
 		"",// Adventurers
 		"WIP",// Male Names
 		"WIP",// Female Names

@@ -12,11 +12,57 @@
 	raceBlockAuto(
 		"Demonic Narmen",// Name
 		37,// Race Points
-		"",// Desc
-		"",// Physical Desc
-		"",// Society
-		"",// Relations
-		"",// Alignment and Religion
+		"While it can be rarely passed on genetically, demonic narmen are those who have undergone the so-called Rite of Conversion and become more demon than mortal.
+		bb/Table: Random Starting Ages/bb".sTable(
+			[
+				'Adulthood',
+				'Intuitive',
+				'Self-Taught',
+				'Trained'
+			],
+			[
+				[
+					'15 years',
+					'+1d6 years<br>(16 - 21 years)',
+					'+2d6 years<br>(17 - 27 years)',
+					'+3d6 years<br>(18 - 33 years)',
+				]
+			],
+			true,
+			false
+		).'Demonic narmen cease aging the moment they go through the Rite of Conversion though if any of their children are born as demonic narmen they age naturally until they reach 15 at which point they can choose at any time to cease aging. If they do not choose to cease aging by the time they reach 35 they stop aging at 35.
+		bb/Table: Random Height and Weight/bb'.sTable(
+			[
+				'Gender',
+				'Base Height',
+				'Height Modifier',
+				'Base Weight',
+				'Weight Modifier'
+			],
+			[
+				[
+					'Male',
+					'5\' 11"',
+					'+2d12 in.<br>(6\' 1" - 7\' 11")',
+					'100 lbs.',
+					'+(2d12x3 lbs.)<br>(106 - 172 lbs.)'
+				],
+				[
+					'Female',
+					'5\' 5"',
+					'+2d12 in.<br>(5\' 7" - 7\' 5")',
+					'90 lbs.',
+					'+(2d12x3 lbs.)<br>(96 - 162 lbs.)'
+				]
+			],
+			true,
+			false
+		),// Desc
+		"Taller than humans, elves, or orcs, Narmen stand at an average of 7 feet tall with a build similar to an elf who has spent too much time sitting at their desk. Narmen have coal black skin with a network of scars that vaguely resemble arcane runes, a remnant of their ancient powers. Due to their arcane modification, Narmen have lack all hair and possess a single long tusk jutting straight out of their mouth which they are quite familiar with not running into things, much to the perplexing of other races.
+		The runes on a a demonic narmen's skin, that are only scars on their brethren, glow with a purple light that is brighter than their darkened brethren. Their bodies are fit and nimble. A third eye has appeared on their foreheads that can see magical energies and allows access to certain powerful scrying rituals. Demonic narmen also possess a pair of large leathery wings sprouting from their back.",// Physical Desc
+		"Most demonic narmen are members of the New World sect of the First Amospian Empire. The New World sect retains the rigid hierarchy of the other sects of narmen though while in other sects the hierarchy is formed from legal precedent and the memebers follow their betters out of loyalty, narmen of the New World sect obey out of fear, with the stronger forcing the weaker to obey.",// Society
+		"Demonic narmen are feared and/or hated by most others though the demonic narmen pay them little heed. Content to work amongst themselves in growing their powers.",// Relations
+		"Demonic narmen tend toward being evil and chaotic and often take joy in their own cruelty. Most demonic narmen pay at least some respect to N'morahlw'nafh, the void god who granted them this form.",// Alignment and Religion
 		"",// Adventurers
 		"WIP",// Male Names
 		"WIP",// Female Names

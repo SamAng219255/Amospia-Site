@@ -40,7 +40,7 @@
 	<dd>Darkened narmen are those descendant from the orginal New World sect of Narmens who, following the end of their long isolation, determined to outright reject Zovilla and delve into the forbidden magics. These individuals found a patron, named N'morahlw'nafh, in their pursuit who granted them demonic powers.</dd>
 	<dt><a href="races/narmen_enlightened.php">Narmen, Enlightened</a> (23 RP)</dt>
 	<dd>+2 Str, +2 Cha, -2 Int</dd>
-	<dd>Darkened narmen are those descendant from the orginal Return sect of Narmens who, following the end of their long isolation, determined to return to their goddess Zovilla and once again earn her blessings. These individuals have been blessed for their persistence and have regained the smallest portion of their ancient glory.</dd>
+	<dd>Enlightened narmen are those descendant from the orginal Return sect of Narmens who, following the end of their long isolation, determined to return to their goddess Zovilla and once again earn her blessings. These individuals have been blessed for their persistence and have regained the smallest portion of their ancient glory.</dd>
 	<dt><a href="races/void_drow_stalkers.php">Void Drow Stalkers</a> (26 RP)</dt>
 	<dd>+2 Dex, +2 Int, -2 Con </dd>
 	<dd>Void Drow Stalkers are one of the castes of Void Drow who are skilled at stealth.</dd>
