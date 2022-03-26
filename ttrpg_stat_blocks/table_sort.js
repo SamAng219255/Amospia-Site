@@ -20,6 +20,8 @@ function comp(a,b) {
 		numA=0;
 	else if(numA==='L')
 		numA=0.1;
+	else if(numA.startsWith('0x'))
+		numA=parseInt(numA);
 	else if(!nextDiceMatch.done) {
 		numA=0;
 		do {
@@ -36,6 +38,8 @@ function comp(a,b) {
 		numB=0;
 	else if(numB==='L')
 		numB=0.1;
+	else if(numB.startsWith('0x'))
+		numB=parseInt(numB);
 	else if(!nextDiceMatch.done) {
 		numB=0;
 		do {

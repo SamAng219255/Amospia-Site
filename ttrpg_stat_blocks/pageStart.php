@@ -162,7 +162,8 @@
 					$tree_index=0;
 					$tree_count=count($tree_path[$depth]);
 					$next_node=[];
-					$get_path=explode(',', $_GET['path']);
+					if(isset($_GET['path']))
+						$get_path=explode(',', $_GET['path']);
 					$final_node=[];
 					$starting_flower=false;
 					$flower_node=[];
@@ -187,7 +188,7 @@
 							}
 							else
 								echo ' | ';
-							$match=($ptr['name']==(isset($_GET['path'])?$get_path[$depth]:(isset($pages['entries'][$pageId]) && $depth==count($pages['entries'][$pageId]['sort_path']) && $ptr['type']=='limb'?$pageId:$pages['entries'][$pageId]['sort_path'][$depth])));
+							$match=($ptr['name']==(isset($_GET['path'])?$get_path[$depth]:(isset($pages['entries'][$pageId])?($depth==count($pages['entries'][$pageId]['sort_path']) && $ptr['type']=='limb'?$pageId:$pages['entries'][$pageId]['sort_path'][$depth]):'')));
 							if($match) {
 								if(isset($ptr['nodes']))
 									array_push($tree_path, $ptr['nodes']);
@@ -204,7 +205,7 @@
 									$search_path.=$node['name'].',';
 								}
 								$search_path.=$ptr['name'];
-								echo '<a href="'.$pages['origin'].'?path='.$search_path.'" class="top-label'.($match || $ptr['name'] == $pageId ? ' selected' : '').' status-'.$pages['entries'][$ptr['name']]['status'].'">'.$ptr['display_name'].'</a>';
+								echo '<a href="'.$pages['origin'].'?path='.$search_path.'" class="top-label'.($match || $ptr['name'] == $pageId ? ' selected' : '').(isset($pages['entries'][$ptr['name']])?' status-'.$pages['entries'][$ptr['name']]['status']:'').'">'.$ptr['display_name'].'</a>';
 							}
 							else {
 								$entry=$pages['entries'][$ptr['name']];
@@ -225,7 +226,7 @@
 						}
 						$sanity--;
 					}
-					if($final_node['type']=='flower') {
+					if(isset($final_node['type']) && $final_node['type']=='flower') {
 						echo '<p class="top-row">';
 						if(isset($final_node['petal_display_name'])) {
 							$entry=$pages['entries'][$final_node['name']];

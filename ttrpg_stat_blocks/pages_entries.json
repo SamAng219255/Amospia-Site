@@ -3599,6 +3599,19 @@
 			],
 			"status": "empty"
 		},
+		"specific_armors_am": {
+			"display_name": "Specific Magic Armor",
+			"file_name": "specific_armors.php",
+			"directory": "pathfinder_1e/topics/amospia/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"magic_items_am",
+				"magic_armor_am"
+			],
+			"status": "done"
+		},
 		"melee_qualities_am": {
 			"display_name": "Melee Qualities",
 			"file_name": "melee_qualities.php",
@@ -3624,6 +3637,19 @@
 				"magic_weapons_am"
 			],
 			"status": "empty"
+		},
+		"specific_weapons_am": {
+			"display_name": "Specific Magic Weapons",
+			"file_name": "specific_weapons.php",
+			"directory": "pathfinder_1e/topics/amospia/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"magic_items_am",
+				"magic_weapons_am"
+			],
+			"status": "done"
 		},
 		"wondrous_am": {
 			"display_name": "Wondrous Items",
@@ -3914,6 +3940,158 @@
 				"topics",
 				"amospia",
 				"races_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"alidens": {
+			"display_name": "Alidens",
+			"file_name": "alidens.php",
+			"directory": "pathfinder_1e/topics/amospia/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"magic_items_am",
+				"magic_weapons_am",
+				"specific_weapons_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"aliden_blade": {
+			"display_name": "Aliden Blade",
+			"file_name": "aliden_blade.php",
+			"directory": "pathfinder_1e/topics/amospia/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"magic_items_am",
+				"magic_weapons_am",
+				"specific_weapons_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"lightstone": {
+			"display_name": "Lightstone",
+			"file_name": "lightstone.php",
+			"directory": "pathfinder_1e/topics/amospia/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"magic_items_am",
+				"wondrous_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"raise_stone": {
+			"display_name": "Pettep's Raise Stone",
+			"file_name": "raise_stone.php",
+			"directory": "pathfinder_1e/topics/amospia/spells/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"spells_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"return_totembadge": {
+			"display_name": "Return Badge/Totem",
+			"file_name": "return_totembadge.php",
+			"directory": "pathfinder_1e/topics/amospia/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"magic_items_am",
+				"wondrous_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"spellbound_tridents": {
+			"display_name": "Spellbound Tridents",
+			"file_name": "spellbound_tridents.php",
+			"directory": "pathfinder_1e/topics/amospia/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"magic_items_am",
+				"wondrous_am"
+			],
+			"setting": "amospia",
+			"status": "wip"
+		},
+		"magic_architecture": {
+			"display_name": "Magic Architecture",
+			"file_name": "magic_architecture.php",
+			"directory": "pathfinder_1e/topics/amospia/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"magic_items_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"narmen_currency": {
+			"display_name": "Narman Currency",
+			"file_name": "narmen_currency.php",
+			"directory": "pathfinder_1e/topics/amospia/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"brilliant_material_stone": {
+			"display_name": "Brilliant Material Stone",
+			"file_name": "brilliant_material_stone.php",
+			"directory": "pathfinder_1e/topics/amospia/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"magic_items_am",
+				"wondrous_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"construction_node": {
+			"display_name": "Construction Node",
+			"file_name": "construction_node.php",
+			"directory": "pathfinder_1e/topics/amospia/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"magic_items_am",
+				"magic_architecture"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"construction_node_auto": {
+			"display_name": "Automated Construction Node",
+			"file_name": "construction_node_auto.php",
+			"directory": "pathfinder_1e/topics/amospia/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"magic_items_am",
+				"magic_architecture"
 			],
 			"setting": "amospia",
 			"status": "done"

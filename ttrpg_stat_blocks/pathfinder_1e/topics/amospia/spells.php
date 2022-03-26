@@ -33,12 +33,20 @@
 		],
 		[
 			[
-				'',
-				'link' => 'spells/',
-				'',
-				'',
-				'',
-				''
+				'Pettep\'s Raise Stone',
+				'link' => 'spells/raise_stone.php',
+				'0',
+				'Transmutation',
+				'adept, arcanist, cleric, druid, magus, occultist, oracle, psychic, sorcerer, wizard',
+				'Raises an area of stone into a structure.'
+			],
+			[
+				'Pettep\'s Raise Stone',
+				'link' => 'spells/raise_stone.php',
+				'1',
+				'Transmutation',
+				'antipaladin, paladin',
+				'Raises an area of stone into a structure.'
 			]
 		]
 	);

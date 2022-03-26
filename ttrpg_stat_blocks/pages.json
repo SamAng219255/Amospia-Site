@@ -545,8 +545,23 @@
 													"name": "shield_qualities_am",
 													"display_name": "Shield Qualities",
 													"type": "leaf"
+												},
+												{
+													"name": "specific_armors_am",
+													"display_name": "Specific Magic Armor",
+													"type": "leaf"
 												}
 											]
+										},
+										{
+											"name": "magic_architecture",
+											"display_name": "Magic Architecture",
+											"type": "leaf"
+										},
+										{
+											"name": "spellbound_tridents",
+											"display_name": "Spellbound Tridents",
+											"type": "leaf"
 										},
 										{
 											"name": "magic_weapons_am",
@@ -562,20 +577,18 @@
 													"name": "ranged_qualities_am",
 													"display_name": "Ranged Weapon Qualities",
 													"type": "leaf"
+												},
+												{
+													"name": "specific_weapons_am",
+													"display_name": "Specific Magic Weapons",
+													"type": "leaf"
 												}
 											]
 										},
 										{
 											"name": "wondrous_am",
 											"display_name": "Wondrous Items",
-											"type": "branch",
-											"nodes": [
-												{
-													"name": "voidstone",
-													"display_name": "Voidstone",
-													"type": "leaf"
-												}
-											]
+											"type": "leaf"
 										}
 									]
 								},

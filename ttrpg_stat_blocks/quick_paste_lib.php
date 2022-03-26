@@ -174,7 +174,7 @@
 		echo '<div class="block-title">'.$name.'<a href="#" class="goto-top">Back to Top</a></div>';
 		$textCount=count($texts);
 		for($i=0; $i<$textCount; $i++) {
-			echo '<p'.($spaced ? ' class="spaced"' : '').'>'.$texts[$i].'</p>';
+			echo '<div class="p'.($spaced ? ' spaced' : '').'">'.$texts[$i].'</div>';
 		}
 		$sectionCount=count($sections);
 		for($i=0; $i<$sectionCount; $i++) {
@@ -182,7 +182,7 @@
 			echo '<div class="block-section-title">'.$sections[$i]['title'].'</div>';
 			$sectionTextCount=count($sections[$i]['texts']);
 			for($j=0; $j<$sectionTextCount; $j++) {
-				echo '<p'.($sections[$i]['spaced'] ? ' class="spaced"' : '').'>'.$sections[$i]['texts'][$j].'</p>';
+				echo '<div class="p'.($sections[$i]['spaced'] ? ' spaced' : '').'">'.$sections[$i]['texts'][$j].'</div>';
 			}
 			echo '</div>';
 		}
@@ -214,7 +214,7 @@
 			if($ind>0)
 				echo "<hr>";
 		 	foreach ($segment as $text) {
-				echo '<p'.($spaced ? ' class="spaced"' : '').'>'.$text.'</p>';
+				echo '<div class="p'.($spaced ? ' spaced' : '').'">'.$text.'</div>';
 			}
 		}
 		$sectionCount=count($sections);
@@ -243,7 +243,7 @@
 			}
 			$sectionTextCount=count($sections[$i]['texts']);
 			foreach ($sections[$i]['texts'] as $text) {
-				echo '<p'.($sections[$i]['spaced'] ? ' class="spaced"' : '').'>'.quick_format($text).'</p>';
+				echo '<div class="p'.($sections[$i]['spaced'] ? ' spaced' : '').'">'.quick_format($text).'</div>';
 			}
 			echo '</div>';
 		}
@@ -254,7 +254,7 @@
 		echo '<div class="block-title">'.$name.'<a href="#" class="goto-top">Back to Top</a></div>';
 		$textCount=count($texts);
 		for($i=0; $i<$textCount; $i++) {
-			echo '<p'.($spaced ? ' class="spaced"' : '').'>'.$texts[$i].'</p>';
+			echo '<div class="p'.($spaced ? ' spaced' : '').'">'.$texts[$i].'</div>';
 		}
 		$sectionCount=count($sections);
 		for($i=0; $i<$sectionCount; $i++) {
@@ -262,7 +262,7 @@
 			echo '<div class="block-section-title"'.($anchorSections?' id="section-'.str_replace(' ', '-', $sections[$i]['title']).'"':'').'>'.$sections[$i]['title'].'</div>';
 			$sectionTextCount=count($sections[$i]['texts']);
 			for($j=0; $j<$sectionTextCount; $j++) {
-				echo '<p'.($sections[$i]['spaced'] ? ' class="spaced"' : '').'>'.$sections[$i]['texts'][$j].'</p>';
+				echo '<div class="p'.($sections[$i]['spaced'] ? ' spaced' : '').'">'.$sections[$i]['texts'][$j].'</div>';
 			}
 			echo '</div>';
 		}
@@ -356,6 +356,57 @@
 			$slot,
 			in_array($price,$dashes)?'—':(is_string($price)?$price:number_format($price)." gp"),
 			in_array($weight,$dashes)?'—':(is_string($weight)?$weight:number_format($weight).($weight==1 ? " lb." : " lbs.")),
+			quick_array($description),
+			$isArtifact ? false : (is_array($extra) ? $extra : explode("\n", $extra)),
+			$isArtifact ? (is_array($extra) ? $extra : explode("\n", $extra)) : false
+		);
+	}
+	function magicBuildingBlock($name, $aura, $cl, $price, $description, $construction, $destruction) {
+		$sections=[
+			[
+				"title" => "Description",
+				"spaced" => true,
+				"texts" => quick_format($description)
+			]
+		];
+		if($construction) {
+			array_push($sections, [
+				"title" => "Construction",
+				"spaced" => false,
+				"texts" => quick_format($construction)
+			]);
+		}
+		if($destruction) {
+			array_push($sections, [
+				"title" => "Destruction",
+				"spaced" => false,
+				"texts" => quick_format($destruction)
+			]);
+		}
+		$topInfo=["<b>Aura</b> {$aura}; <b>CL</b> {$cl}"];
+		if($price!==false)
+			array_push($topInfo, "<b>Price</b> {$price}");
+		block($name, 'item', $topInfo, false, $sections);
+	}
+	function magicBuildingBlockAuto($name, $cl, $price, $description, $isArtifact, $extra) {
+		global $dashes;
+		$priceStr='—';
+		if(!in_array($price,$dashes)) {
+			if(is_string($price)) {
+				$priceStr=$price;
+			}
+			elseif(isset($price['string'])) {
+				$priceStr=$price['string'];
+			}
+			else {
+				$priceStr=narmenPriceToTableRef($price);
+			}
+		}
+		magicBuildingBlock(
+			$name,
+			(is_string($cl)?'Universal':($cl<6 ? "Faint" : ($cl<12 ? "Moderate" : ($cl<21 ? "Strong" : "Overwhelming"))).' Universal'),
+			in_array($cl,$dashes)?'—':(is_string($cl)?$cl:$cl.ordinalSuffix($cl)),
+			$priceStr,
 			quick_array($description),
 			$isArtifact ? false : (is_array($extra) ? $extra : explode("\n", $extra)),
 			$isArtifact ? (is_array($extra) ? $extra : explode("\n", $extra)) : false
@@ -1635,7 +1686,7 @@
 			$varnts
 		);
 	}
-	function sTable($headers, $rows, $horizontal=true, $expand=true, $allowSort=true) {
+	function sTable($headers, $rows, $horizontal=true, $expand=true, $allowSort=true, $inline=true) {
 		$classes='';
 		if($expand)
 			$classes.=($classes===''?'':' ').'expand';
@@ -1643,6 +1694,8 @@
 			$classes.=($classes===''?'':' ').'vertical';
 		if(!$allowSort)
 			$classes.=($classes===''?'':' ').'no-sort';
+		if($inline)
+			$classes.=($classes===''?'':' ').'inline';
 		$str='<table'.($classes!==''?' class="'.$classes.'"':'').'>';
 		if($horizontal) {
 			$headerCount=count($headers);
@@ -1692,8 +1745,8 @@
 		$str .= '</table>';
 		return $str;
 	}
-	function table($headers, $rows, $horizontal=true, $expand=true, $allowSort=true) {
-		echo sTable($headers, $rows, $horizontal, $expand, $allowSort);
+	function table($headers, $rows, $horizontal=true, $expand=true, $allowSort=true, $inline=true) {
+		echo sTable($headers, $rows, $horizontal, $expand, $allowSort, $inline);
 	}
 	function contents($items, $custom_title=false, $primary=true) {
 		echo '<div class="to-contents"'.($primary ? ' id="top"' : '').'>';
@@ -1744,5 +1797,154 @@
 			$sanity--;
 		}
 		echo '</ul></div>';
+	}
+	function prices_IDec2I(&$price) {
+		$price['I']='0x'.strtoupper(dechex($price['IDec']));
+	}
+	function prices_I2IDec(&$price) {
+		if(!str_starts_with($price['I'],'0x'))
+			$price['I']='0x'.$price['I'];
+		$price['IDec']=hexdec(substr($price['I'],2));
+	}
+	function prices_IDec2NBPDec(&$price) {
+		$price['NBPDec']=round($price['IDec']/256);
+	}
+	function prices_NBPDec2IDec(&$price) {
+		$price['IDec']=$price['NBPDec']*256;
+	}
+	function prices_NBP2NBPDec(&$price) {
+		if(!str_starts_with($price['NBP'],'0x'))
+			$price['NBP']='0x'.$price['NBP'];
+		$price['NBPDec']=hexdec(substr($price['NBP'],2));
+	}
+	function prices_gp2I(&$price) {
+		$price['IDec']=round($price['gp']*0.96)/16;
+		$price['I']='0x'.strtoupper(dechex($price['IDec']));
+	}
+	function prices_IDec2gp(&$price) {
+		$price['gp']=round($price['IDec']*16/0.96);
+	}
+	function prices_BP2gp(&$price) {
+		$price['gp']=$price['BP']*2000;
+	}
+	function prices_gp2BP(&$price) {
+		$price['BP']=round($price['gp']/2000);
+	}
+	function prices_NBPDec2NBP(&$price) {
+		$price['NBP']='0x'.strtoupper(dechex($price['NBPDec']));
+	}
+	function fillOutNarmenPrices(&$price) {
+		if(!isset($price['I'])) {
+			if(isset($price['IDec'])) {
+				prices_IDec2I($price);
+			}
+			elseif(isset($price['NBPDec'])) {
+				prices_NBPDec2IDec($price);
+				prices_IDec2I($price);
+			}
+			elseif(isset($price['NBP'])) {
+				prices_NBP2NBPDec($price);
+				prices_NBPDec2IDec($price);
+				prices_IDec2I($price);
+			}
+			elseif(isset($price['gp'])) {
+				prices_gp2I($price);
+			}
+			elseif(isset($price['BP'])) {
+				prices_BP2gp($price);
+				prices_gp2I($price);
+			}
+		}
+		if(!isset($price['NBP'])) {
+			if(isset($price['NBPDec'])) {
+				prices_NBPDec2NBP($price);
+			}
+			elseif(isset($price['IDec'])) {
+				prices_IDec2NBPDec($price);
+				prices_NBPDec2NBP($price);
+			}
+			elseif(isset($price['I'])) {
+				prices_I2IDec($price);
+				prices_IDec2NBPDec($price);
+				prices_NBPDec2NBP($price);
+			}
+		}
+		if(!isset($price['gp'])) {
+			if(isset($price['BP'])) {
+				prices_BP2gp($price);
+			}
+			elseif(isset($price['IDec'])) {
+				prices_IDec2gp($price);
+			}
+			elseif(isset($price['I'])) {
+				prices_I2IDec($price);
+				prices_IDec2gp($price);
+			}
+		}
+		if(!isset($price['BP'])) {
+			if(isset($price['gp'])) {
+				prices_gp2BP($price);
+			}
+		}
+	}
+	function formatLargeHexNumber($str) {
+		if(str_starts_with($str,'0x'))
+			$str=substr($str,2);
+		if(strlen($str)>4)
+			return '0x'.substr(formatLargeHexNumber(substr($str,0,-4)),2).','.substr($str,-4);
+		else
+			return '0x'.$str;
+	}
+	function narmenPriceToStrRef(&$price) {
+		fillOutNarmenPrices($price);
+		$str='';
+		$noSep=true;
+		if(isset($price['gp'])) {
+			$str=number_format($price['gp']).' gp / '.number_format($price['BP']).' BP / '.formatLargeHexNumber($price['I']).' I / '.formatLargeHexNumber($price['NBP']).' NBP';
+			$noSep=false;
+		}
+		if(isset($price['labeled'])) {
+			foreach ($price['labeled'] as $label => $labeledPrice) {
+				if($noSep) {
+					$noSep=false;
+				}
+				else {
+					$str.=', ';
+				}
+				$str.=narmenPriceToStr($labeledPrice).' ('.$label.')';
+			}
+		}
+		return $str;
+	}
+	function narmenPriceToStr($price) {
+		return narmenPriceToStrRef($price);
+	}
+	function narmenPriceToTableRef(&$price) {
+		$headers=[];
+		$rows=[];
+		fillOutNarmenPrices($price);
+		if(isset($price['gp'])) {
+			if(isset($price['labeled']))
+				array_push($headers,'');
+			array_push($rows,[number_format($price['gp']).' gp', number_format($price['BP']).' BP', formatLargeHexNumber($price['I']).' I', formatLargeHexNumber($price['NBP']).' NBP']);
+		}
+		if(isset($price['labeled'])) {
+			foreach ($price['labeled'] as $label => $labeledPrice) {
+				fillOutNarmenPrices($labeledPrice);
+				array_push($headers,$label);
+				array_push($rows,[number_format($labeledPrice['gp']).' gp', number_format($labeledPrice['BP']).' BP', formatLargeHexNumber($labeledPrice['I']).' I', formatLargeHexNumber($labeledPrice['NBP']).' NBP']);
+			}
+		}
+		return sTable(
+			$headers, 
+			$rows, 
+			false, 
+			false, 
+			false,
+			true
+		);
+	}
+	function narmenPriceToTable($price) {
+		return narmenPriceToTableRef($price);
 	}
 ?>

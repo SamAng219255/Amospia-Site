@@ -18,11 +18,11 @@ h1, h2, h3, h4, h5, h6 {
 	all: unset;
 	display: block;
 }
-p {
+p, .p {
 	margin: 0;
 	margin-bottom: 0.25em;
 }
-p.spaced {
+p.spaced, .p.spaced {
 	margin-bottom: 1em;
 }
 pre {
@@ -106,6 +106,7 @@ a:active {
 }
 table, th, td {
 	border: 1px solid black;
+	vertical-align: top;
 }
 table {
 	border-collapse: collapse;
@@ -117,6 +118,10 @@ table.expand {
 	margin: 1em 1em 1em 0;
 	width: calc(100% - 1em);
 	max-width: calc(100% - 1em);
+}
+table.inline {
+	margin: 0px;
+	display: inline-table;
 }
 th {
 	background-color: #000000;
