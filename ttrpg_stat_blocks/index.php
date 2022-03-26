@@ -1,6 +1,6 @@
 <?php require 'pageStart.php'; ?>
 <title>D&D/Pathfinder</title>
 <?php
-	echo phpversion();
+	//echo phpversion();
 	require 'pageEnd.php';
 ?>
