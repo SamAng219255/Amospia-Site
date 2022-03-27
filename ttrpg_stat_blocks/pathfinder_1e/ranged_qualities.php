@@ -58,6 +58,11 @@
 				'Casting',
 				'link' => 'items/casting_foci/casting_weapon.php',
 				'+2,000 gp'
+			],
+			[
+				'Corrupted',
+				'link' => 'items/corrupted_enchant.php',
+				'+3 bonus' 
 			]
 		],
 		true,

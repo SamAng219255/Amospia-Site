@@ -13,7 +13,7 @@
 		'Brilliant Material Stone',// Name
 		'Transmutation',// School
 		9,// CL
-		'none',// SLot
+		'none',// Slot
 		'90,000 gp / 0x1563 I',// Price
 		'—',// Weight
 		'A ii/brilliant material stone/ii is composed entirely of a large, cut diamond worth 30,000 gp with various 3 dimensional runes of transmutation engraved into its interior.

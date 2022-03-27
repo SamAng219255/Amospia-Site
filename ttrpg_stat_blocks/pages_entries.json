@@ -4165,6 +4165,18 @@
 			],
 			"setting": "amospia",
 			"status": "done"
+		},
+		"corrupted_enchant": {
+			"display_name": "Corrupted",
+			"file_name": "corrupted_enchant.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons"
+			],
+			"status": "done"
 		}
 	}
 }
