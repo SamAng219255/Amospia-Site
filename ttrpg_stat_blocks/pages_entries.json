@@ -3559,7 +3559,7 @@
 				"amospia",
 				"equipment_am"
 			],
-			"status": "empty"
+			"status": "done"
 		},
 		"misc_equip_am": {
 			"display_name": "Miscellaneous Equipment",
@@ -3610,7 +3610,7 @@
 				"magic_items_am",
 				"magic_armor_am"
 			],
-			"status": "done"
+			"status": "empty"
 		},
 		"melee_qualities_am": {
 			"display_name": "Melee Qualities",
@@ -4092,6 +4092,76 @@
 				"amospia",
 				"magic_items_am",
 				"magic_architecture"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"arkon": {
+			"display_name": "The Arkon",
+			"file_name": "arkon.php",
+			"directory": "pathfinder_1e/topics/amospia/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"magic_items_am",
+				"artifacts_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"stoiw": {
+			"display_name": "Stoiw",
+			"file_name": "stoiw.php",
+			"directory": "pathfinder_1e/topics/amospia/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"magic_items_am",
+				"artifacts_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"muniz": {
+			"display_name": "The Mind Muniz",
+			"file_name": "muniz.php",
+			"directory": "pathfinder_1e/topics/amospia/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"magic_items_am",
+				"artifacts_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"eye_of_nafh": {
+			"display_name": "The Eye of Nafh",
+			"file_name": "eye_of_nafh.php",
+			"directory": "pathfinder_1e/topics/amospia/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"magic_items_am",
+				"artifacts_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"wainskarda": {
+			"display_name": "Wainskarda",
+			"file_name": "wainskarda.php",
+			"directory": "pathfinder_1e/topics/amospia/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"magic_items_am",
+				"artifacts_am"
 			],
 			"setting": "amospia",
 			"status": "done"

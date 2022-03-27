@@ -137,22 +137,22 @@
 			$foot='';
 			if(substr($temp, 0, 4)=='/mm/') {
 				$head.='<span class="inset">';
-				$tail='</span>'.$tail;
+				$foot='</span>'.$foot;
 				$temp=trim(substr($temp,4));
 			}
 			if(substr($temp, 0, 4)=='/ee/') {
 				$head.='<span class="enlarged">';
-				$tail='</span>'.$tail;
+				$foot='</span>'.$foot;
 				$temp=trim(substr($temp,4));
 			}
 			if(substr($temp, 0, 4)=='/rr/') {
 				$head.='<span class="reduced">';
-				$tail='</span>'.$tail;
+				$foot='</span>'.$foot;
 				$temp=trim(substr($temp,4));
 			}
 			if(substr($temp, 0, 4)=='/tt/') {
 				$head.='<span class="subtitle">';
-				$tail='</span>'.$tail;
+				$foot='</span>'.$foot;
 				$temp=trim(substr($temp,4));
 			}
 			$arr[$i]=$head.$temp.$foot;

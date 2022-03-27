@@ -528,7 +528,31 @@
 											"display_name": "Artifacts",
 											"type": "branch",
 											"nodes": [
-												
+												{
+													"name": "arkon",
+													"display_name": "The Arkon",
+													"type": "leaf"
+												},
+												{
+													"name": "eye_of_nafh",
+													"display_name": "The Eye of Nafh",
+													"type": "leaf"
+												},
+												{
+													"name": "muniz",
+													"display_name": "The Mind Muniz",
+													"type": "leaf"
+												},
+												{
+													"name": "stoiw",
+													"display_name": "Stoiw",
+													"type": "leaf"
+												},
+												{
+													"name": "wainskarda",
+													"display_name": "Wainskarda",
+													"type": "leaf"
+												}
 											]
 										},
 										{

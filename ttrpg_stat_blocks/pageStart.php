@@ -188,7 +188,7 @@
 							}
 							else
 								echo ' | ';
-							$match=($ptr['name']==(isset($_GET['path'])?$get_path[$depth]:(isset($pages['entries'][$pageId])?($depth==count($pages['entries'][$pageId]['sort_path']) && $ptr['type']=='limb'?$pageId:$pages['entries'][$pageId]['sort_path'][$depth]):'')));
+							$match=($ptr['name']==(isset($_GET['path'])?(isset($get_path[$depth])?$get_path[$depth]:''):(isset($pages['entries'][$pageId])?($depth==count($pages['entries'][$pageId]['sort_path']) && $ptr['type']=='limb'?$pageId:(isset($pages['entries'][$pageId]['sort_path'][$depth])?$pages['entries'][$pageId]['sort_path'][$depth]:'')):'')));
 							if($match) {
 								if(isset($ptr['nodes']))
 									array_push($tree_path, $ptr['nodes']);

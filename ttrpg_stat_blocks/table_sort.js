@@ -51,8 +51,15 @@ function comp(a,b) {
 		numB=parseInt(fractionMatch[1])/parseInt(fractionMatch[2]);
 	else
 		numB=parseInt(numB);
-	if(isNaN(numA) || isNaN(numB))
-		return A.localeCompare(B);
+	if(isNaN(numA) || isNaN(numB)) {
+		let trimmedA=A.trim().toLowerCase();
+		let trimmedB=B.trim().toLowerCase();
+		if(trimmedA.startsWith('the '))
+			trimmedA=trimmedA.slice(4);
+		if(trimmedB.startsWith('the '))
+			trimmedB=trimmedB.slice(4);
+		return trimmedA.localeCompare(trimmedB);
+	}
 	return Math.sign(numA-numB);
 }
 function setupTableSort() {

@@ -58,6 +58,14 @@
 		])
 	);
 	block(
+		'Nether Fungus Hyphae',
+		'material',
+		quick_array([
+			'Nether fungus hyphae is a material that replaces wood in the Nether. It is collected by chopping down the massive fungus found there and cutting it into shapes like wood.',
+			'Nether fungus hyphae is identical to wood except that it is immune to fire.'
+		])
+	);
+	block(
 		'Piglin Forged Gold',
 		'material',
 		quick_array([
