@@ -34,9 +34,9 @@
 		'material',
 		quick_array([
 			'Narmen magic smiths possess the knowledge to draw great power for their enchantments from gold but in order to take advantage of this knowledge they have learned to forge gold while incribing basic runes into its surface that reinforce its strength to be more similar to hardened steel and simultaneously make what would otherwise be a prohibitively heavy and unwiedly weapon easier to wield.',
-			'Runic enchantments placed on rune inscribed gold are empowered. All variable numeric effects and static bonuses and penalties of the enchantments are increased by half, rounded up. Percentage effects are increased by half the distance to 100%. (i.e. 50% would increase to 75%, 30% would increase to 65%, and 80% would increase to 90%) These effects apply to all effects created by runic enchantments, including spell effects.',
+			'Magic effects placed on rune inscribed gold are empowered. All variable numeric effects and static bonuses and penalties of the effects are increased by half, rounded up. Percentage effects are increased by half the distance to 100%. (i.e. 50% would increase to 75%, 30% would increase to 65%, and 80% would increase to 90%) These effects apply to all magical effects on the item, including spell effects and effects spells produced by effets on the item.',
 			'Items without metal parts cannot be made from rune inscribed gold.',
-			'Object forged from rune inscribed gold has the same hardness and number of hit points and costs 10 times as much as those made from steel plus an additional 1,500 gp. Items made from rune inscribed gold are always considered masterwork.'
+			'Objects forged from rune inscribed gold has the same hardness and number of hit points and costs 10 times as much as those made from steel, plus an additional 1,500 gp. Items made from rune inscribed gold are always considered masterwork.'
 		])
 	);
 	require $startDir.'pageEnd.php';
