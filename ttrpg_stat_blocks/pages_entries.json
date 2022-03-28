@@ -4177,6 +4177,34 @@
 				"magic_weapons"
 			],
 			"status": "done"
+		},
+		"black_arrow": {
+			"display_name": "Black Arrow",
+			"file_name": "black_arrow.php",
+			"directory": "pathfinder_1e/topics/amospia/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"magic_items_am",
+				"artifacts_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"elemental_citadel": {
+			"display_name": "The Citadel of the Elements",
+			"file_name": "citadel.php",
+			"directory": "pathfinder_1e/topics/amospia/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"magic_items_am",
+				"artifacts_am"
+			],
+			"setting": "amospia",
+			"status": "done"
 		}
 	}
 }

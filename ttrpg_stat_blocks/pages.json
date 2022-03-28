@@ -534,6 +534,16 @@
 													"type": "leaf"
 												},
 												{
+													"name": "black_arrow",
+													"display_name": "Black Arrow",
+													"type": "leaf"
+												},
+												{
+													"name": "elemental_citadel",
+													"display_name": "The Citadel of the Elements",
+													"type": "leaf"
+												},
+												{
 													"name": "eye_of_nafh",
 													"display_name": "The Eye of Nafh",
 													"type": "leaf"
