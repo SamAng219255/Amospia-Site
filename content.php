@@ -4,3 +4,4 @@
 <br>
 <img src="img/ticktock.gif" title="Tick. Tock." alt="A random animation.">
 <span>A random animation because I have lots of space that I don't know how to fill.</span>
+<?php echo '<p>PHP Version: '.phpversion().'</p>'; ?>
