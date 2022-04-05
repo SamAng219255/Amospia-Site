@@ -33,6 +33,12 @@
 				'link' => 'feats/deconstruct_magic.php',
 				'Caster level 3rd',
 				'Deconstruct magic items'
+			],
+			[
+				'Practice Advanced Alchemy',
+				'link' => 'feats/practice_adv_alchemy.php',
+				'1 rank in Craft (alchemy)',
+				'Create advanced alchemy recipes'
 			]
 		]
 	);

@@ -99,6 +99,12 @@ function setupTableSort() {
 			return 1;
 		return -comp(a.children[sortColumn].innerText.toLowerCase(),b.children[sortColumn].innerText.toLowerCase());
 	}
+	let sortFuncAscContextual = function(a, b) {
+		return sortFuncAsc(a,b)*(1<<($("table:not(.vertical):not(.no-sort)").children()[0].children[0].childElementCount))+initialSortFunc(a,b);
+	}
+	let sortFuncDecContextual = function(a, b) {
+		return sortFuncDec(a,b)*(1<<($("table:not(.vertical):not(.no-sort)").children()[0].children[0].childElementCount))+initialSortFunc(a,b);
+	}
 
 	const tables=$("table:not(.vertical):not(.no-sort)");
 	for(let i=0; i<tables.length; i++) {
@@ -124,7 +130,7 @@ function setupTableSort() {
 				for(let i=0; i<tables.length; i++)
 					$($(tables[i]).children().children()[0].children[sortStatus.sort]).removeClass("sort-asc").removeClass("sort-dec").addClass(sortStatus.asc ? "sort-asc" : "sort-dec");
 				let rows=$($("table:not(.vertical):not(.no-sort)").children()[0].children).get();
-				tarOrder.sort(sortStatus.asc ? sortFuncAsc : sortFuncDec);
+				tarOrder.sort(sortStatus.asc ? sortFuncAscContextual : sortFuncDecContextual);
 			}
 
 			for (let i = 0; i < tarOrder.length; i++) {

@@ -1334,6 +1334,86 @@
 			]
 		);
 	}
+	function advAlchemyBlock($name, $form, $descriptors, $level, $additional, $duration, $save, $desc) {
+		$descriptorTxt='';
+		if(count($descriptors)>0) {
+			$descriptorTxt=' [';
+			$first=true;
+			foreach ($descriptors as $descriptor) {
+				if($first)
+					$first=false;
+				else
+					$descriptorTxt.=', ';
+				$descriptorTxt.=$descriptor;
+			}
+			$descriptorTxt.=']';
+		}
+		$properties=[];
+		$ranges=['Personal'=>'personal','Touch'=>'touch','Close'=>'close (25 ft. + 5 ft./2 levels)','Medium'=>'medium (100 ft. + 10 ft./level)','Long'=>'long (400 ft. + 40 ft./level)','Unlimited'=>'unlimited'];
+		foreach ($additional as $property => $value) {
+			if($property=='Range') {
+				if(isset($ranges[$value]))
+					array_push($properties,'bb/Range/bb '.$ranges[$value]);
+				elseif(is_numeric($value))
+					array_push($properties,'bb/Range/bb '.$value.' ft.');
+				else
+					array_push($properties,'bb/Range/bb '.$value);
+			}
+			elseif(is_array($value)) {
+				$lineStr='';
+				$isFirst=true;
+				foreach ($value as $subProperty => $subValue) {
+					if($isFirst)
+						$isFirst=false;
+					else
+						$lineStr.='; ';
+					$lineStr.='bb/'.$subProperty.'/bb '.$subValue;
+				}
+				array_push($properties,$lineStr);
+			}
+			else
+				array_push($properties,'bb/'.$property.'/bb '.$value);
+		}
+		array_push($properties,'bb/Duration/bb '.$duration);
+		array_push($properties,'bb/Saving Throw/bb '.$save);
+		block(
+			$name,
+			'recipe',
+			quick_array([
+				sprintf(
+					'bb/Form/bb %s%s; bb/Level/bb %s',
+					$form,
+					$descriptorTxt,
+					$level
+				)
+			]),
+			false,
+			[
+				[
+					'title' => 'Properties',
+					'spaced' => false,
+					'texts' => quick_array($properties)
+				],
+				[
+					'title' => 'Description',
+					'spaced' => true,
+					'texts' => quick_array($desc)
+				]
+			]
+		);
+	}
+	function advAlchemySimpleBlock($name, $form, $descriptors, $level, $duration, $save, $desc) {
+		advAlchemyBlock($name, $form, $descriptors, $level, [], $duration, $save, $desc);
+	}
+	function advAlchemyActivatedBlock($name, $form, $descriptors, $level, $activationTime, $duration, $save, $desc) {
+		advAlchemyBlock($name, $form, $descriptors, $level, ['Activation Time' => $activationTime], $duration, $save, $desc);
+	}
+	function advAlchemyAppliedBlock($name, $form, $descriptors, $level, $applicationTime, $duration, $save, $desc) {
+		advAlchemyBlock($name, $form, $descriptors, $level, ['Activation Time' => $applicationTime], $duration, $save, $desc);
+	}
+	function advAlchemyRocketBlock($name, $form, $descriptors, $level, $ignitionTime, $rangeIncr, $maxRange, $duration, $save, $desc) {
+		advAlchemyBlock($name, $form, $descriptors, $level, ['Activation Time' => $ignitionTime, ['Range Increment' => $rangeIncr, 'Max Range' => $maxRange]], $duration, $save, $desc);
+	}
 	function item2eBlock($name, $level=false, $rarity="Common", $traits=[], $price=false, $hands=false, $usage=false, $bulk=0, $activate=false, $description=[], $variations=[]) {
 		$compTraits=quick_format($traits);
 		if($rarity!='Common')

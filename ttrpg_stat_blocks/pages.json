@@ -22,6 +22,29 @@
 					"type": "branch",
 					"nodes": [
 						{
+							"name": "adv_alchemy",
+							"display_name": "Advanced Alchemy",
+							"petal_display_name": "Overview & Explanation",
+							"type": "flower",
+							"nodes": [
+								{
+									"name": "adv_alchemy_crafting",
+									"display_name": "Crafting",
+									"type": "petal"
+								},
+								{
+									"name": "recipe_desc",
+									"display_name": "Reading Recipe Descriptions",
+									"type": "petal"
+								},
+								{
+									"name": "alchemy_index",
+									"display_name": "Recipe Index",
+									"type": "petal"
+								}
+							]
+						},
+						{
 							"name": "equipment",
 							"display_name": "Equipment",
 							"type": "branch",

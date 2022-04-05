@@ -4205,6 +4205,213 @@
 			],
 			"setting": "amospia",
 			"status": "done"
+		},
+		"adv_alchemy": {
+			"display_name": "Advanced Alchemy",
+			"file_name": "adv_alchemy.php",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items"
+			],
+			"status": "done"
+		},
+		"alchemy_index": {
+			"display_name": "Recipe Index",
+			"file_name": "alchemy_index.php",
+			"directory": "pathfinder_1e/alchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"adv_alchemy_crafting": {
+			"display_name": "Crafting, Advanced Alchemy",
+			"file_name": "crafting.php",
+			"directory": "pathfinder_1e/alchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"recipe_desc": {
+			"display_name": "Advanced Alchemy",
+			"file_name": "desc_key.php",
+			"directory": "pathfinder_1e/alchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"practice_adv_alchemy": {
+			"display_name": "Practice Advanced Alchemy",
+			"file_name": "practice_adv_alchemy.php",
+			"directory": "pathfinder_1e/feats/",
+			"sort_path": [
+				"pathfinder_1e",
+				"feats"
+			],
+			"status": "done"
+		},
+		"aa_fire_bomb": {
+			"display_name": "Fire Bomb",
+			"file_name": "fire_bomb.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_acid": {
+			"display_name": "Advanced Acid",
+			"file_name": "acid.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_chill_bomb": {
+			"display_name": "Chill Bomb",
+			"file_name": "chill_bomb.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_volatile_capacitor": {
+			"display_name": "Volatile Capacitor",
+			"file_name": "volatile_capacitor.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_sonic_jar": {
+			"display_name": "Sonic Burst Jar",
+			"file_name": "sonic_jar.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_adv_fire": {
+			"display_name": "Advanced Alchemist Fire",
+			"file_name": "adv_fire.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_adv_acid": {
+			"display_name": "Concentrated Acid",
+			"file_name": "adv_acid.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_freezing_bomb": {
+			"display_name": "Freezing Bomb",
+			"file_name": "freezing_bomb.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_overcharged_capacitor": {
+			"display_name": "Overcharged Capacitor",
+			"file_name": "overcharged_capacitor.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "wip"
+		},
+		"aa_thunder_jar": {
+			"display_name": "Thunder Jar",
+			"file_name": "thunder_jar.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_fog_bottle": {
+			"display_name": "Fog Bottle",
+			"file_name": "fog_bottle.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_illusion_cloud": {
+			"display_name": "Shimmer Cloud",
+			"file_name": "illusion_cloud.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_oobleck": {
+			"display_name": "Oobleck",
+			"file_name": "oobleck.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_true_form": {
+			"display_name": "Draught of True Form",
+			"file_name": "true_form.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
 		}
 	}
 }
