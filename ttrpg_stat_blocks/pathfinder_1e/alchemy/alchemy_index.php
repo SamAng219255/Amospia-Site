@@ -39,7 +39,7 @@
 				'Deals 1d6 fire damage per level, maximum 5d6, and half that as splash.' 
 			],
 			[
-				'Advanced Acid WIP',
+				'Advanced Acid',
 				'link' => 'recipes/acid.php',
 				'1',
 				'Bomb',
