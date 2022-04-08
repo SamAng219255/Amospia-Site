@@ -128,6 +128,13 @@
 				'4',
 				'Imbibed',
 				'Nullifies polymorph effects on the drinker, returning them to their true form.' 
+			],
+			[
+				'Fire Rocket',
+				'link' => 'recipes/fire_rocket.php',
+				'3',
+				'Rocket',
+				'Deals 1d6 fire damage per level in a 20-ft. radius spread.' 
 			]
 		]
 	);

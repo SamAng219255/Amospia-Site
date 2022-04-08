@@ -4412,6 +4412,17 @@
 				"adv_alchemy"
 			],
 			"status": "done"
+		},
+		"aa_fire_rocket": {
+			"display_name": "Fire Rocket",
+			"file_name": "fire_rocket.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
 		}
 	}
 }
