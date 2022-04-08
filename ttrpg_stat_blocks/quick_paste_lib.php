@@ -1405,14 +1405,14 @@
 	function advAlchemySimpleBlock($name, $form, $descriptors, $level, $duration, $save, $desc) {
 		advAlchemyBlock($name, $form, $descriptors, $level, [], $duration, $save, $desc);
 	}
-	function advAlchemyActivatedBlock($name, $form, $descriptors, $level, $activationTime, $duration, $save, $desc) {
-		advAlchemyBlock($name, $form, $descriptors, $level, ['Activation Time' => $activationTime], $duration, $save, $desc);
+	function advAlchemyActivatedBlock($name, $descriptors, $level, $activationTime, $duration, $save, $desc) {
+		advAlchemyBlock($name, 'Activated', $descriptors, $level, ['Activation Time' => $activationTime], $duration, $save, $desc);
 	}
-	function advAlchemyAppliedBlock($name, $form, $descriptors, $level, $applicationTime, $duration, $save, $desc) {
-		advAlchemyBlock($name, $form, $descriptors, $level, ['Activation Time' => $applicationTime], $duration, $save, $desc);
+	function advAlchemyAppliedBlock($name, $descriptors, $level, $applicationTime, $duration, $save, $desc) {
+		advAlchemyBlock($name, 'Applied', $descriptors, $level, ['Activation Time' => $applicationTime], $duration, $save, $desc);
 	}
-	function advAlchemyRocketBlock($name, $form, $descriptors, $level, $ignitionTime, $rangeIncr, $maxRange, $duration, $save, $desc) {
-		advAlchemyBlock($name, $form, $descriptors, $level, ['Activation Time' => $ignitionTime, ['Range Increment' => $rangeIncr, 'Max Range' => $maxRange]], $duration, $save, $desc);
+	function advAlchemyRocketBlock($name, $descriptors, $level, $ignitionTime, $rangeIncr, $maxRange, $duration, $save, $desc) {
+		advAlchemyBlock($name, 'Rocket', $descriptors, $level, ['Activation Time' => $ignitionTime, ['Range Increment' => $rangeIncr, 'Max Range' => $maxRange]], $duration, $save, $desc);
 	}
 	function item2eBlock($name, $level=false, $rarity="Common", $traits=[], $price=false, $hands=false, $usage=false, $bulk=0, $activate=false, $description=[], $variations=[]) {
 		$compTraits=quick_format($traits);

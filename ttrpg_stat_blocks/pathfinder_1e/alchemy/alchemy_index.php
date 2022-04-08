@@ -67,63 +67,63 @@
 				'Deals 1d6 sonic damage per level, maximum 5d6, and half that as splash.' 
 			],
 			[
-				'Advanced Alchemist Fire WIP',
+				'Advanced Alchemist Fire',
 				'link' => 'recipes/adv_fire.php',
 				'3',
 				'Bomb',
 				'Deals fire damage and covers affected creatures in burning material.' 
 			],
 			[
-				'Concentrated Acid WIP',
+				'Concentrated Acid',
 				'link' => 'recipes/adv_acid.php',
 				'3',
 				'Bomb',
 				'Deals acid damage that bypasses some hardness and resistance.' 
 			],
 			[
-				'Freezing Bomb WIP',
+				'Freezing Bomb',
 				'link' => 'recipes/freezing_bomb.php',
 				'3',
 				'Bomb',
 				'Deals cold damage and slows affected creatures.' 
 			],
 			[
-				'Overcharged Capacitor WIP',
+				'Overcharged Capacitor',
 				'link' => 'recipes/overcharged_capacitor.php',
 				'3',
 				'Bomb',
-				'Deals electricity damage and ___.' 
+				'Deals electricity damage and may stun the primary target.' 
 			],
 			[
-				'Thunder Jar WIP',
+				'Thunder Jar',
 				'link' => 'recipes/thunder_jar.php',
 				'3',
 				'Bomb',
 				'Deals sonic damage and has a chance to deafen.' 
 			],
 			[
-				'Fog Bottle WIP',
+				'Fog Bottle',
 				'link' => 'recipes/fog_bottle.php',
 				'2',
 				'Activated',
 				'Creates a cloud of alchemical powder that obsures sight.' 
 			],
 			[
-				'Shimmer Cloud WIP',
+				'Shimmer Cloud',
 				'link' => 'recipes/illusion_cloud.php',
 				'2',
 				'Activated',
 				'Creates a fine mist of particles that reveal illusions.' 
 			],
 			[
-				'Oobleck WIP',
+				'Oobleck',
 				'link' => 'recipes/oobleck.php',
 				'7',
 				'Cauldron',
 				'Creates a mysterious new form of weather that sticks creatures in the area to the ground.' 
 			],
 			[
-				'Draught of True Form WIP',
+				'Draught of True Form',
 				'link' => 'recipes/true_form.php',
 				'4',
 				'Imbibed',

@@ -25,7 +25,7 @@
 				'title' => 'Activated',
 				'spaced' => true,
 				'texts' => quick_array([
-					'Activated recipes create substances that are designed to be activated after creation through means such as breaking the seal seperating two or more substances or by striking the container with some type of percussive force. These could produce a variety of effects on demand such as releasing a cloud of gas, emitting light, or heating up. Unless specified otherwise, activated recipes yield an object that can be activated later as a standard action that does not provoke an attack of opportunity.'
+					'Activated recipes create substances that are designed to be activated after creation through means such as breaking the seal seperating two or more substances or by striking the container with some type of percussive force. These could produce a variety of effects on demand such as releasing a cloud of gas, emitting light, or heating up. Unless specified otherwise, activated recipes yield an object that can be activated later as a standard action that provokes an attack of opportunity.'
 				])
 			],
 			[
