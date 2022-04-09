@@ -866,39 +866,14 @@
 							]
 						},
 						{
-							"name": "flying_insect",
+							"name": "burrowing_insects",
 							"display_name": "Mathine",
 							"petal_display_name": "Mathine Details",
 							"type": "flower",
 							"nodes": [
 								{
-									"name": "flying_insect_feats",
-									"display_name": "Mathine Feats",
-									"type": "flower",
-									"nodes": [
-										{
-											"name": "flying_insect_feat_display",
-											"display_name": "Feat Descriptions",
-											"type": "petal"
-										}
-									]
-								},
-								{
-									"name": "flying_insect_heritages",
-									"display_name": "Mathine Heritages",
-									"type": "petal"
-								}
-							]
-						},
-						{
-							"name": "burrowing_insects",
-							"display_name": "Muuyine",
-							"petal_display_name": "Muuyine Details",
-							"type": "flower",
-							"nodes": [
-								{
 									"name": "burrowing_insects_feats",
-									"display_name": "Muuyine Feats",
+									"display_name": "Mathine Feats",
 									"type": "flower",
 									"nodes": [
 										{
@@ -910,6 +885,31 @@
 								},
 								{
 									"name": "burrowing_insects_heritages",
+									"display_name": "Mathine Heritages",
+									"type": "petal"
+								}
+							]
+						},
+						{
+							"name": "flying_insects",
+							"display_name": "Muuyine",
+							"petal_display_name": "Muuyine Details",
+							"type": "flower",
+							"nodes": [
+								{
+									"name": "flying_insects_feats",
+									"display_name": "Muuyine Feats",
+									"type": "flower",
+									"nodes": [
+										{
+											"name": "flying_insects_feat_display",
+											"display_name": "Feat Descriptions",
+											"type": "petal"
+										}
+									]
+								},
+								{
+									"name": "flying_insects_heritages",
 									"display_name": "Muuyine Heritages",
 									"type": "petal"
 								}
