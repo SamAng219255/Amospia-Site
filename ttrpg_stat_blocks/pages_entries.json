@@ -4413,9 +4413,64 @@
 			],
 			"status": "done"
 		},
+		"aa_ice_rocket": {
+			"display_name": "Freezing Rocket",
+			"file_name": "ice_rocket.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
 		"aa_fire_rocket": {
 			"display_name": "Fire Rocket",
 			"file_name": "fire_rocket.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_planar_grenade": {
+			"display_name": "Planar Grenade",
+			"file_name": "planar_grenade.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_grenade": {
+			"display_name": "Grenade",
+			"file_name": "grenade.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_elemental_grenade": {
+			"display_name": "Elemental Grenade",
+			"file_name": "elemental_grenade.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_tracking_powder": {
+			"display_name": "Tracking Powder",
+			"file_name": "tracking_powder.php",
 			"directory": "pathfinder_1e/alchemy/recipes/",
 			"sort_path": [
 				"pathfinder_1e",

@@ -135,26 +135,53 @@
 			$temp=$arr[$i];
 			$head='';
 			$foot='';
-			if(substr($temp, 0, 4)=='/mm/') {
-				$head.='<span class="inset">';
-				$foot='</span>'.$foot;
-				$temp=trim(substr($temp,4));
+			$found=false;
+			do {
+				$found=false;
+				if(substr($temp, 0, 4)=='/mm/') {
+					$head.='<span class="inset">';
+					$foot='</span>'.$foot;
+					$temp=trim(substr($temp,4));
+					$found=true;
+				}
+				if(substr($temp, 0, 4)=='/m2/') {
+					$head.='<span class="inset-double">';
+					$foot='</span>'.$foot;
+					$temp=trim(substr($temp,4));
+					$found=true;
+				}
+				if(substr($temp, 0, 4)=='/m3/') {
+					$head.='<span class="inset-triple">';
+					$foot='</span>'.$foot;
+					$temp=trim(substr($temp,4));
+					$found=true;
+				}
+				if(substr($temp, 0, 4)=='/m4/') {
+					$head.='<span class="inset-quad">';
+					$foot='</span>'.$foot;
+					$temp=trim(substr($temp,4));
+					$found=true;
+				}
+				if(substr($temp, 0, 4)=='/ee/') {
+					$head.='<span class="enlarged">';
+					$foot='</span>'.$foot;
+					$temp=trim(substr($temp,4));
+					$found=true;
+				}
+				if(substr($temp, 0, 4)=='/rr/') {
+					$head.='<span class="reduced">';
+					$foot='</span>'.$foot;
+					$temp=trim(substr($temp,4));
+					$found=true;
+				}
+				if(substr($temp, 0, 4)=='/tt/') {
+					$head.='<span class="subtitle">';
+					$foot='</span>'.$foot;
+					$temp=trim(substr($temp,4));
+					$found=true;
+				}
 			}
-			if(substr($temp, 0, 4)=='/ee/') {
-				$head.='<span class="enlarged">';
-				$foot='</span>'.$foot;
-				$temp=trim(substr($temp,4));
-			}
-			if(substr($temp, 0, 4)=='/rr/') {
-				$head.='<span class="reduced">';
-				$foot='</span>'.$foot;
-				$temp=trim(substr($temp,4));
-			}
-			if(substr($temp, 0, 4)=='/tt/') {
-				$head.='<span class="subtitle">';
-				$foot='</span>'.$foot;
-				$temp=trim(substr($temp,4));
-			}
+			while($found);
 			$arr[$i]=$head.$temp.$foot;
 		}
 		return quick_format($arr);
@@ -1351,15 +1378,7 @@
 		$properties=[];
 		$ranges=['Personal'=>'personal','Touch'=>'touch','Close'=>'close (25 ft. + 5 ft./2 levels)','Medium'=>'medium (100 ft. + 10 ft./level)','Long'=>'long (400 ft. + 40 ft./level)','Unlimited'=>'unlimited'];
 		foreach ($additional as $property => $value) {
-			if($property=='Range') {
-				if(isset($ranges[$value]))
-					array_push($properties,'bb/Range/bb '.$ranges[$value]);
-				elseif(is_numeric($value))
-					array_push($properties,'bb/Range/bb '.$value.' ft.');
-				else
-					array_push($properties,'bb/Range/bb '.$value);
-			}
-			elseif(is_array($value)) {
+			if(is_array($value)) {
 				$lineStr='';
 				$isFirst=true;
 				foreach ($value as $subProperty => $subValue) {
@@ -1367,12 +1386,31 @@
 						$isFirst=false;
 					else
 						$lineStr.='; ';
-					$lineStr.='bb/'.$subProperty.'/bb '.$subValue;
+					$valStr=$subValue;
+					if(str_contains(strtolower($subProperty),'range')) {
+						if(isset($ranges[$valStr]))
+							$valStr=$ranges[$valStr];
+						elseif(is_numeric($valStr))
+							$valStr=$valStr.' ft.';
+						else
+							$valStr=$valStr;
+					}
+					$lineStr.='bb/'.$subProperty.'/bb '.$valStr;
 				}
 				array_push($properties,$lineStr);
 			}
-			else
-				array_push($properties,'bb/'.$property.'/bb '.$value);
+			else {
+				$valStr=$value;
+				if(str_contains(strtolower($property),'range')) {
+					if(isset($ranges[$valStr]))
+						$valStr=$ranges[$valStr];
+					elseif(is_numeric($valStr))
+						$valStr=$valStr.' ft.';
+					else
+						$valStr=$valStr;
+				}
+				array_push($properties,'bb/'.$property.'/bb '.$valStr);
+			}
 		}
 		array_push($properties,'bb/Duration/bb '.$duration);
 		array_push($properties,'bb/Saving Throw/bb '.$save);

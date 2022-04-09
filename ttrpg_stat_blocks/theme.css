@@ -54,9 +54,20 @@ span.enlarged {
 span.reduced {
 	font-size: 0.75em;
 }
-span.inset {
+span.inset, span.inset-double, span.inset-triple, span.inset-quad {
 	display: block;
+}
+span.inset {
 	margin-left: 1em;
+}
+span.inset-double {
+	margin-left: 2em;
+}
+span.inset-triple {
+	margin-left: 3em;
+}
+span.inset-quad {
+	margin-left: 4em;
 }
 span.subtitle {
 	display: block;

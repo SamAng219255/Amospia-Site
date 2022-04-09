@@ -125,7 +125,7 @@
 			[
 				'Draught of True Form',
 				'link' => 'recipes/true_form.php',
-				'4',
+				'3',
 				'Imbibed',
 				'Nullifies polymorph effects on the drinker, returning them to their true form.' 
 			],
@@ -135,6 +135,55 @@
 				'3',
 				'Rocket',
 				'Deals 1d6 fire damage per level in a 20-ft. radius spread.' 
+			],
+			[
+				'Freezing Rocket',
+				'link' => 'recipes/ice_rocket.php',
+				'6',
+				'Rocket',
+				'Deals 1d6 cold damage per level in a 40-ft. radius spread.' 
+			],
+			[
+				'Planar Grenade',
+				'link' => 'recipes/planar_grenade.php',
+				'8',
+				'Bomb',
+				'Deals 1d6 damage per level, and an additional effect, with a large and powerful splash.' 
+			],
+			[
+				'Grenade',
+				'link' => 'recipes/grenade.php',
+				'3',
+				'Bomb',
+				'A more stable, but delayed, explosive that prioritizes explosive force.' 
+			],
+			[
+				'Grenade, Improved',
+				'link' => 'recipes/grenade.php#block-Improved-Grenade',
+				'5',
+				'Bomb',
+				'Deals 1d6 damage per level and deafens nearby creatures.' 
+			],
+			[
+				'Elemental Grenade',
+				'link' => 'recipes/elemental_grenade.php',
+				'6',
+				'Bomb',
+				'A grenade that deals 1d6 energy damage per level.' 
+			],
+			[
+				'Tracking Dust',
+				'link' => 'recipes/tracking_dust.php',
+				'1',
+				'Substance',
+				'An invisible powder that can be used to track an individual.' 
+			],
+			[
+				'Tracking Light',
+				'link' => 'recipes/tracking_dust.php#block-Tracking-Powder',
+				'0',
+				'Activation',
+				'The glow from this light reveals tracking powder.' 
 			]
 		]
 	);
