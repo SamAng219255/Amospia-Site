@@ -6,6 +6,7 @@
 		font-weight: bold;
 	}
 </style>
+<p>This is an old version of the game. A newer (and more challenging) version can be found on a apple app store for iphone and ipad where it can be found under the title "<a href="https://apps.apple.com/us/app/block-dropper/id1546571122">Block Dropper</a>". In time I plan to update this veriosn to match but I'm afraid I haven't done so yet.</p>
 <div style="height: 755">
 	<meta charset="utf-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
