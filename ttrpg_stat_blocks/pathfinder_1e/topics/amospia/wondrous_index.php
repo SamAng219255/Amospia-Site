@@ -111,6 +111,14 @@
 				'0x1563 I',
 				'none',
 				'9th'
+			],
+			[
+				'Ring of Instant Armament',
+				'link' => 'items/ring_of_instant_armament.php',
+				'72,000 gp',
+				'0x10E0 I',
+				'Ring',
+				'20th'
 			]
 		]
 	);

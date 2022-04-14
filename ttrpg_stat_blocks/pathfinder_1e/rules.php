@@ -28,6 +28,19 @@
 						]
 					]
 				]
+			],
+			[
+				'name' => 'Optional Rule Systems',
+				'children' => [
+					[
+						'name' => 'Unbound Magic',
+						'link' => 'rules/unbound_magic.php'
+					],
+					[
+						'name' => 'Dynamic Skill Abilities',
+						'link' => 'rules/dynamic_skills.php'
+					]
+				]
 			]
 		]
 	]);

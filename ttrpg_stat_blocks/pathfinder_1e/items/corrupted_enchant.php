@@ -11,7 +11,7 @@
 	}
 	magicItemBlockAuto(
 		'Corrupted',// Name
-		'Strong Abjuration and Evocation [evil]',// School
+		'Abjuration and Evocation [evil]',// School
 		12,// CL
 		'weapon quality',// Slot
 		'+3 bonus',// Price

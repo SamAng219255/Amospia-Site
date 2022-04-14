@@ -3295,6 +3295,26 @@
 			],
 			"status": "done"
 		},
+		"unbound_magic": {
+			"display_name": "Unbound Magic",
+			"file_name": "unbound_magic.php",
+			"directory": "pathfinder_1e/rules/",
+			"sort_path": [
+				"pathfinder_1e",
+				"rules"
+			],
+			"status": "done"
+		},
+		"dynamic_skills": {
+			"display_name": "Dynamic Skill Abilities",
+			"file_name": "dynamic_skills.php",
+			"directory": "pathfinder_1e/rules/",
+			"sort_path": [
+				"pathfinder_1e",
+				"rules"
+			],
+			"status": "done"
+		},
 		"siege_weapons": {
 			"display_name": "Siege Weapons",
 			"file_name": "siege_index.php",
@@ -3523,7 +3543,7 @@
 				"pathfinder_1e",
 				"topics"
 			],
-			"status": "wip"
+			"status": "done"
 		},
 		"weapons_am": {
 			"display_name": "Weapons",
@@ -3623,7 +3643,7 @@
 				"magic_items_am",
 				"magic_weapons_am"
 			],
-			"status": "empty"
+			"status": "done"
 		},
 		"ranged_qualities_am": {
 			"display_name": "Ranged Qualities",
@@ -4068,6 +4088,35 @@
 			"setting": "amospia",
 			"status": "done"
 		},
+		"ring_of_instant_armament": {
+			"display_name": "Ring of Instant Armament",
+			"file_name": "ring_of_instant_armament.php",
+			"directory": "pathfinder_1e/topics/amospia/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"magic_items_am",
+				"wondrous_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"cursed_wounds": {
+			"display_name": "Cursed Wounds",
+			"file_name": "cursed_wounds.php",
+			"directory": "pathfinder_1e/topics/amospia/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"magic_items_am",
+				"magic_weapons_am",
+				"melee_qualities_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
 		"construction_node": {
 			"display_name": "Construction Node",
 			"file_name": "construction_node.php",
@@ -4174,7 +4223,8 @@
 				"pathfinder_1e",
 				"items",
 				"magic_items",
-				"magic_weapons"
+				"magic_weapons",
+				"melee_qualities"
 			],
 			"status": "done"
 		},

@@ -55,9 +55,9 @@
 		],
 		[
 			[
-				'',
-				'link' => '',
-				''
+				'Cursed Wounds',
+				'link' => 'items/cursed_wounds.php',
+				'+3 bonus'
 			]
 		],
 		true,
