@@ -30,11 +30,25 @@
 		],
 		[
 			[
-				'',
-				'link' => 'monsters/',
-				'',
-				'',
-				'' 
+				'Runebound Guardian',
+				'link' => 'monsters/runebound_guardian.php',
+				'10',
+				'Construct',
+				'Any' 
+			],
+			[
+				'Radiant Golem',
+				'link' => 'monsters/radiant_golem.php',
+				'15',
+				'Construct',
+				'Any' 
+			],
+			[
+				'Walking Aegis',
+				'link' => 'monsters/walking_aegis.php',
+				'20',
+				'Construct',
+				'Any' 
 			]
 		]
 	);

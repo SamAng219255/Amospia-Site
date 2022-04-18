@@ -4256,6 +4256,45 @@
 			"setting": "amospia",
 			"status": "done"
 		},
+		"runebound_guardian": {
+			"display_name": "Runebound Guardian",
+			"file_name": "runebound_guardian.php",
+			"directory": "pathfinder_1e/topics/amospia/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"monsters_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"radiant_golem": {
+			"display_name": "Radiant Golem",
+			"file_name": "radiant_golem.php",
+			"directory": "pathfinder_1e/topics/amospia/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"monsters_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"walking_aegis": {
+			"display_name": "Walking Aegis",
+			"file_name": "walking_aegis.php",
+			"directory": "pathfinder_1e/topics/amospia/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"monsters_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
 		"adv_alchemy": {
 			"display_name": "Advanced Alchemy",
 			"file_name": "adv_alchemy.php",
