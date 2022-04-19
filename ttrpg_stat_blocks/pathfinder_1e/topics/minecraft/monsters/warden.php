@@ -23,7 +23,7 @@
 		'undead',// Type
 		4,// Misc Initiative Mod
 		false,// Mythic Initiative
-		'blind, scent, soul identification, vibration sense 60 ft.',// Senses
+		'blind, powerful scent, soul identification, vibration sense 60 ft.',// Senses
 		0,// Misc Perception Mod
 		'blinding aura (120 ft.), inevitable fear (120 ft., DC 36), soul trap (80 ft.)',// Aura
 		[
@@ -45,7 +45,7 @@
 				'mod' => 2
 			]
 		],// Fortitude/Reflex/Will save good/bad and misc bonuses
-		'bb/Immune/bb undead traits; bb/SR/bb 33',// Defensive Abilities
+		'bb/Immune/bb undead traits, fire; bb/SR/bb 33',// Defensive Abilities
 		'',// Weaknesses
 		'60 ft., 30 ft. burrow, 30 ft. climb',// Speed
 		[
@@ -62,8 +62,19 @@
 			]
 		],// Attacks
 		10,// Reach
-		'powerful slam, terrifying leap',// Special Attacks
-		[],// Spell-like Abilities
+		'powerful slam, sonic boom (60 ft., 10d6 times 3 sonic), terrifying leap',// Special Attacks
+		[
+			'level' => 42,
+			'conc' => 0,
+			'spells' => [
+				[
+					'perday' => 'constant',
+					'list' => [
+						'freedom of movement'
+					]
+				]
+			]
+		],// Spell-like Abilities
 		[],// Spell Casting
 		'',// Spell Casting Note
 		[
@@ -148,6 +159,11 @@
 				In addition, all abilities that specifically grant resistance to fear, such as a paladin\'s Aura of Courage or a fighter\'s Bravery, fail to provide protection against any ability while within range and their loss strikes even greater fear into creatures that depend on them. Any creature with a constant ability that grants a bonus vs fear instead grants a penalty vs fear equal to half of the bonus, though this penalty caps out at -10, and creatures that have a constant ability that makes them immune to fear instead take a -15 penalty, though this penalty does not stack with other abilities that normally grant bonuses or immunity to fear.'
 			],
 			[
+				'name' => 'Powerful Scent',
+				'type' => 'Ex',
+				'desc' => 'Powerful scent function as scent with the following exceptions. A warden can smell creatures from twice as far away, up to 60 feet in normal conditions. When a warden spends a move action to note the direction of a scent that is within 20 feet, they discover which square the scent is in.'
+			],
+			[
 				'name' => 'Powerful Slam',
 				'type' => 'Ex',
 				'desc' => 'A warden\'s slam attack is particularly potent dealing damage as though they were one size greater, having an 18-20 critical range (15-20 with the Improved Critical feat), and a x4 critical multiplier, in addition to being able to add 1-1/2 their strength modifier due to only having one attack. Wardens always use power attack.'
@@ -156,6 +172,11 @@
 				'name' => 'Sculk-Speech',
 				'type' => 'Ex',
 				'desc' => 'All sculk constructs, including wardens, are able to communicate with each other through the creation of specific vibrations that can be detected by other creatures with vibration sense if they are within range. These communications can theoretically convey anything you could convey through normal speech though in practice sculk constructs tend to communicate in short, concise, and monotone messages that more resemble communications through a network of computers than those between intelligent creatures.'
+			],
+			[
+				'name' => 'Sonic Boom',
+				'type' => 'Ex',
+				'desc' => 'As a full-round action, a warden can make a ranged attack against a target within 60 feet that can travel through obstacles including walls less than 30 feet thick; deals 10d6 times 3 points of sonic damage; and, so long as the warden accurately knows what square the target occupies, hits automatically, without an attack roll and ignoring miss chances.'
 			],
 			[
 				'name' => 'Soul Identification',

@@ -71,7 +71,7 @@
 		10,// Reach
 		'',// Special Attacks
 		[
-			'level' => 20,
+			'level' => 32,
 			'conc' => 0,
 			'spells' => [
 				[

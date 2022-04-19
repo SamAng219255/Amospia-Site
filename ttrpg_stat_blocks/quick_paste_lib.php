@@ -750,6 +750,8 @@
 			).(isset($hdp['note'])?$hdp['note']:'');
 		}
 		else {
+			if(!isset($hdp[2]))
+				$hdp[2]=0;
 			$hdpTotal[0]=$hdp[0];
 			$hdpTotal[1]=$hdp[1];
 			$hdpTotal[2]=$hdp[2];
