@@ -137,9 +137,9 @@
 			]),
 			quick_array([
 				'Explosion',
-				'',
-				'',
-				''
+				'Fires an explosive projectile at an object or grid corner within close range. On impact, this projectile deals 1d4 points of bludgeoning damage per caster level and 1 point of fire damage per caster level (maximum 10d4+10) to creatures and object within a 10-foot-radius burst, with a Reflex save for half.',
+				'Same as Lesser Simple except the range increases the medium, the maximum becomes 15d4+15, the area becomes a 40-foot-radius spread, creatures within a 30-foot-radius burst do not receive a save for half, and creatures within a 20-foot-radius burst must make a seperate Reflex save or be knocked prone and deafened for 1d4+1 rounds.',
+				'Same as Simple except the maximum becomes 20d4+20 and creatures within a 20-foot-radius burst that fail their save are deafened 1d4+1 minutes and stunned for 1d4+1 rounds.'
 			]),
 			quick_array([
 				'Luminance',
@@ -149,8 +149,8 @@
 			]),
 			quick_array([
 				'Satisfaction',
-				'',
-				'',
+				'Conjures a feast for up to 1 creature per caster level as ii/bountiful banquet/ii except as noted and that it can be made less elaborate all the way down to single wooden plates of food for each person.',
+				'Conjures a great feast as ii/heroes\'s feast/ii.',
 				''
 			]),
 			quick_array([
