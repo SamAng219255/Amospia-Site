@@ -30,6 +30,15 @@
 				]
 			],
 			[
+				'name' => 'Misc',
+				'children' => [
+					[
+						'name' => 'Hope Checks',
+						'link' => 'rules/hope_checks.php'
+					]
+				]
+			],
+			[
 				'name' => 'Optional Rule Systems',
 				'children' => [
 					[

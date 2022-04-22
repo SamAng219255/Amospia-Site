@@ -42,18 +42,32 @@
 		],
 		[
 			[
-				'',
-				'link' => '',
-				'',
-				'',
-				'',
-				'',
-				'',
-				'',
-				'',
-				'',
-				'',
-				''
+				'War Bow',
+				'link' => 'items/warbow.php',
+				'75 gp',
+				'Martial',
+				'Ranged',
+				'1d6',
+				'1d8',
+				'x3',
+				'100 ft.',
+				'3 lbs.',
+				'P',
+				'—'
+			],
+			[
+				'Composite War Bow',
+				'link' => 'items/warbow_composite.php',
+				'100 gp',
+				'Martial',
+				'Ranged',
+				'1d6',
+				'1d8',
+				'x3',
+				'110 ft.',
+				'3 lbs.',
+				'P',
+				'—'
 			]
 		]
 	);

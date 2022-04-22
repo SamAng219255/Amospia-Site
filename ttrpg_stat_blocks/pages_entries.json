@@ -1825,7 +1825,7 @@
 				"items",
 				"equipment"
 			],
-			"status": "empty"
+			"status": "done"
 		},
 		"special_materials": {
 			"display_name": "Special Materials",
@@ -3315,6 +3315,16 @@
 			],
 			"status": "done"
 		},
+		"hope_checks": {
+			"display_name": "Hope Checks",
+			"file_name": "hope_checks.php",
+			"directory": "pathfinder_1e/rules/",
+			"sort_path": [
+				"pathfinder_1e",
+				"rules"
+			],
+			"status": "done"
+		},
 		"siege_weapons": {
 			"display_name": "Siege Weapons",
 			"file_name": "siege_index.php",
@@ -3523,6 +3533,42 @@
 				"items",
 				"magic_items",
 				"wondrous"
+			],
+			"status": "done"
+		},
+		"hope_bow": {
+			"display_name": "Bow of the Hopeful Soul",
+			"file_name": "hope_bow.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"wondrous"
+			],
+			"status": "wip"
+		},
+		"warbow": {
+			"display_name": "War Bow",
+			"file_name": "warbow.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"weapons"
+			],
+			"status": "done"
+		},
+		"warbow_composite": {
+			"display_name": "Composite War Bow",
+			"file_name": "warbow_composite.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"weapons"
 			],
 			"status": "done"
 		},

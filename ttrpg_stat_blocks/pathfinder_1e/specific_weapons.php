@@ -98,6 +98,21 @@
 				'—',
 				'B',
 				'—'
+			],
+			[
+				'Bow of the Hopeful Soul',
+				'link' => 'items/hope_bow.php',
+				'88,000 gp',
+				'15th',
+				'Martial',
+				'Ranged',
+				'1d6+varies',
+				'1d8+varies',
+				'x3',
+				'100 ft.',
+				'2 lbs.',
+				'P',
+				'see text'
 			]
 		]
 	);

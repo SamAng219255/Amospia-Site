@@ -454,7 +454,7 @@
 			[
 				"title" => "Description",
 				"spaced" => false,
-				"texts" => quick_format($description)
+				"texts" => quick_array($description)
 			]
 		]);
 	}
@@ -470,7 +470,79 @@
 			$asfc,
 			$slow ? '20 ft./15 ft.' : '30 ft./20 ft.',
 			$proficiency,
-			is_array($description) ? $description : explode("\n", $description)
+			$description
+		);
+	}
+	function weaponBlock($name, $cost, $weight, $damage, $crit, $range, $type, $special, $category, $prof, $groups, $description) {
+		block($name, 'item', [], false, [
+			[
+				"title" => "Statistics",
+				"spaced" => false,
+				"texts" => quick_format([
+					"bb/Cost/bb {$cost}; bb/Weight/bb {$weight}",
+					"bb/Damage/bb {$damage}; bb/Critical/bb {$crit}; bb/Range/bb {$range}; bb/Type/bb {$type}; bb/Special/bb {$special}",
+					"bb/Category/bb {$category}; bb/Proficiency/bb {$prof}",
+					"bb/Weapon Groups/bb {$groups}"
+				])
+			],
+			[
+				"title" => "Description",
+				"spaced" => false,
+				"texts" => quick_array($description)
+			]
+		]);
+	}
+	function weaponBlockAuto($name, $cost, $weight, $damage, $crit, $range, $type, $special, $category, $prof, $groups, $description) {
+		global $dashes;
+		$dmgStr='';
+		if(is_array($damage)){
+			$first=true;
+			foreach ($damage as $size => $val) {
+				if($first)
+					$first=false;
+				else
+					$dmgStr.=', ';
+
+				$dmgStr.=$val.' ('.$size.')';
+			}
+		}
+		else
+			$dmgStr=$damage;
+		$rangeStr='';
+		$ranges=['Personal'=>'personal','Touch'=>'touch','Close'=>'close (25 ft. + 5 ft./2 levels)','Medium'=>'medium (100 ft. + 10 ft./level)','Long'=>'long (400 ft. + 40 ft./level)','Unlimited'=>'unlimited'];
+		if(isset($ranges[$range]))
+			$rangeStr=$ranges[$range];
+		elseif(is_numeric($range))
+			$rangeStr=$range.' ft.';
+		else
+			$rangeStr=$range;
+		$groupStr='';
+		if(is_array($groups)){
+			$first=true;
+			foreach ($groups as $group) {
+				if($first)
+					$first=false;
+				else
+					$groupStr.=', ';
+
+				$groupStr.=$group;
+			}
+		}
+		else
+			$groupStr=$groups;
+		weaponBlock(
+			$name,
+			in_array($cost,$dashes)?'—':(is_string($cost)?$cost:number_format($cost)." gp"),
+			in_array($weight,$dashes)?'—':(is_string($weight)?$weight:number_format($weight).($weight==1 ? " lb." : " lbs.")),
+			$dmgStr,
+			$crit,
+			$rangeStr,
+			$type,
+			$special,
+			$category,
+			$prof,
+			$groupStr,
+			$description
 		);
 	}
 	function raceBlock($name, $description, $raceTraits, $subraces=false, $traitsSections=false) {
