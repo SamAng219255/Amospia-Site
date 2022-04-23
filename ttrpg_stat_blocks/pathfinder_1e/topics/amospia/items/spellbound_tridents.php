@@ -31,23 +31,23 @@
 		[
 			quick_array([
 				'Air',
-				'',
-				'',
-				'',
+				'Creates a blast of fast moving air in a 30-foot-cone that otherwise functions as ii/hurricane blast/ii.',
+				'Allows the wielder to alter local winds as ii/control winds/ii except in a cylinder whose radius and height is equal to 50 feet per caster level.',
+				'Surrounds the wielder in a buffeting shroud of supernatural, tornado-force winds as ii/winds of vengeance/ii.',
 				'Spells with the Air descriptor.'
 			]),
 			quick_array([
 				'Fire',
 				'Launches a bead of flame that travels and explodes like ii/fireball/ii.',
 				'Launches a small controlled flame that swiftly travels up to long range to a location that you can see, potentially navigating around or through objects. Once it has arrived it erupts into a massive ball of flame like ii/fireball/ii except that area increases to a 40-foot-radius spread, the maximum damage increases to 20d6, a number of points of damage equal to your caster level ignore fire resistance and immunity, and it makes water and similar liquids in the area evaporate into steam and as such, it can be used underwater without issue.',
-				'Fires four controlled flames that function as ii/meteor swarm/ii except all the damage is fire damage, half of the damage dealt ignores fire resistance and immunity, and it destroys, melts, and evaporates objects as the simple version of the trident.',
+				'Fires four controlled flames that function as ii/meteor swarm/ii except all the damage is fire damage, half of the damage dealt (minimum of a number of points equal to your caster level) ignores fire resistance and immunity, and it destroys, melts, and evaporates objects as the simple version of the trident.',
 				'Spells with the Fire descriptor.'
 			]),
 			quick_array([
 				'Healing',
 				'Cures 1d8 points of damage to a touched creature plus 1d8 per two caster levels over first, maximum 5d8. This is a positive energy effect and deals damage to undead instead of curing them. Undead may make a Will save for half damage.',
 				'Restores the life of a touched creature. When used you choose whether it behaves as ii/heal/ii or ii/breath of life/ii.',
-				'Restores a creature to full hit points and cures all negative levels, ability drain, and conditions cured by the ii/heal/ii spell. Aditionally, if cast on a creature that has died within the last minute, they are successfully healed and restored to life. As this is a positive energy effect, undead creatures are instead instantly slain.',
+				'Restores a creature to full hit points and cures all negative levels, ability drain, and conditions cured by the ii/heal/ii spell. Additionally, if cast on a creature that has died within the last minute, they are successfully healed and restored to life. As this is a positive energy effect, undead creatures instead take 250 points of positive energy damage with a will save for half.',
 				'Spells of the Healing sub-school.'
 			]),
 			quick_array([
@@ -131,7 +131,7 @@
 		[
 			quick_array([
 				'Motion',
-				'',
+				'Speeds up a creature as per ii/haste/ii.',
 				'',
 				''
 			]),
@@ -143,7 +143,7 @@
 			]),
 			quick_array([
 				'Luminance',
-				'The wielder cause either the end of the trident or a touched object to glow as ii/daylight/ii or they can dispell darkness spells of 3rd level or lower.',
+				'The wielder can cause either the end of the trident or a touched object to glow as ii/daylight/ii or they can dispel darkness spells of 3rd level or lower.',
 				'',
 				''
 			]),
@@ -157,7 +157,95 @@
 				'Storm',
 				'Summons a 5-foot-wide, 30-foot-long, vertical bolt of lightning that deals 1d6 points of electricity damage, plus 1d6 per 2 levels over first, within medium range as designated by aiming the trident. Any creature in the target square or in the path of the bolt is affected and may make a reflex save to take half damage.',
 				'Summons a bolt of lightning from the tip of the trident as per the spell ii/lightning bolt/ii.',
-				'Summons an arc of lightning from the tip of the trident that bounces to nearby targets as per the spell ii/chain lightning/ii.'
+				'Summons a 360-ft.-radius storm cloud within long range that pelts the area with ii/dousing rain/ii. This cloud lasts for a number of rounds equal to your caster level and, immediately upon completion of the spell and once per round thereafter, you may call down a bolt of lightning as the simple version except it deals 9d10 points of damage instead.'
+			])
+		],
+		true,
+		true,
+		false
+	);
+	echo '<p><b>Base Anti-Elements</b></p>';
+	table(
+		[
+			'Element',
+			'Lesser Simple Trident',
+			'Simple Trident',
+			'Greater Simple Trident'
+		],
+		[
+			quick_array([
+				'Air',
+				'',
+				'',
+				''
+			]),
+			quick_array([
+				'Fire',
+				'Launches a bead of ice that travels and explodes like ii/fireball/ii except it deals cold damage instead and doesn\'t burn or melt anything.',
+				'Launches a small ice crystal that streaks from the tip of the trident and explodes like ii/freezing sphere/ii except that a number of points of damage equal to your caster level ignores cold resistance and cold immunity.',
+				'Fires four spheres of ice that function as ii/meteor swarm/ii except that it deals cold damage instead of fire damage, half of the cold damage dealt (minimum of a number of points equal to your caster level) ignores cold resistances and immunity, and it freezes nearby bodies of water like ii/freezing sphere/ii.'
+			]),
+			quick_array([
+				'Healing',
+				'Deals 1d8 points of negative energy damage to a touched creature plus 1d8 per two caster levels over first, maximum 5d8. This is a negative energy effect and deals damage to undead instead of curing them. Non-undead may make a Will save for half damage.',
+				'Infuses the touched creature with necromantic energy. When used you choose whether it behaves as ii/harm/ii or ii/breath of life/ii with the exception that restores with negative energy and cures and can restore undead and damages and cannot restore living targets.',
+				'Deals 250 points of negative energy damage to a touched creature, Will save for half. Restores an undead creature to full hit points and cures all conditions cured by the ii/heal/ii spell plus negative levels and ability drain if they have any. Additionally, if cast on an undead creature that has been destroyed within the last minute, they are restored and returned to full hit points.'
+			]),
+			quick_array([
+				'Luck',
+				'',
+				'',
+				''
+			]),
+			quick_array([
+				'Water',
+				'',
+				'',
+				''
+			])
+		],
+		true,
+		true,
+		false
+	);
+	echo '<p><b>Corrupt Anti-Elements</b></p>';
+	table(
+		[
+			'Element',
+			'Lesser Simple Trident',
+			'Simple Trident',
+			'Greater Simple Trident'
+		],
+		[
+			quick_array([
+				'Motion',
+				'Slows a creature as per ii/slow/ii.',
+				'',
+				''
+			]),
+			quick_array([
+				'Explosion',
+				'',
+				'Causes a corporeal creature within close range to collapse in on itself, inflicting 10 points of damage per caster level.',
+				'Causes a number of corporeal creatures equal to your caster level and that are within close range to implode, inflicting 10 points of damage per caster level to each of them.'
+			]),
+			quick_array([
+				'Luminance',
+				'The wielder can cause either the end of the trident or a touched object to emit magical arkness as ii/deeper darkness/ii or they can dispel light spells of 3rd level or lower.',
+				'',
+				''
+			]),
+			quick_array([
+				'Satisfaction',
+				'Makes a target incredibly hungry as ii/feast of ashes/ii.',
+				'Inflicts the target with even greater hunger. In addition to the effects of ii/feast of ashes/ii, the target\'s hunger is so intense that any creature can offer the target food as a standard action and the target is compelled to eat it, as if the creature offering it had cast ii/beguiling gift/ii. These effects can also inflict more nonlethal damage than the target has hit points.',
+				'The effects have become dangerously potent, in addition to the effects of a normal simple trident, the affected creature starves at a faster rate. Each day, they must roll two constitution checks each day. Each check increases the DCs of all following checks and each failed check does another 1d6 points of nonlethal damage.'
+			]),
+			quick_array([
+				'Storm',
+				'Grants nearby creatures resistance to electricity. For the next 10 minutes per caster level, all creatures within 10 feet of the caster gain the benefits of ii/resist energy/ii.',
+				'Can cause the weather in a 2-mile-radius circle, centered on you, to become calm and clear; changing the temperature to the baseline, removing precipitation, reducing wind strength to light, and reducing the cloud cover to none. As well as removing severe events.',
+				''
 			])
 		],
 		true,
