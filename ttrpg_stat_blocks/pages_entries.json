@@ -4626,14 +4626,17 @@
 			],
 			"status": "done"
 		},
-		"beast_hide": {
-			"display_name": "Beast Knight",
-			"file_name": "beast_hide.php",
-			"directory": "pathfinder_1e/classes/",
+		"drakheim": {
+			"display_name": "Drakheim",
+			"file_name": "drakheim.php",
+			"directory": "pathfinder_1e/topics/amospia/planes/",
 			"sort_path": [
 				"pathfinder_1e",
-				"classes"
+				"topics",
+				"amospia",
+				"planes_am"
 			],
+			"setting": "amospia",
 			"status": "wip"
 		}
 	}
