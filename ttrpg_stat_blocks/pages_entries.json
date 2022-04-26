@@ -1814,7 +1814,7 @@
 				"items",
 				"equipment"
 			],
-			"status": "empty"
+			"status": "done"
 		},
 		"weapons": {
 			"display_name": "Weapons",
@@ -3572,6 +3572,18 @@
 			],
 			"status": "done"
 		},
+		"brigandine": {
+			"display_name": "Brigandine",
+			"file_name": "brigandine.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"armor"
+			],
+			"status": "done"
+		},
 		"races": {
 			"display_name": "Races",
 			"file_name": "races_index.php",
@@ -4613,6 +4625,16 @@
 				"adv_alchemy"
 			],
 			"status": "done"
+		},
+		"beast_hide": {
+			"display_name": "Beast Knight",
+			"file_name": "beast_hide.php",
+			"directory": "pathfinder_1e/classes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"classes"
+			],
+			"status": "wip"
 		}
 	}
 }

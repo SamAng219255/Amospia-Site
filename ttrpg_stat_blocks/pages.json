@@ -7,6 +7,18 @@
 			"type": "branch",
 			"nodes": [
 				{
+					"name": "classes",
+					"display_name": "Classes",
+					"type": "branch",
+					"nodes": [
+						{
+							"name": "beast_hide",
+							"display_name": "Beast Knight",
+							"type": "leaf"
+						}
+					]
+				},
+				{
 					"name": "deities",
 					"display_name": "Deities",
 					"type": "leaf"

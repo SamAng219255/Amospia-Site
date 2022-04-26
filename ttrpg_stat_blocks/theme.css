@@ -153,6 +153,28 @@ tr:nth-child(odd) {
 td, th {
 	padding: 0.25em;
 }
+table.class-features, table.class-features th, table.class-features td {
+	border-width: 2px;
+	border-color: white;
+	color: #ffffff;
+	vertical-align: middle;
+}
+table.class-features tr {
+	background-color: #404040;
+}
+table.class-features tr:nth-child(odd) {
+	background-color: #101010;
+}
+body.light table.class-features, body.light table.class-features th, body.light table.class-features td {
+	border-color: black;
+	color: #000000;
+}
+body.light table.class-features tr {
+	background-color: #808080;
+}
+body.light table.class-features tr:nth-child(odd) {
+	background-color: #c0c0c0;
+}
 ul.menu-vertical {
 	list-style-type: none;
 	padding: 0;
@@ -308,12 +330,12 @@ body.light .block:not(.block-sf) .block-title, body.light h1, body.light h2 {
 	background-color: #9A0800;
 	color: #f0f0ff;
 }
-.block-section-title, h3 {
+.block-section-title, h3:not(.alt) {
 	border-style: solid none;
 	font-weight: bold;
 	margin-bottom: 0.25em;
 }
-.block-section-title-alt {
+.block-section-title-alt, h3.alt {
 	background-color: #a47800;
 	color: #000000;
 	padding: 0 0.25em;

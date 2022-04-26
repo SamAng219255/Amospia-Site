@@ -1526,6 +1526,110 @@
 	function advAlchemyRocketBlock($name, $descriptors, $level, $ignitionTime, $rangeIncr, $maxRange, $duration, $save, $desc) {
 		advAlchemyBlock($name, 'Rocket', $descriptors, $level, ['Activation Time' => $ignitionTime, ['Range Increment' => $rangeIncr, 'Max Range' => $maxRange]], $duration, $save, $desc);
 	}
+	function classBlock($name, $desc, $role, $align, $hd, $startWealth, $classSkills, $skillsPerLevel, $bab, $saves, $specials, $spells, $spellsSecondary, $features) {
+		echo '<h2>'.$name.'</h2>';
+		echo '<p class="spaced">'.$desc.'</p>';
+		echo '<p class="spaced"><b>Role</b>: '.$role.'</p>';
+		echo '<p><b>Alignment</b>: '.$align.'.</p>';
+		echo '<p><b>Hit Die</b>: '.(is_string($hd)?$hd:'d'.$hd).'.</p>';
+		echo '<p><b>Starting Wealth</b>: '.(is_string($startWealth)?$startWealth:$startWealth.'d6 x 10 gp (average '.($startWealth*35).' gp)').'.</p>';
+		echo '<h3 class="alt">Class Skills</h3>';
+		$skillsTxt='';
+		$skillAbilities=[
+			'Acrobatics' => 'Dex',
+			'Appraise' => 'Int',
+			'Bluff' => 'Cha',
+			'Climb' => 'Str',
+			'Craft' => 'Int',
+			'Diplomacy' => 'Cha',
+			'Disable Device' => 'Cha',
+			'Disguise' => 'Cha',
+			'Escape Artist' => 'Dex',
+			'Fly' => 'Dex',
+			'Handle Animal' => 'Cha',
+			'Heal' => 'Wis',
+			'Intimidate' => 'Cha',
+			'Knowledge' => 'Int',
+			'Linguistics' => 'Int',
+			'Perception' => 'Wis',
+			'Perform' => 'Cha',
+			'Profession' => 'Wis',
+			'Ride' => 'Dex',
+			'Sense Motive' => 'Wis',
+			'Sleight of Hand' => 'Dex',
+			'Spellcraft' => 'Int',
+			'Stealth' => 'Dex',
+			'Survival' => 'Wis',
+			'Swim' => 'Str',
+			'Use Magic Device' => 'Cha' 
+		];
+		$andInd=count($classSkills)-1;
+		$first=true;
+		foreach ($classSkills as $ind=>$skill) {
+			if($first)
+				$first=false;
+			elseif($ind==$andInd)
+				$skillsTxt.=', and ';
+			else
+				$skillsTxt.=', ';
+			$skillsTxt.=$skill.' '.(isset($skillAbilities[$skill])?'('.$skillAbilities[$skill].')':(str_starts_with($skill,'Knowledge')?'(Int)':''));
+		}
+		echo '<p>The '.$name.'\'s class skills are '.$skillsTxt.'.</p>';
+		echo '<p><b>Skill Points at each Level</b>: '.$skillsPerLevel.' + Int modifier.</p>';
+		echo '<h3 class="alt">Class Features</h3>';
+		$perDayRow='';
+		$spellLevels='';
+		$spellCounts=['','','','','','','','','','','','','','','','','','','',''];
+		if($spells!==false) {
+			$levelCount=0;
+			foreach($spells as $level => $spellCount) {
+				$spellLevels.='<th>'.$level.ordinalSuffix($level).'</th>';
+				$levelCount++;
+				for($i=0; $i<20; $i++) {
+					$spellCounts[$i].='<td>'.($spellCount[$i]===0?'—':$spellCount[$i]).'</td>';
+				}
+			}
+			$perDayRow='<tr><th colspan="6"></th><th colspan="'.$levelCount.'">Spells Per Day</th></tr>';
+		}
+		echo '<table class="class-features no-sort">'.$perDayRow.'<tr><th>Level</th><th>Base Attack Bonus</th><th>Fort Save</th><th>Ref Save</th><th>Will Save</th><th>Special</th>'.$spellLevels.'</tr>';
+		for($i=0; $i<20; $i++) {
+			$level=$i+1;
+			echo '<tr>';
+			echo '<td>'.$level.ordinalSuffix($level).'</td>';
+			$babTxt='';
+			$tmpBab=floor($bab*$level);
+			$first=true;
+			do {
+				if($first)
+					$first=false;
+				else
+					$babTxt.='/';
+				$babTxt.='+'.$tmpBab;
+				$tmpBab-=5;
+			}
+			while($tmpBab>0);
+			echo '<td>'.$babTxt.'</td>';
+			echo '<td>'.($saves['fort']=='good' ? floor($level/2)+2 : floor($level/3)).'</td>';
+			echo '<td>'.($saves['refl']=='good' ? floor($level/2)+2 : floor($level/3)).'</td>';
+			echo '<td>'.($saves['will']=='good' ? floor($level/2)+2 : floor($level/3)).'</td>';
+			echo '<td>'.$specials[$i].'</td>';
+			echo $spellCounts[$i];
+			echo '</tr>';
+		}
+		echo '</table>';
+		foreach ($features as $feature => $texts) {
+			$ftexts=quick_array($texts);
+			$first=true;
+			foreach ($ftexts as $text) {
+				echo '<p class="spaced">';
+				if($first) {
+					$first=false;
+					echo '<b>'.$feature.'</b>: ';
+				}
+				echo $text.'</p>';
+			}
+		}
+	}
 	function item2eBlock($name, $level=false, $rarity="Common", $traits=[], $price=false, $hands=false, $usage=false, $bulk=0, $activate=false, $description=[], $variations=[]) {
 		$compTraits=quick_format($traits);
 		if($rarity!='Common')
