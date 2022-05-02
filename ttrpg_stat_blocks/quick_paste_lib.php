@@ -72,6 +72,13 @@
 				$str=preg_replace('/ ?\/ab/', '</a>', $str, 1);
 			}
 		}
+		$matches=[];
+		if(preg_match_all('/li\/(.+?)\|/', $str, $matches)) {
+			foreach ($matches[1] as $match) {
+				$str=preg_replace('/li\/(.+?)\|/', '<a href="'.$match.'" target="_blank">', $str, 1);
+				$str=preg_replace('/ ?\/li/', '</a>', $str, 1);
+			}
+		}
 	}
 	function quick_format_string($subject) {
 		$str=$subject;

@@ -685,8 +685,33 @@
 									"type": "branch",
 									"nodes": [
 										{
+											"name": "aquatica",
+											"display_name": "Aquatica",
+											"type": "leaf"
+										},
+										{
 											"name": "drakheim",
 											"display_name": "Drakheim",
+											"type": "leaf"
+										},
+										{
+											"name": "smaragdia",
+											"display_name": "Smaragdia",
+											"type": "leaf"
+										},
+										{
+											"name": "sulaheim",
+											"display_name": "Sulaheim",
+											"type": "leaf"
+										},
+										{
+											"name": "swammaheim",
+											"display_name": "Swammaheim",
+											"type": "leaf"
+										},
+										{
+											"name": "terragri",
+											"display_name": "Terragri",
 											"type": "leaf"
 										}
 									]

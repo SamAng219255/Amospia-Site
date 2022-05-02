@@ -4637,6 +4637,71 @@
 				"planes_am"
 			],
 			"setting": "amospia",
+			"status": "done"
+		},
+		"swammaheim": {
+			"display_name": "Swammaheim",
+			"file_name": "swammaheim.php",
+			"directory": "pathfinder_1e/topics/amospia/planes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"planes_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"sulaheim": {
+			"display_name": "Sulaheim",
+			"file_name": "sulaheim.php",
+			"directory": "pathfinder_1e/topics/amospia/planes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"planes_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"aquatica": {
+			"display_name": "Aquatica",
+			"file_name": "aquatica.php",
+			"directory": "pathfinder_1e/topics/amospia/planes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"planes_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"terragri": {
+			"display_name": "Terragri",
+			"file_name": "terragri.php",
+			"directory": "pathfinder_1e/topics/amospia/planes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"planes_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"smaragdia": {
+			"display_name": "Smaragdia",
+			"file_name": "smaragdia.php",
+			"directory": "pathfinder_1e/topics/amospia/planes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"planes_am"
+			],
+			"setting": "amospia",
 			"status": "wip"
 		}
 	}
