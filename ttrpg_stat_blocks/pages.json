@@ -291,6 +291,155 @@
 					"type": "limb",
 					"nodes": [
 						{
+							"name": "cosmere",
+							"display_name": "Cosmere",
+							"type": "limb",
+							"nodes": [
+								{
+									"name": "equipment_cosm",
+									"display_name": "Equipment",
+									"type": "branch",
+									"nodes": [
+										{
+											"name": "weapons_cosm",
+											"display_name": "Weapons",
+											"type": "leaf"
+										},
+										{
+											"name": "armor_cosm",
+											"display_name": "Armor",
+											"type": "leaf"
+										},
+										{
+											"name": "special_materials_cosm",
+											"display_name": "Special Materials",
+											"type": "leaf"
+										},
+										{
+											"name": "misc_equip_cosm",
+											"display_name": "Miscellaneous",
+											"type": "leaf"
+										}
+									]
+								},
+								{
+									"name": "feats_cosm",
+									"display_name": "Feats",
+									"type": "leaf"
+								},
+								{
+									"name": "magic_items_cosm",
+									"display_name": "Magic Items",
+									"type": "branch",
+									"nodes": [
+										{
+											"name": "artifacts_cosm",
+											"display_name": "Artifacts",
+											"type": "branch",
+											"nodes": [
+											]
+										},
+										{
+											"name": "magic_armor_cosm",
+											"display_name": "Armor",
+											"type": "branch",
+											"nodes": [
+												{
+													"name": "armor_qualities_cosm",
+													"display_name": "Armor Qualities",
+													"type": "leaf"
+												},
+												{
+													"name": "shield_qualities_cosm",
+													"display_name": "Shield Qualities",
+													"type": "leaf"
+												},
+												{
+													"name": "specific_armors_cosm",
+													"display_name": "Specific Magic Armor",
+													"type": "leaf"
+												}
+											]
+										},
+										{
+											"name": "magic_weapons_cosm",
+											"display_name": "Weapons",
+											"type": "branch",
+											"nodes": [
+												{
+													"name": "melee_qualities_cosm",
+													"display_name": "Melee Weapon Qualities",
+													"type": "leaf"
+												},
+												{
+													"name": "ranged_qualities_cosm",
+													"display_name": "Ranged Weapon Qualities",
+													"type": "leaf"
+												},
+												{
+													"name": "specific_weapons_cosm",
+													"display_name": "Specific Magic Weapons",
+													"type": "leaf"
+												}
+											]
+										},
+										{
+											"name": "wondrous_cosm",
+											"display_name": "Wondrous Items",
+											"type": "leaf"
+										}
+									]
+								},
+								{
+									"name": "monsters_cosm",
+									"display_name": "Monsters",
+									"petal_display_name": "Monsters Index",
+									"type": "flower",
+									"nodes": [
+										{
+											"name": "npcs_cosm",
+											"display_name": "NPCs",
+											"type": "petal"
+										},
+										{
+											"name": "templates_cosm",
+											"display_name": "Templates",
+											"type": "petal"
+										}
+									]
+								},
+								{
+									"name": "planes_cosm",
+									"display_name": "Planes",
+									"type": "branch",
+									"nodes": [
+									]
+								},
+								{
+									"name": "races_cosm",
+									"display_name": "Races",
+									"type": "leaf"
+								},
+								{
+									"name": "rules_cosm",
+									"display_name": "Rules",
+									"type": "leaf"
+								},
+								{
+									"name": "skills_cosm",
+									"display_name": "Skills",
+									"type": "branch",
+									"nodes": [
+										{
+											"name": "knowledge_cosm",
+											"display_name": "Knowledge",
+											"type": "leaf"
+										}
+									]
+								}
+							]
+						},
+						{
 							"name": "minecraft",
 							"display_name": "Minecraft",
 							"type": "limb",

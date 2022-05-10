@@ -4703,6 +4703,411 @@
 			],
 			"setting": "amospia",
 			"status": "wip"
+		},
+		"cosmere": {
+			"display_name": "Cosmere",
+			"file_name": "cosmere.php",
+			"directory": "pathfinder_1e/topics/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics"
+			],
+			"setting": "cosmere",
+			"status": "wip"
+		},
+		"weapons_cosm": {
+			"display_name": "Weapons",
+			"file_name": "weapons.php",
+			"directory": "pathfinder_1e/topics/cosmere/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"equipment_cosm"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"armor_cosm": {
+			"display_name": "Armor",
+			"file_name": "armor.php",
+			"directory": "pathfinder_1e/topics/cosmere/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"equipment_cosm"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"special_materials_cosm": {
+			"display_name": "Special Materials",
+			"file_name": "special_materials.php",
+			"directory": "pathfinder_1e/topics/cosmere/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"equipment_cosm"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"misc_equip_cosm": {
+			"display_name": "Miscellaneous",
+			"file_name": "misc_equip.php",
+			"directory": "pathfinder_1e/topics/cosmere/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"equipment_cosm"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"armor_qualities_cosm": {
+			"display_name": "Armor Qualities",
+			"file_name": "armor_qualities.php",
+			"directory": "pathfinder_1e/topics/cosmere/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"magic_items_cosm",
+				"magic_armor_cosm"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"shield_qualities_cosm": {
+			"display_name": "Shield Qualities",
+			"file_name": "shield_qualities.php",
+			"directory": "pathfinder_1e/topics/cosmere/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"magic_items_cosm",
+				"magic_armor_cosm"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"specific_armors_cosm": {
+			"display_name": "Specific Magic Armors",
+			"file_name": "specific_armors.php",
+			"directory": "pathfinder_1e/topics/cosmere/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"magic_items_cosm",
+				"magic_armor_cosm"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"melee_qualities_cosm": {
+			"display_name": "Melee Weapon Qualities",
+			"file_name": "melee_qualities.php",
+			"directory": "pathfinder_1e/topics/cosmere/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"magic_items_cosm",
+				"magic_weapons_cosm"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"ranged_qualities_cosm": {
+			"display_name": "Ranged Weapon Qualities",
+			"file_name": "ranged_qualities.php",
+			"directory": "pathfinder_1e/topics/cosmere/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"magic_items_cosm",
+				"magic_weapons_cosm"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"specific_weapons_cosm": {
+			"display_name": "Specific Magic Weapons",
+			"file_name": "specific_weapons.php",
+			"directory": "pathfinder_1e/topics/cosmere/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"magic_items_cosm",
+				"magic_weapons_cosm"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"wondrous_cosm": {
+			"display_name": "Wondrous Items",
+			"file_name": "wondrous.php",
+			"directory": "pathfinder_1e/topics/cosmere/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"magic_items_cosm"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"monsters_cosm": {
+			"display_name": "Monsters Index",
+			"file_name": "monsters.php",
+			"directory": "pathfinder_1e/topics/cosmere/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"npcs_cosm": {
+			"display_name": "NPCs",
+			"file_name": "npcs.php",
+			"directory": "pathfinder_1e/topics/cosmere/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"monsters_cosm"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"templates_cosm": {
+			"display_name": "Templates",
+			"file_name": "templates.php",
+			"directory": "pathfinder_1e/topics/cosmere/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"monsters_cosm"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"races_cosm": {
+			"display_name": "Races",
+			"file_name": "races_index.php",
+			"directory": "pathfinder_1e/topics/cosmere/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"rules_cosm": {
+			"display_name": "Rules",
+			"file_name": "rules.php",
+			"directory": "pathfinder_1e/topics/cosmere/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"general_rules_cosm": {
+			"display_name": "General Rules",
+			"file_name": "general.php",
+			"directory": "pathfinder_1e/topics/cosmere/rules/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"rules_cosm"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feats_cosm": {
+			"display_name": "Feats",
+			"file_name": "feats.php",
+			"directory": "pathfinder_1e/topics/cosmere/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"hemalurgic_constructs_cosm": {
+			"display_name": "Craft Hemalurgic Construct",
+			"file_name": "hemalurgic_constructs.php",
+			"directory": "pathfinder_1e/topics/cosmere/feats/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"feats_cosm"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"knowledge_cosm": {
+			"display_name": "Knowledge",
+			"file_name": "knowledge.php",
+			"directory": "pathfinder_1e/topics/cosmere/skills/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"skills_cosm"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"metallic": {
+			"display_name": "Hemalurgy",
+			"file_name": "hemalurgy.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"hemalurgy": {
+			"display_name": "Hemalurgy",
+			"file_name": "hemalurgy.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"steel_inquisitor": {
+			"display_name": "Steel Inquisitor",
+			"file_name": "steel_inquisitor.php",
+			"directory": "pathfinder_1e/topics/cosmere/monsters/templates/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"monsters_cosm",
+				"templates_cosm"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"koloss": {
+			"display_name": "Koloss",
+			"file_name": "koloss.php",
+			"directory": "pathfinder_1e/topics/cosmere/monsters/templates/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"monsters_cosm",
+				"templates_cosm"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"lifeless": {
+			"display_name": "Lifeless",
+			"file_name": "lifeless.php",
+			"directory": "pathfinder_1e/topics/cosmere/monsters/templates/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"monsters_cosm",
+				"templates_cosm"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"steel_inquisitor_block": {
+			"display_name": "Lifeless",
+			"file_name": "steel_inquisitor.php",
+			"directory": "pathfinder_1e/topics/cosmere/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"monsters_cosm"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"koloss_block": {
+			"display_name": "Lifeless",
+			"file_name": "koloss.php",
+			"directory": "pathfinder_1e/topics/cosmere/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"monsters_cosm"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"lifeless_block": {
+			"display_name": "Lifeless",
+			"file_name": "lifeless.php",
+			"directory": "pathfinder_1e/topics/cosmere/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"monsters_cosm"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"stone_lifeless_block": {
+			"display_name": "Stone Lifeless",
+			"file_name": "stone_lifeless.php",
+			"directory": "pathfinder_1e/topics/cosmere/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"monsters_cosm"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"kandra": {
+			"display_name": "Kandra",
+			"file_name": "kandra.php",
+			"directory": "pathfinder_1e/topics/cosmere/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"monsters_cosm"
+			],
+			"setting": "cosmere",
+			"status": "done"
 		}
 	}
 }
