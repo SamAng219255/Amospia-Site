@@ -7,50 +7,56 @@ sortStatus={};
 sort=false;
 sortColumn=0;
 
-function comp(a,b) {
-	const A=a.toString();
-	const B=b.toString();
-	let numA=A.replaceAll(',','');
-	let numB=B.replaceAll(',','');
-	let fractionMatch;
-	let diceMatches;
-	let nextDiceMatch;
-	nextDiceMatch=(diceMatches=numA.matchAll(/(\d+)d(\d+)/g)).next();
+bonusFunc=function(x){return x*x*2000;};
+function parseNumber(x) {
+	const numA=x.replaceAll(',','').replaceAll('\xa0',' ');
+	const diceMatches=numA.matchAll(/(\d+)d(\d+)/g);
+	const nextDiceMatch=diceMatches.next();
+	const fractionMatch=numA.match(/^[+-]? ?(\d+) ?\/ ?(\d+)/);
+	const bonusMatch=numA.match(/((?:\+|-)\d) bonus/);
+	const spFractionMatch=numA.match(/^[+-]? ?(\d+) ?\/ ?(\d+) sp/);
+	const cpFractionMatch=numA.match(/^[+-]? ?(\d+) ?\/ ?(\d+) cp/);
+	const spMatch=numA.match(/^((?:\+|-)?\d(?:\.\d+)?) sp/);
+	const cpMatch=numA.match(/^((?:\+|-)?\d(?:\.\d+)?) cp/);
 	if(numA==='—')
-		numA=0;
+		return 0;
 	else if(numA==='L')
-		numA=0.1;
+		return 0.1;
 	else if(numA.startsWith('0x'))
-		numA=parseInt(numA);
+		return parseInt(numA);
 	else if(!nextDiceMatch.done) {
-		numA=0;
+		let total=0;
 		do {
 			numA+=parseInt(nextDiceMatch.value[1])*(1+parseInt(nextDiceMatch.value[2]))/2;
 		}
 		while(!(nextDiceMatch=diceMatches.next()).done);
+		return total;
 	}
-	else if(fractionMatch=numA.match(/^[+-]? ?(\d+) ?\/ ?(\d+)/))
-		numA=parseInt(fractionMatch[1])/parseInt(fractionMatch[2]);
-	else
-		numA=parseInt(numA);
-	nextDiceMatch=(diceMatches=numB.matchAll(/(\d+)d(\d+)/g)).next();
-	if(numB==='—')
-		numB=0;
-	else if(numB==='L')
-		numB=0.1;
-	else if(numB.startsWith('0x'))
-		numB=parseInt(numB);
-	else if(!nextDiceMatch.done) {
-		numB=0;
-		do {
-			numB+=parseInt(nextDiceMatch.value[1])*(1+parseInt(nextDiceMatch.value[2]))/2;
-		}
-		while(!(nextDiceMatch=diceMatches.next()).done);
+	else if(spFractionMatch) {
+		return parseInt(spFractionMatch[1])/parseInt(spFractionMatch[2])/10;
 	}
-	else if(fractionMatch=numB.match(/^[+-]? ?(\d+) ?\/ ?(\d+)/))
-		numB=parseInt(fractionMatch[1])/parseInt(fractionMatch[2]);
+	else if(cpFractionMatch) {
+		return parseInt(cpFractionMatch[1])/parseInt(cpFractionMatch[2])/100;
+	}
+	else if(fractionMatch)
+		return parseInt(fractionMatch[1])/parseInt(fractionMatch[2]);
+	else if(bonusMatch) {
+		return bonusFunc(parseInt(bonusMatch[1]));
+	}
+	else if(spMatch) {
+		return parseFloat(spMatch[1])/10;
+	}
+	else if(cpMatch) {
+		return parseFloat(cpMatch[1])/100;
+	}
 	else
-		numB=parseInt(numB);
+		return parseFloat(numA);
+}
+function comp(a,b) {
+	const A=a.toString();
+	const B=b.toString();
+	let numA=parseNumber(A);
+	let numB=parseNumber(B);
 	if(isNaN(numA) || isNaN(numB)) {
 		let trimmedA=A.trim().toLowerCase();
 		let trimmedB=B.trim().toLowerCase();

@@ -1989,7 +1989,7 @@
 			$varnts
 		);
 	}
-	function sTable($headers, $rows, $horizontal=true, $expand=true, $allowSort=true, $inline=true) {
+	function sTable($headers, $rows, $horizontal=true, $expand=true, $allowSort=true, $inline=false) {
 		$classes='';
 		if($expand)
 			$classes.=($classes===''?'':' ').'expand';
@@ -2048,7 +2048,7 @@
 		$str .= '</table>';
 		return $str;
 	}
-	function table($headers, $rows, $horizontal=true, $expand=true, $allowSort=true, $inline=true) {
+	function table($headers, $rows, $horizontal=true, $expand=true, $allowSort=true, $inline=false) {
 		echo sTable($headers, $rows, $horizontal, $expand, $allowSort, $inline);
 	}
 	function contents($items, $custom_title=false, $primary=true) {

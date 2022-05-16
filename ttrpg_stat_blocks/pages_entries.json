@@ -4626,6 +4626,16 @@
 			],
 			"status": "done"
 		},
+		"beast_hide": {
+			"display_name": "Beast Knight",
+			"file_name": "beast_hide.php",
+			"directory": "pathfinder_1e/classes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"classes"
+			],
+			"status": "done"
+		},
 		"drakheim": {
 			"display_name": "Drakheim",
 			"file_name": "drakheim.php",
@@ -4717,7 +4727,7 @@
 		},
 		"weapons_cosm": {
 			"display_name": "Weapons",
-			"file_name": "weapons.php",
+			"file_name": "weapons_index.php",
 			"directory": "pathfinder_1e/topics/cosmere/",
 			"sort_path": [
 				"pathfinder_1e",
@@ -4726,11 +4736,11 @@
 				"equipment_cosm"
 			],
 			"setting": "cosmere",
-			"status": "done"
+			"status": "empty"
 		},
 		"armor_cosm": {
 			"display_name": "Armor",
-			"file_name": "armor.php",
+			"file_name": "armor_index.php",
 			"directory": "pathfinder_1e/topics/cosmere/",
 			"sort_path": [
 				"pathfinder_1e",
@@ -4739,11 +4749,11 @@
 				"equipment_cosm"
 			],
 			"setting": "cosmere",
-			"status": "done"
+			"status": "empty"
 		},
 		"special_materials_cosm": {
 			"display_name": "Special Materials",
-			"file_name": "special_materials.php",
+			"file_name": "materials.php",
 			"directory": "pathfinder_1e/topics/cosmere/",
 			"sort_path": [
 				"pathfinder_1e",
@@ -4765,7 +4775,7 @@
 				"equipment_cosm"
 			],
 			"setting": "cosmere",
-			"status": "done"
+			"status": "empty"
 		},
 		"armor_qualities_cosm": {
 			"display_name": "Armor Qualities",
@@ -4977,14 +4987,40 @@
 			"setting": "cosmere",
 			"status": "done"
 		},
-		"metallic": {
-			"display_name": "Hemalurgy",
-			"file_name": "hemalurgy.php",
-			"directory": "pathfinder_1e/topics/cosmere/metallic/",
+		"metallic_arts": {
+			"display_name": "Metallic Arts",
+			"file_name": "metallic_arts.php",
+			"directory": "pathfinder_1e/topics/cosmere/",
 			"sort_path": [
 				"pathfinder_1e",
 				"topics",
 				"cosmere"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allomancy": {
+			"display_name": "Allomancy",
+			"file_name": "allomancy.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feruchemy": {
+			"display_name": "Feruchemy",
+			"file_name": "feruchemy.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic"
 			],
 			"setting": "cosmere",
 			"status": "done"
@@ -5105,6 +5141,19 @@
 				"topics",
 				"cosmere",
 				"monsters_cosm"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"metals_cosm": {
+			"display_name": "Metal",
+			"file_name": "metals.php",
+			"directory": "pathfinder_1e/topics/cosmere/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"equipment_cosm"
 			],
 			"setting": "cosmere",
 			"status": "done"

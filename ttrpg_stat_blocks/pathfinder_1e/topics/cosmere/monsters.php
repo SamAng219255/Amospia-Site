@@ -37,6 +37,13 @@
 				'TODO',
 				'construct',
 				'any'
+			],
+			[
+				'True Spren',
+				'link' => 'monsters/stone_lifeless.php',
+				'TODO',
+				'outsider',
+				'Roshar in the Cognitive Realm'
 			]
 		]
 	);

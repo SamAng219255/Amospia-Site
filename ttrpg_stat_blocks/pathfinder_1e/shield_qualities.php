@@ -10,8 +10,8 @@
 		}
 	}
 ?>
-<title>Shield Qualities</title>
 <script>
+	bonusFunc=function(x){return x*x*1000;};
 	bonusRegEx=/(?:((?:\+|-)\d) bonus|((?:\+|-)\d{1,3}(?:,\d{3})*) gp)/;
 	initialSort=true;
 	initialSortFunc=function(a,b) {

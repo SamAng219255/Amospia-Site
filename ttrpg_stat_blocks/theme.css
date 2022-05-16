@@ -84,7 +84,7 @@ span.subtitle {
 	position: fixed;
 	top: 0;
 	left: 0;
-	min-width: 10em;
+	min-width: 11em;
 	width: 20vw;
 	max-width: 3in;
 	height: 100vh;
@@ -566,6 +566,70 @@ input:checked + .slider:before {
 #wip-note>*:before {
 	content: "WIP ";
 	font-size: 2em;
+}
+
+@media (max-aspect-ratio: 1) {
+	#sidebar {
+		display: block;
+		visibility: hidden;
+		min-width: unset;
+		width: 100vw;
+		min-height: 100vh;
+		overflow-y: scroll;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		padding-bottom: 30px;
+		animation-name: slide-on;
+		transform: translate(-100vw, 0);
+	}
+	body.small-secondary #sidebar {
+		transition: transform 0.25s ease-in-out, visibility 0s linear 0.25s;
+	}
+	body.small-secondary #sidebar.open {
+		visibility: visible;
+		transform: translate(0, 0);
+		transition: transform 0.25s ease-in-out;
+	}
+	#sidebar-label {
+		padding-top: 0;
+	}
+	#center {
+		right: 2.5rem;
+		max-width: unset;
+		width: calc(100vw - 5rem);
+		min-width: unset;
+	}
+	#menu-open, #menu-close {
+		display: block;
+		cursor: pointer;
+	}
+	#menu-open {
+		width: 0.333in;
+		height: 0.333in;
+		margin: 2.5rem 2.5rem 1.25rem 0rem;
+		background: linear-gradient(to bottom, #fff 0%, #fff 20%, transparent 20%, transparent 40%, #fff 40%, #fff 60%, transparent 60%, transparent 80%, #fff 80%, #fff 100%);
+		-webkit-transition: background .4s;
+		transition: background .4s;
+	}
+	body.light #menu-open {
+		background: linear-gradient(to bottom, #000 0%, #000 20%, transparent 20%, transparent 40%, #000 40%, #000 60%, transparent 60%, transparent 80%, #000 80%, #000 100%);
+	}
+	#menu-close {
+		width: 0.3in;
+		height: 0.3in;
+		margin: 1.25rem 1.25rem 0.625rem;
+		background: 
+			linear-gradient(140deg, transparent 0%, transparent 20%, #000 20%, #000 34.5%, transparent 34.5%, transparent 100%),
+			linear-gradient( 40deg, transparent 0%, transparent 20%, #000 20%, #000 34.5%, transparent 34.5%, transparent 100%),
+			linear-gradient(to bottom, transparent 0%, transparent 40%, #000 40%, #000 60%, transparent 60%, transparent 100%);
+			/*linear-gradient(to bottom right, transparent 0%, transparent 43%, #000 43%, #000 57%, transparent 57%, transparent 100%),
+			linear-gradient(to bottom left, transparent 0%, transparent 43%, #000 43%, #000 57%, transparent 57%, transparent 100%);*/
+	}
+
+	#light-switch {
+		margin: 0;
+	}
 }
 
 /*Attempted to vary font size to be consistent on all devices but devices continued to provide inaccurate values

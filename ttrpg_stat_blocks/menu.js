@@ -21,7 +21,7 @@ function setup() {
 
 	if(isMobile) {
 		$("body").addClass("mobile");
-		setTimeout(function(){$("body").addClass("mobile-secondary");},0)
+		setTimeout(function(){$("body").addClass("mobile-secondary");},0);
 	}
 
 	// Light/Dark Mode
@@ -43,6 +43,18 @@ function setup() {
 	for(var func of setupFuncs) {
 		func();
 	}
+
+	if(window.innerHeight>=window.innerWidth) 
+		setTimeout(function(){$("body").addClass("small-secondary")},100);
+	else
+		setTimeout(function(){$("body").removeClass("small-secondary")},100);
+
+	window.addEventListener("resize",function(){
+		if(window.innerHeight>=window.innerWidth)
+			setTimeout(function(){$("body").addClass("small-secondary")},100);
+		else
+			setTimeout(function(){$("body").removeClass("small-secondary")},100);
+	});
 }
 
 function setDarkMode() {

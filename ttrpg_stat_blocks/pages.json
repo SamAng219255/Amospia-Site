@@ -316,6 +316,11 @@
 											"type": "leaf"
 										},
 										{
+											"name": "metals_cosm",
+											"display_name": "Metals",
+											"type": "leaf"
+										},
+										{
 											"name": "misc_equip_cosm",
 											"display_name": "Miscellaneous",
 											"type": "leaf"
@@ -387,6 +392,50 @@
 											"name": "wondrous_cosm",
 											"display_name": "Wondrous Items",
 											"type": "leaf"
+										}
+									]
+								},
+								{
+									"name": "metallic_arts",
+									"display_name": "Metallic Arts",
+									"type": "limb",
+									"nodes": [
+										{
+											"name": "allomancy",
+											"display_name": "Allomancy",
+											"type": "leaf"
+										},
+										{
+											"name": "feruchemy",
+											"display_name": "Feruchemy",
+											"type": "leaf"
+										},
+										{
+											"name": "hemalurgy",
+											"display_name": "Hemalurgy",
+											"type": "leaf"
+										},
+										{
+											"name": "quintenium",
+											"display_name": "Quintenium",
+											"type": "flower",
+											"nodes": [
+												{
+													"name": "q_allomancy",
+													"display_name": "Allomancy",
+													"type": "petal"
+												},
+												{
+													"name": "q_feruchemy",
+													"display_name": "Feruchemy",
+													"type": "petal"
+												},
+												{
+													"name": "q_hemalurgy",
+													"display_name": "Hemalurgy",
+													"type": "petal"
+												}
+											]
 										}
 									]
 								},
