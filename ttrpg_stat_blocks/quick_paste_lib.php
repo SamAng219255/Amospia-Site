@@ -82,6 +82,7 @@
 	}
 	function quick_format_string($subject) {
 		$str=$subject;
+		$str=preg_replace('/\/\//', "\u{E100}", $str);
 		$str=preg_replace('/ ?\/bb/', '</b>', $str);
 		$str=preg_replace('/bb\/ ?/', '<b>', $str);
 		$str=preg_replace('/ ?\/ii/', '</i>', $str);
@@ -108,6 +109,7 @@
 		$str=preg_replace('/qb\/ ?/', '<span class="trait trait-blue">', $str);
 		$str=preg_replace('/ ?\/qo/', '</span>', $str);
 		$str=preg_replace('/qo\/ ?/', '<span class="trait trait-orange">', $str);
+		$str=str_replace("\u{E100}", "/", $str);
 
 		quick_link_format($str);
 

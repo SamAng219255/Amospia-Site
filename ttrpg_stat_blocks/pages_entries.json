@@ -4987,57 +4987,6 @@
 			"setting": "cosmere",
 			"status": "done"
 		},
-		"metallic_arts": {
-			"display_name": "Metallic Arts",
-			"file_name": "metallic_arts.php",
-			"directory": "pathfinder_1e/topics/cosmere/",
-			"sort_path": [
-				"pathfinder_1e",
-				"topics",
-				"cosmere"
-			],
-			"setting": "cosmere",
-			"status": "done"
-		},
-		"allomancy": {
-			"display_name": "Allomancy",
-			"file_name": "allomancy.php",
-			"directory": "pathfinder_1e/topics/cosmere/metallic/",
-			"sort_path": [
-				"pathfinder_1e",
-				"topics",
-				"cosmere",
-				"metallic"
-			],
-			"setting": "cosmere",
-			"status": "done"
-		},
-		"feruchemy": {
-			"display_name": "Feruchemy",
-			"file_name": "feruchemy.php",
-			"directory": "pathfinder_1e/topics/cosmere/metallic/",
-			"sort_path": [
-				"pathfinder_1e",
-				"topics",
-				"cosmere",
-				"metallic"
-			],
-			"setting": "cosmere",
-			"status": "done"
-		},
-		"hemalurgy": {
-			"display_name": "Hemalurgy",
-			"file_name": "hemalurgy.php",
-			"directory": "pathfinder_1e/topics/cosmere/metallic/",
-			"sort_path": [
-				"pathfinder_1e",
-				"topics",
-				"cosmere",
-				"metallic"
-			],
-			"setting": "cosmere",
-			"status": "done"
-		},
 		"steel_inquisitor": {
 			"display_name": "Steel Inquisitor",
 			"file_name": "steel_inquisitor.php",
@@ -5154,6 +5103,112 @@
 				"topics",
 				"cosmere",
 				"equipment_cosm"
+			],
+			"setting": "cosmere",
+			"status": "wip"
+		},
+		"metallic_arts": {
+			"display_name": "Metallic Arts",
+			"file_name": "metallic_arts.php",
+			"directory": "pathfinder_1e/topics/cosmere/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allomancy": {
+			"display_name": "Allomancy",
+			"file_name": "allomancy.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feruchemy": {
+			"display_name": "Feruchemy",
+			"file_name": "feruchemy.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"hemalurgy": {
+			"display_name": "Hemalurgy",
+			"file_name": "hemalurgy.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"quintenium": {
+			"display_name": "Quintenium",
+			"file_name": "quintenium.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"q_allomancy": {
+			"display_name": "Quintenium Allomancy",
+			"file_name": "q_allomancy.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"q_feruchemy": {
+			"display_name": "Quintenium Feruchemy",
+			"file_name": "q_feruchemy.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium"
+			],
+			"setting": "cosmere",
+			"status": "wip"
+		},
+		"q_hemalurgy": {
+			"display_name": "Quintenium Hemalurgy",
+			"file_name": "q_hemalurgy.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium"
 			],
 			"setting": "cosmere",
 			"status": "done"

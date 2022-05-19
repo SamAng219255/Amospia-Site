@@ -47,6 +47,37 @@
 				$string_entries=file_get_contents($rootDir.'pages_entries.json');
 				$pages['entries']=json_decode($string_entries, true)['entries'];
 
+				$pageId='';
+				$pageCount=count($pages['entries']);
+				$filePathInfo=pathinfo(debug_backtrace()[0]['file']);
+				$getStr='';
+				if(count($_GET)>0) {
+					$getStr='?';
+					$first=true;
+					foreach ($_GET as $name => $val) {
+						if($first)
+							$first=false;
+						else
+							$getStr.='&';
+						$getStr.=$name.'='.urlencode($val);
+					}
+				}
+				foreach($pages['entries'] as $id => $entry) {
+					if($entry['file_name']===$filePathInfo['basename'].$getStr && endsWith($filePathInfo['dirname'],substr($entry['directory'],0,-1))) {
+						$pageId=$id;
+						echo '<title>'.$entry['display_name'].'</title>';
+					}
+				}
+				if($pageId=='') {
+					foreach($pages['entries'] as $id => $entry) {
+						if($entry['file_name']===$filePathInfo['basename'] && endsWith($filePathInfo['dirname'],substr($entry['directory'],0,-1))) {
+							$pageId=$id;
+							echo '<title>'.$entry['display_name'].'</title>';
+						}
+					}
+				}
+				$opennav = isset($_GET['opennav']) && $_GET['opennav']=='1';
+
 				$depth=0;
 				$tree_path=[$pages['sort_tree']];
 				$tree_indices=[0];
@@ -60,9 +91,10 @@
 					}
 					if($tree_indices[$depth]<$tree_counts[$depth]) {
 						$ptr=$tree_path[$depth][$tree_indices[$depth]];
+						$match=($ptr['name']==(isset($_GET['path'])?(isset($get_path[$depth])?$get_path[$depth]:''):(isset($pages['entries'][$pageId])?($depth==count($pages['entries'][$pageId]['sort_path']) && $ptr['type']=='limb'?$pageId:(isset($pages['entries'][$pageId]['sort_path'][$depth])?$pages['entries'][$pageId]['sort_path'][$depth]:'')):'')));
 						switch ($ptr['type']) {
 							case 'branch':
-								echo '<li class="has-dropdown">';
+								echo '<li class="has-dropdown'.($opennav && $match?' open':'').'">';
 								echo '<p class="label">'.$ptr['display_name'].'</p>';
 								echo '<ul class="menu-vertical">';
 								$depth++;
@@ -72,11 +104,11 @@
 								break;
 							
 							case 'limb':
-								echo '<li class="has-dropdown">';
+								echo '<li class="has-dropdown'.($opennav && $match?' open':'').'">';
 								echo '<p class="label">'.$ptr['display_name'].'</p>';
 								echo '<ul class="menu-vertical">';
 								$entry=$pages['entries'][$ptr['name']];
-								echo '<li><a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'"><p class="label">View Section Home</p></a></li>';
+								echo '<li><a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'?opennav=1"><p class="label">View Section Home</p></a></li>';
 								$depth++;
 								$tree_path[$depth]=$ptr['nodes'];
 								$tree_indices[$depth]=0;
@@ -86,7 +118,7 @@
 							case 'flower':
 							case 'leaf':
 								$entry=$pages['entries'][$ptr['name']];
-								echo '<li><a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'"><p class="label">'.$ptr['display_name'].'</p></a></li>';
+								echo '<li><a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'?opennav=1"><p class="label">'.$ptr['display_name'].'</p></a></li>';
 								$tree_indices[$depth]++;
 								break;
 
@@ -132,28 +164,6 @@
 							$ptr=$ptr[$path[$i]];
 						}
 						return $ptr;
-					}
-
-					$pageId='';
-					$pageCount=count($pages['entries']);
-					$filePathInfo=pathinfo(debug_backtrace()[0]['file']);
-					$getStr='';
-					if(count($_GET)>0) {
-						$getStr='?';
-						$first=true;
-						foreach ($_GET as $name => $val) {
-							if($first)
-								$first=false;
-							else
-								$getStr.='&';
-							$getStr.=$name.'='.urlencode($val);
-						}
-					}
-					foreach($pages['entries'] as $id => $entry) {
-						if($entry['file_name']===$filePathInfo['basename'].$getStr && endsWith($filePathInfo['dirname'],substr($entry['directory'],0,-1))) {
-							$pageId=$id;
-							echo '<title>'.$entry['display_name'].'</title>';
-						}
 					}
 
 					$depth=0;
