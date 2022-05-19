@@ -78,6 +78,14 @@
 				'Staff',
 				'ring',
 				'15th'
+			],
+			[
+				'Vorpmalcide',
+				'link' => 'items/vorpmalcide.php',
+				'Major',
+				'Weapon',
+				'none',
+				'30th'
 			]
 		]
 	);

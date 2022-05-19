@@ -274,6 +274,17 @@
 			],
 			"status": "done"
 		},
+		"vorpmalcide_item": {
+			"display_name": "Vorpmalcide",
+			"file_name": "vorpmalcide.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"magic_items",
+				"artifacts"
+			],
+			"status": "done"
+		},
 		"goodberry_sprig": {
 			"display_name": "Goodberry Sprig",
 			"file_name": "goodberry_sprig.php",

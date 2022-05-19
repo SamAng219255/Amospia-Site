@@ -44,6 +44,13 @@
 				'TODO',
 				'outsider',
 				'Roshar in the Cognitive Realm'
+			],
+			[
+				'Kandra',
+				'link' => 'monsters/kandra.php',
+				'TODO',
+				'aberration',
+				'Scadrial'
 			]
 		]
 	);
