@@ -5223,6 +5223,1050 @@
 			],
 			"setting": "cosmere",
 			"status": "done"
+		},
+		"allo_iron": {
+			"display_name": "Allomantic Iron",
+			"file_name": "iron.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_steel": {
+			"display_name": "Allomantic Steel",
+			"file_name": "steel.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_tin": {
+			"display_name": "Allomantic Tin",
+			"file_name": "tin.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_pewter": {
+			"display_name": "Allomantic Pewter",
+			"file_name": "pewter.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_zinc": {
+			"display_name": "Allomantic Zinc",
+			"file_name": "zinc.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_brass": {
+			"display_name": "Allomantic Brass",
+			"file_name": "brass.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_copper": {
+			"display_name": "Allomantic Copper",
+			"file_name": "copper.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_bronze": {
+			"display_name": "Allomantic Bronze",
+			"file_name": "bronze.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_cadmium": {
+			"display_name": "Allomantic Cadmium",
+			"file_name": "cadmium.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_bendalloy": {
+			"display_name": "Allomantic Bendalloy",
+			"file_name": "bendalloy.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_gold": {
+			"display_name": "Allomantic Gold",
+			"file_name": "gold.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_electrum": {
+			"display_name": "Allomantic Electrum",
+			"file_name": "electrum.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_chromium": {
+			"display_name": "Allomantic Chromium",
+			"file_name": "chromium.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_nicrosil": {
+			"display_name": "Allomantic Nicrosil",
+			"file_name": "nicrosil.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_aluminum": {
+			"display_name": "Allomantic Aluminum",
+			"file_name": "aluminum.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_duralumin": {
+			"display_name": "Allomantic Duralumin",
+			"file_name": "duralumin.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_lerasium": {
+			"display_name": "Allomantic Lerasium",
+			"file_name": "lerasium.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_atium": {
+			"display_name": "Allomantic Atium",
+			"file_name": "atium.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_malatium": {
+			"display_name": "Allomantic Malatium",
+			"file_name": "malatium.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_iron": {
+			"display_name": "Feruchemical Iron",
+			"file_name": "iron.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_steel": {
+			"display_name": "Feruchemical Steel",
+			"file_name": "steel.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_tin": {
+			"display_name": "Feruchemical Tin",
+			"file_name": "tin.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_pewter": {
+			"display_name": "Feruchemical Pewter",
+			"file_name": "pewter.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_zinc": {
+			"display_name": "Feruchemical Zinc",
+			"file_name": "zinc.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_brass": {
+			"display_name": "Feruchemical Brass",
+			"file_name": "brass.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_copper": {
+			"display_name": "Feruchemical Copper",
+			"file_name": "copper.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_bronze": {
+			"display_name": "Feruchemical Bronze",
+			"file_name": "bronze.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_cadmium": {
+			"display_name": "Feruchemical Cadmium",
+			"file_name": "cadmium.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_bendalloy": {
+			"display_name": "Feruchemical Bendalloy",
+			"file_name": "bendalloy.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_gold": {
+			"display_name": "Feruchemical Gold",
+			"file_name": "gold.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_electrum": {
+			"display_name": "Feruchemical Electrum",
+			"file_name": "electrum.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_chromium": {
+			"display_name": "Feruchemical Chromium",
+			"file_name": "chromium.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_nicrosil": {
+			"display_name": "Feruchemical Nicrosil",
+			"file_name": "nicrosil.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_aluminum": {
+			"display_name": "Feruchemical Aluminum",
+			"file_name": "aluminum.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_duralumin": {
+			"display_name": "Feruchemical Duralumin",
+			"file_name": "duralumin.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_atium": {
+			"display_name": "Feruchemical Atium",
+			"file_name": "atium.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_q_iron": {
+			"display_name": "Allomantic Iron",
+			"file_name": "q_iron.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_q_steel": {
+			"display_name": "Allomantic Steel",
+			"file_name": "q_steel.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_q_tin": {
+			"display_name": "Allomantic Tin",
+			"file_name": "q_tin.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_q_pewter": {
+			"display_name": "Allomantic Pewter",
+			"file_name": "q_pewter.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_q_zinc": {
+			"display_name": "Allomantic Zinc",
+			"file_name": "q_zinc.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_q_brass": {
+			"display_name": "Allomantic Brass",
+			"file_name": "q_brass.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_q_copper": {
+			"display_name": "Allomantic Copper",
+			"file_name": "q_copper.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_q_bronze": {
+			"display_name": "Allomantic Bronze",
+			"file_name": "q_bronze.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_q_cadmium": {
+			"display_name": "Allomantic Cadmium",
+			"file_name": "q_cadmium.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_q_bendalloy": {
+			"display_name": "Allomantic Bendalloy",
+			"file_name": "q_bendalloy.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_q_gold": {
+			"display_name": "Allomantic Gold",
+			"file_name": "q_gold.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_q_electrum": {
+			"display_name": "Allomantic Electrum",
+			"file_name": "q_electrum.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_q_chromium": {
+			"display_name": "Allomantic Chromium",
+			"file_name": "q_chromium.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_q_nicrosil": {
+			"display_name": "Allomantic Nicrosil",
+			"file_name": "q_nicrosil.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_q_aluminum": {
+			"display_name": "Allomantic Aluminum",
+			"file_name": "q_aluminum.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_q_duralumin": {
+			"display_name": "Allomantic Duralumin",
+			"file_name": "q_duralumin.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_q_lerasium": {
+			"display_name": "Allomantic Lerasium",
+			"file_name": "q_lerasium.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_q_atium": {
+			"display_name": "Allomantic Atium",
+			"file_name": "q_atium.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"allo_q_malatium": {
+			"display_name": "Allomantic Malatium",
+			"file_name": "q_malatium.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/allomancy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"allomancy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_q_iron": {
+			"display_name": "Feruchemical Iron",
+			"file_name": "q_iron.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_q_steel": {
+			"display_name": "Feruchemical Steel",
+			"file_name": "q_steel.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_q_tin": {
+			"display_name": "Feruchemical Tin",
+			"file_name": "q_tin.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_q_pewter": {
+			"display_name": "Feruchemical Pewter",
+			"file_name": "q_pewter.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_q_zinc": {
+			"display_name": "Feruchemical Zinc",
+			"file_name": "q_zinc.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_q_brass": {
+			"display_name": "Feruchemical Brass",
+			"file_name": "q_brass.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_q_copper": {
+			"display_name": "Feruchemical Copper",
+			"file_name": "q_copper.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_q_bronze": {
+			"display_name": "Feruchemical Bronze",
+			"file_name": "q_bronze.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_q_cadmium": {
+			"display_name": "Feruchemical Cadmium",
+			"file_name": "q_cadmium.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_q_bendalloy": {
+			"display_name": "Feruchemical Bendalloy",
+			"file_name": "q_bendalloy.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_q_gold": {
+			"display_name": "Feruchemical Gold",
+			"file_name": "q_gold.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_q_electrum": {
+			"display_name": "Feruchemical Electrum",
+			"file_name": "q_electrum.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_q_chromium": {
+			"display_name": "Feruchemical Chromium",
+			"file_name": "q_chromium.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_q_nicrosil": {
+			"display_name": "Feruchemical Nicrosil",
+			"file_name": "q_nicrosil.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_q_aluminum": {
+			"display_name": "Feruchemical Aluminum",
+			"file_name": "q_aluminum.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_q_duralumin": {
+			"display_name": "Feruchemical Duralumin",
+			"file_name": "q_duralumin.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"feru_q_atium": {
+			"display_name": "Feruchemical Atium",
+			"file_name": "q_atium.php",
+			"directory": "pathfinder_1e/topics/cosmere/metallic/feruchemy/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"metallic_arts",
+				"quintenium",
+				"feruchemy"
+			],
+			"setting": "cosmere",
+			"status": "done"
 		}
 	}
 }

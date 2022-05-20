@@ -1991,6 +1991,51 @@
 			$varnts
 		);
 	}
+	function allomancy($metal='', $user=false, $categories=[], $burnTime='', $desc='', $flare='', $savantism=false) {
+		$prop=[
+			'bb/Burn Time/bb '.$burnTime
+		];
+		if($user)
+			array_push($prop, 'bb/User/bb '.$user);
+		if($categories!==false && count($categories)>0) {
+			$catLine='';
+			$first=true;
+			foreach ($categories as $category => $entry) {
+				if($first)
+					$first=false;
+				else
+					$catLine.='; ';
+				$catLine.='bb/'.$category.'/bb '.$entry;
+			}
+			array_push($prop, $catLine);
+		}
+		$sections=[
+			[
+				'title' => 'Description',
+				'spaced' => true,
+				'texts' => quick_array($desc)
+			],
+			[
+				'title' => 'Flare',
+				'spaced' => true,
+				'texts' => quick_array($flare)
+			]
+		];
+		if($savantism!==false) {
+			$savantRows=[];
+			foreach ($savantism as $points => $effects) {
+				array_push($savantRows, [$points.'',$effects['effect'],$effects['draw']]);
+			}
+			array_push($sections, ['title'=>'Savantism Effects','spaced'=>'','texts'=>quick_array([sTable(['Points','Effect(s) While Using','Drawback'],$savantRows,true,false,false)])]);
+		}
+		block(
+			'Allomantic '.$metal,
+			'allomancy',
+			quick_array($prop),
+			false,
+			$sections
+		);
+	}
 	function sTable($headers, $rows, $horizontal=true, $expand=true, $allowSort=true, $inline=false) {
 		$classes='';
 		if($expand)
