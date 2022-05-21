@@ -2022,15 +2022,102 @@
 			]
 		];
 		if($savantism!==false) {
+			$savantismNote='';
 			$savantRows=[];
+			$savantRowsNoThird=[];
+			$hasDrawbacks=false;
 			foreach ($savantism as $points => $effects) {
+				if($points==='note') {
+					$savantismNote='Note: '.$effects;
+					continue;
+				}
+				if($points==='special') {
+					$savantismNote='bb/Special/bb '.$effects;
+					continue;
+				}
+				if($effects['draw']!=='' && $effects['draw']!==false)
+					$hasDrawbacks=true;
 				array_push($savantRows, [$points.'',$effects['effect'],$effects['draw']]);
+				array_push($savantRowsNoThird, [$points.'',$effects['effect']]);
 			}
-			array_push($sections, ['title'=>'Savantism Effects','spaced'=>'','texts'=>quick_array([sTable(['Points','Effect(s) While Using','Drawback'],$savantRows,true,false,false)])]);
+			$texts=[];
+			if($hasDrawbacks)
+				array_push($texts,sTable(['Points','Effect(s) While Using','Drawback'],$savantRows,true,false,false));
+			else
+				array_push($texts,sTable(['Points','Effect(s) While Using'],$savantRowsNoThird,true,false,false));
+			if($savantismNote!=='')
+				array_push($texts, $savantismNote);
+			array_push($sections, ['title'=>'Allomantic '.$metal.' Savantism Effects','spaced'=>false,'texts'=>quick_array($texts)]);
 		}
 		block(
 			'Allomantic '.$metal,
 			'allomancy',
+			quick_array($prop),
+			false,
+			$sections
+		);
+	}
+	function feruchemy($metal='', $user=false, $categories=[], $burnTime='', $desc='', $increments=['columns'=>[],'rows'=>[]], $savantism=false) {
+		$prop=[
+			'bb/Burn Rate/bb '.$burnTime
+		];
+		if($user)
+			array_push($prop, 'bb/User/bb '.$user);
+		if($categories!==false && count($categories)>0) {
+			$catLine='';
+			$first=true;
+			foreach ($categories as $category => $entry) {
+				if($first)
+					$first=false;
+				else
+					$catLine.='; ';
+				$catLine.='bb/'.$category.'/bb '.$entry;
+			}
+			array_push($prop, $catLine);
+		}
+		$sections=[
+			[
+				'title' => 'Description',
+				'spaced' => true,
+				'texts' => quick_array($desc)
+			],
+			[
+				'title' => $metal.' Increments',
+				'spaced' => true,
+				'texts' => quick_array(sTable(array_merge(['Increment'],$increments['columns']),$increments['rows'],true,false,false))
+			]
+		];
+		if($savantism!==false) {
+			$savantismNote='';
+			$savantRows=[];
+			$savantRowsNoThird=[];
+			$hasDrawbacks=false;
+			foreach ($savantism as $points => $effects) {
+				if($points==='note') {
+					$savantismNote='Note: '.$effects;
+					continue;
+				}
+				if($points==='special') {
+					$savantismNote='bb/Special/bb '.$effects;
+					continue;
+				}
+				if($effects['draw']!=='' && $effects['draw']!==false)
+					$hasDrawbacks=true;
+				array_push($savantRows, [$points.'',$effects['effect'],$effects['draw']]);
+				array_push($savantRowsNoThird, [$points.'',$effects['effect']]);
+			}
+			$texts=[];
+			if($hasDrawbacks)
+				array_push($texts,sTable(['Points','Effect(s) While Using','Drawback'],$savantRows,true,false,false));
+			else
+				array_push($texts,sTable(['Points','Effect(s) While Using'],$savantRowsNoThird,true,false,false));
+			if($savantismNote!=='')
+				array_push($texts, $savantismNote);
+			array_push($sections, ['title'=>'Feruchemical '.$metal.' Savantism Effects','spaced'=>false,'texts'=>quick_array($texts)]);
+		}
+		block(
+			'Feruchemical '.$metal,
+			'feruchemy',
 			quick_array($prop),
 			false,
 			$sections
