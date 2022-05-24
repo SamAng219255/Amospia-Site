@@ -23,6 +23,7 @@
 			"Slow Speed: Tirn have a base speed of 20 feet.",
 			"Climb Speed: Tirn have a climb speed of 20 feet.",
 			"Darkvision: Tirn can see in the dark up to 60 feet.",
+			"Light Blindness: Abrupt exposure to bright light blinds tirns for 1 round. On subsequent rounds, they are dazzled as long as they remain in the affected area.",
 			"Cave Dweller: Tirn gain a +1 bonus on Knowledge (dungeoneering) and Survival checks made underground.",
 			"Swarming: Tirn are used to living and fighting communally with other members of their race. Up to two Tirn can share the same square at the same time. If two Tirn that are occupying the same square attack the same foe, they are considered to be flanking that foe as if they were in two opposite squares.",
 			"Languages: Tirn begin play speaking their racial language Tirn. Tirn with high Intelligence scores can choose from the following languages: Common, Gnome, Halfling, and Terran."
