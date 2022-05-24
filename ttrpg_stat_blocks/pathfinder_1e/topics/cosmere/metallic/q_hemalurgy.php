@@ -50,7 +50,7 @@
 				'title' => 'Quintenium/Tin',
 				'spaced' => true,
 				'texts' => quick_array([
-					'Steals the victim\'s innate ability to cast spells or spell-like abilities of the transmutation school.',
+					'Steals the victim\'s innate ability to cast spells or spell-like abilities of the abjuration school.',
 					'The victim loses access to the spells that were stolen.'
 				])
 			],
@@ -58,7 +58,7 @@
 				'title' => 'Quintenium/Pewter',
 				'spaced' => true,
 				'texts' => quick_array([
-					'Steals the victim\'s innate ability to cast spells or spell-like abilities of the conjuration school.',
+					'Steals the victim\'s innate ability to cast spells or spell-like abilities of the transmutation school.',
 					'The victim loses access to the spells that were stolen.'
 				])
 			],
@@ -66,7 +66,7 @@
 				'title' => 'Quintenium/Zinc',
 				'spaced' => true,
 				'texts' => quick_array([
-					'Steals the victim\'s innate ability to cast spells or spell-like abilities of the abjuration school.',
+					'Steals the victim\'s innate ability to cast spells or spell-like abilities of the enchantment school.',
 					'The victim loses access to the spells that were stolen.'
 				])
 			],
@@ -74,7 +74,7 @@
 				'title' => 'Quintenium/Brass',
 				'spaced' => true,
 				'texts' => quick_array([
-					'Steals the victim\'s innate ability to cast spells or spell-like abilities of the enchantment school.',
+					'Steals the victim\'s innate ability to cast spells or spell-like abilities of the conjuration school.',
 					'The victim loses access to the spells that were stolen.'
 				])
 			],
@@ -99,7 +99,7 @@
 				'spaced' => true,
 				'texts' => quick_array([
 					'Steals constitution, granting the recipient an untyped bonus to their constitution score equal to 5 plus the victim\'s constitution modifier.',
-					'The victim\'s constitution becomes 1.'
+					'The victim\'s constitution becomes 1 and they automatically fail any fortitude saves. If there are any penalties for failling a save by a certain amount, they automatically fail by the greatest amount.'
 				])
 			],
 			[
@@ -107,7 +107,7 @@
 				'spaced' => true,
 				'texts' => quick_array([
 					'Steals dexterity, granting the recipient an untyped bonus to their dexterity score equal to 5 plus the victim\'s dexterity modifier.',
-					'The victim\'s dexterity becomes 1.'
+					'The victim\'s dexterity becomes 1, they automatically fail any Reflex saves and Acrobatics checks, they are always considered flat-footed, and all terrain is treated as difficult terrain.'
 				])
 			],
 			[
@@ -115,7 +115,7 @@
 				'spaced' => true,
 				'texts' => quick_array([
 					'Steals wisdom, granting the recipient an untyped bonus to their wisdom score equal to 5 plus the victim\'s wisdom modifier.',
-					'The victim\'s wisdom becomes 1.'
+					'The victim\'s wisdom becomes 1 and they automatically fail any Will saves.'
 				])
 			],
 			[
@@ -123,7 +123,7 @@
 				'spaced' => true,
 				'texts' => quick_array([
 					'Steals charisma, granting the recipient an untyped bonus to their charisma score equal to 5 plus the victim\'s charisma modifier.',
-					'The victim\'s charisma becomes 1.'
+					'The victim\'s charisma becomes 1 and becomes unable speak developing psychological mutism.'
 				])
 			],
 			[
@@ -139,7 +139,7 @@
 				'spaced' => true,
 				'texts' => quick_array([
 					'Steals the victim\'s methods of locomotion, giving the recipient all of the victim\'s move speeds of types not possessed by the recipient. For every type of move speed possessed by both the victim and recipient, if the victim\'s speed was faster than the recipient\'s, the recipient receives a bonus to that movement type equal to half the victim\'s speed of that type. If this speed was granted by a specific physical structure (such as by wings, additional legs, or special claws), the recipient grows this structure when the spike is first applied. If the spike is removed, the structure turns black, shrivels up, and falls off, leaving a scar where it was attached.',
-					'The victim loses their means of locomotion. Legs, wings, and other structures primarily for movement turn black, shrivel up, and cannor be used. Their speed becomes 0.'
+					'The victim loses their means of locomotion. Legs, wings, and other structures primarily for movement turn black, shrivel up, and cannot be used. Their speed becomes 0.'
 				])
 			],
 			[
@@ -163,7 +163,7 @@
 				'spaced' => true,
 				'texts' => quick_array([
 					'Grants the recipient 1 level in a class possessed by the victim chosen by the creator at the time of creation. This effect stacks.',
-					'The victim loses 1 level in the class.'
+					'The victim loses 1 level in the class along with all asociated values.'
 				])
 			]
 		]

@@ -69,11 +69,11 @@
 				'draw' => 'Penalties taken by the feruchemist due to old age are doubled.'
 			],
 			50 => [
-				'effect' => 'Penalties taken by the feruchemist due to age by 1',
+				'effect' => 'Penalties taken by the feruchemist due to age by 1.',
 				'draw' => 'The feruchemist ages twice as fast.'
 			],
 			100 => [
-				'effect' => 'Penalties taken by the feruchemist due to age by 1',
+				'effect' => 'Penalties taken by the feruchemist due to age by 1.',
 				'draw' => 'Penalties taken by the feruchemist due to old age are doubled.'
 			]
 		]

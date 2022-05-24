@@ -52,7 +52,7 @@
 				'spaced' => true,
 				'texts' => quick_array([
 					'Steals strength, granting the recipient an untyped bonus to their strength score equal to 5 plus the victim\'s strength modifier.',
-					'The victim\'s strength score is reduced to 1.'
+					'The victim\'s strength score is reduced to 1 and they are paralyzed.'
 				])
 			],
 			[
@@ -76,7 +76,7 @@
 				'spaced' => true,
 				'texts' => quick_array([
 					'Steals one of the physical feruchemical abilities possessed by the victim granting it to the recipient. If they already possess the associated ability, they receive a +1 spell level bonus on that ability.',
-					'The victim loses whichever allomantic ability that was stolen.'
+					'The victim loses whichever feruchemical ability that was stolen.'
 				])
 			],
 			[
@@ -84,7 +84,7 @@
 				'spaced' => true,
 				'texts' => quick_array([
 					'Steals emotional fortitude, granting the recipient an untyped bonus to will saves vs fear equal to 2 plus half of the victim\'s will save vs fear and other emotional effects and granting SR equal to 10 plus the victim\'s wisdom modifier vs emotional allomancy.',
-					'The victim loses their emotional fortitude, becoming impossible to contain or control their emotions and automatically failing saves vs fear.'
+					'The victim loses their emotional fortitude, becoming impossible to contain or control their emotions and automatically failing saves vs fear or other emotion effects.'
 				])
 			],
 			[
@@ -92,7 +92,7 @@
 				'spaced' => true,
 				'texts' => quick_array([
 					'Steals one of the cognitive feruchemical abilities possessed by the victim granting it to the recipient. If they already possess the associated ability, they receive a +1 spell level bonus on that ability.',
-					'The victim loses whichever allomantic ability that was stolen.'
+					'The victim loses whichever feruchemical ability that was stolen.'
 				])
 			],
 			[
@@ -101,11 +101,11 @@
 				'texts' => quick_array([
 					'Steals mental fortitude, memory, or intelligence chosen by the wielder.',
 					'Stealing mental fortitude grants the recipient an untyped bonus to will saves except vs fear or other emotional effects equal to 2 plus half of the victim\'s will save.',
-					'If mental fortitude was stolen, the victim automatically failing will saves not vs fear and is unable to driave themselves towards a course of action or to resist performing actions suggested by another creature in an almost vegetative state similar to being a puppet that takes no action on its own but follows all instructions immediately and continues to do so until it is impossible or given further instructions.',
+					'If mental fortitude was stolen, the victim automatically failing will saves not vs fear and is unable to drive themselves towards a course of action or to resist performing actions suggested by another creature in an almost vegetative state similar to being a puppet that takes no action on its own but follows all instructions immediately and continues to do so until it is impossible or given further instructions.',
 					'Stealing memory grants the recipient the memories of the victim and a bonus to one of their knowledge skills equal to the victim\'s bonus to that skill.',
 					'If memory was stolen, the victim loses their entire memory as well as all their ranks in knowledge skills.',
 					'Stealing intelligence grants the recipient an untyped bonus to their intelligence score equal to 5 plus the victim\'s intelligence modifier.',
-					'If intelligence was stolen, the victim\'s intelligence score is reduced to 1.'
+					'If intelligence was stolen, the victim\'s intelligence score is reduced to 1 they are reduced to a vegetative state.'
 				])
 			],
 			[
@@ -129,7 +129,7 @@
 				'spaced' => true,
 				'texts' => quick_array([
 					'Steals one of the spiritual feruchemical abilities possessed by the victim granting it to the recipient. If they already possess the associated ability, they receive a +1 spell level bonus on that ability.',
-					'The victim loses whichever allomantic ability that was stolen.'
+					'The victim loses whichever feruchemical ability that was stolen.'
 				])
 			],
 			[
@@ -137,7 +137,7 @@
 				'spaced' => true,
 				'texts' => quick_array([
 					'Steals one of the hybrid feruchemical abilities possessed by the victim granting it to the recipient. If they already possess the associated ability, they receive a +1 spell level bonus on that ability.',
-					'The victim loses whichever allomantic ability that was stolen.'
+					'The victim loses whichever feruchemical ability that was stolen.'
 				])
 			],
 			[

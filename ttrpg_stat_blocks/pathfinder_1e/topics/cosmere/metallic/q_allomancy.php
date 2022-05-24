@@ -43,7 +43,7 @@
 			[
 				'Quintenium/Tin',
 				'link' => 'allomancy/q_tin.php',
-				'Can Polymorph You',
+				'Protects You',
 				'Pulling',
 				'Internal',
 				'Physical'
@@ -51,7 +51,7 @@
 			[
 				'Quintenium/Pewter',
 				'link' => 'allomancy/q_pewter.php',
-				'Can Create Objects',
+				'Can Polymorph You',
 				'Pushing',
 				'Internal',
 				'Physical'
@@ -59,7 +59,7 @@
 			[
 				'Quintenium/Zinc',
 				'link' => 'allomancy/q_zinc.php',
-				'Protects You',
+				'Charms Creatures',
 				'Pulling',
 				'External',
 				'Mental'
@@ -67,10 +67,10 @@
 			[
 				'Quintenium/Brass',
 				'link' => 'allomancy/q_brass.php',
-				'Charms Creatures',
+				'Can Create Objects',
 				'Pushing',
 				'External',
-				'Mental'
+				'Physical'
 			],
 			[
 				'Quintenium/Copper',
@@ -91,7 +91,7 @@
 			[
 				'Quintenium/Cadmium',
 				'link' => 'allomancy/q_cadmium.php',
-				'Slows Nearby Creature',
+				'Slows Nearby Creatures',
 				'Pulling',
 				'External',
 				'Temporal'
@@ -131,7 +131,7 @@
 			[
 				'Quintenium/Nicrosil',
 				'link' => 'allomancy/q_nicrosil.php',
-				'Empowers Magic of Targt',
+				'Empowers Magic of Target',
 				'Pushing',
 				'External',
 				'Enhancement'

@@ -49,6 +49,13 @@
 				'varies',
 				'False',
 				'False'
+			],
+			[
+				'Quintenium-Soul',
+				'link' => 'monsters/templates/quintenium_soul.php',
+				'varies',
+				'False',
+				'False'
 			]
 		]
 	);
