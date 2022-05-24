@@ -111,7 +111,7 @@
 		], // Increments
 		[
 			10 => [
-				'effect' => 'Grants access to the following increment (Increment 8; Bonus to Diplomacy and Intimidate +32; Bonus to Stealth and Sleight of Hand -24; Level for dependent variables level+8; Level for access to class features level)',
+				'effect' => 'Grants access to the following increment (Increment 32; Bonus to Diplomacy and Intimidate +32; Bonus to Stealth and Sleight of Hand -24; Level for dependent variables level+8; Level for access to class features level)',
 				'draw' => 'The connector takes a -4 penalty on Diplomacy and Intimidate checks.'
 			],
 			50 => [

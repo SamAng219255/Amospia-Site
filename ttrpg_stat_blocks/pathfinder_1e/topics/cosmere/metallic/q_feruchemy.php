@@ -12,7 +12,9 @@
 	block(
 		'Feruchemy',
 		'desc',
-		[],
+		quick_array([
+			'Unfortunately, the quintenium alloy feruchemical effects have been a source of quite a bit of frustration and several of the metals are so far entirely undecided and many are lacking savantism effects. If you intend to use these rules I suggest you either ignore the missing portions. Though, if you\'re up for a challenge, GMs could try to improvise the missing portions. Some of missing portions are ue to a lack of creativity as to what to put there while others it is unclear how to balance it.'
+		]),
 		false
 	);
 	table(
@@ -37,7 +39,7 @@
 			[
 				'Quintenium/Tin',
 				'link' => 'feruchemy/q_tin.php',
-				'Stores Sound Senses',
+				'Stores Sound Volume',
 				'Physical'
 			],
 			[
@@ -49,7 +51,7 @@
 			[
 				'Quintenium/Zinc',
 				'link' => 'feruchemy/q_zinc.php',
-				'Stores Appearance',
+				'Stores Visibility',
 				'Physical'
 			],
 			[
@@ -120,7 +122,7 @@
 			],
 			[
 				'Quintenium',
-				'link' => 'feruchemy/q_atium.php',
+				'link' => 'feruchemy/quintenium.php',
 				'WIP',
 				'WIP'
 			]
