@@ -62,6 +62,10 @@
 					[
 						'name' => 'Savantism',
 						'link' => 'rules/general.php#block-Savantism'
+					],
+					[
+						'name' => 'The Ten Essences',
+						'link' => 'rules/ten_essences.php'
 					]
 				]
 			],

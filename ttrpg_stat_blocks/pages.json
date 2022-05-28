@@ -296,6 +296,26 @@
 							"type": "limb",
 							"nodes": [
 								{
+									"name": "classes_cosm",
+									"display_name": "Classes",
+									"type": "branch",
+									"nodes": [
+										{
+											"name": "knight_radiant",
+											"display_name": "Knight Radiant",
+											"petal_display_name": "Knight Radiant Class Details",
+											"type": "flower",
+											"nodes": [
+												{
+													"name": "knight_radiant_orders",
+													"display_name": "Orders",
+													"type": "leaf"
+												}
+											]
+										}
+									]
+								},
+								{
 									"name": "equipment_cosm",
 									"display_name": "Equipment",
 									"type": "branch",
@@ -472,6 +492,11 @@
 								{
 									"name": "rules_cosm",
 									"display_name": "Rules",
+									"type": "leaf"
+								},
+								{
+									"name": "surgebinding",
+									"display_name": "Surgbinding",
 									"type": "leaf"
 								},
 								{

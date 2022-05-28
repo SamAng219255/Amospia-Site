@@ -1535,6 +1535,44 @@
 	function advAlchemyRocketBlock($name, $descriptors, $level, $ignitionTime, $rangeIncr, $maxRange, $duration, $save, $desc) {
 		advAlchemyBlock($name, 'Rocket', $descriptors, $level, ['Activation Time' => $ignitionTime, ['Range Increment' => $rangeIncr, 'Max Range' => $maxRange]], $duration, $save, $desc);
 	}
+	function surgeBlock($name, $surge, $range='Touch', $target=false, $effect=false, $area=false, $cost=1, $interval='1 round', $dismiss=true, $desc='') {
+		$properties=[];
+		$ranges=['Personal'=>'personal','Touch'=>'touch','Close'=>'close (25 ft. + 5 ft./2 levels)','Medium'=>'medium (100 ft. + 10 ft./level)','Long'=>'long (400 ft. + 40 ft./level)','Unlimited'=>'unlimited'];
+		if(isset($ranges[$range]))
+			array_push($properties,'bb/Range/bb '.$ranges[$range]);
+		elseif(is_numeric($range))
+			array_push($properties,'bb/Range/bb '.$range.' ft.');
+		else
+			array_push($properties,'bb/Range/bb '.$range);
+		if($target)
+			array_push($properties,'bb/Target(s)/bb '.$target);
+		if($effect)
+			array_push($properties,'bb/Effect/bb '.$effect);
+		if($area)
+			array_push($properties,'bb/Area/bb '.$area);
+		array_push($properties,'bb/Investiture Cost/bb '.$cost.'; bb/Interval/bb '.$interval);
+		array_push($properties,'bb/Dismissable/bb '.(is_string($dismiss)?$dismiss:($dismiss?'yes':'no')));
+		block(
+			$name,
+			'surgebinding',
+			quick_array([
+				'bb/Surge/bb '.$surge
+			]),
+			false,
+			[
+				[
+					'title' => 'Properties',
+					'spaced' => false,
+					'texts' => quick_array($properties)
+				],
+				[
+					'title' => 'Description',
+					'spaced' => true,
+					'texts' => quick_array($desc)
+				]
+			]
+		);
+	}
 	function classBlock($name, $desc, $role, $align, $hd, $startWealth, $classSkills, $skillsPerLevel, $bab, $saves, $specials, $spells, $spellsSecondary, $features) {
 		echo '<h2>'.$name.'</h2>';
 		echo '<p class="spaced">'.$desc.'</p>';
@@ -2184,6 +2222,12 @@
 	}
 	function table($headers, $rows, $horizontal=true, $expand=true, $allowSort=true, $inline=false) {
 		echo sTable($headers, $rows, $horizontal, $expand, $allowSort, $inline);
+	}
+	function labeledSTable($label ,$headers, $rows, $horizontal=true, $expand=true, $allowSort=true, $inline=false) {
+		return '<p class="table-label'.($expand?' expand':'').'">'.$label.'</p>'.sTable($headers, $rows, $horizontal=true, $expand, $allowSort, $inline);
+	}
+	function labeledTable($label ,$headers, $rows, $horizontal=true, $expand=true, $allowSort=true, $inline=false) {
+		echo labeledSTable($label ,$headers, $rows, $horizontal, $expand, $allowSort, $inline);
 	}
 	function contents($items, $custom_title=false, $primary=true) {
 		echo '<div class="to-contents"'.($primary ? ' id="top"' : '').'>';

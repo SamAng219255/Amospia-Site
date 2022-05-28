@@ -6251,6 +6251,266 @@
 			],
 			"setting": "cosmere",
 			"status": "done"
+		},
+		"surgebinding": {
+			"display_name": "Surgbinding",
+			"file_name": "surgebinding.php",
+			"directory": "pathfinder_1e/topics/cosmere/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"full_lashing_cosm": {
+			"display_name": "Full Lashing",
+			"file_name": "full_lashing.php",
+			"directory": "pathfinder_1e/topics/cosmere/surgebinding/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"surgebinding"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"basic_lashing_cosm": {
+			"display_name": "Basic Lashing",
+			"file_name": "basic_lashing.php",
+			"directory": "pathfinder_1e/topics/cosmere/surgebinding/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"surgebinding"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"half_lashing_cosm": {
+			"display_name": "Half Lashing",
+			"file_name": "half_lashing.php",
+			"directory": "pathfinder_1e/topics/cosmere/surgebinding/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"surgebinding"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"practiced_lashing_cosm": {
+			"display_name": "Practiced Lashing",
+			"file_name": "practiced_lashing.php",
+			"directory": "pathfinder_1e/topics/cosmere/surgebinding/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"surgebinding"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"decay_cosm": {
+			"display_name": "Decay",
+			"file_name": "decay.php",
+			"directory": "pathfinder_1e/topics/cosmere/surgebinding/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"surgebinding"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"slicking_cosm": {
+			"display_name": "Slicking",
+			"file_name": "slicking.php",
+			"directory": "pathfinder_1e/topics/cosmere/surgebinding/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"surgebinding"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"anti_slicking_cosm": {
+			"display_name": "Anti-Slicking",
+			"file_name": "anti_slicking.php",
+			"directory": "pathfinder_1e/topics/cosmere/surgebinding/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"surgebinding"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"growth_cosm": {
+			"display_name": "Growth",
+			"file_name": "growth.php",
+			"directory": "pathfinder_1e/topics/cosmere/surgebinding/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"surgebinding"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"regrowth_cosm": {
+			"display_name": "Regrowth",
+			"file_name": "regrowth.php",
+			"directory": "pathfinder_1e/topics/cosmere/surgebinding/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"surgebinding"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"lightweaving_cosm": {
+			"display_name": "Lightweaving",
+			"file_name": "lightweaving.php",
+			"directory": "pathfinder_1e/topics/cosmere/surgebinding/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"surgebinding"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"soulcasting_cosm": {
+			"display_name": "Soulcasting",
+			"file_name": "soulcasting.php",
+			"directory": "pathfinder_1e/topics/cosmere/surgebinding/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"surgebinding"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"elsecalling_cosm": {
+			"display_name": "Elsecalling",
+			"file_name": "elsecalling.php",
+			"directory": "pathfinder_1e/topics/cosmere/surgebinding/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"surgebinding"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"stoneshaping_cosm": {
+			"display_name": "Stoneshaping",
+			"file_name": "stoneshaping.php",
+			"directory": "pathfinder_1e/topics/cosmere/surgebinding/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"surgebinding"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"stoneshaping_greater_cosm": {
+			"display_name": "Stoneshaping, Greater",
+			"file_name": "stoneshaping_greater.php",
+			"directory": "pathfinder_1e/topics/cosmere/surgebinding/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"surgebinding"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"harden_soften_cosm": {
+			"display_name": "Harden/Soften",
+			"file_name": "harden_soften.php",
+			"directory": "pathfinder_1e/topics/cosmere/surgebinding/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"surgebinding"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"reverse_lashing_cosm": {
+			"display_name": "Reverse Lashing",
+			"file_name": "reverse_lashing.php",
+			"directory": "pathfinder_1e/topics/cosmere/surgebinding/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"surgebinding"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"knight_radiant": {
+			"display_name": "Knight Radiant",
+			"file_name": "knight_radiant.php",
+			"directory": "pathfinder_1e/topics/cosmere/classes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"classes_cosm"
+			],
+			"setting": "cosmere",
+			"status": "wip"
+		},
+		"knight_radiant_orders": {
+			"display_name": "Orders of the Knight Radiant",
+			"file_name": "knight_radiant_orders.php",
+			"directory": "pathfinder_1e/topics/cosmere/classes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"classes_cosm",
+				"knight_radiant"
+			],
+			"setting": "cosmere",
+			"status": "wip"
+		},
+		"ten_essences_cosm": {
+			"display_name": "The Ten Essences",
+			"file_name": "ten_essences.php",
+			"directory": "pathfinder_1e/topics/cosmere/rules/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"rules_cosm"
+			],
+			"setting": "cosmere",
+			"status": "done"
 		}
 	}
 }

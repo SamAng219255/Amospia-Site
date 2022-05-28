@@ -29,7 +29,7 @@ pre {
 	font-size: 12px;
 }
 b, h4 {
-	font-weight: bold;
+	font-weight: 900;
 }
 i, h5 {
 	font-style: italic;
@@ -130,6 +130,9 @@ table.expand {
 	width: calc(100% - 1em);
 	max-width: calc(100% - 1em);
 }
+.table-label+table {
+	margin-top: 0;
+}
 table.inline {
 	margin: 0px;
 	display: inline-table;
@@ -152,6 +155,18 @@ tr:nth-child(odd) {
 }
 td, th {
 	padding: 0.25em;
+}
+.table-label {
+	font-weight: bold;
+	margin: 1em 1em 0 1em;
+}
+.table-label:before {
+	content: "Table: ";
+	font-weight: bold;
+}
+.table-label.expand {
+	font-weight: bold;
+	margin: 1em 1em 0 0;
 }
 table.class-features, table.class-features th, table.class-features td {
 	border-width: 2px;
