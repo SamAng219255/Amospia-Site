@@ -6511,6 +6511,70 @@
 			],
 			"setting": "cosmere",
 			"status": "done"
+		},
+		"biochromatic": {
+			"display_name": "BioChromatic Breaths",
+			"file_name": "biochromatic.php",
+			"directory": "pathfinder_1e/topics/cosmere/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"biobreath_type_i": {
+			"display_name": "Type I BioChromatic Entities",
+			"file_name": "type_i.php",
+			"directory": "pathfinder_1e/topics/cosmere/biochromatic/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"biochromatic"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"biobreath_type_ii": {
+			"display_name": "Type II BioChromatic Entities",
+			"file_name": "type_ii.php",
+			"directory": "pathfinder_1e/topics/cosmere/biochromatic/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"biochromatic"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"biobreath_type_iii": {
+			"display_name": "Type III BioChromatic Entities",
+			"file_name": "type_iii.php",
+			"directory": "pathfinder_1e/topics/cosmere/biochromatic/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"biochromatic"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"biobreath_type_iv": {
+			"display_name": "Type IV BioChromatic Entities",
+			"file_name": "type_iv.php",
+			"directory": "pathfinder_1e/topics/cosmere/biochromatic/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"biochromatic"
+			],
+			"setting": "cosmere",
+			"status": "done"
 		}
 	}
 }

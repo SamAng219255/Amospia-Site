@@ -296,6 +296,33 @@
 							"type": "limb",
 							"nodes": [
 								{
+									"name": "biochromatic",
+									"display_name": "BioChromatic Breaths",
+									"type": "flower",
+									"nodes": [
+										{
+											"name": "biobreath_type_i",
+											"display_name": "Type I BioChromatic Entities",
+											"type": "petal"
+										},
+										{
+											"name": "biobreath_type_ii",
+											"display_name": "Type II BioChromatic Entities",
+											"type": "petal"
+										},
+										{
+											"name": "biobreath_type_iii",
+											"display_name": "Type III BioChromatic Entities",
+											"type": "petal"
+										},
+										{
+											"name": "biobreath_type_iv",
+											"display_name": "Type IV BioChromatic Entities",
+											"type": "petal"
+										}
+									]
+								},
+								{
 									"name": "classes_cosm",
 									"display_name": "Classes",
 									"type": "branch",
