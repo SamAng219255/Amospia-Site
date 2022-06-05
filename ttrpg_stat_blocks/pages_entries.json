@@ -4813,6 +4813,50 @@
 			],
 			"status": "done"
 		},
+		"aa_acid_resist": {
+			"display_name": "Draught of Acid Proof",
+			"file_name": "acid_resist.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_cold_resist": {
+			"display_name": "Draught of Cold Proof",
+			"file_name": "cold_resist.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_shock_resist": {
+			"display_name": "Draught of Electricity Proof",
+			"file_name": "shock_resist.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_fire_resist": {
+			"display_name": "Draught of Fire Proof",
+			"file_name": "fire_resist.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
 		"beast_hide": {
 			"display_name": "Beast Knight",
 			"file_name": "beast_hide.php",

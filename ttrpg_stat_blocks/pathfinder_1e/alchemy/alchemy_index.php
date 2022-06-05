@@ -296,6 +296,34 @@
 				'2',
 				'Applied',
 				'Grants an object energy resistance.' 
+			],
+			[
+				'Draught of Acid Proof',
+				'link' => 'recipes/acid_resist.php',
+				'2',
+				'Applied',
+				'Grants the drinker acid resistance.' 
+			],
+			[
+				'Draught of Cold Proof',
+				'link' => 'recipes/cold_resist.php',
+				'2',
+				'Applied',
+				'Grants the drinker cold resistance.' 
+			],
+			[
+				'Draught of Electricity Proof',
+				'link' => 'recipes/shock_resist.php',
+				'2',
+				'Applied',
+				'Grants the drinker electricity resistance.' 
+			],
+			[
+				'Draught of Fire Proof',
+				'link' => 'recipes/fire_resist.php',
+				'2',
+				'Applied',
+				'Grants the drinker fire resistance.' 
 			]
 		]
 	);
