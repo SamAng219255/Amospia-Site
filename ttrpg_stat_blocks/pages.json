@@ -501,6 +501,11 @@
 											"name": "templates_cosm",
 											"display_name": "Templates",
 											"type": "petal"
+										},
+										{
+											"name": "subtypes_cosm",
+											"display_name": "Subtypes",
+											"type": "petal"
 										}
 									]
 								},

@@ -40,6 +40,42 @@
 				'link' => 'monsters/steel_inquisitor_greater.php',
 				'TODO',
 				'human TODO lvl'
+			],
+			[
+				'Singer, Dullform',
+				'link' => 'monsters/singer_dullform.php',
+				'2',
+				'singer (dullform) commoner 4'
+			],
+			[
+				'Singer, Warform',
+				'link' => 'monsters/singer_warform.php',
+				'7',
+				'singer (warform) warrior 8'
+			],
+			[
+				'Singer, Workform',
+				'link' => 'monsters/singer_workform.php',
+				'2',
+				'singer (workform) expert 4'
+			],
+			[
+				'Singer, Nimbleform',
+				'link' => 'monsters/singer_nimbleform.php',
+				'4',
+				'singer (nimbleform) expert 6'
+			],
+			[
+				'Regal, Stormform',
+				'link' => 'monsters/regal_stormform.php',
+				'8',
+				'singer (stormform) warrior 8'
+			],
+			[
+				'Regal, Envoyform',
+				'link' => 'monsters/regal_envoyform.php',
+				'6',
+				'singer (envoyform) expert 8'
 			]
 		]
 	);
