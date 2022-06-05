@@ -184,6 +184,118 @@
 				'0',
 				'Activation',
 				'The glow from this light reveals tracking powder.' 
+			],
+			[
+				'Annort',
+				'link' => 'recipes/annort.php',
+				'3',
+				'Creation',
+				'An engineered metal that opposes necromantic forces of undeath.' 
+			],
+			[
+				'Planar Shunt',
+				'link' => 'recipes/planar_shunt.php',
+				'7',
+				'Cauldron',
+				'Shift the cauldron and up to eight creatures to another plane.' 
+			],
+			[
+				'Gateway',
+				'link' => 'recipes/gateway.php',
+				'9',
+				'Cauldron',
+				'Creates a portal to another plane as long as it is tended.' 
+			],
+			[
+				'Mist of Astral Projection',
+				'link' => 'recipes/astral_projection.php',
+				'5',
+				'Activated',
+				'Creates a mist that casts a creature\'s mind to the astral plane.' 
+			],
+			[
+				'Mist of Ethereal Projection',
+				'link' => 'recipes/ethereal_projection.php',
+				'5',
+				'Activated',
+				'Creates a mist that casts a creature\'s mind to the etheral plane.' 
+			],
+			[
+				'Death Diving Draught',
+				'link' => 'recipes/death_diving.php',
+				'6',
+				'Imbibed',
+				'Temporarily kills the drinker allowing visitation to the afterlife.' 
+			],
+			[
+				'Light Oil',
+				'link' => 'recipes/light_oil.php',
+				'0',
+				'Applied',
+				'Glows like a torch when applied.' 
+			],
+			[
+				'Silver Oil',
+				'link' => 'recipes/silver_oil.php',
+				'0',
+				'Applied',
+				'Allows a weapon to overcome DR/silver.' 
+			],
+			[
+				'Cold Iron Oil',
+				'link' => 'recipes/cold_iron_oil.php',
+				'1',
+				'Applied',
+				'Allows a weapon to overcome DR/cold iron.' 
+			],
+			[
+				'Adamantine Oil',
+				'link' => 'recipes/adamantine_oil.php',
+				'2',
+				'Applied',
+				'Allows a weapon to overcome DR/adamantine and ignore hardness less than 20.' 
+			],
+			[
+				'Annort Oil',
+				'link' => 'recipes/annort_oil.php',
+				'1',
+				'Applied',
+				'Allows a weapon to overcome the resistances of undead.' 
+			],
+			[
+				'Flaming Oil',
+				'link' => 'recipes/fire_oil.php',
+				'1',
+				'Applied',
+				'Coats a weapon in fire, making it deal an additional 1d6 points of fire damage.' 
+			],
+			[
+				'Frost Oil',
+				'link' => 'recipes/cold_oil.php',
+				'1',
+				'Applied',
+				'Coats a weapon in frost, making it deal an additional 1d6 points of cold damage.' 
+			],
+			[
+				'Corrosive Oil',
+				'link' => 'recipes/acid_oil.php',
+				'1',
+				'Applied',
+				'Coats a weapon in acid, making it deal an additional 1d6 points of acid damage.' 
+			],
+			[
+				'Shock Oil',
+				'link' => 'recipes/shock_oil.php',
+				'1',
+				'Applied',
+				'Coats a weapon in electricity, making it deal an additional 1d6 points of electricity damage.' 
+			],
+			[
+				'Energy Resistance Oil',
+				'link' => 'recipes/energy_resistance.php',
+				'2',
+				'Applied',
+				'Grants an object energy resistance.' 
 			]
 		]
 	);

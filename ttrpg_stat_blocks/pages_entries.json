@@ -4626,9 +4626,185 @@
 			],
 			"status": "done"
 		},
-		"aa_tracking_powder": {
-			"display_name": "Tracking Powder",
-			"file_name": "tracking_powder.php",
+		"aa_tracking_dust": {
+			"display_name": "Tracking Dust",
+			"file_name": "tracking_dust.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_annort": {
+			"display_name": "Annort",
+			"file_name": "annort.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_planar_shunt": {
+			"display_name": "Planar Shunt",
+			"file_name": "planar_shunt.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_gateway": {
+			"display_name": "Gateway",
+			"file_name": "gateway.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_astral_projection": {
+			"display_name": "Mist of Astral Projection",
+			"file_name": "astral_projection.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_ethereal_projection": {
+			"display_name": "Mist of Ethereal Projection",
+			"file_name": "ethereal_projection.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_death_diving": {
+			"display_name": "Death Diving Draught",
+			"file_name": "death_diving.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_light_oil": {
+			"display_name": "Light Oil",
+			"file_name": "light_oil.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_silver_oil": {
+			"display_name": "Silver Oil",
+			"file_name": "silver_oil.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_cold_iron_oil": {
+			"display_name": "Cold Iron Oil",
+			"file_name": "cold_iron_oil.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_adamantine_oil": {
+			"display_name": "Adamantine Oil",
+			"file_name": "adamantine_oil.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_annort_oil": {
+			"display_name": "Annort Oil",
+			"file_name": "annort_oil.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_fire_oil": {
+			"display_name": "Flaming Oil",
+			"file_name": "fire_oil.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_cold_oil": {
+			"display_name": "Frost Oil",
+			"file_name": "cold_oil.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_acid_oil": {
+			"display_name": "Corrosive Oil",
+			"file_name": "acid_oil.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_shock_oil": {
+			"display_name": "Shock Oil",
+			"file_name": "shock_oil.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_energy_resistance": {
+			"display_name": "Energy Resistance Oil",
+			"file_name": "energy_resistance.php",
 			"directory": "pathfinder_1e/alchemy/recipes/",
 			"sort_path": [
 				"pathfinder_1e",
@@ -4913,6 +5089,19 @@
 		"templates_cosm": {
 			"display_name": "Templates",
 			"file_name": "templates.php",
+			"directory": "pathfinder_1e/topics/cosmere/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"monsters_cosm"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"subtypes_cosm": {
+			"display_name": "Subtypes",
+			"file_name": "subtypes.php",
 			"directory": "pathfinder_1e/topics/cosmere/",
 			"sort_path": [
 				"pathfinder_1e",

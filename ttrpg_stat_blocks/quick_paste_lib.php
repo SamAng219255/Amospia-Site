@@ -1495,8 +1495,28 @@
 				array_push($properties,'bb/'.$property.'/bb '.$valStr);
 			}
 		}
-		array_push($properties,'bb/Duration/bb '.$duration);
-		array_push($properties,'bb/Saving Throw/bb '.$save);
+		if($duration!==false)
+			array_push($properties,'bb/Duration/bb '.$duration);
+		if($save!==false)
+			array_push($properties,'bb/Saving Throw/bb '.$save);
+		$sections=[];
+		if(count($properties)>0)
+			array_push(
+				$sections,
+				[
+					'title' => 'Properties',
+					'spaced' => false,
+					'texts' => quick_array($properties)
+				]
+			);
+		array_push(
+			$sections,
+			[
+				'title' => 'Description',
+				'spaced' => true,
+				'texts' => quick_array($desc)
+			]
+		);
 		block(
 			$name,
 			'recipe',
@@ -1509,18 +1529,7 @@
 				)
 			]),
 			false,
-			[
-				[
-					'title' => 'Properties',
-					'spaced' => false,
-					'texts' => quick_array($properties)
-				],
-				[
-					'title' => 'Description',
-					'spaced' => true,
-					'texts' => quick_array($desc)
-				]
-			]
+			$sections
 		);
 	}
 	function advAlchemySimpleBlock($name, $form, $descriptors, $level, $duration, $save, $desc) {
@@ -1534,6 +1543,9 @@
 	}
 	function advAlchemyRocketBlock($name, $descriptors, $level, $ignitionTime, $rangeIncr, $maxRange, $duration, $save, $desc) {
 		advAlchemyBlock($name, 'Rocket', $descriptors, $level, ['Activation Time' => $ignitionTime, ['Range Increment' => $rangeIncr, 'Max Range' => $maxRange]], $duration, $save, $desc);
+	}
+	function advAlchemyCreationBlock($name, $descriptors, $level, $desc) {
+		advAlchemyBlock($name, 'Creation', $descriptors, $level, [], false, false, $desc);
 	}
 	function surgeBlock($name, $surge, $range='Touch', $target=false, $effect=false, $area=false, $cost=1, $interval='1 round', $dismiss=true, $desc='') {
 		$properties=[];

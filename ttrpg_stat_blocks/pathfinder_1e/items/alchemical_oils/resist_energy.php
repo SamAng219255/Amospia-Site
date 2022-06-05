@@ -21,7 +21,7 @@
 				'title' => 'Description',
 				'spaced' => true,
 				'texts' => quick_array([
-					'This oil protects the armor and, by extension, its wearer from a specific type of energy (either acid, cold, electricity, fire, or sonic) granting the armor resistance 10 and its wearer a +2 bonus on saves vs that type of energy. It can also be applied to a shield or other object to grant it resistance 5, though it grants no bonus to its bearer. Lesser oil grants the item resistance 5 and a +1 bonus on saves to the creature wearing the armor. Improved oil grants the item resistance 15 and a +3 bonus on saves to the creature wearing the armor. Greater oil grants the item resistance 20 and a +4 bonus on saves to the creature wearing the armor.'
+					'This oil protects the armor and, by extension, its wearer from a specific type of energy (either acid, cold, electricity, fire, or sonic) granting the armor resistance 10 and its wearer a +2 bonus on saves vs that type of energy. It can also be applied to a shield or other object to grant it resistance 10, though it grants no bonus to its bearer. Lesser oil grants the item resistance 5 and a +1 bonus on saves to the creature wearing the armor. Improved oil grants the item resistance 15 and a +3 bonus on saves to the creature wearing the armor. Greater oil grants the item resistance 20 and a +4 bonus on saves to the creature wearing the armor.'
 				])
 			],
 			[
