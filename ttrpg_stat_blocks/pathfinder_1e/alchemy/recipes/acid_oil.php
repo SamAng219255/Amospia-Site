@@ -11,6 +11,7 @@
 	}
 	advAlchemyAppliedBlock(
 		'Corrosive Oil',// Name
+		false,
 		[
 			'acid'
 		],// Descriptors

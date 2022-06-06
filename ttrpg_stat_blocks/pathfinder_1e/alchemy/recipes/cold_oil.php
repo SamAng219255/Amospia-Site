@@ -11,6 +11,7 @@
 	}
 	advAlchemyAppliedBlock(
 		'Frost Oil',// Name
+		false,
 		[
 			'cold'
 		],// Descriptors

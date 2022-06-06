@@ -10,8 +10,9 @@ sortColumn=0;
 bonusFunc=function(x){return x*x*2000;};
 function parseNumber(x) {
 	const numA=x.replaceAll(',','').replaceAll('\xa0',' ');
+	const useDice=numA.match(/^\s*(\d+)d(\d+)/);
 	const diceMatches=numA.matchAll(/(\d+)d(\d+)/g);
-	const nextDiceMatch=diceMatches.next();
+	let nextDiceMatch=diceMatches.next();
 	const fractionMatch=numA.match(/^[+-]? ?(\d+) ?\/ ?(\d+)/);
 	const bonusMatch=numA.match(/((?:\+|-)\d) bonus/);
 	const spFractionMatch=numA.match(/^[+-]? ?(\d+) ?\/ ?(\d+) sp/);
@@ -24,10 +25,10 @@ function parseNumber(x) {
 		return 0.1;
 	else if(numA.startsWith('0x'))
 		return parseInt(numA);
-	else if(!nextDiceMatch.done) {
+	else if(useDice) {
 		let total=0;
 		do {
-			numA+=parseInt(nextDiceMatch.value[1])*(1+parseInt(nextDiceMatch.value[2]))/2;
+			total+=parseInt(nextDiceMatch.value[1])*(1+parseInt(nextDiceMatch.value[2]))/2;
 		}
 		while(!(nextDiceMatch=diceMatches.next()).done);
 		return total;

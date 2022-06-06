@@ -324,6 +324,188 @@
 				'2',
 				'Applied',
 				'Grants the drinker fire resistance.' 
+			],
+			[
+				'Elixir of Healing, Lesser',
+				'link' => 'recipes/healing_1.php',
+				'1',
+				'Imbibed',
+				'Restores 1d8 damage + 1/level (max +5).' 
+			],
+			[
+				'Elixir of Healing',
+				'link' => 'recipes/healing_2.php',
+				'2',
+				'Imbibed',
+				'Restores 2d8 damage + 1/level (max +10).' 
+			],
+			[
+				'Elixir of Healing, Improved',
+				'link' => 'recipes/healing_3.php',
+				'3',
+				'Imbibed',
+				'Restores 3d8 damage + 1/level (max +15).' 
+			],
+			[
+				'Elixir of Healing, Greater',
+				'link' => 'recipes/healing_4.php',
+				'4',
+				'Imbibed',
+				'Restores 4d8 damage + 1/level (max +20).' 
+			],
+			[
+				'Elixir of Healing, Maximum',
+				'link' => 'recipes/healing_5.php',
+				'5',
+				'Imbibed',
+				'Restores 5d8 damage + 1/level and restores life to recently slain creatures.' 
+			],
+			[
+				'Tindertwig Box',
+				'link' => 'recipes/tindertwigs.php',
+				'0',
+				'Activated',
+				'Creates a box of 25 tindertwigs that can be used to light fires.' 
+			],
+			[
+				'Daylight Oil',
+				'link' => 'recipes/daylight_oil.php',
+				'3',
+				'Applied',
+				'Shines bright light when applied.' 
+			],
+			[
+				'Sunrod',
+				'link' => 'recipes/sunrod.php',
+				'0',
+				'Activated',
+				'Glows brightly when struck.' 
+			],
+			[
+				'Sunrod, Greater',
+				'link' => 'recipes/sunrod_greater.php',
+				'3',
+				'Activated',
+				'Shines like the sun when struck.' 
+			],
+			[
+				'Anti-Plague',
+				'link' => 'recipes/anti_plague.php',
+				'3',
+				'Imbibed',
+				'Cures diseases affecting the drinker.' 
+			],
+			[
+				'Antidote, Lesser',
+				'link' => 'recipes/antidote_lesser.php',
+				'1',
+				'Imbibed',
+				'Helps neutralize poisons affecting the drinker.' 
+			],
+			[
+				'Antidote',
+				'link' => 'recipes/antidote.php',
+				'3',
+				'Imbibed',
+				'Neutralizes poisons affecting the drinker.' 
+			],
+			[
+				'Antidote, Greater',
+				'link' => 'recipes/antidote_greater.php',
+				'5',
+				'Imbibed',
+				'Automatically neutralizes poisons affecting the drinker and undoes their effects.' 
+			],
+			[
+				'Plague Vial',
+				'link' => 'recipes/plague.php',
+				'3',
+				'Bomb',
+				'Infects nearby creatures with a disease.' 
+			],
+			[
+				'Plague Vial, Greater',
+				'link' => 'recipes/plague_greater.php',
+				'5',
+				'Bomb',
+				'Infects nearby creatures with a disease.' 
+			],
+			[
+				'Blinding Spray',
+				'link' => 'recipes/blinding_spray.php',
+				'2',
+				'Activated',
+				'This fine spray causes blindness in the target.' 
+			],
+			[
+				'Deafening Cell',
+				'link' => 'recipes/deafening_cell.php',
+				'2',
+				'Activated',
+				'This object is designed to burst with a sound loud enough to cause permanent deafness.' 
+			],
+			[
+				'Dazing Cell',
+				'link' => 'recipes/dazing_cell.php',
+				'0',
+				'Activated',
+				'The target is dazed for 1 round.' 
+			],
+			[
+				'Flash Cell',
+				'link' => 'recipes/flash_cell.php',
+				'0',
+				'Activated',
+				'The target is dazzled for 1 minute.' 
+			],
+			[
+				'Water Purifying Salts',
+				'link' => 'recipes/purify_water.php',
+				'0',
+				'Creation',
+				'Purifies water when added.' 
+			],
+			[
+				'Bull\'s Strength Mutagen',
+				'link' => 'recipes/str_mutagen.php',
+				'2',
+				'Imbibed',
+				'Grants a bonus to strength and a penalty to intelligence.' 
+			],
+			[
+				'Cat\'s Grace Mutagen',
+				'link' => 'recipes/dex_mutagen.php',
+				'2',
+				'Imbibed',
+				'Grants a bonus to dexterity and a penalty to wisdom.' 
+			],
+			[
+				'Bear\'s Endurance Mutagen',
+				'link' => 'recipes/con_mutagen.php',
+				'2',
+				'Imbibed',
+				'Grants a bonus to constitution and a penalty to charisma.' 
+			],
+			[
+				'Fox\'s Cunning Mutagen',
+				'link' => 'recipes/int_mutagen.php',
+				'2',
+				'Imbibed',
+				'Grants a bonus to intelligence and a penalty to strength.' 
+			],
+			[
+				'Owl\'s Wisdom Mutagen',
+				'link' => 'recipes/wis_mutagen.php',
+				'2',
+				'Imbibed',
+				'Grants a bonus to wisdom and a penalty to dexterity.' 
+			],
+			[
+				'Eagle\'s Splendor Mutagen',
+				'link' => 'recipes/cha_mutagen.php',
+				'2',
+				'Imbibed',
+				'Grants a bonus to charisma and a penalty to constitution.' 
 			]
 		]
 	);

@@ -11,6 +11,7 @@
 	}
 	advAlchemyAppliedBlock(
 		'Silver Oil',// Name
+		false,
 		[],// Descriptors
 		0,// Level
 		'1 full round action',// Activation Time

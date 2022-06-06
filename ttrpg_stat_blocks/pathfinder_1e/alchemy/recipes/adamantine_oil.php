@@ -11,6 +11,7 @@
 	}
 	advAlchemyAppliedBlock(
 		'Adamantine Oil',// Name
+		false,
 		[],// Descriptors
 		2,// Level
 		'1 full round action',// Activation Time

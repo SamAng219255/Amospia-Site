@@ -4857,6 +4857,292 @@
 			],
 			"status": "done"
 		},
+		"aa_healing_1": {
+			"display_name": "Elixir of Healing, Lesser",
+			"file_name": "healing_1.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_healing_2": {
+			"display_name": "Elixir of Healing",
+			"file_name": "healing_2.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_healing_3": {
+			"display_name": "Elixir of Healing, Improved",
+			"file_name": "healing_3.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_healing_4": {
+			"display_name": "Elixir of Healing, Greater",
+			"file_name": "healing_4.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_healing_5": {
+			"display_name": "Elixir of Healing, Maximum",
+			"file_name": "healing_5.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_tindertwigs": {
+			"display_name": "Tindertwig Box",
+			"file_name": "tindertwigs.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_daylight_oil": {
+			"display_name": "Daylight Oil",
+			"file_name": "daylight_oil.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_sunrod": {
+			"display_name": "Sunrod",
+			"file_name": "sunrod.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_sunrod_greater": {
+			"display_name": "Sunrod, Greater",
+			"file_name": "sunrod_greater.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_anti_plague": {
+			"display_name": "Anti-Plague",
+			"file_name": "anti_plague.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_antidote_lesser": {
+			"display_name": "Antidote, Lesser",
+			"file_name": "antidote_lesser.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_antidote": {
+			"display_name": "Antidote",
+			"file_name": "antidote.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_antidote_greater": {
+			"display_name": "Antidote, Greater",
+			"file_name": "antidote_greater.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_plague": {
+			"display_name": "Plague Vial",
+			"file_name": "plague.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_plague_greater": {
+			"display_name": "Plague Vial, Greater",
+			"file_name": "plague_greater.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_blinding_spray": {
+			"display_name": "Blinding Spray",
+			"file_name": "blinding_spray.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_deafening_cell": {
+			"display_name": "Deafening Cell",
+			"file_name": "deafening_cell.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_dazing_cell": {
+			"display_name": "Dazing Cell",
+			"file_name": "dazing_cell.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_flash_cell": {
+			"display_name": "Flash Cell",
+			"file_name": "flash_cell.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_purify_water": {
+			"display_name": "Water Purifying Salts",
+			"file_name": "purify_water.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_str_mutagen": {
+			"display_name": "Bull's Strength Mutagen",
+			"file_name": "str_mutagen.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_dex_mutagen": {
+			"display_name": "Cat's Grace Mutagen",
+			"file_name": "dex_mutagen.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_con_mutagen": {
+			"display_name": "Bear's Endurance Mutagen",
+			"file_name": "con_mutagen.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_int_mutagen": {
+			"display_name": "Fox's Cunning Mutagen",
+			"file_name": "int_mutagen.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_wis_mutagen": {
+			"display_name": "Owl's Wisdom Mutagen",
+			"file_name": "wis_mutagen.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_cha_mutagen": {
+			"display_name": "Eagle's Splendor Mutagen",
+			"file_name": "cha_mutagen.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
 		"beast_hide": {
 			"display_name": "Beast Knight",
 			"file_name": "beast_hide.php",

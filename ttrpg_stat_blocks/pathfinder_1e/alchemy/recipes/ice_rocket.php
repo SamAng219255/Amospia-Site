@@ -11,6 +11,7 @@
 	}
 	advAlchemyRocketBlock(
 		'Freezing Rocket',// Name
+		false,
 		[
 			'cold'
 		],// Descriptors

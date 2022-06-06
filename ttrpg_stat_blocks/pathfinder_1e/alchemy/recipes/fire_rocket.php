@@ -11,6 +11,7 @@
 	}
 	advAlchemyRocketBlock(
 		'Fire Rocket',// Name
+		false,
 		[
 			'fire'
 		],// Descriptors

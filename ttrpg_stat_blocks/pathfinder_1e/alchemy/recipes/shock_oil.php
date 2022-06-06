@@ -11,6 +11,7 @@
 	}
 	advAlchemyAppliedBlock(
 		'Shock Oil',// Name
+		false,
 		[
 			'electricity'
 		],// Descriptors

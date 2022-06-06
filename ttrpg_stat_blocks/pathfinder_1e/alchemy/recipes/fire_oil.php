@@ -11,6 +11,7 @@
 	}
 	advAlchemyAppliedBlock(
 		'Fire Oil',// Name
+		false,
 		[
 			'fire'
 		],// Descriptors

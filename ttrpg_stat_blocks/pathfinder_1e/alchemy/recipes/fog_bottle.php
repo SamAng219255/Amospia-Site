@@ -11,6 +11,7 @@
 	}
 	advAlchemyActivatedBlock(
 		'Fog Bottle',// Name
+		false,
 		[],// Descriptors
 		2,// Level
 		'1 standard action',//Activation Time

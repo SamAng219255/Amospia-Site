@@ -12,7 +12,9 @@
 	advAlchemySimpleBlock(
 		'Planar Shunt',// Name
 		'Cauldron',// Form
-		[],// Descriptors
+		[
+			'teleportation'
+		],// Descriptors
 		7,// Level
 		'instantaneous',// Duration
 		'Will negates',// Saving Throw

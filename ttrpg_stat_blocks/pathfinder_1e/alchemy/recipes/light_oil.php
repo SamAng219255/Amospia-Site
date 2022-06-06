@@ -11,6 +11,7 @@
 	}
 	advAlchemyAppliedBlock(
 		'Light Oil',// Name
+		false,
 		[
 			'light'
 		],// Descriptors

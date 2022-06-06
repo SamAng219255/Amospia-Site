@@ -11,6 +11,7 @@
 	}
 	advAlchemyActivatedBlock(
 		'Mist of Astral Projection',// Name
+		false,
 		[
 			'mind-affecting'
 		],// Descriptors

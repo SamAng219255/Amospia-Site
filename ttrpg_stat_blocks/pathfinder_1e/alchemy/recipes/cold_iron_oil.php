@@ -11,7 +11,7 @@
 	}
 	advAlchemyAppliedBlock(
 		'Cold Iron Oil',// Name
-		'Applied',
+		false,
 		[],// Descriptors
 		1,// Level
 		'1 full round action',// Activation Time

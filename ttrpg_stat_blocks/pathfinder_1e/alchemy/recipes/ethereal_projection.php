@@ -11,6 +11,7 @@
 	}
 	advAlchemyActivatedBlock(
 		'Mist of Ethereal Projection',// Name
+		false,
 		[
 			'mind-affecting'
 		],// Descriptors

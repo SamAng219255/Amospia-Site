@@ -1532,20 +1532,39 @@
 			$sections
 		);
 	}
+	function advAlchemyFormSubformBlock($name, $form, $subforms, $descriptors, $level, $additional, $duration, $save, $desc) {
+		$subformsStr='';
+		if($subforms!==false) {
+			if(is_string($subforms)) {
+				$subformsStr=$subforms;
+			}
+			else {
+				$first=true;
+				foreach ($subforms as $subform) {
+					if($first)
+						$first=false;
+					else
+						$subformsStr.=' ';
+					$subformsStr.=$subform;
+				}
+			}
+		}
+		advAlchemyBlock($name, $form.($subforms===false?'':' ('.$subformsStr.')'), $descriptors, $level, [], $duration, $save, $desc);
+	}
 	function advAlchemySimpleBlock($name, $form, $descriptors, $level, $duration, $save, $desc) {
 		advAlchemyBlock($name, $form, $descriptors, $level, [], $duration, $save, $desc);
 	}
-	function advAlchemyActivatedBlock($name, $descriptors, $level, $activationTime, $duration, $save, $desc) {
-		advAlchemyBlock($name, 'Activated', $descriptors, $level, ['Activation Time' => $activationTime], $duration, $save, $desc);
+	function advAlchemyActivatedBlock($name, $subforms, $descriptors, $level, $activationTime, $duration, $save, $desc) {
+		advAlchemyFormSubformBlock($name, 'Activated', $subforms, $descriptors, $level, ['Activation Time' => $activationTime], $duration, $save, $desc);
 	}
-	function advAlchemyAppliedBlock($name, $descriptors, $level, $applicationTime, $duration, $save, $desc) {
-		advAlchemyBlock($name, 'Applied', $descriptors, $level, ['Activation Time' => $applicationTime], $duration, $save, $desc);
+	function advAlchemyAppliedBlock($name, $subforms, $descriptors, $level, $applicationTime, $duration, $save, $desc) {
+		advAlchemyFormSubformBlock($name, 'Applied', $subforms, $descriptors, $level, ['Activation Time' => $applicationTime], $duration, $save, $desc);
 	}
-	function advAlchemyRocketBlock($name, $descriptors, $level, $ignitionTime, $rangeIncr, $maxRange, $duration, $save, $desc) {
-		advAlchemyBlock($name, 'Rocket', $descriptors, $level, ['Activation Time' => $ignitionTime, ['Range Increment' => $rangeIncr, 'Max Range' => $maxRange]], $duration, $save, $desc);
+	function advAlchemyRocketBlock($name, $subforms, $descriptors, $level, $ignitionTime, $rangeIncr, $maxRange, $duration, $save, $desc) {
+		advAlchemyFormSubformBlock($name, 'Rocket', $subforms, $descriptors, $level, ['Activation Time' => $ignitionTime, ['Range Increment' => $rangeIncr, 'Max Range' => $maxRange]], $duration, $save, $desc);
 	}
-	function advAlchemyCreationBlock($name, $descriptors, $level, $desc) {
-		advAlchemyBlock($name, 'Creation', $descriptors, $level, [], false, false, $desc);
+	function advAlchemyCreationBlock($name, $subforms, $descriptors, $level, $desc) {
+		advAlchemyFormSubformBlock($name, 'Creation', $subforms, $descriptors, $level, [], false, false, $desc);
 	}
 	function surgeBlock($name, $surge, $range='Touch', $target=false, $effect=false, $area=false, $cost=1, $interval='1 round', $dismiss=true, $desc='') {
 		$properties=[];
@@ -2183,7 +2202,7 @@
 			$classes.=($classes===''?'':' ').'no-sort';
 		if($inline)
 			$classes.=($classes===''?'':' ').'inline';
-		$str='<table'.($classes!==''?' class="'.$classes.'"':'').'>';
+		$str='<div class="table-wrapper'.($classes!==''?' '.$classes:'').'"><table'.($classes!==''?' class="'.$classes.'"':'').'>';
 		if($horizontal) {
 			$headerCount=count($headers);
 			$str .= '<tr>';
@@ -2229,7 +2248,7 @@
 				$str .= '</tr>';
 			}
 		}
-		$str .= '</table>';
+		$str .= '</table></div>';
 		return $str;
 	}
 	function table($headers, $rows, $horizontal=true, $expand=true, $allowSort=true, $inline=false) {
