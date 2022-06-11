@@ -506,6 +506,27 @@
 				'2',
 				'Imbibed',
 				'Grants a bonus to charisma and a penalty to constitution.' 
+			],
+			[
+				'Allsoup',
+				'link' => 'recipes/allsoup.php',
+				'1',
+				'Imbibed',
+				'Feeds 6 creatures.' 
+			],
+			[
+				'Allsoup, Large Batch',
+				'link' => 'recipes/allsoup_large.php',
+				'2',
+				'Imbibed',
+				'Feeds 40 creatures.' 
+			],
+			[
+				'Allsoup, Greater',
+				'link' => 'recipes/allsoup_greater.php',
+				'6',
+				'Imbibed',
+				'Feeds 20 creatures, cures their diseases and poisons, and grants morale bonuses.' 
 			]
 		]
 	);

@@ -5143,6 +5143,39 @@
 			],
 			"status": "done"
 		},
+		"aa_allsoup": {
+			"display_name": "Allsoup",
+			"file_name": "allsoup.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_allsoup_large": {
+			"display_name": "Allsoup, Large Batch",
+			"file_name": "allsoup_large.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_allsoup_greater": {
+			"display_name": "Allsoup, Greater",
+			"file_name": "allsoup_greater.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
 		"beast_hide": {
 			"display_name": "Beast Knight",
 			"file_name": "beast_hide.php",
