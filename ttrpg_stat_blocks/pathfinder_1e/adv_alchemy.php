@@ -17,7 +17,7 @@
 			'Practicers of Advanced Alchemy are capable of producing recipes up to level 1. This level increases by 1 for every two alchemy levels beyond 1st they possess up to a maximum of level 9 recipes.',
 			'Items created through advanced alchemy have a market price and a crafting cost that is equal to half the price and that must be paid in alchemical supplies before the item can be created. For most items, the price is equal to the recipe level times the alchemy level of the creator times 50 gp. Level 0 recipes treat their recipe level as being 1/2 for the purposes of determining their price and cost. Objects produced by substance recipes are worth less based on how long ago they were produced. For example, an item with only 3/4 of its duration remaining will have a price that is 3/4 as much. It is often possible to hire a practicer of advanced alchemy to perform a cauldron recipe for the same price as buying the product of a recipe of the same level and alchemy level. They can also be paid to continue tending the pot at 250 gp an hour or 2,000 gp a day though it may be better to opt for paying an expert hireling, trained in alchemy, to tend the mixture at 10 gp a day.',
 			'When crafting an advanced alchemy recipe, you may voluntarily decrease your effect alchemy level reducing both the potency and cost of the recipe, though, you take a cumulative -1 penalty to your Craft (alchemy) check to create the recipe for each level you lower your effective level by in this way and you cannot lower your effective alchemy level below the minimum alchemy level to create a recipe of its level.',
-			'All recipes fall into one of a number of categories known as bb/Forms/bb which are as follows: Activated, Application, Bomb, Cauldron, Creation, Imbibed, Rocket, and Substance. Recipes can also have descriptors, these descriptors are the same as those for spells.'
+			'All recipes fall into one of a number of categories known as bb/Forms/bb which are as follows: Activated, Applied, Bomb, Cauldron, Creation, Imbibed, Rocket, and Substance. Recipes can also have descriptors, these descriptors are the same as those for spells.'
 		]),
 		true,
 		[
@@ -29,10 +29,10 @@
 				])
 			],
 			[
-				'title' => 'Application',
+				'title' => 'Applied',
 				'spaced' => true,
 				'texts' => quick_array([
-					'Application recipes are designed to applied to a surface and may be designed to activate any properties when exposed to the intended surface or to air or moisture. Application recipes could mimic aa/alchemical_oils|alchemical oils/aa, make surfaces slippery, or transmute one substance to another. Unless specified otherwise, application recipes yield a substance that can be applied to a surface or object later as a standard action that provokes attacks of opportunity.'
+					'Applied recipes are designed to applied to a surface and may be designed to activate any properties when exposed to the intended surface or to air or moisture. Applied recipes could mimic aa/alchemical_oils|alchemical oils/aa, make surfaces slippery, or transmute one substance to another. Unless specified otherwise, application recipes yield a substance that can be applied to a surface or object later as a standard action that provokes attacks of opportunity.'
 				])
 			],
 			[

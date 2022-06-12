@@ -27,7 +27,7 @@
 		[
 			'Name',
 			'Level',
-			'Form',// Activated, Application, Bomb, Cauldron, Creation, Imbibed, Rocket, Substance
+			'Form',// Activated, Applied, Bomb, Cauldron, Creation, Imbibed, Rocket, Substance
 			'Description'
 		],
 		[
@@ -182,7 +182,7 @@
 				'Tracking Light',
 				'link' => 'recipes/tracking_dust.php#block-Tracking-Powder',
 				'0',
-				'Activation',
+				'Activated',
 				'The glow from this light reveals tracking powder.' 
 			],
 			[
@@ -527,6 +527,62 @@
 				'6',
 				'Imbibed',
 				'Feeds 20 creatures, cures their diseases and poisons, and grants morale bonuses.' 
+			],// TODO Below this point
+			[
+				'Transmute Lead Into Gold',
+				'link' => 'recipes/lead_to_gold.php',
+				'9',
+				'Creation',
+				'Transmutes up to 1,000 pounds of lead into gold.' 
+			],
+			[
+				'Transmute Iron Into Silver',
+				'link' => 'recipes/iron_to_silver.php',
+				'4',
+				'Creation',
+				'Transmutes up to 1,000 pounds of iron into silver.' 
+			],
+			[
+				'Adhesive Solvent',
+				'link' => 'recipes/lesser_solvent.php',
+				'1',
+				'Creation',
+				quick_format('Creates a single dose of ii/ li/https://www.aonprd.com/MagicWondrousDisplay.aspx?FinalName=Universal%20Solvent|universal solvent/li /ii.') 
+			],
+			[
+				'Age Resisting Draught, Lesser',
+				'link' => 'recipes/age_resistance_lesser.php',
+				'4',
+				'Imbibed',
+				'Negates the physical detriments of being middle aged.' 
+			],
+			[
+				'Age Resisting Draught',
+				'link' => 'recipes/age_resistance.php',
+				'6',
+				'Imbibed',
+				'Negates the physical detriments of being middle and old aged.' 
+			],
+			[
+				'Age Resisting Draught, Greater',
+				'link' => 'recipes/age_resistance_greater.php',
+				'7',
+				'Imbibed',
+				'Negates the physical detriments of being middle, old, and venerable aged.' 
+			],
+			[
+				'Potion of Youth',
+				'link' => 'recipes/youth.php',
+				'9',
+				'Imbibed',
+				'Reverses the aging process, making the drinker young again.' 
+			],
+			[
+				'Astral Scrying',
+				'link' => 'recipes/scrying.php',
+				'5',
+				'Cauldron',
+				'Allows nearby creatures to observe a target using astral projection.' 
 			]
 		]
 	);
