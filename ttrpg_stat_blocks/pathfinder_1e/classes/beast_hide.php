@@ -80,7 +80,9 @@
 				'At 13th level, the natural armor bonus increases to +4.',
 				'At 15th level, the bonus to strength or dexterity increases to +6.',
 				'At 17th level, the natural armor bonus increases to +5.',
-				'The beast knight must choose at first level if they receive a bonus to strength or dexterity. If they choose dexterity, they use dexterity in place strength on attack and damage rolls with any natural weapons gained from this class and they gain Weapon Finesse as a bonus feat.'
+				'The beast knight must choose at first level if they receive a bonus to strength or dexterity. If they choose dexterity, they use dexterity in place strength on attack and damage rolls with any natural weapons gained from this class and they gain Weapon Finesse as a bonus feat.',
+				'Beast knights\' powers possess some unknown link to lycanthropy, making them weak to silver. If the beast knight is hit with an attack from a silver* weapon, they lose the effects of Might of the Beast until the end of their next turn.',
+				'* In this case, silver weapons refer to weapons made of silver or one whose material is treated as silver such as one made of mithral or that is treated with silversheen, silver blanche, or ii/ aa/aa_silver_oil|silver oil/aa /ii, but not other weapons that overcome DR silver.'
 			],
 			'Primal Speed (Ex)' => [
 				'Beast knights train to mimic the speed of wild beasts in additional to their might. Starting at 2nd level, a beast knight\'s base speed is faster than the normal for their race by 10 feet. This benefit applies only when they are not carrying a heavy load. Apply this bonus before modifying the beast knight\'s speed because of any load carried or armor worn. This bonus stacks with any other bonuses to the beast knight\'s base speed.'
@@ -90,10 +92,10 @@
 				'If a beast knight already has uncanny dodge from a different class, they automatically gain improved uncanny dodge (see below) instead.'
 			],
 			'Beat Hide Transformation (Su)' => [
-				'Starting at 4th level, as a standard action, a beast knight can take the form of the animal whose pelt they wear as beast shape I except that it lasts until dismissed as another standard action. Though they must have had a hand in slaying the creature.',
-				'Starting at 6th level, they may take the form of the animal whose pelt they wear as beast shape II.',
-				'Starting at 8th level, they may take the form of the animal or magical beast whose pelt they wear as beast shape III.',
-				'Starting at 10th level, they may take the form of the animal or magical beast whose pelt they wear as beast shape IV.'
+				'Starting at 4th level, as a standard action, a beast knight can take the form of the animal whose pelt they wear as ii/beast shape I/ii except that it lasts until dismissed as another standard action and they gain DR 5/silver while transformed. Beast knights can only take the form of a pelt from a creature they had a hand in slaying.',
+				'Starting at 6th level, they may take the form of the animal whose pelt they wear as ii/beast shape II/ii.',
+				'Starting at 8th level, they may take the form of the animal or magical beast whose pelt they wear as ii/beast shape III/ii.',
+				'Starting at 10th level, they may take the form of the animal or magical beast whose pelt they wear as ii/beast shape IV/ii.'
 			],
 			'Steel Claws (Su)' => [
 				'Starting at 5th level, upon transforming using Beast Hide Transformation, the beast knight may choose one of their natural attacks to gain the properties and abilities of a manufactured melee weapon they are wielding. If the manufactured weapon deals more damage than the natural attack, they may use the damage from the manufactured weapon. If the manufactured weapon uses a different ability score (generally strength or dexterity) for attack or damage rolls, they must use the ability score used by manufactured weapon.',
