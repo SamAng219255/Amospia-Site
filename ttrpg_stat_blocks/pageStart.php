@@ -55,6 +55,8 @@
 					$getStr='?';
 					$first=true;
 					foreach ($_GET as $name => $val) {
+						if($name==='opennav')
+							continue;
 						if($first)
 							$first=false;
 						else
@@ -62,6 +64,10 @@
 						$getStr.=$name.'='.urlencode($val);
 					}
 				}
+
+				if(isset($_GET['path']))
+					$get_path=explode(',', $_GET['path']);
+
 				foreach($pages['entries'] as $id => $entry) {
 					if($entry['file_name']===$filePathInfo['basename'].$getStr && endsWith($filePathInfo['dirname'],substr($entry['directory'],0,-1))) {
 						$pageId=$id;
@@ -172,11 +178,10 @@
 					$tree_index=0;
 					$tree_count=count($tree_path[$depth]);
 					$next_node=[];
-					if(isset($_GET['path']))
-						$get_path=explode(',', $_GET['path']);
 					$final_node=[];
 					$starting_flower=false;
 					$flower_node=[];
+					$location_title_str='';
 
 					$sanity=1000;
 					while($depth<count($tree_path)) {
@@ -207,6 +212,9 @@
 									$starting_flower=true;
 									$flower_node=$ptr;
 								}
+								if($location_title_str!=='')
+									$location_title_str='/'.$location_title_str;
+								$location_title_str=$ptr['display_name'].$location_title_str;
 							}
 							echo '<!--'.$ptr['type'].'-->';
 							if($ptr['type']=='branch') {
@@ -215,7 +223,7 @@
 									$search_path.=$node['name'].',';
 								}
 								$search_path.=$ptr['name'];
-								echo '<a href="'.$pages['origin'].'?path='.$search_path.'" class="top-label'.($match || $ptr['name'] == $pageId ? ' selected' : '').(isset($pages['entries'][$ptr['name']])?' status-'.$pages['entries'][$ptr['name']]['status']:'').'">'.$ptr['display_name'].'</a>';
+								echo '<a href="'.$pages['origin'].'nav.php?path='.$search_path.'" class="top-label'.($match || $ptr['name'] == $pageId ? ' selected' : '').(isset($pages['entries'][$ptr['name']])?' status-'.$pages['entries'][$ptr['name']]['status']:'').'">'.$ptr['display_name'].'</a>';
 							}
 							else {
 								$entry=$pages['entries'][$ptr['name']];
@@ -251,6 +259,10 @@
 							echo '<a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'" class="top-label status-'.$entry['status'].'">'.$ptr['display_name'].'</a>';
 						}
 						echo '</p><hr>';
+					}
+
+					if(isset($_GET['path'])) {
+						echo '<title>'.$location_title_str.'</title>';
 					}
 				?>
 			</div>
