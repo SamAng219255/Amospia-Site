@@ -599,7 +599,7 @@ input:checked + .slider:before {
 	border-width: 1px;
 	margin-bottom: 2em;
 }
-#wip-note>*:before {
+#wip-note>*:first-child:before {
 	content: "WIP ";
 	font-size: 2em;
 }

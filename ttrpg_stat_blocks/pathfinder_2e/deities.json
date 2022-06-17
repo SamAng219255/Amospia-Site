@@ -12,7 +12,7 @@
 		"edicts": "",
 		"anathema": "",
 		"desc": "",
-		"abilties": "",
+		"abilities": "",
 		"skill": "",
 		"alt_domains": "Time",
 		"spells": {
@@ -34,7 +34,7 @@
 		"edicts": "",
 		"anathema": "",
 		"desc": "",
-		"abilties": "",
+		"abilities": "",
 		"skill": "",
 		"alt_domains": "Change",
 		"spells": {
@@ -56,7 +56,7 @@
 		"edicts": "Enjoy your life, free the enslaved and imprisoned, and ",
 		"anathema": "Enslave, imprison, or cage any animal of person, clip the wings of a flying creature, or ",
 		"desc": "Goddess of Freedom, Flight, and Weather, Fluut is one of the three gods of the high bows of Geldrine. Fluut is the patron goddess of the Piccilli to whom she granted the ability to fly. Fluut generally graces Geldrine with light winds and lcear sky with the occasional nourishing sprinkle of rain.",
-		"abilties": "Dexerity or Intelligence",
+		"abilities": "Dexerity or Intelligence",
 		"skill": "Acrobatics",
 		"alt_domains": "Luck",
 		"spells": {

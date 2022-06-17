@@ -544,7 +544,8 @@
 				"birdpeople"
 			],
 			"setting": "great_tree",
-			"status": "wip"
+			"status": "wip",
+			"note": "Needs additional feats."
 		},
 		"birdpeople_heritages": {
 			"display_name": "Piccilli Heritages",
@@ -569,7 +570,8 @@
 				"birdpeople_feats"
 			],
 			"setting": "great_tree",
-			"status": "wip"
+			"status": "wip",
+			"note": "Needs additional feats."
 		},
 		"focus_fundamental": {
 			"display_name": "Casting Channel Fundamental Runes",
@@ -2061,7 +2063,8 @@
 				"magic_weapons",
 				"casting_foci"
 			],
-			"status": "wip"
+			"status": "wip",
+			"note": "Currently, the description reflects an old design for the rings. When I updated the rest of the foci based on arcane schools I was uncertain what property to the rings and have yet to come up with a solution."
 		},
 		"evocation_rod": {
 			"display_name": "Evocation Rod",
@@ -2901,7 +2904,8 @@
 				"races_2e"
 			],
 			"setting": "great_tree",
-			"status": "wip"
+			"status": "wip",
+			"note": "While the core idea has been finished, what properties to give the race have not yet been determined."
 		},
 		"gardinian_feats": {
 			"display_name": "Gardinian Feats",
@@ -2913,7 +2917,8 @@
 				"gardinian"
 			],
 			"setting": "great_tree",
-			"status": "wip"
+			"status": "wip",
+			"note": "While the core idea has been finished, what properties to give the race have not yet been determined."
 		},
 		"gardinian_heritages": {
 			"display_name": "Gardinian Heritages",
@@ -2925,7 +2930,8 @@
 				"gardinian"
 			],
 			"setting": "great_tree",
-			"status": "wip"
+			"status": "wip",
+			"note": "While the core idea has been finished, what properties to give the race have not yet been determined."
 		},
 		"gardinian_feat_display": {
 			"display_name": "Gardinian Feat Descriptions",
@@ -2938,7 +2944,8 @@
 				"gardinian_feats"
 			],
 			"setting": "great_tree",
-			"status": "wip"
+			"status": "wip",
+			"note": "While the core idea has been finished, what properties to give the race have not yet been determined."
 		},
 		"burrowing_insects": {
 			"display_name": "Mathine",
@@ -2949,7 +2956,8 @@
 				"races_2e"
 			],
 			"setting": "great_tree",
-			"status": "wip"
+			"status": "wip",
+			"note": "While the core idea has been finished, what properties to give the race have not yet been determined."
 		},
 		"burrowing_insects_feats": {
 			"display_name": "Mathine Feats",
@@ -2961,7 +2969,8 @@
 				"burrowing_insects"
 			],
 			"setting": "great_tree",
-			"status": "wip"
+			"status": "wip",
+			"note": "While the core idea has been finished, what properties to give the race have not yet been determined."
 		},
 		"burrowing_insects_heritages": {
 			"display_name": "Mathine Heritages",
@@ -2973,7 +2982,8 @@
 				"burrowing_insects"
 			],
 			"setting": "great_tree",
-			"status": "wip"
+			"status": "wip",
+			"note": "While the core idea has been finished, what properties to give the race have not yet been determined."
 		},
 		"burrowing_insects_feat_display": {
 			"display_name": "Mathine Feat Descriptions",
@@ -2986,7 +2996,8 @@
 				"burrowing_insects_feats"
 			],
 			"setting": "great_tree",
-			"status": "wip"
+			"status": "wip",
+			"note": "While the core idea has been finished, what properties to give the race have not yet been determined."
 		},
 		"flying_insects": {
 			"display_name": "Muuyine",
@@ -2997,7 +3008,8 @@
 				"races_2e"
 			],
 			"setting": "great_tree",
-			"status": "wip"
+			"status": "wip",
+			"note": "While the core idea has been finished, what properties to give the race have not yet been determined."
 		},
 		"flying_insects_feats": {
 			"display_name": "Muuyine Feats",
@@ -3009,7 +3021,8 @@
 				"flying_insects"
 			],
 			"setting": "great_tree",
-			"status": "wip"
+			"status": "wip",
+			"note": "While the core idea has been finished, what properties to give the race have not yet been determined."
 		},
 		"flying_insects_heritages": {
 			"display_name": "Muuyine Heritages",
@@ -3021,7 +3034,8 @@
 				"flying_insects"
 			],
 			"setting": "great_tree",
-			"status": "wip"
+			"status": "wip",
+			"note": "While the core idea has been finished, what properties to give the race have not yet been determined."
 		},
 		"flying_insects_feat_display": {
 			"display_name": "Muuyine Feat Descriptions",
@@ -3034,7 +3048,8 @@
 				"flying_insects_feats"
 			],
 			"setting": "great_tree",
-			"status": "wip"
+			"status": "wip",
+			"note": "While the core idea has been finished, what properties to give the race have not yet been determined."
 		},
 		"wernan": {
 			"display_name": "Wernan",
@@ -3045,7 +3060,8 @@
 				"races_2e"
 			],
 			"setting": "great_tree",
-			"status": "wip"
+			"status": "wip",
+			"note": "While the core idea has been finished, what properties to give the race have not yet been determined."
 		},
 		"wernan_feats": {
 			"display_name": "Wernan Feats",
@@ -3057,7 +3073,8 @@
 				"wernan"
 			],
 			"setting": "great_tree",
-			"status": "wip"
+			"status": "wip",
+			"note": "While the core idea has been finished, what properties to give the race have not yet been determined."
 		},
 		"wernan_heritages": {
 			"display_name": "Wernan Heritages",
@@ -3069,7 +3086,8 @@
 				"wernan"
 			],
 			"setting": "great_tree",
-			"status": "wip"
+			"status": "wip",
+			"note": "While the core idea has been finished, what properties to give the race have not yet been determined."
 		},
 		"wernan_feat_display": {
 			"display_name": "Wernan Feat Descriptions",
@@ -3082,7 +3100,8 @@
 				"wernan_feats"
 			],
 			"setting": "great_tree",
-			"status": "wip"
+			"status": "wip",
+			"note": "While the core idea has been finished, what properties to give the race have not yet been determined."
 		},
 		"ettinkin": {
 			"display_name": "Ettinkin",
@@ -3092,7 +3111,8 @@
 				"pathfinder_2e",
 				"races_2e"
 			],
-			"status": "wip"
+			"status": "wip",
+			"note": "While the core idea has been finished, what properties to give the race have not yet been determined."
 		},
 		"ettinkin_feats": {
 			"display_name": "Ettinkin Feats",
@@ -3103,7 +3123,8 @@
 				"races_2e",
 				"ettinkin"
 			],
-			"status": "wip"
+			"status": "wip",
+			"note": "While the core idea has been finished, what properties to give the race have not yet been determined."
 		},
 		"ettinkin_heritages": {
 			"display_name": "Ettinkin Heritages",
@@ -3114,7 +3135,8 @@
 				"races_2e",
 				"ettinkin"
 			],
-			"status": "wip"
+			"status": "wip",
+			"note": "While the core idea has been finished, what properties to give the race have not yet been determined."
 		},
 		"ettinkin_feat_display": {
 			"display_name": "Ettinkin Feat Descriptions",
@@ -3126,7 +3148,8 @@
 				"ettinkin",
 				"ettinkin_feats"
 			],
-			"status": "wip"
+			"status": "wip",
+			"note": "While the core idea has been finished, what properties to give the race have not yet been determined."
 		},
 		"npcs": {
 			"display_name": "NPCs",
@@ -3431,7 +3454,8 @@
 				"deities"
 			],
 			"setting": "great_tree",
-			"status": "wip"
+			"status": "wip",
+			"note": "Need to determine bonus cleric spells to grant."
 		},
 		"oberron": {
 			"display_name": "Oberron",
@@ -3442,7 +3466,8 @@
 				"deities"
 			],
 			"setting": "great_tree",
-			"status": "wip"
+			"status": "wip",
+			"note": "Need to determine bonus cleric spells, ability, and skill to grant."
 		},
 		"titania": {
 			"display_name": "Titania",
@@ -3453,7 +3478,8 @@
 				"deities"
 			],
 			"setting": "great_tree",
-			"status": "wip"
+			"status": "wip",
+			"note": "Need to determine bonus cleric spells, ability, and skill to grant."
 		},
 		"snap": {
 			"display_name": "Snap",
@@ -3509,7 +3535,8 @@
 				"artifacts",
 				"badizon_relics"
 			],
-			"status": "wip"
+			"status": "wip",
+			"note": "Need to fill out potential and mental modes."
 		},
 		"domination_jewelry": {
 			"display_name": "Token of Domination",
@@ -3557,7 +3584,7 @@
 				"magic_items",
 				"wondrous"
 			],
-			"status": "wip"
+			"status": "done"
 		},
 		"warbow": {
 			"display_name": "War Bow",
@@ -4116,7 +4143,8 @@
 				"wondrous_am"
 			],
 			"setting": "amospia",
-			"status": "wip"
+			"status": "wip",
+			"note": "Need to fill out the chart of elemental abilities."
 		},
 		"magic_architecture": {
 			"display_name": "Magic Architecture",
@@ -5185,7 +5213,8 @@
 				"items",
 				"adv_alchemy"
 			],
-			"status": "wip"
+			"status": "wip",
+			"note": "While the recipe contains an attempt to limit the frequency of its usage, I have yet to deduce a properly satisfying solution."
 		},
 		"aa_iron_to_silver": {
 			"display_name": "Transmute Iron Into Silver",
@@ -5283,7 +5312,8 @@
 				"pathfinder_1e",
 				"classes"
 			],
-			"status": "wip"
+			"status": "wip",
+			"note": "This class is missing some features to fill it out at higher levels. (18th through 20th)"
 		},
 		"drakheim": {
 			"display_name": "Drakheim",
@@ -5361,7 +5391,7 @@
 				"planes_am"
 			],
 			"setting": "amospia",
-			"status": "wip"
+			"status": "done"
 		},
 		"cosmere": {
 			"display_name": "Cosmere",
@@ -5372,7 +5402,8 @@
 				"topics"
 			],
 			"setting": "cosmere",
-			"status": "wip"
+			"status": "wip",
+			"note": "Various pages are missing or unfinished."
 		},
 		"weapons_cosm": {
 			"display_name": "Weapons",
@@ -5767,7 +5798,8 @@
 				"equipment_cosm"
 			],
 			"setting": "cosmere",
-			"status": "wip"
+			"status": "wip",
+			"note": "The prices of various metals may need some rebalancing."
 		},
 		"metallic_arts": {
 			"display_name": "Metallic Arts",
@@ -5859,7 +5891,8 @@
 				"quintenium"
 			],
 			"setting": "cosmere",
-			"status": "wip"
+			"status": "wip",
+			"note": "Not all abilities are as of yet determined."
 		},
 		"q_hemalurgy": {
 			"display_name": "Quintenium Hemalurgy",
@@ -6827,7 +6860,8 @@
 				"feruchemy"
 			],
 			"setting": "cosmere",
-			"status": "wip"
+			"status": "wip",
+			"note": "Savantism effects haven't been determined yet."
 		},
 		"feru_q_nicrosil": {
 			"display_name": "Feruchemical Quintenium/Nicrosil",
@@ -7134,7 +7168,8 @@
 				"classes_cosm"
 			],
 			"setting": "cosmere",
-			"status": "wip"
+			"status": "wip",
+			"note": "Needs more abilities to fill out the levels."
 		},
 		"knight_radiant_orders": {
 			"display_name": "Orders of the Knight Radiant",
@@ -7148,7 +7183,8 @@
 				"knight_radiant"
 			],
 			"setting": "cosmere",
-			"status": "wip"
+			"status": "wip",
+			"note": "Not all orders are as of yet known or known well enough to determine all necessary features."
 		},
 		"ten_essences_cosm": {
 			"display_name": "The Ten Essences",

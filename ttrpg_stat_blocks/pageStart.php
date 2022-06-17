@@ -270,6 +270,9 @@
 		<div id="content">
 			<?php
 				if($pageId!='' && $pages['entries'][$pageId]['status']=='wip') {
-					echo '<div id="wip-note"><p>This page is currently a Work In Progress and may have unfinished, placeholder, and missing information.</p></div>';
+					if(isset($pages['entries'][$pageId]['note']))
+						echo '<div id="wip-note"><p>This page is currently a Work In Progress and may have unfinished, placeholder, and missing information.</p><p><b>Reason</b>: '.$pages['entries'][$pageId]['note'].'</p></div>';
+					else
+						echo '<div id="wip-note"><p>This page is currently a Work In Progress and may have unfinished, placeholder, and missing information.</p></div>';
 				}
 			?>

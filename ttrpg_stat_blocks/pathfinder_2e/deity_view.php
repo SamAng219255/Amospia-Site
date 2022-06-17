@@ -44,7 +44,7 @@
 					"title" => "Devotee Benefits",
 					"spaced" => false,
 					"texts" => quick_format([
-						'bb/Divine Ability/bb  '.$subject['ability'],
+						'bb/Divine Ability/bb  '.$subject['abilities'],
 						'bb/Divine Font/bb '.$subject['divine_font'],
 						'bb/Divine Skill/bb '.$subject['skill'],
 						'bb/Favored Weapon/bb '.$subject['favored_weapon'],
