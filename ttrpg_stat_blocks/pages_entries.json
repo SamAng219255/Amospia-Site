@@ -5176,6 +5176,105 @@
 			],
 			"status": "done"
 		},
+		"aa_lead_to_gold": {
+			"display_name": "Transmute Lead Into Gold",
+			"file_name": "lead_to_gold.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "wip"
+		},
+		"aa_iron_to_silver": {
+			"display_name": "Transmute Iron Into Silver",
+			"file_name": "iron_to_silver.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_lesser_solvent": {
+			"display_name": "Adhesive Solvent",
+			"file_name": "lesser_solvent.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_age_resistance": {
+			"display_name": "Age Resisting Draught",
+			"file_name": "age_resistance.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_youth": {
+			"display_name": "Potion of Youth",
+			"file_name": "youth.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_scrying": {
+			"display_name": "Astral Scrying",
+			"file_name": "scrying.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_weak_acid": {
+			"display_name": "Weak Acid Flask",
+			"file_name": "weak_acid.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_weak_fire": {
+			"display_name": "Weak Alchemical Fire",
+			"file_name": "weak_fire.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_alkali_flask": {
+			"display_name": "Alkali Flask",
+			"file_name": "alkali_flask.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
 		"beast_hide": {
 			"display_name": "Beast Knight",
 			"file_name": "beast_hide.php",

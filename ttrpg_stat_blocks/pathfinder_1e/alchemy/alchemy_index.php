@@ -527,7 +527,7 @@
 				'6',
 				'Imbibed',
 				'Feeds 20 creatures, cures their diseases and poisons, and grants morale bonuses.' 
-			],// TODO Below this point
+			],
 			[
 				'Transmute Lead Into Gold',
 				'link' => 'recipes/lead_to_gold.php',
@@ -551,21 +551,21 @@
 			],
 			[
 				'Age Resisting Draught, Lesser',
-				'link' => 'recipes/age_resistance_lesser.php',
+				'link' => 'recipes/age_resistance.php#block-Age-Resisting-Draught,-Lesser',
 				'4',
 				'Imbibed',
 				'Negates the physical detriments of being middle aged.' 
 			],
 			[
 				'Age Resisting Draught',
-				'link' => 'recipes/age_resistance.php',
+				'link' => 'recipes/age_resistance.php#block-Age-Resisting-Draught',
 				'6',
 				'Imbibed',
 				'Negates the physical detriments of being middle and old aged.' 
 			],
 			[
 				'Age Resisting Draught, Greater',
-				'link' => 'recipes/age_resistance_greater.php',
+				'link' => 'recipes/age_resistance.php#block-Age-Resisting-Draught,-Greater',
 				'7',
 				'Imbibed',
 				'Negates the physical detriments of being middle, old, and venerable aged.' 
@@ -583,7 +583,28 @@
 				'5',
 				'Cauldron',
 				'Allows nearby creatures to observe a target using astral projection.' 
-			]
+			],
+			[
+				'Weak Acid Flask',
+				'link' => 'recipes/weak_acid.php',
+				'0',
+				'Bomb',
+				'Deals 1d4 points of acid damage and 1 point of splash.' 
+			],
+			[
+				'Weak Alchemical Fire',
+				'link' => 'recipes/weak_fire.php',
+				'0',
+				'Bomb',
+				'Deals 1d4 points of fire damage and 1 point of splash.' 
+			],
+			[
+				'Alkali Flask',
+				'link' => 'recipes/alkali_flask.php',
+				'2',
+				'Bomb',
+				'Deals acid damage and twice as much damage to slimes.' 
+			]// TODO Below this point
 		]
 	);
 	require $startDir.'pageEnd.php';
