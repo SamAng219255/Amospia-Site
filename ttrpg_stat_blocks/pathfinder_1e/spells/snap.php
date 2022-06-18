@@ -13,6 +13,7 @@
 		'Snap',// Name
 		'Evocation',// School
 		[
+			'destruction',
 			'sonic'
 		],// Descriptors
 		[
@@ -51,6 +52,7 @@
 		'Snap, Lesser',// Name
 		'Evocation',// School
 		[
+			'destruction',
 			'sonic'
 		],// Descriptors
 		[
@@ -84,6 +86,7 @@
 		'Snap, Greater',// Name
 		'Evocation',// School
 		[
+			'destruction',
 			'sonic'
 		],// Descriptors
 		[

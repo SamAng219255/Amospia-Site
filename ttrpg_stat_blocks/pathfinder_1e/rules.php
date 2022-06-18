@@ -30,6 +30,30 @@
 				]
 			],
 			[
+				'name' => 'Magic',
+				'children' => [
+					[
+						'name' => 'Magic Basics',
+						'children' => [
+							[
+								'name' => 'Spell Descriptions',
+								'children' => [
+									[
+										'name' => 'Descriptor',
+										'children' => [
+											[
+												'name' => 'Destruction',
+												'link' => 'rules/destruction_descriptor.php'
+											]
+										]
+									]
+								]
+							]
+						]
+					]
+				]
+			],
+			[
 				'name' => 'Misc',
 				'children' => [
 					[

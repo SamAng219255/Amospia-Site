@@ -13,6 +13,7 @@
 		'Thunderous Snap',// Name
 		'Evocation',// School
 		[
+			'destruction',
 			'sonic'
 		],// Descriptors
 		[

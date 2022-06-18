@@ -604,6 +604,13 @@
 				'2',
 				'Bomb',
 				'Deals acid damage and twice as much damage to slimes.' 
+			],
+			[
+				'Rusting Bomb',
+				'link' => 'recipes/rust_bomb.php',
+				'2',
+				'Bomb',
+				'Rusts objects giving the broken condition or dealing 1d8 points of damage per level, maximum 5d8, to creatures.' 
 			]// TODO Below this point
 		]
 	);

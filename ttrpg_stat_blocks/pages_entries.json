@@ -3325,7 +3325,8 @@
 			"file_name": "rules_settings.php",
 			"directory": "pathfinder_1e/",
 			"sort_path": [
-				"pathfinder_1e"
+				"pathfinder_1e",
+				"rules"
 			],
 			"status": "done"
 		},
@@ -5304,6 +5305,17 @@
 			],
 			"status": "done"
 		},
+		"aa_rust_bomb": {
+			"display_name": "Rusting Bomb",
+			"file_name": "rust_bomb.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
 		"beast_hide": {
 			"display_name": "Beast Knight",
 			"file_name": "beast_hide.php",
@@ -7261,6 +7273,17 @@
 				"biochromatic"
 			],
 			"setting": "cosmere",
+			"status": "done"
+		},
+		"destruction_descriptor": {
+			"display_name": "Destruction (Descriptor)",
+			"file_name": "destruction_descriptor.php",
+			"directory": "pathfinder_1e/rules/",
+			"sort_path": [
+				"pathfinder_1e",
+				"rules"
+			],
+			"setting": "forest",
 			"status": "done"
 		}
 	}

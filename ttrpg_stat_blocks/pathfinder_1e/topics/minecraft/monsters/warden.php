@@ -62,7 +62,7 @@
 			]
 		],// Attacks
 		10,// Reach
-		'powerful slam, sonic boom (60 ft., 10d6 times 3 sonic), terrifying leap',// Special Attacks
+		'powerful slam, sonic boom (60 ft., 5d6 times 3 sonic), terrifying leap',// Special Attacks
 		[
 			'level' => 42,
 			'conc' => 0,
@@ -155,8 +155,8 @@
 			[
 				'name' => 'Inevitable Fear',
 				'type' => 'Su',
-				'desc' => 'The warden\'s presence to unsettling to foes and brings with it a sense of inevitability that can shake even the stongest warriors. Any opponents with fewer hit dice than the warden (usually 42) within 120 feet of the warden are overcome with dread and are shakened and must make a DC 36 Will save else become frightened instead.
-				In addition, all abilities that specifically grant resistance to fear, such as a paladin\'s Aura of Courage or a fighter\'s Bravery, fail to provide protection against any ability while within range and their loss strikes even greater fear into creatures that depend on them. Any creature with a constant ability that grants a bonus vs fear instead grants a penalty vs fear equal to half of the bonus, though this penalty caps out at -10, and creatures that have a constant ability that makes them immune to fear instead take a -15 penalty, though this penalty does not stack with other abilities that normally grant bonuses or immunity to fear.'
+				'desc' => 'The warden\'s presence to unsettling to foes and brings with it a sense of inevitability that can shake even the strongest warriors. Any opponents with fewer hit dice than the warden (usually 42) within 120 feet of the warden are overcome with dread and are shakened and must make a DC 36 Will save else become frightened instead.
+				In addition, all abilities that specifically grant resistance to fear, such as a paladin\'s Aura of Courage or a fighter\'s Bravery, fail to provide protection against any ability while within range and their loss strikes even greater fear into creatures that depend on them. Any creature with a constant ability that grants a bonus vs fear instead receives a penalty vs fear equal to half of the bonus, though this penalty caps out at -10, and creatures that have a constant ability that makes them immune to fear instead take a -15 penalty, though this penalty does not stack with other abilities that normally grant bonuses or immunity to fear.'
 			],
 			[
 				'name' => 'Powerful Scent',
@@ -171,17 +171,17 @@
 			[
 				'name' => 'Sculk-Speech',
 				'type' => 'Ex',
-				'desc' => 'All sculk constructs, including wardens, are able to communicate with each other through the creation of specific vibrations that can be detected by other creatures with vibration sense if they are within range. These communications can theoretically convey anything you could convey through normal speech though in practice sculk constructs tend to communicate in short, concise, and monotone messages that more resemble communications through a network of computers than those between intelligent creatures.'
+				'desc' => 'All sculk constructs, including wardens, are able to communicate with each other through the creation of specific vibrations that can be detected by other creatures with vibration sense if they are within range. These communications can theoretically convey anything you could convey through normal speech though in practice sculk constructs tend to communicate in short, concise, and monotone messages that more resemble communications through a network of computers than those between intelligent creatures. In the rare case that there are more than one wardens in an area, a warden is able to accurately communicate the location of any creature it knows the location of to any other warden within range to hear their sculk-speech.'
 			],
 			[
 				'name' => 'Sonic Boom',
 				'type' => 'Ex',
-				'desc' => 'As a full-round action, a warden can make a ranged attack against a target within 60 feet that can travel through obstacles including walls less than 30 feet thick; deals 10d6 times 3 points of sonic damage; and, so long as the warden accurately knows what square the target occupies, hits automatically, without an attack roll and ignoring miss chances.'
+				'desc' => 'As a full-round action, a warden can make a ranged attack against a target within 60 feet that can travel through obstacles including walls less than 30 feet thick; deals 5d6 times 3 points of sonic damage; and, so long as the warden accurately knows what square the target occupies, hits automatically, without an attack roll and ignoring miss chances.'
 			],
 			[
 				'name' => 'Soul Identification',
 				'type' => 'Ex',
-				'desc' => 'A warden is able to identify and sense a soul that it interacts closely with. A warden is able to determine the exact location of any creature that touches or attacks the warden, targets the warden with a spell, spell-like ability, supernatural ability, or extraordinary ability, or that the warden successfully hits with their attack. Area effects do not allow the warden to detect the user\'s location unless the area is specifically targetted as being from the warden. In the rare case that their are more one than wardens in an area, a warden is able to accurately communicate the location of any creature it knows the location of to any other warden within range to hear their sculk-speech. As this ability specifically identifies the location of a creature\'s soul, this ability does not work on creatures or objects that lack a soul such as most constructs though all undead can be detected as though they had souls.
+				'desc' => 'A warden is able to identify and sense a soul that it interacts closely with. A warden is able to determine the exact location of any creature that touches or attacks the warden, targets the warden with a spell, spell-like ability, supernatural ability, or extraordinary ability, or that the warden successfully hits with their attack. Area effects do not allow the warden to detect the user\'s location unless the area is specifically targetted as being from the warden. As this ability specifically identifies the location of a creature\'s soul, this ability does not work on creatures or objects that lack a soul such as most constructs though all undead can be detected as though they had souls.
 				While the warden knows the creature\'s location, this sense is imprecise and the creature is treated having total concealment from the warden, though due to the warden\'s Blind Fight feats this is rarely an issue.'
 			],
 			[
@@ -215,16 +215,18 @@
 <hr>
 <p>The Warden has many lengthy abilities but largely is more simple than they let on and the number and length of abilities is simply to cover all of the edge cases and fully describe abilities that don't fit cleanly into established abilities. As such a summary of their abilities is provided here.</p>
 <ul>
-	<li>Blinding Aura: There is a 30% chances creatures within 120 feet can't see unless they are carrying a source of bright light in which case they see dim light within 5 feet of the source.</li>
-	<li>Ineviatable Fear: Creatures within 120 feet, must make a Will save, DC 36. On a success they are shaken and on a failure they frightened. Creatures that are normally resistant or immune to fear have penalties instead.</li>
-	<li>Powerful Slam: All effects are included in their attacks. The Warden's slam attack has more likely crits and crits more often, in addition to having a larger dice.</li>
-	<li>Sculk-Speech: Warden can speak to each other and other sculk contructs as long as they are within range of each other's vibration sense.</li>
+	<li>Blinding Aura: There is a 30% chances creatures within 120 feet can't see unless they are carrying a source of bright light in which case they see dim light within 5 feet of the source. All ignoring vision abilities.</li>
+	<li>Inevitable Fear: Creatures within 120 feet, must make a Will save, DC 36. On a success they are shaken and on a failure they frightened. Creatures that are normally resistant or immune to fear have penalties instead.</li>
+	<li>Powerful Scent: Its like scent but with longer range and, as a move action, can be used to discover a creature's square within 20'.</li>
+	<li>Powerful Slam: All effects are included in their attacks. The Warden's slam attack has more damaging crits and crits more often, in addition to having a larger dice.</li>
+	<li>Sculk-Speech: Warden can speak to each other and other sculk contructs as long as they are within range of each other's vibration sense. Wardens can tell each other which square a creature is in.</li>
+	<li>Sonic Boom: Full round action ranged attack that automatically hits (if the warden knows what square the target is in), goes through walls, deals 5d6 times 3 sonic damage.</li>
 	<li>Soul Identification: If the warden attacks a creature or a creature does something to the warden, the warden knows what square they are in without being limited to their normal senses.</li>
 	<li>Soul Trap: If a creature is knocked to 0 or fewer hitpoints or dies for other reasons within 80 feet, their soul is trapped in the warden, they start taking negative levels, the warden gets fast healing, and the warden gets a +2 strength bonus.</li>
 	<li>Stone Burrow: The warden can burrow through stone.</li>
-	<li>Terrifying Leap: The warden can jump really high and far, can attack a crerature while in the air, and damages creature it lands on.</li>
+	<li>Terrifying Leap: The warden can jump really high and far, can attack a creature while in the air, and damages creature it lands on.</li>
 	<li>Vibration Sense: The warden can sense the location of moving or noisy objects but can't tell anything else about them.</li>
-	<li>Blind-Fight feats: The warden only has a 20% chance to miss because he can't see and can't roll twice and take the better result.</li>
+	<li>Blind-Fight feats: The warden only has a 20% chance to miss because he can't see and can't roll twice and take the better result. (Effectively a 4% chance of failure.)</li>
 </ul>
 <p>Summary: The warden hits really hard, can't see but can sense movement and noises and can knows the location of any creature that actually gets into a fight with it, makes it hard for other creatures to see (ignoring sight abilities), makes creatures afraid (ignoring resitances), traps the souls of creatures it kills, and can jump to reach high up areas or to strike flying creatures.</p>
 <hr>
