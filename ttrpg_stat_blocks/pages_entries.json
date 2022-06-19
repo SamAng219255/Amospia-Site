@@ -7285,6 +7285,16 @@
 			],
 			"setting": "forest",
 			"status": "done"
+		},
+		"sculkers": {
+			"display_name": "Sculker",
+			"file_name": "sculkers.php",
+			"directory": "pathfinder_1e/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"races"
+			],
+			"status": "done"
 		}
 	}
 }

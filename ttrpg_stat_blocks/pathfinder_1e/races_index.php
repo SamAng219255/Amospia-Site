@@ -34,6 +34,9 @@
 	<dt><a href="races/redeemed.php">Redeemed</a> (15 RP)</dt>
 	<dd>+2 Con, +2 Cha, -2 Str</dd>
 	<dd>Redeemed are the result of what happens when an outsider remains on the material planes too long. They become mortal. In the case of the Redeemed, they were succubi and incubi, banished to the material planes after a failed coup who, after becoming mortal, were taken in by the goddess Sarenrae who gave them their name.</dd>
+	<dt><a href="races/sculkers.php">Sculkers</a> (15 RP)</dt>
+	<dd>+2 Dex, +2 Con</dd>
+	<dd>Sculkers are a secretive race that live deep underground and sense motion and sound instead of possessing normal sight.</dd>
 	<dt><a href="races/shapeshifters.php">Shape Shifters</a> (15 RP)</dt>
 	<dd>+2 Str, +2 Cha, -4 Int</dd>
 	<dd>The race simply known as "Shape Shifters" truly live up to their name. The result of experimentation to blend the various types of shape shifters, this race have no natural forms and instead are able to take on many different forms on a whim.</dd>

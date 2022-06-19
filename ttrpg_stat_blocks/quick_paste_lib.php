@@ -557,9 +557,9 @@
 	function raceBlock($name, $description, $raceTraits, $subraces=false, $traitsSections=false) {
 		block($name, 'race-desc', quick_array($description), true);
 		if($traitsSections)
-			block("{$name} Racial Traits", 'race-traits', quick_array($raceTraits), false, $traitsSections);
+			block("{$name} Racial Traits", 'race-traits', quick_array($raceTraits), true, $traitsSections);
 		else
-			block("{$name} Racial Traits", 'race-traits', quick_array($raceTraits));
+			block("{$name} Racial Traits", 'race-traits', quick_array($raceTraits), true);
 		if($subraces) {
 			block("Subraces", 'race-traits', [], false, $subraces);
 		}
