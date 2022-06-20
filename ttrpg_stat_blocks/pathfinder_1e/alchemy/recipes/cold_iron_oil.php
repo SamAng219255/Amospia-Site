@@ -18,9 +18,9 @@
 		'1 hour',// Duration
 		'none',// Saving Throw
 		[
-			'This oil, when applied, alchemically alloys cold iron into the weapon\'s surface allowing it to overcome DR/cold iron.',
-			'Crafting this recipe requires at least 20 gp of silver.'
-		] // Description
+			'This oil, when applied, alchemically alloys cold iron into the weapon\'s surface allowing it to overcome DR/cold iron.'
+		], // Description
+		'20 gp worth of cold iron'
 	);
 	require $startDir.'pageEnd.php';
 ?>

@@ -18,9 +18,9 @@
 		'1 hour',// Duration
 		'none',// Saving Throw
 		[
-			'This oil, when applied, alchemically alloys adamantine into the weapon\'s surface allowing it to overcome DR/adamantine and ignore hardness less than 20. It can also be applied to any metal object increasing its hardness to 20.',
-			'Crafting this recipe requires at least 100 gp of adamantine.'
-		] // Description
+			'This oil, when applied, alchemically alloys adamantine into the weapon\'s surface allowing it to overcome DR/adamantine and ignore hardness less than 20. It can also be applied to any metal object increasing its hardness to 20.'
+		], // Description
+		'1/3 lb. of adamantine worth 100 gp'
 	);
 	require $startDir.'pageEnd.php';
 ?>

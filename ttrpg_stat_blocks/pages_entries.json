@@ -5214,8 +5214,7 @@
 				"items",
 				"adv_alchemy"
 			],
-			"status": "wip",
-			"note": "While the recipe contains an attempt to limit the frequency of its usage, I have yet to deduce a properly satisfying solution."
+			"status": "done"
 		},
 		"aa_iron_to_silver": {
 			"display_name": "Transmute Iron Into Silver",
@@ -5308,6 +5307,138 @@
 		"aa_rust_bomb": {
 			"display_name": "Rusting Bomb",
 			"file_name": "rust_bomb.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_snapdragon": {
+			"display_name": "Snapdragon Firework",
+			"file_name": "snapdragon.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_smoke_rocket": {
+			"display_name": "Smoke Rocket",
+			"file_name": "smoke_rocket.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_flame_fountain": {
+			"display_name": "Flame Fountain",
+			"file_name": "flame_fountain.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_peonies": {
+			"display_name": "Dancing Peonies",
+			"file_name": "peonies.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_dragon_firework": {
+			"display_name": "Dragon Firework",
+			"file_name": "dragon_firework.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_desnan_candle": {
+			"display_name": "Desnan Candle",
+			"file_name": "desnan_candle.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_holy_water": {
+			"display_name": "Infused Holy Water",
+			"file_name": "holy_water.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_unholy_water": {
+			"display_name": "Unholy Water",
+			"file_name": "unholy_water.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_aligned_vial": {
+			"display_name": "Aligned Vial",
+			"file_name": "aligned_vial.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_painkiller": {
+			"display_name": "Analgesic Syrup",
+			"file_name": "painkiller.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_sobering_draught": {
+			"display_name": "Draught of Sobriety",
+			"file_name": "sobering_draught.php",
+			"directory": "pathfinder_1e/alchemy/recipes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"adv_alchemy"
+			],
+			"status": "done"
+		},
+		"aa_wakefulness": {
+			"display_name": "Alchemist's Energy",
+			"file_name": "wakefulness.php",
 			"directory": "pathfinder_1e/alchemy/recipes/",
 			"sort_path": [
 				"pathfinder_1e",

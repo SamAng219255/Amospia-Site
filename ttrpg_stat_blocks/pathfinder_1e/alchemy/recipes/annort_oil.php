@@ -18,9 +18,9 @@
 		'1 hour',// Duration
 		'none',// Saving Throw
 		[
-			'This oil, when applied, alchemically alloys as/special_materials|Annort|annort/as into the weapon\'s surface, an alchemically engineered metal that burns the forms of undead, causing it to gain the effects of annort.',
-			'Crafting this recipe requires at least 20 gp of annort.'
-		] // Description
+			'This oil, when applied, alchemically alloys as/special_materials|Annort|annort/as into the weapon\'s surface, an alchemically engineered metal that burns the forms of undead, causing it to gain the effects of annort.'
+		], // Description
+		'20 gp worth of annort'
 	);
 	require $startDir.'pageEnd.php';
 ?>

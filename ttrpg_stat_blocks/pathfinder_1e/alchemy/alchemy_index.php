@@ -611,6 +611,90 @@
 				'2',
 				'Bomb',
 				'Rusts objects giving the broken condition or dealing 1d8 points of damage per level, maximum 5d8, to creatures.' 
+			],
+			[
+				'Snapdragon Firework',
+				'link' => 'recipes/snapdragon.php',
+				'0',
+				'Rocket',
+				'Takes a zigzag path to the target and deals 1d4 damage and dazzles creatures there.' 
+			],
+			[
+				'Smoke Rocket',
+				'link' => 'recipes/smoke_rocket.php',
+				'1',
+				'Rocket',
+				'Leaves a trail of thick smoke before bursting into a cloud of smoke.' 
+			],
+			[
+				'Flame Fountain',
+				'link' => 'recipes/flame_fountain.php',
+				'1',
+				'Activated',
+				'Creates a 3-foot-long fountain of sparks that can be wielded as a weapon.' 
+			],
+			[
+				'Dancing Peonies',
+				'link' => 'recipes/peonies.php',
+				'1',
+				'Activated',
+				'Contains 3 packets that move randomly and deal small amounts of damage and blind creatures momentarily.' 
+			],
+			[
+				'Dragon Firework',
+				'link' => 'recipes/dragon_firework.php',
+				'2',
+				'Rocket',
+				'Deals damage in a line along its path.' 
+			],
+			[
+				'Desnan Candle',
+				'link' => 'recipes/desnan_candle.php',
+				'1',
+				'Activated',
+				'Fires small glowing projectiles each round that can burn targets.' 
+			],
+			[
+				'Infused Holy Water',
+				'link' => 'recipes/holy_water.php',
+				'2',
+				'Bomb',
+				'Burns evil outsiders and undead, dealing 1d8 damage to outsiders and 1d8 per 2 levels to undead.' 
+			],
+			[
+				'Unholy Water',
+				'link' => 'recipes/unholy_water.php',
+				'2',
+				'Bomb',
+				'Burns good outsiders, dealing 1d8 damage.' 
+			],
+			[
+				'Aligned Vial',
+				'link' => 'recipes/aligned_vial.php',
+				'4',
+				'Bomb',
+				'Deals 1d6 damage per level, max 10d6, to creatures of the opposite alignment of the vial or 1d8 per level, max 10d8, if the target is an outsider.' 
+			],
+			[
+				'Analgesic Syrup',
+				'link' => 'recipes/painkiller.php',
+				'0',
+				'Imbibed',
+				'Soothes feelings of pain.' 
+			],
+			[
+				'Draught of Sobriety',
+				'link' => 'recipes/sobering_draught.php',
+				'0',
+				'Imbibed',
+				'Sobers up the drinker and removes hangovers.' 
+			],
+			[
+				'Alchemist\'s Energy',
+				'link' => 'recipes/wakefulness.php',
+				'0',
+				'Imbibed',
+				'Makes the drinker more awake, staving off drowsiness and sleep.' 
 			]// TODO Below this point
 		]
 	);

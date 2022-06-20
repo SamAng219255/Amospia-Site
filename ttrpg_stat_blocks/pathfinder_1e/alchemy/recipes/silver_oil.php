@@ -18,9 +18,9 @@
 		'1 hour plus 1 hour/4 levels',// Duration
 		'none',// Saving Throw
 		[
-			'This oil, when applied, alchemically alloys silver into the weapon\'s surface allowing it to overcome DR/silver.',
-			'Crafting this recipe requires at least 5 gp of silver.'
-		] // Description
+			'This oil, when applied, alchemically alloys silver into the weapon\'s surface allowing it to overcome DR/silver.'
+		], // Description
+		'5 gp worth of silver'
 	);
 	require $startDir.'pageEnd.php';
 ?>

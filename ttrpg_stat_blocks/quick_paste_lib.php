@@ -1581,7 +1581,7 @@
 				}
 			}
 		}
-		advAlchemyBlock($name, $form.($subforms===false?'':' ('.$subformsStr.')'), $descriptors, $level, [], $duration, $save, $desc, $reagents, $catalysts);
+		advAlchemyBlock($name, $form.($subforms===false?'':' ('.$subformsStr.')'), $descriptors, $level, $additional, $duration, $save, $desc, $reagents, $catalysts);
 	}
 	function advAlchemySimpleBlock($name, $form, $descriptors, $level, $duration, $save, $desc, $reagents=false, $catalysts=false) {
 		advAlchemyBlock($name, $form, $descriptors, $level, [], $duration, $save, $desc, $reagents, $catalysts);

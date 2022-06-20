@@ -19,7 +19,7 @@
 			'This recipe must be entirely performed beneath a full moon.'
 		], // Description
 		[
-			'up to 1,000 pounds of iron (100 gp)'
+			'up to 500 pounds of iron (50 gp)'
 		],// Exceptional Reagents
 		false// Exceptional Catalysts
 	);
