@@ -7426,6 +7426,56 @@
 				"races"
 			],
 			"status": "done"
+		},
+		"mandriff_large": {
+			"display_name": "Mandriff, Large",
+			"file_name": "mandriff_large.php",
+			"directory": "pathfinder_1e/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"races"
+			],
+			"status": "done"
+		},
+		"mandriff_medium": {
+			"display_name": "Mandriff, Medium",
+			"file_name": "mandriff_medium.php",
+			"directory": "pathfinder_1e/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"races"
+			],
+			"status": "done"
+		},
+		"mandriff_small": {
+			"display_name": "Mandriff, Small",
+			"file_name": "mandriff_small.php",
+			"directory": "pathfinder_1e/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"races"
+			],
+			"status": "done"
+		},
+		"mandriff_elephant": {
+			"display_name": "Mandriff, Elephant",
+			"file_name": "mandriff_elephant.php",
+			"directory": "pathfinder_1e/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"monsters"
+			],
+			"status": "done"
+		},
+		"mandriff_mammoth": {
+			"display_name": "Mandriff, Mammoth",
+			"file_name": "mandriff_mammoth.php",
+			"directory": "pathfinder_1e/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"monsters"
+			],
+			"status": "done"
 		}
 	}
 }

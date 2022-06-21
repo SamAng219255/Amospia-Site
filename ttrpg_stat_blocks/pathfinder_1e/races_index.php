@@ -49,6 +49,12 @@
 	<dt><a href="races/tehswin.php">Tehswin</a> (18 RP)</dt>
 	<dd>+2 Dex, +2 Any, -2 Int</dd>
 	<dd>Tehswin are the rare children of proteans and have inherited some limited ability to change their shape.</dd>
+	<dt><a href="races/mandriff_small.php">Mandriff, Small</a> (19 RP)</dt>
+	<dd>+2 str, +2 Wis, -2 Int</dd>
+	<dd>Mandriff are a powerful race with the body and head of an animal but the torso of a human where the neck should be.</dd>
+	<dt><a href="races/mandriff_medium.php">Mandriff, Medium</a> (19 RP)</dt>
+	<dd>+2 str, +2 Wis, -2 Int</dd>
+	<dd>Mandriff are a powerful race with the body and head of an animal but the torso of a human where the neck should be.</dd>
 </dl>
 <h3>21-30 Race Points</h3>
 <dl>
@@ -61,6 +67,9 @@
 	<dt><a href="races/lorax.php">Lo'raks</a> (25 RP)</dt>
 	<dd>+4 Str, +2 Dex, +2 Con, -2 Int</dd>
 	<dd>Lo'raks are one of the plant races of the <?php echo quick_format('aa/tangled_grove|Tangled Grove/aa'); ?>. Lo'raks most often find themselves tasked with holding off the horde of the undead that threatens their border and are trained and grown to excel at it.</dd>
+	<dt><a href="races/mandriff_large.php">Mandriff, Large</a> (26 RP)</dt>
+	<dd>+4 Str, +2 Wis, -2 Dex, -2 Int</dd>
+	<dd>Mandriff are a powerful race with the body and head of an animal but the torso of a human where the neck should be.</dd>
 </dl>
 <h3>31+ Race Points</h3>
 <dl>
