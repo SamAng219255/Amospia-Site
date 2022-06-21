@@ -52,6 +52,12 @@
 				'link' => 'monsters/plague_child.php',
 				'1/2',
 				'nivan commoner 1'
+			],
+			[
+				'Elephant Guard',
+				'link' => 'monsters/mandriff_elephant.php',
+				'12',
+				'mandriff (elephant) warrior 10'
 			]
 		]
 	);
