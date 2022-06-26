@@ -7476,6 +7476,16 @@
 				"monsters"
 			],
 			"status": "done"
+		},
+		"count_spell": {
+			"display_name": "Count",
+			"file_name": "count.php",
+			"directory": "pathfinder_1e/spells/",
+			"sort_path": [
+				"pathfinder_1e",
+				"spells"
+			],
+			"status": "done"
 		}
 	}
 }

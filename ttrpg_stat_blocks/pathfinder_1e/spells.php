@@ -168,6 +168,14 @@
 				'bard, bloodrager, cleric, magus, occultist, oracle, psychic, sorcerer, wizard',
 				'Snap your fingers and unleash a destructive pulse that uses objects\' hardness against them.'
 			],
+			[
+				'Count',
+				'link' => 'spells/count.php',
+				'0',
+				'Divination',
+				'adept, arcanist, bard, cleric, druid, hunter, inquisitor, magus, medium, mesmerist, occultist, oracle, psychic, shaman, skald, sorcerer, spiritualist, summoner, summoner (unchained), warpriest, witch, wizard',
+				'Counts a group of objects.'
+			]
 		]
 	);
 	require $startDir.'pageEnd.php';
