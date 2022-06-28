@@ -17,7 +17,7 @@
 		17,
 		'Focus',
 		'15,000 gp (3rd), 60,000 gp (6th), 120,000 gp (9th)',
-		'—',
+		2,
 		'This humanoid skull of an unknown race with sharp teeth and a pair of particularly long canines is missing its jaw and has dark symbols scribbled across its surface and seems to exude an ominous presence and almost visible dark smoke that drips to the floor before evaporating. While a spell of the necromancy school is being cast using this skull, the eyes fill with supernatural darkness and the black smoke thickens and grows more visible, pouring from the eyes and the area that would otherwise be its mouth, spilling across a 5 foot diameter region of the ground before evaporating away.
 		This skull acts as a casting focus and empowers undead you animate. This skull is limited to what spells it can affect, it can only affect spells, and the casting of those spells, up to its max level of 3rd, 6th, or 9th. Whenever you cast a spell that creates, animates, calls, or summons an undead creature using this focus, the creature gains two additional racial hit dice before any relevant templates are applied. Additionally, any spells cast with, or spell-like and supernatural abilities used while holding, this focus that control undead creatures receive a bonus to their DCs equal to half your caster level rounded up to a maximum of 1 more than the maximum spell level of the focus.
 		<br>

@@ -17,7 +17,7 @@
 		7,
 		'Focus',
 		28000,
-		'—',
+		5,
 		'This rod appears to be a cold iron spiked light flail that had the chain links fused together into a straight line extending from the end of the handle.
 		Penalties and ability damage from spells cast using the ii/curse rod/ii become curse effects and cannot be dispelled or cured except with the aid of ii/remove curse/ii, ii/limited wish/ii, ii/wish/ii, or ii/miracle/ii. Affected spells also gain the curse descriptor.
 		The wielder may also add the rod\'s enhancement bonus, if any, to to concentration checks made to cast spells while in combat or while grappled. They may also treat the enhancement bonus as being one and half its normal value, rounded up, when adding it to the save DCs of spells cast with the curse descriptor. If the rod has no enhancement bonus add +1 to the DCs of such spells instead.

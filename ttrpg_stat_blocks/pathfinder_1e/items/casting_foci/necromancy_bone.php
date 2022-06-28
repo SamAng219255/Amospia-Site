@@ -17,7 +17,7 @@
 		'5th, see text',
 		'Focus',
 		14000,
-		'—',
+		3,
 		'This rod is made of an unknown smooth black stone and is shaped like a femur bone. When a creature picks it up, they can see crimson runes appear acrossed its surface that pulse with light in time with their heartbeat. These runes are normally invisible to other creatures. When the item is used to cast a spell, the wielder can choose to remove the material component. Doing so requires a blood cost. Paying the blood cost deals 1d6 points of damage to the caster and causes the runes to glow more brightly for 1 round during which time they can be seen by all nearby creatures. Costly material components can be removed but doing increases the blood cost dealing 1 point of Strength damage, plus a further point of damage for every full 250 gp of the component’s value. This causes the runes to grow even brighter and begin to drip the crimson energy.
 		Spellcasters who do not have blood cannot use this ability, and those who are immune to Strength damage (such as undead spellcasters) cannot use this ability to create valuable material components. This ability cannot be used to create magic items or constructs.
 		bb/Blood Sacrifice/bb:

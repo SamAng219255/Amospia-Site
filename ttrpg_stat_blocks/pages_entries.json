@@ -2079,8 +2079,21 @@
 			"status": "done"
 		},
 		"illusion_glove": {
-			"display_name": "Illusory Glove",
+			"display_name": "Illusory Glove, Ethereal",
 			"file_name": "illusion_glove.php",
+			"directory": "pathfinder_1e/items/casting_foci/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons",
+				"casting_foci"
+			],
+			"status": "done"
+		},
+		"illusion_glove_shadow": {
+			"display_name": "Illusory Glove, Shadowy",
+			"file_name": "illusion_glove_shadow.php",
 			"directory": "pathfinder_1e/items/casting_foci/",
 			"sort_path": [
 				"pathfinder_1e",

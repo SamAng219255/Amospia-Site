@@ -21,7 +21,7 @@
 		'This glove comes in two varieties, a plain white glove woven from phase spider silk and a black glove woven from pure shadow.
 		This shadowy glove acts as a casting focus and increases how real the effects of shadow spells you cast with the glove are by 20%.
 		The material of this glove is thin and it can be worn under a pair of magic gloves without taking up the slot. It does place an ethereal layer around your hand that makes finely wielding any implement impossible. Items weighing more than one pound can be carried but cannot be wielded though objects weighing one pound or less can be wielded but you are never considered proficient in them.
-		These gloves can be modified for 4,500 gp to grant the wearer a +10 competence bonus on sleight of hand checks.',
+		These gloves can be modified for 4,500 gp to grant the wearer a +10 competence bonus on Sleight of Hand checks.',
 		false,
 		'bb/Requirements/bb Craft Wondrous Item; bb/Cost/bb 2,500 gp (3rd), 9,150 gp (6th), 20,400 gp gp (9th)
 		bb/Upgrade/bb:
