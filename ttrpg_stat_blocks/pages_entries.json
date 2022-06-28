@@ -3583,7 +3583,8 @@
 				"pathfinder_1e",
 				"items",
 				"magic_items",
-				"wondrous"
+				"magic_weapons",
+				"specific_weapons"
 			],
 			"status": "done"
 		},
@@ -7484,6 +7485,19 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"spells"
+			],
+			"status": "done"
+		},
+		"light_sword": {
+			"display_name": "Sword of Holy Light",
+			"file_name": "light_sword.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons",
+				"specific_weapons"
 			],
 			"status": "done"
 		}

@@ -176,24 +176,7 @@
 										{
 											"name": "specific_weapons",
 											"display_name": "Specific Magic Weapons",
-											"type": "limb",
-											"nodes": [
-												{
-													"name": "comet_sling",
-													"display_name": "Comet Sling",
-													"type": "leaf"
-												},
-												{
-													"name": "cobalt_spheres",
-													"display_name": "Cobalt Sphere",
-													"type": "leaf"
-												},
-												{
-													"name": "meteor_sling",
-													"display_name": "Meteor Sling",
-													"type": "leaf"
-												}
-											]
+											"type": "leaf"
 										}
 									]
 								},
