@@ -2063,8 +2063,7 @@
 				"magic_weapons",
 				"casting_foci"
 			],
-			"status": "wip",
-			"note": "Currently, the description reflects an old design for the rings. When I updated the rest of the foci based on arcane schools I was uncertain what property to the rings and have yet to come up with a solution."
+			"status": "done"
 		},
 		"evocation_rod": {
 			"display_name": "Evocation Rod",

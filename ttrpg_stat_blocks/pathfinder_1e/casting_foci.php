@@ -167,11 +167,27 @@
 				'Functions as a crystal ball.'
 			],
 			[
-				'Enchanting Rings',
+				'Enchanting Rings (+8)',
 				'link' => 'items/casting_foci/enchantment_rings.php',
-				'TODO gp',
+				'6,400 gp',
 				'Arcane School',
-				'TODO',
+				'Grants a bonus to charisma based skills to either the caster or the target.',
+				'Allows switching between up to 12 other magic rings.'
+			],
+			[
+				'Enchanting Rings (+14)',
+				'link' => 'items/casting_foci/enchantment_rings.php',
+				'19,600 gp',
+				'Arcane School',
+				'Grants a bonus to charisma based skills to either the caster or the target.',
+				'Allows switching between up to 12 other magic rings.'
+			],
+			[
+				'Enchanting Rings (+20)',
+				'link' => 'items/casting_foci/enchantment_rings.php',
+				'40,000 gp',
+				'Arcane School',
+				'Grants a bonus to charisma based skills to either the caster or the target.',
 				'Allows switching between up to 12 other magic rings.'
 			],
 			[
