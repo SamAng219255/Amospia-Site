@@ -25,6 +25,15 @@ p, .p {
 p.spaced, .p.spaced {
 	margin-bottom: 1em;
 }
+p.top-spaced, .p.top-spaced {
+	margin-top: 1em;
+}
+p.double-spaced, .p.double-spaced {
+	margin-bottom: 2em;
+}
+p.top-double-spaced, .p.top-double-spaced {
+	margin-top: 2em;
+}
 pre {
 	font-size: 12px;
 }

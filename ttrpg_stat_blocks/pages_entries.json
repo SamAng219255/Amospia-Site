@@ -5468,8 +5468,7 @@
 				"pathfinder_1e",
 				"classes"
 			],
-			"status": "wip",
-			"note": "This class is missing some features to fill it out at higher levels. (18th through 20th)"
+			"status": "done"
 		},
 		"drakheim": {
 			"display_name": "Drakheim",

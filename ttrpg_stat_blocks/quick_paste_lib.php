@@ -1731,7 +1731,7 @@
 			$ftexts=quick_array($texts);
 			$first=true;
 			foreach ($ftexts as $text) {
-				echo '<p class="spaced">';
+				echo '<p class="spaced'.($first?' top-double-spaced':'').'">';
 				if($first) {
 					$first=false;
 					echo '<b>'.$feature.'</b>: ';
