@@ -5470,6 +5470,65 @@
 			],
 			"status": "done"
 		},
+		"beast_hide_archetypes": {
+			"display_name": "Archetypes, Beast Knight",
+			"file_name": "beast_hide_archetypes.php",
+			"directory": "pathfinder_1e/classes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"classes",
+				"beast_hide"
+			],
+			"status": "done"
+		},
+		"bk_size_master": {
+			"display_name": "Beast Colossus",
+			"file_name": "bk_size_master.php",
+			"directory": "pathfinder_1e/classes/archetypes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"classes",
+				"beast_hide",
+				"beast_hide_archetypes"
+			],
+			"status": "done"
+		},
+		"bk_aberration_master": {
+			"display_name": "Aberrant Master",
+			"file_name": "bk_aberration_master.php",
+			"directory": "pathfinder_1e/classes/archetypes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"classes",
+				"beast_hide",
+				"beast_hide_archetypes"
+			],
+			"status": "done"
+		},
+		"bk_head_hunter": {
+			"display_name": "Skin Hunter",
+			"file_name": "bk_head_hunter.php",
+			"directory": "pathfinder_1e/classes/archetypes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"classes",
+				"beast_hide",
+				"beast_hide_archetypes"
+			],
+			"status": "done"
+		},
+		"bk_hybrid_former": {
+			"display_name": "Lycanthropist",
+			"file_name": "bk_hybrid_former.php",
+			"directory": "pathfinder_1e/classes/archetypes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"classes",
+				"beast_hide",
+				"beast_hide_archetypes"
+			],
+			"status": "done"
+		},
 		"drakheim": {
 			"display_name": "Drakheim",
 			"file_name": "drakheim.php",
@@ -7509,6 +7568,16 @@
 				"magic_items",
 				"magic_weapons",
 				"specific_weapons"
+			],
+			"status": "done"
+		},
+		"aberrant_form": {
+			"display_name": "Aberrant Form",
+			"file_name": "aberrant_form.php",
+			"directory": "pathfinder_1e/spells/",
+			"sort_path": [
+				"pathfinder_1e",
+				"spells"
 			],
 			"status": "done"
 		}

@@ -53,24 +53,24 @@
 			'Bonus Feat, Hybrid Forms',// 11th
 			'Draconic Skins',// 12th
 			'+4 Natural Armor, Steel Hide',// 13th
-			'Draconic Skins II',// 14th
+			'Draconic Skins',// 14th
 			'Bonus Feat, +6 Str/Dex, Steel Claws',// 15th
-			'Draconic Skins III',// 16th
+			'Large and Tiny Forms',// 16th
 			'+5 Natural Armor, Steel Hide',// 17th
-			'Gargantuan/Fine Forms',// 18th
+			'Huge and Diminutive Forms',// 18th
 			'Bonus Feat, Timeless Body',// 19th
-			'Kaiju Forms, Steel Claws' // 20th
+			'Savage Strike, Steel Claws' // 20th
 		],// specials,
 		false,// spells,
 		false,// spellsSecondary,
 		[
 			'Weapon and Armor Proficiency' => [
-				'A beast knight is proficient with all simple and martial weapons, light armor, medium armor, and shields (except tower shields).'
+				'A beast knight is proficient with all simple and martial weapons, all armor (heavy, light, and medium), and shields (except tower shields).'
 			],
 			'Beast Skins (Ex)' => [
 				'Beast Knights wear the pelts of creatures they have slain to gain their strength. ',
 				'Beast knights can skin the pelt from an animal or magical beast with a successful Survival check with a DC equal to 15 plus the CR of the creature. Failing the check by 5 or more ruins the pelt. The beast knight may incorporate a pelt of their same size onto the surface any set of medium or heavy armor by spending 1 hour with them. A given set of armor can only have one incorporated pelt at a time. Switching pelts also takes 1 hour. A larger pelt can be cut down into a single smaller pelt for wearing the pelt of a creature larger than oneself, and smaller pelts may be sewn together, with 4 pelts of a given size being made into 1 pelt one step larger. Creatures that lack pelts can be used by attaching their feathers or skin to the armor instead.',
-				'Beast knights start with the pelts of a medium or small creature that they helped slay.',
+				'Beast knights start with the pelt of a medium or small creature whose CR is no higher than their level that they helped slay.',
 			],
 			'Might of the Beast (Su)' => [
 				'Starting at first level, a beast knight wearing a pelt of an animal or magical beast, they had a hand in slaying, receives a +2 bonus to either strength or dexterity and a +1 natural armor bonus. If they already had natural armor, their natural armor bonus instead increases by that amount.',
@@ -94,18 +94,20 @@
 				'At 3rd level, a beast knight gains the ability to react to danger before their senses would normally allow them to do so. They cannot be caught flat-footed, nor do they lose her Dexterity bonus to AC if immobilized. A beast knight with this ability can still lose their Dexterity bonus to AC if an opponent successfully uses the feint action against them.',
 				'If a beast knight already has uncanny dodge from a different class, they automatically gain improved uncanny dodge (see below) instead.'
 			],
-			'Beat Hide Transformation (Su)' => [
+			'Beast Hide Transformation (Su)' => [
 				'Starting at 4th level, as a standard action, a beast knight can take the form of the animal whose pelt they wear as ii/beast shape I/ii except that it lasts until dismissed as another standard action and they gain DR 5/silver while transformed. Beast knights can only take the form of a pelt from a creature they had a hand in slaying.',
 				'Starting at 6th level, they may take the form of the animal whose pelt they wear as ii/beast shape II/ii.',
 				'Starting at 8th level, they may take the form of the animal or magical beast whose pelt they wear as ii/beast shape III/ii.',
 				'Starting at 10th level, they may take the form of the animal or magical beast whose pelt they wear as ii/beast shape IV/ii.',
+				'Regardless of which spell this transformation functions as, the beast knight may only take small and medium forms. If the creature whose hide they wear is small sized or smaller, their form is small sized and their reach is increased to be at least 5 feet. If the hide they wear is medium sized or larger, the form they take is medium sized and their reach is reduced by 5 feet for every step above medium the creature normally is, to a minimum of 5 feet. Any natural attacks or other size dependant abilities they gain are likewise modified to their new size.',
 				'You are treated as having the wild shape class feature for the purpose of meeting the prerequisites for feats and can use your beast knight level in place of your druid level and your beast hide transformation ability in place of your wild shape ability for such feats.'
 			],
 			'Steel Claws (Su)' => [
 				'Starting at 5th level, upon transforming using Beast Hide Transformation, the beast knight may choose one of their natural attacks to gain the properties and abilities of a manufactured melee weapon they are wielding. If the manufactured weapon deals more damage than the natural attack, they may use the damage from the manufactured weapon (using the original damage of the weapon using the wielder\'s normal size). If the manufactured weapon uses a different ability score (generally strength or dexterity) for attack or damage rolls, they must use the ability score used by manufactured weapon.',
+				'When making a full attack action using only your natural attacks, you may make an additional attack with one of your natural weapons for each additional attack you would gain from a high base attack bonus. These additional attacks take a cumulative -5 penalty for each additional attack in addition to the penalty for making an attack with a secondary weapon if using one.',
 				'Starting at 10th level, they may choose two of their natural weapons to gain the properties and abilities of their manufactured weapon. They may use the properties and abilities of different weapons but they must be wielding any weapons they use the properties and abilities of.',
 				'Starting at 15th level, they may choose three of their natural weapons to gain the properties and abilities of their manufactured weapons.',
-				'Starting at 20th level, they may choose any number of their natural weapons to gain the properties and abilities of their manufactured weapons.'
+				'Starting at 20th level, they may choose four of their natural weapons to gain the properties and abilities of their manufactured weapons.'
 			],
 			'Steel Hide (Su)' => [
 				'Starting at 5th level, when transformed using Beast Hide Transformation, the beast knight retains the bonuses and other effects of their armor, as it invisibly incorporates itself into their hide. While incorporated into their hide, the armor check penalty is reduced by 1 (to a minimum of 0) and increases the maximim dexterity bonus allowed by 1. Every four levels thereafter (9th, 13th, and 17th), these bonuses increase by +1 each time, to a maximum –4 reduction of the armor check penalty and a +4 increase to to armor\'s maximum dexterity bonus.'
@@ -115,36 +117,26 @@
 				'If a character already has uncanny dodge (see above) from another class, the levels from the classes that grant uncanny dodge stack to determine the minimum rogue level required to flank the character.'
 			],
 			'Hybrid Forms' => [
-				'Starting at 11th level, a beast knight is able to combine pelts, mixing and matching parts such as placing moose antlers on a bear\'s hide or bat wings on a big cat\'s hide. These hybrid hides work as normal but when transforming, the form taken by the beast knight is similarly hybridized. Granting abilities possessed by one form to another, potentially replacing existing ones. Abilities possessed by the hybrid form must come from the parts of creatures included in the hybrid hide. Abilities affected by size use the size of the hybrid form which must be the size of one of the creatures the hybrid hide is made from.',
-				'Each hide used in this process must come from a creature the best knight has a hand in killing.'
+				'Starting at 11th level, a beast knight is able to combine pelts, mixing and matching parts such as placing moose antlers on a bear\'s head or bat wings in place of a big cat\'s forelimbs. These hybrid hides work as normal but when transforming, the form taken by the beast knight is similarly hybridized. Granting abilities possessed by one form to another, potentially replacing existing ones. Abilities possessed by the hybrid form must come from the parts of creatures included in the hybrid hide. Abilities affected by size use the size of the hybrid form which must be the size of one of the creatures the hybrid hide is made from.',
+				'Each hide used in this process must come from a creature the beast knight had a hand in killing.'
 			],
 			'Draconic Skins' => [
-				'Starting at 12th level, a beast knight can wear and gain the strength of dragons as well. Beast knights can skin the hide of dragons as well as they can those of animals and magical beasts. They also gain the effects of Might of the Beast while wearing a dragon\'s hide. They can also use Beast Hide Transformation to take the form of a dragon matching the one whose hide they wear. When doing so, the transformation is as ii/form of the dragon/ii or ii/form of the exotic dragon/ii, except that it can be used to take the form of any type of dragon, using similar rules as ii/form of the dragon/ii.',
-				'Starting at 14th level, they may take the form of a dragon whose hide they wear as ii/form of the dragon II/ii or ii/form of the exotic dragon II/ii.',
-				'Starting at 16th level, they may take the form of a dragon whose hide they wear as ii/form of the dragon III/ii or ii/form of the exotic dragon III/ii.'
+				'Starting at 12th level, a beast knight can wear and gain the strength of dragons as well. The beast knight can skin the hide of dragons as well as they can those of animals and magical beasts. They also gain the effects of Might of the Beast while wearing a dragon\'s hide. They can also use Beast Hide Transformation to take the form of a dragon matching the one whose hide they wear. When taking the form of dragons, they do so as ii/beast shape IV/ii like taking the form of a magical beast of the same size except they take the form of a dragon.',
+				'Starting at 14th level, when they take the form of a true dragon, they can do so as ii/form of the dragon I/ii or ii/form of the exotic dragon I/ii instead.'
 			],
-			'Gargantuan/Fine Forms' => [
-				'Starting at 18th level, the beast knight may take the form of animals, dragons, and magical beasts of Gargantuan size and smaller.',
-				'When taking the form of a animal or magical beast, if the form you assume has any of the following abilities, you gain the listed ability: burrow 90 feet, climb 120 feet, fly 150 feet (poor maneuverability), swim 150 feet, blindsense 60 feet, darkvision 120 feet, and tremorsense 120 feet.',
-				'ii/Fine animal/ii: If the form you take is that of a Fine animal, you gain a +8 size bonus to your Dexterity, a -6 penalty to your Strength, and a +1 natural armor bonus.',
-				'ii/Fine magical beast/ii: If the form you take is that of a Fine magical beast, you gain a -6 penalty to your Strength, a +16 size bonus to your Dexterity, and a +5 natural armor bonus.',
-				'ii/Diminutive magical beast/ii: If the form you take is that of a Diminutive magical beast, you gain a -4 penalty to your Strength, a +12 size bonus to your Dexterity, and a +4 natural armor bonus.',
-				'ii/Huge magical beast/ii: If the form you take is that of a Huge magical beast, you gain a +8 size bonus to your Strength, a -4 penalty on your Dexterity, a +4 size bonus to your Constitution, and a +8 natural armor bonus.',
-				'ii/Gargantuan animal/ii: If the form you take is that of a Gargantuan animal, you gain a +8 size bonus to your Strength, a -6 penalty to your Dexterity, and a +8 natural armor bonus.',
-				'ii/Gargantuan magical beast/ii: If the form you take is that of a Gargantuan magical beast, you gain a +10 size bonus to your Strength, a -6 penalty on your Dexterity, a +6 size bonus to your Constitution, and a +10 natural armor bonus.',
-				'ii/Gargantuan dragon/ii: If the form you take is that of a Gargantuan chromatic or metallic dragon, you gain a +12 size bonus to Strength, a +10 size bonus to Constitution, a +10 natural armor bonus, fly 150 feet (poor), blindsense 60 feet, darkvision 120 feet, a breath weapon, damage reduction 15/magic, frightful presence, and immunity to one element. You also gain one bite (4d6), two claws (2d8), two wing attacks (2d6), one tail slap attack (2d8), a crush attack (2d8), and a tail sweep attack (2d6). You can use the breath weapon as often as you like, but you must wait 1d4 rounds between uses. All breath weapons deal 16d8 points of damage and allow a Reflex save for half damage. Line breath weapons increase to 120-foot lines and cones increase to 60-foot cones.',
-				'Taking these forms is otherwise done as the highest level of the appropriate spell, granting any additional abilities granted by those spells.'
+			'Large and Tiny Forms' => [
+				'Starting at 16th level, when taking forms via Beast Hide Transformation, you can take the form of Large and Tiny sized creatures. If the creature whose hide they wear is Tiny sized or smaller, their form is Tiny sized. If the hide they wear is Large sized or larger, the form they take is Large sized and their reach is reduced by 5 feet for every step above Large the creature normally is, to a minimum of 5 feet. Any natural attacks or other size dependant abilities they gain are likewise modified to their new size.',
+				'When taking the form of Large sized true dragon, they do so as ii/form of the dragon II/ii or ii/form of the exotic dragon II/ii instead.'
+			],
+			'Huge and Diminutive Forms' => [
+				'Starting at 18th level, when taking forms via Beast Hide Transformation, you can take the form of Huge and Diminutive sized creatures. If the creature whose hide they wear is Diminutive sized or smaller, their form is Diminutive sized. If the hide they wear is Huge sized or larger, the form they take is Huge sized and their reach is reduced by 5 feet for every step above Huge the creature normally is, to a minimum of 10 feet. Any natural attacks or other size dependant abilities they gain are likewise modified to their new size.',
+				'When taking the form of Huge sized true dragon, they do so as ii/form of the dragon III/ii or ii/form of the exotic dragon III/ii instead.'
 			],
 			'Timeless Body' => [
 				'After attaining 19th level, a beast knight no longer takes ability score penalties for aging and cannot be magically aged. They also lose any existing penalties they may have already incurred. Bonuses still accrue, the beast knight continues to visibly age, and the beast knight still dies of old age when their time is up.'
 			],
-			'Kaiju Forms' => [
-				'At 20th level, the beast knight may take the form of animals, dragons, and magical beasts of any size, and, when taking a form they may change its size to any other size, taking it as though it were a form of the new size. Additionally, the beast knight receives regeneration 10 (silver) while transformed.',
-				'When taking the form of a animal or magical beast, if the form you assume has any of the following abilities, you gain the listed ability: burrow 120 feet, climb 150 feet, fly 200 feet (clumsy maneuverability), swim 200 feet, blindsense 60 feet, darkvision 120 feet, and tremorsense 120 feet. If the animal or magical beast has immunity or resistance to any elements, you gain immunity to those elements. If the form you take is an animal or magical beast, you also gain a breath weapon. This weapon is a 120-foot line that deals 16d8 points of damage and allows a Reflex save for half damage. You may choose the damage type from acid, cold, elecricity, fire, and sonic when taking the form.',
-				'ii/Colossal animal/ii: If the form you take is that of a Colossal animal, you gain a +10 size bonus to your Strength, a -8 penalty to your Dexterity, and a +10 natural armor bonus.',
-				'ii/Colossal magical beast/ii: If the form you take is that of a Colossal magical beast, you gain a +12 size bonus to your Strength, a -8 penalty on your Dexterity, a +8 size bonus to your Constitution, and a +12 natural armor bonus.',
-				'ii/Colossal dragon/ii: If the form you take is that of a Colossal chromatic or metallic dragon, you gain a +14 size bonus to Strength, a +12 size bonus to Constitution, a +12 natural armor bonus, fly 200 feet (clumsy), blindsense 60 feet, darkvision 120 feet, dragon senses, a breath weapon, damage reduction 20/epic, frightful presence, and immunity to one element. You also gain one bite (4d8), two claws (4d6), two wing attacks (2d8), one tail slap attack (4d6), a crush attack (4d8), and a tail sweep attack (2d8). You can use the breath weapon as often as you like, but you must wait 1d4 rounds between uses. All breath weapons deal 16d8 points of damage and allow a Reflex save for half damage. Line breath weapons increase to 140-foot lines and cones increase to 70-foot cones.',
-				'Taking these forms is otherwise done as the highest level of the appropriate spell, granting any additional abilities granted by those spells.'
+			'Savage Strike (Ex)' => [
+				'Upon reaching 20th level, the beast knight\'s savage might and comabt skills peak, allowing them to deliver particularly devastating blows. Any attacks made with their natural weapons while transformed automatically confirm all critical threats and have their damage multiplier increased by 1 (×2 becomes ×3, for example).'
 			] 
 		]// features
 	);

@@ -140,8 +140,11 @@
 
 		$lineCount=count($arr);
 		for($i=0; $i<$lineCount; $i++) {
-			$arr[$i]=trim($arr[$i]);
-			$temp=$arr[$i];
+			if(is_string($arr[$i]))
+				$temp=$arr[$i];
+			else
+				$temp=$arr[$i]['text'];
+			$temp=trim($temp);
 			$head='';
 			$foot='';
 			$found=false;
@@ -191,9 +194,12 @@
 				}
 			}
 			while($found);
-			$arr[$i]=$head.$temp.$foot;
+			if(is_string($arr[$i]))
+				$arr[$i]=quick_format($head.$temp.$foot);
+			else
+				$arr[$i]['text']=quick_format($head.$temp.$foot);
 		}
-		return quick_format($arr);
+		return $arr;
 	}
 	function quick_array_explode($subject, $delimiter) {
 		$arr=[];
@@ -210,7 +216,30 @@
 		echo '<div class="block-title">'.$name.'<a href="#" class="goto-top">Back to Top</a></div>';
 		$textCount=count($texts);
 		for($i=0; $i<$textCount; $i++) {
-			echo '<div class="p'.($spaced ? ' spaced' : '').'">'.$texts[$i].'</div>';
+			$lineClasses='';
+			if(is_array($texts[$i])) {
+				if(isset($texts[$i]['spacing'])) {
+					$spacebits=[
+						1=>'spaced',
+						2=>'top-spaced',
+						4=>'double-spaced',
+						8=>'top-double-spaced'
+					];
+					foreach ($spacebits as $bit => $class) {
+						if($texts[$i]['spacing']&$bit)
+							$lineClasses.=' '.$class;
+					}
+				}
+				elseif($spaced) {
+					$lineClasses.=' spaced';
+				}
+				echo '<div class="p'.$lineClasses.'">'.$texts[$i]['text'].'</div>';
+			}
+			else {
+				if($spaced)
+					$lineClasses=' spaced';
+				echo '<div class="p'.$lineClasses.'">'.$texts[$i].'</div>';
+			}
 		}
 		$sectionCount=count($sections);
 		for($i=0; $i<$sectionCount; $i++) {
@@ -218,7 +247,30 @@
 			echo '<div class="block-section-title">'.$sections[$i]['title'].'</div>';
 			$sectionTextCount=count($sections[$i]['texts']);
 			for($j=0; $j<$sectionTextCount; $j++) {
-				echo '<div class="p'.($sections[$i]['spaced'] ? ' spaced' : '').'">'.$sections[$i]['texts'][$j].'</div>';
+				$lineClasses='';
+				if(is_array($sections[$i]['texts'][$j])) {
+					if(isset($sections[$i]['texts'][$j]['spacing'])) {
+						$spacebits=[
+							1=>'spaced',
+							2=>'top-spaced',
+							4=>'double-spaced',
+							8=>'top-double-spaced'
+						];
+						foreach ($spacebits as $bit => $class) {
+							if($sections[$i]['texts'][$j]['spacing']&$bit)
+								$lineClasses.=' '.$class;
+						}
+					}
+					elseif($sections[$i]['spaced']) {
+						$lineClasses.=' spaced';
+					}
+					echo '<div class="p'.$lineClasses.'">'.$sections[$i]['texts'][$j]['text'].'</div>';
+				}
+				else {
+					if($sections[$i]['spaced'])
+						$lineClasses.=' spaced';
+					echo '<div class="p'.$lineClasses.'">'.$sections[$i]['texts'][$j].'</div>';
+				}
 			}
 			echo '</div>';
 		}

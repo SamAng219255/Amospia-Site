@@ -175,6 +175,38 @@
 				'Divination',
 				'adept, arcanist, bard, cleric, druid, hunter, inquisitor, magus, medium, mesmerist, occultist, oracle, psychic, shaman, skald, sorcerer, spiritualist, summoner, summoner (unchained), warpriest, witch, wizard',
 				'Counts a group of objects.'
+			],
+			[
+				'Aberrant Form I',
+				'link' => 'spells/aberrant_form.php#block-Aberrant-Form-I',
+				'3',
+				'Transmutation',
+				'alchemist, arcanist, bloodrager, magus, sorcerer, wizard',
+				'Take the form of an aberration.'
+			],
+			[
+				'Aberrant Form II',
+				'link' => 'spells/aberrant_form.php#block-Aberrant-Form-II',
+				'4',
+				'Transmutation',
+				'alchemist, arcanist, bloodrager, magus, sorcerer, wizard',
+				'Take the form of an aberration.'
+			],
+			[
+				'Aberrant Form III',
+				'link' => 'spells/aberrant_form.php#block-Aberrant-Form-III',
+				'5',
+				'Transmutation',
+				'alchemist, arcanist, bloodrager, magus, sorcerer, wizard',
+				'Take the form of an aberration.'
+			],
+			[
+				'Aberrant Form IV',
+				'link' => 'spells/aberrant_form.php#block-Aberrant-Form-IV',
+				'6',
+				'Transmutation',
+				'alchemist, arcanist, bloodrager, magus, sorcerer, wizard',
+				'Take the form of an aberration.'
 			]
 		]
 	);

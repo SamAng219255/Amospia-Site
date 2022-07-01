@@ -14,7 +14,15 @@
 						{
 							"name": "beast_hide",
 							"display_name": "Beast Knight",
-							"type": "leaf"
+							"petal_display_name": "Beast Knight Class Details",
+							"type": "flower",
+							"nodes": [
+								{
+									"name": "beast_hide_archetypes",
+									"display_name": "Archetypes",
+									"type": "petal"
+								}
+							]
 						}
 					]
 				},
