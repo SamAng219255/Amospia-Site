@@ -63,6 +63,11 @@
 				'Corrupted',
 				'link' => 'items/corrupted_enchant.php',
 				'+3 bonus' 
+			],
+			[
+				'Forceful',
+				'link' => 'items/forceful.php',
+				'+1 bonus' 
 			]
 		],
 		true,

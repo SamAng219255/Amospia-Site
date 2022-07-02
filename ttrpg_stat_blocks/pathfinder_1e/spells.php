@@ -207,6 +207,14 @@
 				'Transmutation',
 				'alchemist, arcanist, bloodrager, magus, sorcerer, wizard',
 				'Take the form of an aberration.'
+			],
+			[
+				'Forceful Weight',
+				'link' => 'spells/forceful_weight.php',
+				'3',
+				'Transmutation',
+				'arcanist, bloodrager, inquisitor, magus, occultist, redmantisassassin, sorcerer, wizard',
+				'Makes a weapon magically forceful, increasing the critical multiplier.'
 			]
 		]
 	);

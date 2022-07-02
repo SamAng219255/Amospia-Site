@@ -7580,6 +7580,29 @@
 				"spells"
 			],
 			"status": "done"
+		},
+		"forceful": {
+			"display_name": "Forceful",
+			"file_name": "forceful.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons",
+				"melee_qualities"
+			],
+			"status": "done"
+		},
+		"forceful_weight": {
+			"display_name": "Forceful Weight",
+			"file_name": "forceful_weight.php",
+			"directory": "pathfinder_1e/spells/",
+			"sort_path": [
+				"pathfinder_1e",
+				"spells"
+			],
+			"status": "done"
 		}
 	}
 }
