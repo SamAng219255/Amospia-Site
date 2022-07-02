@@ -157,34 +157,20 @@
 										{
 											"name": "armor_qualities",
 											"display_name": "Armor Qualities",
-											"type": "limb",
-											"childless": false,
-											"nodes": [
-												
-											]
+											"type": "leaf",
+											"childless": false
 										},
 										{
 											"name": "shield_qualities",
 											"display_name": "Shield Qualities",
-											"type": "limb",
-											"childless": false,
-											"nodes": [
-												
-											]
+											"type": "leaf",
+											"childless": false
 										},
 										{
 											"name": "specific_armors",
 											"display_name": "Specific Magic Armors",
-											"type": "limb",
-											"childless": false,
-											"nodes": [
-												{
-													"name": "shield_of_solid_force",
-													"display_name": "Shield of Solid Force",
-													"type": "leaf",
-													"childless": true
-												}
-											]
+											"type": "leaf",
+											"childless": false
 										}
 									]
 								},

@@ -52,12 +52,14 @@
 	table(
 		[
 			'Name',
-			'Base Price Modifier'
+			'Base Price Modifier',
+			'Description'
 		],
 		[
 			[
 				'',
 				'link' => '',
+				'',
 				''
 			]
 		],

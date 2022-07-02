@@ -2260,6 +2260,32 @@
 			],
 			"status": "done"
 		},
+		"casting_weapon_melee": {
+			"display_name": "Casting Weapon",
+			"file_name": "casting_weapon.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons",
+				"melee_qualities"
+			],
+			"status": "done"
+		},
+		"casting_weapon_ranged": {
+			"display_name": "Casting Weapon",
+			"file_name": "casting_weapon_ranged.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons",
+				"ranged_qualities"
+			],
+			"status": "done"
+		},
 		"dread_skull_animus": {
 			"display_name": "Dread Skull Animus",
 			"file_name": "dread_skull_animus.php",
@@ -4336,6 +4362,19 @@
 				"magic_items",
 				"magic_weapons",
 				"melee_qualities"
+			],
+			"status": "done"
+		},
+		"corrupted_enchant_ranged": {
+			"display_name": "Corrupted",
+			"file_name": "corrupted_enchant_ranged.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_weapons",
+				"ranged_qualities"
 			],
 			"status": "done"
 		},

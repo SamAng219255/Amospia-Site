@@ -51,18 +51,21 @@
 	table(
 		[
 			'Name',
-			'Base Price Modifier'
+			'Base Price Modifier',
+			'Description'
 		],
 		[
 			[
 				'Casting',
-				'link' => 'items/casting_foci/casting_weapon.php',
-				'+2,000 gp'
+				'link' => 'items/casting_weapon_ranged.php',
+				'+2,000 gp',
+				'Makes the weapon into a casting focus, allowing it to be used while casting spells.' 
 			],
 			[
 				'Corrupted',
-				'link' => 'items/corrupted_enchant.php',
-				'+3 bonus' 
+				'link' => 'items/corrupted_enchant_ranged.php',
+				'+3 bonus',
+				'Deals extra damage against good creatures and grants bonuses to identify good outsiders' 
 			]
 		],
 		true,
