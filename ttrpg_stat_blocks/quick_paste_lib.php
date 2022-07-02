@@ -1688,12 +1688,14 @@
 			]
 		);
 	}
-	function classBlock($name, $desc, $role, $align, $hd, $startWealth, $classSkills, $skillsPerLevel, $bab, $saves, $specials, $spells, $spellsSecondary, $features) {
+	function classBlock($name, $desc, $role, $align, $hd, $parentClasses, $startWealth, $classSkills, $skillsPerLevel, $bab, $saves, $specials, $spells, $spellsSecondary, $features) {
 		echo '<h2>'.$name.'</h2>';
 		echo '<p class="spaced">'.$desc.'</p>';
 		echo '<p class="spaced"><b>Role</b>: '.$role.'</p>';
 		echo '<p><b>Alignment</b>: '.$align.'.</p>';
 		echo '<p><b>Hit Die</b>: '.(is_string($hd)?$hd:'d'.$hd).'.</p>';
+		if($parentClasses!==false)
+			echo '<p><b>Parent Class(es)</b>: '.$parentClasses.'.</p>';
 		echo '<p><b>Starting Wealth</b>: '.(is_string($startWealth)?$startWealth:$startWealth.'d6 x 10 gp (average '.($startWealth*35).' gp)').'.</p>';
 		echo '<h3 class="alt">Class Skills</h3>';
 		$skillsTxt='';

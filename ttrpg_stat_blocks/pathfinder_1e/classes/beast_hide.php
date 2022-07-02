@@ -15,6 +15,7 @@
 		'Beast knights are masters of combat who are skilled at mixing advanced training and rigid study with the wild might of the beasts whose forms they take.',// role,
 		'Any',// align,
 		10,// hd,
+		false,// parentClasses
 		5,// startWealth,
 		[
 			'Acrobatics',

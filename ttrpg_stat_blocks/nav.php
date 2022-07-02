@@ -1,2 +1,4 @@
-<?php require 'pageStart.php'; ?>
-<?php require 'pageEnd.php';?>
+<?php
+	require 'pageStart.php';
+	require 'pageEnd.php';
+?>

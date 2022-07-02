@@ -116,6 +116,13 @@ span.subtitle {
 #content {
 	min-height: 100vh;
 }
+#counting {
+	position: absolute;
+	top: 0.5rem;
+	left: 5vw;
+	width: calc(100% - 10vw - 60px);
+	text-align: center;
+}
 a {
 	color: inherit;
 }
@@ -614,6 +621,13 @@ input:checked + .slider:before {
 }
 
 @media (max-aspect-ratio: 1), (max-width: 100vh), (min-height: 100vw) {
+	#counting {
+		position: absolute;
+		top: 0.5rem;
+		left: calc(5vw + 0.333in);
+		width: calc(100% - 10vw - 60px - 0.333in);
+		text-align: center;
+	}
 	#sidebar {
 		display: block;
 		visibility: hidden;

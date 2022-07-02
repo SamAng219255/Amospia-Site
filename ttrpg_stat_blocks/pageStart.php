@@ -18,6 +18,55 @@
 			$rootDir='../'.$rootDir;
 		}
 	}
+
+	function retrieveAtDepth($arr,$path,$initial_depth=0) {
+		$depth=count($path);
+		$ptr=$arr;
+		for($i=$initial_depth; $i<$depth; $i++) {
+			$ptr=$ptr[$path[$i]];
+		}
+		return $ptr;
+	}
+	function retrieveNodeAtDepth($arr,$path,$initial_depth=0) {
+		$depth=count($path);
+		$ptr=$arr;
+		if(!isset($ptr['nodes']))
+			$ptr=['nodes'=>$ptr];
+		for($i=$initial_depth; $i<$depth; $i++) {
+			if(!isset($ptr['nodes']))
+				break;
+			foreach ($ptr['nodes'] as $node) {
+				if($node['name']===$path[$i]) {
+					$ptr=$node;
+					break;
+				}
+			}
+		}
+		return $ptr;
+	}
+	function retrieveNodeAtDepthTruncate($arr,&$path,$initial_depth=0) {
+		$depth=count($path);
+		$ptr=$arr;
+		if(!isset($ptr['nodes']))
+			$ptr=['nodes'=>$ptr];
+		for($i=$initial_depth; $i<$depth; $i++) {
+			if(!isset($ptr['nodes'])) {
+				array_pop($path);
+				continue;
+			}
+			$found=false;
+			foreach ($ptr['nodes'] as $node) {
+				if($node['name']===$path[$i]) {
+					$ptr=$node;
+					$found=true;
+					break;
+				}
+			}
+			if(!$found)
+				array_pop($path);
+		}
+		return $ptr;
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -65,13 +114,27 @@
 					}
 				}
 
-				if(isset($_GET['path']))
+				if(isset($_GET['path'])) {
 					$get_path=explode(',', $_GET['path']);
+					$get_path_len=count($get_path);
+				}
 
+				$childCount=0;
 				foreach($pages['entries'] as $id => $entry) {
-					if($entry['file_name']===$filePathInfo['basename'].$getStr && endsWith($filePathInfo['dirname'],substr($entry['directory'],0,-1))) {
+					if($pageId=='' && $entry['file_name']===$filePathInfo['basename'].$getStr && endsWith($filePathInfo['dirname'],substr($entry['directory'],0,-1))) {
 						$pageId=$id;
 						echo '<title>'.$entry['display_name'].'</title>';
+					}
+					if(isset($get_path) && $get_path_len<=count($entry['sort_path'])) {
+						$match=true;
+						foreach ($get_path as $ind => $level) {
+							if($level!==$entry['sort_path'][$ind]) {
+								$match=false;
+								break;
+							}
+						}
+						if($match)
+							$childCount++;
 					}
 				}
 				if($pageId=='') {
@@ -79,6 +142,7 @@
 						if($entry['file_name']===$filePathInfo['basename'] && endsWith($filePathInfo['dirname'],substr($entry['directory'],0,-1))) {
 							$pageId=$id;
 							echo '<title>'.$entry['display_name'].'</title>';
+							break;
 						}
 					}
 				}
@@ -88,6 +152,9 @@
 				$tree_path=[$pages['sort_tree']];
 				$tree_indices=[0];
 				$tree_counts=[count($pages['sort_tree'])];
+				$final_type='';
+				$final_has_nodes=true;
+				$sort_path=[];
 
 				$sanity=1000;
 				while($depth>=0) {
@@ -98,6 +165,11 @@
 					if($tree_indices[$depth]<$tree_counts[$depth]) {
 						$ptr=$tree_path[$depth][$tree_indices[$depth]];
 						$match=($ptr['name']==(isset($_GET['path'])?(isset($get_path[$depth])?$get_path[$depth]:''):(isset($pages['entries'][$pageId])?($depth==count($pages['entries'][$pageId]['sort_path']) && $ptr['type']=='limb'?$pageId:(isset($pages['entries'][$pageId]['sort_path'][$depth])?$pages['entries'][$pageId]['sort_path'][$depth]:'')):'')));
+						if($match) {
+							$final_type=$ptr['type'];
+							$final_has_nodes=isset($ptr['nodes']);
+							array_push($sort_path,$ptr['name']);
+						}
 						switch ($ptr['type']) {
 							case 'branch':
 								echo '<li class="has-dropdown'.($opennav && $match?' open':'').'">';
@@ -149,11 +221,45 @@
 					}
 					$sanity--;
 				}
+
+				if(!isset($get_path) && $pageId!=='') {
+					$sort_path=$pages['entries'][$pageId]['sort_path'];
+					array_push($sort_path,$pageId);
+					$page_node=retrieveNodeAtDepthTruncate($pages['sort_tree'],$sort_path);
+					while(in_array($page_node['type'], ['petal','limb']) || $page_node['childless']==true) {
+						array_pop($sort_path);
+						$page_node=retrieveNodeAtDepthTruncate($pages['sort_tree'],$sort_path);
+					}
+					if(in_array($page_node['type'], ['flower','petal','limb','leaf']))
+						$childCount++;
+					$sort_path_len=count($sort_path);
+					foreach ($pages['entries'] as $id => $entry) {
+						if($sort_path_len<=count($entry['sort_path'])) {
+							$match=true;
+							foreach($sort_path as $ind => $level) {
+								if($level!==$entry['sort_path'][$ind]) {
+									$match=false;
+									break;
+								}
+							}
+							if($match) {
+								$childCount++;
+							}
+						}
+					}
+				}
 			?>
 		</ul>
 	</div>
 	<div id="center">
 		<div id="top">
+			<div id="counting">
+				<?php
+					echo '<h4>'.number_format(count($pages['entries'])).' pages and counting.</h4>';
+					if($pageId!=='' || isset($_GET['path']))
+						echo '<p>'.number_format($childCount).' pages in this section.</p>';
+				?>
+			</div>
 			<div id="controls">
 				<div id="menu-open"></div>
 				<label class="switch" id="light-switch">
@@ -163,15 +269,6 @@
 			</div>
 			<div id="top-nav">
 				<?php
-					function retrieveAtDepth($arr,$path,$initial_depth=0) {
-						$depth=count($path);
-						$ptr=$arr;
-						for($i=$initial_depth; $i<$depth; $i++) {
-							$ptr=$ptr[$path[$i]];
-						}
-						return $ptr;
-					}
-
 					$depth=0;
 					$tree_path=[$pages['sort_tree']];
 					$node_list=[];

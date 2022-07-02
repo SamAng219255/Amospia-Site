@@ -5,22 +5,26 @@
 			"name": "pathfinder_1e",
 			"display_name": "Pathfinder 1st Ed.",
 			"type": "branch",
+			"childless": false,
 			"nodes": [
 				{
 					"name": "classes",
 					"display_name": "Classes",
 					"type": "branch",
+					"childless": false,
 					"nodes": [
 						{
 							"name": "beast_hide",
 							"display_name": "Beast Knight",
 							"petal_display_name": "Beast Knight Class Details",
 							"type": "flower",
+							"childless": false,
 							"nodes": [
 								{
 									"name": "beast_hide_archetypes",
 									"display_name": "Archetypes",
-									"type": "petal"
+									"type": "petal",
+									"childless": true
 								}
 							]
 						}
@@ -29,38 +33,45 @@
 				{
 					"name": "deities",
 					"display_name": "Deities",
-					"type": "leaf"
+					"type": "leaf",
+					"childless": false
 				},
 				{
 					"name": "feats",
 					"display_name": "Feats",
-					"type": "leaf"
+					"type": "leaf",
+					"childless": false
 				},
 				{
 					"name": "items",
 					"display_name": "Items",
 					"type": "branch",
+					"childless": false,
 					"nodes": [
 						{
 							"name": "adv_alchemy",
 							"display_name": "Advanced Alchemy",
 							"petal_display_name": "Overview & Explanation",
 							"type": "flower",
+							"childless": false,
 							"nodes": [
 								{
 									"name": "adv_alchemy_crafting",
 									"display_name": "Crafting",
-									"type": "petal"
+									"type": "petal",
+									"childless": true
 								},
 								{
 									"name": "recipe_desc",
 									"display_name": "Reading Recipe Descriptions",
-									"type": "petal"
+									"type": "petal",
+									"childless": true
 								},
 								{
 									"name": "alchemy_index",
 									"display_name": "Recipe Index",
-									"type": "petal"
+									"type": "petal",
+									"childless": true
 								}
 							]
 						},
@@ -68,43 +79,51 @@
 							"name": "equipment",
 							"display_name": "Equipment",
 							"type": "branch",
+							"childless": false,
 							"nodes": [
 								{
 									"name": "armor",
 									"display_name": "Armor",
-									"type": "leaf"
+									"type": "leaf",
+									"childless": false
 								},
 								{
 									"name": "weapons",
 									"display_name": "Weapons",
-									"type": "leaf"
+									"type": "leaf",
+									"childless": false
 								},
 								{
 									"name": "special_materials",
 									"display_name": "Special Materials",
-									"type": "leaf"
+									"type": "leaf",
+									"childless": true
 								},
 								{
 									"name": "misc_equip",
 									"display_name": "Miscellaneous",
 									"type": "branch",
+									"childless": false,
 									"nodes": [
 										{
 											"name": "alchemical_oils",
 											"display_name": "Alchemical Oils",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": false
 										},
 										{
 											"name": "adventuring_gear",
 											"display_name": "Adventuring Gear",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": false
 										}
 									]
 								},
 								{
 									"name": "siege_weapons",
 									"display_name": "Siege Weapons",
-									"type": "leaf"
+									"type": "leaf",
+									"childless": false
 								}
 							]
 						},
@@ -112,17 +131,20 @@
 							"name": "magic_items",
 							"display_name": "Magic Items",
 							"type": "branch",
+							"childless": false,
 							"nodes": [
 								{
 									"name": "artifacts",
 									"display_name": "Artifacts",
 									"petal_display_name": "Artifacts Index",
 									"type": "flower",
+									"childless": false,
 									"nodes": [
 										{
 											"name": "badizon_relics",
 											"display_name": "Badizon Relics",
-											"type": "petal"
+											"type": "petal",
+											"childless": true
 										}
 									]
 								},
@@ -130,11 +152,13 @@
 									"name": "magic_armor",
 									"display_name": "Armor",
 									"type": "branch",
+									"childless": false,
 									"nodes": [
 										{
 											"name": "armor_qualities",
 											"display_name": "Armor Qualities",
 											"type": "limb",
+											"childless": false,
 											"nodes": [
 												
 											]
@@ -143,6 +167,7 @@
 											"name": "shield_qualities",
 											"display_name": "Shield Qualities",
 											"type": "limb",
+											"childless": false,
 											"nodes": [
 												
 											]
@@ -151,11 +176,13 @@
 											"name": "specific_armors",
 											"display_name": "Specific Magic Armors",
 											"type": "limb",
+											"childless": false,
 											"nodes": [
 												{
 													"name": "shield_of_solid_force",
 													"display_name": "Shield of Solid Force",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": true
 												}
 											]
 										}
@@ -165,33 +192,39 @@
 									"name": "magic_weapons",
 									"display_name": "Weapons",
 									"type": "branch",
+									"childless": false,
 									"nodes": [
 										{
 											"name": "casting_foci",
 											"display_name": "Casting Foci",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": false
 										},
 										{
 											"name": "melee_qualities",
 											"display_name": "Melee Weapon Qualities",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": false
 										},
 										{
 											"name": "ranged_qualities",
 											"display_name": "Ranged Weapon Qualities",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": false
 										},
 										{
 											"name": "specific_weapons",
 											"display_name": "Specific Magic Weapons",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": false
 										}
 									]
 								},
 								{
 									"name": "wondrous",
 									"display_name": "Wondrous Items",
-									"type": "leaf"
+									"type": "leaf",
+									"childless": false
 								}
 							]
 						}
@@ -202,16 +235,19 @@
 					"display_name": "Monsters",
 					"petal_display_name": "Monsters Index",
 					"type": "flower",
+					"childless": false,
 					"nodes": [
 						{
 							"name": "npcs",
 							"display_name": "NPCs",
-							"type": "petal"
+							"type": "petal",
+							"childless": true
 						},
 						{
 							"name": "templates",
 							"display_name": "Templates",
-							"type": "petal"
+							"type": "petal",
+							"childless": true
 						}
 					]
 				},
@@ -219,60 +255,71 @@
 					"name": "planes",
 					"display_name": "Planes",
 					"type": "branch",
+					"childless": false,
 					"nodes": [
 						{
 							"name": "forest_of_shadows",
 							"display_name": "Forest of Shadows",
-							"type": "leaf"
+							"type": "leaf",
+							"childless": true
 						}
 					]
 				},
 				{
 					"name": "races",
 					"display_name": "Races",
-					"type": "leaf"
+					"type": "leaf",
+					"childless": false
 				},
 				{
 					"name": "rules",
 					"display_name": "Rules",
-					"type": "leaf"
+					"type": "leaf",
+					"childless": false
 				},
 				{
 					"name": "skills",
 					"display_name": "Skills",
 					"type": "branch",
+					"childless": false,
 					"nodes": [
 						{
 							"name": "deconstruction",
 							"display_name": "Deconstruction",
-							"type": "leaf"
+							"type": "leaf",
+							"childless": true
 						}
 					]
 				},
 				{
 					"name": "spells",
 					"display_name": "Spells",
-					"type": "leaf"
+					"type": "leaf",
+					"childless": false
 				},
 				{
 					"name": "settings",
 					"display_name": "Settings",
 					"type": "branch",
+					"childless": false,
 					"nodes": [
 						{
 							"name": "forest",
 							"display_name": "Forest of Shadows",
-							"type": "leaf"
+							"type": "leaf",
+							"childless": true
 						},
 						{
 							"name": "redeemed_setting",
 							"display_name": "Redeemed",
-							"type": "leaf"
+							"type": "leaf",
+							"childless": true
 						},
 						{
 							"name": "tangled_grove",
 							"display_name": "Tangled Grove",
-							"type": "leaf"
+							"type": "leaf",
+							"childless": true
 						}
 					]
 				},
@@ -280,36 +327,43 @@
 					"name": "topics",
 					"display_name": "Topics",
 					"type": "limb",
+					"childless": false,
 					"nodes": [
 						{
 							"name": "cosmere",
 							"display_name": "Cosmere",
 							"type": "limb",
+							"childless": false,
 							"nodes": [
 								{
 									"name": "biochromatic",
 									"display_name": "BioChromatic Breaths",
 									"type": "flower",
+									"childless": false,
 									"nodes": [
 										{
 											"name": "biobreath_type_i",
 											"display_name": "Type I BioChromatic Entities",
-											"type": "petal"
+											"type": "petal",
+											"childless": true
 										},
 										{
 											"name": "biobreath_type_ii",
 											"display_name": "Type II BioChromatic Entities",
-											"type": "petal"
+											"type": "petal",
+											"childless": true
 										},
 										{
 											"name": "biobreath_type_iii",
 											"display_name": "Type III BioChromatic Entities",
-											"type": "petal"
+											"type": "petal",
+											"childless": true
 										},
 										{
 											"name": "biobreath_type_iv",
 											"display_name": "Type IV BioChromatic Entities",
-											"type": "petal"
+											"type": "petal",
+											"childless": true
 										}
 									]
 								},
@@ -317,17 +371,20 @@
 									"name": "classes_cosm",
 									"display_name": "Classes",
 									"type": "branch",
+									"childless": false,
 									"nodes": [
 										{
 											"name": "knight_radiant",
 											"display_name": "Knight Radiant",
 											"petal_display_name": "Knight Radiant Class Details",
 											"type": "flower",
+											"childless": false,
 											"nodes": [
 												{
 													"name": "knight_radiant_orders",
 													"display_name": "Orders",
-													"type": "leaf"
+													"type": "petal",
+													"childless": true
 												}
 											]
 										}
@@ -337,48 +394,57 @@
 									"name": "equipment_cosm",
 									"display_name": "Equipment",
 									"type": "branch",
+									"childless": false,
 									"nodes": [
 										{
 											"name": "weapons_cosm",
 											"display_name": "Weapons",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": false
 										},
 										{
 											"name": "armor_cosm",
 											"display_name": "Armor",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": false
 										},
 										{
 											"name": "special_materials_cosm",
 											"display_name": "Special Materials",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": true
 										},
 										{
 											"name": "metals_cosm",
 											"display_name": "Metals",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": true
 										},
 										{
 											"name": "misc_equip_cosm",
 											"display_name": "Miscellaneous",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": false
 										}
 									]
 								},
 								{
 									"name": "feats_cosm",
 									"display_name": "Feats",
-									"type": "leaf"
+									"type": "leaf",
+									"childless": false
 								},
 								{
 									"name": "magic_items_cosm",
 									"display_name": "Magic Items",
 									"type": "branch",
+									"childless": false,
 									"nodes": [
 										{
 											"name": "artifacts_cosm",
 											"display_name": "Artifacts",
 											"type": "branch",
+											"childless": false,
 											"nodes": [
 											]
 										},
@@ -386,21 +452,25 @@
 											"name": "magic_armor_cosm",
 											"display_name": "Armor",
 											"type": "branch",
+											"childless": false,
 											"nodes": [
 												{
 													"name": "armor_qualities_cosm",
 													"display_name": "Armor Qualities",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": false
 												},
 												{
 													"name": "shield_qualities_cosm",
 													"display_name": "Shield Qualities",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": false
 												},
 												{
 													"name": "specific_armors_cosm",
 													"display_name": "Specific Magic Armor",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": false
 												}
 											]
 										},
@@ -408,28 +478,33 @@
 											"name": "magic_weapons_cosm",
 											"display_name": "Weapons",
 											"type": "branch",
+											"childless": false,
 											"nodes": [
 												{
 													"name": "melee_qualities_cosm",
 													"display_name": "Melee Weapon Qualities",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": false
 												},
 												{
 													"name": "ranged_qualities_cosm",
 													"display_name": "Ranged Weapon Qualities",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": false
 												},
 												{
 													"name": "specific_weapons_cosm",
 													"display_name": "Specific Magic Weapons",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": false
 												}
 											]
 										},
 										{
 											"name": "wondrous_cosm",
 											"display_name": "Wondrous Items",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": false
 										}
 									]
 								},
@@ -437,41 +512,49 @@
 									"name": "metallic_arts",
 									"display_name": "Metallic Arts",
 									"type": "limb",
+									"childless": false,
 									"nodes": [
 										{
 											"name": "allomancy",
 											"display_name": "Allomancy",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": false
 										},
 										{
 											"name": "feruchemy",
 											"display_name": "Feruchemy",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": false
 										},
 										{
 											"name": "hemalurgy",
 											"display_name": "Hemalurgy",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": false
 										},
 										{
 											"name": "quintenium",
 											"display_name": "Quintenium",
 											"type": "flower",
+											"childless": false,
 											"nodes": [
 												{
 													"name": "q_allomancy",
 													"display_name": "Allomancy",
-													"type": "petal"
+													"type": "petal",
+													"childless": true
 												},
 												{
 													"name": "q_feruchemy",
 													"display_name": "Feruchemy",
-													"type": "petal"
+													"type": "petal",
+													"childless": true
 												},
 												{
 													"name": "q_hemalurgy",
 													"display_name": "Hemalurgy",
-													"type": "petal"
+													"type": "petal",
+													"childless": true
 												}
 											]
 										}
@@ -482,21 +565,25 @@
 									"display_name": "Monsters",
 									"petal_display_name": "Monsters Index",
 									"type": "flower",
+									"childless": false,
 									"nodes": [
 										{
 											"name": "npcs_cosm",
 											"display_name": "NPCs",
-											"type": "petal"
+											"type": "petal",
+											"childless": true
 										},
 										{
 											"name": "templates_cosm",
 											"display_name": "Templates",
-											"type": "petal"
+											"type": "petal",
+											"childless": true
 										},
 										{
 											"name": "subtypes_cosm",
 											"display_name": "Subtypes",
-											"type": "petal"
+											"type": "petal",
+											"childless": true
 										}
 									]
 								},
@@ -504,33 +591,39 @@
 									"name": "planes_cosm",
 									"display_name": "Planes",
 									"type": "branch",
+									"childless": false,
 									"nodes": [
 									]
 								},
 								{
 									"name": "races_cosm",
 									"display_name": "Races",
-									"type": "leaf"
+									"type": "leaf",
+									"childless": false
 								},
 								{
 									"name": "rules_cosm",
 									"display_name": "Rules",
-									"type": "leaf"
+									"type": "leaf",
+									"childless": false
 								},
 								{
 									"name": "surgebinding",
 									"display_name": "Surgbinding",
-									"type": "leaf"
+									"type": "leaf",
+									"childless": false
 								},
 								{
 									"name": "skills_cosm",
 									"display_name": "Skills",
 									"type": "branch",
+									"childless": false,
 									"nodes": [
 										{
 											"name": "knowledge_cosm",
 											"display_name": "Knowledge",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": true
 										}
 									]
 								}
@@ -540,31 +633,37 @@
 							"name": "minecraft",
 							"display_name": "Minecraft",
 							"type": "limb",
+							"childless": false,
 							"nodes": [
 								{
 									"name": "equipment_mc",
 									"display_name": "Equipment",
 									"type": "branch",
+									"childless": false,
 									"nodes": [
 										{
 											"name": "weapons_mc",
 											"display_name": "Weapons",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": false
 										},
 										{
 											"name": "armor_mc",
 											"display_name": "Armor",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": false
 										},
 										{
 											"name": "special_materials_mc",
 											"display_name": "Special Materials",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": false
 										},
 										{
 											"name": "misc_equip_mc",
 											"display_name": "Miscellaneous",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": false
 										}
 									]
 								},
@@ -572,21 +671,25 @@
 									"name": "magic_items_mc",
 									"display_name": "Magic Items",
 									"type": "branch",
+									"childless": false,
 									"nodes": [
 										{
 											"name": "artifacts_mc",
 											"display_name": "Artifacts",
 											"type": "branch",
+											"childless": false,
 											"nodes": [
 												{
 													"name": "endportal",
 													"display_name": "Ender Portal",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": true
 												},
 												{
 													"name": "end_gateway",
 													"display_name": "End Gateway",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": true
 												}
 											]
 										},
@@ -594,16 +697,19 @@
 											"name": "magic_armor_mc",
 											"display_name": "Armor",
 											"type": "branch",
+											"childless": false,
 											"nodes": [
 												{
 													"name": "armor_qualities_mc",
 													"display_name": "Armor Qualities",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": false
 												},
 												{
 													"name": "shield_qualities_mc",
 													"display_name": "Shield Qualities",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": false
 												}
 											]
 										},
@@ -611,93 +717,111 @@
 											"name": "magic_weapons_mc",
 											"display_name": "Weapons",
 											"type": "branch",
+											"childless": false,
 											"nodes": [
 												{
 													"name": "melee_qualities_mc",
 													"display_name": "Melee Weapon Qualities",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": false
 												},
 												{
 													"name": "ranged_qualities_mc",
 													"display_name": "Ranged Weapon Qualities",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": false
 												}
 											]
 										},
 										{
 											"name": "potions_mc",
 											"display_name": "Potions",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": true
 										},
 										{
 											"name": "wondrous_mc",
 											"display_name": "Wondrous Items",
 											"type": "branch",
+											"childless": false,
 											"nodes": [
 												{
 													"name": "elytra",
 													"display_name": "Elytra",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": true
 												},
 												{
 													"name": "egapple",
 													"display_name": "Enchanted Golden Apple",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": true
 												},
 												{
 													"name": "turtle_shell",
 													"display_name": "Enchanted Turtle Shell",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": true
 												},
 												{
 													"name": "enderchest",
 													"display_name": "Ender Chest",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": true
 												},
 												{
 													"name": "enderpearl",
 													"display_name": "Ender Pearl",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": true
 												},
 												{
 													"name": "endereye",
 													"display_name": "Eye of Ender",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": true
 												},
 												{
 													"name": "gapple",
 													"display_name": "Golden Apple",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": true
 												},
 												{
 													"name": "lure_rod",
 													"display_name": "Luring Fishing Rod",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": true
 												},
 												{
 													"name": "lodestone",
 													"display_name": "Netherite Lodestone",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": true
 												},
 												{
 													"name": "compass",
 													"display_name": "Redstone Compass",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": true
 												},
 												{
 													"name": "soul_speed",
 													"display_name": "Soul Speed Boots",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": true
 												},
 												{
 													"name": "swift_sneak",
 													"display_name": "Swift Sneak Boots",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": true
 												},
 												{
 													"name": "totem",
 													"display_name": "Totem of Undying",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": true
 												}
 											]
 										}
@@ -708,16 +832,19 @@
 									"display_name": "Monsters",
 									"petal_display_name": "Monsters Index",
 									"type": "flower",
+									"childless": false,
 									"nodes": [
 										{
 											"name": "npcs_mc",
 											"display_name": "NPCs",
-											"type": "petal"
+											"type": "petal",
+											"childless": true
 										},
 										{
 											"name": "templates_mc",
 											"display_name": "Templates",
-											"type": "petal"
+											"type": "petal",
+											"childless": true
 										}
 									]
 								},
@@ -725,16 +852,19 @@
 									"name": "planes_mc",
 									"display_name": "Planes",
 									"type": "branch",
+									"childless": false,
 									"nodes": [
 										{
 											"name": "end",
 											"display_name": "the End",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": true
 										},
 										{
 											"name": "nether",
 											"display_name": "the Nether",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": true
 										}
 									]
 								},
@@ -742,28 +872,33 @@
 									"name": "races_mc",
 									"display_name": "Races",
 									"type": "branch",
+									"childless": false,
 									"nodes": [
 										{
 											"name": "illagers",
 											"display_name": "Illagers",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": true
 										},
 										{
 											"name": "knom",
 											"display_name": "Knom",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": true
 										},
 										{
 											"name": "piglins",
 											"display_name": "Piglins",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": true
 										}
 									]
 								},
 								{
 									"name": "spells_mc",
 									"display_name": "Spells",
-									"type": "leaf"
+									"type": "leaf",
+									"childless": false
 								}
 							]
 						},
@@ -771,31 +906,37 @@
 							"name": "amospia",
 							"display_name": "Amospia",
 							"type": "limb",
+							"childless": false,
 							"nodes": [
 								{
 									"name": "equipment_am",
 									"display_name": "Equipment",
 									"type": "branch",
+									"childless": false,
 									"nodes": [
 										{
 											"name": "weapons_am",
 											"display_name": "Weapons",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": false
 										},
 										{
 											"name": "armor_am",
 											"display_name": "Armor",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": false
 										},
 										{
 											"name": "special_materials_am",
 											"display_name": "Special Materials",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": true
 										},
 										{
 											"name": "misc_equip_am",
 											"display_name": "Miscellaneous",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": false
 										}
 									]
 								},
@@ -803,46 +944,55 @@
 									"name": "magic_items_am",
 									"display_name": "Magic Items",
 									"type": "branch",
+									"childless": false,
 									"nodes": [
 										{
 											"name": "artifacts_am",
 											"display_name": "Artifacts",
 											"type": "branch",
+											"childless": false,
 											"nodes": [
 												{
 													"name": "arkon",
 													"display_name": "The Arkon",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": true
 												},
 												{
 													"name": "black_arrow",
 													"display_name": "Black Arrow",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": true
 												},
 												{
 													"name": "elemental_citadel",
 													"display_name": "The Citadel of the Elements",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": true
 												},
 												{
 													"name": "eye_of_nafh",
 													"display_name": "The Eye of Nafh",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": true
 												},
 												{
 													"name": "muniz",
 													"display_name": "The Mind Muniz",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": true
 												},
 												{
 													"name": "stoiw",
 													"display_name": "Stoiw",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": true
 												},
 												{
 													"name": "wainskarda",
 													"display_name": "Wainskarda",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": true
 												}
 											]
 										},
@@ -850,60 +1000,71 @@
 											"name": "magic_armor_am",
 											"display_name": "Armor",
 											"type": "branch",
+											"childless": false,
 											"nodes": [
 												{
 													"name": "armor_qualities_am",
 													"display_name": "Armor Qualities",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": false
 												},
 												{
 													"name": "shield_qualities_am",
 													"display_name": "Shield Qualities",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": false
 												},
 												{
 													"name": "specific_armors_am",
 													"display_name": "Specific Magic Armor",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": false
 												}
 											]
 										},
 										{
 											"name": "magic_architecture",
 											"display_name": "Magic Architecture",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": false
 										},
 										{
 											"name": "spellbound_tridents",
 											"display_name": "Spellbound Tridents",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": true
 										},
 										{
 											"name": "magic_weapons_am",
 											"display_name": "Weapons",
 											"type": "branch",
+											"childless": false,
 											"nodes": [
 												{
 													"name": "melee_qualities_am",
 													"display_name": "Melee Weapon Qualities",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": false
 												},
 												{
 													"name": "ranged_qualities_am",
 													"display_name": "Ranged Weapon Qualities",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": false
 												},
 												{
 													"name": "specific_weapons_am",
 													"display_name": "Specific Magic Weapons",
-													"type": "leaf"
+													"type": "leaf",
+													"childless": false
 												}
 											]
 										},
 										{
 											"name": "wondrous_am",
 											"display_name": "Wondrous Items",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": false
 										}
 									]
 								},
@@ -912,16 +1073,19 @@
 									"display_name": "Monsters",
 									"petal_display_name": "Monsters Index",
 									"type": "flower",
+									"childless": false,
 									"nodes": [
 										{
 											"name": "npcs_am",
 											"display_name": "NPCs",
-											"type": "petal"
+											"type": "petal",
+											"childless": true
 										},
 										{
 											"name": "templates_am",
 											"display_name": "Templates",
-											"type": "petal"
+											"type": "petal",
+											"childless": true
 										}
 									]
 								},
@@ -929,48 +1093,57 @@
 									"name": "planes_am",
 									"display_name": "Planes",
 									"type": "branch",
+									"childless": false,
 									"nodes": [
 										{
 											"name": "aquatica",
 											"display_name": "Aquatica",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": true
 										},
 										{
 											"name": "drakheim",
 											"display_name": "Drakheim",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": true
 										},
 										{
 											"name": "smaragdia",
 											"display_name": "Smaragdia",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": true
 										},
 										{
 											"name": "sulaheim",
 											"display_name": "Sulaheim",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": true
 										},
 										{
 											"name": "swammaheim",
 											"display_name": "Swammaheim",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": true
 										},
 										{
 											"name": "terragri",
 											"display_name": "Terragri",
-											"type": "leaf"
+											"type": "leaf",
+											"childless": true
 										}
 									]
 								},
 								{
 									"name": "races_am",
 									"display_name": "Races",
-									"type": "leaf"
+									"type": "leaf",
+									"childless": false
 								},
 								{
 									"name": "spells_am",
 									"display_name": "Spells",
-									"type": "leaf"
+									"type": "leaf",
+									"childless": false
 								}
 							]
 						}
@@ -982,44 +1155,52 @@
 			"name": "starfinder",
 			"display_name": "Starfinder",
 			"type": "branch",
+			"childless": false,
 			"nodes": [
 				{
 					"name": "equipment_sf",
 					"display_name": "Equipment",
 					"type": "branch",
+					"childless": false,
 					"nodes": [
 						{
 							"name": "armor_sf",
 							"display_name": "Armor",
-							"type": "leaf"
+							"type": "leaf",
+							"childless": false
 						},
 						{
 							"name": "weapons_sf",
 							"display_name": "Weapons",
 							"petal_display_name": "Weapons Index",
 							"type": "flower",
+							"childless": false,
 							"nodes": [
 								{
 									"name": "properties_sf",
 									"display_name": "Special Properties",
-									"type": "petal"
+									"type": "petal",
+									"childless": true
 								}
 							]
 						},
 						{
 							"name": "magic_sf",
 							"display_name": "Magic Items",
-							"type": "leaf"
+							"type": "leaf",
+							"childless": false
 						},
 						{
 							"name": "hybrid_sf",
 							"display_name": "Hybrid Items",
-							"type": "leaf"
+							"type": "leaf",
+							"childless": false
 						},
 						{
 							"name": "techno_sf",
 							"display_name": "Technological Items",
-							"type": "leaf"
+							"type": "leaf",
+							"childless": false
 						}
 					]
 				}
@@ -1029,46 +1210,55 @@
 			"name": "pathfinder_2e",
 			"display_name": "Pathfinder 2nd Ed.",
 			"type": "branch",
+			"childless": false,
 			"nodes": [
 				{
 					"name": "deities_2e",
 					"display_name": "Deities",
-					"type": "leaf"
+					"type": "leaf",
+					"childless": false
 				},
 				{
 					"name": "equipment_2e",
 					"display_name": "Equipment",
 					"type": "branch",
+					"childless": false,
 					"nodes": [
 						{
 							"name": "casting_foci2",
 							"display_name": "Casting Channels",
-							"type": "leaf"
+							"type": "leaf",
+							"childless": false
 						},
 						{
 							"name": "special_materials_2e",
 							"display_name": "Materials",
-							"type": "leaf"
+							"type": "leaf",
+							"childless": false
 						},
 						{
 							"name": "runes",
 							"display_name": "Runes",
 							"type": "branch",
+							"childless": false,
 							"nodes": [
 								{
 									"name": "focus_fundamental",
 									"display_name": "Casting Channel Fundamental Runes",
 									"type": "flower",
+									"childless": false,
 									"nodes": [
 										{
 											"name": "focus_potency",
 											"display_name": "Casting Potency Rune",
-											"type": "petal"
+											"type": "petal",
+											"childless": true
 										},
 										{
 											"name": "focus_fund",
 											"display_name": "Heightening Rune",
-											"type": "petal"
+											"type": "petal",
+											"childless": true
 										}
 									]
 								},
@@ -1076,6 +1266,7 @@
 									"name": "focus_property",
 									"display_name": "Casting Channel Property Runes",
 									"type": "flower",
+									"childless": false,
 									"nodes": [
 
 									]
@@ -1087,11 +1278,13 @@
 							"display_name": "Weapons",
 							"petal_display_name": "Base Weapons",
 							"type": "flower",
+							"childless": false,
 							"nodes": [
 								{
 									"name": "specific_weapons_2e",
 									"display_name": "Specific Magic Weapons",
-									"type": "petal"
+									"type": "petal",
+									"childless": true
 								}
 							]
 						}
@@ -1101,29 +1294,34 @@
 					"name": "races_2e",
 					"display_name": "Races",
 					"type": "branch",
+					"childless": false,
 					"nodes": [
 						{
 							"name": "gardinian",
 							"display_name": "Gardinian",
 							"petal_display_name": "Gardinian Details",
 							"type": "flower",
+							"childless": false,
 							"nodes": [
 								{
 									"name": "gardinian_feats",
 									"display_name": "Gardinian Feats",
 									"type": "flower",
+									"childless": false,
 									"nodes": [
 										{
 											"name": "gardinian_feat_display",
 											"display_name": "Feat Descriptions",
-											"type": "petal"
+											"type": "petal",
+											"childless": true
 										}
 									]
 								},
 								{
 									"name": "gardinian_heritages",
 									"display_name": "Gardinian Heritages",
-									"type": "petal"
+									"type": "petal",
+									"childless": true
 								}
 							]
 						},
@@ -1132,23 +1330,27 @@
 							"display_name": "Ettinkin",
 							"petal_display_name": "Ettinkin Details",
 							"type": "flower",
+							"childless": false,
 							"nodes": [
 								{
 									"name": "ettinkin_feats",
 									"display_name": "Ettinkin Feats",
 									"type": "flower",
+									"childless": false,
 									"nodes": [
 										{
 											"name": "ettinkin_feat_display",
 											"display_name": "Feat Descriptions",
-											"type": "petal"
+											"type": "petal",
+											"childless": true
 										}
 									]
 								},
 								{
 									"name": "ettinkin_heritages",
 									"display_name": "Ettinkin Heritages",
-									"type": "petal"
+									"type": "petal",
+									"childless": true
 								}
 							]
 						},
@@ -1157,23 +1359,27 @@
 							"display_name": "Mathine",
 							"petal_display_name": "Mathine Details",
 							"type": "flower",
+							"childless": false,
 							"nodes": [
 								{
 									"name": "burrowing_insects_feats",
 									"display_name": "Mathine Feats",
 									"type": "flower",
+									"childless": false,
 									"nodes": [
 										{
 											"name": "burrowing_insects_feat_display",
 											"display_name": "Feat Descriptions",
-											"type": "petal"
+											"type": "petal",
+											"childless": true
 										}
 									]
 								},
 								{
 									"name": "burrowing_insects_heritages",
 									"display_name": "Mathine Heritages",
-									"type": "petal"
+									"type": "petal",
+									"childless": true
 								}
 							]
 						},
@@ -1182,23 +1388,27 @@
 							"display_name": "Muuyine",
 							"petal_display_name": "Muuyine Details",
 							"type": "flower",
+							"childless": false,
 							"nodes": [
 								{
 									"name": "flying_insects_feats",
 									"display_name": "Muuyine Feats",
 									"type": "flower",
+									"childless": false,
 									"nodes": [
 										{
 											"name": "flying_insects_feat_display",
 											"display_name": "Feat Descriptions",
-											"type": "petal"
+											"type": "petal",
+											"childless": true
 										}
 									]
 								},
 								{
 									"name": "flying_insects_heritages",
 									"display_name": "Muuyine Heritages",
-									"type": "petal"
+									"type": "petal",
+									"childless": true
 								}
 							]
 						},
@@ -1207,23 +1417,27 @@
 							"display_name": "Piccilli",
 							"petal_display_name": "Piccilli Details",
 							"type": "flower",
+							"childless": false,
 							"nodes": [
 								{
 									"name": "birdpeople_feats",
 									"display_name": "Piccilli Feats",
 									"type": "flower",
+									"childless": false,
 									"nodes": [
 										{
 											"name": "birdpeople_feat_display",
 											"display_name": "Feat Descriptions",
-											"type": "petal"
+											"type": "petal",
+											"childless": true
 										}
 									]
 								},
 								{
 									"name": "birdpeople_heritages",
 									"display_name": "Piccilli Heritages",
-									"type": "petal"
+									"type": "petal",
+									"childless": true
 								}
 							]
 						},
@@ -1232,23 +1446,27 @@
 							"display_name": "Thyllkthoron",
 							"petal_display_name": "Thyllkthoron Details",
 							"type": "flower",
+							"childless": false,
 							"nodes": [
 								{
 									"name": "enosrian_feats",
 									"display_name": "Thyllkthoron Feats",
 									"type": "flower",
+									"childless": false,
 									"nodes": [
 										{
 											"name": "enosrian_feat_display",
 											"display_name": "Feat Descriptions",
-											"type": "petal"
+											"type": "petal",
+											"childless": true
 										}
 									]
 								},
 								{
 									"name": "enosrian_heritages",
 									"display_name": "Thyllkthoron Heritages",
-									"type": "petal"
+									"type": "petal",
+									"childless": true
 								}
 							]
 						},
@@ -1257,23 +1475,27 @@
 							"display_name": "Wernan",
 							"petal_display_name": "Wernan Details",
 							"type": "flower",
+							"childless": false,
 							"nodes": [
 								{
 									"name": "wernan_feats",
 									"display_name": "Wernan Feats",
 									"type": "flower",
+									"childless": false,
 									"nodes": [
 										{
 											"name": "wernan_feat_display",
 											"display_name": "Feat Descriptions",
-											"type": "petal"
+											"type": "petal",
+											"childless": true
 										}
 									]
 								},
 								{
 									"name": "wernan_heritages",
 									"display_name": "Wernan Heritages",
-									"type": "petal"
+									"type": "petal",
+									"childless": true
 								}
 							]
 						}
@@ -1283,16 +1505,19 @@
 					"name": "settings_2e",
 					"display_name": "Settings",
 					"type": "branch",
+					"childless": false,
 					"nodes": [
 						{
 							"name": "redeemed_setting_2e",
 							"display_name": "Redeemed",
-							"type": "leaf"
+							"type": "leaf",
+							"childless": true
 						},
 						{
 							"name": "great_tree",
 							"display_name": "Geldrine",
-							"type": "leaf"
+							"type": "leaf",
+							"childless": true
 						}
 					]
 				}
@@ -1302,11 +1527,13 @@
 			"name": "dnd_5e",
 			"display_name": "D&D 5th Ed.",
 			"type": "branch",
+			"childless": false,
 			"nodes": [
 				{
 					"name": "magic_5e",
 					"display_name": "Magic Items",
-					"type": "leaf"
+					"type": "leaf",
+					"childless": false
 				}
 			]
 		}
