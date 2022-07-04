@@ -5817,7 +5817,7 @@
 				"cosmere"
 			],
 			"setting": "cosmere",
-			"status": "done"
+			"status": "wip"
 		},
 		"npcs_cosm": {
 			"display_name": "NPCs",
@@ -5830,7 +5830,7 @@
 				"monsters_cosm"
 			],
 			"setting": "cosmere",
-			"status": "done"
+			"status": "wip"
 		},
 		"templates_cosm": {
 			"display_name": "Templates",
@@ -5843,7 +5843,7 @@
 				"monsters_cosm"
 			],
 			"setting": "cosmere",
-			"status": "done"
+			"status": "wip"
 		},
 		"subtypes_cosm": {
 			"display_name": "Subtypes",
@@ -5856,7 +5856,7 @@
 				"monsters_cosm"
 			],
 			"setting": "cosmere",
-			"status": "done"
+			"status": "wip"
 		},
 		"races_cosm": {
 			"display_name": "Races",
@@ -5868,7 +5868,7 @@
 				"cosmere"
 			],
 			"setting": "cosmere",
-			"status": "done"
+			"status": "wip"
 		},
 		"rules_cosm": {
 			"display_name": "Rules",

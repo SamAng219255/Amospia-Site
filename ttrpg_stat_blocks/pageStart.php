@@ -226,7 +226,7 @@
 					$sort_path=$pages['entries'][$pageId]['sort_path'];
 					array_push($sort_path,$pageId);
 					$page_node=retrieveNodeAtDepthTruncate($pages['sort_tree'],$sort_path);
-					while(in_array($page_node['type'], ['petal','limb']) || $page_node['childless']==true) {
+					while(in_array($page_node['type'], ['petal']) || $page_node['childless']==true) {
 						array_pop($sort_path);
 						$page_node=retrieveNodeAtDepthTruncate($pages['sort_tree'],$sort_path);
 					}
