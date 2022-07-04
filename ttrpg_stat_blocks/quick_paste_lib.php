@@ -233,6 +233,9 @@
 				elseif($spaced) {
 					$lineClasses.=' spaced';
 				}
+				if(isset($sections[$i]['texts'][$j]['titleLevel'])) {
+					$lineClasses.=' h'.$sections[$i]['texts'][$j]['titleLevel'];
+				}
 				echo '<div class="p'.$lineClasses.'">'.$texts[$i]['text'].'</div>';
 			}
 			else {
@@ -244,7 +247,7 @@
 		$sectionCount=count($sections);
 		for($i=0; $i<$sectionCount; $i++) {
 			echo '<div class="block-section">';
-			echo '<div class="block-section-title">'.$sections[$i]['title'].'</div>';
+			echo '<div class="block-section-title'.(isset($sections[$i]['titleLevel'])?' section-title-'.$sections[$i]['titleLevel']:'').'">'.$sections[$i]['title'].'</div>';
 			$sectionTextCount=count($sections[$i]['texts']);
 			for($j=0; $j<$sectionTextCount; $j++) {
 				$lineClasses='';
@@ -263,6 +266,9 @@
 					}
 					elseif($sections[$i]['spaced']) {
 						$lineClasses.=' spaced';
+					}
+					if(isset($sections[$i]['texts'][$j]['titleLevel'])) {
+						$lineClasses.=' h'.$sections[$i]['texts'][$j]['titleLevel'];
 					}
 					echo '<div class="p'.$lineClasses.'">'.$sections[$i]['texts'][$j]['text'].'</div>';
 				}

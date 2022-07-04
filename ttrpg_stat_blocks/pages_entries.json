@@ -7642,6 +7642,16 @@
 				"spells"
 			],
 			"status": "done"
+		},
+		"monster_types": {
+			"display_name": "Monster Types",
+			"file_name": "monster_types.php",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"monsters"
+			],
+			"status": "done"
 		}
 	}
 }

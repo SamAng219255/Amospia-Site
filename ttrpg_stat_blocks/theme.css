@@ -14,7 +14,7 @@ body.light {
 	color: #000;
 	background-color: #f9f5f7;
 }
-h1, h2, h3, h4, h5, h6 {
+h1, .h1, h2, .h2, h3, .h3, .h3a, h4, .h4, h5, .h5, h6, .h6 {
 	all: unset;
 	display: block;
 }
@@ -37,10 +37,10 @@ p.top-double-spaced, .p.top-double-spaced {
 pre {
 	font-size: 12px;
 }
-b, h4 {
+b, h4, .h4, .block-section-title.section-title-4 {
 	font-weight: 900;
 }
-i, h5 {
+i, h5, .h5, .block-section-title.section-title-5 {
 	font-style: italic;
 }
 u {
@@ -53,7 +53,7 @@ ul {
 ul>li>ul {
 	padding-left: 1em;
 }
-h1 {
+h1, .h1, .block-section-title.section-title-1 {
 	font-size: 2em;
 	font-weight: bold;
 }
@@ -351,10 +351,10 @@ body.light .top-label.status-empty {
 	padding: 0.5em;
 	clear: both;
 }
-.block-title, h2 {
+.block-title, h2, .h2 {
 	font-size: 1.5em;
 }
-.block-title, h1, h2 {
+.block-title, h1, .h1, h2, .h2, .block-section-title.section-title-1, .block-section-title.section-title-2 {
 	font-weight: bold;
 	background-color: #482818;
 	color: #cca94a;
@@ -363,7 +363,7 @@ body.light .top-label.status-empty {
 	-webkit-transition: background-color .4s, color .4s;
 	transition: background-color .4s, color .4s;
 }
-body.light .block:not(.block-sf) .block-title, body.light h1, body.light h2 {
+body.light .block:not(.block-sf) .block-title, body.light h1, body.light .h1, body.light h2, body.light .h2, body.light .block-section-title.section-title-1, body.light .block-section-title.section-title-2 {
 	background-color: #cca94a;
 	color: #482818;
 }
@@ -375,12 +375,15 @@ body.light .block:not(.block-sf) .block-title, body.light h1, body.light h2 {
 	background-color: #9A0800;
 	color: #f0f0ff;
 }
-.block-section-title, h3:not(.alt) {
+.block-section-title, .block-section-title.section-title-3, h3:not(.alt), .h3 {
 	border-style: solid none;
 	font-weight: bold;
 	margin-bottom: 0.25em;
 }
-.block-section-title-alt, h3.alt {
+.block-section-title.section-title-1, .block-section-title.section-title-2, .block-section-title.section-title-3a, .block-section-title.section-title-4, .block-section-title.section-title-5, .block-section-title.section-title-6 {
+	border-style: none;
+}
+.block-section-title-alt, h3.alt, .h3a, .block-section-title.section-title-3a {
 	background-color: #a47800;
 	color: #000000;
 	padding: 0 0.25em;

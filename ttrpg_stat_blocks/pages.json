@@ -234,6 +234,12 @@
 							"display_name": "Templates",
 							"type": "petal",
 							"childless": true
+						},
+						{
+							"name": "monster_types",
+							"display_name": "Types",
+							"type": "petal",
+							"childless": true
 						}
 					]
 				},
