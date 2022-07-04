@@ -9,15 +9,19 @@
 	$currentDirectory=$pathstuff[count($pathstuff)-2];
 	$currentPage=$pathstuff[count($pathstuff)-1];
 	$rootDir='';
+	$pages=[];
 	for($i=0; $i<20; $i++) {
-		if(file_exists($rootDir.'quick_paste_lib.php')) {
-			require $rootDir.'quick_paste_lib.php';
+		if(file_exists($rootDir.'pages.json')) {
+			$string=file_get_contents($rootDir.'pages.json');
+			$pages=json_decode($string, true);
 			break;
 		}
 		else {
 			$rootDir='../'.$rootDir;
 		}
 	}
+	$originDir=$pages['origin'];
+	require $rootDir.'quick_paste_lib.php';
 
 	function retrieveAtDepth($arr,$path,$initial_depth=0) {
 		$depth=count($path);
@@ -75,10 +79,10 @@
 	<script src="/jquery.js"></script>
 	<script src="/ttrpg_stat_blocks/mobileDetect.js"></script>
 	<?php
-		echo '	<link rel="stylesheet" type="text/css" href="'.$rootDir.'theme.css?t='.time().'">';
-		echo '	<script>rootDir="'.$rootDir.'";'.($devMode ? ' devMode=true;' : '').'</script>';
-		echo '	<script src="'.$rootDir.'menu.js?t='.time().'"></script>';
-		//echo '	<link rel="shortcut icon" href="'.$rootDir.'../img/icon2_256.png">'
+		echo '	<link rel="stylesheet" type="text/css" href="'.$originDir.'theme.css?t='.time().'">';
+		echo '	<script>rootDir="'.$originDir.'";'.($devMode ? ' devMode=true;' : '').'</script>';
+		echo '	<script src="'.$originDir.'menu.js?t='.time().'"></script>';
+		//echo '	<link rel="shortcut icon" href="'.$originDir.'../img/icon2_256.png">'
 	?>
 	<script src="/ttrpg_stat_blocks/table_sort.js"></script>
 </head>
@@ -90,8 +94,6 @@
 		<p id="sidebar-label">Navigation</p>
 		<ul class="menu-vertical">
 			<?php
-				$string=file_get_contents($rootDir.'pages.json');
-				$pages=json_decode($string, true);
 
 				$string_entries=file_get_contents($rootDir.'pages_entries.json');
 				$pages['entries']=json_decode($string_entries, true)['entries'];
