@@ -36,14 +36,14 @@
 						'text' => 'Traits',
 						'titleLevel' => 3
 					],
-					'A false animate creature possesses the following traits (unless otherwise noted in a creature’s entry).',
+					'A false animate creature possesses the following traits (unless otherwise noted in a creature\'s entry).',
 					'<ul>
-						<li>No Constitution score. False animates use their Charisma score in place of their Constitution score when calculating hit points, Fortitude saves, and any special ability that relies on Constitution (such as when calculating a breath weapon’s DC).</li>
+						<li>No Constitution score. False animates use their Charisma score in place of their Constitution score when calculating hit points, Fortitude saves, and any special ability that relies on Constitution (such as when calculating a breath weapon\'s DC).</li>
 						<li>Darkvision 60 feet.</li>
 						<li>Immunity to all mind-affecting effects (charms, compulsions, morale effects, patterns, and phantasms).</li>
 						<li>Immunity to bleed, death effects, disease, paralysis, poison, sleep effects, and stunning.</li>
 						<li>Not subject to nonlethal damage, ability drain, or energy drain. Immune to damage to its physical ability scores (Constitution, Dexterity, and Strength), as well as to exhaustion and fatigue effects.</li>
-						<li>Cannot heal damage on its own if it has no Intelligence score, although it can be healed. The fast healing special quality works regardless of the creature’s Intelligence score.</li>
+						<li>Cannot heal damage on its own if it has no Intelligence score, although it can be healed. The fast healing special quality works regardless of the creature\'s Intelligence score.</li>
 						<li>Immunity to any effect that requires a Fortitude save (unless the effect also works on objects or is harmless).</li>
 						<li>Not at risk of death from massive damage, but is immediately destroyed when reduced to 0 hit points.</li>
 						<li>A false animate cannot be raised or resurrected.</li>
