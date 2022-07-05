@@ -42,7 +42,7 @@
 						<li>Darkvision 60 feet.</li>
 						<li>Immunity to all mind-affecting effects (charms, compulsions, morale effects, patterns, and phantasms).</li>
 						<li>Immunity to bleed, death effects, disease, paralysis, poison, sleep effects, and stunning.</li>
-						<li>Not subject to nonlethal damage, ability drain, or energy drain. Immune to damage to its physical ability scores (Constitution, Dexterity, and Strength), as well as to exhaustion and fatigue effects.</li>
+						<li>Not subject to nonlethal damage, ability drain, or energy overload. Immune to damage to its physical ability scores (Constitution, Dexterity, and Strength), as well as to exhaustion and fatigue effects.</li>
 						<li>Cannot heal damage on its own if it has no Intelligence score, although it can be healed. The fast healing special quality works regardless of the creature\'s Intelligence score.</li>
 						<li>Immunity to any effect that requires a Fortitude save (unless the effect also works on objects or is harmless).</li>
 						<li>Not at risk of death from massive damage, but is immediately destroyed when reduced to 0 hit points.</li>

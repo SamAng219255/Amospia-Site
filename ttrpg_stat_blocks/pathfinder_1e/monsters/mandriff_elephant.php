@@ -125,11 +125,17 @@
 			]
 		],// Skills
 		[],// Languages
-		'',// Special Qualities
+		'undersized weapons',// Special Qualities
 		'any',// Environment
 		'solitary, pair, patrol (3–5), or squad (6–10)',// Organization
 		'NPC gear',// Treasure
-		[],// Special Abilities
+		[
+			[
+				'name' => 'Undersized Weapons',
+				'type' => 'Ex',
+				'desc' => 'Although a Mandriff Elephant Guard is Huge, its upper torso is the same size as that of a Large humanoid. As a result, they wield weapons as if they were one size category smaller than their actual size (Large for most elephant guards).'
+			]
+		],// Special Abilities
 		$desc='',// Description
 		[
 			'Combat Gear' => [

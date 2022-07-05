@@ -10,7 +10,16 @@
 		}
 	}
 ?>
-<title>Monsters Index</title>
+<script>
+	initialSort=true;
+	initialSortFunc=function(a,b) {
+		if(a.children[0].tagName=='TH')
+			return -1;
+		else if(b.children[0].tagName=='TH')
+			return 1;
+		return comp(a.children[0].innerText.toLowerCase(),b.children[0].innerText.toLowerCase());
+	};
+</script>
 <?php
 	table(
 		[
@@ -30,7 +39,7 @@
 			[
 				'Kundrak',
 				'link' => 'monsters/lazuli_dragon.php',
-				'?? (35+)',
+				'35+/MR 10',
 				'dragon',
 				'Deep Space (Hall of Stars)'
 			],
@@ -39,6 +48,20 @@
 				'link' => 'monsters/dread_skull_animus.php',
 				'varies',
 				'undead',
+				'any'
+			],
+			[
+				'Attaithi',
+				'link' => 'monsters/attaithi.php',
+				'9',
+				'false animate',
+				'any'
+			],
+			[
+				'Attaithi Spawn',
+				'link' => 'monsters/attaithi_spawn.php',
+				'4',
+				'false animate',
 				'any'
 			]
 		]

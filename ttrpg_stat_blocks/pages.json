@@ -240,6 +240,12 @@
 							"display_name": "Types",
 							"type": "petal",
 							"childless": true
+						},
+						{
+							"name": "monster_rules",
+							"display_name": "Universal Monster Rules",
+							"type": "petal",
+							"childless": true
 						}
 					]
 				},

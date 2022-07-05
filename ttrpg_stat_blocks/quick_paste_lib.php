@@ -1358,7 +1358,10 @@
 			];
 			foreach ($specAb as $specAbility) {
 				$specAbilityLines=quick_array($specAbility['desc']);
-				array_push($section['texts'], quick_format("bb/{$specAbility['name']}/bb ({$specAbility['type']}) {$specAbilityLines[0]}"));
+				if(isset($specAbility['type']) && $specAbility['type']!==false)
+					array_push($section['texts'], quick_format("bb/{$specAbility['name']}/bb ({$specAbility['type']}) {$specAbilityLines[0]}"));
+				else
+					array_push($section['texts'], quick_format("bb/{$specAbility['name']}/bb {$specAbilityLines[0]}"));
 				$first=true;
 				foreach ($specAbilityLines as $specAbilityLine) {
 					if($first)

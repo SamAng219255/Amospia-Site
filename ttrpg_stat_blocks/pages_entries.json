@@ -7652,6 +7652,36 @@
 				"monsters"
 			],
 			"status": "done"
+		},
+		"monster_rules": {
+			"display_name": "Universal Monster Rules",
+			"file_name": "monster_rules.php",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"monsters"
+			],
+			"status": "done"
+		},
+		"attaithi": {
+			"display_name": "Attaithi",
+			"file_name": "attaithi.php",
+			"directory": "pathfinder_1e/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"monsters"
+			],
+			"status": "done"
+		},
+		"attaithi_spawn": {
+			"display_name": "Attaithi Spawn",
+			"file_name": "attaithi_spawn.php",
+			"directory": "pathfinder_1e/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"monsters"
+			],
+			"status": "done"
 		}
 	}
 }
