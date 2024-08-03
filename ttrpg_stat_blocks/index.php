@@ -1,7 +1,7 @@
 <?php require 'pageStart.php'; ?>
-<title>D&D/Pathfinder</title>
-<?php require 'blog.php'; ?>
-<?php
+<title>Mordan's Vault</title>
+<?php 
+	require 'blog.php';
 	//echo phpversion();
 	require 'pageEnd.php';
 ?>
