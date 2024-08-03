@@ -52,7 +52,7 @@
 				'link' => 'items/time_rod.php',
 				'Minor',
 				'Rod',
-				'ring',
+				'none',
 				'18th'
 			],
 			[
@@ -60,7 +60,7 @@
 				'link' => 'items/time_rod.php#block-Rod-of-Timeless-Spells,-Greater',
 				'Minor',
 				'Rod',
-				'ring',
+				'none',
 				'22th'
 			],
 			[
@@ -76,7 +76,7 @@
 				'link' => 'items/truthlight.php',
 				'Major',
 				'Staff',
-				'ring',
+				'none',
 				'15th'
 			],
 			[
@@ -86,6 +86,22 @@
 				'Weapon',
 				'none',
 				'30th'
+			],
+			[
+				'Annihilator',
+				'link' => 'items/annihilator.php',
+				'Minor',
+				'Weapon',
+				'none',
+				'25th'
+			],
+			[
+				'Black Aegis',
+				'link' => 'items/black_aegis.php',
+				'Minor',
+				'Shield',
+				'none',
+				'20th'
 			]
 		]
 	);

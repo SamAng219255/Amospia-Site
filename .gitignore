@@ -1,7 +1,10 @@
 chat
+games/military_minds/*
 games/military_minds/db.php
 games/military_minds/tables.sql
 misc/Alchahemistry
 MCserver
 Ahsakorr
 testServer
+hexmap
+misc/circular

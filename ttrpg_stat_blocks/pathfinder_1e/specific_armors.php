@@ -53,6 +53,20 @@
 				'30 ft.',
 				'20 ft.',
 				'5 lbs.'
+			],
+			[
+				'Tomb Shield',
+				'link' => 'items/tomb_shield.php',
+				'18,000 gp',
+				'5th',
+				'Shield',
+				'+5',
+				'+2',
+				'-10',
+				'50%',
+				'—',
+				'—',
+				'45 lbs.'
 			]
 		]
 	);

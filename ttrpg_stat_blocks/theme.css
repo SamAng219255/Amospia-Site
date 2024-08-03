@@ -398,6 +398,9 @@ body.light .block:not(.block-sf) .block-title, body.light h1, body.light .h1, bo
 	padding: 0 0.25em;
 	margin: 0.75em 0 0.5em;
 }
+.layered-block {
+	margin-left: 2em;
+}
 .goto-top, .goto-top-2 {
 	display: none;
 	float: right;
@@ -422,6 +425,25 @@ body.light .block:not(.block-sf) .block-title, body.light h1, body.light .h1, bo
 	background-color: #482818;
 	-webkit-transition: border-color .4s, background-color .4s;
 	transition: border-color .4s, background-color .4s;
+}
+input.show-stance {
+	font-size: 0.85em;
+}
+ul.stance {
+	margin: 0 0 0 1em;
+	list-style-type: none;
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height 0.25s;
+}
+.show-stance.active+ul.stance {
+	max-height: 16em;
+}
+ul.stance>li {
+	margin-left: 1em;
+}
+ul.stance>li.axis {
+	margin-left: 0em;
 }
 body.light .trait, body.light trt {
 	border-color: #482818;
@@ -701,76 +723,6 @@ input:checked + .slider:before {
 		width: calc(100vw - 5rem);
 	}
 }
-
-/*Attempted to vary font size to be consistent on all devices but devices continued to provide inaccurate values
-@media (max-resolution: 105dpi) {
-	body.mobile {
-		font-size: 16px;
-	}
-	body.mobile #sidebar {
-		font-size: 2em;
-	}
-}
-@media (max-resolution: 124dpi) and (min-resolution: 105dpi) {
-	body, body.mobile {
-		font-size: 19px
-	}
-}
-@media (max-resolution: 148dpi) and (min-resolution: 124dpi) {
-	body, body.mobile {
-		font-size: 22.6px
-	}
-}
-@media (max-resolution: 176dpi) and (min-resolution: 148dpi) {
-	body, body.mobile {
-		font-size: 26.9px
-	}
-}
-@media (max-resolution: 209dpi) and (min-resolution: 176dpi) {
-	body, body.mobile {
-		font-size: 32px
-	}
-}
-@media (max-resolution: 249dpi) and (min-resolution: 209dpi) {
-	body, body.mobile {
-		font-size: 38.1px
-	}
-}
-@media (max-resolution: 296dpi) and (min-resolution: 249dpi) {
-	body, body.mobile {
-		font-size: 45.3px
-	}
-}
-@media (max-resolution: 352dpi) and (min-resolution: 296dpi) {
-	body, body.mobile {
-		font-size: 53.8px
-	}
-}
-@media (max-resolution: 419dpi) and (min-resolution: 352dpi) {
-	body, body.mobile {
-		font-size: 64px
-	}
-}
-@media (max-resolution: 498dpi) and (min-resolution: 419dpi) {
-	body, body.mobile {
-		font-size: 76.1px
-	}
-}
-@media (max-resolution: 592dpi) and (min-resolution: 498dpi) {
-	body, body.mobile {
-		font-size: 90.5px
-	}
-}
-@media (max-resolution: 704dpi) and (min-resolution: 592dpi) {
-	body, body.mobile {
-		font-size: 107.6px
-	}
-}
-@media (min-resolution: 704dpi) {
-	body, body.mobile {
-		font-size: 128px
-	}
-}*/
 
 /* Hide Scroll Bars */
 * {

@@ -36,8 +36,17 @@
 						'name' => 'Magic Basics',
 						'children' => [
 							[
-								'name' => 'Spell Descriptions',
+								'name' => 'Spell Definitions',
 								'children' => [
+									[
+										'name' => 'Subschools',
+										'children' => [
+											[
+												'name' => 'Transmogrification',
+												'link' => 'rules/transmogrification_subschool.php'
+											]
+										]
+									],
 									[
 										'name' => 'Descriptor',
 										'children' => [

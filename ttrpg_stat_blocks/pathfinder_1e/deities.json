@@ -154,5 +154,44 @@
 		"animal": "Giant Eagle",
 		"color": "Red, White",
 		"desc": ""
+	},
+	{
+		"name": "Akrathesh",
+		"pantheon": "The Porceakran Gods",
+		"alignment": "NG",
+		"areas_of_concern": "Bodies of Water, The Porceakran, Weather, Wind",
+		"domains": "Air, Good, Water, Weather",
+		"subdomains": "Cloud, Friendship, Lightning, Oceans, Rivers, Storms, Wind",
+		"favored_weapon": "Greatsword",
+		"symbol": "A black spiral with either a clear or white background.",
+		"animal": "Albatross, Dolphin, Pig",
+		"color": "Sky Blue and White",
+		"desc": "Akrathesh is an ancient goddess to whom the life on the world is often attributed. She is goddess of all bodies of water and of weather but most of her worshipers are sailors who worship her as goddess of the sea and pray for fair winds at their backs and storms on pirates and those who wrong them. The center of her worship is the island of Nin, the largest volcanic island in a vast region of ocean dotted by both volcanic islands and deepsea atolls. This island, and many of the neighboring islands, is home to the porceakrans, Akrathesh's chosen race who she sees as her own children as they see her as their mother."
+	},
+	{
+		"name": "Indrak",
+		"pantheon": "The Porceakran Gods",
+		"alignment": "CN",
+		"areas_of_concern": "Fire, Volcanoes, Calamities, Wrath, Power",
+		"domains": "Destruction, Earth, Fire, Independence, Strength",
+		"subdomains": "Ash, Catastrophe, Caves, Ferocity, Rage, Solo, Smoke",
+		"favored_weapon": "Spear",
+		"symbol": "A flaming four pointed star.",
+		"animal": "Falcon, Shark, Boar",
+		"color": "Orange-Red and Black",
+		"desc": "Indrak is an ancient god of fire and magma from before life arose on the world. He was not alone, many gods of fire and magma existed in those days, nor was he significant at the time, but he did his part, shaping the world and sprouting volcanoes across the world until Akrathesh's first cooling rains fell upon the world and life sprang up from the new seas. He fell in Akrathesh, and she with him, and they courted quickly and married soon after. As life arose upon the world, many gods began sculpting races of followers from elements and from the budding life upon the world. It was in this era that Akrathesh and Indrak worked together and transformed a colony of island boars into a new race as their beloved children. They named this race proceakran. \n Modernly, Indrak is worshiped as a god of fire and disasters but also as a god of the forge and war by his children, the porceakran."
+	},
+	{
+		"name": "Titan",
+		"pantheon": "Fuuristyr",
+		"alignment": "N",
+		"areas_of_concern": "Giants, The World, Might, Death, The Dead",
+		"domains": "Death, Earth, Glory, Repose, Strength",
+		"subdomains": "Ancestors, Competition, Ferocity, Fist, Honor, Hubris, Legend, Metal, Resolve, Self-Realization, Undead",
+		"favored_weapon": "Battleaxe",
+		"symbol": "A silhouette of a sphere (representing the world) with cracks in it coming from the top.",
+		"animal": "Rought, Deathfish, Ice Eagle",
+		"color": "Gray",
+		"desc": "God of Death and Creator of the Ohnfullins, Titan was slain under circumstances lost to history leaving behind his people, the ohnfullins, to fend for themselves in a world that hates them. Titan has not spoken to his followers since his death, but his divine power remains. Though whatever form his power took in life, it has been transformed into the power of death, making his followers adept both as ferrying the souls of the dead, and raising them into undeath. The ohnfullins claim that Titan was the first creator of the world and that he left it to them, his chosen people, making them the rightful rulers of the world."
 	}
 ]

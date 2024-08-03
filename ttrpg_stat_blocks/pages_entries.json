@@ -57,7 +57,7 @@
 				"pathfinder_1e",
 				"items",
 				"magic_items",
-				"wondrous"
+				"rings"
 			],
 			"status": "done"
 		},
@@ -69,7 +69,7 @@
 				"pathfinder_1e",
 				"items",
 				"magic_items",
-				"wondrous"
+				"rods"
 			],
 			"status": "done"
 		},
@@ -262,6 +262,36 @@
 				"deities"
 			],
 			"setting": "forest",
+			"status": "done"
+		},
+		"akrathesh": {
+			"display_name": "Akrathesh",
+			"file_name": "deity_view.php?name=Akrathesh",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"deities"
+			],
+			"status": "done"
+		},
+		"indrak": {
+			"display_name": "Indrak",
+			"file_name": "deity_view.php?name=Indrak",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"deities"
+			],
+			"status": "done"
+		},
+		"titan": {
+			"display_name": "Titan",
+			"file_name": "deity_view.php?name=Titan",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"deities"
+			],
 			"status": "done"
 		},
 		"vorpmalcide": {
@@ -646,7 +676,7 @@
 				"pathfinder_1e",
 				"items",
 				"magic_items",
-				"wondrous"
+				"rings"
 			],
 			"setting": "kundrak",
 			"status": "done"
@@ -3653,6 +3683,18 @@
 		"brigandine": {
 			"display_name": "Brigandine",
 			"file_name": "brigandine.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"equipment",
+				"armor"
+			],
+			"status": "done"
+		},
+		"oachiaskua": {
+			"display_name": "O'achiaskua",
+			"file_name": "oachiaskua.php",
 			"directory": "pathfinder_1e/items/",
 			"sort_path": [
 				"pathfinder_1e",
@@ -7680,6 +7722,691 @@
 			"sort_path": [
 				"pathfinder_1e",
 				"monsters"
+			],
+			"status": "done"
+		},
+		"impossible_staves": {
+			"display_name": "Impossible Staves",
+			"file_name": "impossible_staves.php",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"impossible_magic"
+			],
+			"status": "done"
+		},
+		"angel_fire": {
+			"display_name": "Staff of Angel-Fire",
+			"file_name": "angel_fire.php",
+			"directory": "pathfinder_1e/items/impossible/staff/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"impossible_magic",
+				"impossible_staves"
+			],
+			"status": "done"
+		},
+		"arcane_arm": {
+			"display_name": "Staff of Arcane Arm",
+			"file_name": "arcane_arm.php",
+			"directory": "pathfinder_1e/items/impossible/staff/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"impossible_magic",
+				"impossible_staves"
+			],
+			"status": "done"
+		},
+		"antimagic_wave": {
+			"display_name": "Staff of Antimagic Wave",
+			"file_name": "antimagic_wave.php",
+			"directory": "pathfinder_1e/items/impossible/staff/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"impossible_magic",
+				"impossible_staves"
+			],
+			"status": "done"
+		},
+		"avatar": {
+			"display_name": "Staff of Avatar",
+			"file_name": "avatar.php",
+			"directory": "pathfinder_1e/items/impossible/staff/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"impossible_magic",
+				"impossible_staves"
+			],
+			"status": "done"
+		},
+		"celestial_lantern": {
+			"display_name": "Staff of Celestial Lantern",
+			"file_name": "celestial_lantern.php",
+			"directory": "pathfinder_1e/items/impossible/staff/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"impossible_magic",
+				"impossible_staves"
+			],
+			"status": "done"
+		},
+		"demigods_armor": {
+			"display_name": "Staff of Demigod's Armor",
+			"file_name": "demigods_armor.php",
+			"directory": "pathfinder_1e/items/impossible/staff/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"impossible_magic",
+				"impossible_staves"
+			],
+			"status": "done"
+		},
+		"force_field": {
+			"display_name": "Staff of Force Field",
+			"file_name": "force_field.php",
+			"directory": "pathfinder_1e/items/impossible/staff/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"impossible_magic",
+				"impossible_staves"
+			],
+			"status": "done"
+		},
+		"frozen_hell": {
+			"display_name": "Staff of Frozen Hell",
+			"file_name": "frozen_hell.php",
+			"directory": "pathfinder_1e/items/impossible/staff/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"impossible_magic",
+				"impossible_staves"
+			],
+			"status": "done"
+		},
+		"earthen_rupture": {
+			"display_name": "Staff of Earthen Rupture",
+			"file_name": "earthen_rupture.php",
+			"directory": "pathfinder_1e/items/impossible/staff/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"impossible_magic",
+				"impossible_staves"
+			],
+			"status": "done"
+		},
+		"immortality": {
+			"display_name": "Staff of Immortality",
+			"file_name": "immortality.php",
+			"directory": "pathfinder_1e/items/impossible/staff/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"impossible_magic",
+				"impossible_staves"
+			],
+			"status": "done"
+		},
+		"perfect_health": {
+			"display_name": "Staff of Perfect Health",
+			"file_name": "perfect_health.php",
+			"directory": "pathfinder_1e/items/impossible/staff/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"impossible_magic",
+				"impossible_staves"
+			],
+			"status": "done"
+		},
+		"portal": {
+			"display_name": "Staff of Portal",
+			"file_name": "portal.php",
+			"directory": "pathfinder_1e/items/impossible/staff/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"impossible_magic",
+				"impossible_staves"
+			],
+			"status": "done"
+		},
+		"smiting_rays": {
+			"display_name": "Staff of Smiting Rays",
+			"file_name": "smiting_rays.php",
+			"directory": "pathfinder_1e/items/impossible/staff/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"impossible_magic",
+				"impossible_staves"
+			],
+			"status": "done"
+		},
+		"spellship": {
+			"display_name": "Staff of Spellship",
+			"file_name": "spellship.php",
+			"directory": "pathfinder_1e/items/impossible/staff/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"impossible_magic",
+				"impossible_staves"
+			],
+			"status": "done"
+		},
+		"thunders_fury": {
+			"display_name": "Staff of Thunder's Fury",
+			"file_name": "thunders_fury.php",
+			"directory": "pathfinder_1e/items/impossible/staff/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"impossible_magic",
+				"impossible_staves"
+			],
+			"status": "done"
+		},
+		"transmogrify_any_object": {
+			"display_name": "Staff of Transmogrify Any Object",
+			"file_name": "transmogrify_any_object.php",
+			"directory": "pathfinder_1e/items/impossible/staff/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"impossible_magic",
+				"impossible_staves"
+			],
+			"status": "done"
+		},
+		"true_death": {
+			"display_name": "Staff of True Death",
+			"file_name": "true_death.php",
+			"directory": "pathfinder_1e/items/impossible/staff/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"impossible_magic",
+				"impossible_staves"
+			],
+			"status": "done"
+		},
+		"impossible_scrolls": {
+			"display_name": "Impossible Scrolls",
+			"file_name": "impossible_scrolls.php",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"impossible_magic"
+			],
+			"status": "done"
+		},
+		"draconic_ascension": {
+			"display_name": "Draconic Ascension",
+			"file_name": "draconic_ascension.php",
+			"directory": "pathfinder_1e/spells/impossible/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"impossible_magic",
+				"impossible_scrolls"
+			],
+			"status": "done"
+		},
+		"planar_ascension": {
+			"display_name": "Planar Ascension",
+			"file_name": "planar_ascension.php",
+			"directory": "pathfinder_1e/spells/impossible/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"impossible_magic",
+				"impossible_scrolls"
+			],
+			"status": "done"
+		},
+		"starship": {
+			"display_name": "Starship",
+			"file_name": "starship.php",
+			"directory": "pathfinder_1e/spells/impossible/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"impossible_magic",
+				"impossible_scrolls"
+			],
+			"status": "done"
+		},
+		"annihilator": {
+			"display_name": "Annihilator",
+			"file_name": "annihilator.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"artifacts"
+			],
+			"status": "done"
+		},
+		"black_aegis": {
+			"display_name": "Black Aegis",
+			"file_name": "black_aegis.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"artifacts"
+			],
+			"status": "done"
+		},
+		"mage_spice": {
+			"display_name": "Mage Spice",
+			"file_name": "mage_spice.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"wondrous"
+			],
+			"status": "done"
+		},
+		"embalming_oils": {
+			"display_name": "Blessed Embalming Oils",
+			"file_name": "embalming_oils.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"wondrous"
+			],
+			"status": "done"
+		},
+		"sustaining_pitcher": {
+			"display_name": "Sustaining Pitcher",
+			"file_name": "sustaining_pitcher.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"wondrous"
+			],
+			"status": "done"
+		},
+		"blasting_wand": {
+			"display_name": "Blasting Wand",
+			"file_name": "blasting_wand.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"wondrous"
+			],
+			"status": "done"
+		},
+		"blasting_staff": {
+			"display_name": "Blasting Staff",
+			"file_name": "blasting_staff.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"wondrous"
+			],
+			"status": "done"
+		},
+		"spellbolt": {
+			"display_name": "Spellbolt",
+			"file_name": "spellbolt.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"wondrous"
+			],
+			"status": "done"
+		},
+		"disguise_mask": {
+			"display_name": "Vespran Disguise Mask",
+			"file_name": "disguise_mask.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"wondrous"
+			],
+			"status": "done"
+		},
+		"mage_lamp": {
+			"display_name": "Mage Lamp",
+			"file_name": "mage_lamp.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"wondrous"
+			],
+			"status": "done"
+		},
+		"providing_pitcher": {
+			"display_name": "Providing Pitcher",
+			"file_name": "providing_pitcher.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"wondrous"
+			],
+			"status": "done"
+		},
+		"arcane_signet": {
+			"display_name": "Arcane Signet",
+			"file_name": "arcane_signet.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"rings"
+			],
+			"status": "done"
+		},
+		"peppermint_rod": {
+			"display_name": "Peppermint Rod",
+			"file_name": "peppermint_rod.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"rods"
+			],
+			"status": "done"
+		},
+		"spell_tome": {
+			"display_name": "Spell Memory Tome",
+			"file_name": "spell_tome.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"wondrous"
+			],
+			"status": "done"
+		},
+		"tomb_shield": {
+			"display_name": "Tomb Shield",
+			"file_name": "tomb_shield.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"magic_armor",
+				"specific_armors"
+			],
+			"status": "done"
+		},
+		"sweet_odors": {
+			"display_name": "Sweet Odors",
+			"file_name": "sweet_odors.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"wondrous"
+			],
+			"status": "done"
+		},
+		"iron_rod": {
+			"display_name": "Iron Rod",
+			"file_name": "iron_rod.php",
+			"directory": "pathfinder_1e/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"rods"
+			],
+			"status": "done"
+		},
+		"rings": {
+			"display_name": "Magic Rings",
+			"file_name": "rings_index.php",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items"
+			],
+			"status": "done"
+		},
+		"rods": {
+			"display_name": "Magic Rods",
+			"file_name": "rods_index.php",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items"
+			],
+			"status": "done"
+		},
+		"staves": {
+			"display_name": "Magic Staves",
+			"file_name": "staves_index.php",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items"
+			],
+			"status": "empty"
+		},
+		"beacons": {
+			"display_name": "Spell Beacons",
+			"file_name": "beacons_index.php",
+			"directory": "pathfinder_1e/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items"
+			],
+			"status": "done"
+		},
+		"beacon_prayer": {
+			"display_name": "Beacon of Prayer",
+			"file_name": "prayer.php",
+			"directory": "pathfinder_1e/items/beacons/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"beacons"
+			],
+			"status": "done"
+		},
+		"beacon_bless_bane": {
+			"display_name": "Beacon of Bless and Bane",
+			"file_name": "bless_bane.php",
+			"directory": "pathfinder_1e/items/beacons/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"beacons"
+			],
+			"status": "done"
+		},
+		"beacon_consecration": {
+			"display_name": "Beacon of Consecration",
+			"file_name": "consecration.php",
+			"directory": "pathfinder_1e/items/beacons/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"beacons"
+			],
+			"status": "done"
+		},
+		"beacon_desecration": {
+			"display_name": "Beacon of Desecration",
+			"file_name": "desecration.php",
+			"directory": "pathfinder_1e/items/beacons/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"beacons"
+			],
+			"status": "done"
+		},
+		"beacon_protection": {
+			"display_name": "Beacon of Protection",
+			"file_name": "protection.php",
+			"directory": "pathfinder_1e/items/beacons/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"beacons"
+			],
+			"status": "done"
+		},
+		"beacon_good_healing": {
+			"display_name": "Beacon of Celestial Healing",
+			"file_name": "good_healing.php",
+			"directory": "pathfinder_1e/items/beacons/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"beacons"
+			],
+			"status": "done"
+		},
+		"beacon_evil_healing": {
+			"display_name": "Beacon of Fiendish Healing",
+			"file_name": "evil_healing.php",
+			"directory": "pathfinder_1e/items/beacons/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"beacons"
+			],
+			"status": "done"
+		},
+		"beacon_protection_from": {
+			"display_name": "Beacon of Protection from Alignment",
+			"file_name": "protection_from.php",
+			"directory": "pathfinder_1e/items/beacons/",
+			"sort_path": [
+				"pathfinder_1e",
+				"items",
+				"magic_items",
+				"beacons"
+			],
+			"status": "done"
+		},
+		"transmogrification": {
+			"display_name": "Transmogrification",
+			"file_name": "transmogrification_subschool.php",
+			"directory": "pathfinder_1e/rules/",
+			"sort_path": [
+				"pathfinder_1e",
+				"rules"
+			],
+			"status": "done"
+		},
+		"warcraft": {
+			"display_name": "Warcraft",
+			"file_name": "warcraft.php",
+			"directory": "pathfinder_1e/topics/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics"
+			],
+			"status": "done"
+		},
+		"races_wc": {
+			"display_name": "Races",
+			"file_name": "races_index.php",
+			"directory": "pathfinder_1e/topics/warcraft/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft"
+			],
+			"status": "wip",
+			"note": "All presented races have been written but not all have been added."
+		},
+		"human_wc": {
+			"display_name": "Human",
+			"file_name": "human.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"dwarf_wc": {
+			"display_name": "Dwarf",
+			"file_name": "dwarf.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
 			],
 			"status": "done"
 		}

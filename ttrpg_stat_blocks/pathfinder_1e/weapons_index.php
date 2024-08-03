@@ -13,7 +13,7 @@
 <script>
 	initialSort=true;
 	profNum={'simple':0,'martial':1,'exotic':2,'firearm':3};
-	handsNum={'light':0,'one-handed':1,'two-handed':2};
+	handsNum={'light':0,'one-handed':1,'two-handed':2,'ranged':3};
 	initialSortFunc=function(a,b) {
 		if(a.children[0].tagName=='TH')
 			return -1;
@@ -68,6 +68,48 @@
 				'3 lbs.',
 				'P',
 				'—'
+			],
+			[
+				'Great Bow',
+				'link' => 'items/great_bow.php',
+				'150 gp',
+				'Exotic',
+				'Ranged',
+				'1d8',
+				'1d10',
+				'x3',
+				'150 ft.',
+				'4 lbs.',
+				'P',
+				'—'
+			],
+			[
+				'Great Spear',
+				'link' => 'items/great_spear.php',
+				'20 gp',
+				'Exotic',
+				'Two-Handed',
+				'1d8',
+				'1d10',
+				'x3',
+				'—',
+				'18 lbs.',
+				'P',
+				'brace, reach'
+			],
+			[
+				'Battle Shovel',
+				'link' => 'items/battle_shovel.php',
+				'10 gp',
+				'Exotic',
+				'Two-Handed',
+				'1d6',
+				'1d8',
+				'x3',
+				'—',
+				'18 lbs.',
+				'B or S',
+				'brace, reach'
 			]
 		]
 	);

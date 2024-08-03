@@ -82,6 +82,7 @@
 		echo '	<link rel="stylesheet" type="text/css" href="'.$originDir.'theme.css?t='.time().'">';
 		echo '	<script>rootDir="'.$originDir.'";'.($devMode ? ' devMode=true;' : '').'</script>';
 		echo '	<script src="'.$originDir.'menu.js?t='.time().'"></script>';
+		echo '	<script src="'.$originDir.'controllers.js?t='.time().'"></script>';
 		//echo '	<link rel="shortcut icon" href="'.$originDir.'../img/icon2_256.png">'
 	?>
 	<script src="/ttrpg_stat_blocks/table_sort.js"></script>

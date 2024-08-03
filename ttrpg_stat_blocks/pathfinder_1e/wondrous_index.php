@@ -32,76 +32,6 @@
 		],
 		[
 			[
-				quick_format('Band of Lazuli and Iron (+1, with 1 ii/miracle/ii)'),
-				'link' => 'items/lazuli_band.php',
-				'278,000 gp',
-				'ring',
-				'20th'
-			],
-			[
-				quick_format('Band of Lazuli and Iron (+2, with 1 ii/miracle/ii)'),
-				'link' => 'items/lazuli_band.php',
-				'290,000 gp',
-				'ring',
-				'20th'
-			],
-			[
-				quick_format('Band of Lazuli and Iron (+3, with 1 ii/miracle/ii)'),
-				'link' => 'items/lazuli_band.php',
-				'310,000 gp',
-				'ring',
-				'20th'
-			],
-			[
-				quick_format('Band of Lazuli and Iron (+4, with 1 ii/miracle/ii)'),
-				'link' => 'items/lazuli_band.php',
-				'338,000 gp',
-				'ring',
-				'20th'
-			],
-			[
-				quick_format('Band of Lazuli and Iron (+5, with 1 ii/miracle/ii)'),
-				'link' => 'items/lazuli_band.php',
-				'374,000 gp',
-				'ring',
-				'20th'
-			],
-			[
-				quick_format('Band of Lazuli and Iron (+1)'),
-				'link' => 'items/lazuli_band.php',
-				'88,000 gp',
-				'ring',
-				'20th'
-			],
-			[
-				quick_format('Band of Lazuli and Iron (+2)'),
-				'link' => 'items/lazuli_band.php',
-				'100,000 gp',
-				'ring',
-				'20th'
-			],
-			[
-				quick_format('Band of Lazuli and Iron (+3)'),
-				'link' => 'items/lazuli_band.php',
-				'120,000 gp',
-				'ring',
-				'20th'
-			],
-			[
-				quick_format('Band of Lazuli and Iron (+4)'),
-				'link' => 'items/lazuli_band.php',
-				'148,000 gp',
-				'ring',
-				'20th'
-			],
-			[
-				quick_format('Band of Lazuli and Iron (+5)'),
-				'link' => 'items/lazuli_band.php',
-				'184,000 gp',
-				'ring',
-				'20th'
-			],
-			[
 				'Book of Endless Pages',
 				'link' => 'items/endless_book.php',
 				'1,500 gp',
@@ -121,20 +51,6 @@
 				'2,000 gp',
 				'none',
 				'9th'
-			],
-			[
-				'Ring of Morphic Steel',
-				'link' => 'items/morphic_ring.php',
-				'1,100 gp',
-				'none',
-				'1st'
-			],
-			[
-				'Rod of Planar Creation',
-				'link' => 'items/planar_rod.php',
-				'2,754,500 gp',
-				'none',
-				'20th'
 			],
 			[
 				'Unprepared Wizard\'s Component Pouch',
@@ -191,8 +107,87 @@
 				'50,000 gp',
 				'none',
 				'17th'
+			],
+			[
+				'Mage Spice',
+				'link' => 'items/mage_spice.php',
+				'25 gp',
+				'none',
+				'1st'
+			],
+			[
+				'Blessed Embalming Oils',
+				'link' => 'items/embalming_oils.php',
+				'18,000 gp',
+				'none',
+				'3rd'
+			],
+			[
+				'Sustaining Pitcher',
+				'link' => 'items/sustaining_pitcher.php',
+				'86,000 gp',
+				'none',
+				'7th'
+			],
+			[
+				'Blasting Wand',
+				'link' => 'items/blasting_wand.php',
+				'1,800 gp',
+				'none',
+				'1st'
+			],
+			[
+				'Blasting Staff',
+				'link' => 'items/blasting_staff.php',
+				'2,700 gp',
+				'none',
+				'9th'
+			],
+			[
+				'Spellbolt',
+				'link' => 'items/spellbolt.php',
+				'varies',
+				'none',
+				'varies'
+			],
+			[
+				'Vespran Disguise Mask',
+				'link' => 'items/disguise_mask.php',
+				'18,000 gp',
+				'none',
+				'3rd'
+			],
+			[
+				'Mage Lamp',
+				'link' => 'items/mage_lamp.php',
+				'675 gp',
+				'none',
+				'5th'
+			],
+			[
+				'Providing Pitcher',
+				'link' => 'items/providing_pitcher.php',
+				'5,400 gp',
+				'none',
+				'5th'
+			],
+			[
+				'Spell Memory Tome',
+				'link' => 'items/spell_tome.php',
+				'108,000 gp',
+				'none',
+				'18th'
+			],
+			[
+				'Sweet Odors',
+				'link' => 'items/sweet_odors.php',
+				'13,500 gp',
+				'none',
+				'5th'
 			]
-		]
+		],
+		true,
+		false
 	);
 	require $startDir.'pageEnd.php';
 ?>

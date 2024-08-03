@@ -12,15 +12,26 @@
 	monsterBlockAuto(
 		'Attaithi',// name
 		false,// alt name
-		'As you watch this noble woman take off her porcelain mask, her skin appears to transform, becoming crushed bricks, splinters of wood, and smashed glass. The creature would almost appear to be a haphazardly assembled construct or maybe even a strange elemental, if it weren\'t for the white-gold light streaming from every crack and crevice in its form.',// lore text
+		'As you watch this noble woman take off her porcelain mask, her appearance changes, revealing an alluring form though where her face should be is seen only blank featureless scar tissue with only a wicked smile.',// lore text
 		9,// CR
 		false,// MR
 		false,// Custom XP
 		'Attaithi cleric 8',// Race
 		[],// Class
-		'N',// Alignment
+		[
+			'alignment' => 'NE',
+			'altruism' => -1,
+			'humility' => -1,
+			'purity' => -1,
+			'honesty' => -2,
+			'loyalty' => 0,
+			'law' => 1,
+			'individualism' => 1,
+			'knowledge' => 0,
+			'work' => 0
+		],// Alignment
 		'Medium',// Size
-		'false animate',// Type
+		'humanoid (hyperbiote)',// Type
 		4,// Misc Initiative Mod
 		false,// Mythic Initiative
 		'darkvision 60 ft.',// Senses
@@ -46,7 +57,7 @@
 				'mod' => 3
 			]
 		],// Fortitude/Reflex/Will save good/bad and misc bonuses
-		'channel resistance +4; DR 10/magic and copper; Immune false animate traits; Resist fire 10, acid 10',// Defensive Abilities
+		'channel resistance +4; DR 10/magic and copper; Immune hyperbiote traits; Resist fire 10, acid 10',// Defensive Abilities
 		'Attaithi weaknesses',// Weaknesses
 		'30 ft.',// Speed
 		[
@@ -63,7 +74,7 @@
 			]
 		],// Attacks
 		5,// Reach
-		'channel positive energy, create spawn, energy overload (2 levels, DC 18), energy suffusion',// Special Attacks
+		'channel positive energy, create spawn, energy overload (2 levels, DC 18), breath draw (1d4 Con)',// Special Attacks
 		[],// Spell-like Abilities
 		[
 			[
@@ -238,7 +249,7 @@
 			[
 				'name' => 'Create Spawn',
 				'type' => 'Su',
-				'desc' => 'An attaithi can create spawn out of the release of energy when it slays a creature with energy suffusion or energy overload. Material around where they died gathers together into an attaithi in 1d4 days. This attaithi is under the command of the attaithi that created it, and remains enslaved until its master\'s destruction. An attaithi may have enslaved spawn totaling no more than twice its own Hit Dice; any spawn it creates that would exceed this limit become free-willed false animates. An attaithi may free an enslaved spawn in order to enslave a new spawn, but once freed, an attaithi or attaithi spawn cannot be enslaved again.'
+				'desc' => 'An attaithi can create spawn out of those it slays a creature with breath draw or energy overload. They enter a coma wherein their body maintains all signs of life before they awaken as an attaithi after 1d4 days. This attaithi is under the command of the attaithi that created it, and remains enslaved until its master\'s destruction. An attaithi may have enslaved spawn totaling no more than twice its own Hit Dice; any spawn it creates that would exceed this limit become free-willed hyperbiotes. An attaithi may free an enslaved spawn in order to enslave a new spawn, but once freed, an attaithi or attaithi spawn cannot be enslaved again.'
 			],
 			[
 				'name' => 'Energy Overload',
@@ -246,9 +257,9 @@
 				'desc' => 'A creature hit by an attaithi\'s slam (or other natural weapon) gains two unstable bonus levels. This ability only triggers once per round, regardless of the number of attacks an attaithi makes.'
 			],
 			[
-				'name' => 'Energy Suffusion',
+				'name' => 'Breath Draw',
 				'type' => 'Su',
-				'desc' => 'An attaithi can suffuse energy into a grappled opponent; if the attaithi establishes or maintains a pin, it suffuses energy, dealing 1d4 points of Constitution damage. The attaithi heals 5 hit points or gains 5 temporary hit points for 1 hour (up to a maximum number of temporary hit points equal to its full normal hit points) each round it suffuses energy.'
+				'desc' => 'At the end of its turn if it grapples a foe, the attaithi makes the target\'s life force violently erupt before siphoning off a portion of power, inflicting 1d4 Constitution damage. Visibly, this appears as a flash of energy from the target\'s eyes, mouth, and nose and that is sucked up by the creature, often through the mouth.'
 			],
 			[
 				'name' => 'Fast Healing',

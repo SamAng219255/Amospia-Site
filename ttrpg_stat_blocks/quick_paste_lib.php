@@ -233,8 +233,8 @@
 				elseif($spaced) {
 					$lineClasses.=' spaced';
 				}
-				if(isset($sections[$i]['texts'][$j]['titleLevel'])) {
-					$lineClasses.=' h'.$sections[$i]['texts'][$j]['titleLevel'];
+				if(isset($texts[$i]['titleLevel'])) {
+					$lineClasses.=' h'.$texts[$i]['titleLevel'];
 				}
 				echo '<div class="p'.$lineClasses.'">'.$texts[$i]['text'].'</div>';
 			}
@@ -357,6 +357,105 @@
 			$sectionTextCount=count($sections[$i]['texts']);
 			for($j=0; $j<$sectionTextCount; $j++) {
 				echo '<div class="p'.($sections[$i]['spaced'] ? ' spaced' : '').'">'.$sections[$i]['texts'][$j].'</div>';
+			}
+			echo '</div>';
+		}
+		echo '</div>';
+	}
+
+	function blockStack($name='', $type='', $texts=[], $spaced=false, $sections=[], $isTop=true) {
+		echo '<div class="block '.$type.($isTop?'':' layered-block').'" id="block-'.str_replace(' ', '-', $name).'">';
+		echo '<div class="block-title">'.$name.'<a href="#" class="goto-top">Back to Top</a></div>';
+		$textCount=count($texts);
+		for($i=0; $i<$textCount; $i++) {
+			$lineClasses='';
+			if(is_array($texts[$i])) {
+				if(isset($texts[$i]['block']) && $texts[$i]['block']) {
+					if(isset($texts[$i]['sections'])) {
+						blockStack($texts[$i]['name'],$texts[$i]['type'],$texts[$i]['texts'],$texts[$i]['spaced'],$texts[$i]['sections'],false);
+					}
+					elseif (isset($texts[$i]['spaced'])) {
+						blockStack($texts[$i]['name'],$texts[$i]['type'],$texts[$i]['texts'],$texts[$i]['spaced'],[],false);
+					}
+					else {
+						blockStack($texts[$i]['name'],$texts[$i]['type'],$texts[$i]['texts'],false,[],false);
+					}
+				}
+				else {
+					if(isset($texts[$i]['spacing'])) {
+						$spacebits=[
+							1=>'spaced',
+							2=>'top-spaced',
+							4=>'double-spaced',
+							8=>'top-double-spaced'
+						];
+						foreach ($spacebits as $bit => $class) {
+							if($texts[$i]['spacing']&$bit)
+								$lineClasses.=' '.$class;
+						}
+					}
+					elseif($spaced) {
+						$lineClasses.=' spaced';
+					}
+					if(isset($texts[$i]['titleLevel'])) {
+						$lineClasses.=' h'.$texts[$i]['titleLevel'];
+					}
+					echo '<div class="p'.$lineClasses.'">'.$texts[$i]['text'].'</div>';
+				}
+			}
+			else {
+				if($spaced)
+					$lineClasses=' spaced';
+				echo '<div class="p'.$lineClasses.'">'.$texts[$i].'</div>';
+			}
+		}
+		$sectionCount=count($sections);
+		for($i=0; $i<$sectionCount; $i++) {
+			echo '<div class="block-section">';
+			echo '<div class="block-section-title'.(isset($sections[$i]['titleLevel'])?' section-title-'.$sections[$i]['titleLevel']:'').'">'.$sections[$i]['title'].'</div>';
+			$sectionTextCount=count($sections[$i]['texts']);
+			for($j=0; $j<$sectionTextCount; $j++) {
+				$lineClasses='';
+				if(is_array($sections[$i]['texts'][$j])) {
+					if(isset($sections[$i]['texts'][$j]['block']) && $sections[$i]['texts'][$j]['block']) {
+						if(isset($sections[$i]['texts'][$j]['sections'])) {
+							blockStack($sections[$i]['texts'][$j]['name'],$sections[$i]['texts'][$j]['type'],$sections[$i]['texts'][$j]['texts'],$sections[$i]['texts'][$j]['spaced'],$sections[$i]['texts'][$j]['sections'],false);
+						}
+						elseif (isset($sections[$i]['texts'][$j]['spaced'])) {
+							blockStack($sections[$i]['texts'][$j]['name'],$sections[$i]['texts'][$j]['type'],$sections[$i]['texts'][$j]['texts'],$sections[$i]['texts'][$j]['spaced'],[],false);
+						}
+						else {
+							blockStack($sections[$i]['texts'][$j]['name'],$sections[$i]['texts'][$j]['type'],$sections[$i]['texts'][$j]['texts'],false,[],false);
+						}
+
+					}
+					else {
+						if(isset($sections[$i]['texts'][$j]['spacing'])) {
+							$spacebits=[
+								1=>'spaced',
+								2=>'top-spaced',
+								4=>'double-spaced',
+								8=>'top-double-spaced'
+							];
+							foreach ($spacebits as $bit => $class) {
+								if($sections[$i]['texts'][$j]['spacing']&$bit)
+									$lineClasses.=' '.$class;
+							}
+						}
+						elseif($sections[$i]['spaced']) {
+							$lineClasses.=' spaced';
+						}
+						if(isset($sections[$i]['texts'][$j]['titleLevel'])) {
+							$lineClasses.=' h'.$sections[$i]['texts'][$j]['titleLevel'];
+						}
+						echo '<div class="p'.$lineClasses.'">'.$sections[$i]['texts'][$j]['text'].'</div>';
+					}
+				}
+				else {
+					if($sections[$i]['spaced'])
+						$lineClasses.=' spaced';
+					echo '<div class="p'.$lineClasses.'">'.$sections[$i]['texts'][$j].'</div>';
+				}
 			}
 			echo '</div>';
 		}
@@ -651,6 +750,9 @@
 		if(($stat=(isset($stats["cha"]) ? $stats["cha"] : (isset($stats[5]) ? $stats[5] : 0)))!=0) {
 			$statStr.=sprintf("%+d Charisma, ",$stat);
 		}
+		if(($stat=(isset($stats["any"]) ? $stats["any"] : (isset($stats[5]) ? $stats[5] : 0)))!=0) {
+			$statStr.=sprintf("%+d to One Ability Score, ",$stat);
+		}
 		if(strlen($statStr)>0) {
 			$statStr=substr($statStr, 0, -2);
 		}
@@ -712,6 +814,22 @@
 			feat($feat['name'],$feat['desc'],$feat['benefit'],$race.', '.$feat['prereq'],$feat['special']);
 		}
 		echo '</div></div>';
+	}
+	function stanceAxisValue($stance1, $stance2, $stance3) {
+		$opp1 = $stance1 < 0;
+		$opp2 = $stance2 < 0;
+		$opp3 = $stance3 < 0;
+		$for1 = $stance1 > 0;
+		$for2 = $stance2 > 0;
+		$for3 = $stance3 > 0;
+		$axis = ($opp1 && $opp2) || ($opp2 && $opp3) || ($opp1 && $opp3) ? -1 : (($for1 && $for2) || ($for2 && $for3) || ($for1 && $for3) ? 1 : 0);
+		if(($axis > -1) && ($stance1 == -2 || $stance2 == -2 || $stance3 == -2)) {
+			$axis--;
+		}
+		if(($axis < 1) && ($stance1 == 2 || $stance2 == 2 || $stance3 == 2)) {
+			$axis--;
+		}
+		return $axis;
 	}
 	function monsterBlockAuto($name='',$name2=false,$lore='',$cr=1,$mr=false,$customXp=false,$race='',$classes=[],$alignment="N",$size="Medium",$type='',$initMod=0,$mythInit=false,$senses='',$percMod=0,$aura='',$ac=[],$hdp=[1,8],$saves=[['good'=>false,'mod'=>0],['good'=>false,'mod'=>0],['good'=>false,'mod'=>0]],$defAb='',$weak='',$speed=30,$attacks=[],$reach=5,$specAtt='',$spelllike=false,$spellcast=[],$spellnote='',$stats=[],$bab=1,$cmbSpec=0,$cmdSpec=0,$feats='',$skills='',$lang='',$sq='',$enviro='',$organiz='',$treas='',$specAb=[],$desc='',$gear=[]) {
 		/*echo '<pre>name ';
@@ -802,6 +920,34 @@
 		$sizeMod=$sizes[$size];
 		$subOneXp=['1/2'=>200,'1/3'=>135,'1/4'=>100,'1/6'=>65,'1/8'=>50];
 		$xp=($customXp?$customXp:(isset($subOneXp[$cr])?$subOneXp[$cr]:($cr%2==0?400*intPow(2,$cr/2):600*intPow(2,($cr-1)/2))));
+		$align=false;
+		$stance=false;
+		$stanceStrs=[-2=>'Opp (P)',-1=>'Opp',0=>'Und',1=>'For',2=>'For (P)'];
+		if(is_string($alignment)) {
+			$align = $alignment;
+		}
+		else {
+			if(isset($alignment['alignment'])) {
+				$align = $alignment['alignment'];
+			}
+			$s_holy = stanceAxisValue($alignment['altruism'], $alignment['humility'], $alignment['purity']);
+			$s_order = stanceAxisValue($alignment['honesty'], $alignment['loyalty'], $alignment['law']);
+			$s_independent = stanceAxisValue($alignment['individualism'], $alignment['knowledge'], $alignment['work']);
+			$stance='bb/Stance/bb <input type="button" class="show-stance" value="Show"><ul class="stance">';
+			$stance.='<li class="axis"><b>Holiness</b> '.$stanceStrs[$s_holy].'</li>';
+			$stance.='<li>Altruism '.$stanceStrs[$alignment['altruism']].'</li>';
+			$stance.='<li>Humility '.$stanceStrs[$alignment['humility']].'</li>';
+			$stance.='<li>Purity '.$stanceStrs[$alignment['purity']].'</li>';
+			$stance.='<li class="axis"><b>Order</b> '.$stanceStrs[$s_order].'</li>';
+			$stance.='<li>Honesty '.$stanceStrs[$alignment['honesty']].'</li>';
+			$stance.='<li>Loyalty '.$stanceStrs[$alignment['loyalty']].'</li>';
+			$stance.='<li>Law '.$stanceStrs[$alignment['law']].'</li>';
+			$stance.='<li class="axis"><b>Independence</b> '.$stanceStrs[$s_independent].'</li>';
+			$stance.='<li>Individualism '.$stanceStrs[$alignment['individualism']].'</li>';
+			$stance.='<li>Knowledge '.$stanceStrs[$alignment['knowledge']].'</li>';
+			$stance.='<li>Work '.$stanceStrs[$alignment['work']].'</li>';
+			$stance.='</ul>';
+		}
 		$stats['non']=10;
 		$statMods=['non' => 0];
 		if(!isset($stats['str']))
@@ -1380,9 +1526,12 @@
 			]);
 		$vitals=[
 			'bb/XP/bb '.number_format($xp),
-			"{$alignment} {$size} {$type}",
+			($align?$align.' ':'')."{$size} {$type}",
 			sprintf('bb/Init/bb %+d',$statMods['dex']+$initMod).($mythInit?' ss/M/ss':'').($senses!=''?'; bb/Senses/bb '.$senses:'').sprintf('; bb/Perception/bb %+d',$perc)
 		];
+		if($stance) {
+			array_splice($vitals, 2, 0, $stance);
+		}
 		if(count($classes)>0 || $race!='') {
 			$raceClassLine=$race==''?'':$race.' ';
 			$first=true;
@@ -1406,7 +1555,7 @@
 			$sections
 		);
 	}
-	function spellBlockAuto($name, $school, $descriptors=[], $levels=['wizard'=>0], $components=['V'=>0,'S'=>0,'M'=>0,'F'=>0,'DF'=>0], $time='1 standard action', $range='Close', $target=false, $effect=false, $area=false, $duration='instantaneous', $save='none', $sr=false, $desc='') {
+	function spellBlockAutoArray($name, $school, $descriptors=[], $levels=['wizard'=>0], $components=['V'=>0,'S'=>0,'M'=>0,'F'=>0,'DF'=>0], $time='1 standard action', $range='Close', $target=false, $effect=false, $area=false, $duration='instantaneous', $save='none', $sr=false, $desc='') {
 		$descriptorTxt='';
 		if(count($descriptors)>0) {
 			$descriptorTxt=' [';
@@ -1427,7 +1576,10 @@
 				$first=false;
 			else
 				$levelTxt.=', ';
-			$levelTxt.=$class.' '.$level;
+			if($class == 'level')
+				$levelTxt.=$level;
+			else
+				$levelTxt.=$class.' '.$level;
 		}
 		if(!isset($components['V']))
 			$components['V']=0;
@@ -1471,10 +1623,11 @@
 			array_push($effects,'bb/Area/bb '.$area);
 		array_push($effects,'bb/Duration/bb '.$duration);
 		array_push($effects,'bb/Saving Throw/bb '.$save.'; bb/Spell Resistance/bb '.($sr===true?'yes':($sr===false?'no':$sr)));
-		block(
-			$name,
-			'spell',
-			quick_array([
+		return [
+			'block' => true,
+			'name' => $name,
+			'type' => 'spell',
+			'texts' => quick_array([
 				sprintf(
 					'bb/School/bb %s%s; bb/Level/bb %s',
 					$school,
@@ -1482,8 +1635,8 @@
 					$levelTxt
 				)
 			]),
-			false,
-			[
+			'spaced' => 0,
+			'sections' => [
 				[
 					'title' => 'Casting',
 					'spaced' => false,
@@ -1503,6 +1656,16 @@
 					'texts' => quick_array($desc)
 				]
 			]
+		];
+	}
+	function spellBlockAuto($name, $school, $descriptors=[], $levels=['wizard'=>0], $components=['V'=>0,'S'=>0,'M'=>0,'F'=>0,'DF'=>0], $time='1 standard action', $range='Close', $target=false, $effect=false, $area=false, $duration='instantaneous', $save='none', $sr=false, $desc='') {
+		$spellArray = spellBlockAutoArray($name, $school, $descriptors, $levels, $components, $time, $range, $target, $effect, $area, $duration, $save, $sr, $desc);
+		block(
+			$spellArray['name'],
+			$spellArray['type'],
+			$spellArray['texts'],
+			$spellArray['spaced'],
+			$spellArray['sections']
 		);
 	}
 	function advAlchemyBlock($name, $form, $descriptors, $level, $additional, $duration, $save, $desc, $reagents=false, $catalysts=false) {
@@ -1658,6 +1821,35 @@
 	}
 	function advAlchemyCreationBlock($name, $subforms, $descriptors, $level, $desc, $reagents=false, $catalysts=false) {
 		advAlchemyFormSubformBlock($name, 'Creation', $subforms, $descriptors, $level, [], false, false, $desc, $reagents, $catalysts);
+	}
+	function impossibleStaffBlockAuto($name, $school, $lvl=10, $staffDescPt1=[""], $subschool=false, $descriptors=[], $components=['V'=>0,'S'=>0,'M'=>0,'F'=>0,'DF'=>0], $time='1 standard action', $range='Close', $target=false, $effect=false, $area=false, $duration='instantaneous', $save='none', $sr=false, $spellDesc='', $staffDescPt2=[""], $construction=false, $extraCost=0) {
+		global $dashes;
+		$lvl_formatted = $lvl.ordinalSuffix($lvl);
+		$cl = $lvl * 2 + 1;
+		$cl_formatted = $cl.ordinalSuffix($cl);
+		$aura = in_array($school,$dashes)?'—':(is_string($cl)?$school:($cl<6 ? "Faint" : ($cl<12 ? "Moderate" : ($cl<21 ? "Strong" : "Overwhelming"))).' '.$school);
+		$price = number_format($lvl * $cl * 400)." gp";
+		$spellBlockArrray = spellBlockAutoArray($name, $school.($subschool?' ('.$subschool.')':''), $descriptors, ['level'=>$lvl], $components, $time, $range, $target, $effect, $area, $duration, $save, $sr, $spellDesc);
+		$sections=[
+			[
+				"title" => "Description",
+				"spaced" => true,
+				"texts" => array_merge(
+					quick_array($staffDescPt1),
+					[$spellBlockArrray],
+					quick_array($staffDescPt2)
+				)
+			],
+			[
+				"title" => "Construction",
+				"spaced" => false,
+				"texts" => quick_array('bb/Prerequisite/bb Craft Staves, a written copy of ii/'.strtolower($name).'/ii'.($construction?', '.$construction:'').'; bb/Cost/bb: '.number_format($lvl * $cl * 200 + $extraCost).' gp')
+			]
+		];
+		blockStack('Staff of '.$name, 'item', [
+			"<b>Aura</b> {$aura}; <b>CL</b> {$cl_formatted}",
+			"<b>Slot</b> —; <b>Price</b> {$price}; <b>Weight</b> 5 lb."
+		], false, $sections);
 	}
 	function surgeBlock($name, $surge, $range='Touch', $target=false, $effect=false, $area=false, $cost=1, $interval='1 round', $dismiss=true, $desc='') {
 		$properties=[];

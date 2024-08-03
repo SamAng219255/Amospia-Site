@@ -1,0 +1,20 @@
+{
+	"posts": [
+		{
+			"date": "11 July, 2024",
+			"type": "news",
+			"text": [
+				"Hello Everyone! I'm back at it and ready to add the several hundred new stat blocks I have created over the past few years but have been unable to. I am also going to be back on trying to fix errors though the email I planned to use this website with is currently unable to be reached so (temporarily) the repository of the site will not be updated with the website and any questions or comments should be directed to samang033146085@gmail.com instead. If you tried to reach me over the years I was absent hoping I would see it upon my return, I would kindly request that you forward it to the new temporary email.",
+				"Looking to future projects, I'm planning to reorganize these stat blocks into \"books\" instead of the current \"settings\" and \"topics\". \"Topics\" will still be separated into their own section in the general navigation but (hopefully) most stat blocks will also be divided into books which share a common theme or world setting. I also intend to create my own system, based on Pathfinder 1st Edition's rules, which will have an entirely custom setting. When I add it, it will be at the top of the navigation, listed with the other systems. Most of the stat blocks will probably be at least mostly portable into Pathfinder 1st Edition and vice versa, similar to the compatibility of Dungeons and Dragon 3.5 Edition and Pathfinder 1st Edition. My last major plan going forward is to spruce up the design of the website by adding more detailed backgrounds and additional page theme options to increase accessibility and add some style to the page.",
+				"If you have any comments or suggestions regarding these changes, or anything else on this site for that matter, feel free to email me at my current temporary email or at samang219255@gmail.com once I regain control of it. Happy gaming!"
+			]
+		},
+		{
+			"date": "17 June, 2022",
+			"type": "news",
+			"text": [
+				"I am going to to be absent for the next two years and will be unable to maintain this site during that time. It should remain up and functional but I will be unable to add, complete, or fix anything on the site during this time. I should return and be able to continue around July of 2024."
+			]
+		}
+	]
+}

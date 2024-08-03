@@ -175,6 +175,50 @@
 									]
 								},
 								{
+									"name": "beacons",
+									"display_name": "Beacons",
+									"type": "leaf",
+									"childless": false
+								},
+								{
+									"name": "impossible_magic",
+									"display_name": "Impossible Magic",
+									"type": "branch",
+									"childless": false,
+									"nodes": [
+										{
+											"name": "impossible_scrolls",
+											"display_name": "Impossible Scrolls",
+											"type": "leaf",
+											"childless": true
+										},
+										{
+											"name": "impossible_staves",
+											"display_name": "Impossible Staves",
+											"type": "leaf",
+											"childless": true
+										}
+									]
+								},
+								{
+									"name": "rings",
+									"display_name": "Rings",
+									"type": "leaf",
+									"childless": false
+								},
+								{
+									"name": "rods",
+									"display_name": "Rods",
+									"type": "leaf",
+									"childless": false
+								},
+								{
+									"name": "staves",
+									"display_name": "Staves",
+									"type": "leaf",
+									"childless": false
+								},
+								{
 									"name": "magic_weapons",
 									"display_name": "Weapons",
 									"type": "branch",
@@ -1142,6 +1186,20 @@
 									"display_name": "Spells",
 									"type": "leaf",
 									"childless": false
+								}
+							]
+						},
+						{
+							"name": "warcraft",
+							"display_name": "Warcraft",
+							"type": "limb",
+							"childless": false,
+							"nodes": [
+								{
+									"name": "races_wc",
+									"display_name": "Races",
+									"type": "leaf",
+									"childless": true
 								}
 							]
 						}

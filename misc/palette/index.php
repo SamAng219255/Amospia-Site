@@ -4,7 +4,7 @@
 		function random() {
 			return mt_rand() / mt_getrandmax();
 		}
-		$colorStr=["FF0063","FF0080","FF00A0","FF00D0","FF00FF","C000FF","A000FF","8000FF","5300FF","0000FF","0078FF","00B4FF","00FFFF","00FFC0","00FF80","00FF00","A7FF00","D3FF00","E9FF00","FFFF00","FFE100","FFC900","FFA800","FF9400","FF8000","FF5C00","FF0000"];
+		$colorStr=['FF5C00', 'FF8000', 'FF9400', 'FFA800', 'FFC900', 'FFE100', 'FFFF00', 'E9FF00', 'D3FF00', 'A7FF00', '00FF00', '00FF80', '00FFC0', '00FFFF', '00B4FF', '0078FF', '0000FF', '5300FF', '8000FF', 'A000FF', 'C000FF', 'FF00FF', 'FF00D0', 'FF00A0', 'FF0080', 'FF0063', 'FF0000'];
 		$colorArr=[];
 		for($i=0; $i<count($colorStr); $i++) {
 			$colour=[$colorStr[$i][0].$colorStr[$i][1],$colorStr[$i][2].$colorStr[$i][3],$colorStr[$i][4].$colorStr[$i][5]];
@@ -75,8 +75,9 @@
 	</style>
 	<title>Random Palette Generator</title>
 	<link href="img/icon.png" rel="shortcut icon">
+	<script src="script.js"></script>
 </head>
-<body>
+<body onload="setup()">
 	<?php
 		for($i=0; $i<4; $i++) {
 			$thisColor=genRandColor();
@@ -85,7 +86,7 @@
 			if($highest<128) {
 				$bright='dark';
 			}
-			echo '<div class="colorBar '.$bright.'" style="background-color: #'.$thisColor.';"><span>#'.$thisColor.'</span></div>';
+			echo '<div class="colorBar '.$bright.'" id="bar-'.$i.'" style="background-color: #'.$thisColor.';"><span>#'.$thisColor.'</span></div>';
 		}
 	?>
 </body>

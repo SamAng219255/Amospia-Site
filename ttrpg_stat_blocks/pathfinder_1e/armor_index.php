@@ -51,6 +51,19 @@
 				'20 ft.',
 				'25 ft.',
 				'30 lbs.' 
+			],
+			[
+				'O\'achiaskua',
+				'link' => 'items/oachiaskua.php',
+				'100',
+				'Medium',
+				'+6',
+				'+3',
+				'-4',
+				'25%',
+				'20 ft.',
+				'25 ft.',
+				'30 lbs.' 
 			]
 		]
 	);
