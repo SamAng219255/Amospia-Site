@@ -27,6 +27,27 @@
 									"childless": true
 								}
 							]
+						},
+						{
+							"name": "dragon_eater",
+							"display_name": "Dragon Eater",
+							"petal_display_name": "Dragon Eater Class Details",
+							"type": "flower",
+							"childless": false,
+							"nodes": [
+								{
+									"name": "dragon_eater_talents",
+									"display_name": "Dragon Talents",
+									"type": "petal",
+									"childless": true
+								},
+								{
+									"name": "dragon_eater_sources",
+									"display_name": "Draconic Sources",
+									"type": "petal",
+									"childless": true
+								}
+							]
 						}
 					]
 				},
@@ -991,52 +1012,8 @@
 										{
 											"name": "artifacts_am",
 											"display_name": "Artifacts",
-											"type": "branch",
-											"childless": false,
-											"nodes": [
-												{
-													"name": "arkon",
-													"display_name": "The Arkon",
-													"type": "leaf",
-													"childless": true
-												},
-												{
-													"name": "black_arrow",
-													"display_name": "Black Arrow",
-													"type": "leaf",
-													"childless": true
-												},
-												{
-													"name": "elemental_citadel",
-													"display_name": "The Citadel of the Elements",
-													"type": "leaf",
-													"childless": true
-												},
-												{
-													"name": "eye_of_nafh",
-													"display_name": "The Eye of Nafh",
-													"type": "leaf",
-													"childless": true
-												},
-												{
-													"name": "muniz",
-													"display_name": "The Mind Muniz",
-													"type": "leaf",
-													"childless": true
-												},
-												{
-													"name": "stoiw",
-													"display_name": "Stoiw",
-													"type": "leaf",
-													"childless": true
-												},
-												{
-													"name": "wainskarda",
-													"display_name": "Wainskarda",
-													"type": "leaf",
-													"childless": true
-												}
-											]
+											"type": "leaf",
+											"childless": true
 										},
 										{
 											"name": "magic_armor_am",
@@ -1126,6 +1103,12 @@
 										{
 											"name": "templates_am",
 											"display_name": "Templates",
+											"type": "petal",
+											"childless": true
+										},
+										{
+											"name": "subtypes_am",
+											"display_name": "Subtypes",
 											"type": "petal",
 											"childless": true
 										}

@@ -26,7 +26,7 @@
 		'NE',// Alignment
 		'Medium',// Size
 		'undead',// Type
-		0,// Misc Initiative Mod
+		4,// Misc Initiative Mod
 		false,// Mythic Initiative
 		'darkvision 60ft.',// Senses
 		0,// Misc Perception Mod

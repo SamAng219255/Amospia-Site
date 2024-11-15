@@ -12,7 +12,7 @@
 	monsterBlockAuto(
 		'Attaithi',// name
 		false,// alt name
-		'As you watch this noble woman take off her porcelain mask, her appearance changes, revealing an alluring form though where her face should be is seen only blank featureless scar tissue with only a wicked smile.',// lore text
+		'As you watch this noble woman remove her porcelain mask, her appearance transforms, revealing an alluring form, but where her face should be lies only blank, featureless scar tissue, marked only by a wicked smile.',// lore text
 		9,// CR
 		false,// MR
 		false,// Custom XP

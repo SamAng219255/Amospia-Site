@@ -9,9 +9,6 @@
 			$startDir='../'.$startDir;
 		}
 	}
-?>
-<title>Blaze</title>
-<?php
 	monsterBlockAuto(
 		'Blaze',// name
 		false,// alt name

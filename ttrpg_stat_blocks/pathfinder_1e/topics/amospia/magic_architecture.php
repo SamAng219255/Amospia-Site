@@ -93,6 +93,15 @@
 				'0x2,3380 I',
 				'0x234 NBP',
 				'5th'
+			],
+			[
+				'Mausoleum of Eternal Rest',
+				'link' => 'items/mausoleum.php',
+				'90,000 gp',
+				'601 BP',
+				'0x1518 I',
+				'0x234 NBP',
+				'9th'
 			]
 		]
 	);

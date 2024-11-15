@@ -12,7 +12,7 @@
 	monsterBlockAuto(
 		'Kundrak',// name
 		'Lapis Lazuli Dragon',// alt name
-		'This monstrous three headed dragon stands over 50 feet tall, its aquamarine scales shine with veins of gold and an almost invisible blue-white field shimmers around it forming thousands of semi-real plates arrayed into a set of armor. Atop each of its heads sits hundreds of horns most of which shine gold and are arrayed into a crown.',// lore text
+		'This monstrous three headed dragon stands over 50 feet tall, its ultramarine scales shine with veins of gold and an almost invisible blue-white field shimmers around it forming thousands of semi-real plates arrayed into a set of armor. Atop each of its heads sits hundreds of horns most of which shine gold and are arrayed into a crown.',// lore text
 		'?? (30+)',// CR
 		10,// MR
 		13107200,// Custom XP
@@ -99,7 +99,7 @@
 				[
 					'perday' => 'at-will',
 					'list' => [
-						'dimension door ss/M/ss',
+						'dimension doorss/M/ss',
 						'gate',
 						'greater invisibility',
 						'scales of deflection'
@@ -140,11 +140,11 @@
 					1 => [
 						'perday' => 9,
 						'list' => [
-							'feather fall ss/Y/ss',
-							'magic missile ss/M/ss',
-							'protection from evil ss/Y/ss',
-							'shocking grasp ss/M/ss',
-							'true strike ss/M/ss'
+							'feather fallss/Y/ss',
+							'magic missiless/M/ss',
+							'protection from evilss/Y/ss',
+							'shocking graspss/M/ss',
+							'true strikess/M/ss'
 						]
 					],
 					2 => [
@@ -155,8 +155,8 @@
 								'name' => 'glitterdust',
 								'dc' => true
 							],
-							'mirror image ss/Y/ss',
-							'resist energy ss/M/ss',
+							'mirror imagess/Y/ss',
+							'resist energyss/M/ss',
 							'see invisibility'
 						]
 					],
@@ -164,10 +164,10 @@
 						'perday' => 8,
 						'list' => [
 							[
-								'name' => 'fireball ss/M/ss',
+								'name' => 'fireballss/M/ss',
 								'dc' => true
 							],
-							'haste ss/Y/ss',
+							'hastess/Y/ss',
 							'magic circle against evil',
 							'protection from energy',
 							'stolen light'
@@ -183,30 +183,30 @@
 								'name' => 'scrying',
 								'dc' => true
 							],
-							'stone shape ss/Y/ss'
+							'stone shapess/Y/ss'
 						]
 					],
 					5 => [
 						'perday' => 8,
 						'list' => [
 							[
-								'name' => 'cloudkill ss/Y/ss',
+								'name' => 'cloudkillss/Y/ss',
 								'dc' => true
 							],
 							[
 								'name' => 'icy prison',
 								'dc' => true
 							],
-							'sending ss/Y/ss',
-							'wall of force ss/M/ss',
-							'wall of stone ss/Y/ss'
+							'sendingss/Y/ss',
+							'wall of forcess/M/ss',
+							'wall of stoness/Y/ss'
 						]
 					],
 					6 => [
 						'perday' => 7,
 						'list' => [
 							[
-								'name' => 'chain lightning ss/M/ss',
+								'name' => 'chain lightningss/M/ss',
 								'dc' => true
 							],
 							[
@@ -215,20 +215,20 @@
 								'dc' => true
 							],
 							[
-								'name' => 'disintegrate ss/M/ss',
+								'name' => 'disintegratess/M/ss',
 								'dc' => true
 							],
-							'greater dispel magic ss/Y/ss',
+							'greater dispel magicss/Y/ss',
 							'geas'
 						]
 					],
 					7 => [
 						'perday' => 7,
 						'list' => [
-							'control weather ss/Y/ss',
+							'control weatherss/Y/ss',
 							'deflection',
 							[
-								'name' => 'finger of death ss/M/ss',
+								'name' => 'finger of deathss/M/ss',
 								'dc' => true
 							],
 							[
@@ -241,8 +241,8 @@
 					8 => [
 						'perday' => 7,
 						'list' => [
-							'dimensional lock ss/Y/ss',
-							'maze ss/Y/ss',
+							'dimensional lockss/Y/ss',
+							'mazess/Y/ss',
 							'mind blank',
 							'moment of prescience',
 							'prismatic wall'
@@ -256,12 +256,12 @@
 								'name' => 'mass icy prison',
 								'dc' => true
 							],
-							'mage\'s disjunction ss/Y/ss',
+							'mage\'s disjunctionss/Y/ss',
 							[
-								'name' => 'meteor swarm ss/M/ss',
+								'name' => 'meteor swarmss/M/ss',
 								'dc' => true
 							],
-							'time stop ss/Y/ss'
+							'time stopss/Y/ss'
 						]
 					]
 				]
@@ -293,18 +293,18 @@
 			'Elemental Spell',
 			'Empower Spell',
 			'Eschew Materials',
-			'Extra Mythic Power ss/M/ss',
-			'Extra Path Ability ss/M/ss',
+			'Extra Mythic Powerss/M/ss',
+			'Extra Path Abilityss/M/ss',
 			'Forge Ring',
 			'Hover',
-			'Improved Initiative ss/M/ss',
+			'Improved Initiativess/M/ss',
 			'Intensified Spell',
 			'Maximize Spell',
 			'Multiattack',
-			'Mythic Crafter ss/M/ss',
+			'Mythic Crafterss/M/ss',
 			'Piercing Spell',
 			'Quicken Spell',
-			'Vital Strike ss/M/ss',
+			'Vital Strikess/M/ss',
 			'Widen Spell'
 		],// Feats
 		[

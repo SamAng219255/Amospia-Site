@@ -784,6 +784,32 @@
 			"setting": "minecraft",
 			"status": "done"
 		},
+		"breeze": {
+			"display_name": "Breeze",
+			"file_name": "breeze.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			],
+			"setting": "minecraft",
+			"status": "done"
+		},
+		"bogged": {
+			"display_name": "Bogged",
+			"file_name": "bogged.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			],
+			"setting": "minecraft",
+			"status": "done"
+		},
 		"cave_spider": {
 			"display_name": "Cave Spider",
 			"file_name": "cave_spider.php",
@@ -3870,7 +3896,7 @@
 				"topics",
 				"amospia"
 			],
-			"status": "empty"
+			"status": "done"
 		},
 		"npcs_am": {
 			"display_name": "NPCs Index",
@@ -3894,7 +3920,20 @@
 				"amospia",
 				"monsters_am"
 			],
-			"status": "empty"
+			"status": "done"
+		},
+		"porcified": {
+			"display_name": "Porcified",
+			"file_name": "porcified.php",
+			"directory": "pathfinder_1e/topics/amospia/monsters/templates/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"monsters_am",
+				"templates_am"
+			],
+			"status": "done"
 		},
 		"races_am": {
 			"display_name": "Races",
@@ -4051,19 +4090,6 @@
 			"setting": "amospia",
 			"status": "done"
 		},
-		"narmen_preflood": {
-			"display_name": "Pre-Flood Narmen",
-			"file_name": "narmen_preflood.php",
-			"directory": "pathfinder_1e/topics/amospia/races/",
-			"sort_path": [
-				"pathfinder_1e",
-				"topics",
-				"amospia",
-				"races_am"
-			],
-			"setting": "amospia",
-			"status": "done"
-		},
 		"narmen_nobles": {
 			"display_name": "Narmen Nobles",
 			"file_name": "narmen_nobles.php",
@@ -4090,9 +4116,9 @@
 			"setting": "amospia",
 			"status": "done"
 		},
-		"narmen_demonic": {
-			"display_name": "Demonic Narmen",
-			"file_name": "narmen_demonic.php",
+		"narmen_enlightened": {
+			"display_name": "Enlightened Narmen",
+			"file_name": "narmen_enlightened.php",
 			"directory": "pathfinder_1e/topics/amospia/races/",
 			"sort_path": [
 				"pathfinder_1e",
@@ -4103,9 +4129,178 @@
 			"setting": "amospia",
 			"status": "done"
 		},
-		"narmen_enlightened": {
-			"display_name": "Enlightened Narmen",
-			"file_name": "narmen_enlightened.php",
+		"narmen_zovill": {
+			"display_name": "Zovill Narmen",
+			"file_name": "narmen_zovill.php",
+			"directory": "pathfinder_1e/topics/amospia/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"races_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"enmorn": {
+			"display_name": "Enmorn",
+			"file_name": "enmorn.php",
+			"directory": "pathfinder_1e/topics/amospia/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"races_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"kunthin": {
+			"display_name": "Kunthin",
+			"file_name": "kunthin.php",
+			"directory": "pathfinder_1e/topics/amospia/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"races_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"ashen": {
+			"display_name": "Ashen Brother/Sister",
+			"file_name": "ashen.php",
+			"directory": "pathfinder_1e/topics/amospia/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"races_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"ashen_alt": {
+			"display_name": "Ashen Brother/Sister, Alternate",
+			"file_name": "ashen_alt.php",
+			"directory": "pathfinder_1e/topics/amospia/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"races_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"andinar": {
+			"display_name": "Andinar",
+			"file_name": "andinar.php",
+			"directory": "pathfinder_1e/topics/amospia/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"races_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"strong_tusk": {
+			"display_name": "Strong-Tusk Narman",
+			"file_name": "strong_tusk.php",
+			"directory": "pathfinder_1e/topics/amospia/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"races_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"narman_anvil": {
+			"display_name": "Anvil Narman",
+			"file_name": "narman_anvil.php",
+			"directory": "pathfinder_1e/topics/amospia/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"races_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"narmen_plains": {
+			"display_name": "Plains Narman",
+			"file_name": "narmen_plains.php",
+			"directory": "pathfinder_1e/topics/amospia/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"races_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"narapau": {
+			"display_name": "Narapau",
+			"file_name": "narapau.php",
+			"directory": "pathfinder_1e/topics/amospia/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"races_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"half_nar": {
+			"display_name": "Half-Nar",
+			"file_name": "half_nar.php",
+			"directory": "pathfinder_1e/topics/amospia/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"races_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"halfnar": {
+			"display_name": "Halfnar",
+			"file_name": "halfnar.php",
+			"directory": "pathfinder_1e/topics/amospia/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"races_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"knarm": {
+			"display_name": "Knarm",
+			"file_name": "knarm.php",
+			"directory": "pathfinder_1e/topics/amospia/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"races_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"enspelled": {
+			"display_name": "Enspelled",
+			"file_name": "enspelled.php",
 			"directory": "pathfinder_1e/topics/amospia/races/",
 			"sort_path": [
 				"pathfinder_1e",
@@ -4324,6 +4519,32 @@
 			"setting": "amospia",
 			"status": "done"
 		},
+		"mausoleum_of_rest": {
+			"display_name": "Mausoleum of Eternal Rest",
+			"file_name": "mausoleum.php",
+			"directory": "pathfinder_1e/topics/amospia/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"magic_items_am",
+				"magic_architecture"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"artifacts_am": {
+			"display_name": "Artifacts",
+			"file_name": "artifact_index.php",
+			"directory": "pathfinder_1e/topics/amospia/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"magic_items_am"
+			],
+			"status": "done"
+		},
 		"arkon": {
 			"display_name": "The Arkon",
 			"file_name": "arkon.php",
@@ -4478,6 +4699,71 @@
 			"display_name": "Walking Aegis",
 			"file_name": "walking_aegis.php",
 			"directory": "pathfinder_1e/topics/amospia/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"monsters_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"narmen_saints": {
+			"display_name": "Narmen Saints",
+			"file_name": "narman_saint.php",
+			"directory": "pathfinder_1e/topics/amospia/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"monsters_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"narmen_preflood": {
+			"display_name": "Pre-Flood Narmen",
+			"file_name": "narman_preflood.php",
+			"directory": "pathfinder_1e/topics/amospia/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"monsters_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"narmen_demonic": {
+			"display_name": "Demonic Narmen",
+			"file_name": "narman_demonic.php",
+			"directory": "pathfinder_1e/topics/amospia/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"monsters_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"void_demon": {
+			"display_name": "Void Demon",
+			"file_name": "void_demon.php",
+			"directory": "pathfinder_1e/topics/amospia/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"monsters_am"
+			],
+			"setting": "amospia",
+			"status": "done"
+		},
+		"subtypes_am": {
+			"display_name": "Subtypes",
+			"file_name": "subtypes.php",
+			"directory": "pathfinder_1e/topics/amospia/",
 			"sort_path": [
 				"pathfinder_1e",
 				"topics",
@@ -8409,6 +8695,65 @@
 				"races_wc"
 			],
 			"status": "done"
+		},
+		"nelf_wc": {
+			"display_name": "Night Elf",
+			"file_name": "night_elf.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"gnome_wc": {
+			"display_name": "Gnome",
+			"file_name": "gnome.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"dragon_eater": {
+			"display_name": "Dragon Eater",
+			"file_name": "dragon_eater.php",
+			"directory": "pathfinder_1e/classes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"classes"
+			],
+			"status": "wip",
+			"note": "Still in the process of entering dragon talents and draconic sources."
+		},
+		"dragon_eater_talents": {
+			"display_name": "Dragon Talents",
+			"file_name": "dragon_eater_talents.php",
+			"directory": "pathfinder_1e/classes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"classes",
+				"dragon_eater"
+			],
+			"status": "wip",
+			"note": "Still in the process of entering dragon talents and draconic sources."
+		},
+		"dragon_eater_sources": {
+			"display_name": "Draconic Sources",
+			"file_name": "dragon_eater_sources.php",
+			"directory": "pathfinder_1e/classes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"classes",
+				"dragon_eater"
+			],
+			"status": "wip",
+			"note": "Still in the process of entering dragon talents and draconic sources."
 		}
 	}
 }

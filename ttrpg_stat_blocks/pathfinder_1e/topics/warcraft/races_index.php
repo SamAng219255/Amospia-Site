@@ -52,9 +52,9 @@
 	<dt><a href="races/virmen.php">Murloc</a> (9 RP)</dt>
 	<dd>WIP</dd>
 	<dd>WIP</dd>
-	<dt><a href="races/virmen.php">Night Elf</a> (9 RP)</dt>
-	<dd>WIP</dd>
-	<dd>WIP</dd>
+	<dt><a href="races/night_elf.php">Night Elf</a> (9 RP)</dt>
+	<dd>-2 Str, +2 Dex, +2 Wis</dd>
+	<dd>Night elves are an ancient and mystical race deeply intertwined with nature and its forces.</dd>
 	<dt><a href="races/virmen.php">Sethrak</a> (9 RP)</dt>
 	<dd>WIP</dd>
 	<dd>WIP</dd>
@@ -67,9 +67,9 @@
 	<dt><a href="races/virmen.php">Fungarian</a> (10 RP)</dt>
 	<dd>WIP</dd>
 	<dd>WIP</dd>
-	<dt><a href="races/virmen.php">Gnome</a> (10 RP)</dt>
-	<dd>WIP</dd>
-	<dd>WIP</dd>
+	<dt><a href="races/gnome.php">Gnome</a> (10 RP)</dt>
+	<dd>-2 Str, +2 Dex, +2 Int</dd>
+	<dd>Gnomes are brilliant and eccentric inventors, known for their tiny stature and exceptional engineering prowess.</dd>
 	<dt><a href="races/virmen.php">Half-Human/Elf</a> (10 RP)</dt>
 	<dd>WIP</dd>
 	<dd>WIP</dd>
@@ -103,12 +103,12 @@
 </dl>
 <h3>11-20 Race Points</h3>
 <dl>
-	<dt><a href="races/virmen.php">Draenei</a> (11 RP)</dt>
-	<dd>WIP</dd>
-	<dd>WIP</dd>
+	<dt><a href="races/draenei.php">Draenei</a> (11 RP)</dt>
+	<dd>+4 Str, -2 Dex, +2 Int, +2 Wis, +2 Cha</dd>
+	<dd>Draenei are towering, blue-skinned beings with a regal bearing and distinctive features like hooves, horns, and glowing eyes, reflecting their noble and mystical heritage. They possess a powerful connection to the Light, granting them exceptional healing abilities and a deep-seated commitment to battling dark forces.</dd>
 	<dt><a href="races/dwarf.php">Dwarf</a> (11 RP)</dt>
 	<dd>+2 Str, -2 Dex, +2 Con</dd>
-	<dd>WIP</dd>
+	<dd>Dwarves are a stalwart and adventurous race known for their enduring strength and fierce battle skills.</dd>
 	<dt><a href="races/virmen.php">Faerie</a> (11 RP)</dt>
 	<dd>WIP</dd>
 	<dd>WIP</dd>

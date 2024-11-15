@@ -85,6 +85,35 @@
 		false,
 		[
 			[
+				'title' => 'Bogged',
+				'spaced' => true,
+				'texts' => quick_array([
+					'Bogged are partially mummified and decaying animated corpses found in swamps and bogs.',
+					'bb/Challenge Rating/bb: The CR of a bogged is the same as a typical skeleton plus one.',
+					'bb/Hit Dice/bb: Preserve HD from class levels, change racial HD to d8s, and increase the number of racial hit dice by 1. Bogged use their Charisma modifiers to determine bonus hit points (instead of Constitution).',
+					'bb/Weaknesses/bb: Bogged retain all of the weaknesses of skeletons but also gain bogged.',
+					'ii/Bogged/ii (Ex): A bogged is covered with fungus, algae, moss, mud, and other swamp detritus that slows its movements. They are always considered staggered.',
+					'bb/Special Attacks/bb: Strays retain all special attacks possessed by typical skeletons but they also gain the following poison on all melee and ranged attacks they possess.',
+					'ii/Noxious Muck/ii injury; save Fort DC 10 + ½ the bogged\'s number of hit dice + their Charisma modifier, frequency 1/round for 6 rounds, effect 1d4 damage and 1d3 Dex damage, cure 2 consecutive saves',
+					'bb/Abilities/bb: A bogged\'s Dexterity increases by +2. It has no Constitution or Intelligence score. A bogged\'s charisma score decreases by 4 and they have a minimum score of 8. If a bogged possesses class levels requiring an intelligence or constitution score, use the bogged\'s charisma score and increase it to the associated score of the base creature if it is greater, before reducing their Charisma.'
+				])
+			],
+			[
+				'title' => 'Stray',
+				'spaced' => true,
+				'texts' => quick_array([
+					'Native to icy wastelands, these skeletons are infused with the land\'s chill.',
+					'bb/Challenge Rating/bb: The CR of a Stray is the same as a typical skeleton plus one.',
+					'bb/Type/bb: The creature\'s type changes to undead and it gains the cold subtype. It retains any subtype except for the fire subtype, alignment subtypes (such as good), and subtypes that indicate kind. It does not gain the augmented subtype.',
+					'bb/Hit Dice/bb: Preserve HD from class levels, change racial HD to d8s, and inrease the number of racial hit dice by 1. Strays use their Charisma modifiers to determine bonus hit points (instead of Constitution).',
+					'bb/Defensive Abilities/bb: Strays retain all of the defensive abilities of skeletons but also gain immunity to cold.',
+					'bb/Weaknesses/bb: Strays retain all of the weaknesses of skeletons but also gain vulnerability to fire.',
+					'bb/Special Attacks/bb: Strays retain all special attacks possessed by typical skeletons but they also gain the freezing strike and icy missile special attacks.',
+					'ii/Freezing Strike/ii (Su): All melee attacks by the stray deal an additional 1d4 points of cold damage. If the target takes at least 1 point of cold damage from the Stray\'s melee attack it is subjected to the effects of the ii/icy prison/ii spell with a DC equal to 10 plus the stray\'s new CR.',
+					'ii/Icy Missile/ii (Su): All ranged attacks by the stray deal an additional 1d6 points of cold damage. If the target takes at least 1 point of cold damage from the Stray\'s ranged attack it is subjected to the effects of the ii/slow/ii spell with a DC equal to 10 plus the stray\'s new CR.'
+				])
+			],
+			[
 				'title' => 'Wither Skeleton',
 				'spaced' => true,
 				'texts' => quick_array([
@@ -101,21 +130,6 @@
 					'bb/Skills/bb: A wither skeleton has a number of skill ranks from racial hit dice equal to 4 + its intelligence modifier. It generally spends a number of skill ranks in Knowledge (religion) equal to its number of hit dice but otherwise retains as many skill ranks from racial hit dice as possible in skills they are in on the base creature. Extra skill ranks can be spent as normal.',
 					'bb/Feats/bb: A wither skeleton retains all feats possessed by the base creature and gains Improved Initiative as a bonus feat.',
 					'bb/Languages/bb: A wither skeleton retains all its languages and learns Necril.'
-				])
-			],
-			[
-				'title' => 'Stray',
-				'spaced' => true,
-				'texts' => quick_array([
-					'Native to icy wastelands, these skeletons are infused with the land\'s chill.',
-					'bb/Challenge Rating/bb: The CR of a Stray is the same as a typical skeleton plus one.',
-					'bb/Type/bb: The creature\'s type changes to undead and it gains the cold subtype. It retains any subtype except for the fire subtype, alignment subtypes (such as good), and subtypes that indicate kind. It does not gain the augmented subtype.',
-					'bb/Hit Dice/bb: Preserve HD from class levels, change racial HD to d8s, and inrease the number of racial hit dice by 1. Strays use their Charisma modifiers to determine bonus hit points (instead of Constitution).',
-					'bb/Defensive Abilities/bb: Strays retain all of the defensive abilities of skeletons but also gain immunity to cold.',
-					'bb/Weaknesses/bb: Strays retain all of the weaknesses of skeletons but also gain vulnerability to fire.',
-					'bb/Special Attacks/bb: Strays retain all special attacks possessed by typical skeletons but they also gain the freezing strike and icy missile special attacks.',
-					'ii/Freezing Strike/ii (Su): All melee attacks by the stray deal an additional 1d4 points of cold damage. If the target takes at least 1 point of cold damage from the Stray\'s melee attack it is subjected to the effects of the ii/icy prison/ii spell with a DC equal to 10 plus the stray\'s new CR.',
-					'ii/Icy Missile/ii (Su): All ranged attacks by the stray deal an additional 1d6 points of cold damage. If the target takes at least 1 point of cold damage from the Stray\'s ranged attack it is subjected to the effects of the ii/slow/ii spell with a DC equal to 10 plus the stray\'s new CR.'
 				])
 			]
 		]

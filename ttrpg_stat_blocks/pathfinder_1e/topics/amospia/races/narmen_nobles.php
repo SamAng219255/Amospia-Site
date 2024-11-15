@@ -11,7 +11,7 @@
 	}
 	raceBlockAuto(
 		"Narman Nobles",// Name
-		41,// Race Points
+		42,// Race Points
 		"Through a combination of natural selection and arcane enhancements, those descendant from the upper echelons of Narmen society generally possess a greater affinity for the arcane arts.
 		bb/Table: Random Starting Ages/bb".sTable(
 			[
@@ -93,7 +93,7 @@
 			"bb/Medium/bb: Narmen nobles are Medium creatures and have no bonuses or penalties due to their size.",
 			"bb/Monstrous Humanoid/bb: Narmen nobles are monstrous humanoids.",
 			"bb/Normal Speed/bb: Narmen nobles have a base speed of 30 feet and a swim speed of 30 feet.",
-			"bb/Hold Breath/bb: Narmen nobles can hold their breath a number of minutes equal to 2 times their Constitution score.",
+			"bb/Extra Long Breath/bb: Narmen are used to spending long periods of time underwater despite breathing air and are thus magically adapted to not only hold their breath for exceptionally long periods of time but also are able to speak while underwater. Narmen are able to hold their breath for 15 rounds for each point of constitution they possess before risking drowning or suffocation. They can also cast spells with verbal components, say command words, and speak while underwater without issue. ",
 			"bb/Racial Immunities/bb: Narmen nobles are immune to magic sleep effects and gain +2 vs. enchantment spells and effects.",
 			"bb/Spell Resistance/bb: Narmen nobles have spell resistance equal to 11 plus their level.",
 			"bb/Lightbringer/bb: Narmen nobles are immune to light based blind and dazzle and cast spells with the light descriptor at +2 caster levels.",
@@ -103,6 +103,54 @@
 			"bb/Languages/bb: Narmen nobles begin play speaking Narman and Common. Narmen nobles with high Intelligence scores can choose from the following languages: Abyssal, Aquan, Aztec, Celestial, Donovian, Elven, Idgyptian, Infernal, Mayan, Undercommon, and Vandalusian."
 		],// Racial Traits
 		false// Subraces
+	);
+	block(
+		'Alial Object',
+		'alial-object',
+		[
+			'Alial races have (generally suppressed) magical energy that infuses a specific part of their body. Though this energy may be present in the object before the creature\'s death, alial objects are non-magical until after the creature\'s death and only acquire their abilities if they are still part of the creature when they die. This body part must be hard like bone or a gemstone. This object can otherwise take many different forms.',
+			'Alial objects contain a significantly strong impression of the owner\'s identity. Whether or not the creature is deceased, alial objects can be used as a focus for any spell that requires identifying a creature, such as scrying, to perfectly identify the owner. The owner also receives no saves against such spells.',
+			'Alial objects can also be incorporated into specific type of magic items, granting bonuses but potentially changing their effect. Alial objects do not impart their weapon properties or spell modifiers unless stated otherwise or incorporated into an item that uses them.'
+		],
+		true,
+		[
+			[
+				'title' => 'Description',
+				'spaced' => true,
+				'texts' => quick_array([
+					'A narman noble\'s alial object takes the form of the tusk which protrudes from their mouth called an alidens. When removed, this tusk can be used as a one-handed melee weapon that deals 1d6 points of piercing damage and requires exotic weapon proficiency. The tusk receives its weapon properties as well, though an alial object only has the creature\'s weapon properties if it was part of the creature upon their death.',
+					'bb/Weapon Properties/bb ii/+1 Bane-Evil-Outsiders/ii',
+					'bb/Spell Modifiers/bb '.sTable(
+						[
+							'CL/DC Modifier',
+							'Spells'
+						],
+						[
+							[
+								'+2',
+								'light spells'
+							],
+							[
+								'+1',
+								'good spells'
+							],
+							[
+								'-1',
+								'evil spells'
+							],
+							[
+								'-2',
+								'darkness spells'
+							]
+						],
+						true,
+						false,
+						false,
+						true
+					)
+				])
+			]
+		]
 	);
 ?>
 <a target="_blank" href="https://www.worldanvil.com/w/amospia-pharaohcrab/a/narman-nobles-species"><p>World Anvil</p></a>

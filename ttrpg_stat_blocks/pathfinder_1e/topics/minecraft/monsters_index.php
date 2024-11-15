@@ -44,6 +44,20 @@
 				'any (The Nether)'
 			],
 			[
+				'Bogged',
+				'link' => 'monsters/bogged.php',
+				'4',
+				'undead',
+				'swamps'
+			],
+			[
+				'Breeze',
+				'link' => 'monsters/breeze.php',
+				'7',
+				'outsider',
+				'any'
+			],
+			[
 				'Spider, Cave',
 				'link' => 'monsters/cave_spider.php',
 				'4',

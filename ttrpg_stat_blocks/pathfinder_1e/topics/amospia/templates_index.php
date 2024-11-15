@@ -30,11 +30,11 @@
 		],
 		[
 			[
-				'',
-				'link' => 'monsters/templates/',
-				'',
-				'',
-				''
+				'Porcified',
+				'link' => 'monsters/templates/porcified.php',
+				'+0',
+				'False',
+				'False'
 			]
 		]
 	);

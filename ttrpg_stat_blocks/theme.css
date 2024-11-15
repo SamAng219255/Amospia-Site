@@ -4,7 +4,7 @@ body {
 	background-color: #060a08;
 	color: #fff;
 	font-family: helvetica;
-	line-height: 1.333;
+	line-height: 1.3334;
 	letter-spacing: 0.03125em;
 	-webkit-transition: background-color .4s, color .4s;
 	transition: background-color .4s, color .4s;
@@ -53,9 +53,15 @@ ul {
 ul>li>ul {
 	padding-left: 1em;
 }
-h1, .h1, .block-section-title.section-title-1 {
+h1, .h1, .block-title.h1, .block-section-title.section-title-1 {
 	font-size: 2em;
 	font-weight: bold;
+}
+.block-title.h3, .block-title.h4, .block-title.h5, .block-title.h6 {
+	font-size: 1em;
+}
+.block-title.h5, .block-title.h6 {
+	font-weight: normal;
 }
 span.enlarged {
 	font-size: 1.25em;

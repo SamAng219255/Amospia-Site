@@ -60,7 +60,7 @@
 		if(preg_match_all('/as\/(.+?)\|(.+?)\|/', $str, $matches)) {
 			foreach ($matches[1] as $ind=>$match) {
 				$entry=$pages['entries'][$match];
-				$str=preg_replace('/as\/(.+?)\|(.+?)\|/', '<a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'#block-'.str_replace(' ','-',$matches[2][$ind]).'" target="_blank">', $str, 1);
+				$str=preg_replace('/as\/(.+?)\|(.+?)\|/', '<a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'#section-'.str_replace(' ','-',$matches[2][$ind]).'" target="_blank">', $str, 1);
 				$str=preg_replace('/ ?\/as/', '</a>', $str, 1);
 			}
 		}
@@ -68,7 +68,7 @@
 		if(preg_match_all('/ab\/(.+?)\|(.+?)\|/', $str, $matches)) {
 			foreach ($matches[1] as $ind=>$match) {
 				$entry=$pages['entries'][$match];
-				$str=preg_replace('/ab\/(.+?)\|(.+?)\|/', '<a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'#section-'.str_replace(' ','-',$matches[2][$ind]).'" target="_blank">', $str, 1);
+				$str=preg_replace('/ab\/(.+?)\|(.+?)\|/', '<a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'#block-'.str_replace(' ','-',$matches[2][$ind]).'" target="_blank">', $str, 1);
 				$str=preg_replace('/ ?\/ab/', '</a>', $str, 1);
 			}
 		}
@@ -89,10 +89,10 @@
 		$str=preg_replace('/ii\/ ?/', '<i>', $str);
 		$str=preg_replace('/ ?\/uu/', '</u>', $str);
 		$str=preg_replace('/uu\/ ?/', '<u>', $str);
-		$str=preg_replace('/ ?\/ss/', '</sup>', $str);
-		$str=preg_replace('/ss\/ ?/', '<sup>', $str);
-		$str=preg_replace('/ ?\/__/', '</sub>', $str);
-		$str=preg_replace('/__\/ ?/', '<sub>', $str);
+		$str=preg_replace('/ ?\/ss/', '</sup>&#x200B;', $str);
+		$str=preg_replace('/ss\/ ?/', '&#x200B;<sup>', $str);
+		$str=preg_replace('/ ?\/__/', '</sub>&#x200B;', $str);
+		$str=preg_replace('/__\/ ?/', '&#x200B;<sub>', $str);
 		$str=preg_replace('/\/fa\//', '<img src="https://2e.aonprd.com/Images/Actions/FreeAction.png" alt="Free Action" class="action-img">', $str);
 		$str=preg_replace('/\/ra\//', '<img src="https://2e.aonprd.com/Images/Actions/Reaction.png" alt="Rection" class="action-img">', $str);
 		$str=preg_replace('/\/1a\//', '<img src="https://2e.aonprd.com/Images/Actions/OneAction.png" alt="One Action" class="action-img">', $str);
@@ -212,8 +212,9 @@
 		return quick_array($arr);
 	}
 	function block($name='', $type='', $texts=[], $spaced=false, $sections=[]) {
-		echo '<div class="block '.$type.'" id="block-'.str_replace(' ', '-', $name).'">';
-		echo '<div class="block-title">'.$name.'<a href="#" class="goto-top">Back to Top</a></div>';
+		$name_str=is_string($name) ? $name : $name['text'];
+		echo '<div class="block '.$type.'" id="block-'.str_replace(' ', '-', $name_str).'">';
+		echo '<div class="block-title'.(!is_string($name) && isset($name['titleLevel']) ? ' h'.$name['titleLevel'] : '').'">'.$name_str.'<a href="#" class="goto-top">Back to Top</a></div>';
 		$textCount=count($texts);
 		for($i=0; $i<$textCount; $i++) {
 			$lineClasses='';
@@ -581,7 +582,7 @@
 			array_push($topInfo, "<b>Price</b> {$price}");
 		block($name, 'item', $topInfo, false, $sections);
 	}
-	function magicBuildingBlockAuto($name, $cl, $price, $description, $isArtifact, $extra) {
+	function magicBuildingBlockAuto($name, $cl, $price, $description, $isArtifact, $extra, $school='Universal') {
 		global $dashes;
 		$priceStr='—';
 		if(!in_array($price,$dashes)) {
@@ -597,7 +598,7 @@
 		}
 		magicBuildingBlock(
 			$name,
-			(is_string($cl)?'Universal':($cl<6 ? "Faint" : ($cl<12 ? "Moderate" : ($cl<21 ? "Strong" : "Overwhelming"))).' Universal'),
+			(is_string($cl)?$cl:($cl<6 ? "Faint" : ($cl<12 ? "Moderate" : ($cl<21 ? "Strong" : "Overwhelming"))).' '.$school),
 			in_array($cl,$dashes)?'—':(is_string($cl)?$cl:$cl.ordinalSuffix($cl)),
 			$priceStr,
 			quick_array($description),
@@ -1383,8 +1384,26 @@
 		else {
 			if(count($skills)>0) {
 				$skillStr='bb/Skills/bb ';
+				$skillExtras='';
 				$first=true;
-				foreach ($skills as $skill) {
+				foreach ($skills as $key=>$skill) {
+					if(is_string($key)) {
+						$skillExtras.='; ';
+						if($key==='racial') {
+							$skillExtras.='bb/Racial Bonuses/bb ';
+							$first=true;
+							foreach ($skill as $racialSkill=>$bonus) {
+								if($first)
+									$first=false;
+								else
+									$skillExtras.=', ';
+								$skillExtras.=sprintf('%s %+d',$racialSkill,$bonus);
+							}
+							continue;
+						}
+						$skillExtras.='bb/'.$key.'/bb '.$skill;
+						continue;
+					}
 					if($first) {
 						$first=false;
 					}
@@ -1423,7 +1442,7 @@
 					if(isset($skill['note']))
 						$skillStr.=$skill['note'];
 				}
-				array_push($sections[2]['texts'], quick_format($skillStr));
+				array_push($sections[2]['texts'], quick_format($skillStr.$skillExtras));
 			}
 		}
 		if(is_string($lang)) {
@@ -1527,7 +1546,7 @@
 		$vitals=[
 			'bb/XP/bb '.number_format($xp),
 			($align?$align.' ':'')."{$size} {$type}",
-			sprintf('bb/Init/bb %+d',$statMods['dex']+$initMod).($mythInit?' ss/M/ss':'').($senses!=''?'; bb/Senses/bb '.$senses:'').sprintf('; bb/Perception/bb %+d',$perc)
+			sprintf('bb/Init/bb %+d',$statMods['dex']+$initMod).($mythInit?'&#x200B;ss/M/ss':'').($senses!=''?'; bb/Senses/bb '.$senses:'').sprintf('; bb/Perception/bb %+d',$perc)
 		];
 		if($stance) {
 			array_splice($vitals, 2, 0, $stance);
@@ -1994,6 +2013,30 @@
 				echo $text.'</p>';
 			}
 		}
+	}
+	function dragonTalent($name='', $desc='', $prereq=false) {
+		$texts = '';
+		if($prereq !== false) {
+			$texts = quick_format('bb/Prerequisites/bb '.$prereq);
+		}
+		block(
+			[
+				'text' => $name,
+				'titleLevel' => 4
+			],
+			'dragon_talent',
+			[
+				$texts
+			],
+			true,
+			[
+				[
+					'title' => 'Description',
+					'spaced' => true,
+					'texts' => quick_array($desc)
+				]
+			]
+		);
 	}
 	function item2eBlock($name, $level=false, $rarity="Common", $traits=[], $price=false, $hands=false, $usage=false, $bulk=0, $activate=false, $description=[], $variations=[]) {
 		$compTraits=quick_format($traits);
@@ -2557,10 +2600,10 @@
 		$treeCounts=[count($treePath[$treeDepth])];
 		$treeIndicies=[0];
 
-		$sanity=100;
+		$sanity=1000;
 		while($treeDepth>=0) {
 			if($sanity<1) {
-				echo '<p>Loop has gone insane after 100 iterations.</p>';
+				echo '<p>Loop has gone insane after 1000 iterations.</p>';
 				break;
 			}
 			if($treeIndicies[$treeDepth]<$treeCounts[$treeDepth]) {
@@ -2624,10 +2667,10 @@
 		$price['gp']=round($price['IDec']*16/0.96);
 	}
 	function prices_BP2gp(&$price) {
-		$price['gp']=$price['BP']*2000;
+		$price['gp']=$price['BP']*4000;
 	}
 	function prices_gp2BP(&$price) {
-		$price['BP']=round($price['gp']/2000);
+		$price['BP']=round($price['gp']/4000);
 	}
 	function prices_NBPDec2NBP(&$price) {
 		$price['NBP']='0x'.strtoupper(dechex($price['NBPDec']));

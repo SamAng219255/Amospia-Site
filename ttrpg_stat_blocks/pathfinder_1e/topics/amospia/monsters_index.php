@@ -49,6 +49,34 @@
 				'20',
 				'Construct',
 				'Any' 
+			],
+			[
+				'Narman Saint',
+				'link' => 'monsters/narman_saint.php',
+				'12',
+				'Outsider',
+				'Any' 
+			],
+			[
+				'Narman, Demonic',
+				'link' => 'monsters/narman_demonic.php',
+				'12',
+				'Outsider',
+				'Any' 
+			],
+			[
+				'Void Demon',
+				'link' => 'monsters/void_demon.php',
+				'11',
+				'Outsider',
+				'Any' 
+			],
+			[
+				'Narman, Preflood',
+				'link' => 'monsters/narman_preflood.php',
+				'18',
+				'Humanoid',
+				'Any' 
 			]
 		]
 	);

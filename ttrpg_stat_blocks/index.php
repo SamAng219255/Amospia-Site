@@ -1,5 +1,5 @@
 <?php require 'pageStart.php'; ?>
-<title>Mordan's Vault</title>
+<title>Mordan's Tower</title>
 <?php 
 	require 'blog.php';
 	//echo phpversion();

@@ -33,7 +33,7 @@
 			'bb/Will to Survive/bb: Once per day, humans can remove the staggered or stunned conditions affecting them as a swift action.',
 			'bb/Perception/bb: Humans gain a +2 racial bonus to Perception checks.',
 			'bb/Sword & Mace Specialization/bb: Humans are proficient with greatswords and heavy maces.',
-			'bb/Languages/bb: Humans begin play speaking Common. Humans with high Intelligence scores can choose from dwarven, gnomish, darnassian, and draenei.'
+			'bb/Languages/bb: Humans begin play speaking Common. Humans with high Intelligence scores can choose from Darnassian, Draenei, Dwarven, Gnomish, Thalassian, Orcish, and Pandaren.'
 		],
 		false,
 		[
