@@ -30,7 +30,7 @@
 			'bb/Humanoid/bb: Dwarves are humanoid creatures with the dwarf subtype.',
 			'bb/Medium/bb: Dwarves are Medium creatures and have no bonuses or penalties due to their size.',
 			'bb/Slow and Steady/bb: Dwarves have a base speed of 20 feet and speed is never modified by armor or encumbrance.',
-			'bb/Darkvision/bb: Dwaves can see perfectly in darkness up to 60 feet away though they can only see in black and white in the dark.',
+			'bb/Darkvision/bb: Dwarves can see perfectly in darkness up to 60 feet away though they can only see in black and white in the dark.',
 			'bb/Stoneform/bb: Dwarves gain a +2 racial bonus on saving throws against poison, spells, and spell-like abilities.',
 			'bb/Might of the Mountain/bb: Dwarves deal an additional amount of damage equal to half of their Strength modifier on a successful critical hit with a melee attack.',
 			'bb/Will to Survive/bb: Once per day, humans can remove the staggered or stunned conditions affecting them as a swift action.',

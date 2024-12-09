@@ -1179,6 +1179,76 @@
 							"childless": false,
 							"nodes": [
 								{
+									"name": "classes_wc",
+									"display_name": "Classes",
+									"type": "branch",
+									"childless": false,
+									"nodes": [
+										{
+											"name": "death_knight",
+											"display_name": "Death Knight",
+											"petal_display_name": "Death Knight Class Details",
+											"type": "flower",
+											"childless": false,
+											"nodes": [
+											]
+										},
+										{
+											"name": "demon_hunter",
+											"display_name": "Demon Hunter",
+											"petal_display_name": "Demon Hunter Class Details",
+											"type": "flower",
+											"childless": false,
+											"nodes": [
+											]
+										},
+										{
+											"name": "druid_wc",
+											"display_name": "Druid",
+											"type": "branch",
+											"childless": false,
+											"nodes": [
+												{
+													"name": "druid_archetypes_wc",
+													"display_name": "Archetypes",
+													"type": "leaf",
+													"childless": true
+												}
+											]
+										},
+										{
+											"name": "evoker_wc",
+											"display_name": "Draconic Evoker",
+											"petal_display_name": "Draconic Evoker Class Details",
+											"type": "flower",
+											"childless": false,
+											"nodes": [
+												{
+													"name": "evoker_flights",
+													"display_name": "Dragon Flights",
+													"type": "petal",
+													"childless": true
+												},
+												{
+													"name": "evoker_archetypes",
+													"display_name": "Archetypes",
+													"type": "petal",
+													"childless": true
+												}
+											]
+										},
+										{
+											"name": "shaman_wc",
+											"display_name": "Totem Shaman",
+											"petal_display_name": "Totem Shaman Class Details",
+											"type": "flower",
+											"childless": false,
+											"nodes": [
+											]
+										}
+									]
+								},
+								{
 									"name": "races_wc",
 									"display_name": "Races",
 									"type": "leaf",

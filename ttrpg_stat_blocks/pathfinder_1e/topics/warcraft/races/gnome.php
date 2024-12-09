@@ -11,7 +11,7 @@
 	}
 	raceBlockAuto(
 		'Gnome',
-		10,
+		9,
 		'',
 		'',
 		'',

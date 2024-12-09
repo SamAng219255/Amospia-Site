@@ -211,9 +211,9 @@
 		}
 		return quick_array($arr);
 	}
-	function block($name='', $type='', $texts=[], $spaced=false, $sections=[]) {
+	function block($name='', $type='', $texts=[], $spaced=false, $sections=[], $isLayered=false) {
 		$name_str=is_string($name) ? $name : $name['text'];
-		echo '<div class="block '.$type.'" id="block-'.str_replace(' ', '-', $name_str).'">';
+		echo '<div class="block '.$type.($isLayered?' layered-block':'').'" id="block-'.str_replace(' ', '-', $name_str).'">';
 		echo '<div class="block-title'.(!is_string($name) && isset($name['titleLevel']) ? ' h'.$name['titleLevel'] : '').'">'.$name_str.'<a href="#" class="goto-top">Back to Top</a></div>';
 		$textCount=count($texts);
 		for($i=0; $i<$textCount; $i++) {
@@ -792,7 +792,7 @@
 	function raceBlockAutoSections($name, $racePoints, $loreDesc, $physDesc, $society, $relations, $alignRelig, $adventurers, $maleNames, $femaleNames, $stats, $statDesc, $racialTraits, $traitsSections, $subraces=false) {
 		raceBlockAuto($name, $racePoints, $loreDesc, $physDesc, $society, $relations, $alignRelig, $adventurers, $maleNames, $femaleNames, $stats, $statDesc, $racialTraits, $subraces, $traitsSections);
 	}
-	function feat($name, $desc, $benefit, $prereq=false, $special=false) {
+	function feat($name, $desc, $benefit, $prereq=false, $special=false, $layered=false) {
 		$text=$desc;
 		if($prereq) {
 			$text.="/nn/Prerequisites: {$prereq}";
@@ -805,14 +805,16 @@
 			$name,
 			"feat",
 			quick_array($text),
-			true
+			true,
+			[],
+			$layered
 		);
 	}
 	function racialFeats($race, $feats) {
 		echo '<div class="block racial-feats" id="block-Racial-Feats">';
 		echo '<div class="block-title">Racial Feats</div><div class="interior">';
 		foreach ($feats as $feat) {
-			feat($feat['name'],$feat['desc'],$feat['benefit'],$race.', '.$feat['prereq'],$feat['special']);
+			feat($feat['name'],$feat['desc'],$feat['benefit'],$race.', '.$feat['prereq'],$feat['special'], true);
 		}
 		echo '</div></div>';
 	}

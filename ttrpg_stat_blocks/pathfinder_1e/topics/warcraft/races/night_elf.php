@@ -44,7 +44,8 @@
 				'Alternate Racial Traits',
 				[
 					'bb/Child of Night/bb',
-					'/mm/You gain the following supernatural ability: Once per day, you can change its appearance to look as if you were little more than a 4-foot-tall area of shadow. Your physical form still exists and you are not incorporeal—only your appearance changes. This racial trait works like invisibility, except the effect only lasts 1 round per level (maximum 5 rounds).'
+					'/mm/You gain the following supernatural ability: Once per day, you can change its appearance to look as if you were little more than a 4-foot-tall area of shadow. Your physical form still exists and you are not incorporeal—only your appearance changes. This racial trait works like invisibility, except the effect only lasts 1 round per level (maximum 5 rounds).',
+					'/mm/This replaces elusiveness and quickness.'
 				]
 			]
 		]

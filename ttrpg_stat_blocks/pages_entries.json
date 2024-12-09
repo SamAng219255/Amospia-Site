@@ -8672,9 +8672,357 @@
 			"status": "wip",
 			"note": "All presented races have been written but not all have been added."
 		},
+		"gnoll_wc": {
+			"display_name": "Gnoll",
+			"file_name": "gnoll.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"kobold_wc": {
+			"display_name": "Kobold",
+			"file_name": "kobold.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"arakkoa_wc": {
+			"display_name": "Arakkoa",
+			"file_name": "arakkoa.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"drogbar_wc": {
+			"display_name": "Drogbar",
+			"file_name": "drogbar.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"goblin_wc": {
+			"display_name": "Goblin",
+			"file_name": "goblin.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"grell_wc": {
+			"display_name": "Grell",
+			"file_name": "grell.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"tuskarr_wc": {
+			"display_name": "Tuskarr",
+			"file_name": "tuskarr.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"virmen_wc": {
+			"display_name": "Virmen",
+			"file_name": "virmen.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"belf_wc": {
+			"display_name": "Blood Elf",
+			"file_name": "belf.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"furbolg_wc": {
+			"display_name": "Furbolg",
+			"file_name": "furbolg.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"helf_wc": {
+			"display_name": "High Elf",
+			"file_name": "helf.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
 		"human_wc": {
 			"display_name": "Human",
 			"file_name": "human.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"murloc_wc": {
+			"display_name": "Murloc",
+			"file_name": "murloc.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"nelf_wc": {
+			"display_name": "Night Elf",
+			"file_name": "nelf.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"sethrak_wc": {
+			"display_name": "Sethrak",
+			"file_name": "sethrak.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"sylvar_wc": {
+			"display_name": "Sylvar",
+			"file_name": "sylvar.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"tauren_wc": {
+			"display_name": "Tauren",
+			"file_name": "tauren.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"fungarian_wc": {
+			"display_name": "Fungarian",
+			"file_name": "fungarian.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"gnome_wc": {
+			"display_name": "Gnome",
+			"file_name": "gnome.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"half_elf_wc": {
+			"display_name": "Half-Human/Elf",
+			"file_name": "half_elf.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"hozen_wc": {
+			"display_name": "Hozen",
+			"file_name": "hozen.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"jinyu_wc": {
+			"display_name": "Jinyu",
+			"file_name": "jinyu.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"orc_wc": {
+			"display_name": "Orc",
+			"file_name": "orc.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"pandaren_wc": {
+			"display_name": "Pandaren",
+			"file_name": "pandaren.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"podling_wc": {
+			"display_name": "Podling",
+			"file_name": "podling.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"quilboar_wc": {
+			"display_name": "Quilboar",
+			"file_name": "quilboar.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"tortollan_wc": {
+			"display_name": "Tortollan",
+			"file_name": "tortollan.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"troll_wc": {
+			"display_name": "Troll",
+			"file_name": "troll.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"velf_wc": {
+			"display_name": "Void Elf",
+			"file_name": "velf.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"draenei_wc": {
+			"display_name": "Draenei",
+			"file_name": "draenei.php",
 			"directory": "pathfinder_1e/topics/warcraft/races/",
 			"sort_path": [
 				"pathfinder_1e",
@@ -8696,9 +9044,9 @@
 			],
 			"status": "done"
 		},
-		"nelf_wc": {
-			"display_name": "Night Elf",
-			"file_name": "night_elf.php",
+		"faerie_wc": {
+			"display_name": "Faerie",
+			"file_name": "faerie.php",
 			"directory": "pathfinder_1e/topics/warcraft/races/",
 			"sort_path": [
 				"pathfinder_1e",
@@ -8708,9 +9056,9 @@
 			],
 			"status": "done"
 		},
-		"gnome_wc": {
-			"display_name": "Gnome",
-			"file_name": "gnome.php",
+		"forsaken_wc": {
+			"display_name": "Forsaken",
+			"file_name": "forsaken.php",
 			"directory": "pathfinder_1e/topics/warcraft/races/",
 			"sort_path": [
 				"pathfinder_1e",
@@ -8719,6 +9067,445 @@
 				"races_wc"
 			],
 			"status": "done"
+		},
+		"gorloc_wc": {
+			"display_name": "Gorloc",
+			"file_name": "gorloc.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"half_orc_wc": {
+			"display_name": "Half-Orc/Draenei",
+			"file_name": "half_orc.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"highmountain_wc": {
+			"display_name": "Highmountain Tauren",
+			"file_name": "highmountain.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"kultiran_wc": {
+			"display_name": "Kul Tiran",
+			"file_name": "kultiran.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"lightforged_wc": {
+			"display_name": "Lightforged Draenei",
+			"file_name": "lightforged.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"maghar_wc": {
+			"display_name": "Mag'har Orc",
+			"file_name": "maghar.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"makrura_wc": {
+			"display_name": "Makrura",
+			"file_name": "makrura.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"mok_nathal_wc": {
+			"display_name": "Mok'nathal",
+			"file_name": "mok_nathal.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"vulpera_wc": {
+			"display_name": "Vulpera",
+			"file_name": "vulpera.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"wolvar_wc": {
+			"display_name": "Wolvar",
+			"file_name": "wolvar.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"worgen_wc": {
+			"display_name": "Worgen",
+			"file_name": "worgen.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"botani_wc": {
+			"display_name": "Botani",
+			"file_name": "botani.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"dark_iron_wc": {
+			"display_name": "Dark Iron Dwarf",
+			"file_name": "dark_iron.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"earthen_race_wc": {
+			"display_name": "Earthen, Khaz Algari",
+			"file_name": "earthen.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"mechagnome_wc": {
+			"display_name": "Mechagnome",
+			"file_name": "mechagnome.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"nightborne_wc": {
+			"display_name": "Nightborne",
+			"file_name": "nightborne.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"ogre_wc": {
+			"display_name": "Ogre",
+			"file_name": "ogre.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"satyr_wc": {
+			"display_name": "Satyr",
+			"file_name": "satyr.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"sporeling_wc": {
+			"display_name": "Sporeling",
+			"file_name": "sporeling.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"zandalari_wc": {
+			"display_name": "Zandalari Trolls",
+			"file_name": "zandalari.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"nerubian_wc": {
+			"display_name": "Nerubian",
+			"file_name": "nerubian.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"harpy_wc": {
+			"display_name": "Harpy",
+			"file_name": "harpy.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"saberon_wc": {
+			"display_name": "Saberon",
+			"file_name": "saberon.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"vorkai_wc": {
+			"display_name": "Vorkai",
+			"file_name": "vorkai.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"high_arakkoa_wc": {
+			"display_name": "Arakkoa, High",
+			"file_name": "high_arakkoa.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"dracthyr_wc": {
+			"display_name": "Dracthyr",
+			"file_name": "dracthyr.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"centaur_wc": {
+			"display_name": "Centaur",
+			"file_name": "centaur.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"vrykul_wc": {
+			"display_name": "Vrykul",
+			"file_name": "vrykul.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"ethereal_wc": {
+			"display_name": "Ethereal",
+			"file_name": "ethereal.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"evoker_wc": {
+			"display_name": "Draconic Evoker",
+			"file_name": "evoker.php",
+			"directory": "pathfinder_1e/topics/warcraft/classes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"classes_wc"
+			],
+			"status": "wip",
+			"note": "Being written."
+		},
+		"evoker_flights": {
+			"display_name": "Dragon Flights",
+			"file_name": "evoker.php",
+			"directory": "pathfinder_1e/topics/warcraft/classes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"classes_wc",
+				"evoker_wc"
+			],
+			"status": "empty"
+		},
+		"evoker_archetypes": {
+			"display_name": "Archetypes",
+			"file_name": "evoker_archetypes.php",
+			"directory": "pathfinder_1e/topics/warcraft/classes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"classes_wc",
+				"evoker_wc"
+			],
+			"status": "empty"
+		},
+		"death_knight": {
+			"display_name": "Death Knight",
+			"file_name": "death_knight.php",
+			"directory": "pathfinder_1e/topics/warcraft/classes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"classes_wc"
+			],
+			"status": "empty",
+			"note": ""
+		},
+		"demon_hunter": {
+			"display_name": "Demon Hunter",
+			"file_name": "demon_hunter.php",
+			"directory": "pathfinder_1e/topics/warcraft/classes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"classes_wc"
+			],
+			"status": "empty",
+			"note": ""
+		},
+		"druid_archetypes_wc": {
+			"display_name": "Druid Archetypes",
+			"file_name": "druid_archetypes_wc.php",
+			"directory": "pathfinder_1e/topics/warcraft/classes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"classes_wc"
+			],
+			"status": "empty",
+			"note": ""
+		},
+		"shaman_wc": {
+			"display_name": "Totem Shaman",
+			"file_name": "shaman_wc.php",
+			"directory": "pathfinder_1e/topics/warcraft/classes/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"classes_wc"
+			],
+			"status": "empty",
+			"note": ""
 		},
 		"dragon_eater": {
 			"display_name": "Dragon Eater",
