@@ -104,16 +104,16 @@ function setupTableSort() {
 	}
 
 	let sortFuncAsc = function(a, b) {
-		if(a.children[sortColumn].tagName=='TH')
+		if(getRowCell(a,sortColumn).tagName=='TH')
 			return -1;
-		else if(b.children[sortColumn].tagName=='TH')
+		else if(getRowCell(b,sortColumn).tagName=='TH')
 			return 1;
 		return comp(getRowCell(a,sortColumn).innerText.toLowerCase(),getRowCell(b,sortColumn).innerText.toLowerCase());
 	}
 	let sortFuncDec = function(a, b) {
-		if(a.children[sortColumn].tagName=='TH')
+		if(getRowCell(a,sortColumn).tagName=='TH')
 			return -1;
-		else if(b.children[sortColumn].tagName=='TH')
+		else if(getRowCell(b,sortColumn).tagName=='TH')
 			return 1;
 		return -comp(getRowCell(a,sortColumn).innerText.toLowerCase(),getRowCell(b,sortColumn).innerText.toLowerCase());
 	}

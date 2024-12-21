@@ -22,7 +22,7 @@
 	};
 </script>
 <h2>Races</h2>
-<table>
+<div class="table-wrapper"><table>
 	<tr><th>Name</th><th>RP</th><th>Str</th><th>Dex</th><th>Con</th><th>Int</th><th>Wis</th><th>Cha</th><th>Size Str</th><th>Size Dex</th><th>Type</th><th>Subtypes</th></tr>
 	<tr><td><a href="races/human.php">Human</a></td><td>9</td><td colspan="6">+2 to one score</td><td>—</td><td>—</td><td>Humanoid</td><td>human</td></tr>
 	<tr><td><a href="races/dwarf.php">Dwarf</a></td><td>11</td><td>+2</td><td>-2</td><td>+2</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Humanoid</td><td>dwarf</td></tr>
@@ -85,5 +85,5 @@
 	<tr><td><a href="races/gorloc.php">Gorloc</a></td><td>11</td><td>+2</td><td>—</td><td>+2</td><td>-2</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Monstrous Humanoid</td><td>murloc</td></tr>
 	<tr><td><a href="races/tortollan.php">Tortollan</a></td><td>10</td><td>—</td><td>-4</td><td>+2</td><td>—</td><td>+2</td><td>—</td><td>—</td><td>—</td><td>Humanoid</td><td>tortollan</td></tr>
 	<tr><td><a href="races/sethrak.php">Sethrak</a></td><td>9</td><td>—</td><td>+2</td><td>-2</td><td>—</td><td>+2</td><td>—</td><td>—</td><td>—</td><td>Humanoid</td><td>sethrak</td></tr>
-</table>
+</table></div>
 <?php require $startDir.'pageEnd.php'; ?>
