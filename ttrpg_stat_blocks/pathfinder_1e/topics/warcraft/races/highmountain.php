@@ -33,7 +33,7 @@
 			'bb/Medium/bb: Highmountain tauren are Medium creatures and have no bonuses or penalties due to their size.',
 			'bb/Normal Speed/bb: Highmountain tauren have a base speed of 30 feet.',
 			'bb/Bull Rush/bb: Highmountain tauren gain Improved Overrun as a bonus feat.',
-			'bb/Horns/bb: Highmountain tauren gain a gore natural attack that is a primary attack that deals 1d6 points of piercing damage. When used as part of a full-sttack action with manufactured weapon attacks, all natural weapons are rteated as secondary weapons.'
+			'bb/Horns/bb: Highmountain tauren gain a gore natural attack that is a primary attack that deals 1d6 points of piercing damage. When used as part of a full-sttack action with manufactured weapon attacks, all natural weapons are rteated as secondary weapons.',
 			'bb/Mountaineer/bb: Highmountain tauren are immune to altitude sickness, do not lose their Dexterity bonus to AC when making Climb checks or Acrobatics checks to cross narrow or slippery surfaces, and gain a +2 racial bonus on Acrobatics checks to cross narrow or slippery surfaces.',
 			'bb/Pride of Ironhorn/bb: Highmountain tauren receive a +2 racial bonus to Profession (miner) checks.',
 			'bb/Rugged Tenacity/bb: Highmountain tauren gain a +1 natural armor bonus to their Armor Class.',

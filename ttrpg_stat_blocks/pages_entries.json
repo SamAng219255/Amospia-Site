@@ -8662,15 +8662,14 @@
 		},
 		"races_wc": {
 			"display_name": "Races",
-			"file_name": "races_index.php",
+			"file_name": "races_index_table.php",
 			"directory": "pathfinder_1e/topics/warcraft/",
 			"sort_path": [
 				"pathfinder_1e",
 				"topics",
 				"warcraft"
 			],
-			"status": "wip",
-			"note": "All presented races have been written but not all have been added."
+			"status": "done"
 		},
 		"gnoll_wc": {
 			"display_name": "Gnoll",
@@ -8901,7 +8900,7 @@
 			"status": "done"
 		},
 		"half_elf_wc": {
-			"display_name": "Half-Human/Elf",
+			"display_name": "Half-Elf",
 			"file_name": "half_elf.php",
 			"directory": "pathfinder_1e/topics/warcraft/races/",
 			"sort_path": [
@@ -9081,7 +9080,7 @@
 			"status": "done"
 		},
 		"half_orc_wc": {
-			"display_name": "Half-Orc/Draenei",
+			"display_name": "Oshu'nei",
 			"file_name": "half_orc.php",
 			"directory": "pathfinder_1e/topics/warcraft/races/",
 			"sort_path": [

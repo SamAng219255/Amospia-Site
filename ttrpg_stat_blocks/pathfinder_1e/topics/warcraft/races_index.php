@@ -17,19 +17,19 @@
 	<dd>+2 Str, +2 Con, -4 Int</dd>
 	<dd>WIP</dd>
 	<dt><a href="races/kobold.php">Kobold</a> (7 RP)</dt>
-	<dd>WIP</dd>
+	<dd>+2 Dex, -2 Str, -2 Cha, -4 Int</dd>
 	<dd>WIP</dd>
 	<dt><a href="races/arakkoa.php">Arakkoa</a> (8 RP)</dt>
-	<dd>WIP</dd>
+	<dd>+2 Dex, +2 Int, -2 Con</dd>
 	<dd>WIP</dd>
 	<dt><a href="races/drogbar.php">Drogbar</a> (8 RP)</dt>
-	<dd>WIP</dd>
+	<dd>+2 Str, +2 Wis, -2 Cha</dd>
 	<dd>WIP</dd>
 	<dt><a href="races/goblin.php">Goblin</a> (8 RP)</dt>
 	<dd>+2 Dex, +2 Int, -2 Str</dd>
 	<dd>WIP</dd>
 	<dt><a href="races/grell.php">Grell</a> (8 RP)</dt>
-	<dd>WIP</dd>
+	<dd>+4 Dex, -2 Str, -2 Int</dd>
 	<dd>WIP</dd>
 	<dt><a href="races/tuskarr.php">Tuskarr</a> (8 RP)</dt>
 	<dd>WIP</dd>
@@ -40,39 +40,36 @@
 	<dt><a href="races/belf.php">Blood Elf</a> (9 RP)</dt>
 	<dd>+2 Dex, +2 Int, -2 Str</dd>
 	<dd>WIP</dd>
-	<dt><a href="races/virmen.php">Furbolg</a> (9 RP)</dt>
-	<dd>WIP</dd>
+	<dt><a href="races/furbolg.php">Furbolg</a> (9 RP)</dt>
+	<dd>+2 Str, +2 Wis, -2 Int</dd>
 	<dd>WIP</dd>
 	<dt><a href="races/gnome.php">Gnome</a> (9 RP)</dt>
 	<dd>-2 Str, +2 Dex, +2 Int</dd>
 	<dd>Gnomes are brilliant and eccentric inventors, known for their tiny stature and exceptional engineering prowess.</dd>
-	<dt><a href="races/virmen.php">High Elf</a> (9 RP)</dt>
-	<dd>WIP</dd>
+	<dt><a href="races/helf.php">High Elf</a> (9 RP)</dt>
+	<dd>+2 Dex, +2 Int, -2 Str</dd>
 	<dd>WIP</dd>
 	<dt><a href="races/human.php">Human</a> (9 RP)</dt>
 	<dd>+2 Any</dd>
 	<dd>Humans are a versatile and ambitious race, exceling at adapting to any situation and possessing a strong sense of justice and honor.</dd>
-	<dt><a href="races/virmen.php">Murloc</a> (9 RP)</dt>
+	<dt><a href="races/murloc.php">Murloc</a> (9 RP)</dt>
+	<dd>+2 Str, +2 Cha, -2 Wis</dd>
 	<dd>WIP</dd>
-	<dd>WIP</dd>
-	<dt><a href="races/night_elf.php">Night Elf</a> (9 RP)</dt>
+	<dt><a href="races/nelf.php">Night Elf</a> (9 RP)</dt>
 	<dd>-2 Str, +2 Dex, +2 Wis</dd>
 	<dd>Night elves are an ancient and mystical race deeply intertwined with nature and its forces.</dd>
 	<dt><a href="races/virmen.php">Sethrak</a> (9 RP)</dt>
 	<dd>WIP</dd>
 	<dd>WIP</dd>
-	<dt><a href="races/virmen.php">Sylvar</a> (9 RP)</dt>
-	<dd>WIP</dd>
-	<dd>WIP</dd>
 	<dt><a href="races/tauren.php">Tauren</a> (9 RP)</dt>
 	<dd>+2 Str, +2 Con, +2 Wis, -2 Int, -4 Dex</dd>
 	<dd>WIP</dd>
-	<dt><a href="races/virmen.php">Fungarian</a> (10 RP)</dt>
+	<dt><a href="races/fungarian.php">Fungarian / Fungret</a> (10 RP)</dt>
+	<dd>+2 Str, +2 Wis, -2 Int</dd>
 	<dd>WIP</dd>
-	<dd>WIP</dd>
-	<dt><a href="races/virmen.php">Half-Human/Elf</a> (10 RP)</dt>
-	<dd>WIP</dd>
-	<dd>WIP</dd>
+	<dt><a href="races/half_elf.php">Half-Elf</a> (10 RP)</dt>
+	<dd>+2 Dex, +2 Int, -2 Str</dd>
+	<dd>Half-Human/High Elf</dd>
 	<dt><a href="races/virmen.php">Hozen</a> (10 RP)</dt>
 	<dd>WIP</dd>
 	<dd>WIP</dd>
@@ -85,11 +82,14 @@
 	<dt><a href="races/pandaren.php">Pandaren</a> (10 RP)</dt>
 	<dd>+2 Con, +2 Wis, -2 Dex</dd>
 	<dd>WIP</dd>
-	<dt><a href="races/virmen.php">Podling</a> (10 RP)</dt>
+	<dt><a href="races/podling.php">Podling</a> (10 RP)</dt>
+	<dd>+2 Str, +2 Cha, -4 Int</dd>
 	<dd>WIP</dd>
+	<dt><a href="races/quilboar.php">Quilboar</a> (10 RP)</dt>
+	<dd>+2 Str, +2 Con, -2 Cha</dd>
 	<dd>WIP</dd>
-	<dt><a href="races/virmen.php">Quilboar</a> (10 RP)</dt>
-	<dd>WIP</dd>
+	<dt><a href="races/sylvar.php">Sylvar</a> (10 RP)</dt>
+	<dd>+2 Str, +2 Wis, -2 Con</dd>
 	<dd>WIP</dd>
 	<dt><a href="races/virmen.php">Tortollan</a> (10 RP)</dt>
 	<dd>WIP</dd>
@@ -118,9 +118,6 @@
 	<dt><a href="races/virmen.php">Gorloc</a> (11 RP)</dt>
 	<dd>WIP</dd>
 	<dd>WIP</dd>
-	<dt><a href="races/virmen.php">Half-Orc/Draenei</a> (11 RP)</dt>
-	<dd>WIP</dd>
-	<dd>WIP</dd>
 	<dt><a href="races/highmountain.php">Highmountain Tauren</a> (11 RP)</dt>
 	<dd>+2 Str, +2 Con, +2 Wis, -2 Int, -4 Dex</dd>
 	<dd>WIP</dd>
@@ -133,15 +130,18 @@
 	<dt><a href="races/maghar.php">Mag'har Orc</a> (11 RP)</dt>
 	<dd>+2 Str, +2 Con, -2 Int</dd>
 	<dd>WIP</dd>
-	<dt><a href="races/virmen.php">Makrura</a> (11 RP)</dt>
-	<dd>WIP</dd>
+	<dt><a href="races/makrura.php">Makrura</a> (11 RP)</dt>
+	<dd>+2 Str, +2 Wis, -4 Int</dd>
 	<dd>WIP</dd>
 	<dt><a href="races/mechagnome.php">Mechagnome</a> (11 RP)</dt>
 	<dd>+2 Dex, +2 Int, -2 Str</dd>
 	<dd>WIP</dd>
-	<dt><a href="races/virmen.php">Mok'nathal</a> (11 RP)</dt>
+	<dt><a href="races/mok_nathal.php">Mok'nathal</a> (11 RP)</dt>
+	<dd>+4 Str, -2 Dex, -2 Int</dd>
 	<dd>WIP</dd>
-	<dd>WIP</dd>
+	<dt><a href="races/half_orc.php">Oshu'nei</a> (11 RP)</dt>
+	<dd>+2 Str, +2 Con, -2 Int</dd>
+	<dd>Half-Orc/Draenei</dd>
 	<dt><a href="races/vulpera.php">Vulpera</a> (11 RP)</dt>
 	<dd>+2 Dex, +2 Wis, -2 Con</dd>
 	<dd>WIP</dd>
@@ -151,8 +151,8 @@
 	<dt><a href="races/worgen.php">Worgen</a> (11 RP)</dt>
 	<dd>+2 Str, +2 Dex, -4 Int</dd>
 	<dd>WIP</dd>
-	<dt><a href="races/virmen.php">Botani</a> (12 RP)</dt>
-	<dd>WIP</dd>
+	<dt><a href="races/botani.php">Botani</a> (12 RP)</dt>
+	<dd>+2 Dex, +2 Int, -2 Con</dd>
 	<dd>WIP</dd>
 	<dt><a href="races/dark_iron.php">Dark Iron Dwarf</a> (12 RP)</dt>
 	<dd>+2 Str, +2 Con, -2 Dex</dd>
@@ -163,23 +163,23 @@
 	<dt><a href="races/nightborne.php">Nightborne</a> (12 RP)</dt>
 	<dd>+2 Dex, +2 Int, -2 Str</dd>
 	<dd>WIP</dd>
-	<dt><a href="races/virmen.php">Ogre</a> (12 RP)</dt>
+	<dt><a href="races/ogre.php">Ogre</a> (12 RP)</dt>
+	<dd>+6 Str, -2 Dex, -2 Wis, -2 Cha, -4 Int</dd>
 	<dd>WIP</dd>
+	<dt><a href="races/satyr.php">Satyr</a> (12 RP)</dt>
+	<dd>+2 Str, +2 Cha, -2 Wis</dd>
 	<dd>WIP</dd>
-	<dt><a href="races/virmen.php">Satyr</a> (12 RP)</dt>
-	<dd>WIP</dd>
-	<dd>WIP</dd>
-	<dt><a href="races/virmen.php">Sporeling</a> (12 RP)</dt>
-	<dd>WIP</dd>
+	<dt><a href="races/sporeling.php">Sporeling</a> (12 RP)</dt>
+	<dd>+2 Con, +2 Wis, -2 Str</dd>
 	<dd>WIP</dd>
 	<dt><a href="races/zandalari.php">Zandalari Trolls</a> (12 RP)</dt>
 	<dd>+2 Str, +2 Wis, -2 Cha</dd>
 	<dd>WIP</dd>
-	<dt><a href="races/virmen.php">Nerubian</a> (13 RP)</dt>
+	<dt><a href="races/nerubian.php">Nerubian</a> (13 RP)</dt>
+	<dd>+2 Dex, +2 Int, -2 Cha</dd>
 	<dd>WIP</dd>
-	<dd>WIP</dd>
-	<dt><a href="races/virmen.php">Harpy</a> (14 RP)</dt>
-	<dd>WIP</dd>
+	<dt><a href="races/harpy.php">Harpy</a> (14 RP)</dt>
+	<dd>+2 Dex, +2 Wis, -4 Cha</dd>
 	<dd>WIP</dd>
 	<dt><a href="races/virmen.php">Saberon</a> (14 RP)</dt>
 	<dd>WIP</dd>
@@ -187,14 +187,14 @@
 	<dt><a href="races/virmen.php">Vorkai</a> (14 RP)</dt>
 	<dd>WIP</dd>
 	<dd>WIP</dd>
-	<dt><a href="races/virmen.php">Arakkoa, High</a> (15 RP)</dt>
-	<dd>WIP</dd>
+	<dt><a href="races/high_arakkoa.php">Arakkoa, High</a> (15 RP)</dt>
+	<dd>+2 Dex, +2 Int, -2 Con</dd>
 	<dd>WIP</dd>
 	<dt><a href="races/dracthyr.php">Dracthyr</a> (15 RP)</dt>
 	<dd>+2 Str, +2 Cha</dd>
 	<dd>WIP</dd>
-	<dt><a href="races/virmen.php">Centaur</a> (16 RP)</dt>
-	<dd>WIP</dd>
+	<dt><a href="races/centaur.php">Centaur</a> (16 RP)</dt>
+	<dd>+2 Str, +2 Dex, -2 Int, -2 Wis, -2 Int</dd>
 	<dd>WIP</dd>
 	<dt><a href="races/virmen.php">Vrykul</a> (17 RP)</dt>
 	<dd>WIP</dd>
@@ -202,8 +202,8 @@
 </dl>
 <h3>21-30 Race Points</h3>
 <dl>
-	<dt><a href="races/virmen.php">Ethereal</a> (23 RP)</dt>
-	<dd>WIP</dd>
+	<dt><a href="races/ethereal.php">Ethereal</a> (23 RP)</dt>
+	<dd>+4 Int, +2 Dex, -4 Con</dd>
 	<dd>WIP</dd>
 </dl>
 <?php require $startDir.'pageEnd.php'; ?>

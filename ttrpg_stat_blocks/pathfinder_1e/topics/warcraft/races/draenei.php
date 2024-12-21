@@ -66,7 +66,7 @@
 					'/mm/Some draenei or draenei are better at channeling the arcane instead of the light. These individuals treat their caster level as one higher when casting arcane spells of a school chosen at character creation.',
 					'/mm/This replaces gift of the naaru.',
 					'bb/Fel Magic/bb',
-					'/mm/Instead of the gift of the light, the power of demons flows through your body. ',
+					'/mm/Instead of the gift of the light, the power of demons flows through your body. If a draenei with this trait is a sorcerer with the Abyssal or Infernal bloodline, they treats their caster level as 1 higher when casting bonus spells and bloodline powers. This trait does not give the draenei of this race early access to level-based powers; it only affects powers that they could already use without this trait. The draenei also gains ii/death knell/ii as a spell-like ability once per day.',
 					'/mm/This replaces gift of the naaru.',
 					'bb/Unintegrated/bb',
 					'/mm/Many draenei and eredar have spent little time on Azeroth and thus do not speak the native languages. These individuals start speaking Eredun. Those with a high Intelligence may know Common, Darnassian, Draenei, and Orcish.',

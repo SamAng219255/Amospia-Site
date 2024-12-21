@@ -33,7 +33,7 @@
 			'Kul tirans receive a +2 racial bonus on Profession (sailor) checks.',
 			'bb/Haymaker/bb: Kul tirans receive Improved Unarmed Strike as a bonus feat at 1st level.',
 			'bb/Rime of the Ancient Mariner/bb: Kul tirans gain resistance 5 to cold. Kul tirans are treated as +1 level higher when casting spells with the water or ice descriptor, using granted powers of the Water domain, using bloodline powers of the water elemental bloodline, and determining the damage of alchemist bombs that deal cold damage. This trait does not give members of this race early access to level-based powers; it only affects powers that they could already use without this trait.',
-			'bb/Languages/bb: Kul tirans begin play speaking Common. Kul tirans with high Intelligence scores can choose from Aquan, Darnassian, Draenei, Dwarven, Gnomish, Thalassian, Orcish, and Pandaren.'
+			'bb/Languages/bb: Kul tirans begin play speaking Common. Kul tirans with high Intelligence scores can choose from Darnassian, Draenei, Dwarven, Gnomish, Kalimag (Aquan), Thalassian, Orcish, and Pandaren.'
 		],
 		false
 	);

@@ -69,6 +69,17 @@ function comp(a,b) {
 	}
 	return Math.sign(numA-numB);
 }
+function getRowCell(row, cell) {
+	if(row.cellIndices==undefined) {
+		row.cellIndices=[];
+		for (var i = 0; i < row.children.length; i++) {
+			for (var j = 0; j < row.children[i].colSpan; j++) {
+				row.cellIndices.push(i);
+			}
+		}
+	}
+	return row.children[row.cellIndices[cell]];
+}
 function setupTableSort() {
 	if(cancelDefaultTableSort)
 		return;
@@ -97,14 +108,14 @@ function setupTableSort() {
 			return -1;
 		else if(b.children[sortColumn].tagName=='TH')
 			return 1;
-		return comp(a.children[sortColumn].innerText.toLowerCase(),b.children[sortColumn].innerText.toLowerCase());
+		return comp(getRowCell(a,sortColumn).innerText.toLowerCase(),getRowCell(b,sortColumn).innerText.toLowerCase());
 	}
 	let sortFuncDec = function(a, b) {
 		if(a.children[sortColumn].tagName=='TH')
 			return -1;
 		else if(b.children[sortColumn].tagName=='TH')
 			return 1;
-		return -comp(a.children[sortColumn].innerText.toLowerCase(),b.children[sortColumn].innerText.toLowerCase());
+		return -comp(getRowCell(a,sortColumn).innerText.toLowerCase(),getRowCell(b,sortColumn).innerText.toLowerCase());
 	}
 	let sortFuncAscContextual = function(a, b) {
 		return sortFuncAsc(a,b)*(1<<($("table:not(.vertical):not(.no-sort)").children()[0].children[0].childElementCount))+initialSortFunc(a,b);

@@ -35,7 +35,7 @@
 			'bb/Azerite Surge/bb: Once per day, as a standard action, khaz algari earthen can make a supernatural breath weapon attack that deals 1d6 points of fire damage to enemies in a 15-foot cone. All enemies within the affected area must make a Reflex saving throw to avoid taking damage. The save DC against this breath weapon is 10 + 1/2 the earthen\'s character level + their Constitution modifier. Those who succeed at the save take no damage from the attack. Allies within the region receive the same number of points of healing instead.',
 			'bb/Ingest Minerals/bb: Khaz algari earthen cannot eat meat or plants but instead eat rocks and minerals. They can still consume potions and other magical or alchemical brews to receive their benefits.',
 			'bb/Titan-Wrought Frame/bb: Earthen gain a +2 natural armor bonus.',
-			'bb/Languages/bb: Khaz algari earthen begin play speaking Common and Titan. Khaz algari earthen with high Intelligence scores can choose from Darnassian, Draenei, Dwarven, Gnomish, Orcish, Pandaren, and Thalassian.'
+			'bb/Languages/bb: Khaz algari earthen begin play speaking Titan. Khaz algari earthen with high Intelligence scores can choose from Common, Dwarven, Kalimag, and Orcish.'
 		],
 		false
 	);

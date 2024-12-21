@@ -33,17 +33,7 @@
 			'bb/Visage/bb: Dracthyr gain the following supernatural ability: Dracthyr can assume the appearance of a single form of a single Medium or Small humanoid race with added draconic features such as horns or patches of scales. The form is static and cannot be changed each time they take this form. The dracthyr gains a +10 racial bonus on Disguise checks made to appear as the member of the race whose appearance they assume. Changing their shape is a standard action. This trait otherwise functions as ii/alter self/ii, save that the dracthyr does not adjust its ability scores.',
 			'bb/Languages/bb: Dracthyr begin play speaking Draconic. Dracthyr with high Intelligence scores can choose from Centaur, Common, Orcish, and Kalu\'ak.'
 		],
-		false,
-		[
-			[
-				'Alternate Racial Traits',
-				[
-					'bb/Stability/bb',
-					'/mm/You receive a +4 racial bonus to your CMD when resisting bull rush or trip attempts while standing on the ground.',
-					'/mm/This replaces hardiness.'
-				]
-			]
-		]
+		false
 	);
 	block(
 		'Favored Class Bonus',

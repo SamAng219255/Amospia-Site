@@ -22,14 +22,14 @@
 		'',
 		[
 			'str' => 2,
-			'dex' => -2,
-			'con' => 2
+			'con' => 2,
+			'dex' => -2
 		],
 		'Dwarves are strong and resilient but not very nimble.',
 		[
 			'bb/Humanoid/bb: Dwarves are humanoid creatures with the dwarf subtype.',
 			'bb/Medium/bb: Dwarves are Medium creatures and have no bonuses or penalties due to their size.',
-			'bb/Slow and Steady/bb: Dwarves have a base speed of 20 feet and speed is never modified by armor or encumbrance.',
+			'bb/Slow and Steady/bb: Dwarves have a base speed of 20 feet and their speed is never modified by armor or encumbrance.',
 			'bb/Darkvision/bb: Dwarves can see perfectly in darkness up to 60 feet away though they can only see in black and white in the dark.',
 			'bb/Stoneform/bb: Dwarves gain a +2 racial bonus on saving throws against poison, spells, and spell-like abilities.',
 			'bb/Might of the Mountain/bb: Dwarves deal an additional amount of damage equal to half of their Strength modifier on a successful critical hit with a melee attack.',
@@ -44,7 +44,6 @@
 			[
 				'Alternate Racial Traits',
 				[
-					'/mm/This replaces elusiveness and quickness.',
 					'bb/Craftsman/bb',
 					'/mm/Dwarves are known for superior craftsmanship and their reputation is well deserved. Dwarves with this trait gain a +2 racial bonus on all Craft or Profession checks to create objects from metal or stone. They also do not have to spend additional time to add the masterwork quality to a weapon or set of armor they are making. They must spend additional materials and make additional checks as normal.',
 					'/mm/This replaces explorer.',
