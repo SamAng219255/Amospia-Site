@@ -82,8 +82,8 @@
 	<tr><td><a href="races/vrykul.php">Vrykul</a></td><td>17</td><td>+2</td><td>—</td><td>+2</td><td>—</td><td>—</td><td>-2</td><td>+2</td><td>-2</td><td>Humanoid</td><td>giant, vrykul</td></tr>
 	<tr><td><a href="races/tuskarr.php">Tuskarr</a></td><td>8</td><td>—</td><td>-2</td><td>+2</td><td>—</td><td>+2</td><td>—</td><td>—</td><td>—</td><td>Humanoid</td><td>kalu'ak</td></tr>
 	<tr><td><a href="races/wolvar.php">Wolvar</a></td><td>11</td><td>+4</td><td>—</td><td>—</td><td>-4</td><td>+2</td><td>—</td><td>—</td><td>—</td><td>Monstrous Humanoid</td><td>wolvar</td></tr>
-	<tr><td><a href="races/gorloc.php">Gorloc</a></td><td>11</td><td>+2</td><td>—</td><td>+2</td><td>-2</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Monstrous Humanoid</td><td>murloc</td></tr>
-	<tr><td><a href="races/tortollan.php">Tortollan</a></td><td>10</td><td>—</td><td>-4</td><td>+2</td><td>—</td><td>+2</td><td>—</td><td>—</td><td>—</td><td>Humanoid</td><td>tortollan</td></tr>
+	<tr><td><a href="races/gorloc.php">Gorloc</a></td><td>11</td><td>+2</td><td>—</td><td>+2</td><td>-2</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Monstrous Humanoid</td><td>aquatic, amphibious, murloc</td></tr>
+	<tr><td><a href="races/tortollan.php">Tortollan</a></td><td>10</td><td>—</td><td>-4</td><td>+2</td><td>—</td><td>+2</td><td>—</td><td>—</td><td>—</td><td>Humanoid</td><td>aquatic, amphibious, tortollan</td></tr>
 	<tr><td><a href="races/sethrak.php">Sethrak</a></td><td>9</td><td>—</td><td>+2</td><td>-2</td><td>—</td><td>+2</td><td>—</td><td>—</td><td>—</td><td>Humanoid</td><td>sethrak</td></tr>
 </table></div>
 <?php require $startDir.'pageEnd.php'; ?>
