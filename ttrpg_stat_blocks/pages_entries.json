@@ -9415,6 +9415,42 @@
 			],
 			"status": "done"
 		},
+		"arathi_wc": {
+			"display_name": "Arathi",
+			"file_name": "arathi.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"niffen_wc": {
+			"display_name": "Niffen",
+			"file_name": "niffen.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"tolvir_wc": {
+			"display_name": "Tol'vir",
+			"file_name": "tolvir.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
 		"evoker_wc": {
 			"display_name": "Draconic Evoker",
 			"file_name": "evoker.php",

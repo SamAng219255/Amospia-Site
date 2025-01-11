@@ -85,5 +85,9 @@
 	<tr><td><a href="races/gorloc.php">Gorloc</a></td><td>11</td><td>+2</td><td>—</td><td>+2</td><td>-2</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Monstrous Humanoid</td><td>aquatic, amphibious, murloc</td></tr>
 	<tr><td><a href="races/tortollan.php">Tortollan</a></td><td>10</td><td>—</td><td>-4</td><td>+2</td><td>—</td><td>+2</td><td>—</td><td>—</td><td>—</td><td>Humanoid</td><td>aquatic, amphibious, tortollan</td></tr>
 	<tr><td><a href="races/sethrak.php">Sethrak</a></td><td>9</td><td>—</td><td>+2</td><td>-2</td><td>—</td><td>+2</td><td>—</td><td>—</td><td>—</td><td>Humanoid</td><td>sethrak</td></tr>
+	<tr><td><a href="races/earthen.php">Khaz Algari Earthen</a></td><td>12</td><td>+2</td><td>-2</td><td>+2</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Construct</td><td>earthen, living</td></tr>
+	<tr><td><a href="races/arathi.php">Arathi</a></td><td>9</td><td colspan="6">+2 to one score</td><td>—</td><td>—</td><td>Humanoid</td><td>elf, human</td></tr>
+	<tr><td><a href="races/niffen.php">Niffen</a></td><td>11</td><td>—</td><td>—</td><td>+2</td><td>—</td><td>+2</td><td>-2</td><td>—</td><td>—</td><td>Humanoid</td><td>niffen</td></tr>
+	<tr><td><a href="races/tolvir.php">Tol'vir</a></td><td>18</td><td>+2</td><td>—</td><td>+2</td><td>-2</td><td>—</td><td>—</td><td>+2</td><td>-2</td><td>Monstrous Humanoid</td><td>tol'vir</td></tr>
 </table></div>
 <?php require $startDir.'pageEnd.php'; ?>
