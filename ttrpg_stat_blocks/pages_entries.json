@@ -9451,6 +9451,30 @@
 			],
 			"status": "done"
 		},
+		"djaradin_wc": {
+			"display_name": "Djaradin",
+			"file_name": "djaradin.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"darkfallen_wc": {
+			"display_name": "Darkfallen",
+			"file_name": "darkfallen.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
 		"evoker_wc": {
 			"display_name": "Draconic Evoker",
 			"file_name": "evoker.php",

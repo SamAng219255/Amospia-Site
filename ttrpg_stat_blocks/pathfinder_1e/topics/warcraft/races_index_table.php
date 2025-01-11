@@ -89,5 +89,7 @@
 	<tr><td><a href="races/arathi.php">Arathi</a></td><td>9</td><td colspan="6">+2 to one score</td><td>—</td><td>—</td><td>Humanoid</td><td>elf, human</td></tr>
 	<tr><td><a href="races/niffen.php">Niffen</a></td><td>11</td><td>—</td><td>—</td><td>+2</td><td>—</td><td>+2</td><td>-2</td><td>—</td><td>—</td><td>Humanoid</td><td>niffen</td></tr>
 	<tr><td><a href="races/tolvir.php">Tol'vir</a></td><td>18</td><td>+2</td><td>—</td><td>+2</td><td>-2</td><td>—</td><td>—</td><td>+2</td><td>-2</td><td>Monstrous Humanoid</td><td>tol'vir</td></tr>
+	<tr><td><a href="races/djaradin.php">Djaradin</a></td><td>22</td><td>+2</td><td>—</td><td>—</td><td>-4</td><td>+2</td><td>—</td><td>+2</td><td>-2</td><td>Humanoid</td><td>djaradin, fire, giant</td></tr>
+	<tr><td><a href="races/darkfallen.php">Darkfallen</a></td><td>11</td><td>—</td><td>+2</td><td>-2</td><td>—</td><td>—</td><td>+2</td><td>—</td><td>—</td><td>Humanoid</td><td>elf</td></tr>
 </table></div>
 <?php require $startDir.'pageEnd.php'; ?>
