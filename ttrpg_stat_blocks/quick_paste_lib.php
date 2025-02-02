@@ -142,8 +142,10 @@
 		for($i=0; $i<$lineCount; $i++) {
 			if(is_string($arr[$i]))
 				$temp=$arr[$i];
-			else
+			elseif(isset($arr[$i]['text']))
 				$temp=$arr[$i]['text'];
+			else
+				continue;
 			$temp=trim($temp);
 			$head='';
 			$foot='';
@@ -2615,7 +2617,8 @@
 					$treeIndicies[$treeDepth]++;
 				}
 				else {
-					echo '<li><a class="toc-label" href="#'.$ptr['id'].'">'.$ptr['name'].'</a>';
+					$refId = isset($ptr['id']) ? $ptr['id'] : 'block-'.$ptr['name'];
+					echo '<li><a class="toc-label" href="#'.$refId.'">'.$ptr['name'].'</a>';
 					if(isset($ptr['nodes'])) {
 						$treeDepth++;
 						$treePath[$treeDepth]=$ptr['nodes'];
