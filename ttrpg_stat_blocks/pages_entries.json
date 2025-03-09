@@ -784,6 +784,19 @@
 			"setting": "minecraft",
 			"status": "done"
 		},
+		"inferno_mc": {
+			"display_name": "Inferno",
+			"file_name": "inferno.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			],
+			"setting": "minecraft",
+			"status": "done"
+		},
 		"breeze": {
 			"display_name": "Breeze",
 			"file_name": "breeze.php",
@@ -7569,9 +7582,9 @@
 			"setting": "cosmere",
 			"status": "done"
 		},
-		"practiced_lashing_cosm": {
-			"display_name": "Practiced Lashing",
-			"file_name": "practiced_lashing.php",
+		"advanced_lashings_cosm": {
+			"display_name": "Advanced Lashings",
+			"file_name": "advanced_lashings.php",
 			"directory": "pathfinder_1e/topics/cosmere/surgebinding/",
 			"sort_path": [
 				"pathfinder_1e",
@@ -7608,9 +7621,22 @@
 			"setting": "cosmere",
 			"status": "done"
 		},
-		"anti_slicking_cosm": {
-			"display_name": "Anti-Slicking",
-			"file_name": "anti_slicking.php",
+		"sticking_cosm": {
+			"display_name": "Sticking",
+			"file_name": "sticking.php",
+			"directory": "pathfinder_1e/topics/cosmere/surgebinding/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"surgebinding"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"carapace_growth_cosm": {
+			"display_name": "Carapace Growth",
+			"file_name": "carapace_growth.php",
 			"directory": "pathfinder_1e/topics/cosmere/surgebinding/",
 			"sort_path": [
 				"pathfinder_1e",
@@ -7676,6 +7702,19 @@
 		"elsecalling_cosm": {
 			"display_name": "Elsecalling",
 			"file_name": "elsecalling.php",
+			"directory": "pathfinder_1e/topics/cosmere/surgebinding/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"surgebinding"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"evacuate_cosm": {
+			"display_name": "Evacuate",
+			"file_name": "evacuate.php",
 			"directory": "pathfinder_1e/topics/cosmere/surgebinding/",
 			"sort_path": [
 				"pathfinder_1e",
