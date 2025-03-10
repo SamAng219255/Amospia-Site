@@ -17,6 +17,7 @@
 		10,// hd,
 		false,// parentClasses
 		5,// startWealth,
+		false,// require,
 		[
 			'Acrobatics',
 			'Climb',
@@ -35,6 +36,7 @@
 		],// classSkills,
 		2,// skillsPerLevel,
 		1,// bab,
+		true,// showIter,
 		[
 			'fort' => 'good',
 			'refl' => 'good',

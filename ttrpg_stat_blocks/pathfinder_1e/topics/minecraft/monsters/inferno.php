@@ -9,9 +9,6 @@
 			$startDir='../'.$startDir;
 		}
 	}
-?>
-<title>Inferno</title>
-<?php
 	monsterBlockAuto(
 		'Inferno',// name
 		false,// alt name

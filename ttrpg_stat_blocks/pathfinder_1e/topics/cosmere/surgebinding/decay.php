@@ -12,6 +12,7 @@
 	surgeBlock(
 		'Decay', // name
 		'Division', // surge
+		'Devastating Ones, Dustbringers, Skybreakers', // access
 		'touch', // range
 		'a single creature or object touched', // target=false
 		false, // effect=false
@@ -20,8 +21,8 @@
 		'none; instantaneous', // interval
 		false, // dismiss
 		[
-			'Touched creature or object crumbles, burns, or otherwise breaks down. It takes 2d4 points of untyped energy damage that ignores hardness.',
-			'This ability requires direct contact with the target object or creature. This requires a successful melee (non-touch) attack against the target, ignoring natural armor. If the surgebinder is targeting a creature and the result of their attack would fail to hit their AC without natural armor but would hit their AC without their armor bonus as well, it is counted as a successful touch against their armor instead. Similarly, if it would not hit their AC without their armor bonus and natural armor but would hit them without their shield bonus as well, it is counted as a successful touch against their shield. If these bonuses are granted by magical items other than armor or shields, they are not hit.',
+			'Touched creature or object crumbles, burns, or otherwise breaks down. Against medium or smaller objects, the target gains the broken condition. If the target is larger, double the cost for every size category above Medium. If insufficient light is used, only a portion of the object is broken based on the amount of light spent. If the target is already broken, it is destroyed instead. Against creatures, it deals 60 points of damage. Radiant surgebinders add an additional 20 points of damage for each ideal they obtain after unlocking this surge.',
+			'After obtaining the next ideal, a radiant surgebinder can choose use this ability to do any amount of damage less than the listed amount and can shape the destroyed section as easily as drawing or sculpting the design.',
 			'This ability can be used in place of an attack in a full attack action.'
 		]  // desc
 	);

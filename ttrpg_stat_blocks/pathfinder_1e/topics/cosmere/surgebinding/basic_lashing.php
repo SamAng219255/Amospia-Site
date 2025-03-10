@@ -12,6 +12,7 @@
 	surgeBlock(
 		'Basic Lashing', // name
 		'Gravitation', // surge
+		'Heavenly Ones, Skybreakers, Windrunners', // access
 		'Touch', // range
 		'self or a single creature or object touched', // target=false
 		false, // effect=false

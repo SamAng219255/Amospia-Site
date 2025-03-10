@@ -16,7 +16,7 @@
 			'The Ten Essences is the traditional Vorin term associated with both Soulcasting properties and the Heralds.',
 			'Each Essence is connected to a particular gemstone. In order to Soulcast an object into a new material, a Soulcaster must use the gemstone that corresponds to the new material\'s Essence.',
 			'Modern Vorin teachings connect each Essence with a Herald and that Herald\'s divine attributes.',
-			'Vorin doctrine also associates each Essence with a "Body Focus" related to the human body. Khriss believes that the concept is attributable to Vorin philosophy rather than any actual aspect of Rosharan Investiture. However, it may in fact have some significance. Body Focuses do not directly correspond to Hemalurgic bindpoints, but there is a loose relationship.'
+			'Vorin doctrine also associates each Essence with a "Body Focus" related to the human body. It is believed that the concept is attributable to Vorin philosophy rather than any actual aspect of Rosharan Investiture. However, it may in fact have some significance. Body Focuses do not directly correspond to Hemalurgic bindpoints, but there is a loose relationship.'
 		])
 	);
 ?>

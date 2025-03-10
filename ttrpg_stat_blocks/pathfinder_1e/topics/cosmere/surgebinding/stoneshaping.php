@@ -12,6 +12,7 @@
 	surgeBlock(
 		'Stoneshaping', // name
 		'Cohesion', // surge
+		'Stonewards, Willshapers', // access
 		'Personal', // range
 		'self', // target=false
 		false, // effect=false
@@ -20,7 +21,7 @@
 		'1 minute', // interval
 		true, // dismiss
 		[
-			'Stone becomes as soft as potter\'s clay in the hands of the surgebinder and can be shaped as such so long as the surgebinder remains in contact. Though the stone becomes soft only to manipulations by the surgebinder, remaining completely solid to other creatures or objects.'
+			'Stone becomes as soft as potter\'s clay in the hands of the surgebinder and can be shaped in every way as such so long as the surgebinder remains in contact. Though the stone becomes soft only to manipulations by the surgebinder, remaining completely solid to other creatures or objects.'
 		]  // desc
 	);
 	require $startDir.'pageEnd.php';

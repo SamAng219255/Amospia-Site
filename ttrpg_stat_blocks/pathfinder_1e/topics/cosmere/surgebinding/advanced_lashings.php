@@ -10,8 +10,9 @@
 		}
 	}
 	surgeBlock(
-		'Practiced Lashings', // name
+		'Advanced Lashings', // name
 		'Gravitation', // surge
+		'Heavenly Ones, Skybreakers, Windrunners', // access
 		'Personal', // range
 		'self', // target=false
 		false, // effect=false

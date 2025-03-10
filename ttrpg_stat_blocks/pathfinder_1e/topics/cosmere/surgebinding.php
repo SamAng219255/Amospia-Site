@@ -16,7 +16,7 @@
 	function surgeComp(a,b) {
 		if(surgesOrder[a]!==undefined) {
 			if(surgesOrder[b]!==undefined) {
-				return surgesOrder[a] > surgesOrder[b] ? 1 : -1;
+				return surgesOrder[a] > surgesOrder[b] ? 1 : (surgesOrder[a] < surgesOrder[b] ? -1 : 0);
 			}
 			else {
 				return -1;
@@ -43,7 +43,8 @@
 	table(
 		[
 			'Name',
-			'Surge',
+			'Surges',
+			'Access',
 			'Description'
 		],
 		[
@@ -51,97 +52,141 @@
 				'Full Lashing',
 				'link' => 'surgebinding/full_lashing.php',
 				'Adhesion',
+				'Windrunners',
 				'Infuse a region that tightly adheres to other objects.'
 			],
 			[
 				'Basic Lashing',
 				'link' => 'surgebinding/basic_lashing.php',
 				'Gravitation',
+				'Heavenly Ones, Skybreakers, Windrunners',
 				'Change the direction of gravity for a touched creature or object.'
 			],
 			[
 				'Half Lashing',
 				'link' => 'surgebinding/half_lashing.php',
 				'Gravitation',
+				'Heavenly Ones, Skybreakers, Windrunners',
 				'Cancel out the direction of gravity for a touched creature or object.'
 			],
 			[
-				'Practiced Lashing',
-				'link' => 'surgebinding/practiced_lashing.php',
+				'Advanced Lashings',
+				'link' => 'surgebinding/advanced_lashings.php',
 				'Gravitation',
+				'Heavenly Ones, Skybreakers, Windrunners',
 				'Grants you a gravitic flight speed.'
 			],
 			[
 				'Decay',
 				'link' => 'surgebinding/decay.php',
 				'Division',
+				'Devastating Ones, Dustbringers, Skybreakers',
 				'Cause touched object or creature to crumble, burn, or otherwise break down.'
 			],
 			[
 				'Slicking',
 				'link' => 'surgebinding/slicking.php',
 				'Abrasion',
+				'Dustbringers, Edgedancers, Flowing Ones',
 				'Touched surface becomes slick.'
 			],
 			[
-				'Anti-Slicking',
-				'link' => 'surgebinding/anti_slicking.php',
+				'Sticking',
+				'link' => 'surgebinding/sticking.php',
 				'Abrasion',
+				'Dustbringers, Edgedancers, Flowing Ones',
 				'Touched surface becomes easy to hold onto.'
 			],
 			[
 				'Growth',
 				'link' => 'surgebinding/growth.php',
 				'Progression',
+				'Edgedancers, Truthwatchers',
 				'Makes one or more plants grow.'
 			],
 			[
 				'Regrowth',
 				'link' => 'surgebinding/regrowth.php',
 				'Progression',
+				'Edgedancers, Truthwatchers',
 				'Heals touched creature.'
+			],
+			[
+				'Carapace Growth',
+				'link' => 'surgebinding/carapace_growth.php',
+				'Progression',
+				'Magnified Ones',
+				'Grows and shapes carapce.'
 			],
 			[
 				'Lightweaving',
 				'link' => 'surgebinding/lightweaving.php',
 				'Illumination',
+				'Lightweavers, Masked Ones, Truthwatchers',
 				'Creates a visual illusion.'
 			],
 			[
 				'Soulcasting',
 				'link' => 'surgebinding/soulcasting.php',
 				'Transformation',
+				'Altered Ones, Elsecallers, Lightweavers',
 				'Transmutes the substance of an object into something else.'
 			],
 			[
 				'Elsecalling',
 				'link' => 'surgebinding/elsecalling.php',
 				'Transportation',
+				'Elsecallers, Willshapers',
 				'Transports you and up to 7 other creatures to another plane.'
+			],
+			[
+				'Evacuate',
+				'link' => 'surgebinding/evacuate.php',
+				'Transportation',
+				'Husked Ones',
+				'Leave your body and generate a new one a short distance away.'
 			],
 			[
 				'Stoneshaping',
 				'link' => 'surgebinding/stoneshaping.php',
 				'Cohesion',
+				'Stonewards, Willshapers',
 				'Stone becomes easy to shape.'
 			],
 			[
 				'Stoneshaping, Greater',
 				'link' => 'surgebinding/stoneshaping_greater.php',
 				'Cohesion',
+				'Stonewards, Willshapers',
 				'Stone takes forms on command.'
+			],
+			[
+				'Stone Phase',
+				'link' => 'surgebinding/stone_phase.php',
+				'Cohesion',
+				'Deepest Ones',
+				'Allows travelling through solid stone.'
 			],
 			[
 				'Harden/Soften',
 				'link' => 'surgebinding/harden_soften.php',
 				'Tension',
+				'Focused Ones, Stonewards',
 				'Touched object becomes harder or softer.'
 			],
 			[
 				'Reverse Lashing',
 				'link' => 'surgebinding/reverse_lashing.php',
-				'Special',
+				'Adhesion, Gravitation',
+				'Windrunners',
 				'Touched object attracts other objects.'
+			],
+			[
+				'Repair',
+				'link' => 'surgebinding/repair.php',
+				'Adhesion, Tension',
+				'Bondsmiths',
+				'Restore broken objects.'
 			]
 		]
 	);

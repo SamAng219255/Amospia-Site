@@ -7725,6 +7725,19 @@
 			"setting": "cosmere",
 			"status": "done"
 		},
+		"stone_phase_cosm": {
+			"display_name": "Stone Phase",
+			"file_name": "stone_phase.php",
+			"directory": "pathfinder_1e/topics/cosmere/surgebinding/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"surgebinding"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
 		"stoneshaping_cosm": {
 			"display_name": "Stoneshaping",
 			"file_name": "stoneshaping.php",
@@ -7767,6 +7780,19 @@
 		"reverse_lashing_cosm": {
 			"display_name": "Reverse Lashing",
 			"file_name": "reverse_lashing.php",
+			"directory": "pathfinder_1e/topics/cosmere/surgebinding/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"cosmere",
+				"surgebinding"
+			],
+			"setting": "cosmere",
+			"status": "done"
+		},
+		"repair_cosm": {
+			"display_name": "Repair",
+			"file_name": "repair.php",
 			"directory": "pathfinder_1e/topics/cosmere/surgebinding/",
 			"sort_path": [
 				"pathfinder_1e",
@@ -8761,6 +8787,18 @@
 		"goblin_wc": {
 			"display_name": "Goblin",
 			"file_name": "goblin.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"hobgoblin_wc": {
+			"display_name": "Hobgoblin",
+			"file_name": "hobgoblin.php",
 			"directory": "pathfinder_1e/topics/warcraft/races/",
 			"sort_path": [
 				"pathfinder_1e",

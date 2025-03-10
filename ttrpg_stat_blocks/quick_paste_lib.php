@@ -1874,7 +1874,7 @@
 			"<b>Slot</b> —; <b>Price</b> {$price}; <b>Weight</b> 5 lb."
 		], false, $sections);
 	}
-	function surgeBlock($name, $surge, $range='Touch', $target=false, $effect=false, $area=false, $cost=1, $interval='1 round', $dismiss=true, $desc='') {
+	function surgeBlock($name, $surge, $access, $range='Touch', $target=false, $effect=false, $area=false, $cost=1, $interval='1 round', $dismiss=true, $desc='') {
 		$properties=[];
 		$ranges=['Personal'=>'personal','Touch'=>'touch','Close'=>'close (25 ft. + 5 ft./2 levels)','Medium'=>'medium (100 ft. + 10 ft./level)','Long'=>'long (400 ft. + 40 ft./level)','Unlimited'=>'unlimited'];
 		if(isset($ranges[$range]))
@@ -1895,7 +1895,8 @@
 			$name,
 			'surgebinding',
 			quick_array([
-				'bb/Surge/bb '.$surge
+				'bb/Surge/bb '.$surge,
+				'bb/Access/bb '.$access
 			]),
 			false,
 			[
@@ -1912,15 +1913,35 @@
 			]
 		);
 	}
-	function classBlock($name, $desc, $role, $align, $hd, $parentClasses, $startWealth, $classSkills, $skillsPerLevel, $bab, $saves, $specials, $spells, $spellsSecondary, $features) {
+	function goodSaveCalc($level) {
+		return floor($level/2)+2;
+	}
+	function badSaveCalc($level) {
+		return floor($level/3);
+	}
+	function goodPrestigeSaveCalc($level) {
+		return ceil($level/2);
+	}
+	function badPrestigeSaveCalc($level) {
+		return floor(($level+1)/3);
+	}
+	function classBlock($name, $desc, $role, $align, $hd, $parentClasses, $startWealth, $require, $classSkills, $skillsPerLevel, $bab, $showIter, $saves, $specials, $spells, $spellsSecondary, $features) {
 		echo '<h2>'.$name.'</h2>';
 		echo '<p class="spaced">'.$desc.'</p>';
 		echo '<p class="spaced"><b>Role</b>: '.$role.'</p>';
 		echo '<p><b>Alignment</b>: '.$align.'.</p>';
-		echo '<p><b>Hit Die</b>: '.(is_string($hd)?$hd:'d'.$hd).'.</p>';
+		if($hd!==false)
+			echo '<p><b>Hit Die</b>: '.(is_string($hd)?$hd:'d'.$hd).'.</p>';
 		if($parentClasses!==false)
 			echo '<p><b>Parent Class(es)</b>: '.$parentClasses.'.</p>';
-		echo '<p><b>Starting Wealth</b>: '.(is_string($startWealth)?$startWealth:$startWealth.'d6 x 10 gp (average '.($startWealth*35).' gp)').'.</p>';
+		if($startWealth!==false)
+			echo '<p><b>Starting Wealth</b>: '.(is_string($startWealth)?$startWealth:$startWealth.'d6 x 10 gp (average '.($startWealth*35).' gp)').'.</p>';
+		if($require!==false) {
+			echo '<h3 class="alt">Requirements</h3><p class="spaced">To qualify to become an '.$name.', a character must fulfill all the following criteria.</p>';
+			foreach ($require as $attr => $cond) {
+				echo '<p>'.$attr.': '.$cond.'</p>';
+			}
+		}
 		echo '<h3 class="alt">Class Skills</h3>';
 		$skillsTxt='';
 		$skillAbilities=[
@@ -1973,14 +1994,22 @@
 			foreach($spells as $level => $spellCount) {
 				$spellLevels.='<th>'.$level.ordinalSuffix($level).'</th>';
 				$levelCount++;
-				for($i=0; $i<20; $i++) {
+				for($i=0; $i<count($spellCount); $i++) {
 					$spellCounts[$i].='<td>'.($spellCount[$i]===0?'—':$spellCount[$i]).'</td>';
 				}
 			}
 			$perDayRow='<tr><th colspan="6"></th><th colspan="'.$levelCount.'">Spells Per Day</th></tr>';
 		}
-		echo '<table class="class-features no-sort">'.$perDayRow.'<tr><th>Level</th><th>Base Attack Bonus</th><th>Fort Save</th><th>Ref Save</th><th>Will Save</th><th>Special</th>'.$spellLevels.'</tr>';
-		for($i=0; $i<20; $i++) {
+		$saveHeaders='<th>Fort Save</th><th>Ref Save</th><th>Will Save</th>';
+		if(isset($saves['custom']) && $saves['custom']) {
+			$saveHeaders='';
+			foreach ($saves as $save => $saveType) {
+				if($save!='custom')
+					$saveHeaders.='<th>'.ucwords($save).' Save</th>';
+			}
+		}
+		echo '<table class="class-features no-sort">'.$perDayRow.'<tr><th>Level</th><th>Base Attack Bonus</th>'.$saveHeaders.'<th>Special</th>'.$spellLevels.'</tr>';
+		for($i=0; $i<count($specials); $i++) {
 			$level=$i+1;
 			echo '<tr>';
 			echo '<td>'.$level.ordinalSuffix($level).'</td>';
@@ -1994,12 +2023,29 @@
 					$babTxt.='/';
 				$babTxt.='+'.$tmpBab;
 				$tmpBab-=5;
+				if(!$showIter)
+					break;
 			}
 			while($tmpBab>0);
 			echo '<td>'.$babTxt.'</td>';
-			echo '<td>'.($saves['fort']=='good' ? floor($level/2)+2 : floor($level/3)).'</td>';
-			echo '<td>'.($saves['refl']=='good' ? floor($level/2)+2 : floor($level/3)).'</td>';
-			echo '<td>'.($saves['will']=='good' ? floor($level/2)+2 : floor($level/3)).'</td>';
+			$saveTypes=[
+				'good' => 'goodSaveCalc',
+				'bad' => 'badSaveCalc',
+				'good_prestige' => 'goodPrestigeSaveCalc',
+				'bad_prestige' => 'badPrestigeSaveCalc'
+			];
+			if(isset($saves['custom']) && $saves['custom']) {
+				$saveHeaders='';
+				foreach ($saves as $save => $saveType) {
+					if($save!='custom')
+						echo '<td>+'.$saveTypes[$saveType]($level).'</td>';
+				}
+			}
+			else {
+				echo '<td>+'.$saveTypes[$saves['fort']]($level).'</td>';
+				echo '<td>+'.$saveTypes[$saves['refl']]($level).'</td>';
+				echo '<td>+'.$saveTypes[$saves['will']]($level).'</td>';
+			}
 			echo '<td>'.$specials[$i].'</td>';
 			echo $spellCounts[$i];
 			echo '</tr>';

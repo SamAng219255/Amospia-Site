@@ -12,6 +12,7 @@
 	surgeBlock(
 		'Full Lashing', // name
 		'Adhesion', // surge
+		'Windrunners', // access
 		'5 feet', // range
 		'one object or one square up to 10-ft.', // target=false
 		false, // effect=false
@@ -20,7 +21,7 @@
 		'1 minute', // interval
 		true, // dismiss
 		[
-			'You infuse a surface with investiture, causing it to glow faintly. Any object or creature that touches the surface is instantly and tightly adhered, becoming entangled and anchored to the surface.',
+			'You infuse a surface with investiture, causing it to glow faintly. Any object or creature that touches the surface is instantly and tightly adhered, becoming entangled and anchored to the surface. So long as you still have available stormlight, you can choose to not stick to your own full lashings.',
 			'You can also infuse an object or a part of the object, making any object or creature which touches it be instantly stuck to it and unable to let go or remove it.'
 		]  // desc
 	);

@@ -17,6 +17,7 @@
 		8,// hd,
 		false,// parentClasses
 		4,// startWealth,
+		false,// require,
 		[
 			'Fly',
 			'Intimidate',
@@ -31,6 +32,7 @@
 		],// classSkills,
 		2,// skillsPerLevel,
 		0.75,// bab,
+		true,// showIter,
 		[
 			'fort' => 'good',
 			'refl' => 'good',
