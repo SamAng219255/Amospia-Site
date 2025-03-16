@@ -369,14 +369,14 @@ body.light .top-label.status-empty {
 	-webkit-transition: background-color .4s, color .4s;
 	transition: background-color .4s, color .4s;
 }
-body.light .block:not(.block-sf) .block-title, body.light h1, body.light .h1, body.light h2, body.light .h2, body.light .block-section-title.section-title-1, body.light .block-section-title.section-title-2 {
+body.light .block:not(.block-sf) .block-title, body.light h1:not(.sf), body.light .h1:not(.sf), body.light h2:not(.sf), body.light .h2:not(.sf), body.light .block-section-title.section-title-1, body.light .block-section-title.section-title-2 {
 	background-color: #cca94a;
 	color: #482818;
 }
 .block2 .block-title {
 	margin-top: 1em;
 }
-.block-sf .block-title {
+.block-sf .block-title,  h1.sf,  h2.sf,  .h1.sf,  .h2.sf {
 	margin: 1em 0 0.5em;
 	background-color: #9A0800;
 	color: #f0f0ff;
@@ -395,7 +395,7 @@ body.light .block:not(.block-sf) .block-title, body.light h1, body.light .h1, bo
 	padding: 0 0.25em;
 	margin: 1em 0;
 }
-.block-sf .block-section-title {
+.block-sf .block-section-title,  h3.sf,  .h3.sf {
 	font-size: 1.25em;
 	background-color: #0D117C;
 	color: #f0f0ff;

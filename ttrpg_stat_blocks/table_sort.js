@@ -59,6 +59,10 @@ function comp(a,b) {
 	let numA=parseNumber(A);
 	let numB=parseNumber(B);
 	if(isNaN(numA) || isNaN(numB)) {
+		if(!isNaN(numA) && B.trim()==="")
+			return Math.sign(numA);
+		else if(!isNaN(numB) && A.trim()==="")
+			return -Math.sign(numB);
 		let trimmedA=A.trim().toLowerCase();
 		let trimmedB=B.trim().toLowerCase();
 		if(trimmedA.startsWith('the '))

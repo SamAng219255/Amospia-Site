@@ -2440,6 +2440,66 @@
 			$varnts
 		);
 	}
+	function raceSFBlock($name='', $desc=[], $stats=[], $hp=0, $size_type='', $traits=[]) {
+		$full_desc=$desc;
+		if(count($full_desc)>0) {
+			array_push($full_desc, "");
+		}
+		$statStr='Ability Modifiers ';
+		if(is_array($stats)) {
+			if(($stat=(isset($stats["str"]) ? $stats["str"] : (isset($stats[0]) ? $stats[0] : 0)))!=0) {
+				$statStr.=sprintf("%+d Strength, ",$stat);
+			}
+			if(($stat=(isset($stats["dex"]) ? $stats["dex"] : (isset($stats[1]) ? $stats[1] : 0)))!=0) {
+				$statStr.=sprintf("%+d Dexterity, ",$stat);
+			}
+			if(($stat=(isset($stats["con"]) ? $stats["con"] : (isset($stats[2]) ? $stats[2] : 0)))!=0) {
+				$statStr.=sprintf("%+d Constitution, ",$stat);
+			}
+			if(($stat=(isset($stats["int"]) ? $stats["int"] : (isset($stats[3]) ? $stats[3] : 0)))!=0) {
+				$statStr.=sprintf("%+d Intelligence, ",$stat);
+			}
+			if(($stat=(isset($stats["wis"]) ? $stats["wis"] : (isset($stats[4]) ? $stats[4] : 0)))!=0) {
+				$statStr.=sprintf("%+d Wisdom, ",$stat);
+			}
+			if(($stat=(isset($stats["cha"]) ? $stats["cha"] : (isset($stats[5]) ? $stats[5] : 0)))!=0) {
+				$statStr.=sprintf("%+d Charisma, ",$stat);
+			}
+			if(($stat=(isset($stats["any"]) ? $stats["any"] : (isset($stats[5]) ? $stats[5] : 0)))!=0) {
+				$statStr.=sprintf("%+d to One Ability Score, ",$stat);
+			}
+			if(strlen($statStr)>0) {
+				$statStr=substr($statStr, 0, -2);
+			}
+		}
+		else {
+			$statStr.=quick_format($stats);
+		}
+		array_push($full_desc, $statStr);
+		array_push($full_desc, 'Hit Points '.$hp);
+		$sections=[
+			[
+				'title' => 'Size and Type',
+				'spaced' => true,
+				'texts' => quick_array($size_type)
+			]
+		];
+		foreach ($traits as $trait_name => $trait_desc) {
+			array_push($sections, [
+				'title' => $trait_name,
+				'spaced' => true,
+				'texts' => quick_array($trait_desc)
+			]);
+		}
+		blockSF(
+			$name,
+			'race-traits',
+			quick_array($full_desc),
+			true,
+			$sections,
+			false
+		);
+	}
 	function allomancy($metal='', $user=false, $categories=[], $burnTime='', $desc='', $flare='', $savantism=false) {
 		$prop=[
 			'bb/Burn Time/bb '.$burnTime

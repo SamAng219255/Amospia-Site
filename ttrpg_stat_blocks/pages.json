@@ -1312,6 +1312,12 @@
 							"childless": false
 						}
 					]
+				},
+				{
+					"name": "races_sf",
+					"display_name": "Races",
+					"type": "leaf",
+					"childless": true
 				}
 			]
 		},

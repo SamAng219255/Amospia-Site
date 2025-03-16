@@ -9677,6 +9677,645 @@
 			],
 			"status": "wip",
 			"note": "Still in the process of entering dragon talents and draconic sources."
+		},
+		"races_sf": {
+			"display_name": "Races",
+			"file_name": "races_index.php",
+			"directory": "starfinder/",
+			"sort_path": [
+				"starfinder"
+			],
+			"status": "done"
+		},
+		"zrillnek_sf": {
+			"display_name": "Zrill'nek",
+			"file_name": "zrillnek.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"cephaloid_sf": {
+			"display_name": "Cephaloid",
+			"file_name": "cephaloid.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"ashen_sf": {
+			"display_name": "Ashen",
+			"file_name": "ashen.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"enosrian_sf": {
+			"display_name": "Enosrian",
+			"file_name": "enosrian.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"sleaj_sf": {
+			"display_name": "Sleaj",
+			"file_name": "sleaj.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"ranaver_sf": {
+			"display_name": "Ranaver",
+			"file_name": "ranaver.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"mandriff_sf": {
+			"display_name": "Mandriff",
+			"file_name": "mandriff.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"sculker_sf": {
+			"display_name": "Sculker",
+			"file_name": "sculker.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"sparkling_sf": {
+			"display_name": "Sparkling",
+			"file_name": "sparkling.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"duskling_sf": {
+			"display_name": "Duskling",
+			"file_name": "duskling.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"lhi_sf": {
+			"display_name": "LHI",
+			"file_name": "lhi.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"skadian_sf": {
+			"display_name": "Skadian",
+			"file_name": "skadian.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"narman_sf": {
+			"display_name": "Narman",
+			"file_name": "narman.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"werver_sf": {
+			"display_name": "Werver",
+			"file_name": "werver.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"aculetrix_sf": {
+			"display_name": "Aculetrix",
+			"file_name": "aculetrix.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"lithofiran_sf": {
+			"display_name": "Lithofiran",
+			"file_name": "lithofiran.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"gumodeuza_sf": {
+			"display_name": "Gumodeuza",
+			"file_name": "gumodeuza.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"bioghoul_sf": {
+			"display_name": "Bio-Ghoul",
+			"file_name": "bioghoul.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"vai_sf": {
+			"display_name": "Vai",
+			"file_name": "vai.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"karkal_sf": {
+			"display_name": "Karkal",
+			"file_name": "karkal.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"esh_sf": {
+			"display_name": "Esh",
+			"file_name": "esh.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"aviran_sf": {
+			"display_name": "Aviran",
+			"file_name": "aviran.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"marqua_sf": {
+			"display_name": "Marqua",
+			"file_name": "marqua.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"xempehl_sf": {
+			"display_name": "Xempehl",
+			"file_name": "xempehl.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"wysp_sf": {
+			"display_name": "Wysp",
+			"file_name": "wysp.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"erulian_sf": {
+			"display_name": "Erulian",
+			"file_name": "erulian.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"krotite_sf": {
+			"display_name": "Krotite",
+			"file_name": "krotite.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"mithalan_sf": {
+			"display_name": "Mithalan",
+			"file_name": "mithalan.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"mithalan_bestial_sf": {
+			"display_name": "Bestial Mithalan",
+			"file_name": "mithalan_bestial.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"druniad_sf": {
+			"display_name": "Druniad",
+			"file_name": "druniad.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"lumerean_sf": {
+			"display_name": "Lumerean",
+			"file_name": "lumerean.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"arnassi_sf": {
+			"display_name": "Arnassi",
+			"file_name": "arnassi.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"shrinalla_sf": {
+			"display_name": "Shrinalla",
+			"file_name": "shrinalla.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"chromaceph_sf": {
+			"display_name": "Chromaceph",
+			"file_name": "chromaceph.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"iaii_sf": {
+			"display_name": "I'ai'i",
+			"file_name": "iaii.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"quattin_vallorica_sf": {
+			"display_name": "Quattin Vallorica",
+			"file_name": "quattin_vallorica.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"necrian_sf": {
+			"display_name": "Necrian",
+			"file_name": "necrian.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"kohnx_sf": {
+			"display_name": "Kohnx",
+			"file_name": "kohnx.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"bellar_sf": {
+			"display_name": "Bellar",
+			"file_name": "bellar.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"yeereckuul_sf": {
+			"display_name": "Yeereckuul",
+			"file_name": "yeereckuul.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"gheltom_sf": {
+			"display_name": "Gheltom",
+			"file_name": "gheltom.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"drudger_sf": {
+			"display_name": "Drudger",
+			"file_name": "drudger.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"foarg_sf": {
+			"display_name": "Foarg",
+			"file_name": "foarg.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"bliteg_sf": {
+			"display_name": "Bliteg",
+			"file_name": "bliteg.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"cedit_sf": {
+			"display_name": "Cedit",
+			"file_name": "cedit.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"yarallian_sf": {
+			"display_name": "Yarallian",
+			"file_name": "yarallian.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"zelerrian_sf": {
+			"display_name": "Zelerrian",
+			"file_name": "zelerrian.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"lhaksharian_sf": {
+			"display_name": "Lhaksharian",
+			"file_name": "lhaksharian.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"vacnnuullid_sf": {
+			"display_name": "Vacnnuullid",
+			"file_name": "vacnnuullid.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"juhzabor_sf": {
+			"display_name": "Juhzabor",
+			"file_name": "juhzabor.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"imp_sf": {
+			"display_name": "Imp",
+			"file_name": "imp.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"pistophylan_sf": {
+			"display_name": "Pistophylan",
+			"file_name": "pistophylan.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"susprax_sf": {
+			"display_name": "Susprax",
+			"file_name": "susprax.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"velkris_sf": {
+			"display_name": "Velkris",
+			"file_name": "velkris.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"malvian_sf": {
+			"display_name": "Malvian",
+			"file_name": "malvian.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"hylagir_sf": {
+			"display_name": "Hylagir",
+			"file_name": "hylagir.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"numerite_sf": {
+			"display_name": "Numerite",
+			"file_name": "numerite.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"cyralien_sf": {
+			"display_name": "Cyralien",
+			"file_name": "cyralien.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"ventruah_sf": {
+			"display_name": "Ventruah",
+			"file_name": "ventruah.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"ignesh_sf": {
+			"display_name": "Ignesh",
+			"file_name": "ignesh.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"enrald_sf": {
+			"display_name": "Enrald",
+			"file_name": "enrald.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"kadurote_sf": {
+			"display_name": "Kadurote",
+			"file_name": "kadurote.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
+		},
+		"klevine_sf": {
+			"display_name": "Klevine",
+			"file_name": "klevine.php",
+			"directory": "starfinder/races/",
+			"sort_path": [
+				"starfinder",
+				"races_sf"
+			],
+			"status": "done"
 		}
 	}
 }
