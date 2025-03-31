@@ -10316,6 +10316,55 @@
 				"races_sf"
 			],
 			"status": "done"
+		},
+		"aliens_sf": {
+			"display_name": "Aliens",
+			"file_name": "aliens_index.php",
+			"directory": "starfinder/",
+			"sort_path": [
+				"starfinder"
+			],
+			"status": "done"
+		},
+		"dreklar_sf": {
+			"display_name": "Dreklar",
+			"file_name": "dreklar.php",
+			"directory": "starfinder/aliens/",
+			"sort_path": [
+				"starfinder",
+				"aliens_sf"
+			],
+			"status": "done"
+		},
+		"frendrin_sf": {
+			"display_name": "Frendrin",
+			"file_name": "frendrin.php",
+			"directory": "starfinder/aliens/",
+			"sort_path": [
+				"starfinder",
+				"aliens_sf"
+			],
+			"status": "done"
+		},
+		"trecklyre_sf": {
+			"display_name": "Trecklyre",
+			"file_name": "trecklyre.php",
+			"directory": "starfinder/aliens/",
+			"sort_path": [
+				"starfinder",
+				"aliens_sf"
+			],
+			"status": "done"
+		},
+		"protran_sf": {
+			"display_name": "Protran",
+			"file_name": "protran.php",
+			"directory": "starfinder/aliens/",
+			"sort_path": [
+				"starfinder",
+				"aliens_sf"
+			],
+			"status": "done"
 		}
 	}
 }

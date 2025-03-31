@@ -1267,6 +1267,12 @@
 			"childless": false,
 			"nodes": [
 				{
+					"name": "aliens_sf",
+					"display_name": "Aliens",
+					"type": "leaf",
+					"childless": true
+				},
+				{
 					"name": "equipment_sf",
 					"display_name": "Equipment",
 					"type": "branch",

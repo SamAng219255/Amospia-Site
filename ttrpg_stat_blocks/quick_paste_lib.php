@@ -1319,7 +1319,7 @@
 					ordinalSuffix($class['level']),
 					$class['level']+$statMods[$class['stat']]+$class['conc']
 				)];
-				for($sl=10; $sl>=0; $sl--) {
+				for($sl=12; $sl>=0; $sl--) {
 					if(!isset($class['spells'][$sl]))
 						continue;
 					$spells=$class['spells'][$sl];
@@ -2498,6 +2498,498 @@
 			true,
 			$sections,
 			false
+		);
+	}
+	function alienSFBlock($name='',$name2=false,$lore='',$cr='1',$role='combatant',$customXp=false,$race='',$alignment="N",$size="Medium",$type='',$senses='',$aura='',$defAb='',$weak='',$speed=30,$attacks=[],$reach=5,$offAbilities='',$spelllike=false,$spellcast=[],$spellnote='',$scores=[],$skills='',$lang='',$other='',$gear='',$enviro='',$organiz='',$specAb=[],$grafts=[],$desc='') {
+		$arrays = [
+			'combatant' => [
+				'1/3' => ['eac' => 10, 'kac' => 12, 'fort' => 1, 'ref' => 1, 'will' => 0, 'hp' => 6, 'adc' => 8, 'sdc' => 8, 'ability1' => 3, 'ability2' => 1, 'ability3' => 0, 'mSkills' => 7, 'gSkills' => 3, 'mSkillCount' => 1, 'gSkillCount' => 2, 'attack' => ['high' => 4, 'low' => 1], 'ranged' => ['energy' => '1d4', 'kinetic' => '1d4'], 'melee' => ['standard' => '1d6+Str', 'three' => '—', 'four' => '—']],
+				'1/2' => ['eac' => 10, 'kac' => 12, 'fort' => 2, 'ref' => 2, 'will' => 0, 'hp' => 13, 'adc' => 9, 'sdc' => 9, 'ability1' => 3, 'ability2' => 2, 'ability3' => 1, 'mSkills' => 9, 'gSkills' => 4, 'mSkillCount' => 1, 'gSkillCount' => 2, 'attack' => ['high' => 6, 'low' => 3], 'ranged' => ['energy' => '1d4', 'kinetic' => '1d6'], 'melee' => ['standard' => '1d6+Str', 'three' => '—', 'four' => '—']],
+				'1' => ['eac' => 11, 'kac' => 13, 'fort' => 3, 'ref' => 3, 'will' => 1, 'hp' => 20, 'adc' => 10, 'sdc' => 9, 'ability1' => 4, 'ability2' => 2, 'ability3' => 1, 'mSkills' => 10, 'gSkills' => 5, 'mSkillCount' => 1, 'gSkillCount' => 2, 'attack' => ['high' => 8, 'low' => 5], 'ranged' => ['energy' => '1d4+1', 'kinetic' => '1d6+1'], 'melee' => ['standard' => '1d6+1+Str', 'three' => '—', 'four' => '—']],
+				'2' => ['eac' => 13, 'kac' => 15, 'fort' => 4, 'ref' => 4, 'will' => 1, 'hp' => 25, 'adc' => 11, 'sdc' => 10, 'ability1' => 4, 'ability2' => 2, 'ability3' => 1, 'mSkills' => 12, 'gSkills' => 7, 'mSkillCount' => 1, 'gSkillCount' => 2, 'attack' => ['high' => 10, 'low' => 7], 'ranged' => ['energy' => '1d4+2', 'kinetic' => '1d6+2'], 'melee' => ['standard' => '1d6+2+Str', 'three' => '—', 'four' => '—']],
+				'3' => ['eac' => 14, 'kac' => 16, 'fort' => 5, 'ref' => 5, 'will' => 2, 'hp' => 40, 'adc' => 12, 'sdc' => 11, 'ability1' => 4, 'ability2' => 2, 'ability3' => 1, 'mSkills' => 13, 'gSkills' => 8, 'mSkillCount' => 1, 'gSkillCount' => 2, 'attack' => ['high' => 11, 'low' => 8], 'ranged' => ['energy' => '1d4+3', 'kinetic' => '1d6+3'], 'melee' => ['standard' => '1d6+3+Str', 'three' => '—', 'four' => '—']],
+				'4' => ['eac' => 16, 'kac' => 18, 'fort' => 6, 'ref' => 6, 'will' => 3, 'hp' => 50, 'adc' => 13, 'sdc' => 11, 'ability1' => 5, 'ability2' => 3, 'ability3' => 1, 'mSkills' => 15, 'gSkills' => 10, 'mSkillCount' => 1, 'gSkillCount' => 2, 'attack' => ['high' => 12, 'low' => 9], 'ranged' => ['energy' => '1d4+4', 'kinetic' => '1d6+4'], 'melee' => ['standard' => '1d6+4+Str', 'three' => '—', 'four' => '—']],
+				'5' => ['eac' => 17, 'kac' => 19, 'fort' => 7, 'ref' => 7, 'will' => 4, 'hp' => 70, 'adc' => 13, 'sdc' => 11, 'ability1' => 5, 'ability2' => 3, 'ability3' => 2, 'mSkills' => 16, 'gSkills' => 11, 'mSkillCount' => 1, 'gSkillCount' => 2, 'attack' => ['high' => 14, 'low' => 11], 'ranged' => ['energy' => '1d6+5', 'kinetic' => '1d8+5'], 'melee' => ['standard' => '1d6+5+Str', 'three' => '—', 'four' => '—']],
+				'6' => ['eac' => 18, 'kac' => 20, 'fort' => 8, 'ref' => 8, 'will' => 5, 'hp' => 90, 'adc' => 14, 'sdc' => 12, 'ability1' => 5, 'ability2' => 3, 'ability3' => 2, 'mSkills' => 18, 'gSkills' => 13, 'mSkillCount' => 1, 'gSkillCount' => 2, 'attack' => ['high' => 16, 'low' => 13], 'ranged' => ['energy' => '1d10+6', 'kinetic' => '2d6+6'], 'melee' => ['standard' => '1d8+6+Str', 'three' => '1d4+6+Str', 'four' => '—']],
+				'7' => ['eac' => 19, 'kac' => 21, 'fort' => 9, 'ref' => 9, 'will' => 6, 'hp' => 105, 'adc' => 15, 'sdc' => 13, 'ability1' => 5, 'ability2' => 4, 'ability3' => 2, 'mSkills' => 19, 'gSkills' => 14, 'mSkillCount' => 1, 'gSkillCount' => 2, 'attack' => ['high' => 17, 'low' => 14], 'ranged' => ['energy' => '2d6+7', 'kinetic' => '2d8+7'], 'melee' => ['standard' => '2d6+7+Str', 'three' => '1d8+7+Str', 'four' => '1d6+7+Str']],
+				'8' => ['eac' => 20, 'kac' => 22, 'fort' => 10, 'ref' => 10, 'will' => 7, 'hp' => 125, 'adc' => 16, 'sdc' => 13, 'ability1' => 6, 'ability2' => 4, 'ability3' => 2, 'mSkills' => 21, 'gSkills' => 16, 'mSkillCount' => 1, 'gSkillCount' => 2, 'attack' => ['high' => 19, 'low' => 16], 'ranged' => ['energy' => '2d8+8', 'kinetic' => '3d6+8'], 'melee' => ['standard' => '3d4+8+Str', 'three' => '1d10+8+Str', 'four' => '1d6+8+Str']],
+				'9' => ['eac' => 22, 'kac' => 24, 'fort' => 11, 'ref' => 11, 'will' => 8, 'hp' => 145, 'adc' => 16, 'sdc' => 13, 'ability1' => 6, 'ability2' => 4, 'ability3' => 3, 'mSkills' => 22, 'gSkills' => 17, 'mSkillCount' => 1, 'gSkillCount' => 2, 'attack' => ['high' => 21, 'low' => 18], 'ranged' => ['energy' => '3d6+9', 'kinetic' => '5d4+9'], 'melee' => ['standard' => '2d10+9+Str', 'three' => '2d6+9+Str', 'four' => '1d10+9+Str']],
+				'10' => ['eac' => 23, 'kac' => 25, 'fort' => 12, 'ref' => 12, 'will' => 9, 'hp' => 165, 'adc' => 17, 'sdc' => 14, 'ability1' => 8, 'ability2' => 5, 'ability3' => 3, 'mSkills' => 24, 'gSkills' => 19, 'mSkillCount' => 1, 'gSkillCount' => 2, 'attack' => ['high' => 22, 'low' => 19], 'ranged' => ['energy' => '2d10+10', 'kinetic' => '4d6+10'], 'melee' => ['standard' => '2d10+10+Str', 'three' => '3d4+10+Str', 'four' => '1d10+10+Str']],
+				'11' => ['eac' => 24, 'kac' => 26, 'fort' => 13, 'ref' => 13, 'will' => 10, 'hp' => 180, 'adc' => 18, 'sdc' => 14, 'ability1' => 8, 'ability2' => 5, 'ability3' => 3, 'mSkills' => 25, 'gSkills' => 20, 'mSkillCount' => 1, 'gSkillCount' => 2, 'attack' => ['high' => 23, 'low' => 20], 'ranged' => ['energy' => '3d8+11', 'kinetic' => '3d10+11'], 'melee' => ['standard' => '4d6+11+Str', 'three' => '2d8+11+Str', 'four' => '2d6+11+Str']],
+				'12' => ['eac' => 26, 'kac' => 28, 'fort' => 14, 'ref' => 14, 'will' => 11, 'hp' => 200, 'adc' => 19, 'sdc' => 15, 'ability1' => 8, 'ability2' => 5, 'ability3' => 4, 'mSkills' => 27, 'gSkills' => 22, 'mSkillCount' => 1, 'gSkillCount' => 2, 'attack' => ['high' => 25, 'low' => 22], 'ranged' => ['energy' => '6d4+12', 'kinetic' => '4d8+12'], 'melee' => ['standard' => '6d4+12+Str', 'three' => '3d6+12+Str', 'four' => '3d4+12+Str']],
+				'13' => ['eac' => 27, 'kac' => 29, 'fort' => 15, 'ref' => 15, 'will' => 12, 'hp' => 225, 'adc' => 19, 'sdc' => 15, 'ability1' => 8, 'ability2' => 6, 'ability3' => 4, 'mSkills' => 28, 'gSkills' => 23, 'mSkillCount' => 1, 'gSkillCount' => 2, 'attack' => ['high' => 26, 'low' => 23], 'ranged' => ['energy' => '5d6+13', 'kinetic' => '6d6+13'], 'melee' => ['standard' => '3d12+13+Str', 'three' => '2d12+13+Str', 'four' => '2d8+13+Str']],
+				'14' => ['eac' => 28, 'kac' => 30, 'fort' => 16, 'ref' => 16, 'will' => 12, 'hp' => 250, 'adc' => 20, 'sdc' => 15, 'ability1' => 8, 'ability2' => 6, 'ability3' => 4, 'mSkills' => 30, 'gSkills' => 25, 'mSkillCount' => 1, 'gSkillCount' => 2, 'attack' => ['high' => 27, 'low' => 24], 'ranged' => ['energy' => '3d12+14', 'kinetic' => '5d10+14'], 'melee' => ['standard' => '8d6+14+Str', 'three' => '4d8+14+Str', 'four' => '4d6+14+Str']],
+				'15' => ['eac' => 29, 'kac' => 31, 'fort' => 17, 'ref' => 17, 'will' => 13, 'hp' => 275, 'adc' => 21, 'sdc' => 16, 'ability1' => 9, 'ability2' => 7, 'ability3' => 5, 'mSkills' => 31, 'gSkills' => 26, 'mSkillCount' => 1, 'gSkillCount' => 2, 'attack' => ['high' => 28, 'low' => 25], 'ranged' => ['energy' => '5d8+15', 'kinetic' => '8d6+15'], 'melee' => ['standard' => '8d6+15+Str', 'three' => '3d12+15+Str', 'four' => '6d4+15+Str']],
+				'16' => ['eac' => 30, 'kac' => 32, 'fort' => 18, 'ref' => 18, 'will' => 14, 'hp' => 300, 'adc' => 22, 'sdc' => 16, 'ability1' => 10, 'ability2' => 7, 'ability3' => 5, 'mSkills' => 33, 'gSkills' => 28, 'mSkillCount' => 1, 'gSkillCount' => 2, 'attack' => ['high' => 30, 'low' => 27], 'ranged' => ['energy' => '7d6+16', 'kinetic' => '6d10+16'], 'melee' => ['standard' => '6d10+16+Str', 'three' => '5d8+16+Str', 'four' => '3d10+16+Str']],
+				'17' => ['eac' => 31, 'kac' => 33, 'fort' => 19, 'ref' => 19, 'will' => 15, 'hp' => 340, 'adc' => 22, 'sdc' => 16, 'ability1' => 11, 'ability2' => 8, 'ability3' => 5, 'mSkills' => 34, 'gSkills' => 29, 'mSkillCount' => 1, 'gSkillCount' => 2, 'attack' => ['high' => 31, 'low' => 28], 'ranged' => ['energy' => '8d6+17', 'kinetic' => '6d12+17'], 'melee' => ['standard' => '6d12+17+Str', 'three' => '4d12+17+Str', 'four' => '3d12+17+Str']],
+				'18' => ['eac' => 32, 'kac' => 34, 'fort' => 19, 'ref' => 19, 'will' => 16, 'hp' => 375, 'adc' => 23, 'sdc' => 17, 'ability1' => 11, 'ability2' => 8, 'ability3' => 6, 'mSkills' => 36, 'gSkills' => 31, 'mSkillCount' => 1, 'gSkillCount' => 2, 'attack' => ['high' => 32, 'low' => 29], 'ranged' => ['energy' => '6d10+18', 'kinetic' => '8d10+18'], 'melee' => ['standard' => '13d6+18+Str', 'three' => '8d6+18+Str', 'four' => '5d8+18+Str']],
+				'19' => ['eac' => 33, 'kac' => 35, 'fort' => 20, 'ref' => 20, 'will' => 16, 'hp' => 415, 'adc' => 24, 'sdc' => 18, 'ability1' => 11, 'ability2' => 9, 'ability3' => 6, 'mSkills' => 37, 'gSkills' => 32, 'mSkillCount' => 1, 'gSkillCount' => 2, 'attack' => ['high' => 33, 'low' => 30], 'ranged' => ['energy' => '8d8+19', 'kinetic' => '9d10+19'], 'melee' => ['standard' => '15d6+19+Str', 'three' => '6d10+19+Str', 'four' => '4d12+19+Str']],
+				'20' => ['eac' => 35, 'kac' => 37, 'fort' => 21, 'ref' => 21, 'will' => 17, 'hp' => 465, 'adc' => 25, 'sdc' => 19, 'ability1' => 12, 'ability2' => 9, 'ability3' => 6, 'mSkills' => 39, 'gSkills' => 34, 'mSkillCount' => 1, 'gSkillCount' => 2, 'attack' => ['high' => 34, 'low' => 31], 'ranged' => ['energy' => '12d6+20', 'kinetic' => '16d6+20'], 'melee' => ['standard' => '11d10+20+Str', 'three' => '6d12+20+Str', 'four' => '8d6+20+Str']],
+				'21' => ['eac' => 36, 'kac' => 38, 'fort' => 22, 'ref' => 22, 'will' => 18, 'hp' => 500, 'adc' => 25, 'sdc' => 19, 'ability1' => 12, 'ability2' => 10, 'ability3' => 7, 'mSkills' => 40, 'gSkills' => 35, 'mSkillCount' => 1, 'gSkillCount' => 2, 'attack' => ['high' => 35, 'low' => 32], 'ranged' => ['energy' => '13d6+21', 'kinetic' => '18d6+21'], 'melee' => ['standard' => '12d10+21+Str', 'three' => '8d10+21+Str', 'four' => '6d10+21+Str']],
+				'22' => ['eac' => 38, 'kac' => 40, 'fort' => 22, 'ref' => 22, 'will' => 18, 'hp' => 550, 'adc' => 26, 'sdc' => 20, 'ability1' => 13, 'ability2' => 10, 'ability3' => 7, 'mSkills' => 42, 'gSkills' => 37, 'mSkillCount' => 1, 'gSkillCount' => 2, 'attack' => ['high' => 36, 'low' => 33], 'ranged' => ['energy' => '12d8+22', 'kinetic' => '20d6+22'], 'melee' => ['standard' => '21d6+22+Str', 'three' => '9d10+22+Str', 'four' => '8d8+22+Str']],
+				'23' => ['eac' => 39, 'kac' => 41, 'fort' => 23, 'ref' => 23, 'will' => 19, 'hp' => 600, 'adc' => 27, 'sdc' => 21, 'ability1' => 13, 'ability2' => 11, 'ability3' => 7, 'mSkills' => 43, 'gSkills' => 38, 'mSkillCount' => 1, 'gSkillCount' => 2, 'attack' => ['high' => 37, 'low' => 34], 'ranged' => ['energy' => '17d6+23', 'kinetic' => '14d10+23'], 'melee' => ['standard' => '24d6+23+Str', 'three' => '10d10+23+Str', 'four' => '12d6+23+Str']],
+				'24' => ['eac' => 41, 'kac' => 43, 'fort' => 24, 'ref' => 24, 'will' => 20, 'hp' => 650, 'adc' => 28, 'sdc' => 22, 'ability1' => 15, 'ability2' => 11, 'ability3' => 8, 'mSkills' => 45, 'gSkills' => 40, 'mSkillCount' => 1, 'gSkillCount' => 2, 'attack' => ['high' => 39, 'low' => 36], 'ranged' => ['energy' => '10d12+24', 'kinetic' => '19d8+24'], 'melee' => ['standard' => '14d12+24+Str', 'three' => '11d10+24+Str', 'four' => '13d6+24+Str']],
+				'25' => ['eac' => 42, 'kac' => 44, 'fort' => 25, 'ref' => 25, 'will' => 21, 'hp' => 700, 'adc' => 28, 'sdc' => 22, 'ability1' => 15, 'ability2' => 12, 'ability3' => 8, 'mSkills' => 46, 'gSkills' => 41, 'mSkillCount' => 1, 'gSkillCount' => 2, 'attack' => ['high' => 40, 'low' => 37], 'ranged' => ['energy' => '13d10+25', 'kinetic' => '14d12+25'], 'melee' => ['standard' => '18d10+25+Str', 'three' => '12d10+25+Str', 'four' => '9d10+25+Str']]
+			],
+			'expert' => [
+				'1/3' => ['eac' => 10, 'kac' => 11, 'fort' => 0, 'ref' => 0, 'will' => 2, 'hp' => 6, 'adc' => 10, 'sdc' => 10, 'ability1' => 3, 'ability2' => 1, 'ability3' => 0, 'mSkills' => 7, 'gSkills' => 3, 'mSkillCount' => 3, 'gSkillCount' => 2, 'attack' => ['high' => 2, 'low' => 0], 'ranged' => ['energy' => '1d4', 'kinetic' => '1d4'], 'melee' => ['standard' => '1d4+Str', 'three' => '—', 'four' => '—']],
+				'1/2' => ['eac' => 10, 'kac' => 11, 'fort' => 0, 'ref' => 0, 'will' => 3, 'hp' => 12, 'adc' => 11, 'sdc' => 11, 'ability1' => 3, 'ability2' => 2, 'ability3' => 1, 'mSkills' => 9, 'gSkills' => 4, 'mSkillCount' => 3, 'gSkillCount' => 2, 'attack' => ['high' => 4, 'low' => 2], 'ranged' => ['energy' => '1d4', 'kinetic' => '1d4'], 'melee' => ['standard' => '1d4+Str', 'three' => '—', 'four' => '—']],
+				'1' => ['eac' => 11, 'kac' => 12, 'fort' => 1, 'ref' => 1, 'will' => 4, 'hp' => 17, 'adc' => 12, 'sdc' => 11, 'ability1' => 4, 'ability2' => 2, 'ability3' => 1, 'mSkills' => 10, 'gSkills' => 5, 'mSkillCount' => 3, 'gSkillCount' => 2, 'attack' => ['high' => 6, 'low' => 4], 'ranged' => ['energy' => '1d4+1', 'kinetic' => '1d4+1'], 'melee' => ['standard' => '1d4+1+Str', 'three' => '—', 'four' => '—']],
+				'2' => ['eac' => 13, 'kac' => 14, 'fort' => 1, 'ref' => 1, 'will' => 5, 'hp' => 23, 'adc' => 13, 'sdc' => 12, 'ability1' => 4, 'ability2' => 2, 'ability3' => 1, 'mSkills' => 12, 'gSkills' => 7, 'mSkillCount' => 3, 'gSkillCount' => 2, 'attack' => ['high' => 8, 'low' => 6], 'ranged' => ['energy' => '1d4+2', 'kinetic' => '1d4+2'], 'melee' => ['standard' => '1d4+2+Str', 'three' => '—', 'four' => '—']],
+				'3' => ['eac' => 14, 'kac' => 15, 'fort' => 2, 'ref' => 2, 'will' => 6, 'hp' => 35, 'adc' => 14, 'sdc' => 13, 'ability1' => 4, 'ability2' => 2, 'ability3' => 1, 'mSkills' => 13, 'gSkills' => 8, 'mSkillCount' => 3, 'gSkillCount' => 2, 'attack' => ['high' => 9, 'low' => 7], 'ranged' => ['energy' => '1d4+3', 'kinetic' => '1d4+3'], 'melee' => ['standard' => '1d4+3+Str', 'three' => '—', 'four' => '—']],
+				'4' => ['eac' => 16, 'kac' => 17, 'fort' => 3, 'ref' => 3, 'will' => 7, 'hp' => 45, 'adc' => 15, 'sdc' => 13, 'ability1' => 5, 'ability2' => 3, 'ability3' => 1, 'mSkills' => 15, 'gSkills' => 10, 'mSkillCount' => 3, 'gSkillCount' => 2, 'attack' => ['high' => 10, 'low' => 8], 'ranged' => ['energy' => '1d4+4', 'kinetic' => '1d4+4'], 'melee' => ['standard' => '1d4+4+Str', 'three' => '—', 'four' => '—']],
+				'5' => ['eac' => 17, 'kac' => 18, 'fort' => 4, 'ref' => 4, 'will' => 8, 'hp' => 65, 'adc' => 15, 'sdc' => 13, 'ability1' => 5, 'ability2' => 3, 'ability3' => 2, 'mSkills' => 16, 'gSkills' => 11, 'mSkillCount' => 3, 'gSkillCount' => 2, 'attack' => ['high' => 12, 'low' => 10], 'ranged' => ['energy' => '1d4+5', 'kinetic' => '1d6+5'], 'melee' => ['standard' => '1d4+5+Str', 'three' => '—', 'four' => '—']],
+				'6' => ['eac' => 18, 'kac' => 19, 'fort' => 5, 'ref' => 5, 'will' => 9, 'hp' => 80, 'adc' => 16, 'sdc' => 14, 'ability1' => 5, 'ability2' => 3, 'ability3' => 2, 'mSkills' => 18, 'gSkills' => 13, 'mSkillCount' => 3, 'gSkillCount' => 2, 'attack' => ['high' => 14, 'low' => 12], 'ranged' => ['energy' => '1d6+6', 'kinetic' => '1d8+6'], 'melee' => ['standard' => '1d6+6+Str', 'three' => '1d4+6+Str', 'four' => '—']],
+				'7' => ['eac' => 19, 'kac' => 20, 'fort' => 6, 'ref' => 6, 'will' => 10, 'hp' => 100, 'adc' => 17, 'sdc' => 15, 'ability1' => 5, 'ability2' => 4, 'ability3' => 2, 'mSkills' => 19, 'gSkills' => 14, 'mSkillCount' => 3, 'gSkillCount' => 2, 'attack' => ['high' => 15, 'low' => 13], 'ranged' => ['energy' => '1d8+7', 'kinetic' => '1d12+7'], 'melee' => ['standard' => '1d8+7+Str', 'three' => '1d4+7+Str', 'four' => '1d4+7+Str']],
+				'8' => ['eac' => 20, 'kac' => 21, 'fort' => 7, 'ref' => 7, 'will' => 11, 'hp' => 115, 'adc' => 18, 'sdc' => 15, 'ability1' => 6, 'ability2' => 4, 'ability3' => 2, 'mSkills' => 21, 'gSkills' => 16, 'mSkillCount' => 3, 'gSkillCount' => 2, 'attack' => ['high' => 17, 'low' => 15], 'ranged' => ['energy' => '1d10+8', 'kinetic' => '2d6+8'], 'melee' => ['standard' => '1d12+8+Str', 'three' => '1d8+8+Str', 'four' => '1d4+8+Str']],
+				'9' => ['eac' => 22, 'kac' => 23, 'fort' => 8, 'ref' => 8, 'will' => 12, 'hp' => 135, 'adc' => 18, 'sdc' => 15, 'ability1' => 6, 'ability2' => 4, 'ability3' => 3, 'mSkills' => 22, 'gSkills' => 17, 'mSkillCount' => 3, 'gSkillCount' => 2, 'attack' => ['high' => 19, 'low' => 17], 'ranged' => ['energy' => '2d6+9', 'kinetic' => '2d8+9'], 'melee' => ['standard' => '3d4+9+Str', 'three' => '1d10+9+Str', 'four' => '1d6+9+Str']],
+				'10' => ['eac' => 23, 'kac' => 24, 'fort' => 9, 'ref' => 9, 'will' => 13, 'hp' => 150, 'adc' => 19, 'sdc' => 16, 'ability1' => 8, 'ability2' => 5, 'ability3' => 3, 'mSkills' => 24, 'gSkills' => 19, 'mSkillCount' => 3, 'gSkillCount' => 2, 'attack' => ['high' => 20, 'low' => 18], 'ranged' => ['energy' => '3d4+10', 'kinetic' => '2d8+10'], 'melee' => ['standard' => '2d8+10+Str', 'three' => '1d10+10+Str', 'four' => '1d8+10+Str']],
+				'11' => ['eac' => 24, 'kac' => 25, 'fort' => 10, 'ref' => 10, 'will' => 14, 'hp' => 170, 'adc' => 20, 'sdc' => 16, 'ability1' => 8, 'ability2' => 5, 'ability3' => 3, 'mSkills' => 25, 'gSkills' => 20, 'mSkillCount' => 3, 'gSkillCount' => 2, 'attack' => ['high' => 21, 'low' => 19], 'ranged' => ['energy' => '2d8+11', 'kinetic' => '2d10+11'], 'melee' => ['standard' => '2d10+11+Str', 'three' => '3d4+11+Str', 'four' => '1d10+11+Str']],
+				'12' => ['eac' => 26, 'kac' => 27, 'fort' => 11, 'ref' => 11, 'will' => 15, 'hp' => 185, 'adc' => 21, 'sdc' => 17, 'ability1' => 8, 'ability2' => 5, 'ability3' => 4, 'mSkills' => 27, 'gSkills' => 22, 'mSkillCount' => 3, 'gSkillCount' => 2, 'attack' => ['high' => 23, 'low' => 21], 'ranged' => ['energy' => '2d8+12', 'kinetic' => '2d10+12'], 'melee' => ['standard' => '2d12+12+Str', 'three' => '3d4+12+Str', 'four' => '1d12+12+Str']],
+				'13' => ['eac' => 27, 'kac' => 28, 'fort' => 12, 'ref' => 12, 'will' => 16, 'hp' => 210, 'adc' => 21, 'sdc' => 17, 'ability1' => 8, 'ability2' => 6, 'ability3' => 4, 'mSkills' => 28, 'gSkills' => 23, 'mSkillCount' => 3, 'gSkillCount' => 2, 'attack' => ['high' => 24, 'low' => 22], 'ranged' => ['energy' => '2d10+13', 'kinetic' => '4d6+13'], 'melee' => ['standard' => '6d4+13+Str', 'three' => '3d6+13+Str', 'four' => '3d4+13+Str']],
+				'14' => ['eac' => 28, 'kac' => 29, 'fort' => 12, 'ref' => 12, 'will' => 17, 'hp' => 235, 'adc' => 22, 'sdc' => 17, 'ability1' => 8, 'ability2' => 6, 'ability3' => 4, 'mSkills' => 30, 'gSkills' => 25, 'mSkillCount' => 3, 'gSkillCount' => 2, 'attack' => ['high' => 25, 'low' => 23], 'ranged' => ['energy' => '5d4+14', 'kinetic' => '4d8+14'], 'melee' => ['standard' => '6d6+14+Str', 'three' => '4d6+14+Str', 'four' => '3d6+14+Str']],
+				'15' => ['eac' => 29, 'kac' => 30, 'fort' => 13, 'ref' => 13, 'will' => 18, 'hp' => 255, 'adc' => 23, 'sdc' => 18, 'ability1' => 9, 'ability2' => 7, 'ability3' => 5, 'mSkills' => 31, 'gSkills' => 26, 'mSkillCount' => 3, 'gSkillCount' => 2, 'attack' => ['high' => 26, 'low' => 24], 'ranged' => ['energy' => '4d6+15', 'kinetic' => '6d6+15'], 'melee' => ['standard' => '5d8+15+Str', 'three' => '6d4+15+Str', 'four' => '2d10+15+Str']],
+				'16' => ['eac' => 30, 'kac' => 31, 'fort' => 14, 'ref' => 14, 'will' => 19, 'hp' => 280, 'adc' => 24, 'sdc' => 18, 'ability1' => 10, 'ability2' => 7, 'ability3' => 5, 'mSkills' => 33, 'gSkills' => 28, 'mSkillCount' => 3, 'gSkillCount' => 2, 'attack' => ['high' => 28, 'low' => 26], 'ranged' => ['energy' => '6d4+16', 'kinetic' => '5d8+16'], 'melee' => ['standard' => '6d8+16+Str', 'three' => '4d8+16+Str', 'four' => '3d8+16+Str']],
+				'17' => ['eac' => 31, 'kac' => 32, 'fort' => 15, 'ref' => 15, 'will' => 20, 'hp' => 315, 'adc' => 24, 'sdc' => 18, 'ability1' => 11, 'ability2' => 8, 'ability3' => 5, 'mSkills' => 34, 'gSkills' => 29, 'mSkillCount' => 3, 'gSkillCount' => 2, 'attack' => ['high' => 29, 'low' => 27], 'ranged' => ['energy' => '4d8+17', 'kinetic' => '4d12+17'], 'melee' => ['standard' => '8d6+17+Str', 'three' => '3d12+17+Str', 'four' => '6d4+17+Str']],
+				'18' => ['eac' => 32, 'kac' => 33, 'fort' => 16, 'ref' => 16, 'will' => 20, 'hp' => 350, 'adc' => 25, 'sdc' => 19, 'ability1' => 11, 'ability2' => 8, 'ability3' => 6, 'mSkills' => 36, 'gSkills' => 31, 'mSkillCount' => 3, 'gSkillCount' => 2, 'attack' => ['high' => 30, 'low' => 28], 'ranged' => ['energy' => '3d12+18', 'kinetic' => '8d6+18'], 'melee' => ['standard' => '8d8+18+Str', 'three' => '5d8+18+Str', 'four' => '4d8+18+Str']],
+				'19' => ['eac' => 33, 'kac' => 34, 'fort' => 16, 'ref' => 16, 'will' => 21, 'hp' => 385, 'adc' => 26, 'sdc' => 20, 'ability1' => 11, 'ability2' => 9, 'ability3' => 6, 'mSkills' => 37, 'gSkills' => 32, 'mSkillCount' => 3, 'gSkillCount' => 2, 'attack' => ['high' => 31, 'low' => 29], 'ranged' => ['energy' => '5d8+19', 'kinetic' => '6d10+19'], 'melee' => ['standard' => '9d8+19+Str', 'three' => '6d8+19+Str', 'four' => '3d12+19+Str']],
+				'20' => ['eac' => 35, 'kac' => 36, 'fort' => 17, 'ref' => 17, 'will' => 22, 'hp' => 430, 'adc' => 27, 'sdc' => 21, 'ability1' => 12, 'ability2' => 9, 'ability3' => 6, 'mSkills' => 39, 'gSkills' => 34, 'mSkillCount' => 3, 'gSkillCount' => 2, 'attack' => ['high' => 32, 'low' => 30], 'ranged' => ['energy' => '4d12+20', 'kinetic' => '8d8+20'], 'melee' => ['standard' => '13d6+20+Str', 'three' => '9d6+20+Str', 'four' => '5d8+20+Str']],
+				'21' => ['eac' => 36, 'kac' => 37, 'fort' => 18, 'ref' => 18, 'will' => 23, 'hp' => 465, 'adc' => 27, 'sdc' => 21, 'ability1' => 12, 'ability2' => 10, 'ability3' => 7, 'mSkills' => 40, 'gSkills' => 35, 'mSkillCount' => 3, 'gSkillCount' => 2, 'attack' => ['high' => 33, 'low' => 31], 'ranged' => ['energy' => '8d6+21', 'kinetic' => '6d12+21'], 'melee' => ['standard' => '15d6+21+Str', 'three' => '10d6+21+Str', 'four' => '4d12+21+Str']],
+				'22' => ['eac' => 38, 'kac' => 39, 'fort' => 18, 'ref' => 18, 'will' => 23, 'hp' => 500, 'adc' => 28, 'sdc' => 22, 'ability1' => 13, 'ability2' => 10, 'ability3' => 7, 'mSkills' => 42, 'gSkills' => 37, 'mSkillCount' => 3, 'gSkillCount' => 2, 'attack' => ['high' => 34, 'low' => 32], 'ranged' => ['energy' => '6d10+22', 'kinetic' => '8d10+22'], 'melee' => ['standard' => '17d6+22+Str', 'three' => '6d12+22+Str', 'four' => '8d6+22+Str']],
+				'23' => ['eac' => 39, 'kac' => 40, 'fort' => 19, 'ref' => 19, 'will' => 24, 'hp' => 550, 'adc' => 29, 'sdc' => 23, 'ability1' => 13, 'ability2' => 11, 'ability3' => 7, 'mSkills' => 43, 'gSkills' => 38, 'mSkillCount' => 3, 'gSkillCount' => 2, 'attack' => ['high' => 35, 'low' => 33], 'ranged' => ['energy' => '8d8+23', 'kinetic' => '13d6+23'], 'melee' => ['standard' => '12d10+23+Str', 'three' => '8d10+23+Str', 'four' => '6d10+23+Str']],
+				'24' => ['eac' => 41, 'kac' => 42, 'fort' => 20, 'ref' => 20, 'will' => 25, 'hp' => 600, 'adc' => 30, 'sdc' => 24, 'ability1' => 15, 'ability2' => 11, 'ability3' => 8, 'mSkills' => 45, 'gSkills' => 40, 'mSkillCount' => 3, 'gSkillCount' => 2, 'attack' => ['high' => 37, 'low' => 35], 'ranged' => ['energy' => '9d8+24', 'kinetic' => '15d6+24'], 'melee' => ['standard' => '21d6+24+Str', 'three' => '9d10+24+Str', 'four' => '8d8+24+Str']],
+				'25' => ['eac' => 42, 'kac' => 43, 'fort' => 21, 'ref' => 21, 'will' => 26, 'hp' => 650, 'adc' => 30, 'sdc' => 24, 'ability1' => 15, 'ability2' => 12, 'ability3' => 8, 'mSkills' => 46, 'gSkills' => 41, 'mSkillCount' => 3, 'gSkillCount' => 2, 'attack' => ['high' => 38, 'low' => 36], 'ranged' => ['energy' => '8d10+25', 'kinetic' => '16d6+25'], 'melee' => ['standard' => '12d12+25+Str', 'three' => '15d6+25+Str', 'four' => '6d12+25+Str']]
+			],
+			'spellcaster' => [
+				'1/3' => ['eac' => 9, 'kac' => 10, 'fort' => 0, 'ref' => 0, 'will' => 2, 'hp' => 5, 'adc' => 10, 'sdc' => 12, 'ability1' => 3, 'ability2' => 1, 'ability3' => 0, 'mSkills' => 7, 'gSkills' => 3, 'mSkillCount' => 2, 'gSkillCount' => 1, 'attack' => ['high' => 0, 'low' => -2], 'ranged' => ['energy' => '1d4', 'kinetic' => '1d4'], 'melee' => ['standard' => '1d4+Str', 'three' => '—', 'four' => '—']],
+				'1/2' => ['eac' => 9, 'kac' => 10, 'fort' => 0, 'ref' => 0, 'will' => 3, 'hp' => 11, 'adc' => 11, 'sdc' => 13, 'ability1' => 3, 'ability2' => 2, 'ability3' => 1, 'mSkills' => 9, 'gSkills' => 4, 'mSkillCount' => 2, 'gSkillCount' => 1, 'attack' => ['high' => 2, 'low' => 0], 'ranged' => ['energy' => '1d4', 'kinetic' => '1d4'], 'melee' => ['standard' => '1d4+Str', 'three' => '—', 'four' => '—']],
+				'1' => ['eac' => 10, 'kac' => 11, 'fort' => 1, 'ref' => 1, 'will' => 4, 'hp' => 16, 'adc' => 12, 'sdc' => 13, 'ability1' => 4, 'ability2' => 2, 'ability3' => 1, 'mSkills' => 10, 'gSkills' => 5, 'mSkillCount' => 2, 'gSkillCount' => 1, 'attack' => ['high' => 4, 'low' => 2], 'ranged' => ['energy' => '1d4+1', 'kinetic' => '1d4+1'], 'melee' => ['standard' => '1d4+1+Str', 'three' => '—', 'four' => '—']],
+				'2' => ['eac' => 12, 'kac' => 13, 'fort' => 1, 'ref' => 1, 'will' => 5, 'hp' => 21, 'adc' => 13, 'sdc' => 14, 'ability1' => 4, 'ability2' => 2, 'ability3' => 1, 'mSkills' => 12, 'gSkills' => 7, 'mSkillCount' => 2, 'gSkillCount' => 1, 'attack' => ['high' => 6, 'low' => 4], 'ranged' => ['energy' => '1d4+2', 'kinetic' => '1d4+2'], 'melee' => ['standard' => '1d4+2+Str', 'three' => '—', 'four' => '—']],
+				'3' => ['eac' => 13, 'kac' => 14, 'fort' => 2, 'ref' => 2, 'will' => 6, 'hp' => 32, 'adc' => 14, 'sdc' => 15, 'ability1' => 4, 'ability2' => 2, 'ability3' => 1, 'mSkills' => 13, 'gSkills' => 8, 'mSkillCount' => 2, 'gSkillCount' => 1, 'attack' => ['high' => 7, 'low' => 5], 'ranged' => ['energy' => '1d4+3', 'kinetic' => '1d4+3'], 'melee' => ['standard' => '1d4+3+Str', 'three' => '—', 'four' => '—']],
+				'4' => ['eac' => 15, 'kac' => 16, 'fort' => 3, 'ref' => 3, 'will' => 7, 'hp' => 43, 'adc' => 15, 'sdc' => 15, 'ability1' => 5, 'ability2' => 3, 'ability3' => 1, 'mSkills' => 15, 'gSkills' => 10, 'mSkillCount' => 2, 'gSkillCount' => 1, 'attack' => ['high' => 8, 'low' => 6], 'ranged' => ['energy' => '1d4+4', 'kinetic' => '1d4+4'], 'melee' => ['standard' => '1d4+4+Str', 'three' => '—', 'four' => '—']],
+				'5' => ['eac' => 16, 'kac' => 17, 'fort' => 4, 'ref' => 4, 'will' => 8, 'hp' => 60, 'adc' => 15, 'sdc' => 15, 'ability1' => 5, 'ability2' => 3, 'ability3' => 2, 'mSkills' => 16, 'gSkills' => 11, 'mSkillCount' => 2, 'gSkillCount' => 1, 'attack' => ['high' => 10, 'low' => 8], 'ranged' => ['energy' => '1d4+5', 'kinetic' => '1d6+5'], 'melee' => ['standard' => '1d4+5+Str', 'three' => '—', 'four' => '—']],
+				'6' => ['eac' => 17, 'kac' => 18, 'fort' => 5, 'ref' => 5, 'will' => 9, 'hp' => 75, 'adc' => 16, 'sdc' => 16, 'ability1' => 5, 'ability2' => 3, 'ability3' => 2, 'mSkills' => 18, 'gSkills' => 13, 'mSkillCount' => 2, 'gSkillCount' => 1, 'attack' => ['high' => 12, 'low' => 10], 'ranged' => ['energy' => '1d6+6', 'kinetic' => '1d8+6'], 'melee' => ['standard' => '1d6+6+Str', 'three' => '1d4+6+Str', 'four' => '—']],
+				'7' => ['eac' => 18, 'kac' => 19, 'fort' => 6, 'ref' => 6, 'will' => 10, 'hp' => 90, 'adc' => 17, 'sdc' => 17, 'ability1' => 5, 'ability2' => 4, 'ability3' => 2, 'mSkills' => 19, 'gSkills' => 14, 'mSkillCount' => 2, 'gSkillCount' => 1, 'attack' => ['high' => 13, 'low' => 11], 'ranged' => ['energy' => '1d8+7', 'kinetic' => '1d12+7'], 'melee' => ['standard' => '1d8+7+Str', 'three' => '1d4+7+Str', 'four' => '1d4+7+Str']],
+				'8' => ['eac' => 19, 'kac' => 20, 'fort' => 7, 'ref' => 7, 'will' => 11, 'hp' => 105, 'adc' => 18, 'sdc' => 17, 'ability1' => 6, 'ability2' => 4, 'ability3' => 2, 'mSkills' => 21, 'gSkills' => 16, 'mSkillCount' => 2, 'gSkillCount' => 1, 'attack' => ['high' => 15, 'low' => 13], 'ranged' => ['energy' => '1d10+8', 'kinetic' => '2d6+8'], 'melee' => ['standard' => '1d12+8+Str', 'three' => '1d8+8+Str', 'four' => '1d4+8+Str']],
+				'9' => ['eac' => 21, 'kac' => 22, 'fort' => 8, 'ref' => 8, 'will' => 12, 'hp' => 120, 'adc' => 18, 'sdc' => 17, 'ability1' => 6, 'ability2' => 4, 'ability3' => 3, 'mSkills' => 22, 'gSkills' => 17, 'mSkillCount' => 2, 'gSkillCount' => 1, 'attack' => ['high' => 17, 'low' => 15], 'ranged' => ['energy' => '2d6+9', 'kinetic' => '2d8+9'], 'melee' => ['standard' => '3d4+9+Str', 'three' => '1d10+9+Str', 'four' => '1d6+9+Str']],
+				'10' => ['eac' => 22, 'kac' => 23, 'fort' => 9, 'ref' => 9, 'will' => 13, 'hp' => 140, 'adc' => 19, 'sdc' => 18, 'ability1' => 8, 'ability2' => 5, 'ability3' => 3, 'mSkills' => 24, 'gSkills' => 19, 'mSkillCount' => 2, 'gSkillCount' => 1, 'attack' => ['high' => 18, 'low' => 16], 'ranged' => ['energy' => '3d4+10', 'kinetic' => '2d8+10'], 'melee' => ['standard' => '2d8+10+Str', 'three' => '1d10+10+Str', 'four' => '1d8+10+Str']],
+				'11' => ['eac' => 23, 'kac' => 24, 'fort' => 10, 'ref' => 10, 'will' => 14, 'hp' => 155, 'adc' => 20, 'sdc' => 18, 'ability1' => 8, 'ability2' => 5, 'ability3' => 3, 'mSkills' => 25, 'gSkills' => 20, 'mSkillCount' => 2, 'gSkillCount' => 1, 'attack' => ['high' => 19, 'low' => 17], 'ranged' => ['energy' => '2d8+11', 'kinetic' => '2d10+11'], 'melee' => ['standard' => '2d10+11+Str', 'three' => '3d4+11+Str', 'four' => '1d10+11+Str']],
+				'12' => ['eac' => 25, 'kac' => 26, 'fort' => 11, 'ref' => 11, 'will' => 15, 'hp' => 170, 'adc' => 21, 'sdc' => 19, 'ability1' => 8, 'ability2' => 5, 'ability3' => 4, 'mSkills' => 27, 'gSkills' => 22, 'mSkillCount' => 2, 'gSkillCount' => 1, 'attack' => ['high' => 21, 'low' => 19], 'ranged' => ['energy' => '2d8+12', 'kinetic' => '2d10+12'], 'melee' => ['standard' => '2d12+12+Str', 'three' => '3d4+12+Str', 'four' => '1d12+12+Str']],
+				'13' => ['eac' => 26, 'kac' => 27, 'fort' => 12, 'ref' => 12, 'will' => 16, 'hp' => 190, 'adc' => 21, 'sdc' => 19, 'ability1' => 8, 'ability2' => 6, 'ability3' => 4, 'mSkills' => 28, 'gSkills' => 23, 'mSkillCount' => 2, 'gSkillCount' => 1, 'attack' => ['high' => 22, 'low' => 20], 'ranged' => ['energy' => '2d10+13', 'kinetic' => '4d6+13'], 'melee' => ['standard' => '6d4+13+Str', 'three' => '3d6+13+Str', 'four' => '3d4+13+Str']],
+				'14' => ['eac' => 27, 'kac' => 28, 'fort' => 12, 'ref' => 12, 'will' => 17, 'hp' => 215, 'adc' => 22, 'sdc' => 19, 'ability1' => 8, 'ability2' => 6, 'ability3' => 4, 'mSkills' => 30, 'gSkills' => 25, 'mSkillCount' => 2, 'gSkillCount' => 1, 'attack' => ['high' => 23, 'low' => 21], 'ranged' => ['energy' => '5d4+14', 'kinetic' => '4d8+14'], 'melee' => ['standard' => '6d6+14+Str', 'three' => '4d6+14+Str', 'four' => '3d6+14+Str']],
+				'15' => ['eac' => 28, 'kac' => 29, 'fort' => 13, 'ref' => 13, 'will' => 18, 'hp' => 235, 'adc' => 23, 'sdc' => 20, 'ability1' => 9, 'ability2' => 7, 'ability3' => 5, 'mSkills' => 31, 'gSkills' => 26, 'mSkillCount' => 2, 'gSkillCount' => 1, 'attack' => ['high' => 24, 'low' => 22], 'ranged' => ['energy' => '4d6+15', 'kinetic' => '6d6+15'], 'melee' => ['standard' => '5d8+15+Str', 'three' => '6d4+15+Str', 'four' => '2d10+15+Str']],
+				'16' => ['eac' => 29, 'kac' => 30, 'fort' => 14, 'ref' => 14, 'will' => 19, 'hp' => 255, 'adc' => 24, 'sdc' => 20, 'ability1' => 10, 'ability2' => 7, 'ability3' => 5, 'mSkills' => 33, 'gSkills' => 28, 'mSkillCount' => 2, 'gSkillCount' => 1, 'attack' => ['high' => 26, 'low' => 24], 'ranged' => ['energy' => '6d4+16', 'kinetic' => '5d8+16'], 'melee' => ['standard' => '6d8+16+Str', 'three' => '4d8+16+Str', 'four' => '3d8+16+Str']],
+				'17' => ['eac' => 30, 'kac' => 31, 'fort' => 15, 'ref' => 15, 'will' => 20, 'hp' => 285, 'adc' => 24, 'sdc' => 20, 'ability1' => 11, 'ability2' => 8, 'ability3' => 5, 'mSkills' => 34, 'gSkills' => 29, 'mSkillCount' => 2, 'gSkillCount' => 1, 'attack' => ['high' => 27, 'low' => 25], 'ranged' => ['energy' => '4d8+17', 'kinetic' => '4d12+17'], 'melee' => ['standard' => '8d6+17+Str', 'three' => '3d12+17+Str', 'four' => '6d4+17+Str']],
+				'18' => ['eac' => 31, 'kac' => 32, 'fort' => 16, 'ref' => 16, 'will' => 20, 'hp' => 320, 'adc' => 25, 'sdc' => 21, 'ability1' => 11, 'ability2' => 8, 'ability3' => 6, 'mSkills' => 36, 'gSkills' => 31, 'mSkillCount' => 2, 'gSkillCount' => 1, 'attack' => ['high' => 28, 'low' => 26], 'ranged' => ['energy' => '3d12+18', 'kinetic' => '8d6+18'], 'melee' => ['standard' => '8d8+18+Str', 'three' => '5d8+18+Str', 'four' => '4d8+18+Str']],
+				'19' => ['eac' => 32, 'kac' => 33, 'fort' => 16, 'ref' => 16, 'will' => 21, 'hp' => 350, 'adc' => 26, 'sdc' => 22, 'ability1' => 11, 'ability2' => 9, 'ability3' => 6, 'mSkills' => 37, 'gSkills' => 32, 'mSkillCount' => 2, 'gSkillCount' => 1, 'attack' => ['high' => 29, 'low' => 27], 'ranged' => ['energy' => '5d8+19', 'kinetic' => '6d10+19'], 'melee' => ['standard' => '9d8+19+Str', 'three' => '6d8+19+Str', 'four' => '3d12+19+Str']],
+				'20' => ['eac' => 34, 'kac' => 35, 'fort' => 17, 'ref' => 17, 'will' => 22, 'hp' => 395, 'adc' => 27, 'sdc' => 23, 'ability1' => 12, 'ability2' => 9, 'ability3' => 6, 'mSkills' => 39, 'gSkills' => 34, 'mSkillCount' => 2, 'gSkillCount' => 1, 'attack' => ['high' => 30, 'low' => 28], 'ranged' => ['energy' => '4d12+20', 'kinetic' => '8d8+20'], 'melee' => ['standard' => '13d6+20+Str', 'three' => '9d6+20+Str', 'four' => '5d8+20+Str']],
+				'21' => ['eac' => 35, 'kac' => 36, 'fort' => 18, 'ref' => 18, 'will' => 23, 'hp' => 425, 'adc' => 27, 'sdc' => 23, 'ability1' => 12, 'ability2' => 10, 'ability3' => 7, 'mSkills' => 40, 'gSkills' => 35, 'mSkillCount' => 2, 'gSkillCount' => 1, 'attack' => ['high' => 31, 'low' => 29], 'ranged' => ['energy' => '8d6+21', 'kinetic' => '6d12+21'], 'melee' => ['standard' => '15d6+21+Str', 'three' => '10d6+21+Str', 'four' => '4d12+21+Str']],
+				'22' => ['eac' => 37, 'kac' => 38, 'fort' => 18, 'ref' => 18, 'will' => 23, 'hp' => 470, 'adc' => 28, 'sdc' => 24, 'ability1' => 13, 'ability2' => 10, 'ability3' => 7, 'mSkills' => 42, 'gSkills' => 37, 'mSkillCount' => 2, 'gSkillCount' => 1, 'attack' => ['high' => 32, 'low' => 30], 'ranged' => ['energy' => '6d10+22', 'kinetic' => '8d10+22'], 'melee' => ['standard' => '17d6+22+Str', 'three' => '6d12+22+Str', 'four' => '8d6+22+Str']],
+				'23' => ['eac' => 38, 'kac' => 39, 'fort' => 19, 'ref' => 19, 'will' => 24, 'hp' => 510, 'adc' => 29, 'sdc' => 25, 'ability1' => 13, 'ability2' => 11, 'ability3' => 7, 'mSkills' => 43, 'gSkills' => 38, 'mSkillCount' => 2, 'gSkillCount' => 1, 'attack' => ['high' => 33, 'low' => 31], 'ranged' => ['energy' => '8d8+23', 'kinetic' => '13d6+23'], 'melee' => ['standard' => '12d10+23+Str', 'three' => '8d10+23+Str', 'four' => '6d10+23+Str']],
+				'24' => ['eac' => 40, 'kac' => 41, 'fort' => 20, 'ref' => 20, 'will' => 25, 'hp' => 550, 'adc' => 30, 'sdc' => 26, 'ability1' => 15, 'ability2' => 11, 'ability3' => 8, 'mSkills' => 45, 'gSkills' => 40, 'mSkillCount' => 2, 'gSkillCount' => 1, 'attack' => ['high' => 35, 'low' => 33], 'ranged' => ['energy' => '9d8+24', 'kinetic' => '15d6+24'], 'melee' => ['standard' => '21d6+24+Str', 'three' => '9d10+24+Str', 'four' => '8d8+24+Str']],
+				'25' => ['eac' => 41, 'kac' => 42, 'fort' => 21, 'ref' => 21, 'will' => 26, 'hp' => 600, 'adc' => 30, 'sdc' => 26, 'ability1' => 15, 'ability2' => 12, 'ability3' => 8, 'mSkills' => 46, 'gSkills' => 41, 'mSkillCount' => 2, 'gSkillCount' => 1, 'attack' => ['high' => 36, 'low' => 34], 'ranged' => ['energy' => '8d10+25', 'kinetic' => '16d6+25'], 'melee' => ['standard' => '12d12+25+Str', 'three' => '15d6+25+Str', 'four' => '6d12+25+Str']]
+			]
+		];
+		$sizes=['Fine'=>8,'Diminutive'=>4,'Tiny'=>2,'Small'=>1,'Medium'=>0,'Large'=>-1,'Huge'=>-2,'Gargantuan'=>-4,'Colossal'=>-8];
+		$spaces=['Fine'=>'1/2','Diminutive'=>'1','Tiny'=>'2-1/2','Small'=>'5','Medium'=>'5','Large'=>'10','Huge'=>'15','Gargantuan'=>'20','Colossal'=>'30'];
+		$sizeMod=$sizes[$size];
+		$subOneXp=['1/2'=>200,'1/3'=>135];
+		$xp=($customXp?$customXp:(isset($subOneXp[$cr])?$subOneXp[$cr]:($cr%2==0?400*intPow(2,$cr/2):600*intPow(2,($cr-1)/2))));
+		$align=false;
+		$stance=false;
+		$stanceStrs=[-2=>'Opp (P)',-1=>'Opp',0=>'Und',1=>'For',2=>'For (P)'];
+		if(is_string($alignment)) {
+			$align = $alignment;
+		}
+		else {
+			if(isset($alignment['alignment'])) {
+				$align = $alignment['alignment'];
+			}
+			$s_holy = stanceAxisValue($alignment['altruism'], $alignment['humility'], $alignment['purity']);
+			$s_order = stanceAxisValue($alignment['honesty'], $alignment['loyalty'], $alignment['law']);
+			$s_independent = stanceAxisValue($alignment['individualism'], $alignment['knowledge'], $alignment['work']);
+			$stance='bb/Stance/bb <input type="button" class="show-stance" value="Show"><ul class="stance">';
+			$stance.='<li class="axis"><b>Holiness</b> '.$stanceStrs[$s_holy].'</li>';
+			$stance.='<li>Altruism '.$stanceStrs[$alignment['altruism']].'</li>';
+			$stance.='<li>Humility '.$stanceStrs[$alignment['humility']].'</li>';
+			$stance.='<li>Purity '.$stanceStrs[$alignment['purity']].'</li>';
+			$stance.='<li class="axis"><b>Order</b> '.$stanceStrs[$s_order].'</li>';
+			$stance.='<li>Honesty '.$stanceStrs[$alignment['honesty']].'</li>';
+			$stance.='<li>Loyalty '.$stanceStrs[$alignment['loyalty']].'</li>';
+			$stance.='<li>Law '.$stanceStrs[$alignment['law']].'</li>';
+			$stance.='<li class="axis"><b>Independence</b> '.$stanceStrs[$s_independent].'</li>';
+			$stance.='<li>Individualism '.$stanceStrs[$alignment['individualism']].'</li>';
+			$stance.='<li>Knowledge '.$stanceStrs[$alignment['knowledge']].'</li>';
+			$stance.='<li>Work '.$stanceStrs[$alignment['work']].'</li>';
+			$stance.='</ul>';
+		}
+		$stats = $arrays[$role][strval($cr)];
+		$stats['scores'] = [];
+		foreach($scores as $score => $value) {
+			if(is_string($value)) {
+				switch ($value) {
+					case 'first':
+						$stats['scores'][$score] = $stats['ability1'];
+						break;
+					case 'second':
+						$stats['scores'][$score] = $stats['ability2'];
+						break;
+					case 'third':
+						$stats['scores'][$score] = $stats['ability3'];
+						break;
+					default:
+						$stats['scores'][$score] = 0;
+						break;
+				}
+			}
+			else {
+				$stats['scores'][$score] = $value;
+			}
+		}
+		foreach(['str','dex','con','int','wis','cha'] as $score) {
+			if(!isset($stats['scores'][$score]))
+				$stats['scores'][$score] = 0;
+		}
+		$stats['init'] = $stats['scores']['dex'];
+		$skillAbilities=[
+			'Acrobatics' => 'dex',
+			'Athletics' => 'str',
+			'Bluff' => 'cha',
+			'Computers' => 'int',
+			'Culture' => 'int',
+			'Diplomacy' => 'cha',
+			'Disguise' => 'cha',
+			'Engineering' => 'int',
+			'Intimidate' => 'cha',
+			'Life Science' => 'int',
+			'Medicine' => 'int',
+			'Mysticism' => 'wis',
+			'Perception' => 'wis',
+			'Physical Science' => 'int',
+			'Piloting' => 'dex',
+			'Profession' => isset($skills['profScore'])?$skills['profScore']:'',
+			'Sense Motive' => 'wis',
+			'Sleight of Hand' => 'dex',
+			'Stealth' => 'dex',
+			'Survival' => 'wis'
+		];
+		$stats['skills']=[];
+		if(is_array($skills)) {
+			foreach($skills as $skill => $value) {
+				if($skill=='profScore')
+					continue;
+				if(is_string($value)) {
+					switch ($value) {
+						case 'master':
+							$stats['skills'][$skill]=max($stats['mSkills'],isset($skillAbilities[$skill])?$stats['scores'][$skillAbilities[$skill]]:-INF);
+							break;
+						case 'good':
+							$stats['skills'][$skill]=max($stats['gSkills'],isset($skillAbilities[$skill])?$stats['scores'][$skillAbilities[$skill]]:-INF);
+							break;
+						default:
+							$stats['skills'][$skill]=isset($skillAbilities[$skill])?$stats['scores'][$skillAbilities[$skill]]:0;
+							break;
+					}
+				}
+				else {
+					$stats['skills'][$skill]=$value;
+				}
+			}
+		}
+		else {
+			$matches=[];
+			if(preg_match('/Perception \+?(-?[0-9]+)/', $skills, $matches))
+				$stats['skills']['Perception']=intval($matches[1]);
+		}
+		if(!isset($stats['skills']['Perception']))
+			$stats['skills']['Perception']=$stats['scores']['wis'];
+		foreach($grafts as $graft) {
+			foreach($graft as $stat => $mod) {
+				if(is_array($mod)) {
+					foreach($mod as $innerStat => $actualMod) {
+						$stats[$stat][$innerStat] += $actualMod;
+					}
+				}
+				else {
+					$stats[$stat] += $mod;
+				}
+			}
+		}
+		$sections=[
+			[
+				'title' => 'Defense',
+				'spaced' => false,
+				'texts' => quick_array([
+					"bb/HP/bb {$stats['hp']}",
+					"bb/EAC/bb {$stats['eac']}, bb/KAC/bb {$stats['kac']}",
+					sprintf('bb/Fort/bb %+d, bb/Ref/bb %+d, bb/Will/bb %+d',
+						$stats['fort'],
+						$stats['ref'],
+						$stats['will']
+					)
+				])
+			],
+			[
+				'title' => 'Offense',
+				'spaced' => false,
+				'texts' => quick_array([
+					'bb/Speed/bb '.(is_numeric($speed)?$speed.' ft.':$speed),
+					'bb/Space/bb '.$spaces[$size].' ft., bb/Reach/bb '.$reach.(is_string($reach)?'':' ft.')
+				])
+			],
+			[
+				'title' => 'Statistics',
+				'spaced' => false,
+				'texts' => quick_array([
+					sprintf('bb/STR/bb %+d, bb/DEX/bb %+d, bb/CON/bb %+d, bb/INT/bb %+d, bb/WIS/bb %+d, bb/CHA/bb %+d',
+						$stats['scores']['str']==-5?'—':$stats['scores']['str'],
+						$stats['scores']['dex']==-5?'—':$stats['scores']['dex'],
+						$stats['scores']['con']==-5?'—':$stats['scores']['con'],
+						$stats['scores']['int']==-5?'—':$stats['scores']['int'],
+						$stats['scores']['wis']==-5?'—':$stats['scores']['wis'],
+						$stats['scores']['cha']==-5?'—':$stats['scores']['cha']
+					)
+				])
+			],
+			[
+				'title' => 'Ecology',
+				'spaced' => false,
+				'texts' => quick_array([
+					'bb/Environment/bb '.$enviro,
+					'bb/Organization/bb '.$organiz
+				])
+			]
+		];
+		if($defAb!='')
+			array_push($sections[0]['texts'], quick_format('bb/Defensive Abilities/bb '.$defAb));
+		if($weak!='')
+			array_push($sections[0]['texts'], quick_format('bb/Weaknesses/bb '.$weak));
+		$spliceInd=1;
+		foreach ($attacks as $attackSet) {
+			$attackSetStr='bb/'.$attackSet['type'].'/bb ';
+			$lastAttack=count($attackSet['list'])-1;
+			$two=$lastAttack==1;
+			foreach ($attackSet['list'] as $ind => $attack) {
+				if($ind>0) {
+					if($attackSet['type'] == 'Multiattack') {
+						$attackSetStr.=', ';
+					}
+					elseif($two) {
+						$attackSetStr.=' or ';
+					}
+					else {
+						$attackSetStr.=', ';
+						if($ind==$lastAttack) {
+							$attackSetStr.='or ';
+						}
+					}
+				}
+				$atkDmg='';
+				if(isset($attack['customDmg']))
+					$atkDmg=$attack['customDmg'];
+				else
+					$atkDmg=$stats[$attackSet['type']=='Ranged'?'ranged':'melee'][$attack['dmg']];
+				$dmgStrConstMatch=[];
+				if(preg_match('/(\d+)\+str/i',$atkDmg,$dmgStrConstMatch)) {
+					$atkDmg=preg_replace('/\d+\+str/i',strval(intval($dmgStrConstMatch[1])+$stats['scores']['str']),$atkDmg);
+				}
+				$atkExtras='';
+				if(isset($attack['note']))
+					$atkExtras='; '.$attack['note'];
+				$attackSetStr.=sprintf('%s %+d (%s %s%s)',
+					$attack['name'],
+					$stats['attack'][$attack['attack']],
+					$atkDmg,
+					$attack['dmgType'],
+					$atkExtras
+				);
+			}
+			array_splice($sections[1]['texts'],$spliceInd,0,[quick_format($attackSetStr)]);
+			$spliceInd++;
+		}
+		if($offAbilities!='')
+			array_push($sections[1]['texts'], quick_format('bb/Offensive Abilities/bb '.$offAbilities));
+		if($spelllike) {
+			$lines=[sprintf('Spell-Like Abilities (CL %d%s)',
+				$spelllike['level'],
+				ordinalSuffix($spelllike['level'])
+			)];
+			foreach ($spelllike['spells'] as $spells) {
+				$spellLine=sprintf('/mm/%s—',$spells['perday'].(is_string($spells['perday'])?'':'/day'));
+				$first=true;
+				foreach ($spells['list'] as $spell) {
+					if($first) {
+						$first=false;
+					}
+					else {
+						$spellLine.=', ';
+					}
+					if(is_string($spell))
+						$spellLine.='ii/'.$spell.'/ii';
+					else {
+						$spellLine.='ii/'.$spell['name'].'/ii';
+						if(isset($spell['dc']) && $spell['dc'])
+							$spellLine.=sprintf(' (DC %d)',$spell['level']+$stats['sdc']);
+						if(isset($spell['note']))
+							$spellLine.=sprintf(' (%s)',$spell['note']);
+					}
+				}
+				array_push($lines, $spellLine);
+			}
+			$sections[1]['texts']=array_merge($sections[1]['texts'],quick_array($lines));
+		}
+		if(count($spellcast)>0) {
+			foreach ($spellcast as $class) {
+				$lines=[sprintf('%s Spells Known (CL %d%s; ranged %+d)',
+					$class['class'],
+					$class['level'],
+					ordinalSuffix($class['level']),
+					$stats['attack']['high']
+				)];
+				for($sl=12; $sl>=0; $sl--) {
+					if(!isset($class['spells'][$sl]))
+						continue;
+					$spells=$class['spells'][$sl];
+					$spellLine=sprintf('/mm/%d%s%s—',
+						$sl,
+						ordinalSuffix($sl),
+						isset($spells['perday'])?sprintf(' (%s)',$spells['perday'].(is_string($spells['perday'])?'':'/day')):''
+					);
+					$first=true;
+					foreach ($spells['list'] as $spell) {
+						if($first) {
+							$first=false;
+						}
+						else {
+							$spellLine.=', ';
+						}
+						if(is_string($spell))
+							$spellLine.='ii/'.$spell.'/ii';
+						else {
+							$spellLine.='ii/'.$spell['name'].'/ii';
+							if(isset($spell['count']) && $spell['count']>1)
+								$spellLine.=' x'.$spell['count'];
+							if(isset($spell['dc']) && $spell['dc'])
+								$spellLine.=sprintf(' (DC %d)',$sl+$stats['sdc']);
+							if(isset($spell['note']))
+								$spellLine.=sprintf(' (%s)',$spell['note']);
+						}
+					}
+					array_push($lines, $spellLine);
+				}
+				$sections[1]['texts']=array_merge($sections[1]['texts'],quick_array($lines));
+			}
+		}
+		if($spellnote!='')
+			array_push($sections[1]['texts'], quick_format($spellnote));
+		if($skills!='') {
+			$skillStr='bb/Skills/bb ';
+			if(is_string($skills)) {
+				$skillStr.=$skills;
+			}
+			else {
+				$first=true;
+				foreach($stats['skills'] as $skill => $mod) {
+					if($first)
+						$first=false;
+					else
+						$skillStr.=', ';
+					$skillStr.=sprintf('%s %+d',$skill,$mod);
+				}
+			}
+			array_push($sections[2]['texts'], quick_format($skillStr));
+		}
+		if(is_string($lang)) {
+			if($lang!='')
+				array_push($sections[2]['texts'], quick_format('Languages '.$lang));
+		}
+		else {
+			if(count($lang)>0) {
+				$langStr='bb/Languages/bb ';
+				$first=true;
+				foreach ($lang as $languge) {
+					if($first) {
+						$first=false;
+					}
+					else {
+						$langStr.=', ';
+					}
+					$langStr.=$languge;
+				}
+				array_push($sections[2]['texts'], quick_format($langStr));
+			}
+		}
+		if(is_string($other)) {
+			if($other!='')
+				array_push($sections[2]['texts'], quick_format('bb/Other Abilities/bb '.$other));
+		}
+		else {
+			if(count($other)>0) {
+				$otherStr='bb/Other Abilities/bb ';
+				$first=true;
+				foreach ($other as $ability) {
+					if($first) {
+						$first=false;
+					}
+					else {
+						$otherStr.=', ';
+					}
+					$otherStr.=$ability;
+				}
+				array_push($sections[2]['texts'], quick_format($otherStr));
+			}
+		}
+		if($gear!='')
+			array_push($sections[2]['texts'], quick_format('bb/Gear/bb '.$gear));
+		if(count($specAb)>0) {
+			$section=[
+				'title' => 'Special Abilities',
+				'spaced' => true,
+				'texts' => []
+			];
+			foreach ($specAb as $specAbility) {
+				$specAbilityLines=quick_array($specAbility['desc']);
+				for ($i=0; $i < count($specAbilityLines); $i++) { 
+					$specAbilityLines[$i]=preg_replace('/\$adc\$/',strval($stats['adc']),$specAbilityLines[$i]);
+				}
+				if(isset($specAbility['type']) && $specAbility['type']!==false)
+					array_push($section['texts'], quick_format("bb/{$specAbility['name']}/bb ({$specAbility['type']}) {$specAbilityLines[0]}"));
+				else
+					array_push($section['texts'], quick_format("bb/{$specAbility['name']}/bb {$specAbilityLines[0]}"));
+				$first=true;
+				foreach ($specAbilityLines as $specAbilityLine) {
+					if($first)
+						$first=false;
+					else
+						array_push($section['texts'], $specAbilityLine);
+				}
+			}
+			array_push($sections, $section);
+		}
+		if($desc!='')
+			array_push($sections, [
+				'title' => 'Description',
+				'spaced' => false,
+				'texts' => quick_array($desc)
+			]);
+		$vitals=[
+			'bb/XP/bb '.number_format($xp),
+			($align?$align.' ':'')."{$size} {$type}",
+			sprintf('bb/Init/bb %+d',$stats['init']).($senses!=''?'; bb/Senses/bb '.$senses:'').sprintf('; bb/Perception/bb %+d',$stats['skills']['Perception'])
+		];
+		if($stance)
+			array_splice($vitals, 2, 0, $stance);
+		if($race!='')
+			array_splice($vitals,1,0,[$race]);
+		if($aura!='')
+			array_push($vitals,'bb/Aura/bb '.$aura);
+		blockSF($name,'monster-header',[quick_format('ii/'.$lore.'/ii')]);
+		blockSF(
+			quick_format(($name2?$name2:$name).' bb/CR '.$cr.'/bb'),
+			'monster',
+			quick_array($vitals),
+			false,
+			$sections
 		);
 	}
 	function allomancy($metal='', $user=false, $categories=[], $burnTime='', $desc='', $flare='', $savantism=false) {

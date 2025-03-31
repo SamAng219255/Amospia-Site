@@ -35,7 +35,7 @@
 			'bb/Natural Engineers/bb: Nerubians gain a +1 racial bonus on Disable Device and Knowledge (engineering) checks.',
 			'bb/Venomous/bb: Nerubians gain the following extraordinary ability: A number of times per day equal to its Constitution modifier (minimum 1/day), a nerubian can envenom a weapon that it wields from glands near its mouth. Applying venom in this way is a swift action.',
 			'ii/Nerubian Venom/ii: Injury; save Fort DC 10 + 1/2 the user\'s Hit Dice + their Constitution modifier; frequency 1/round for 6 rounds; effect 1 Con; cure 1 save.',
-			'bb/Web/bb; Nerubians gain the web universal monster rule.',
+			'bb/Web/bb: Nerubians gain the web universal monster rule.',
 			'bb/Languages/bb: Nerubians begin play speaking Nerubian. Nerubians with high Intelligence scores can choose from Common, Orcish, Shath\'Yar, and the language of death.'
 		],
 		false
