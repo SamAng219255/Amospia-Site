@@ -137,8 +137,8 @@
 		'Ardcel',
 		'material',
 		quick_array([
-			'Ardcel is a silvery metal that is known for its mirror-like surface, its difficulty in collecting and refining, and its ability to resonate with the holiness within its wielder. Refining ardcel requires taking large quantities of veins of ore from the material plane that has formed from exposure to the essence of a plane with a holy stance for geological time spans. This ore is then heated and the slag removed continually to be refined down to approximately 1/1000th of the mass as ardcel.',
-			'When wielded by a creature with the holy stance, ardcel weapons receive a +1 sacred bonus to their attack rolls and weapon damage rolls and, against a creature with the unholy subtype, overcome DR cold iron. When wielded by an unholy creature, they take a -1 penalty to the same rolls. Ardcel weapons also overcome DR silver and holy. Ardcel does not rust and is therefore immune to rusting effects such as ii/rusting grasp/ii. Weapons made out of ardcel are always masterwork and the price of the masterwork component is factored into the price.',
+			'Ardcel is a silvery metal that is known for its mirror-like surface, its difficulty in collecting and refining, and its ability to resonate with the holiness within its wielder. Refining ardcel requires taking large quantities of veins of ore from the material plane that has formed from exposure to the essence of a good-aligned plane for geological time spans. This ore is then heated and the slag removed continually to be refined down to approximately 1/1000th of the mass as ardcel.',
+			'When wielded by a creature with a good alignment, ardcel weapons receive a +1 sacred bonus to their attack rolls and weapon damage rolls and, against a creature with the evil subtype, overcome DR cold iron. When wielded by an evil creature, they take a -1 penalty to the same rolls. Ardcel weapons also overcome DR silver and good. Ardcel does not rust and is therefore immune to rusting effects such as ii/rusting grasp/ii. Weapons made out of ardcel are always masterwork and the price of the masterwork component is factored into the price.',
 			'Ardcel has a hardness of 15 and 30 hit points per inch of thickness. Making a weapon out of ardcel adds 2,000 gp to its price.'
 		]),
 		true
@@ -389,7 +389,7 @@
 			'Lamin, or "edge metal", is a rather dark gray color that adamantly refuses to take much of a reflective surface. Lamin ore is primarily mined in Hell but can be found in at least small quantities in Abaddon, the Abyss, the Plane of Shadow, and Plane of Negative Energy. ',
 			'Lamin has a faint aura of evil.',
 			'Successful strikes with lamin weapons deal an additional +2 points of damage but deals 1 point of damage to the wielder which ignores any damage reduction, resistance, immunity,  hardness, or similar defenses the wielder may have. On a critical hit with a lamin weapon, it deals 1 negative level to the target and the wielder becomes fatigued as well. If the wielder is already fatigued they become exhausted. If the weapon has a larger critical hit modifier, it deals additional negative levels accordingly. (1 level for ×2, 2 for ×3, 3 for ×4, etc.) Undead targets take an equal number of points of Charisma damage instead and constructs take an equal number of additional points of damage. ',
-			'If a creature with DR/holy wears lamin armor, their damage reduction increases by +1.',
+			'If a creature with DR/good wears lamin armor, their damage reduction increases by +1.',
 			'Lamin has the same hardness and number of hit points as steel.',
 			sTable(
 				[
@@ -420,7 +420,7 @@
 		'Lost-Light Stone',
 		'material',
 		quick_array([
-			'Lost-light stone is an unusual gemstone found in the Plane of Shadow and Plane of Negative Energy but also in Abaddon, the Abyss, and Hell. Lost-light stones wear at all that is light and can be embedded in weapons to great effect. Lost-light weapons deal an extra 1 point of damage against creatures with a holy stance and, on a critical hit, deal 1 point of Intelligence damage to the target and blind them for 1d4 rounds, regardless of their stance.',
+			'Lost-light stone is an unusual gemstone found in the Plane of Shadow and Plane of Negative Energy but also in Abaddon, the Abyss, and Hell. Lost-light stones wear at all that is light and can be embedded in weapons to great effect. Lost-light weapons deal an extra 1 point of damage against creatures with a good alignment and, on a critical hit, deal 1 point of Intelligence damage to the target and blind them for 1d4 rounds, regardless of their alignment.',
 			'Adding lost-light stones to a weapon adds 2,000 gp to its price.'
 		]),
 		true
