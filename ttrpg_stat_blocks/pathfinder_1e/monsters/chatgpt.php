@@ -243,7 +243,7 @@
     spellBlockAuto(
         'Halls of the Bard',// $name,
         'Divination',// $school,
-        []'',// $descriptors=[],
+        [],// $descriptors=[],
         [
             'bard' => 5,
             'sorcerer' => 5,
