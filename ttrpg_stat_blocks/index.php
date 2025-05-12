@@ -1,6 +1,6 @@
-<?php require 'pageStart.php'; ?>
-<title>Mordan's Tower</title>
-<?php 
+<?php
+	$index_page=true;
+	require 'pageStart.php';
 	require 'blog.php';
 	//echo phpversion();
 	require 'pageEnd.php';

@@ -104,6 +104,8 @@
 		$pageCount=count($pages['entries']);
 		$filePathInfo=pathinfo(debug_backtrace()[0]['file']);
 		$getStr='';
+		$location_title_str='';
+
 		if(count($_GET)>0) {
 			$getStr='?';
 			$first=true;
@@ -149,6 +151,37 @@
 					break;
 				}
 			}
+		}
+
+		if(isset($_GET['path'])) {
+			$path_str_list=explode(',',$_GET['path']);
+			$path_pos=['nodes' => $pages['sort_tree']];
+			$location_title_str='';
+			$location_not_found=false;
+			foreach($path_str_list as $new_path_str) {
+				if($location_title_str != '')
+					$location_title_str = ' / '.$location_title_str;
+				$found=false;
+				foreach($path_pos['nodes'] as $potential_location_item) {
+					if($potential_location_item['name'] == $new_path_str) {
+						$path_pos=$potential_location_item;
+						$found=true;
+						break;
+					}
+				}
+				if(!$found) {
+					$location_not_found=true;
+					break;
+				}
+				$location_title_str = $path_pos['display_name'].$location_title_str;
+			}
+			if($location_not_found)
+				echo '<title>Error</title>';
+			else
+				echo '<title>'.$location_title_str.'</title>';
+		}
+		elseif(isset($index_page) and $index_page) {
+			echo "<title>Mordan's Vault</title>";
 		}
 	?>
 </head>
@@ -229,9 +262,10 @@
 						unset($tree_indices[$depth]);
 						unset($tree_counts[$depth]);
 						$depth--;
-						if($depth>=0)
+						if($depth>=0) {
 							$tree_indices[$depth]++;
 							echo '</ul></li>';
+						}
 					}
 					$sanity--;
 				}
@@ -292,7 +326,6 @@
 					$final_node=[];
 					$starting_flower=false;
 					$flower_node=[];
-					$location_title_str='';
 
 					$sanity=1000;
 					while($depth<count($tree_path)) {
@@ -323,9 +356,6 @@
 									$starting_flower=true;
 									$flower_node=$ptr;
 								}
-								if($location_title_str!=='')
-									$location_title_str='/'.$location_title_str;
-								$location_title_str=$ptr['display_name'].$location_title_str;
 							}
 							echo '<!--'.$ptr['type'].'-->';
 							if($ptr['type']=='branch') {
@@ -371,13 +401,9 @@
 						}
 						echo '</p><hr>';
 					}
-
-					if(isset($_GET['path'])) {
-						echo '<title>'.$location_title_str.'</title>';
-					}
 				?>
-			</div>
-		</nav>
+			</nav>
+		</div>
 		<main id="content">
 			<?php
 				if($pageId!='' && $pages['entries'][$pageId]['status']=='wip') {
