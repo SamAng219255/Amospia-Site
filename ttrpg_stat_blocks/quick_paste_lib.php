@@ -216,7 +216,7 @@
 	function block($name='', $type='', $texts=[], $spaced=false, $sections=[], $isLayered=false) {
 		$name_str=is_string($name) ? $name : $name['text'];
 		echo '<section class="block '.$type.($isLayered?' layered-block':'').'" id="block-'.str_replace(' ', '-', $name_str).'">';
-		echo '<div class="block-title'.(!is_string($name) && isset($name['titleLevel']) ? ' h'.$name['titleLevel'] : '').'">'.$name_str.'<a href="#" class="goto-top">Back to Top</a></div>';
+		echo '<header class="block-title'.(!is_string($name) && isset($name['titleLevel']) ? ' h'.$name['titleLevel'] : '').'">'.$name_str.'<a href="#" class="goto-top">Back to Top</a></header>';
 		$textCount=count($texts);
 		for($i=0; $i<$textCount; $i++) {
 			$lineClasses='';
@@ -287,7 +287,7 @@
 	}
 	function block2($name='', $type='', $level=false, $traits=[], $texts=[], $spaced=false, $sections=[]) {
 		echo '<section class="block block2 '.$type.'" id="block-'.str_replace(' ', '-', $name).'">';
-		echo '<div class="block-title">'.$name.'&nbsp;<span class="level-label">'.$type.' '.($level===false?'':$level).'</span></div>';
+		echo '<header class="block-title">'.$name.'&nbsp;<span class="level-label">'.$type.' '.($level===false?'':$level).'</span></header>';
 		echo '<a href="#" class="goto-top-2">Back to Top</a>';
 		echo '<div class="traits">';
 		foreach ($traits as $trait) {
@@ -348,7 +348,7 @@
 	}
 	function blockSF($name='', $type='', $texts=[], $spaced=false, $sections=[], $anchorSections=true) {
 		echo '<section class="block block-sf '.$type.'" id="block-'.str_replace(' ', '-', $name).'">';
-		echo '<div class="block-title">'.$name.'<a href="#" class="goto-top">Back to Top</a></div>';
+		echo '<header class="block-title">'.$name.'<a href="#" class="goto-top">Back to Top</a></header>';
 		$textCount=count($texts);
 		for($i=0; $i<$textCount; $i++) {
 			echo '<div class="p'.($spaced ? ' spaced' : '').'">'.$texts[$i].'</div>';
@@ -368,7 +368,7 @@
 
 	function blockStack($name='', $type='', $texts=[], $spaced=false, $sections=[], $isTop=true) {
 		echo '<section class="block '.$type.($isTop?'':' layered-block').'" id="block-'.str_replace(' ', '-', $name).'">';
-		echo '<div class="block-title">'.$name.'<a href="#" class="goto-top">Back to Top</a></div>';
+		echo '<header class="block-title">'.$name.'<a href="#" class="goto-top">Back to Top</a></header>';
 		$textCount=count($texts);
 		for($i=0; $i<$textCount; $i++) {
 			$lineClasses='';
@@ -1926,7 +1926,7 @@
 		return floor(($level+1)/3);
 	}
 	function classBlock($name, $desc, $role, $align, $hd, $parentClasses, $startWealth, $require, $classSkills, $skillsPerLevel, $bab, $showIter, $saves, $specials, $spells, $spellsSecondary, $features) {
-		echo '<section class="block class"><h2>'.$name.'</h2>';
+		echo '<section class="block class"><header><h2>'.$name.'</h2></header>';
 		echo '<p class="spaced">'.$desc.'</p>';
 		echo '<p class="spaced"><b>Role</b>: '.$role.'</p>';
 		echo '<p><b>Alignment</b>: '.$align.'.</p>';
