@@ -71,9 +71,13 @@
 		}
 		return $ptr;
 	}
+
+
+	$string_entries=file_get_contents($rootDir.'pages_entries.json');
+	$pages['entries']=json_decode($string_entries, true)['entries'];
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
 	<meta charset="utf-8">
 	<link rel="apple-touch-icon" sizes="180x180" href="/ttrpg_stat_blocks/img/apple-touch-icon.png">
@@ -95,6 +99,58 @@
 		//echo '	<link rel="shortcut icon" href="'.$originDir.'../img/icon2_256.png">'
 	?>
 	<script src="/ttrpg_stat_blocks/table_sort.js"></script>
+	<?php
+		$pageId='';
+		$pageCount=count($pages['entries']);
+		$filePathInfo=pathinfo(debug_backtrace()[0]['file']);
+		$getStr='';
+		if(count($_GET)>0) {
+			$getStr='?';
+			$first=true;
+			foreach ($_GET as $name => $val) {
+				if($name==='opennav')
+					continue;
+				if($first)
+					$first=false;
+				else
+					$getStr.='&';
+				$getStr.=$name.'='.urlencode($val);
+			}
+		}
+
+		if(isset($_GET['path'])) {
+			$get_path=explode(',', $_GET['path']);
+			$get_path_len=count($get_path);
+		}
+
+		$childCount=0;
+		foreach($pages['entries'] as $id => $entry) {
+			if($pageId=='' && $entry['file_name']===$filePathInfo['basename'].$getStr && endsWith($filePathInfo['dirname'],substr($entry['directory'],0,-1))) {
+				$pageId=$id;
+				echo '<title>'.$entry['display_name'].'</title>';
+			}
+			if(isset($get_path) && $get_path_len<=count($entry['sort_path'])) {
+				$match=true;
+				foreach ($get_path as $ind => $level) {
+					if($level!==$entry['sort_path'][$ind]) {
+						$match=false;
+						break;
+					}
+				}
+				if($match)
+					$childCount++;
+			}
+		}
+		if($pageId=='') {
+			foreach($pages['entries'] as $id => $entry) {
+				if($entry['file_name']===$filePathInfo['basename'] && endsWith($filePathInfo['dirname'],substr($entry['directory'],0,-1))) {
+					$pageId=$id;
+					echo '<title>'.$entry['display_name'].'</title>';
+					break;
+				}
+			}
+		}
+	?>
 </head>
 <?php echo '<body onload="setup()"'.($lightMode?' class="light"':'').'>' ?>
 	<div id="sidebar">
@@ -104,60 +160,6 @@
 		<p id="sidebar-label">Navigation</p>
 		<ul class="menu-vertical">
 			<?php
-
-				$string_entries=file_get_contents($rootDir.'pages_entries.json');
-				$pages['entries']=json_decode($string_entries, true)['entries'];
-
-				$pageId='';
-				$pageCount=count($pages['entries']);
-				$filePathInfo=pathinfo(debug_backtrace()[0]['file']);
-				$getStr='';
-				if(count($_GET)>0) {
-					$getStr='?';
-					$first=true;
-					foreach ($_GET as $name => $val) {
-						if($name==='opennav')
-							continue;
-						if($first)
-							$first=false;
-						else
-							$getStr.='&';
-						$getStr.=$name.'='.urlencode($val);
-					}
-				}
-
-				if(isset($_GET['path'])) {
-					$get_path=explode(',', $_GET['path']);
-					$get_path_len=count($get_path);
-				}
-
-				$childCount=0;
-				foreach($pages['entries'] as $id => $entry) {
-					if($pageId=='' && $entry['file_name']===$filePathInfo['basename'].$getStr && endsWith($filePathInfo['dirname'],substr($entry['directory'],0,-1))) {
-						$pageId=$id;
-						echo '<title>'.$entry['display_name'].'</title>';
-					}
-					if(isset($get_path) && $get_path_len<=count($entry['sort_path'])) {
-						$match=true;
-						foreach ($get_path as $ind => $level) {
-							if($level!==$entry['sort_path'][$ind]) {
-								$match=false;
-								break;
-							}
-						}
-						if($match)
-							$childCount++;
-					}
-				}
-				if($pageId=='') {
-					foreach($pages['entries'] as $id => $entry) {
-						if($entry['file_name']===$filePathInfo['basename'] && endsWith($filePathInfo['dirname'],substr($entry['directory'],0,-1))) {
-							$pageId=$id;
-							echo '<title>'.$entry['display_name'].'</title>';
-							break;
-						}
-					}
-				}
 				$opennav = isset($_GET['opennav']) && $_GET['opennav']=='1';
 
 				$depth=0;
@@ -223,13 +225,13 @@
 						}
 					}
 					else {
-						echo '</ul></li>';
 						unset($tree_path[$depth]);
 						unset($tree_indices[$depth]);
 						unset($tree_counts[$depth]);
 						$depth--;
 						if($depth>=0)
 							$tree_indices[$depth]++;
+							echo '</ul></li>';
 					}
 					$sanity--;
 				}
@@ -279,7 +281,7 @@
 					<span class="slider"></span>
 				</label>
 			</div>
-			<div id="top-nav">
+			<nav id="top-nav">
 				<?php
 					$depth=0;
 					$tree_path=[$pages['sort_tree']];
@@ -375,8 +377,8 @@
 					}
 				?>
 			</div>
-		</div>
-		<div id="content">
+		</nav>
+		<main id="content">
 			<?php
 				if($pageId!='' && $pages['entries'][$pageId]['status']=='wip') {
 					if(isset($pages['entries'][$pageId]['note']))

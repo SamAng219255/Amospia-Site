@@ -8,7 +8,7 @@
 				echo '</a> setting.</div>';
 			}
 		?>
-		</div>
+		</main>
 	</div>
 </body>
 </html>

@@ -215,7 +215,7 @@
 	}
 	function block($name='', $type='', $texts=[], $spaced=false, $sections=[], $isLayered=false) {
 		$name_str=is_string($name) ? $name : $name['text'];
-		echo '<div class="block '.$type.($isLayered?' layered-block':'').'" id="block-'.str_replace(' ', '-', $name_str).'">';
+		echo '<section class="block '.$type.($isLayered?' layered-block':'').'" id="block-'.str_replace(' ', '-', $name_str).'">';
 		echo '<div class="block-title'.(!is_string($name) && isset($name['titleLevel']) ? ' h'.$name['titleLevel'] : '').'">'.$name_str.'<a href="#" class="goto-top">Back to Top</a></div>';
 		$textCount=count($texts);
 		for($i=0; $i<$textCount; $i++) {
@@ -283,10 +283,10 @@
 			}
 			echo '</div>';
 		}
-		echo '</div>';
+		echo '</section>';
 	}
 	function block2($name='', $type='', $level=false, $traits=[], $texts=[], $spaced=false, $sections=[]) {
-		echo '<div class="block block2 '.$type.'" id="block-'.str_replace(' ', '-', $name).'">';
+		echo '<section class="block block2 '.$type.'" id="block-'.str_replace(' ', '-', $name).'">';
 		echo '<div class="block-title">'.$name.'&nbsp;<span class="level-label">'.$type.' '.($level===false?'':$level).'</span></div>';
 		echo '<a href="#" class="goto-top-2">Back to Top</a>';
 		echo '<div class="traits">';
@@ -344,10 +344,10 @@
 			}
 			echo '</div>';
 		}
-		echo '</div>';
+		echo '</section>';
 	}
 	function blockSF($name='', $type='', $texts=[], $spaced=false, $sections=[], $anchorSections=true) {
-		echo '<div class="block block-sf '.$type.'" id="block-'.str_replace(' ', '-', $name).'">';
+		echo '<section class="block block-sf '.$type.'" id="block-'.str_replace(' ', '-', $name).'">';
 		echo '<div class="block-title">'.$name.'<a href="#" class="goto-top">Back to Top</a></div>';
 		$textCount=count($texts);
 		for($i=0; $i<$textCount; $i++) {
@@ -363,11 +363,11 @@
 			}
 			echo '</div>';
 		}
-		echo '</div>';
+		echo '</section>';
 	}
 
 	function blockStack($name='', $type='', $texts=[], $spaced=false, $sections=[], $isTop=true) {
-		echo '<div class="block '.$type.($isTop?'':' layered-block').'" id="block-'.str_replace(' ', '-', $name).'">';
+		echo '<section class="block '.$type.($isTop?'':' layered-block').'" id="block-'.str_replace(' ', '-', $name).'">';
 		echo '<div class="block-title">'.$name.'<a href="#" class="goto-top">Back to Top</a></div>';
 		$textCount=count($texts);
 		for($i=0; $i<$textCount; $i++) {
@@ -462,7 +462,7 @@
 			}
 			echo '</div>';
 		}
-		echo '</div>';
+		echo '</section>';
 	}
 	function blockList($tree) {
 		if(!isset($tree['children'])) {
@@ -1926,7 +1926,7 @@
 		return floor(($level+1)/3);
 	}
 	function classBlock($name, $desc, $role, $align, $hd, $parentClasses, $startWealth, $require, $classSkills, $skillsPerLevel, $bab, $showIter, $saves, $specials, $spells, $spellsSecondary, $features) {
-		echo '<h2>'.$name.'</h2>';
+		echo '<section class="block class"><h2>'.$name.'</h2>';
 		echo '<p class="spaced">'.$desc.'</p>';
 		echo '<p class="spaced"><b>Role</b>: '.$role.'</p>';
 		echo '<p><b>Alignment</b>: '.$align.'.</p>';
@@ -2063,6 +2063,7 @@
 				echo $text.'</p>';
 			}
 		}
+		echo '</section>';
 	}
 	function dragonTalent($name='', $desc='', $prereq=false) {
 		$texts = '';
@@ -3193,7 +3194,7 @@
 		echo labeledSTable($label ,$headers, $rows, $horizontal, $expand, $allowSort, $inline);
 	}
 	function contents($items, $custom_title=false, $primary=true) {
-		echo '<div class="to-contents"'.($primary ? ' id="top"' : '').'>';
+		echo '<nav class="to-contents"'.($primary ? ' id="top"' : '').'>';
 		echo '<div class="toc-title">'.($custom_title ? $custom_title : 'Contents').'</div>';
 		echo '<ul class="toc-contents">';
 
@@ -3241,7 +3242,7 @@
 			}
 			$sanity--;
 		}
-		echo '</ul></div>';
+		echo '</ul></nav>';
 	}
 	function prices_IDec2I(&$price) {
 		$price['I']='0x'.strtoupper(dechex($price['IDec']));
