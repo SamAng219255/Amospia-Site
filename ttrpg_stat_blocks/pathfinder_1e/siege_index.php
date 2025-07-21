@@ -15,10 +15,6 @@
 	fireNum={'melee':0,'direct':1,'indirect':2};
 	sizeNum={'fine':0,'diminutive':1,'tiny':2,'small':3,'medium':4,'large':5,'huge':6,'gargantuan':7,'colossal':8};
 	initialSortFunc=function(a,b) {
-		if(a.children[0].tagName=='TH')
-			return -1;
-		else if(b.children[0].tagName=='TH')
-			return 1;
 		return 8 * comp(fireNum[a.children[2].innerText.toLowerCase()],fireNum[b.children[2].innerText.toLowerCase()]) +
 			4 * comp(sizeNum[a.children[3].innerText.toLowerCase()],sizeNum[b.children[3].innerText.toLowerCase()]) +
 			2 * comp(a.children[1].innerText.toLowerCase(),b.children[1].innerText.toLowerCase()) +

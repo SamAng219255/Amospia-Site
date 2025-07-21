@@ -10365,6 +10365,182 @@
 				"aliens_sf"
 			],
 			"status": "done"
+		},
+		"wisin": {
+			"display_name": "Wisin",
+			"file_name": "wisin.php",
+			"directory": "pathfinder_1e/topics/amospia/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"monsters_am"
+			],
+			"status": "done"
+		},
+		"kelubnar": {
+			"display_name": "Kelubnar",
+			"file_name": "kelubnar.php",
+			"directory": "pathfinder_1e/topics/amospia/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"monsters_am"
+			],
+			"status": "done"
+		},
+		"fauflang": {
+			"display_name": "Fauflang",
+			"file_name": "fauflang.php",
+			"directory": "pathfinder_1e/topics/amospia/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"monsters_am"
+			],
+			"status": "done"
+		},
+		"fauflud": {
+			"display_name": "Fauflud",
+			"file_name": "fauflud.php",
+			"directory": "pathfinder_1e/topics/amospia/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"monsters_am"
+			],
+			"status": "done"
+		},
+		"faþufl": {
+			"display_name": "Faþufl",
+			"file_name": "faþufl.php",
+			"directory": "pathfinder_1e/topics/amospia/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"monsters_am"
+			],
+			"status": "done"
+		},
+		"fauflaʒ": {
+			"display_name": "Fauflaʒ",
+			"file_name": "fauflaʒ.php",
+			"directory": "pathfinder_1e/topics/amospia/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"monsters_am"
+			],
+			"status": "done"
+		},
+		"apfau": {
+			"display_name": "Apfau",
+			"file_name": "apfau.php",
+			"directory": "pathfinder_1e/topics/amospia/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"monsters_am"
+			],
+			"status": "done"
+		},
+		"gozʒi": {
+			"display_name": "Gozʒi",
+			"file_name": "gozʒi.php",
+			"directory": "pathfinder_1e/topics/amospia/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"amospia",
+				"monsters_am"
+			],
+			"status": "done"
+		},
+		"dictation": {
+			"display_name": "Dictation",
+			"file_name": "dictation.php",
+			"directory": "pathfinder_1e/spells/",
+			"sort_path": [
+				"pathfinder_1e",
+				"spells"
+			],
+			"status": "done"
+		},
+		"light_line": {
+			"display_name": "Light Line",
+			"file_name": "light_line.php",
+			"directory": "pathfinder_1e/spells/",
+			"sort_path": [
+				"pathfinder_1e",
+				"spells"
+			],
+			"status": "done"
+		},
+		"mage_glass": {
+			"display_name": "Mage Glass",
+			"file_name": "mage_glass.php",
+			"directory": "pathfinder_1e/spells/",
+			"sort_path": [
+				"pathfinder_1e",
+				"spells"
+			],
+			"status": "done"
+		},
+		"mage_silk": {
+			"display_name": "Mage Silk",
+			"file_name": "mage_silk.php",
+			"directory": "pathfinder_1e/spells/",
+			"sort_path": [
+				"pathfinder_1e",
+				"spells"
+			],
+			"status": "done"
+		},
+		"magnetize": {
+			"display_name": "Magnetize",
+			"file_name": "magnetize.php",
+			"directory": "pathfinder_1e/spells/",
+			"sort_path": [
+				"pathfinder_1e",
+				"spells"
+			],
+			"status": "done"
+		},
+		"spellwatch": {
+			"display_name": "Spellwatch",
+			"file_name": "spellwatch.php",
+			"directory": "pathfinder_1e/spells/",
+			"sort_path": [
+				"pathfinder_1e",
+				"spells"
+			],
+			"status": "done"
+		},
+		"wash": {
+			"display_name": "Wash",
+			"file_name": "wash.php",
+			"directory": "pathfinder_1e/spells/",
+			"sort_path": [
+				"pathfinder_1e",
+				"spells"
+			],
+			"status": "done"
+		},
+		"animate_copper_golem": {
+			"display_name": "Animate Copper Golem",
+			"file_name": "animate_copper_golem.php",
+			"directory": "pathfinder_1e/spells/",
+			"sort_path": [
+				"pathfinder_1e",
+				"spells"
+			],
+			"status": "done"
 		}
 	}
 }

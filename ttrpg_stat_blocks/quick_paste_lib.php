@@ -82,6 +82,8 @@
 	}
 	function quick_format_string($subject) {
 		$str=$subject;
+		while($str != ($new_str = preg_replace('/(li\/(?:[^|]*?))\/\/((?:[^|]*?)\|(?:[\s\S]+?)\/li)/', "$1\u{E100}\u{E100}$2", $str)))
+			$str = $new_str;
 		$str=preg_replace('/\/\//', "\u{E100}", $str);
 		$str=preg_replace('/ ?\/bb/', '</b>', $str);
 		$str=preg_replace('/bb\/ ?/', '<b>', $str);
@@ -1261,8 +1263,13 @@
 				else {
 					$attackRoll=sprintf('%+d',$attack['mod']+$statMods[$attack['stat']]+$babNum+$sizeMod);
 					if(isset($attack['iterative'])) {
-						for($i=$babNum-5; $i>0; $i-=5) { 
-							$attackRoll.=sprintf('/%+d',$attack['mod']+$statMods[$attack['stat']]+$i+$sizeMod+$attack['iterative']);
+						$iterBab=$babNum-5;
+						for($i=0; $i<3; $i++) { 
+							$attackRoll.=sprintf('/%+d',$attack['mod']+$statMods[$attack['stat']]+$iterBab+$sizeMod+$attack['iterative']);
+							$iterBab-=5;
+							if($iterBab<=0) {
+								break;
+							}
 						}
 					}
 					$attackSetStr.=sprintf('%s %s (%s)',
@@ -1359,7 +1366,7 @@
 			array_push($sections[1]['texts'], quick_format($spellnote));
 		if(is_string($feats)) {
 			if($feats!='')
-				array_push($sections[2]['texts'], quick_format('Feats '.$feats));
+				array_push($sections[2]['texts'], quick_format('bb/Feats/bb '.$feats));
 		}
 		else {
 			if(count($feats)>0) {
@@ -1451,7 +1458,7 @@
 		}
 		if(is_string($lang)) {
 			if($lang!='')
-				array_push($sections[2]['texts'], quick_format('Languages '.$lang));
+				array_push($sections[2]['texts'], quick_format('bb/Languages/bb '.$lang));
 		}
 		else {
 			if(count($lang)>0) {
@@ -3125,7 +3132,7 @@
 			$sections
 		);
 	}
-	function sTable($headers, $rows, $horizontal=true, $expand=true, $allowSort=true, $inline=false) {
+	function sTable($headers, $rows, $horizontal=true, $expand=true, $allowSort=true, $inline=false, $caption=false) {
 		$classes='';
 		if($expand)
 			$classes.=($classes===''?'':' ').'expand';
@@ -3136,36 +3143,48 @@
 		if($inline)
 			$classes.=($classes===''?'':' ').'inline';
 		$str='<div class="table-wrapper'.($classes!==''?' '.$classes:'').'"><table'.($classes!==''?' class="'.$classes.'"':'').'>';
+		if(is_string($caption)) {
+			$str .= '<tcaption>' . $caption . '</tcaption>';
+		}
 		if($horizontal) {
 			$headerCount=count($headers);
-			$str .= '<tr>';
+			$str .= '<thead><tr>';
 			for($i=0; $i<$headerCount; $i++) {
-				$str .= "<th>{$headers[$i]}</th>";
+				$str .= "<th scope=\"col\">{$headers[$i]}</th>";
 			}
-			$str .= '</tr>';
+			$str .= '</tr></thead><tbody>';
 			$rowCount=count($rows);
 			for($i=0; $i<$rowCount; $i++) {
 				$colCount=count($rows[$i]);
 				$str .= '<tr>';
 				for($j=0; $j<$colCount; $j++) {
+					if($j==0)
+						$str .= '<th scope="row">';
+					else
+						$str .= '<td>';
 					if($j==0 && isset($rows[$i]['link'])) {
-						$str .= "<td><a href=\"{$rows[$i]['link']}\">{$rows[$i][$j]}</a></td>";
+						$str .= "<a href=\"{$rows[$i]['link']}\">{$rows[$i][$j]}</a>";
 						$colCount--;
 					}
 					else
-						$str .= "<td>{$rows[$i][$j]}</td>";
+						$str .= $rows[$i][$j];
+					if($j==0)
+						$str .= '</th>';
+					else
+						$str .= '</td>';
 				}
 				$str .= '</tr>';
 			}
 		}
 		else {
+			$str .= '<tbody>';
 			$rowCount=count($rows);
 			$headerCount=count($headers);
 			$fullCount=max($rowCount,$headerCount);
 			for($i=0; $i<$fullCount; $i++) {
 				$str .= '<tr>';
 				if($i<$headerCount) {
-					$str .= "<th>{$headers[$i]}</th>";
+					$str .= "<th scope=\"row\">{$headers[$i]}</th>";
 				}
 				if($i<$rowCount) {
 					$colCount=count($rows[$i]);
@@ -3181,7 +3200,7 @@
 				$str .= '</tr>';
 			}
 		}
-		$str .= '</table></div>';
+		$str .= '</tbody></table></div>';
 		return $str;
 	}
 	function table($headers, $rows, $horizontal=true, $expand=true, $allowSort=true, $inline=false) {

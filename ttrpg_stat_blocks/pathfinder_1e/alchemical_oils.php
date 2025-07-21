@@ -14,10 +14,6 @@
 	initialSort=true;
 	profNum={'both':0,'weapon':1,'armor':2};
 	initialSortFunc=function(a,b) {
-		if(a.children[0].tagName=='TH')
-			return -1;
-		else if(b.children[0].tagName=='TH')
-			return 1;
 		return 4 * comp(profNum[a.children[2].innerText.toLowerCase()],profNum[b.children[2].innerText.toLowerCase()]) +
 			2 * comp(a.children[1].innerText.toLowerCase(),b.children[1].innerText.toLowerCase()) +
 			1 * comp(a.children[0].innerText.toLowerCase(),b.children[0].innerText.toLowerCase());

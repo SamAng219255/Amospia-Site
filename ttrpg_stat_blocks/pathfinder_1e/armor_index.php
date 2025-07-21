@@ -14,10 +14,6 @@
 	initialSort=true;
 	profNum={'light':0,'medium':1,'heavy':2,'shield':3};
 	initialSortFunc=function(a,b) {
-		if(a.children[0].tagName=='TH')
-			return -1;
-		else if(b.children[0].tagName=='TH')
-			return 1;
 		return 8 * comp(profNum[a.children[2].innerText.toLowerCase()],profNum[b.children[2].innerText.toLowerCase()]) +
 			4 * comp(a.children[3].innerText.toLowerCase(),b.children[3].innerText.toLowerCase()) +
 			2 * comp(a.children[1].innerText.toLowerCase(),b.children[1].innerText.toLowerCase()) +

@@ -13,10 +13,6 @@
 <script>
 	initialSort=true;
 	initialSortFunc=function(a,b) {
-		if(a.children[0].tagName=='TH')
-			return -1;
-		else if(b.children[0].tagName=='TH')
-			return 1;
 		return 4 * comp(a.children[1].innerText.toLowerCase(),b.children[1].innerText.toLowerCase()) + 
 			//2 * comp(a.children[2].innerText.toLowerCase(),b.children[2].innerText.toLowerCase()) + 
 			1 * comp(a.children[0].innerText.toLowerCase(),b.children[0].innerText.toLowerCase());
@@ -215,6 +211,94 @@
 				'Transmutation',
 				'arcanist, bloodrager, inquisitor, magus, occultist, redmantisassassin, sorcerer, wizard',
 				'Makes a weapon magically forceful, increasing the critical multiplier.'
+			],
+			[
+				'Mage Silk',
+				'link' => 'spells/mage_silk.php',
+				'0',
+				'Conjuration',
+				'arcanist, bloodrager, occultist, psychic, sorcerer, spiritualist, summoner, summoner (unchained), witch, wizard',
+				'Creates clothes made of opaque force.'
+			],
+			[
+				'Light Line',
+				'link' => 'spells/light_line.php',
+				'0',
+				'Conjuration',
+				'adept, bard, magus, medium, mesmerist, occultist, psychic, shaman, skald, sorcerer, spiritualist, summoner, summoner (unchained), witch, wizard',
+				'Conjures a rope made from solid light.'
+			],
+			[
+				'Wash',
+				'link' => 'spells/wash.php',
+				'0',
+				'Conjuration',
+				'adept, bard, cleric, magus, medium, mesmerist, occultist, oracle, psychic, shaman, skald, sorcerer, spiritualist, summoner, summoner (unchained), witch, wizard',
+				'Washes one Medium creature or object, or equivalent, per level.'
+			],
+			[
+				'Magnetize',
+				'link' => 'spells/magnetize.php',
+				'0',
+				'Conjuration',
+				'adept, bard, magus, medium, mesmerist, occultist, psychic, shaman, skald, sorcerer, spiritualist, summoner, summoner (unchained), witch, wizard',
+				'Magnetizes a magnetic object.'
+			],
+			[
+				'Dictation',
+				'link' => 'spells/dictation.php',
+				'0',
+				'Transmutation',
+				'adept, bard, cleric, druid, inquisitor, magus, medium, mesmerist, occultist, oracle, psychic, skald, sorcerer, summoner, summoner (unchained), witch, wizard',
+				'Writes spoken words.'
+			],
+			[
+				'Dictation',
+				'link' => 'spells/dictation.php',
+				'1',
+				'Transmutation',
+				'antipaladin, hunter, investigator, paladin, ranger',
+				'Writes spoken words.'
+			],
+			[
+				'Spellwatch',
+				'link' => 'spells/spellwatch.php',
+				'0',
+				'Transmutation',
+				'adept, bard, magus, medium, mesmerist, occultist, psychic, skald, sorcerer, spiritualist, summoner, summoner (unchained), witch, wizard',
+				'Tracks time.'
+			],
+			[
+				'Spellwatch',
+				'link' => 'spells/spellwatch.php',
+				'1',
+				'Transmutation',
+				'investigator',
+				'Tracks time.'
+			],
+			[
+				'Mage Glass',
+				'link' => 'spells/mage_glass.php',
+				'0',
+				'Divination',
+				'adept, bard, magus, medium, mesmerist, occultist, psychic, skald, sorcerer, spiritualist, summoner, summoner (unchained), witch, wizard',
+				'Magnifies the caster\'s vision.'
+			],
+			[
+				'Mage Glass',
+				'link' => 'spells/mage_glass.php',
+				'1',
+				'Divination',
+				'alchemist, investigator, ranger',
+				'Magnifies the caster\'s vision.'
+			],
+			[
+				'Animate Copper Golem',
+				'link' => 'spells/animate_copper_golem.php',
+				'1',
+				'Conjuration',
+				'bard, magus, medium, occultist, psychic, skald, sorcerer, spiritualist, summoner, summoner (unchained), witch, wizard',
+				'Animates a small golem to sort objects.'
 			]
 		]
 	);

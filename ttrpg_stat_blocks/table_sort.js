@@ -93,13 +93,13 @@ function setupTableSort() {
 		return;
 	theTable=findTable[0];
 	if(initialSort) {
-		let tarOrder=findTable.children().children().get();
+		let tarOrder=findTable.children("tbody").children().get();
 		tarOrder.sort(initialSortFunc);
 		for (let i = 0; i < tarOrder.length; i++) {
 			tarOrder[i].parentNode.appendChild(tarOrder[i]);
 		}
 	}
-	tableStorage=findTable.children().children().get();
+	tableStorage=findTable.children("tbody").children().get();
 	columnIndices={};
 	for(let j=0; j<findTable.length; j++) {
 		for(let i=0; i<findTable[j].children[0].children[0].childElementCount; i++) {
@@ -108,29 +108,21 @@ function setupTableSort() {
 	}
 
 	let sortFuncAsc = function(a, b) {
-		if(getRowCell(a,sortColumn).tagName=='TH')
-			return -1;
-		else if(getRowCell(b,sortColumn).tagName=='TH')
-			return 1;
 		return comp(getRowCell(a,sortColumn).innerText.toLowerCase(),getRowCell(b,sortColumn).innerText.toLowerCase());
 	}
 	let sortFuncDec = function(a, b) {
-		if(getRowCell(a,sortColumn).tagName=='TH')
-			return -1;
-		else if(getRowCell(b,sortColumn).tagName=='TH')
-			return 1;
 		return -comp(getRowCell(a,sortColumn).innerText.toLowerCase(),getRowCell(b,sortColumn).innerText.toLowerCase());
 	}
 	let sortFuncAscContextual = function(a, b) {
-		return sortFuncAsc(a,b)*(1<<($("table:not(.vertical):not(.no-sort)").children()[0].children[0].childElementCount))+initialSortFunc(a,b);
+		return sortFuncAsc(a,b)*(1<<($("table:not(.vertical):not(.no-sort)").children("thead").children()[0].childElementCount))+initialSortFunc(a,b);
 	}
 	let sortFuncDecContextual = function(a, b) {
-		return sortFuncDec(a,b)*(1<<($("table:not(.vertical):not(.no-sort)").children()[0].children[0].childElementCount))+initialSortFunc(a,b);
+		return sortFuncDec(a,b)*(1<<($("table:not(.vertical):not(.no-sort)").children("thead").children()[0].childElementCount))+initialSortFunc(a,b);
 	}
 
 	const tables=$("table:not(.vertical):not(.no-sort)");
 	for(let i=0; i<tables.length; i++) {
-		let headers=$($(tables[i]).children().children()[0]).children();
+		let headers=$(tables[i]).children("thead").children().children();
 		headers.on("click", function(e) {
 			let sortIndex=columnIndices[this.textContent];
 			sortColumn=sortIndex;
@@ -140,17 +132,17 @@ function setupTableSort() {
 				sort=false;
 				const tables=$("table:not(.vertical):not(.no-sort)");
 				for(let i=0; i<tables.length; i++)
-					$($(tables[i]).children().children()[0].children[sortIndex]).removeClass("sort-asc").removeClass("sort-dec");
+					$($(tables[i]).children("thead").children()[0].children[sortIndex]).removeClass("sort-asc").removeClass("sort-dec");
 			}
 			else {
 				const tables=$("table:not(.vertical):not(.no-sort)");
 				if(sortStatus.sort!==undefined) {
 					for(let i=0; i<tables.length; i++)
-						$($(tables[i]).children().children()[0].children[sortStatus.sort]).removeClass("sort-asc").removeClass("sort-dec")
+						$($(tables[i]).children("thead").children()[0].children[sortStatus.sort]).removeClass("sort-asc").removeClass("sort-dec")
 				}
 				sortStatus={sort:sortIndex,asc:(!sort || sortIndex!=sortStatus.sort || !sortStatus.asc)?1:0};
 				for(let i=0; i<tables.length; i++)
-					$($(tables[i]).children().children()[0].children[sortStatus.sort]).removeClass("sort-asc").removeClass("sort-dec").addClass(sortStatus.asc ? "sort-asc" : "sort-dec");
+					$($(tables[i]).children("thead").children()[0].children[sortStatus.sort]).removeClass("sort-asc").removeClass("sort-dec").addClass(sortStatus.asc ? "sort-asc" : "sort-dec");
 				let rows=$($("table:not(.vertical):not(.no-sort)").children()[0].children).get();
 				tarOrder.sort(sortStatus.asc ? sortFuncAscContextual : sortFuncDecContextual);
 			}

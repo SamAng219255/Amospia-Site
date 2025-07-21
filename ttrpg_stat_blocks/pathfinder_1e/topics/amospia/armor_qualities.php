@@ -15,10 +15,6 @@
 	bonusRegEx=/(?:((?:\+|-)\d) bonus|((?:\+|-)\d{1,3}(?:,\d{3})*) gp)/;
 	initialSort=true;
 	initialSortFunc=function(a,b) {
-		if(a.children[0].tagName=='TH')
-			return -1;
-		else if(b.children[0].tagName=='TH')
-			return 1;
 		const aTxt=a.children[1].innerText.toLowerCase();
 		const bTxt=b.children[1].innerText.toLowerCase();
 		const matchA=aTxt.match(bonusRegEx);

@@ -14,10 +14,6 @@
 <script>
 	initialSort=true;
 	initialSortFunc=function(a,b) {
-		if(a.children[0].tagName=='TH')
-			return -1;
-		else if(b.children[0].tagName=='TH')
-			return 1;
 		return 8 * comp(a.children[2].innerText.toLowerCase(),b.children[2].innerText.toLowerCase()) +
 			4 * comp(a.children[4].innerText.toLowerCase(),b.children[4].innerText.toLowerCase()) +
 			2 * comp(a.children[1].innerText.toLowerCase(),b.children[1].innerText.toLowerCase()) +

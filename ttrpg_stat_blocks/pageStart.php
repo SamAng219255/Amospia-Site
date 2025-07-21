@@ -80,6 +80,7 @@
 <html lang="en-US">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="apple-touch-icon" sizes="180x180" href="/ttrpg_stat_blocks/img/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/ttrpg_stat_blocks/img/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/ttrpg_stat_blocks/img/favicon-16x16.png">
@@ -89,17 +90,19 @@
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="msapplication-config" content="/ttrpg_stat_blocks/img/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="/jquery.js"></script>
 	<script src="/ttrpg_stat_blocks/mobileDetect.js"></script>
 	<?php
-		echo '	<link rel="stylesheet" type="text/css" href="'.$originDir.'theme.css?t='.time().'">';
+		echo '	<link rel="stylesheet" type="text/css" href="'.$originDir.'theme.css?t='.filemtime($rootDir.'theme.css').'">';
 		echo '	<script>rootDir="'.$originDir.'";'.($devMode ? ' devMode=true;' : '').'</script>';
-		echo '	<script src="'.$originDir.'menu.js?t='.time().'"></script>';
-		echo '	<script src="'.$originDir.'controllers.js?t='.time().'"></script>';
+		echo '	<script src="'.$originDir.'menu.js?t='.filemtime($rootDir.'menu.js').'"></script>';
+		echo '	<script src="'.$originDir.'controllers.js?t='.filemtime($rootDir.'controllers.js').'"></script>';
 		//echo '	<link rel="shortcut icon" href="'.$originDir.'../img/icon2_256.png">'
 	?>
 	<script src="/ttrpg_stat_blocks/table_sort.js"></script>
 	<?php
+		$desc_str='';
 		$pageId='';
 		$pageCount=count($pages['entries']);
 		$filePathInfo=pathinfo(debug_backtrace()[0]['file']);
@@ -148,6 +151,7 @@
 				if($entry['file_name']===$filePathInfo['basename'] && endsWith($filePathInfo['dirname'],substr($entry['directory'],0,-1))) {
 					$pageId=$id;
 					echo '<title>'.$entry['display_name'].'</title>';
+					$desc_str .= $entry['display_name'];
 					break;
 				}
 			}
@@ -175,20 +179,26 @@
 				}
 				$location_title_str = $path_pos['display_name'].$location_title_str;
 			}
-			if($location_not_found)
+			if($location_not_found) {
 				echo '<title>Error</title>';
-			else
+				$desc_str .= 'Error getting page information.';
+			}
+			else {
 				echo '<title>'.$location_title_str.'</title>';
+				$desc_str .= 'Navigation page; path: '.$location_title_str;
+			}
 		}
 		elseif(isset($index_page) and $index_page) {
 			echo "<title>Mordan's Vault</title>";
+			$desc_str .= 'Home Page with update notes.';
 		}
+		echo '<meta name="description" content="Mordan\'s Vault; table-top rpg stat blocks; '.$desc_str.'">';
 	?>
 </head>
 <?php echo '<body onload="setup()"'.($lightMode?' class="light"':'').'>' ?>
 	<div id="sidebar">
 		<div id="nav-controls">
-			<div id="menu-close"></div>
+			<button id="menu-close" aria-label="Close Navigation"></button>
 		</div>
 		<p id="sidebar-label">Navigation</p>
 		<ul class="menu-vertical">
@@ -309,9 +319,9 @@
 				?>
 			</div>
 			<div id="controls">
-				<div id="menu-open"></div>
+				<button id="menu-open" aria-label="Open Navigation"></button>
 				<label class="switch" id="light-switch">
-					<?php echo '<input type="checkbox" id="light"'.($lightMode?'checked':'').'>' ?>
+					<?php echo '<input type="checkbox" id="light"'.($lightMode?'checked':'').' aria-label="Light / Dark mode toggle switch.">' ?>
 					<span class="slider"></span>
 				</label>
 			</div>
