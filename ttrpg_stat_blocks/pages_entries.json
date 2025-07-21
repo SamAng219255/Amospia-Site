@@ -732,6 +732,7 @@
 				"topics",
 				"minecraft"
 			],
+			"setting": "minecraft",
 			"status": "done"
 		},
 		"npcs_mc": {
@@ -744,6 +745,7 @@
 				"minecraft",
 				"monsters_mc"
 			],
+			"setting": "minecraft",
 			"status": "done"
 		},
 		"templates_mc": {
@@ -756,6 +758,7 @@
 				"minecraft",
 				"monsters_mc"
 			],
+			"setting": "minecraft",
 			"status": "done"
 		},
 		"bee": {
@@ -1367,6 +1370,7 @@
 				"minecraft",
 				"equipment_mc"
 			],
+			"setting": "minecraft",
 			"status": "done"
 		},
 		"armor_mc": {
@@ -1379,6 +1383,7 @@
 				"minecraft",
 				"equipment_mc"
 			],
+			"setting": "minecraft",
 			"status": "done"
 		},
 		"special_materials_mc": {
@@ -1391,6 +1396,7 @@
 				"minecraft",
 				"equipment_mc"
 			],
+			"setting": "minecraft",
 			"status": "done"
 		},
 		"misc_equip_mc": {
@@ -1403,6 +1409,7 @@
 				"minecraft",
 				"equipment_mc"
 			],
+			"setting": "minecraft",
 			"status": "done"
 		},
 		"potions_mc": {
@@ -1443,6 +1450,7 @@
 				"magic_items_mc",
 				"magic_weapons_mc"
 			],
+			"setting": "minecraft",
 			"status": "done"
 		},
 		"ranged_qualities_mc": {
@@ -1456,6 +1464,7 @@
 				"magic_items_mc",
 				"magic_weapons_mc"
 			],
+			"setting": "minecraft",
 			"status": "done"
 		},
 		"armor_qualities_mc": {
@@ -1469,6 +1478,7 @@
 				"magic_items_mc",
 				"magic_armor_mc"
 			],
+			"setting": "minecraft",
 			"status": "done"
 		},
 		"shield_qualities_mc": {
@@ -1482,6 +1492,7 @@
 				"magic_items_mc",
 				"magic_armor_mc"
 			],
+			"setting": "minecraft",
 			"status": "done"
 		},
 		"enchants_mc": {
@@ -3772,7 +3783,8 @@
 				"amospia",
 				"equipment_am"
 			],
-			"status": "empty"
+			"status": "empty",
+			"setting": "amospia"
 		},
 		"armor_am": {
 			"display_name": "Armor",
@@ -3784,7 +3796,8 @@
 				"amospia",
 				"equipment_am"
 			],
-			"status": "done"
+			"status": "done",
+			"setting": "amospia"
 		},
 		"special_materials_am": {
 			"display_name": "Special Materials",
@@ -3796,7 +3809,8 @@
 				"amospia",
 				"equipment_am"
 			],
-			"status": "done"
+			"status": "done",
+			"setting": "amospia"
 		},
 		"misc_equip_am": {
 			"display_name": "Miscellaneous Equipment",
@@ -3808,7 +3822,8 @@
 				"amospia",
 				"equipment_am"
 			],
-			"status": "empty"
+			"status": "empty",
+			"setting": "amospia"
 		},
 		"armor_qualities_am": {
 			"display_name": "Armor Qualities",
@@ -3821,7 +3836,8 @@
 				"magic_items_am",
 				"magic_armor_am"
 			],
-			"status": "empty"
+			"status": "empty",
+			"setting": "amospia"
 		},
 		"shield_qualities_am": {
 			"display_name": "Shield Qualities",
@@ -3834,7 +3850,8 @@
 				"magic_items_am",
 				"magic_armor_am"
 			],
-			"status": "empty"
+			"status": "empty",
+			"setting": "amospia"
 		},
 		"specific_armors_am": {
 			"display_name": "Specific Magic Armor",
@@ -3847,7 +3864,8 @@
 				"magic_items_am",
 				"magic_armor_am"
 			],
-			"status": "empty"
+			"status": "empty",
+			"setting": "amospia"
 		},
 		"melee_qualities_am": {
 			"display_name": "Melee Qualities",
@@ -3860,7 +3878,8 @@
 				"magic_items_am",
 				"magic_weapons_am"
 			],
-			"status": "done"
+			"status": "done",
+			"setting": "amospia"
 		},
 		"ranged_qualities_am": {
 			"display_name": "Ranged Qualities",
@@ -3873,7 +3892,8 @@
 				"magic_items_am",
 				"magic_weapons_am"
 			],
-			"status": "empty"
+			"status": "empty",
+			"setting": "amospia"
 		},
 		"specific_weapons_am": {
 			"display_name": "Specific Magic Weapons",
@@ -3886,7 +3906,8 @@
 				"magic_items_am",
 				"magic_weapons_am"
 			],
-			"status": "done"
+			"status": "done",
+			"setting": "amospia"
 		},
 		"wondrous_am": {
 			"display_name": "Wondrous Items",
@@ -3898,7 +3919,8 @@
 				"amospia",
 				"magic_items_am"
 			],
-			"status": "done"
+			"status": "done",
+			"setting": "amospia"
 		},
 		"monsters_am": {
 			"display_name": "Monsters Index",
@@ -3909,7 +3931,8 @@
 				"topics",
 				"amospia"
 			],
-			"status": "done"
+			"status": "done",
+			"setting": "amospia"
 		},
 		"npcs_am": {
 			"display_name": "NPCs Index",
@@ -3921,7 +3944,8 @@
 				"amospia",
 				"monsters_am"
 			],
-			"status": "empty"
+			"status": "empty",
+			"setting": "amospia"
 		},
 		"templates_am": {
 			"display_name": "Templates Index",
@@ -3946,7 +3970,8 @@
 				"monsters_am",
 				"templates_am"
 			],
-			"status": "done"
+			"status": "done",
+			"setting": "amospia"
 		},
 		"races_am": {
 			"display_name": "Races",
@@ -3957,7 +3982,8 @@
 				"topics",
 				"amospia"
 			],
-			"status": "done"
+			"status": "done",
+			"setting": "amospia"
 		},
 		"spells_am": {
 			"display_name": "Spells",
@@ -3968,7 +3994,8 @@
 				"topics",
 				"amospia"
 			],
-			"status": "done"
+			"status": "done",
+			"setting": "amospia"
 		},
 		"void_plate": {
 			"display_name": "Void Plate",
@@ -4556,7 +4583,8 @@
 				"amospia",
 				"magic_items_am"
 			],
-			"status": "done"
+			"status": "done",
+			"setting": "amospia"
 		},
 		"arkon": {
 			"display_name": "The Arkon",
@@ -10376,7 +10404,8 @@
 				"amospia",
 				"monsters_am"
 			],
-			"status": "done"
+			"status": "done",
+			"setting": "amospia"
 		},
 		"kelubnar": {
 			"display_name": "Kelubnar",
@@ -10388,7 +10417,8 @@
 				"amospia",
 				"monsters_am"
 			],
-			"status": "done"
+			"status": "done",
+			"setting": "amospia"
 		},
 		"fauflang": {
 			"display_name": "Fauflang",
@@ -10400,7 +10430,8 @@
 				"amospia",
 				"monsters_am"
 			],
-			"status": "done"
+			"status": "done",
+			"setting": "amospia"
 		},
 		"fauflud": {
 			"display_name": "Fauflud",
@@ -10412,7 +10443,8 @@
 				"amospia",
 				"monsters_am"
 			],
-			"status": "done"
+			"status": "done",
+			"setting": "amospia"
 		},
 		"faþufl": {
 			"display_name": "Faþufl",
@@ -10424,7 +10456,8 @@
 				"amospia",
 				"monsters_am"
 			],
-			"status": "done"
+			"status": "done",
+			"setting": "amospia"
 		},
 		"fauflaʒ": {
 			"display_name": "Fauflaʒ",
@@ -10436,7 +10469,8 @@
 				"amospia",
 				"monsters_am"
 			],
-			"status": "done"
+			"status": "done",
+			"setting": "amospia"
 		},
 		"apfau": {
 			"display_name": "Apfau",
@@ -10448,7 +10482,8 @@
 				"amospia",
 				"monsters_am"
 			],
-			"status": "done"
+			"status": "done",
+			"setting": "amospia"
 		},
 		"gozʒi": {
 			"display_name": "Gozʒi",
@@ -10460,7 +10495,8 @@
 				"amospia",
 				"monsters_am"
 			],
-			"status": "done"
+			"status": "done",
+			"setting": "amospia"
 		},
 		"dictation": {
 			"display_name": "Dictation",

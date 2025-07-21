@@ -132,7 +132,30 @@
 		foreach($pages['entries'] as $id => $entry) {
 			if($pageId=='' && $entry['file_name']===$filePathInfo['basename'].$getStr && endsWith($filePathInfo['dirname'],substr($entry['directory'],0,-1))) {
 				$pageId=$id;
+
+				if($entry['sort_path'][0] == 'pathfinder_1e') {
+					$desc_str .= 'System = Pathfinder, Pathfinder 1st Ed, Pathfinder 1E, Pathfinder 1st Edition; ';
+				}
+				elseif($entry['sort_path'][0] == 'pathfinder_2e') {
+					$desc_str .= 'System = Pathfinder 2nd Ed, Pathfinder 2E, Pathfinder 2nd Edition; ';
+				}
+				elseif($entry['sort_path'][0] == 'starfinder') {
+					$desc_str .= 'System = Starfinder;';
+				}
+				elseif($entry['sort_path'][0] == 'dnd_5e') {
+					$desc_str .= 'System = D&D, DnD, Dungeons and Dragons, 5e, 5th Edition; ';
+				}
+
+				if(isset($entry['setting'])) {
+					$desc_str .= 'Setting = ' . $pages['entries'][$entry['setting']]['display_name'] . '; ';
+				}
+
+				if(isset($entry['meta-desc'])) {
+					$desc_str .= $entry['meta-desc'] . '; ';
+				}
+
 				echo '<title>'.$entry['display_name'].'</title>';
+				$desc_str .= $entry['display_name'];
 			}
 			if(isset($get_path) && $get_path_len<=count($entry['sort_path'])) {
 				$match=true;
