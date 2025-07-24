@@ -1,7 +1,3 @@
-setupFuncs=[];
-lightActions=[];
-darkActions=[];
-
 function setup() {
 	$("li.has-dropdown>p.label").click({},function(e){
 		const target=$(e.currentTarget.parentElement);
@@ -31,7 +27,7 @@ function setup() {
 	darkActions=[];
 	const actions=$(".action-img");
 	for(let i=0; i<actions.length; i++) {
-		const data=actions[i].src.split('/')[5].match(/([a-z]+)action(_I)?\.png/i);
+		const data=actions[i].src.split('/')[5].match(/([a-z]+)actions?(_I)?\.png/i);
 		if(data[2]==undefined)
 			darkActions.push(actions[i]);
 		else
@@ -40,10 +36,6 @@ function setup() {
 
 	$(".status-empty").attr("title","This page currently has no content.")
 	$(".status-wip").attr("title","Work In Progress")
-
-	for(var func of setupFuncs) {
-		func();
-	}
 
 	if(window.matchMedia("(max-aspect-ratio: 1/1), (max-width: 800px)").matches) 
 		setTimeout(function(){$("body").addClass("small-secondary")},100);
@@ -90,4 +82,6 @@ function setDarkMode() {
 		}
 	}
 }
-setupFuncs.push(setDarkMode);
+
+setup();
+setDarkMode();

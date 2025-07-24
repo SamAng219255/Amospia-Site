@@ -8,4 +8,4 @@ function setup_controllers() {
 			btn.prop('value', 'Show');
 	})
 }
-setupFuncs.push(setup_controllers);
+setup_controllers();

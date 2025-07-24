@@ -2015,11 +2015,11 @@
 					$saveHeaders.='<th>'.ucwords($save).' Save</th>';
 			}
 		}
-		echo '<table class="class-features no-sort">'.$perDayRow.'<tr><th>Level</th><th>Base Attack Bonus</th>'.$saveHeaders.'<th>Special</th>'.$spellLevels.'</tr>';
+		echo '<div class="table-wrapper no-sort"><table class="class-features no-sort"><thead>'.$perDayRow.'<tr><th>Level</th><th>Base Attack Bonus</th>'.$saveHeaders.'<th>Special</th>'.$spellLevels.'</tr></thead><tbody>';
 		for($i=0; $i<count($specials); $i++) {
 			$level=$i+1;
 			echo '<tr>';
-			echo '<td>'.$level.ordinalSuffix($level).'</td>';
+			echo '<th>'.$level.ordinalSuffix($level).'</th>';
 			$babTxt='';
 			$tmpBab=floor($bab*$level);
 			$first=true;
@@ -2057,7 +2057,7 @@
 			echo $spellCounts[$i];
 			echo '</tr>';
 		}
-		echo '</table>';
+		echo '</tbody></table></div>';
 		foreach ($features as $feature => $texts) {
 			$ftexts=quick_array($texts);
 			$first=true;

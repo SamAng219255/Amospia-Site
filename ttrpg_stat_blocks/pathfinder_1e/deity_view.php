@@ -39,7 +39,7 @@
 	}
 	else {
 		echo '<title>404</title>';
-		echo '<h1>Entry Not Found!</h1>';
+		echo '<h2>Entry Not Found!</h2>';
 	}
 
 	require '../pageEnd.php';

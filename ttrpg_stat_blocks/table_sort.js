@@ -1,7 +1,4 @@
-cancelDefaultTableSort=false;
 tableStorage=[];
-initialSort=false;
-initialSortFunc=function(a,b){return 0};
 
 sortStatus={};
 sort=false;
@@ -156,4 +153,10 @@ function setupTableSort() {
 	}
 }
 
-setupFuncs.push(setupTableSort);
+if(document.readyState == "loading") {
+	document.body.addEventListener("load", setupTableSort);
+}
+else {
+	foo = $("table:not(.vertical):not(.no-sort)");
+	setupTableSort();
+}

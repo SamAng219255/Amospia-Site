@@ -91,15 +91,19 @@
 	<meta name="msapplication-config" content="/ttrpg_stat_blocks/img/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="/jquery.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+	<script>
+		lightActions=[];
+		darkActions=[];
+	</script>
 	<?php
 		echo '	<link rel="stylesheet" type="text/css" href="'.$originDir.'theme.css?t='.filemtime($rootDir.'theme.css').'">';
 		echo '	<script>rootDir="'.$originDir.'";'.($devMode ? ' devMode=true;' : '').'</script>';
-		echo '	<script src="'.$originDir.'menu.js?t='.filemtime($rootDir.'menu.js').'"></script>';
-		echo '	<script src="'.$originDir.'controllers.js?t='.filemtime($rootDir.'controllers.js').'"></script>';
-		//echo '	<link rel="shortcut icon" href="'.$originDir.'../img/icon2_256.png">'
+		echo '	<script src="'.$originDir.'menu.js?t='.filemtime($rootDir.'menu.js').'" defer></script>';
+		echo '	<script src="'.$originDir.'controllers.js" defer></script>';
 	?>
-	<script src="/ttrpg_stat_blocks/table_sort.js"></script>
+	<script>let cancelDefaultTableSort=false; let initialSort=false; let initialSortFunc=function(a,b){return 0};</script>
+	<script src="/ttrpg_stat_blocks/table_sort.js" defer></script>
 	<?php
 		$desc_str='';
 		$pageId='';
@@ -217,7 +221,7 @@
 		echo '<meta name="description" content="Mordan\'s Vault; table-top rpg stat blocks; '.$desc_str.'">';
 	?>
 </head>
-<?php echo '<body onload="setup()"'.($lightMode?' class="light"':'').'>' ?>
+<?php echo '<body'.($lightMode?' class="light"':'').'>' ?>
 	<div id="sidebar">
 		<div id="nav-controls">
 			<button id="menu-close" aria-label="Close Navigation"></button>
@@ -332,20 +336,15 @@
 		</ul></nav>
 	</div>
 	<div id="center">
-		<div id="top">
+		<div id="top-section">
 			<button id="menu-open" aria-label="Open Navigation"></button>
-			<div id="counting">
-				<?php
-					echo '<h4>'.number_format(count($pages['entries'])).' pages and counting.</h4>';
-					if($pageId!=='' || isset($_GET['path']))
-						echo '<p>'.number_format($childCount).' pages in this section.</p>';
-				?>
-			</div>
+			<h1>Mordan's Vault</h1>
 			<label class="switch" id="light-switch">
 				<?php echo '<input type="checkbox" id="light"'.($lightMode?'checked':'').' aria-label="Light / Dark mode toggle switch.">' ?>
 				<span class="slider"></span>
 			</label>
 			<nav id="top-nav">
+				<div id="long-nav">
 				<?php
 					$depth=0;
 					$tree_path=[$pages['sort_tree']];
@@ -356,6 +355,8 @@
 					$final_node=[];
 					$starting_flower=false;
 					$flower_node=[];
+					$short_nav='<a href="'.$pages['origin'].'" class="top-label">Home</a>';
+					$last_level='';
 
 					$sanity=1000;
 					while($depth<count($tree_path)) {
@@ -366,17 +367,22 @@
 						if($tree_index<$tree_count) {
 							$ptr=$tree_path[$depth][$tree_index];
 							if($tree_index==0) {
+								$last_level='';
 								echo '<p class="top-row">';
 								if($starting_flower) {
 									$starting_flower=false;
 									if(isset($flower_node['petal_display_name'])) {
 										$entry=$pages['entries'][$flower_node['name']];
-										echo '<a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'" class="top-label status-'.$entry['status'].'">'.$flower_node['petal_display_name'].'</a> | ';
+										$new_entry='<a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'" class="top-label status-'.$entry['status'].'">'.$flower_node['petal_display_name'].'</a> | ';
+										echo $new_entry;
+										$last_level.=$new_entry;
 									}
 								}
 							}
-							else
+							else {
 								echo ' | ';
+								$last_level.=' | ';
+							}
 							$match=($ptr['name']==(isset($_GET['path'])?(isset($get_path[$depth])?$get_path[$depth]:''):(isset($pages['entries'][$pageId])?($depth==count($pages['entries'][$pageId]['sort_path']) && $ptr['type']=='limb'?$pageId:(isset($pages['entries'][$pageId]['sort_path'][$depth])?$pages['entries'][$pageId]['sort_path'][$depth]:'')):'')));
 							if($match) {
 								if(isset($ptr['nodes']))
@@ -394,11 +400,19 @@
 									$search_path.=$node['name'].',';
 								}
 								$search_path.=$ptr['name'];
-								echo '<a href="'.$pages['origin'].'nav.php?path='.$search_path.'" class="top-label'.($match || $ptr['name'] == $pageId ? ' selected' : '').(isset($pages['entries'][$ptr['name']])?' status-'.$pages['entries'][$ptr['name']]['status']:'').'">'.$ptr['display_name'].'</a>';
+								$new_entry='<a href="'.$pages['origin'].'nav.php?path='.$search_path.'" class="top-label'.($match || $ptr['name'] == $pageId ? ' selected' : '').(isset($pages['entries'][$ptr['name']])?' status-'.$pages['entries'][$ptr['name']]['status']:'').'">'.$ptr['display_name'].'</a>';
+								echo $new_entry;
+								$last_level.=$new_entry;
+								if($match || $ptr['name'] == $pageId)
+									$short_nav .= ' > <a href="'.$pages['origin'].'nav.php?path='.$search_path.'" class="top-label">'.$ptr['display_name'].'</a>';
 							}
 							else {
 								$entry=$pages['entries'][$ptr['name']];
-								echo '<a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'" class="top-label'.($match || $ptr['name'] == $pageId ? ' selected' : '').' status-'.(isset($ptr['petal_display_name'])?'done':$entry['status']).'">'.$ptr['display_name'].'</a>';
+								$new_entry = '<a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'" class="top-label'.($match || $ptr['name'] == $pageId ? ' selected' : '').' status-'.(isset($ptr['petal_display_name'])?'done':$entry['status']).'">'.$ptr['display_name'].'</a>';
+								echo $new_entry;
+								$last_level.=$new_entry;
+								if($match || $ptr['name'] == $pageId)
+									$short_nav .= ' > <a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'" class="top-label">'.$ptr['display_name'].'</a>';
 							}
 							if($ptr['name'] == $pageId)
 								$final_node=$ptr;
@@ -416,22 +430,38 @@
 						$sanity--;
 					}
 					if(isset($final_node['type']) && $final_node['type']=='flower') {
+						$last_level='';
 						echo '<p class="top-row">';
 						if(isset($final_node['petal_display_name'])) {
 							$entry=$pages['entries'][$final_node['name']];
-							echo '<a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'" class="top-label selected status-'.$entry['status'].'">'.$final_node['petal_display_name'].'</a> | ';
+							$new_entry = '<a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'" class="top-label selected status-'.$entry['status'].'">'.$final_node['petal_display_name'].'</a> | ';
+							echo $new_entry;
+							$last_level.=$new_entry;
+							$short_nav .= ' > <a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'" class="top-label">'.$final_node['petal_display_name'].'</a>';
 						}
 						$node_count=count($final_node['nodes']);
 						for($i=0; $i<$node_count; $i++) {
-							if($i>0)
+							if($i>0) {
 								echo ' | ';
+								$last_level.=' | ';
+							}
 							$ptr=$final_node['nodes'][$i];
 							$entry=$pages['entries'][$ptr['name']];
-							echo '<a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'" class="top-label status-'.$entry['status'].'">'.$ptr['display_name'].'</a>';
+							$new_entry='<a href="'.$pages['origin'].$entry['directory'].$entry['file_name'].'" class="top-label status-'.$entry['status'].'">'.$ptr['display_name'].'</a>';
+							echo $new_entry;
+							$last_level.=$new_entry;
 						}
 						echo '</p><hr>';
 					}
+
+					echo '</div><div id="short-nav">';
+					echo $short_nav;
+					if(isset($final_node['nodes']) || isset($ptr['nodes'])) {
+						echo '<hr>';
+						echo $last_level;
+					}
 				?>
+				</div>
 			</nav>
 		</div>
 		<main id="content">
