@@ -93,17 +93,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
 	<script>
-		lightActions=[];
-		darkActions=[];
+		let lightActions=[];
+		let darkActions=[];
+		let cancelDefaultTableSort=false;
+		let initialSort=false;
+		let initialSortFunc=function(a,b){return 0};
 	</script>
 	<?php
 		echo '	<link rel="stylesheet" type="text/css" href="'.$originDir.'theme.css?t='.filemtime($rootDir.'theme.css').'">';
 		echo '	<script>rootDir="'.$originDir.'";'.($devMode ? ' devMode=true;' : '').'</script>';
 		echo '	<script src="'.$originDir.'menu.js?t='.filemtime($rootDir.'menu.js').'" defer></script>';
 		echo '	<script src="'.$originDir.'controllers.js" defer></script>';
+		echo '	<script src="'.$originDir.'table_sort.js?t='.filemtime($rootDir.'table_sort.js').'" defer></script>';
 	?>
-	<script>let cancelDefaultTableSort=false; let initialSort=false; let initialSortFunc=function(a,b){return 0};</script>
-	<script src="/ttrpg_stat_blocks/table_sort.js" defer></script>
 	<?php
 		$desc_str='';
 		$pageId='';
