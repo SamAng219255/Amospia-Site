@@ -21,8 +21,7 @@ function setup() {
 		$("#center").removeClass("hide");
 	});
 
-	if(isMobile) {
-		$("body").addClass("mobile");
+	if(window.matchMedia("(max-width: 500px)").matches) {
 		setTimeout(function(){$("body").addClass("mobile-secondary");},0);
 	}
 
@@ -46,13 +45,13 @@ function setup() {
 		func();
 	}
 
-	if(window.innerHeight>=window.innerWidth) 
+	if(window.matchMedia("(max-aspect-ratio: 1/1), (max-width: 800px)").matches) 
 		setTimeout(function(){$("body").addClass("small-secondary")},100);
 	else
 		setTimeout(function(){$("body").removeClass("small-secondary")},100);
 
 	window.addEventListener("resize",function(){
-		if(window.innerHeight>=window.innerWidth)
+		if(window.matchMedia("(max-aspect-ratio: 1/1), (max-width: 800px)").matches)
 			setTimeout(function(){$("body").addClass("small-secondary")},100);
 		else
 			setTimeout(function(){$("body").removeClass("small-secondary")},100);

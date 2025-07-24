@@ -92,7 +92,6 @@
 	<meta name="theme-color" content="#ffffff">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="/jquery.js"></script>
-	<script src="/ttrpg_stat_blocks/mobileDetect.js"></script>
 	<?php
 		echo '	<link rel="stylesheet" type="text/css" href="'.$originDir.'theme.css?t='.filemtime($rootDir.'theme.css').'">';
 		echo '	<script>rootDir="'.$originDir.'";'.($devMode ? ' devMode=true;' : '').'</script>';
