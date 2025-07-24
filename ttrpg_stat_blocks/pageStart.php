@@ -338,7 +338,7 @@
 	<div id="center">
 		<div id="top-section">
 			<button id="menu-open" aria-label="Open Navigation"></button>
-			<h1>Mordan's Vault</h1>
+			<?php echo '<h1><a href="'.$pages['origin'].'">Mordan\'s Vault</a></h1>'; ?>
 			<label class="switch" id="light-switch">
 				<?php echo '<input type="checkbox" id="light"'.($lightMode?'checked':'').' aria-label="Light / Dark mode toggle switch.">' ?>
 				<span class="slider"></span>
