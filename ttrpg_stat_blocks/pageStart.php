@@ -341,10 +341,13 @@
 		<div id="top-section">
 			<button id="menu-open" aria-label="Open Navigation"></button>
 			<?php echo '<h1><a href="'.$pages['origin'].'">Mordan\'s Vault</a></h1>'; ?>
-			<label class="switch" id="light-switch">
-				<?php echo '<input type="checkbox" id="light"'.($lightMode?'checked':'').' aria-label="Light / Dark mode toggle switch.">' ?>
-				<span class="slider"></span>
-			</label>
+			<div id="light-switch">
+				<label class="switch">
+					<?php echo '<input type="checkbox" id="light"'.($lightMode?'checked':'').' aria-label="Light / Dark mode toggle switch.">' ?>
+					<span class="slider"></span>
+				</label>
+				<span id="light-mode-label">Light Mode</span>
+			</div>
 			<nav id="top-nav">
 				<div id="long-nav">
 				<?php
