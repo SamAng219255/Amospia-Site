@@ -117,16 +117,14 @@ span.subtitle {
 	overflow-x: hidden;
 }
 #top {
-	position: relative;
+	margin: 2.5rem 2.5rem 0 0;
+	display: grid;
+	grid-template-columns: 1fr 60px;
 }
 #content {
 	min-height: 100vh;
 }
 #counting {
-	position: absolute;
-	top: 0.5rem;
-	left: 5vw;
-	width: calc(100% - 10vw - 60px);
 	text-align: center;
 }
 a {
@@ -327,6 +325,7 @@ body.light .toc-title {
 #top-nav {
 	margin: calc(2.5rem + 35px - 0.5in) 5vw 2.5vw;
 	font-size: 1.5em;
+	grid-area: 2/1/3/3;
 }
 .top-row {
 	text-align: center;
@@ -494,12 +493,7 @@ body.light.mobile #menu-open {
 }
 
 #light-switch {
-	top: 0;
-	right: 0;
 	display: block;
-	position: absolute;
-	margin-top: 2.5rem;
-	margin-right: 2.5rem;
 }
 
  /* The switch - the box around the slider */
@@ -625,7 +619,6 @@ input:checked + .slider:before {
 
 	#menu-open, #menu-close {
 		display: block;
-		margin: 2.5rem 2.5rem 1.25rem;
 		width: 0.5in;
 		height: 0.5in;
 	}
@@ -638,6 +631,7 @@ input:checked + .slider:before {
 	}
 
 	#menu-close {
+		margin: 2.5rem 2.5rem 1.25rem;
 		background: 
 			linear-gradient(140deg, transparent 0%, transparent 20%, #000 20%, #000 34.5%, transparent 34.5%, transparent 100%),
 			linear-gradient( 40deg, transparent 0%, transparent 20%, #000 20%, #000 34.5%, transparent 34.5%, transparent 100%),
@@ -671,13 +665,6 @@ input:checked + .slider:before {
 }
 
 @media (max-aspect-ratio: 1/1), (max-width: 800px) {
-	#counting {
-		position: absolute;
-		top: 0.5rem;
-		left: calc(5vw + 0.333in);
-		width: calc(100% - 10vw - 60px - 0.333in);
-		text-align: center;
-	}
 	#sidebar {
 		display: block;
 		visibility: hidden;
@@ -710,6 +697,12 @@ input:checked + .slider:before {
 		width: calc(100vw - 5rem);
 		min-width: unset;
 	}
+
+	#top {
+		margin-right: 0;
+		grid-template-columns: 31.96px 1fr 84.703px;
+	}
+
 	#menu-open, #menu-close {
 		display: block;
 		cursor: pointer;
@@ -717,7 +710,6 @@ input:checked + .slider:before {
 	#menu-open {
 		width: 0.333in;
 		height: 0.333in;
-		margin: 2.5rem 2.5rem 1.25rem 0rem;
 		background: linear-gradient(to bottom, #fff 0%, #fff 20%, transparent 20%, transparent 40%, #fff 40%, #fff 60%, transparent 60%, transparent 80%, #fff 80%, #fff 100%);
 		-webkit-transition: background .4s;
 		transition: background .4s;
@@ -739,6 +731,10 @@ input:checked + .slider:before {
 
 	#light-switch {
 		margin: 0;
+	}
+
+	#top-nav {
+		grid-area: 2/1/3/4;
 	}
 
 	.table-wrapper {

@@ -55,6 +55,10 @@ function setup() {
 			setTimeout(function(){$("body").addClass("small-secondary")},100);
 		else
 			setTimeout(function(){$("body").removeClass("small-secondary")},100);
+		if(window.matchMedia("(max-width: 500px)").matches)
+			setTimeout(function(){$("body").addClass("mobile-secondary")},100);
+		else
+			setTimeout(function(){$("body").removeClass("mobile-secondary")},100);
 	});
 }
 

@@ -223,7 +223,7 @@
 			<button id="menu-close" aria-label="Close Navigation"></button>
 		</div>
 		<p id="sidebar-label">Navigation</p>
-		<ul class="menu-vertical">
+		<nav><ul class="menu-vertical">
 			<?php
 				$opennav = isset($_GET['opennav']) && $_GET['opennav']=='1';
 
@@ -329,10 +329,11 @@
 					}
 				}
 			?>
-		</ul>
+		</ul></nav>
 	</div>
 	<div id="center">
 		<div id="top">
+			<button id="menu-open" aria-label="Open Navigation"></button>
 			<div id="counting">
 				<?php
 					echo '<h4>'.number_format(count($pages['entries'])).' pages and counting.</h4>';
@@ -340,13 +341,10 @@
 						echo '<p>'.number_format($childCount).' pages in this section.</p>';
 				?>
 			</div>
-			<div id="controls">
-				<button id="menu-open" aria-label="Open Navigation"></button>
-				<label class="switch" id="light-switch">
-					<?php echo '<input type="checkbox" id="light"'.($lightMode?'checked':'').' aria-label="Light / Dark mode toggle switch.">' ?>
-					<span class="slider"></span>
-				</label>
-			</div>
+			<label class="switch" id="light-switch">
+				<?php echo '<input type="checkbox" id="light"'.($lightMode?'checked':'').' aria-label="Light / Dark mode toggle switch.">' ?>
+				<span class="slider"></span>
+			</label>
 			<nav id="top-nav">
 				<?php
 					$depth=0;
