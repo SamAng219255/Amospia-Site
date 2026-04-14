@@ -10,7 +10,7 @@
 		}
 	}
 ?>
-<script type="module" src="scripts/hexploration.mjs"></script>
+<script type="module" src="scripts/hexploration.js"></script>
 <canvas></canvas>
 <p id="hex-output"></p>
 <button id="hex-generate">Generate</button>
