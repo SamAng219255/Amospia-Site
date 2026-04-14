@@ -45,7 +45,7 @@
 				'mod' => 0
 			]
 		],// Fortitude/Reflex/Will save good/bad and misc bonuses
-		'deflecting winds; bb/Immune/bb ai, elemental traits',// Defensive Abilities
+		'deflecting winds; bb/Immune/bb elemental traits',// Defensive Abilities
 		'',// Weaknesses
 		'30 ft.',// Speed
 		[

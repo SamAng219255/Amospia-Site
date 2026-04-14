@@ -15,11 +15,11 @@
 	monsterBlockAuto(
 		'Zombie Villager',// name
 		false,// alt name
-		'A shambling corpse lumbers in your direction. It bears the unmistakable face of a Knom.',// lore text
+		'A shambling corpse lumbers in your direction. It bears the unmistakable face of a villager.',// lore text
 		2,// CR
 		false,// MR
 		false,// Custom XP
-		'zombified knom',// Race
+		'zombified villager',// Race
 		[
 			'warrior' => 3
 		],// Class

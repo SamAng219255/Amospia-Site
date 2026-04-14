@@ -215,7 +215,7 @@
 			'Common',
 			'Illager',
 			'Infernal',
-			'Knom'
+			'Villager'
 		],// Languages
 		'alchemy (alchemy crafting +8, identify potions), charged mutagens, discoveries (charged slowness bomb, charged poison bomb, charged weakness bomb, charged healing bombs), poison use, swift alchemy, swift poisoning',// Special Qualities
 		'any (Swamps)',// Environment

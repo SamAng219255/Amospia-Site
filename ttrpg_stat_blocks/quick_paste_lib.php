@@ -1021,6 +1021,8 @@
 					continue;
 				if($key==='stat')
 					continue;
+				if(!isset($hdPool[2]))
+					$hdPool[2]=0;
 				$hdpTotal[0]+=$hdPool[0];
 				$hdpTotal[1]+=$hdPool[1]*$hdPool[0];
 				$hdpTotal[2]+=$hdPool[2];

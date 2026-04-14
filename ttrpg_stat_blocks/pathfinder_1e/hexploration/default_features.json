@@ -1,0 +1,68 @@
+{
+	"type": {
+		"name": "Terrain Type",
+		"options": {
+			"forest": {
+				"name": "Forest",
+				"weight": 3
+			},
+			"hill": {
+				"name": "Hill",
+				"weight": 3
+			},
+			"marsh": {
+				"name": "Marsh",
+				"weight": 2
+			},
+			"mountain": {
+				"name": "Mountain",
+				"weight": 2
+			},
+			"plain": {
+				"name": "Plain",
+				"weight": 3
+			},
+			"settlement": {
+				"name": "Settlement",
+				"weight": 1
+			},
+			"water": {
+				"name": "Water",
+				"weight": 2
+			},
+			"same": {
+				"name": "Same As Previous",
+				"weight": 4
+			}
+		}
+	},
+	"element": {
+		"name": "Terrain Element",
+		"options": {
+			"difficult": {
+				"name": "Difficult",
+				"weight": 3
+			},
+			"feature": {
+				"name": "Feature",
+				"weight": 3
+			},
+			"hunting_ground": {
+				"name": "Hunting Ground",
+				"weight": 4
+			},
+			"resource": {
+				"name": "Resource",
+				"weight": 2
+			},
+			"secret": {
+				"name": "Secret",
+				"weight": 2
+			},
+			"standard": {
+				"name": "Standard",
+				"weight": 6
+			}
+		}
+	}
+}

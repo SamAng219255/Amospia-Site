@@ -29,7 +29,7 @@
 		false,	#target
 		'a floating magic lantern',	#effect
 		false,	#area
-		'20 minutes/level (D)',	#duration
+		'45 minutes/level (D)',	#duration
 		'none',	#save
 		'no',	#sr
 		[

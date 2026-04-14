@@ -33,8 +33,8 @@
 		'none',	#save
 		'no',	#sr
 		[
-			'Casting this spell removes all penalties for being middle aged, old aged, or venerable aged for the duration and prevents dying from old age. It also changes your appearance to as though you were in your prime if you would otherwise appear older.',
-			'This spell is immune to ii/dispel magic/ii but can be removed by ii/greater dispel magic/ii. If this spell ends for any reason, all of the effects of aging return. If you are older than your maximum age when this spell ends, you immediately die and turn to dust.'
+			'Casting this spell removes all penalties for being middle aged, old aged, or venerable aged for the duration and prevents dying from old age. It also changes your appearance to match yourself at a chosen age.',
+			'This spell is immune to ii/dispel magic/ii but can be removed by ii/greater dispel magic/ii. If this spell ends for any reason, all of the effects of aging return. If you are older than your maximum age when this spell ends, you immediately die from old age and turn to dust.'
 		],	#spellDesc
 		['Charging a ii/staff of immortality/ii requires expending 2 9th level spell slots.']	#staffDescPt2
 	);

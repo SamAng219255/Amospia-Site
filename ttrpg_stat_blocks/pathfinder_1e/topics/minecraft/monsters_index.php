@@ -353,6 +353,48 @@
 				'23',
 				'undead',
 				'any (Deep Underground)'
+			],
+			[
+				'Parched',
+				'link' => 'monsters/parched.php',
+				'3',
+				'undead',
+				'any'
+			],
+			[
+				'Camel Husk',
+				'link' => 'monsters/camel_husk.php',
+				'1/2',
+				'undead',
+				'any'
+			],
+			[
+				'Happy Ghast',
+				'link' => 'monsters/happy_ghast.php',
+				'4',
+				'outsider',
+				'any'
+			],
+			[
+				'Strider',
+				'link' => 'monsters/strider.php',
+				'1/2',
+				'animal',
+				'any'
+			],
+			[
+				'Nautilus',
+				'link' => 'monsters/nautilus.php',
+				'2',
+				'animal',
+				'any'
+			],
+			[
+				'Zombie Nautilus',
+				'link' => 'monsters/zombie_nautilus.php',
+				'2',
+				'animal',
+				'any'
 			]
 		]
 	);

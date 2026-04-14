@@ -1125,6 +1125,84 @@
 			"setting": "minecraft",
 			"status": "done"
 		},
+		"parched": {
+			"display_name": "Parched",
+			"file_name": "parched.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			],
+			"setting": "minecraft",
+			"status": "done"
+		},
+		"camel_husk": {
+			"display_name": "Camel Husk",
+			"file_name": "camel_husk.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			],
+			"setting": "minecraft",
+			"status": "done"
+		},
+		"happy_ghast": {
+			"display_name": "Happy Ghast",
+			"file_name": "happy_ghast.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			],
+			"setting": "minecraft",
+			"status": "done"
+		},
+		"strider": {
+			"display_name": "Strider",
+			"file_name": "strider.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			],
+			"setting": "minecraft",
+			"status": "done"
+		},
+		"nautilus": {
+			"display_name": "Nautilus",
+			"file_name": "nautilus.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			],
+			"setting": "minecraft",
+			"status": "done"
+		},
+		"zombie_nautilus": {
+			"display_name": "Zombie Nautilus",
+			"file_name": "zombie_nautilus.php",
+			"directory": "pathfinder_1e/topics/minecraft/monsters/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"monsters_mc"
+			],
+			"setting": "minecraft",
+			"status": "done"
+		},
 		"skeleton": {
 			"display_name": "Skeleton",
 			"file_name": "skeleton.php",
@@ -1167,7 +1245,7 @@
 			"status": "done"
 		},
 		"knom": {
-			"display_name": "Knom",
+			"display_name": "Villager",
 			"file_name": "knom.php",
 			"directory": "pathfinder_1e/topics/minecraft/races/",
 			"sort_path": [
@@ -1373,6 +1451,20 @@
 			"setting": "minecraft",
 			"status": "done"
 		},
+		"spear_mc": {
+			"display_name": "Lanving-Spear",
+			"file_name": "spear.php",
+			"directory": "pathfinder_1e/topics/minecraft/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"equipment_mc",
+				"weapons_mc"
+			],
+			"setting": "minecraft",
+			"status": "done"
+		},
 		"armor_mc": {
 			"display_name": "Armor",
 			"file_name": "armor_index.php",
@@ -1456,6 +1548,20 @@
 		"ranged_qualities_mc": {
 			"display_name": "Ranged Weapon Qualities",
 			"file_name": "ranged_qualities.php",
+			"directory": "pathfinder_1e/topics/minecraft/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"magic_items_mc",
+				"magic_weapons_mc"
+			],
+			"setting": "minecraft",
+			"status": "done"
+		},
+		"specific_weapons_mc": {
+			"display_name": "Specific Magic Weapons",
+			"file_name": "specific_weapons.php",
 			"directory": "pathfinder_1e/topics/minecraft/",
 			"sort_path": [
 				"pathfinder_1e",
@@ -2063,6 +2169,90 @@
 				"topics",
 				"minecraft",
 				"monsters_mc"
+			],
+			"setting": "minecraft",
+			"status": "done"
+		},
+		"mace_mc": {
+			"display_name": "Wind Mace",
+			"file_name": "mace.php",
+			"directory": "pathfinder_1e/topics/minecraft/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"magic_items_mc",
+				"magic_weapons_mc",
+				"specific_weapons_mc"
+			],
+			"setting": "minecraft",
+			"status": "done"
+		},
+		"wind_charge": {
+			"display_name": "Wind Charge",
+			"file_name": "wind_charge.php",
+			"directory": "pathfinder_1e/topics/minecraft/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"magic_items_mc",
+				"wondrous_mc"
+			],
+			"setting": "minecraft",
+			"status": "done"
+		},
+		"wind_charge_lesser": {
+			"display_name": "Wind Charge, Lesser",
+			"file_name": "wind_charge_lesser.php",
+			"directory": "pathfinder_1e/topics/minecraft/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"magic_items_mc",
+				"wondrous_mc"
+			],
+			"setting": "minecraft",
+			"status": "done"
+		},
+		"breeze_bundle": {
+			"display_name": "Breeze Bundle",
+			"file_name": "breeze_bundle.php",
+			"directory": "pathfinder_1e/topics/minecraft/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"magic_items_mc",
+				"wondrous_mc"
+			],
+			"setting": "minecraft",
+			"status": "done"
+		},
+		"wind_charge_greater": {
+			"display_name": "Wind Charge, Greater",
+			"file_name": "wind_charge_greater.php",
+			"directory": "pathfinder_1e/topics/minecraft/items/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"magic_items_mc",
+				"wondrous_mc"
+			],
+			"setting": "minecraft",
+			"status": "done"
+		},
+		"wondrous_mc": {
+			"display_name": "Wondrous Items",
+			"file_name": "wondrous_index.php",
+			"directory": "pathfinder_1e/topics/minecraft/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"minecraft",
+				"magic_items_mc"
 			],
 			"setting": "minecraft",
 			"status": "done"
@@ -3314,7 +3504,7 @@
 		"plague_child_adept": {
 			"display_name": "Plague Child Priest of Niva",
 			"file_name": "plague_child_adept.php",
-			"directory": "pathfinder_1e/monsters/",
+			"directory": "pathfinder_1e/npcs/",
 			"sort_path": [
 				"pathfinder_1e",
 				"monsters"
@@ -3324,7 +3514,7 @@
 		"plague_child_craftsman": {
 			"display_name": "Plague Child Craftsman",
 			"file_name": "plague_child_craftsman.php",
-			"directory": "pathfinder_1e/monsters/",
+			"directory": "pathfinder_1e/npcs/",
 			"sort_path": [
 				"pathfinder_1e",
 				"monsters"
@@ -3334,7 +3524,7 @@
 		"plague_child_warrior": {
 			"display_name": "Plague Child Village Guard",
 			"file_name": "plague_child_warrior.php",
-			"directory": "pathfinder_1e/monsters/",
+			"directory": "pathfinder_1e/npcs/",
 			"sort_path": [
 				"pathfinder_1e",
 				"monsters"
@@ -3344,7 +3534,7 @@
 		"plague_child": {
 			"display_name": "Plague Child",
 			"file_name": "plague_child.php",
-			"directory": "pathfinder_1e/monsters/",
+			"directory": "pathfinder_1e/npcs/",
 			"sort_path": [
 				"pathfinder_1e",
 				"monsters"
@@ -7991,7 +8181,7 @@
 		"mandriff_elephant": {
 			"display_name": "Mandriff, Elephant",
 			"file_name": "mandriff_elephant.php",
-			"directory": "pathfinder_1e/monsters/",
+			"directory": "pathfinder_1e/npcs/",
 			"sort_path": [
 				"pathfinder_1e",
 				"monsters"
@@ -8001,7 +8191,7 @@
 		"mandriff_mammoth": {
 			"display_name": "Mandriff, Mammoth",
 			"file_name": "mandriff_mammoth.php",
-			"directory": "pathfinder_1e/monsters/",
+			"directory": "pathfinder_1e/npcs/",
 			"sort_path": [
 				"pathfinder_1e",
 				"monsters"
@@ -10577,6 +10767,15 @@
 				"spells"
 			],
 			"status": "done"
+		},
+		"hexploration": {
+			"display_name": "Hex Exploration",
+			"file_name": "index.php",
+			"directory": "pathfinder_1e/hexploration/",
+			"sort_path": [
+				"pathfinder_1e"
+			],
+			"status": "wip"
 		}
 	}
 }

@@ -38,18 +38,18 @@
 		],
 		[
 			[
-				'',
-				'link' => '',
-				'',
-				'',
-				'',
-				'',
-				'',
-				'',
-				'',
-				'',
-				'',
-				''
+				'Lancing-Spear',
+				'link' => 'items/spear.php',
+				'25 gp',
+				'Martial',
+				'Two-Handed',
+				'1d4',
+				'1d6',
+				'x3',
+				'—',
+				'6 lbs.',
+				'P',
+				'brace, reach, see text'
 			]
 		]
 	);

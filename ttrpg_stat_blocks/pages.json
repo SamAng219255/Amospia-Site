@@ -793,6 +793,12 @@
 													"display_name": "Ranged Weapon Qualities",
 													"type": "leaf",
 													"childless": false
+												},
+												{
+													"name": "specific_weapons_mc",
+													"display_name": "Specific Magic Weapons",
+													"type": "leaf",
+													"childless": false
 												}
 											]
 										},
@@ -805,88 +811,8 @@
 										{
 											"name": "wondrous_mc",
 											"display_name": "Wondrous Items",
-											"type": "branch",
-											"childless": false,
-											"nodes": [
-												{
-													"name": "elytra",
-													"display_name": "Elytra",
-													"type": "leaf",
-													"childless": true
-												},
-												{
-													"name": "egapple",
-													"display_name": "Enchanted Golden Apple",
-													"type": "leaf",
-													"childless": true
-												},
-												{
-													"name": "turtle_shell",
-													"display_name": "Enchanted Turtle Shell",
-													"type": "leaf",
-													"childless": true
-												},
-												{
-													"name": "enderchest",
-													"display_name": "Ender Chest",
-													"type": "leaf",
-													"childless": true
-												},
-												{
-													"name": "enderpearl",
-													"display_name": "Ender Pearl",
-													"type": "leaf",
-													"childless": true
-												},
-												{
-													"name": "endereye",
-													"display_name": "Eye of Ender",
-													"type": "leaf",
-													"childless": true
-												},
-												{
-													"name": "gapple",
-													"display_name": "Golden Apple",
-													"type": "leaf",
-													"childless": true
-												},
-												{
-													"name": "lure_rod",
-													"display_name": "Luring Fishing Rod",
-													"type": "leaf",
-													"childless": true
-												},
-												{
-													"name": "lodestone",
-													"display_name": "Netherite Lodestone",
-													"type": "leaf",
-													"childless": true
-												},
-												{
-													"name": "compass",
-													"display_name": "Redstone Compass",
-													"type": "leaf",
-													"childless": true
-												},
-												{
-													"name": "soul_speed",
-													"display_name": "Soul Speed Boots",
-													"type": "leaf",
-													"childless": true
-												},
-												{
-													"name": "swift_sneak",
-													"display_name": "Swift Sneak Boots",
-													"type": "leaf",
-													"childless": true
-												},
-												{
-													"name": "totem",
-													"display_name": "Totem of Undying",
-													"type": "leaf",
-													"childless": true
-												}
-											]
+											"type": "leaf",
+											"childless": true
 										}
 									]
 								},
@@ -945,7 +871,7 @@
 										},
 										{
 											"name": "knom",
-											"display_name": "Knom",
+											"display_name": "Villager",
 											"type": "leaf",
 											"childless": true
 										},
@@ -1257,6 +1183,12 @@
 							]
 						}
 					]
+				},
+				{
+					"name": "hexploration",
+					"display_name": "Hex Exploration",
+					"type": "leaf",
+					"childless": true
 				}
 			]
 		},

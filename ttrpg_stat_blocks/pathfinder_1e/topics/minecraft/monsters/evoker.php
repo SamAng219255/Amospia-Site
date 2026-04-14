@@ -210,7 +210,7 @@
 			[
 				'name' => 'Hatred',
 				'type' => 'Ex',
-				'desc' => 'While Illagers hate all other races, the illagers have a particular hatred for their human and knom cousins. Illagers have a +1 racial bonus on attack rolls against humans and knom.'
+				'desc' => 'While Illagers hate all other races, the illagers have a particular hatred for their human and villager cousins. Illagers have a +1 racial bonus on attack rolls against humans and villager.'
 			],
 			[
 				'name' => 'Greater Spell Specialization',

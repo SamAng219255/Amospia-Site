@@ -103,13 +103,13 @@
 			[
 				'name' => 'Disease Integration',
 				'type' => 'Ex',
-				'desc' => 'Plague Children are treated as having a countless number of diseases. Each disease that is successfully removed by a spell or other effect deals 1d4 con damage which cannot be healed by normal means. If the effect requires a check or other roll for each disease, continue making checks until one fails at which point the following checks are automatic failures. If the effect removes all diseases, it instantly kills the Plague Child instead.
+				'desc' => 'Plague Children are treated as having a countless number of diseases. Each disease that is successfully removed by a spell or other effect deals 1d4 Constitution damage which cannot be healed by normal means. If the effect requires a check or other roll for each disease, continue making checks until one fails at which point the following checks are automatic failures. If the effect removes all diseases, it instantly kills the Plague Child instead.
 				Unlike ordinary ability damage this damage is not restored at a rate of 1 point per day and can not be healed by spells and effects that remove ability damage. Rather, it can be healed at a rate of 1 point per week, resetting if further damage is taken this way, and 1d4 points can be healed of it through spells that truly disease their targets such as ii/contagion/ii. Disease like effects, asymptomatic diseases, and effects which end with the duration of the spell do not count.'
 			],
 			[
 				'name' => 'Disease Cloud',
 				'type' => 'Ex',
-				'desc' => 'Each round, all creatures within 5\' of a Plague Child must succeed at a fortitude save with a DC equal to 10 plus the plague child\'s number hit dice plus the their con modifier (normally 15). If a creature fails, roll on the table below to determine which disease they have contracted. This effect otherwise behaves as a non-magical contagion spell.'.sTable(
+				'desc' => 'Each round, all creatures within 5\' of a Plague Child must succeed at a fortitude save with a DC equal to 10 plus the plague child\'s number hit dice plus the their Constitution modifier (normally 15). If a creature fails, roll on the table below to determine which disease they have contracted. This effect otherwise behaves as a non-magical contagion spell.'.sTable(
 					[
 						'd%',
 						'Disease'

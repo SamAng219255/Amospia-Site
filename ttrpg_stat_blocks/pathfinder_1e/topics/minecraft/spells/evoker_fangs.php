@@ -44,7 +44,7 @@
 		'Reflex half',// Save
 		true,// SR
 		[
-			'You summon long snapping jaws made of force from the ground. When casting, you choose whether to cast this spell offensively or defensively. Either way, the jaws appear in a number of squares and any creatures in those squares, whose race does not exactly match your own, take 1d6 points of force damage per caster level. An illager casting this spell won\'t hurt illagers but will hurt Knoms, a half-orc\'s spell wouldn\'t hurt other half-orcs but would hurt both humans and orcs, and an elf\'s spell wouldn\'t hurt other surface elves but would hurt half elves and drow.',
+			'You summon long snapping jaws made of force from the ground. When casting, you choose whether to cast this spell offensively or defensively. Either way, the jaws appear in a number of squares and any creatures in those squares, whose race does not exactly match your own, take 1d6 points of force damage per caster level. An illager casting this spell won\'t hurt illagers but will hurt villagers, a half-orc\'s spell wouldn\'t hurt other half-orcs but would hurt both humans and orcs, and an elf\'s spell wouldn\'t hurt other surface elves but would hurt half elves and drow.',
 			'ii/Offensive/ii The jaws form occupying every square in a 60 ft. line extending from your square.',
 			'ii/Defensive/ii The jaws form in two concentric circles that occupy every square 5 or 10 feet from you.'
 		]// Description

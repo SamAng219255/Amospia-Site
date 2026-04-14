@@ -10,13 +10,13 @@
 		}
 	}
 	monsterBlockAuto(
-		'Bogged',// name
+		'Parched',// name
 		false,// alt name
-		'Rising from the detritus and muck of the swamp comes a skeletal figure covered in scraps of decaying mummified flesh.',// lore text
+		'A skeletal figure lifts itself unnaturally from the desert sands. Scraps of papery desiccated skin and fraying bandages cling to its form.',// lore text
 		3,// CR
 		false,// MR
 		false,// Custom XP
-		'human bogged skeleton',// Race
+		'human parched',// Race
 		[
 			'fighter' => 5
 		],// Class
@@ -31,23 +31,23 @@
 		[
 			'natural' => 2
 		],// Misc AC bonuses
-		[[1,8],[5,10],// Number of hit dice, Hit dice size, <additional hp bonus>, <hp notes (fast healing/regen/etc)>
+		[[1,8],[5,10]],// Number of hit dice, Hit dice size, <additional hp bonus>, <hp notes (fast healing/regen/etc)>
 		[
 			[
-				'good' => true,
+				'good' => [false,true],
 				'mod' => 0
 			],
 			[
-				'good' => false,
+				'good' => [false,false],
 				'mod' => 0
 			],
 			[
-				'good' => false,
+				'good' => [true,false],
 				'mod' => 0
 			]
 		],// Fortitude/Reflex/Will save good/bad and misc bonuses
 		'bravery +1; bb/DR/bb 5/bludgeoning; bb/Immune/bb undead traits',// Defensive Abilities
-		'bogged, sunlight flammability',// Weaknesses
+		'weariness',// Weaknesses
 		'30 ft.',// Speed
 		[
 			[
@@ -57,7 +57,7 @@
 						'name' => '2 claws',
 						'mod' => 0,
 						'stat' => 'str',
-						'damage' => '1d4+2 plus poison'
+						'damage' => '1d4+2 plus wearying strike'
 					]
 				]
 			],
@@ -68,13 +68,13 @@
 						'name' => 'mwk composite longbow',
 						'mod' => 2,
 						'stat' => 'dex',
-						'damage' => '1d8+3/x3 plus poison'
+						'damage' => '1d8+3/x3 plus wearying strike'
 					]
 				]
 			]
 		],// Attacks
 		5,// Reach
-		'poison, weapon training (bows +1)',// Special Attacks
+		'weapon training (bows +1)',// Special Attacks
 		[],// Spell-like Abilities
 		[],// Spell Casting
 		'',// Spell Casting Note
@@ -84,9 +84,9 @@
 			'con' => 'cha',
 			'int' => 0,
 			'wis' => 8,
-			'cha' => 8
+			'cha' => 10
 		],// Stats
-		1,// BAB (1=full, 0.75=3/4 or medium, 0.5=half or slow)
+		[0.75,1],// BAB (1=full, 0.75=3/4 or medium, 0.5=half or slow)
 		0,//CMB misc bonus and special cases
 		0,//CMD misc bonus and special cases
 		[
@@ -100,18 +100,14 @@
 		'none',// Treasure
 		[
 			[
-				'name' => 'Bogged',
+				'name' => 'Weary',
 				'type' => 'Ex',
-				'desc' => 'A bogged is covered with fungus, algae, moss, mud, and other swamp detritus that slows its movements. They are always considered staggered.'
+				'desc' => 'A parched\'s body retains the intense exhaustion that dictated their final moments. They are always considered staggered.'
 			],
 			[
-				'name' => 'Noxious Muck',
-				'desc' => 'injury; save Fort DC 10 + ½ the bogged\'s number of hit dice + their Charisma modifier, frequency 1/round for 6 rounds, effect 1d4 damage and 1d3 Dex damage, cure 2 consecutive saves'
-			],
-			[
-				'name' => 'Sunlight Flammability',
-				'type' => 'Ex',
-				'desc' => 'When exposed to direct sunlight, skeletons burst into flame and take 1 point of fire damage per hit dice every round until they die. At which point their body burns to ash and is completely destroyed. If the skeleton gets out of the sunlight before it dies, it is still on fire and will continue to take 1d6 points of fire damage, to a maximum of its number of hit dice, each round until it is extinguished. Skeletons count as being vulnerable to sunlight and bright light for the purpose of being affected by spells and abilities.'
+				'name' => 'Wearying Strike',
+				'type' => 'Su',
+				'desc' => 'Creatures struck by a parched\'s attacks must make a DC 13 Will save or else become fatigued. This can progress to exhausted as normal.'
 			]
 		],// Special Abilities
 		'',// Description

@@ -9,9 +9,6 @@
 			$startDir='../'.$startDir;
 		}
 	}
-?>
-<title>Skeleton</title>
-<?php
 	block(
 		'Skeleton (CR +varies)',
 		'template',
@@ -93,9 +90,22 @@
 					'bb/Hit Dice/bb: Preserve HD from class levels, change racial HD to d8s, and increase the number of racial hit dice by 1. Bogged use their Charisma modifiers to determine bonus hit points (instead of Constitution).',
 					'bb/Weaknesses/bb: Bogged retain all of the weaknesses of skeletons but also gain bogged.',
 					'ii/Bogged/ii (Ex): A bogged is covered with fungus, algae, moss, mud, and other swamp detritus that slows its movements. They are always considered staggered.',
-					'bb/Special Attacks/bb: Strays retain all special attacks possessed by typical skeletons but they also gain the following poison on all melee and ranged attacks they possess.',
+					'bb/Special Attacks/bb: Bogged retain all special attacks possessed by typical skeletons but they also gain the following poison on all melee and ranged attacks they possess.',
 					'ii/Noxious Muck/ii injury; save Fort DC 10 + ½ the bogged\'s number of hit dice + their Charisma modifier, frequency 1/round for 6 rounds, effect 1d4 damage and 1d3 Dex damage, cure 2 consecutive saves',
 					'bb/Abilities/bb: A bogged\'s Dexterity increases by +2. It has no Constitution or Intelligence score. A bogged\'s charisma score decreases by 4 and they have a minimum score of 8. If a bogged possesses class levels requiring an intelligence or constitution score, use the bogged\'s charisma score and increase it to the associated score of the base creature if it is greater, before reducing their Charisma.'
+				])
+			],
+			[
+				'title' => 'Parched',
+				'spaced' => true,
+				'texts' => quick_array([
+					'Parched are desiccated and partially mummified animated corpses found in deserts.',
+					'bb/Challenge Rating/bb: The CR of a parched is the same as a typical skeleton plus one.',
+					'bb/Hit Dice/bb: Preserve HD from class levels, change racial HD to d8s, and increase the number of racial hit dice by 1. Parched use their Charisma modifiers to determine bonus hit points (instead of Constitution).',
+					'bb/Weaknesses/bb: Parched lose sunlight flammability but retain all other the weaknesses of skeletons and also gain weary.',
+					'ii/Weary/ii (Ex): A parched\'s body retains the intense exhaustion that dictated their final moments. They are always considered staggered.',
+					'bb/Special Attacks/bb: Parched retain all special attacks possessed by typical skeletons but they also gain wearying strike.',
+					'ii/Wearying Strike/ii (Su): Creatures struck by a parched\'s attacks must make a Will save with a DC of 10 + half the parched\'s number of hit dice + its Charisma modifier or else become fatigued. This can progress to exhausted as normal.'
 				])
 			],
 			[

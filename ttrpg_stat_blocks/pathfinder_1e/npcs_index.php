@@ -27,31 +27,31 @@
 		[
 			[
 				'Plague Child Priest of Niva',
-				'link' => 'monsters/plague_child_adept.php',
+				'link' => 'npcs/plague_child_adept.php',
 				'1/2',
 				'nivan adept 1'
 			],
 			[
 				'Plague Child Craftsman',
-				'link' => 'monsters/plague_child_craftsman.php',
+				'link' => 'npcs/plague_child_craftsman.php',
 				'1/2',
 				'nivan expert 1'
 			],
 			[
 				'Plague Child Village Guard',
-				'link' => 'monsters/plague_child_warrior.php',
+				'link' => 'npcs/plague_child_warrior.php',
 				'1',
 				'nivan warrior 1'
 			],
 			[
 				'Plague Child',
-				'link' => 'monsters/plague_child.php',
+				'link' => 'npcs/plague_child.php',
 				'1/2',
 				'nivan commoner 1'
 			],
 			[
 				'Elephant Guard',
-				'link' => 'monsters/mandriff_elephant.php',
+				'link' => 'npcs/mandriff_elephant.php',
 				'12',
 				'mandriff (elephant) warrior 10'
 			]

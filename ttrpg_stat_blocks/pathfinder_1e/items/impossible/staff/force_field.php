@@ -34,7 +34,7 @@
 		'none',	#save
 		'no',	#sr
 		[
-			'This spell, sometimes jokingly called "bubble", causes all incoming attacks, actions, and effects to be blocked as they reach you as though they encountered a ii/wall of force/ii. As this barrier fits tightly to your body and equipment, attacks must still hit your AC and you still receive a Reflex save to avoid effects but on a successful hit or a failed or partial save they strike the barrier instead. This barrier is immune to lesser magic and is unaffected by spells that allow spell resistance as well as dispelling or suppression spells and effects of lower than 9th level or 18th caster level respectively.',
+			'This spell, sometimes jokingly called "bubble", causes all incoming attacks, actions, and effects to be blocked as they reach you as though they encountered a ii/wall of force/ii. As this barrier fits tightly to your body and equipment, attacks must still hit your AC and you still receive a Reflex save to avoid effects but on a successful hit or a failed or partial save they strike the barrier instead. This barrier is immune to lesser magic and is unaffected by spells that allow spell resistance as well as dispelling or suppressing spells and effects of lower than 9th level or 18th caster level respectively.',
 			'Despite this barrier, your attacks, actions, spells, and other abilities are entirely unaffected.',
 			'Additionally, if you are conscious, you may allow an ability to cross into the barrier, such as to allow a beneficial or healing spell through. This is a purely mental act that does not require an action and is done at the time the action you wish to allow is performed.',
 			'This barrier otherwise has the same statistics and properties as a ii/wall of force/ii.'

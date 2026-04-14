@@ -50,7 +50,7 @@
 				'mod' => 0
 			]
 		],// Fortitude/Reflex/Will save good/bad and misc bonuses
-		'bb/Immune/bb mind-affecting effects',// Defensive Abilities
+		'bb/Immune/bb fire, mind-affecting effects',// Defensive Abilities
 		'',// Weaknesses
 		'fly 30 ft.',// Speed
 		[
@@ -60,7 +60,7 @@
 					[
 						'name' => 'slam',
 						'mod' => 0,
-						'stat' => 'dex',
+						'stat' => 'str',
 						'damage' => '1d6+4'
 					]
 				]
