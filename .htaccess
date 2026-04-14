@@ -1,1 +1,2 @@
 Options FollowSymLinks
+AddType text/javascript .js .mjs
