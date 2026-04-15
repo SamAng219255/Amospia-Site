@@ -1,68 +1,82 @@
-{
-	"type": {
+[
+	{
 		"name": "Terrain Type",
-		"options": {
-			"forest": {
+		"entries": [
+			{
+				"id": "forest",
 				"name": "Forest",
 				"weight": 3
 			},
-			"hill": {
+			{
+				"id": "hill",
 				"name": "Hill",
 				"weight": 3
 			},
-			"marsh": {
+			{
+				"id": "marsh",
 				"name": "Marsh",
 				"weight": 2
 			},
-			"mountain": {
+			{
+				"id": "mountain",
 				"name": "Mountain",
 				"weight": 2
 			},
-			"plain": {
+			{
+				"id": "plain",
 				"name": "Plain",
 				"weight": 3
 			},
-			"settlement": {
+			{
+				"id": "settlement",
 				"name": "Settlement",
 				"weight": 1
 			},
-			"water": {
+			{
+				"id": "water",
 				"name": "Water",
 				"weight": 2
 			},
-			"same": {
+			{
+				"id": "same",
 				"name": "Same As Previous",
 				"weight": 4
 			}
-		}
+		]
 	},
-	"element": {
+	{
 		"name": "Terrain Element",
-		"options": {
-			"difficult": {
+		"entries": [
+			{
+				"id": "difficult",
 				"name": "Difficult",
 				"weight": 3
 			},
-			"feature": {
+			{
+				"id": "feature",
 				"name": "Feature",
 				"weight": 3
 			},
-			"hunting_ground": {
+			{
+				"id": "hunting_ground",
 				"name": "Hunting Ground",
 				"weight": 4
 			},
-			"resource": {
+			{
+				"id": "resource",
 				"name": "Resource",
 				"weight": 2
 			},
-			"secret": {
+			{
+				"id": "secret",
 				"name": "Secret",
 				"weight": 2
 			},
-			"standard": {
+			{
+				"id": "standard",
 				"name": "Standard",
 				"weight": 6
 			}
-		}
+		]
 	}
-}
+]
