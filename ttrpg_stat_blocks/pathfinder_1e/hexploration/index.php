@@ -17,6 +17,6 @@
 <div class="hex-options">
 
 </div>
-<?
+<?php
 	require $startDir.'pageEnd.php';
 ?>

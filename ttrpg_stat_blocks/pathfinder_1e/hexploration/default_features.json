@@ -1,6 +1,7 @@
 [
 	{
 		"name": "Terrain Type",
+		"id": "type",
 		"entries": [
 			{
 				"id": "forest",
@@ -46,6 +47,7 @@
 	},
 	{
 		"name": "Terrain Element",
+		"id": "element",
 		"entries": [
 			{
 				"id": "difficult",
