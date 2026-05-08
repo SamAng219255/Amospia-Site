@@ -47,6 +47,14 @@ export default class FeatureBagList extends Serializable {
 		return this;
 	}
 
+	serialize() {
+		return this.bags.map(bag => bag.serialize());
+	}
+
+	static deserialize(obj) {
+		return new FeatureBagList(obj);
+	}
+
 	async execute(state = new FeaturesState()) {
 		await Promise.all(this.bags.map(bag => bag.execute(state)));
 		return state;

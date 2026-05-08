@@ -5,7 +5,7 @@ export default class Serializable {
 		return {};
 	}
 	json() {
-		return JSON.stringify(this.serialize());
+		return JSON.stringify(this.serialize(),null,4);
 	}
 
 	static deserialize(obj) {

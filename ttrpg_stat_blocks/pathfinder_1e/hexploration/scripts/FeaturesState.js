@@ -143,7 +143,7 @@ export default class FeaturesState {
 
 	toString() {
 		return Object.entries(this.#features).map(([id, feature]) => feature.toString({
-			count: this.#featureCounts[id]
+			count: this.#featureCounts[id],
 		})).join("\n");
 	}
 }

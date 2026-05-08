@@ -127,13 +127,13 @@ export default class NumberProvider extends Serializable {
 					desc: "Returns a random integer between the minimum and maximum.",
 				},
 				"die": {
-					func: ({min = 1, sides, count = 1}) => async (state) => (([min, sides, count]) => {
+					func: ({sides, count = 1}) => async (state) => (([sides, count]) => {
 						let total = 0;
 						for(let i = 0; i < count; i++) 
-							total += min + Math.floor(Math.random() * (1 + sides - min));
+							total += Math.floor(Math.random() * sides) + 1;
 						return total;
-					})(await resolveProviders(state, min, sides, count)),
-					args: new ArgConditions({id: "min", def: () => 1}, "sides", {id: "count", def: () => 1}),
+					})(await resolveProviders(state, sides, count)),
+					args: new ArgConditions({id: "count", def: () => 1}, {id: "sides", def: () => 6}),
 					label: "Dice",
 					desc: "Returns a random number like rolling a number of dice.",
 				},

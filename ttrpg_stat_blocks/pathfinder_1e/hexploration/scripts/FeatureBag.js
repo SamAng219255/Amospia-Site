@@ -62,9 +62,11 @@ export default class FeatureBag extends Serializable {
 	async execute(state = new FeaturesState()) {
 		if(!(await this.condition.execute(state))) return state;
 
-		let allowedEntries = this.entries.filter(async entry => await entry.match(state));
+		const promises = [];
+
+		const allowedEntries = (await Promise.all(this.entries.map(async entry => [await entry.match(state), entry]))).filter(([allowed,]) => allowed).map(([,entry]) => entry);
 		const resolvedRolls = await this.rolls.execute(state);
-		const weights = await Promise.all(this.entries.map(entry => entry.weight.execute(state)));
+		const weights = await Promise.all(allowedEntries.map(entry => entry.weight.execute(state)));
 		for(let i=0; i<resolvedRolls; i++) {
 			const totalWeight = weights.reduce((sum, weight) => sum + weight, 0);
 			const randIndex = parseInt(Math.random() * totalWeight);
@@ -74,12 +76,14 @@ export default class FeatureBag extends Serializable {
 				growingCeiling += weights[j];
 
 				if(randIndex < growingCeiling) {
-					allowedEntries[j].execute(state);
+					promises.push(allowedEntries[j].execute(state));
 					allowedEntries.splice(j, 1);
+					weights.splice(j, 1);
 					break;
 				}
 			}
 		}
+		await Promise.all(promises);
 		return state;
 	}
 
@@ -114,16 +118,20 @@ export default class FeatureBag extends Serializable {
 			condition = FeatureQuery.TRUE,
 		} = {},
 	) {
-		const idIsGenerated = /^newTable$\d{0,4}$/.test(id);
+		const idIsGenerated = HexpUIDataLinkage.genIdFromName(name) == id;
 
 		const uiDataLinkage = new HexpUIDataLinkage.HasKeyedChildren(id, document.createElement("div"));
 
 		const idWrapper = document.createElement("div");
 		idWrapper.classList.add("hexp-gen-id-wrapper");
 
+		const idLabel = document.createElement("label");
+		idLabel.innerText = "Id";
+
 		const idField = new HexpUIDataLinkage.HasField("id", "text", id);
 		idField.element.disabled = idIsGenerated;
-		idWrapper.append(idField.element);
+		idLabel.append(idField.element);
+		idWrapper.append(idLabel);
 
 		const autoLabel = document.createElement("label");
 		autoLabel.innerText = "auto";
@@ -136,7 +144,7 @@ export default class FeatureBag extends Serializable {
 		idWrapper.append(autoLabel);
 
 		uiDataLinkage.element.append(idWrapper);
-		uiDataLinkage.addChild(new HexpUIDataLinkage.LabelWrapper(idField, "Id"));
+		uiDataLinkage.addChild(idField);
 
 		const nameField = new HexpUIDataLinkage.HasField("name", "text", name);
 		uiDataLinkage.appendAsChild(new HexpUIDataLinkage.LabelWrapper(nameField, "Name"));

@@ -155,7 +155,7 @@ class ArgCondition {
 				uiDataLinkage.addChild(entryUIDataLinkage);
 			};
 			if(val && Array.isArray(val)) val.forEach(addEntry);
-			else if(this.def && Array.isArray(this.def)) this.def.forEach(addEntry);
+			else if(this.def && Array.isArray(this.def)) this.def.filter(def => typeof def == "function").map(def => def()).forEach(addEntry);
 
 			const addButton = document.createElement("button");
 			addButton.classList.add("hexp-gen-argument-list-add");
@@ -177,7 +177,7 @@ class ArgCondition {
 				return uiDataLinkage
 			}
 			else
-				return new HexpUIDataLinkage.HasLabeledPrimitiveSelector(this.id, this.label, this.can_accept, ArgCondition.TYPES, val ?? this.def);
+				return new HexpUIDataLinkage.HasLabeledPrimitiveSelector(this.id, this.label, this.can_accept, ArgCondition.TYPES, val ?? (typeof this.def == "function" ? this.def() : undefined));
 		}
 	}
 

@@ -84,7 +84,7 @@ export default class Feature extends Serializable {
 
 
 	async match(state) {
-		return this.condition.execute(state);
+		return await this.condition.execute(state);
 	}
 
 	async execute(state = new FeaturesState()) {
@@ -103,7 +103,7 @@ export default class Feature extends Serializable {
 			weight: this.weight.serialize(),
 			condition: this.condition.serialize(),
 			count: this.count.serialize(),
-			bags: this.bags.map(child => child.serialize()),
+			bags: this.bags.serialize(),
 		};
 	}
 
@@ -122,17 +122,20 @@ export default class Feature extends Serializable {
 			bags = [],
 		} = {},
 	) {
-		const idIsGenerated = /^newFeature$\d{0,4}$/.test(id);
-
+		const idIsGenerated = HexpUIDataLinkage.genIdFromName(name) == id;
 
 		const uiDataLinkage = new HexpUIDataLinkage.HasKeyedChildren(id, document.createElement("div"));
 
 		const idWrapper = document.createElement("div");
 		idWrapper.classList.add("hexp-gen-id-wrapper");
 
+		const idLabel = document.createElement("label");
+		idLabel.innerText = "Id";
+
 		const idField = new HexpUIDataLinkage.HasField("id", "text", id);
 		idField.element.disabled = idIsGenerated;
-		idWrapper.append(idField.element);
+		idLabel.append(idField.element);
+		idWrapper.append(idLabel);
 
 		const autoLabel = document.createElement("label");
 		autoLabel.innerText = "auto";
@@ -145,7 +148,7 @@ export default class Feature extends Serializable {
 		idWrapper.append(autoLabel);
 
 		uiDataLinkage.element.append(idWrapper);
-		uiDataLinkage.addChild(new HexpUIDataLinkage.LabelWrapper(idField, "Id"));
+		uiDataLinkage.addChild(idField);
 
 		const nameField = new HexpUIDataLinkage.HasField("name", "text", name);
 		uiDataLinkage.appendAsChild(new HexpUIDataLinkage.LabelWrapper(nameField, "Name"));
