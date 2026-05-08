@@ -15,4 +15,8 @@ export default class MainBagList extends FeatureBagList {
 	static deserialize(obj) {
 		return new MainBagList(obj);
 	}
+
+	static getUI(val) {
+		return super.getUI("main", val);
+	}
 }

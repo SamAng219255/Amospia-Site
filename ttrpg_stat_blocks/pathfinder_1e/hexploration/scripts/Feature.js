@@ -2,9 +2,12 @@ import Serializable from "./Serializable.js";
 import FeatureBagList from "./FeatureBagList.js";
 import FeatureQuery from "./FeatureQuery.js";
 import NumberProvider from "./NumberProvider.js";
+import HexpUIDataLinkage from "./HexpUIDataLinkage.js";
 
 export default class Feature extends Serializable {
 	#condition = FeatureQuery.TRUE;
+	#weight = NumberProvider.ONE;
+	#count = NumberProvider.ONE;
 	#bags;
 
 	constructor(id, name, {
@@ -52,6 +55,14 @@ export default class Feature extends Serializable {
 		else
 			throw new TypeError("`bags` must be either a FeatureBagList or an array of FeatureBags.");
 	}
+	get weight() {return this.#weight;}
+	set weight(weight) {
+		this.#weight = weight instanceof NumberProvider ? weight : NumberProvider.deserialize(weight);
+	}
+	get count() {return this.#count;}
+	set count(count) {
+		this.#count = count instanceof NumberProvider ? count : NumberProvider.deserialize(count);
+	}
 
 	setCondition(condition) {
 		this.condition = condition;
@@ -77,10 +88,10 @@ export default class Feature extends Serializable {
 	}
 
 	async execute(state = new FeaturesState()) {
-		await Promise.all(
+		await Promise.all([
 			state.resolve(this),
 			this.bags.execute(state),
-		);
+		]);
 		return state;
 	}
 
@@ -91,12 +102,77 @@ export default class Feature extends Serializable {
 			desc: this.desc,
 			weight: this.weight.serialize(),
 			condition: this.condition.serialize(),
+			count: this.count.serialize(),
 			bags: this.bags.map(child => child.serialize()),
 		};
 	}
 
 	static deserialize(obj) {
-		return new Feature(obj.id, obj.name, {...obj, weight: NumberProvider.deserialize(obj.weight ?? 1)});
+		return new Feature(obj.id, obj.name, obj);
+	}
+
+	static getUI(
+		id = `newFeature${Math.floor(Math.random() * 10000)}`, 
+		{
+			name = HexpUIDataLinkage.genNameFromId(id),
+			desc = "",
+			weight = NumberProvider.ONE,
+			condition = FeatureQuery.TRUE,
+			count = NumberProvider.ONE,
+			bags = [],
+		} = {},
+	) {
+		const idIsGenerated = /^newFeature$\d{0,4}$/.test(id);
+
+
+		const uiDataLinkage = new HexpUIDataLinkage.HasKeyedChildren(id, document.createElement("div"));
+
+		const idWrapper = document.createElement("div");
+		idWrapper.classList.add("hexp-gen-id-wrapper");
+
+		const idField = new HexpUIDataLinkage.HasField("id", "text", id);
+		idField.element.disabled = idIsGenerated;
+		idWrapper.append(idField.element);
+
+		const autoLabel = document.createElement("label");
+		autoLabel.innerText = "auto";
+
+		const autoCheckbox = document.createElement("input");
+		autoCheckbox.type = "checkbox";
+		autoCheckbox.checked = idIsGenerated;
+		autoLabel.prepend(autoCheckbox);
+
+		idWrapper.append(autoLabel);
+
+		uiDataLinkage.element.append(idWrapper);
+		uiDataLinkage.addChild(new HexpUIDataLinkage.LabelWrapper(idField, "Id"));
+
+		const nameField = new HexpUIDataLinkage.HasField("name", "text", name);
+		uiDataLinkage.appendAsChild(new HexpUIDataLinkage.LabelWrapper(nameField, "Name"));
+
+		idField.element.addEventListener("change", () => {
+			uiDataLinkage.id = idField.getValue();
+		});
+
+		nameField.element.addEventListener("change", () => {
+			if(autoCheckbox.checked) {
+				idField.element.value = HexpUIDataLinkage.genIdFromName(nameField.getValue());
+				idField.element.dispatchEvent(new Event("change"));
+			}
+		});
+
+		autoCheckbox.addEventListener("change", () => {
+			idField.element.disabled = autoCheckbox.checked;
+			if(autoCheckbox.checked) nameField.element.dispatchEvent(new Event("change"));
+		});
+
+		uiDataLinkage.appendAsChild(new HexpUIDataLinkage.LabelWrapper(new HexpUIDataLinkage.HasField("desc", "text", desc), "Description"));
+		uiDataLinkage.appendAsChild(new HexpUIDataLinkage.TitleWrapper(NumberProvider.getUI("weight", weight), "Weight"));
+		uiDataLinkage.appendAsChild(new HexpUIDataLinkage.TitleWrapper(FeatureQuery.getUI("condition", condition), "Condition"));
+		uiDataLinkage.appendAsChild(new HexpUIDataLinkage.TitleWrapper(NumberProvider.getUI("count", count), "Count"));
+		uiDataLinkage.appendAsChild(new HexpUIDataLinkage.TitleWrapper(FeatureBagList.getUI("bags", bags), "Bags"));
+
+		return uiDataLinkage;
 	}
 
 	toString({count = null} = {}) {

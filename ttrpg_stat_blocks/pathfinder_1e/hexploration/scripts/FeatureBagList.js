@@ -1,6 +1,7 @@
 import Serializable from "./Serializable.js";
 import FeatureBag from "./FeatureBag.js";
 import FeaturesState from "./FeaturesState.js";
+import HexpUIDataLinkage from "./HexpUIDataLinkage.js";
 
 export default class FeatureBagList extends Serializable {
 	#bags = [];
@@ -49,5 +50,40 @@ export default class FeatureBagList extends Serializable {
 	async execute(state = new FeaturesState()) {
 		await Promise.all(this.bags.map(bag => bag.execute(state)));
 		return state;
+	}
+
+	static getUI(id, bags = []) {
+		const uiDataLinkage = new HexpUIDataLinkage.HasChildArray(id, document.createElement("div"));
+
+		const entriesWrapper = document.createElement("div");
+
+		const makeBag = (bag = {}) => {
+			const container = new HexpUIDataLinkage.Wrapper(document.createElement("div"), FeatureBag.getUI(bag.id, bag));
+
+			const dltBtn = document.createElement("button");
+			dltBtn.innerText = "X";
+			dltBtn.ariaLabel = "Delete table.";
+			dltBtn.addEventListener("click", () => {
+				container.removeFromParent();
+				container.element.remove();
+			});
+			container.element.append(dltBtn);
+
+			container.append(container.child);
+
+			entriesWrapper.append(container.element);
+			uiDataLinkage.addChild(container);
+		};
+		bags.forEach(makeBag);
+
+		uiDataLinkage.element.append(entriesWrapper);
+
+		const addEntryBtn = document.createElement("button");
+		addEntryBtn.innerText = "+";
+		addEntryBtn.ariaLabel = "Add table to list.";
+		addEntryBtn.addEventListener("click", () => makeBag());
+		uiDataLinkage.element.append(addEntryBtn);
+
+		return uiDataLinkage;
 	}
 }

@@ -14,7 +14,7 @@
 <canvas></canvas>
 <p id="hex-output"></p>
 <button id="hex-generate">Generate</button>
-<div class="hex-options">
+<div id="hex-options">
 
 </div>
 <?php
