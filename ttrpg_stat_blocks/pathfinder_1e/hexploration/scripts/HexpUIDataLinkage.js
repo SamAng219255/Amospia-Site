@@ -448,8 +448,6 @@ export default class HexpUIDataLinkage {
 	}
 
 	static CollapseWrapper = class extends HexpUIDataLinkage.Wrapper {
-		#label;
-
 		constructor(
 			labels = {},
 			child,
@@ -459,17 +457,17 @@ export default class HexpUIDataLinkage {
 			this.element.classList.add("hexp-options-collapse");
 			this.child.element.classList.add("hexp-options-collapse-target");
 
-			this.#label = new HexpUIDataLinkage.CollapseLabel(labels, hasDelete ? this : null);
-			this.element.append(this.#label.element);
+			this.labelLinkage = new HexpUIDataLinkage.CollapseLabel(labels, hasDelete ? this : null);
+			this.element.append(this.labelLinkage.element);
 
 			this.element.append(child.element);
 		}
 
 		get labelText() {
-			return this.#label.text;
+			return this.labelLinkage.text;
 		}
 		set labelText(text) {
-			this.#label.text = text;
+			this.labelLinkage.text = text;
 		}
 
 		addChild(child, reciprocate) {
@@ -497,7 +495,7 @@ export default class HexpUIDataLinkage {
 
 			super(labels, listUIDataLinkage);
 
-			const makeEntry = val => {
+			const makeEntry = (val, isOpen = false) => {
 				let entry;
 				if(itemsHaveDropdown) {
 					let initLabelText = "";
@@ -505,6 +503,7 @@ export default class HexpUIDataLinkage {
 						setLabel: labelText => initLabelText = labelText,
 					};
 					entry = new HexpUIDataLinkage.CollapseWrapper({deleteAria: labels.deleteAria}, uiSource(val, entryChildRef), true);
+					if(isOpen) entry.labelLinkage.element.classList.add("is-expanded");
 					entry.labelText = initLabelText;
 					entryChildRef.setLabel = labelText => entry.labelText = labelText;
 				}
@@ -525,7 +524,7 @@ export default class HexpUIDataLinkage {
 			addEntryBtn.classList.add("hexp-options-add");
 			addEntryBtn.innerText = labels.add;
 			addEntryBtn.ariaLabel = labels.addAria;
-			addEntryBtn.addEventListener("click", () => makeEntry());
+			addEntryBtn.addEventListener("click", () => makeEntry({}, true));
 			listUIDataLinkage.element.append(addEntryBtn);
 		}
 

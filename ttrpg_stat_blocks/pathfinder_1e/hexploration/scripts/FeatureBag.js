@@ -177,7 +177,7 @@ export default class FeatureBag extends Serializable {
 		uiDataLinkage.appendAsChild(new HexpUIDataLinkage.IsList(
 			"entries",
 			entries,
-			(entry, ref) => Feature.getUI(entry.id, entry, ref),
+			(entry = {}, ref) => Feature.getUI(entry.id, entry, ref),
 			{
 				main: "Features",
 				add: "+ Add Feature",

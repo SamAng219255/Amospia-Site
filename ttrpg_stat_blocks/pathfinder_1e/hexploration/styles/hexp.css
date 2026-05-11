@@ -127,7 +127,6 @@
 		.is-expanded + & {
 			max-height: fit-content;
 			border-left: solid 2px #505050;
-			padding-left: 2px;
 			padding: 4px 0 4px 4px;
 
 			&:hover {
@@ -159,8 +158,6 @@
 	}
 
 	.hexp-options-list-box {
-		
-
 		.hexp-options-bar {
 			background-color: #202020;
 			border: solid 1px #404040;

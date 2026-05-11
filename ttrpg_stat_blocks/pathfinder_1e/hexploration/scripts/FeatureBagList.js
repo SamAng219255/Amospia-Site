@@ -64,7 +64,7 @@ export default class FeatureBagList extends Serializable {
 		return new HexpUIDataLinkage.IsList(
 			id,
 			bags,
-			(entry, ref) => FeatureBag.getUI(entry.id, entry, ref),
+			(entry = {}, ref) => FeatureBag.getUI(entry.id, entry, ref),
 			{
 				main: "Tables",
 				add: "+ Add Table",
