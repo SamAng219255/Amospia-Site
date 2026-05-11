@@ -71,7 +71,6 @@ export default class HexpUIDataLinkage {
 
 			super(id, document.createElement("input"));
 
-			this.element.classList.add("hexp-gen-input");
 			this.element.type = type;
 			HexpUIDataLinkage.HasField.FIELD_TYPES[type].set(this.element, value);
 
@@ -216,24 +215,8 @@ export default class HexpUIDataLinkage {
 	static LabelWrapper = class extends HexpUIDataLinkage.Wrapper {
 		constructor(child, text) {
 			super(document.createElement("label"), child);
+			this.element.classList.add("hexp-options-option");
 			this.element.innerText = text;
-			this.append(child);
-		}
-
-		addChild(child, reciprocate) {
-			if(this.child) this.child.replaceWith(child);
-			super.addChild(child, reciprocate);
-		}
-	}
-
-	static TitleWrapper = class extends HexpUIDataLinkage.Wrapper {
-		constructor(child, text) {
-			super(document.createElement("div"), child);
-
-			const title = document.createElement("p");
-			title.innerText = text;
-			this.element.append(title);
-
 			this.append(child);
 		}
 
@@ -274,17 +257,11 @@ export default class HexpUIDataLinkage {
 			if(newType == this.#lastType) return this;
 			this.#lastType = newType;
 
-			if(this.#label == null){
-				this.#label = document.createElement("p");
-				this.#label.classList.add("hexp-gen-number-label");
-				this.element.append(this.#label);
-			}
 			if(this.#desc == null){
-				this.#desc = document.createElement("p");
+				this.#desc = document.createElement("span");
 				this.#desc.classList.add("hexp-gen-number-desc");
 				this.element.append(this.#desc);
 			}
-			this.#label.innerText = this.methodSource[newType].label;
 			this.#desc.innerText = this.methodSource[newType].desc;
 
 			this.#setArgs(this.methodSource[newType].args.getUI(def));
@@ -310,17 +287,29 @@ export default class HexpUIDataLinkage {
 
 	static HasPrimitiveSelector = class extends HexpUIDataLinkage.Wrapper {
 		#lastType = null;
+		#insertElement;
 
-		constructor(id, allowedTypes, methodSource, val, elementGenerator = () => document.createElement("div")) {
+		constructor(
+			id, 
+			allowedTypes, 
+			methodSource, 
+			val, 
+			elementGenerator = () => {
+				const element = document.createElement("div");
+				element.classList.add("hexp-options-option");
+				return [element, element];
+			},
+		) {
 			const types = [...allowedTypes];
 			const singleType = types.length == 1;
 			const type = val == null || singleType ? types[0] : types.find(type => methodSource[type].match(val));
 			const value = val ?? methodSource[type].def();
 
-			let element = elementGenerator({type, singleType});
+			let [element, insertElement] = elementGenerator({type, singleType});
 
 			super(element, methodSource[type].getUI(id, value));
 
+			this.#insertElement = insertElement;
 			this.methodSource = methodSource;
 			this.allowedTypes = types;
 
@@ -336,7 +325,7 @@ export default class HexpUIDataLinkage {
 					this.selector.append(option);
 				}
 				this.selector.addEventListener("change", () => this.updateType());
-				element.append(this.selector);
+				insertElement.append(this.selector);
 			}
 
 			this.append(this.child);
@@ -351,6 +340,11 @@ export default class HexpUIDataLinkage {
 
 			return this;
 		}
+
+		append(linkage) {
+			if(!(linkage instanceof HexpUIDataLinkage)) throw new TypeError("Linkage must be an instance of HexpUIDataLinkage.");
+			this.#insertElement.append(linkage.element);
+		}
 	}
 
 	static HasLabeledPrimitiveSelector = class extends HexpUIDataLinkage.HasPrimitiveSelector {
@@ -360,20 +354,196 @@ export default class HexpUIDataLinkage {
 			super(id, allowedTypes, methodSource, val, ({singleType, type}) => {
 				if(singleType && methodSource[type].simple) {
 					const element = document.createElement("label");
+					element.classList.add("hexp-options-option");
+					
 					element.innerText = label;
 
-					return element;
+					return [element, element];
 				}
 				else {
 					const element = document.createElement("fieldset");
+					element.classList.add("hexp-options-option");
 
 					const legend = document.createElement("legend");
 					legend.innerText = label;
 					element.append(legend);
 
-					return element;
+					const holder = document.createElement("div");
+					element.append(holder);
+
+					return [element, holder];
 				}
 			});
+		}
+	}
+
+	static ListBoxWrapper = class extends HexpUIDataLinkage.Wrapper {
+		#contentWrapper;
+
+		constructor(
+			labels = {
+				deleteAria: "Delete item."
+			},
+			child,
+		) {
+			super(document.createElement("div"), child);
+			this.element.classList.add("hexp-options-list-box");
+
+			const headerBar = document.createElement("div");
+			headerBar.classList.add("hexp-options-bar")
+			this.element.append(headerBar);
+
+			this.#contentWrapper = document.createElement("div");
+			this.#contentWrapper.classList.add("hexp-options-list-box-content");
+			this.element.append(this.#contentWrapper);
+
+			const dltBtn = document.createElement("button");
+			dltBtn.classList.add("hexp-options-delete");
+			dltBtn.innerText = "X";
+			dltBtn.ariaLabel = labels.deleteAria;
+			dltBtn.addEventListener("click", () => {
+				this.removeFromParent();
+				this.element.remove();
+			});
+			this.#contentWrapper.append(dltBtn);
+
+			this.#contentWrapper.append(child.element);
+		}
+	}
+
+	static CollapseLabel = class {
+		#label;
+
+		constructor({
+			main = "",
+			deleteAria = "Delete item."
+		}, deleteParent = null) {
+			this.element = document.createElement("div");
+			this.element.classList.add("hexp-options-collapse-label");
+			this.element.addEventListener("click", () => this.element.classList.toggle("is-expanded"));
+
+			this.#label = document.createElement("span");
+			this.text = main;
+			this.element.append(this.#label);
+
+			if(deleteParent instanceof HexpUIDataLinkage) {
+				const dltBtn = document.createElement("button");
+				dltBtn.classList.add("hexp-options-delete");
+				dltBtn.innerText = "X";
+				dltBtn.ariaLabel = deleteAria;
+				dltBtn.addEventListener("click", () => {
+					deleteParent.removeFromParent();
+					deleteParent.element.remove();
+				});
+				this.element.append(dltBtn);
+			}
+		}
+
+		get text() {
+			return this.#label.innerText;
+		}
+		set text(text) {
+			this.#label.innerText = text;
+		}
+	}
+
+	static CollapseWrapper = class extends HexpUIDataLinkage.Wrapper {
+		#label;
+
+		constructor(
+			labels = {},
+			child,
+			hasDelete = false,
+		) {
+			super(document.createElement("div"), child);
+			this.element.classList.add("hexp-options-collapse");
+			this.child.element.classList.add("hexp-options-collapse-target");
+
+			this.#label = new HexpUIDataLinkage.CollapseLabel(labels, hasDelete ? this : null);
+			this.element.append(this.#label.element);
+
+			this.element.append(child.element);
+		}
+
+		get labelText() {
+			return this.#label.text;
+		}
+		set labelText(text) {
+			this.#label.text = text;
+		}
+
+		addChild(child, reciprocate) {
+			if(this.child) this.child.replaceWith(child);
+			super.addChild(child, reciprocate);
+		}
+	}
+
+	static IsList = class extends HexpUIDataLinkage.CollapseWrapper {
+		constructor(
+			id, 
+			entries = [],
+			uiSource = () => new HexpUIDataLinkage("", document.createElement("div")),
+			labels = {
+				main: "",
+				add: "Add",
+				addAria: "Add item to list.",
+				deleteAria: "Delete item."
+			},
+			itemsHaveDropdown = true,
+		) {
+			const listUIDataLinkage = new HexpUIDataLinkage.HasChildArray(id, document.createElement("div"));
+			const entriesWrapper = document.createElement("div");
+			entriesWrapper.classList.add("hexp-options-list");
+
+			super(labels, listUIDataLinkage);
+
+			const makeEntry = val => {
+				let entry;
+				if(itemsHaveDropdown) {
+					let initLabelText = "";
+					const entryChildRef = {
+						setLabel: labelText => initLabelText = labelText,
+					};
+					entry = new HexpUIDataLinkage.CollapseWrapper({deleteAria: labels.deleteAria}, uiSource(val, entryChildRef), true);
+					entry.labelText = initLabelText;
+					entryChildRef.setLabel = labelText => entry.labelText = labelText;
+				}
+				else {
+					entry = new HexpUIDataLinkage.ListBoxWrapper({deleteAria: labels.deleteAria}, uiSource(val));
+				}
+
+				entriesWrapper.append(entry.element);
+				listUIDataLinkage.addChild(entry);
+
+				return entry;
+			};
+			entries.forEach(entry => makeEntry(entry));
+
+			listUIDataLinkage.element.append(entriesWrapper);
+
+			const addEntryBtn = document.createElement("button");
+			addEntryBtn.classList.add("hexp-options-add");
+			addEntryBtn.innerText = labels.add;
+			addEntryBtn.ariaLabel = labels.addAria;
+			addEntryBtn.addEventListener("click", () => makeEntry());
+			listUIDataLinkage.element.append(addEntryBtn);
+		}
+
+		addChild(child, reciprocate) {
+			if(!this.child) return super.addChild(child, reciprocate);
+			this.child.addChild(child, reciprocate);
+			return this;
+		}
+
+		removeChild(child, reciprocate) {
+			if(!reciprocate) this.removeFromParent();
+			this.child.removeChild(child, reciprocate);
+			return this;
+		}
+
+		append(linkage) {
+			this.child.append(linkage);
+			return this;
 		}
 	}
 }
@@ -381,6 +551,7 @@ export default class HexpUIDataLinkage {
 class TypeUIDataLinkage extends HexpUIDataLinkage {
 	constructor(methodSource, {type = null} = {}) {
 		super("type", document.createElement("select"));
+		this.element.classList.add("inline-select");
 		for(const typeKey in methodSource) {
 			const {label} = methodSource[typeKey];
 

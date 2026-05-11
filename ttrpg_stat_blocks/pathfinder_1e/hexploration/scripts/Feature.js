@@ -81,8 +81,6 @@ export default class Feature extends Serializable {
 		return this;
 	}
 
-
-
 	async match(state) {
 		return await this.condition.execute(state);
 	}
@@ -121,13 +119,17 @@ export default class Feature extends Serializable {
 			count = NumberProvider.ONE,
 			bags = [],
 		} = {},
+		collapseParentRef = {},
 	) {
+		if(collapseParentRef && typeof collapseParentRef.setLabel == "function")
+			collapseParentRef.setLabel(name);
+
 		const idIsGenerated = HexpUIDataLinkage.genIdFromName(name) == id;
 
 		const uiDataLinkage = new HexpUIDataLinkage.HasKeyedChildren(id, document.createElement("div"));
 
 		const idWrapper = document.createElement("div");
-		idWrapper.classList.add("hexp-gen-id-wrapper");
+		idWrapper.classList.add("hexp-options-option");
 
 		const idLabel = document.createElement("label");
 		idLabel.innerText = "Id";
@@ -162,6 +164,8 @@ export default class Feature extends Serializable {
 				idField.element.value = HexpUIDataLinkage.genIdFromName(nameField.getValue());
 				idField.element.dispatchEvent(new Event("change"));
 			}
+			if(collapseParentRef && typeof collapseParentRef.setLabel == "function")
+				collapseParentRef.setLabel(nameField.getValue());
 		});
 
 		autoCheckbox.addEventListener("change", () => {
@@ -170,10 +174,10 @@ export default class Feature extends Serializable {
 		});
 
 		uiDataLinkage.appendAsChild(new HexpUIDataLinkage.LabelWrapper(new HexpUIDataLinkage.HasField("desc", "text", desc), "Description"));
-		uiDataLinkage.appendAsChild(new HexpUIDataLinkage.TitleWrapper(NumberProvider.getUI("weight", weight), "Weight"));
-		uiDataLinkage.appendAsChild(new HexpUIDataLinkage.TitleWrapper(FeatureQuery.getUI("condition", condition), "Condition"));
-		uiDataLinkage.appendAsChild(new HexpUIDataLinkage.TitleWrapper(NumberProvider.getUI("count", count), "Count"));
-		uiDataLinkage.appendAsChild(new HexpUIDataLinkage.TitleWrapper(FeatureBagList.getUI("bags", bags), "Bags"));
+		uiDataLinkage.appendAsChild(new HexpUIDataLinkage.CollapseWrapper({main: "Weight"}, NumberProvider.getUI("weight", weight)));
+		uiDataLinkage.appendAsChild(new HexpUIDataLinkage.CollapseWrapper({main: "Condition"}, FeatureQuery.getUI("condition", condition)));
+		uiDataLinkage.appendAsChild(new HexpUIDataLinkage.CollapseWrapper({main: "Count"}, NumberProvider.getUI("count", count)));
+		uiDataLinkage.appendAsChild(FeatureBagList.getUI("bags", bags));
 
 		return uiDataLinkage;
 	}

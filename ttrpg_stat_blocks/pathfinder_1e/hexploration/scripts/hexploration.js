@@ -6,8 +6,8 @@ const output = document.getElementById("hex-output");
 const defaultFeatures = await (await fetch("default_features.json")).json();
 //const defaultFeatures = JSON.parse(``);
 
-const uiLinkage = MainBagList.getUI(defaultFeatures);
-document.getElementById("hex-options").append(uiLinkage.element);
+let uiLinkage = MainBagList.getUI(defaultFeatures);
+document.getElementById("hexp-options").append(uiLinkage.element);
 
 generateBtn.addEventListener("click", async () => {
 	const value = uiLinkage.getValue();
@@ -19,4 +19,21 @@ generateBtn.addEventListener("click", async () => {
 	//console.log(features);
 	//console.log(resultState);
 	//console.log(resultState.results);
+});
+
+const getStringBtn = document.getElementById("hexp-json-get");
+const loadStringBtn = document.getElementById("hexp-json-load");
+const stringBox = document.getElementById("hexp-json-textarea");
+
+getStringBtn.addEventListener("click", () => stringBox.value = JSON.stringify(uiLinkage.getValue()));
+loadStringBtn.addEventListener("click", () => {
+	try {
+		const tables = JSON.parse(stringBox.value);
+		const newUILinkage = MainBagList.getUI(tables);
+		uiLinkage.replaceWith(newUILinkage);
+		uiLinkage = newUILinkage;
+	}
+	catch {
+		
+	}
 });

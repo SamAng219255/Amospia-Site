@@ -125,48 +125,28 @@ class ArgCondition {
 
 	getUI(val) {
 		if(this.multi) {
-			const uiDataLinkage = new HexpUIDataLinkage.HasChildArray(this.id, document.createElement("div"));
+			let entries;
+			if(val && Array.isArray(val)) entries = val;
+			else if(this.def && Array.isArray(this.def)) entries = this.def.filter(def => typeof def == "function").map(def => def());
 
-			const label = document.createElement("p");
-			label.classList.add("hexp-gen-argument-label");
-			label.innerText = this.label;
-			uiDataLinkage.element.append(label);
+			const argName = this.can_accept.size == 1
+				? ArgCondition.TYPES[[...this.can_accept][0]].label
+				: [...this.can_accept].every(type => type == "number" || type == "provider")
+					? ArgCondition.TYPES["number"].label
+					: "Argument";
 
-			const listBox = document.createElement("div");
-			listBox.classList.add("hexp-gen-argument-list");
-
-			const listWrapper = document.createElement("div");
-			listWrapper.classList.add("hexp-gen-argument-list-holder");
-			listBox.append(listWrapper);
-
-			const addEntry = entry => {
-				const entryUIDataLinkage = new HexpUIDataLinkage.HasPrimitiveSelector(this.id, this.can_accept, ArgCondition.TYPES, entry);
-
-				const dltBtn = document.createElement("button");
-				dltBtn.innerText = "X";
-				dltBtn.ariaLabel = dltBtn.title = "Delete Item";
-				dltBtn.addEventListener("click", () => {
-					entryUIDataLinkage.element.remove();
-					entryUIDataLinkage.removeFromParent();
-				});
-				entryUIDataLinkage.element.prepend(dltBtn);
-
-				listWrapper.append(entryUIDataLinkage.element);
-				uiDataLinkage.addChild(entryUIDataLinkage);
-			};
-			if(val && Array.isArray(val)) val.forEach(addEntry);
-			else if(this.def && Array.isArray(this.def)) this.def.filter(def => typeof def == "function").map(def => def()).forEach(addEntry);
-
-			const addButton = document.createElement("button");
-			addButton.classList.add("hexp-gen-argument-list-add");
-			addButton.innerText = "+";
-			addButton.ariaLabel = addButton.title = "Add New Item";
-			addButton.addEventListener("click", () => addEntry());
-			listBox.append(addButton);
-
-			uiDataLinkage.element.append(listBox);
-
-			return uiDataLinkage;
+			return new HexpUIDataLinkage.IsList(
+				this.id,
+				entries,
+				(entry, ref) => new HexpUIDataLinkage.HasPrimitiveSelector(this.id, this.can_accept, ArgCondition.TYPES, entry),
+				{
+					main: `${argName}s`,
+					add: `+ Add ${argName}`,
+					addAria: `Add ${argName.toLowerCase()} to list.`,
+					deleteAria: `Delete ${argName.toLowerCase()} from list.`,
+				},
+				false,
+			);
 		}
 		else {
 			if(this.#custom_accept) {
@@ -243,7 +223,7 @@ export default class ArgConditions {
 
 	getUI(val = {}) {
 		const base = document.createElement("div");
-		base.classList.add("hexp-gen-arguments");
+		base.classList.add("hexp-options-arguments");
 
 		const uiDataLinkage = new HexpUIDataLinkage.HasKeyedChildren("args", base);
 

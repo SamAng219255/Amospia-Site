@@ -46,7 +46,8 @@ export default class NumberProvider extends Serializable {
 
 	static getUI(id, value = {type: "constant", value: 0}) {
 		const objValue = value instanceof NumberProvider ? value.serialize() : value;
-		return new HexpUIDataLinkage.HasTypeSelector(id, document.createElement("div"), NumberProvider.OPERATIONS, objValue);
+		const element = document.createElement("div");
+		return new HexpUIDataLinkage.HasTypeSelector(id, element, NumberProvider.OPERATIONS, objValue);
 	}
 
 	static #OPERATIONS;

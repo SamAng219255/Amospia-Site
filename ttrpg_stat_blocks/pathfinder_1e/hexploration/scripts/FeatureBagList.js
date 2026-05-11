@@ -61,37 +61,16 @@ export default class FeatureBagList extends Serializable {
 	}
 
 	static getUI(id, bags = []) {
-		const uiDataLinkage = new HexpUIDataLinkage.HasChildArray(id, document.createElement("div"));
-
-		const entriesWrapper = document.createElement("div");
-
-		const makeBag = (bag = {}) => {
-			const container = new HexpUIDataLinkage.Wrapper(document.createElement("div"), FeatureBag.getUI(bag.id, bag));
-
-			const dltBtn = document.createElement("button");
-			dltBtn.innerText = "X";
-			dltBtn.ariaLabel = "Delete table.";
-			dltBtn.addEventListener("click", () => {
-				container.removeFromParent();
-				container.element.remove();
-			});
-			container.element.append(dltBtn);
-
-			container.append(container.child);
-
-			entriesWrapper.append(container.element);
-			uiDataLinkage.addChild(container);
-		};
-		bags.forEach(makeBag);
-
-		uiDataLinkage.element.append(entriesWrapper);
-
-		const addEntryBtn = document.createElement("button");
-		addEntryBtn.innerText = "+";
-		addEntryBtn.ariaLabel = "Add table to list.";
-		addEntryBtn.addEventListener("click", () => makeBag());
-		uiDataLinkage.element.append(addEntryBtn);
-
-		return uiDataLinkage;
+		return new HexpUIDataLinkage.IsList(
+			id,
+			bags,
+			(entry, ref) => FeatureBag.getUI(entry.id, entry, ref),
+			{
+				main: "Tables",
+				add: "+ Add Table",
+				addAria: "Add table to list.",
+				deleteAria: "Delete table from list.",
+			},
+		);
 	}
 }

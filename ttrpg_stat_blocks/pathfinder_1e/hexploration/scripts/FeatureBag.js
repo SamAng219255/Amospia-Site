@@ -117,13 +117,17 @@ export default class FeatureBag extends Serializable {
 			rolls = NumberProvider.ONE,
 			condition = FeatureQuery.TRUE,
 		} = {},
+		collapseParentRef = {},
 	) {
+		if(collapseParentRef && typeof collapseParentRef.setLabel == "function")
+			collapseParentRef.setLabel(name);
+
 		const idIsGenerated = HexpUIDataLinkage.genIdFromName(name) == id;
 
 		const uiDataLinkage = new HexpUIDataLinkage.HasKeyedChildren(id, document.createElement("div"));
 
 		const idWrapper = document.createElement("div");
-		idWrapper.classList.add("hexp-gen-id-wrapper");
+		idWrapper.classList.add("hexp-options-option");
 
 		const idLabel = document.createElement("label");
 		idLabel.innerText = "Id";
@@ -153,11 +157,16 @@ export default class FeatureBag extends Serializable {
 			uiDataLinkage.id = idField.getValue();
 		});
 
+		uiDataLinkage.appendAsChild(new HexpUIDataLinkage.CollapseWrapper({main: "Rolls"}, NumberProvider.getUI("rolls", rolls)));
+		uiDataLinkage.appendAsChild(new HexpUIDataLinkage.CollapseWrapper({main: "Condition"}, FeatureQuery.getUI("condition", condition)));
+
 		nameField.element.addEventListener("change", () => {
 			if(autoCheckbox.checked) {
 				idField.element.value = HexpUIDataLinkage.genIdFromName(nameField.getValue());
 				idField.element.dispatchEvent(new Event("change"));
 			}
+			if(collapseParentRef && typeof collapseParentRef.setLabel == "function")
+				collapseParentRef.setLabel(nameField.getValue());
 		});
 
 		autoCheckbox.addEventListener("change", () => {
@@ -165,40 +174,17 @@ export default class FeatureBag extends Serializable {
 			if(autoCheckbox.checked) nameField.element.dispatchEvent(new Event("change"));
 		});
 
-		const listUIDataLinkage = new HexpUIDataLinkage.HasChildArray("entries", document.createElement("div"));
-		const entriesWrapper = document.createElement("div");
-
-		const makeEntry = (id, val) => {
-			const container = new HexpUIDataLinkage.Wrapper(document.createElement("div"), Feature.getUI(id, val));
-
-			const dltBtn = document.createElement("button");
-			dltBtn.innerText = "X";
-			dltBtn.ariaLabel = "Delete feature.";
-			dltBtn.addEventListener("click", () => {
-				container.removeFromParent();
-				container.element.remove();
-			});
-			container.element.append(dltBtn);
-
-			container.append(container.child);
-
-			entriesWrapper.append(container.element);
-			listUIDataLinkage.addChild(container);
-		};
-		entries.forEach(entry => makeEntry(entry.id, entry));
-
-		listUIDataLinkage.element.append(entriesWrapper);
-
-		const addEntryBtn = document.createElement("button");
-		addEntryBtn.innerText = "+";
-		addEntryBtn.ariaLabel = "Add feature to table.";
-		addEntryBtn.addEventListener("click", () => makeEntry());
-		listUIDataLinkage.element.append(addEntryBtn);
-
-		uiDataLinkage.appendAsChild(new HexpUIDataLinkage.TitleWrapper(listUIDataLinkage, "Features"));
-
-		uiDataLinkage.appendAsChild(new HexpUIDataLinkage.TitleWrapper(NumberProvider.getUI("rolls", rolls), "Rolls"));
-		uiDataLinkage.appendAsChild(new HexpUIDataLinkage.TitleWrapper(FeatureQuery.getUI("condition", condition), "Condition"));
+		uiDataLinkage.appendAsChild(new HexpUIDataLinkage.IsList(
+			"entries",
+			entries,
+			(entry, ref) => Feature.getUI(entry.id, entry, ref),
+			{
+				main: "Features",
+				add: "+ Add Feature",
+				addAria: "Add feature to table.",
+				deleteAria: "Delete feature from table.",
+			},
+		));
 
 		return uiDataLinkage;
 	}

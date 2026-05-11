@@ -38,7 +38,8 @@ export default class FeatureQuery extends Serializable {
 
 	static getUI(id, value = {type: "true"}) {
 		const objValue = value instanceof FeatureQuery ? value.serialize() : value;
-		return new HexpUIDataLinkage.HasTypeSelector(id, document.createElement("div"), FeatureQuery.RULES, objValue);
+		const element = document.createElement("div");
+		return new HexpUIDataLinkage.HasTypeSelector(id, element, FeatureQuery.RULES, objValue);
 	}
 
 	static #RULES;
