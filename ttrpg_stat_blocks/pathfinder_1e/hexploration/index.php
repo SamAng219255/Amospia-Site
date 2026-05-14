@@ -12,9 +12,9 @@
 ?>
 <script type="module" src="scripts/hexploration.js"></script>
 <link rel="stylesheet" type="text/css" href="styles/hexp.css">
-<canvas></canvas>
-<p id="hex-output"></p>
+<!--<canvas></canvas>-->
 <button id="hex-generate">Generate</button>
+<p id="hex-output"></p>
 <div id="hexp-options">
 
 </div>

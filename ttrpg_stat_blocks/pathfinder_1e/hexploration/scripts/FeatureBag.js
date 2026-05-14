@@ -17,6 +17,7 @@ export default class FeatureBag extends Serializable {
 		this.entries = entries;
 		this.rolls = rolls;
 		this.condition = condition;
+		this.uniqueID = crypto.randomUUID();
 	}
 
 	get entries() {
@@ -60,30 +61,56 @@ export default class FeatureBag extends Serializable {
 	}
 
 	async execute(state = new FeaturesState()) {
-		if(!(await this.condition.execute(state))) return state;
+		try {
+			if(!(await this.condition.execute({state, featureWaiting: null, uniqueID: this.uniqueID}))) {
+				state.announce(this.uniqueID, FeaturesState.Status.COMPLETED);
+				return state;
+			}
 
-		const promises = [];
+			const pickedFeatures = [];
 
-		const allowedEntries = (await Promise.all(this.entries.map(async entry => [await entry.match(state), entry]))).filter(([allowed,]) => allowed).map(([,entry]) => entry);
-		const resolvedRolls = await this.rolls.execute(state);
-		const weights = await Promise.all(allowedEntries.map(entry => entry.weight.execute(state)));
-		for(let i=0; i<resolvedRolls; i++) {
-			const totalWeight = weights.reduce((sum, weight) => sum + weight, 0);
-			const randIndex = parseInt(Math.random() * totalWeight);
+			const [resolvedEntries, resolvedRolls] = await Promise.all([
+				await Promise.all(this.entries.map(async entry => [await entry.match({state, featureWaiting: entry.id, uniqueID: entry.uniqueID}), entry])),
+				await this.rolls.execute({state, featureWaiting: null, uniqueID: this.uniqueID}),
+			]);
+			const allowedEntries = resolvedEntries.filter(([allowed,]) => allowed).map(([,entry]) => entry);
+			const weights = await Promise.all(allowedEntries.map(entry => entry.weight.execute({state, featureWaiting: entry.id, uniqueID: entry.uniqueID})));
+			for(let i=0; i<resolvedRolls; i++) {
+				const totalWeight = weights.reduce((sum, weight) => sum + weight, 0);
+				const randIndex = parseInt(Math.random() * totalWeight);
 
-			let growingCeiling = 0;
-			for(let j = 0; j < allowedEntries.length; j++) {
-				growingCeiling += weights[j];
+				let growingCeiling = 0;
+				for(let j = 0; j < allowedEntries.length; j++) {
+					growingCeiling += weights[j];
 
-				if(randIndex < growingCeiling) {
-					promises.push(allowedEntries[j].execute(state));
-					allowedEntries.splice(j, 1);
-					weights.splice(j, 1);
-					break;
+					if(randIndex < growingCeiling) {
+						pickedFeatures.push(allowedEntries[j]);
+						allowedEntries.splice(j, 1);
+						weights.splice(j, 1);
+						break;
+					}
 				}
 			}
+			state.announce(this.uniqueID, FeaturesState.Status.EXECUTED);
+			if(pickedFeatures.length > 0) {
+				pickedFeatures.forEach(feature => state.announce(feature.uniqueID, FeaturesState.Status.EXECUTING));
+				await Promise.allSettled(pickedFeatures.map(feature => feature.execute(state)));
+			}
 		}
-		await Promise.all(promises);
+		catch(err) {
+			console.error(err);
+		}
+		finally {
+			state.announce(this.uniqueID, FeaturesState.Status.COMPLETED);
+			return state;
+		}
+	}
+
+	preload(state = new FeaturesState()) {
+		state.preloadSelf(this.uniqueID, "bag", this.id);
+		state.preloadContents(this.uniqueID, "features", this.entries.map(entry => entry.id));
+		state.preloadContents(this.uniqueID, "uniqueIDs", this.entries.map(entry => entry.uniqueID));
+		this.entries.forEach(bag => bag.preload(state));
 		return state;
 	}
 

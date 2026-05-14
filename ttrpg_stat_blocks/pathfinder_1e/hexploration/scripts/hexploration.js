@@ -3,7 +3,7 @@ import MainBagList from "./MainBagList.js";
 const generateBtn = document.getElementById("hex-generate");
 const output = document.getElementById("hex-output");
 
-const defaultFeatures = await (await fetch("default_features.json")).json();
+const defaultFeatures = await (await fetch("data/vardoneth_features.json")).json();
 //const defaultFeatures = JSON.parse(``);
 
 let uiLinkage = MainBagList.getUI(defaultFeatures);
@@ -25,7 +25,7 @@ const getStringBtn = document.getElementById("hexp-json-get");
 const loadStringBtn = document.getElementById("hexp-json-load");
 const stringBox = document.getElementById("hexp-json-textarea");
 
-getStringBtn.addEventListener("click", () => stringBox.value = JSON.stringify(uiLinkage.getValue()));
+getStringBtn.addEventListener("click", () => stringBox.value = JSON.stringify(uiLinkage.getValue(),null,2));
 loadStringBtn.addEventListener("click", () => {
 	try {
 		const tables = JSON.parse(stringBox.value);
@@ -33,7 +33,7 @@ loadStringBtn.addEventListener("click", () => {
 		uiLinkage.replaceWith(newUILinkage);
 		uiLinkage = newUILinkage;
 	}
-	catch {
-		
+	catch(err) {
+		console.error(`Error while handling import: ${err.message}`);
 	}
 });

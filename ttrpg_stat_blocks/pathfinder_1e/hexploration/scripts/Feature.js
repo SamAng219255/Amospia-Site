@@ -1,5 +1,6 @@
 import Serializable from "./Serializable.js";
 import FeatureBagList from "./FeatureBagList.js";
+import FeaturesState from "./FeaturesState.js";
 import FeatureQuery from "./FeatureQuery.js";
 import NumberProvider from "./NumberProvider.js";
 import HexpUIDataLinkage from "./HexpUIDataLinkage.js";
@@ -29,6 +30,7 @@ export default class Feature extends Serializable {
 		this.bag = bag;
 		this.weight = weight;
 		this.count = count;
+		this.uniqueID = crypto.randomUUID();
 	}
 
 	get condition() {
@@ -86,10 +88,25 @@ export default class Feature extends Serializable {
 	}
 
 	async execute(state = new FeaturesState()) {
-		await Promise.all([
-			state.resolve(this),
-			this.bags.execute(state),
-		]);
+		try {
+			state.announce(this.bags.uniqueID, FeaturesState.Status.EXECUTING);
+			this.bags.execute(state).catch(reason => console.error(reason));
+			await state.resolve(this);
+		}
+		catch(err) {
+			console.error(err);
+		}
+		finally {
+			state.announce(this.uniqueID, FeaturesState.Status.COMPLETED);
+			return state;
+		}
+	}
+
+	preload(state = new FeaturesState()) {
+		state.preloadSelf(this.uniqueID, "feature", this.id);
+		state.preloadContents(this.uniqueID, "tags", this.tags);
+		state.preloadSingleUID(this.uniqueID, this.bags.uniqueID);
+		this.bags.preload(state);
 		return state;
 	}
 

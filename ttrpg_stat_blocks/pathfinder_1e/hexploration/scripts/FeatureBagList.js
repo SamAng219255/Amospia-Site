@@ -9,6 +9,7 @@ export default class FeatureBagList extends Serializable {
 	constructor(bags = []) {
 		super();
 		this.bags = bags;
+		this.uniqueID = crypto.randomUUID();
 	}
 
 	get bags() {
@@ -47,17 +48,34 @@ export default class FeatureBagList extends Serializable {
 		return this;
 	}
 
+	async execute(state = new FeaturesState()) {
+		try {
+			this.bags.map(bag => state.announce(bag.uniqueID, FeaturesState.Status.EXECUTING));
+			if(this.bags.length > 0) await Promise.allSettled(this.bags.map(bag => bag.execute(state)));
+		}
+		catch(err) {
+			console.error(err);
+		}
+		finally {
+			state.announce(this.uniqueID, FeaturesState.Status.COMPLETED);
+			return state;
+		}
+	}
+
+	preload(state = new FeaturesState()) {
+		state.preloadSelf(this.uniqueID, "list", `[${this.bags.map(({id}) => id).join(", ")}]`);
+		state.preloadContents(this.uniqueID, "bags", this.bags.map(bag => bag.id));
+		state.preloadContents(this.uniqueID, "uniqueIDs", this.bags.map(bag => bag.uniqueID));
+		this.bags.forEach(bag => bag.preload(state));
+		return state;
+	}
+
 	serialize() {
 		return this.bags.map(bag => bag.serialize());
 	}
 
 	static deserialize(obj) {
 		return new FeatureBagList(obj);
-	}
-
-	async execute(state = new FeaturesState()) {
-		await Promise.all(this.bags.map(bag => bag.execute(state)));
-		return state;
 	}
 
 	static getUI(id, bags = []) {

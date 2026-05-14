@@ -4,8 +4,12 @@ import HexpUIDataLinkage from "./HexpUIDataLinkage.js";
 
 export default class MainBagList extends FeatureBagList {
 	async execute(state = new FeaturesState()) {
-		await super.execute(state);
-		await state.finish();
+		super.preload(state);
+		state.announce(this.uniqueID, FeaturesState.Status.EXECUTING);
+		super.execute(state).catch(reason => console.error(reason));
+		state.endTimeout(2);
+		await state.awaitEnd()
+		//console.log("Completed");
 		return state;
 	}
 

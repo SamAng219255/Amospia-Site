@@ -93,7 +93,13 @@ class ArgCondition {
 		return this;
 	}
 
-	add({can_accept = null, multi = null, def = null, label = null, optional = null} = {}) {
+	add({
+		can_accept = null,
+		multi = null, 
+		def = null, 
+		label = null, 
+		optional = null
+	} = {}) {
 		if(can_accept != null) this.can_accept = can_accept;
 		if(multi != null) this.multi = multi;
 		if(def != null) this.def = def;
@@ -131,14 +137,24 @@ class ArgCondition {
 
 			const argName = this.can_accept.size == 1
 				? ArgCondition.TYPES[[...this.can_accept][0]].label
-				: [...this.can_accept].every(type => type == "number" || type == "provider")
+				: typeof this.can_accept[Symbol.iterator] === "function" && [...this.can_accept].every(type => type == "number" || type == "provider")
 					? ArgCondition.TYPES["number"].label
 					: "Argument";
 
 			return new HexpUIDataLinkage.IsList(
 				this.id,
 				entries,
-				(entry, ref) => new HexpUIDataLinkage.HasPrimitiveSelector(this.id, this.can_accept, ArgCondition.TYPES, entry),
+				(entry, ref) => {
+					if(this.#custom_accept) {
+						const uiDataLinkage = new HexpUIDataLinkage.HasKeyedChildren(this.id, document.createElement("div"));
+						for(const [key, arg] of Object.entries(this.can_accept)) {
+							uiDataLinkage.appendAsChild(new HexpUIDataLinkage.HasLabeledPrimitiveSelector(key, HexpUIDataLinkage.genNameFromId(key), arg, ArgCondition.TYPES, entry?.[key]));
+						}
+						return uiDataLinkage
+					}
+					else
+						return new HexpUIDataLinkage.HasPrimitiveSelector(this.id, this.can_accept, ArgCondition.TYPES, entry);
+				},
 				{
 					main: `${argName}s`,
 					add: `+ Add ${argName}`,
@@ -152,7 +168,7 @@ class ArgCondition {
 			if(this.#custom_accept) {
 				const uiDataLinkage = new HexpUIDataLinkage.HasKeyedChildren(this.id, document.createElement("div"));
 				for(const [key, arg] of Object.entries(this.can_accept)) {
-					uiDataLinkage.appendAsChild(new HexpUIDataLinkage.HasLabeledPrimitiveSelector(key, HexpUIDataLinkage.genNameFromId(key), arg, ArgCondition.TYPES, val[key]));
+					uiDataLinkage.appendAsChild(new HexpUIDataLinkage.HasLabeledPrimitiveSelector(key, HexpUIDataLinkage.genNameFromId(key), arg, ArgCondition.TYPES, val?.[key]));
 				}
 				return uiDataLinkage
 			}
