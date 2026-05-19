@@ -60,17 +60,17 @@
 		<tr><td><a href="races/drogbar.php">Drogbar</a></td><td>8</td><td>+2</td><td>—</td><td>—</td><td>—</td><td>+2</td><td>-2</td><td>—</td><td>—</td><td>Humanoid</td><td>drogbar</td></tr>
 		<tr><td><a href="races/sylvar.php">Sylvar</a></td><td>10</td><td>+2</td><td>—</td><td>-2</td><td>—</td><td>+2</td><td>—</td><td>—</td><td>—</td><td>Fey</td><td>night fae</td></tr>
 		<tr><td><a href="races/fungarian.php">Fungarian</a></td><td>10</td><td>+2</td><td>—</td><td>—</td><td>-2</td><td>+2</td><td>—</td><td>—</td><td>—</td><td>Monstrous Humanoid</td><td>fungal</td></tr>
-		<tr><td><a href="races/podling.php">Podling</a></td><td>10</td><td>+2</td><td>—</td><td>—</td><td>-4</td><td>—</td><td>+2</td><td>—</td><td>—</td><td>Plant</td><td></td></tr>
+		<tr><td><a href="races/podling.php">Podling</a></td><td>10</td><td>+2</td><td>—</td><td>—</td><td>-4</td><td>—</td><td>+2</td><td>—</td><td>—</td><td>Plant</td><td>primal</td></tr>
 		<tr><td><a href="races/sporeling.php">Sporeling</a></td><td>12</td><td>-2</td><td>—</td><td>+2</td><td>—</td><td>+2</td><td>—</td><td>—</td><td>—</td><td>Plant</td><td></td></tr>
 		<tr><td><a href="races/grell.php">Grell</a></td><td>8</td><td>-2</td><td>+4</td><td>—</td><td>-2</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Fey</td><td></td></tr>
 		<tr><td><a href="races/satyr.php">Satyr</a></td><td>12</td><td>+2</td><td>—</td><td>—</td><td>—</td><td>-2</td><td>+2</td><td>—</td><td>—</td><td>Monstrous Humanoid</td><td>elf</td></tr>
 		<tr><td><a href="races/mok_nathal.php">Mok'nathal</a></td><td>11</td><td>+4</td><td>-2</td><td>—</td><td>-2</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Humanoid</td><td>ogre, orc</td></tr>
 		<tr><td><a href="races/half_orc.php">Oshu'nei</a></td><td>11</td><td>+2</td><td>—</td><td>+2</td><td>-2</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Humanoid</td><td>draenei, orc</td></tr>
 		<tr><td><a href="races/half_elf.php">Half-Elf</a></td><td>9</td><td>-2</td><td>+2</td><td>—</td><td>+2</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Humanoid</td><td>elf, human</td></tr>
-		<tr><td><a href="races/botani.php">Botani</a></td><td>12</td><td>—</td><td>+2</td><td>-2</td><td>+2</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Plant</td><td></td></tr>
+		<tr><td><a href="races/botani.php">Botani</a></td><td>12</td><td>—</td><td>+2</td><td>-2</td><td>+2</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Plant</td><td>primal</td></tr>
 		<tr><td><a href="races/quilboar.php">Quilboar</a></td><td>10</td><td>+2</td><td>—</td><td>+2</td><td>—</td><td>—</td><td>-2</td><td>—</td><td>—</td><td>Monstrous Humanoid</td><td>quilboar</td></tr>
 		<tr><td><a href="races/gnoll.php">Gnoll</a></td><td>6</td><td>+2</td><td>—</td><td>+2</td><td>-4</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Monstrous Humanoid</td><td>gnoll</td></tr>
-		<tr><td><a href="races/ethereal.php">Ethereal</a></td><td>23</td><td>—</td><td>+2</td><td>-4</td><td>+4</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Outsider</td><td>native</td></tr>
+		<tr><td><a href="races/ethereal.php">Ethereal</a></td><td>23</td><td>—</td><td>+2</td><td>-4</td><td>+4</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Outsider</td><td>k'areshi, native</td></tr>
 		<tr><td><a href="races/makrura.php">Makrura</a></td><td>11</td><td>+2</td><td>—</td><td>—</td><td>-4</td><td>+2</td><td>—</td><td>—</td><td>—</td><td>Monstrous Humanoid</td><td>aquatic, amphibious, makrura</td></tr>
 		<tr><td><a href="races/saberon.php">Saberon</a></td><td>14</td><td>+4</td><td>—</td><td>—</td><td>-2</td><td>+2</td><td>—</td><td>—</td><td>—</td><td>Monstrous Humanoid</td><td>saberon</td></tr>
 		<tr><td><a href="races/virmen.php">Virmen</a></td><td>8</td><td>—</td><td>+2</td><td>—</td><td>-4</td><td>+2</td><td>—</td><td>—</td><td>—</td><td>Monstrous Humanoid</td><td>virmen</td></tr>
@@ -91,6 +91,15 @@
 		<tr><td><a href="races/djaradin.php">Djaradin</a></td><td>22</td><td>+2</td><td>—</td><td>—</td><td>-4</td><td>+2</td><td>—</td><td>+2</td><td>-2</td><td>Humanoid</td><td>djaradin, fire, giant</td></tr>
 		<tr><td><a href="races/darkfallen.php">Darkfallen</a></td><td>11</td><td>—</td><td>+2</td><td>-2</td><td>—</td><td>—</td><td>+2</td><td>—</td><td>—</td><td>Humanoid</td><td>elf</td></tr>
 		<tr><td><a href="races/hobgoblin.php">Hobgoblin</a></td><td>8</td><td>+4</td><td>-2</td><td>+2</td><td>-4</td><td>-2</td><td>-2</td><td>—</td><td>—</td><td>Humanoid</td><td>goblin</td></tr>
+		<tr><td><a href="races/domanaar.php">Domanaar</a></td><td>22</td><td>—</td><td>+2</td><td>—</td><td>+2</td><td>—</td><td>-2</td><td>+2</td><td>-2</td><td>Aberration</td><td>void</td></tr>
+		<tr><td><a href="races/cenarian.php">Child of Cenarius</a></td><td>18</td><td>—</td><td>+2</td><td>—</td><td>—</td><td>+2</td><td>—</td><td>—</td><td>—</td><td>Monstrous Humanoid</td><td>elf</td></tr>
+		<tr><td><a href="races/ruutani.php">Ruutani</a></td><td>15</td><td>+2</td><td>—</td><td>—</td><td>-2</td><td>+2</td><td>—</td><td>—</td><td>—</td><td>Plant</td><td></td></tr>
+		<tr><td><a href="races/stoneborn.php">Stoneborn</a></td><td>16</td><td>+2</td><td>—</td><td>+2</td><td>-2</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Monstrous Humanoid</td><td>sinborn, stoneborn</td></tr>
+		<tr><td><a href="races/venthyr.php">Venthyr</a></td><td>15</td><td>—</td><td>+2</td><td>-2</td><td>—</td><td>—</td><td>+2</td><td>—</td><td>—</td><td>Outsider</td><td>native, sinborn</td></tr>
+		<tr><td><a href="races/dredger.php">Dredger</a></td><td>9</td><td>+4</td><td>-4</td><td>—</td><td>-2</td><td>-2</td><td>-2</td><td>—</td><td>—</td><td>Monstrous Humanoid</td><td>sinborn</td></tr>
+		<tr><td><a href="races/wyrmtongue.php">Wyrmtongue</a></td><td>9</td><td>+2</td><td>—</td><td>—</td><td>+2</td><td>—</td><td>-2</td><td>—</td><td>—</td><td>Outsider</td><td>demon, native</td></tr>
+		<tr><td><a href="races/steward.php">Steward</a></td><td>10</td><td>+2</td><td>—</td><td>—</td><td>+2</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Monstrous Humanoid</td><td></td></tr>
+		<tr><td><a href="races/haranir.php">Haranir</a></td><td>14</td><td>+2</td><td>—</td><td>—</td><td>—</td><td>+2</td><td>-2</td><td>—</td><td>—</td><td>Humanoid</td><td>elf, haranir, troll</td></tr>
 	</tbody>
 </table></div>
 <?php require $startDir.'pageEnd.php'; ?>

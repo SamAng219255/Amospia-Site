@@ -9770,6 +9770,114 @@
 			],
 			"status": "done"
 		},
+		"domanaar_wc": {
+			"display_name": "Domanaar",
+			"file_name": "domanaar.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"cenarian_wc": {
+			"display_name": "Child of Cenarius",
+			"file_name": "cenarian.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"ruutani_wc": {
+			"display_name": "Ruutani",
+			"file_name": "ruutani.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"stoneborn_wc": {
+			"display_name": "Stoneborn",
+			"file_name": "stoneborn.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"venthyr_wc": {
+			"display_name": "Venthyr",
+			"file_name": "venthyr.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"dredger_wc": {
+			"display_name": "Dredger",
+			"file_name": "dredger.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"wyrmtongue_wc": {
+			"display_name": "Wyrmtongue",
+			"file_name": "wyrmtongue.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"steward_wc": {
+			"display_name": "Steward",
+			"file_name": "steward.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
+		"haranir_wc": {
+			"display_name": "Haranir",
+			"file_name": "haranir.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
 		"evoker_wc": {
 			"display_name": "Draconic Evoker",
 			"file_name": "evoker.php",

@@ -35,7 +35,7 @@
 			'bb/Low-Light Vision/bb: Fungarians can see twice as far in conditions of dim light.',
 			'bb/Spore Burst/bb: Fungarians can cast ii/spore burst/ii as a spell-like ability once per day using their total number of hit dice in place of their caster level.',
 			'bb/Survivalists/bb: Fungarians gain a +2 racial bonus on Survival checks.',
-			'bb/Languages/bb: Fungarians begin play speaking Fungarian. Fungarians with high Intelligence scores can choose from Common, Nerubian, Orcish, and Zandali. (Fungrets, native to Maldraxxus replace Nerubian with Shadowspeak.)'
+			'bb/Languages/bb: Fungarians begin play speaking Fungarian. Fungarians with high Intelligence scores can choose from Common, Nerubian, Orcish, and Zandali. (Fungarians from Harandar replace Nerubian with Haranir. Fungrets, native to Maldraxxus, replace Nerubian with Shadowspeak.)'
 		],
 		false
 	);

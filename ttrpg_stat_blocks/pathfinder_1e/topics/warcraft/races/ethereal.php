@@ -27,7 +27,7 @@
 		],
 		'',
 		[
-			'bb/Native Outsider/bb: Ethereals are outsiders with the native subtype.',
+			'bb/Native Outsider/bb: Ethereals are outsiders with the k\'areshi and native subtypes.',
 			'bb/Medium/bb: Ethereals are Medium creatures and have no bonuses or penalties due to their size.',
 			'bb/Normal Speed/bb: Ethereals have a base speed of 30 feet.',
 			'bb/Darkvision/bb: Ethereals can see perfectly in darkness up to 60 feet away though they can only see in black and white in the dark.',

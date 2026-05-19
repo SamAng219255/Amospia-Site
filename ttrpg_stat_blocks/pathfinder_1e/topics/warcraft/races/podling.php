@@ -27,7 +27,7 @@
 		],
 		'',
 		[
-			'bb/Plant/bb: Podlings are plant creatures. Plants are immune to all mind-affecting effects (charms, compulsions, morale effects, patterns, and phantasms), paralysis, poison, polymorph, sleep effects, and stunning. Plants breathe and eat, but do not sleep, unless they want to gain some beneficial effect from this activity. This means that a plant creature can sleep in order to regain spells, but sleep is not required to survive or stay in good health.',
+			'bb/Plant/bb: Podlings are plant creatures with the primal subtype. Plants are immune to all mind-affecting effects (charms, compulsions, morale effects, patterns, and phantasms), paralysis, poison, polymorph, sleep effects, and stunning. Plants breathe and eat, but do not sleep, unless they want to gain some beneficial effect from this activity. This means that a plant creature can sleep in order to regain spells, but sleep is not required to survive or stay in good health.',
 			'bb/Small/bb: Podlings are Small creatures and gain a +1 size bonus to their AC, a +1 size bonus on attack rolls, a –1 penalty on combat maneuver checks and to their Combat Maneuver Defense, and a +4 size bonus on Stealth checks.',
 			'bb/Normal Speed/bb: Podlings have a base speed of 30 feet.',
 			'bb/Low-Light Vision/bb: Podlings can see twice as far in conditions of dim light.',

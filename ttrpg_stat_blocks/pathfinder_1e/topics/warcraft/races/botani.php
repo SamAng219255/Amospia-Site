@@ -27,7 +27,7 @@
 		],
 		'',
 		[
-			'bb/Plant/bb: Botani are plant creatures. Plants are immune to all mind-affecting effects (charms, compulsions, morale effects, patterns, and phantasms), paralysis, poison, polymorph, sleep effects, and stunning. Plants breathe and eat, but do not sleep, unless they want to gain some beneficial effect from this activity. This means that a plant creature can sleep in order to regain spells, but sleep is not required to survive or stay in good health.',
+			'bb/Plant/bb: Botani are plant creatures with the primal subtype. Plants are immune to all mind-affecting effects (charms, compulsions, morale effects, patterns, and phantasms), paralysis, poison, polymorph, sleep effects, and stunning. Plants breathe and eat, but do not sleep, unless they want to gain some beneficial effect from this activity. This means that a plant creature can sleep in order to regain spells, but sleep is not required to survive or stay in good health.',
 			'bb/Medium/bb: Botani are Medium creatures and have no bonuses or penalties due to their size.',
 			'bb/Normal Speed/bb: Botani have a base speed of 30 feet.',
 			'bb/Low-Light Vision/bb: Botani can see twice as far in conditions of dim light.',
