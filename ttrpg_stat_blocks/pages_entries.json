@@ -9878,6 +9878,18 @@
 			],
 			"status": "done"
 		},
+		"attendant_wc": {
+			"display_name": "Attendant",
+			"file_name": "attendant.php",
+			"directory": "pathfinder_1e/topics/warcraft/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"topics",
+				"warcraft",
+				"races_wc"
+			],
+			"status": "done"
+		},
 		"evoker_wc": {
 			"display_name": "Draconic Evoker",
 			"file_name": "evoker.php",

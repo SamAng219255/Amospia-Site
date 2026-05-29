@@ -64,7 +64,7 @@
 		[
 			'name' => 'Void Shaping',
 			'desc' => '',
-			'prereq' => 'domanaar, CL 5th, 15 Intelligence',
+			'prereq' => 'CL 5th, 15 Intelligence',
 			'benefit' => 'You gain the ability to focus the void\'s energies to form various items. When crafting any item, you can replace its materials with ritual reagents worth an equal amount to forge it from concentrated void. Items made from concentrated void appear to be made from a combination of dark stone, glowing blue or purple crystal, or dull yellowish or gray metal. Weapons made this way grant a +1 circumstance bonus on attack rolls against creatures with light or good subtypes and armor made like this deals 1 point of negative energy damage to such creatures whenever they make a melee attack against the wearer.
 			When using any item creation feat, you may infuse the item with the void to enhance its properties. The item\'s aura changes to Necromancy. A void-infused item has its caster level automatically increased by 1 without increasing the cost or difficulty to craft, to a maximum caster level of 1 higher than your own caster level. This confers any bonuses or improvements resulting from a higher caster level as normal. If the item has an ability which allows a saving throw, you may use your Intelligence to determine the crafted item\'s DC if it is better (most items use the minimum ability score to cast a relevant spell to determine the DC with). Void-infused weapons automatically gain the vicious property without increasing the item\'s cost or crafting time or counting against the item\'s maximum effective enhancement bonus. This property also applies to void-infused ranged weapons.',
 			'special' => false

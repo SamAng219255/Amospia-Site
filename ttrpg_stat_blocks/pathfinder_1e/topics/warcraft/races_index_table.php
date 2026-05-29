@@ -100,6 +100,7 @@
 		<tr><td><a href="races/wyrmtongue.php">Wyrmtongue</a></td><td>9</td><td>+2</td><td>—</td><td>—</td><td>+2</td><td>—</td><td>-2</td><td>—</td><td>—</td><td>Outsider</td><td>demon, native</td></tr>
 		<tr><td><a href="races/steward.php">Steward</a></td><td>10</td><td>+2</td><td>—</td><td>—</td><td>+2</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Monstrous Humanoid</td><td></td></tr>
 		<tr><td><a href="races/haranir.php">Haranir</a></td><td>14</td><td>+2</td><td>—</td><td>—</td><td>—</td><td>+2</td><td>-2</td><td>—</td><td>—</td><td>Humanoid</td><td>elf, haranir, troll</td></tr>
+		<tr><td><a href="races/attendant.php">Attendant</a></td><td>11</td><td>—</td><td>—</td><td>—</td><td>+2</td><td>+2</td><td>—</td><td>—</td><td>—</td><td>Outsider</td><td>native</td></tr>
 	</tbody>
 </table></div>
 <?php require $startDir.'pageEnd.php'; ?>

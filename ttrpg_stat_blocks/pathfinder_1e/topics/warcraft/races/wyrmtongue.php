@@ -27,7 +27,7 @@
 		],
 		'',
 		[
-			'bb/Native Outsider/bb: Wyrmtongues are outsiderss with the demon and native subtypes. Wyrmtongues do not automatically gain the traits of the demon subtype.',
+			'bb/Native Outsider/bb: Wyrmtongues are outsiders with the demon and native subtypes. Wyrmtongues do not automatically gain the traits of the demon subtype.',
 			'bb/Medium/bb: Wyrmtongues are Medium creatures and have no bonuses or penalties due to their size.',
 			'bb/Slow/bb: Wyrmtongues have a base speed of 20 feet, but their speed is never modified by armor or encumbrance.',
 			'bb/Darkvision/bb: Wyrmtongues can see perfectly in darkness up to 60 feet away though they can only see in black and white in the dark.',
