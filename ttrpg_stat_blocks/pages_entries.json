@@ -10896,6 +10896,17 @@
 				"pathfinder_1e"
 			],
 			"status": "wip"
+		},
+		"autolog": {
+			"display_name": "Autolog (Working Name)",
+			"file_name": "autolog.php",
+			"directory": "pathfinder_1e/races/",
+			"sort_path": [
+				"pathfinder_1e",
+				"races"
+			],
+			"status": "wip",
+			"note": "Name not decided. Still doing final checks regarding mechanics."
 		}
 	}
 }
