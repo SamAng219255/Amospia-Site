@@ -1183,12 +1183,6 @@
 							]
 						}
 					]
-				},
-				{
-					"name": "hexploration",
-					"display_name": "Hex Exploration",
-					"type": "leaf",
-					"childless": true
 				}
 			]
 		},

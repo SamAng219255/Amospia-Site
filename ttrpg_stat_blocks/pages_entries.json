@@ -10888,15 +10888,6 @@
 			],
 			"status": "done"
 		},
-		"hexploration": {
-			"display_name": "Hex Exploration",
-			"file_name": "index.php",
-			"directory": "pathfinder_1e/hexploration/",
-			"sort_path": [
-				"pathfinder_1e"
-			],
-			"status": "wip"
-		},
 		"autolog": {
 			"display_name": "Autolog (Working Name)",
 			"file_name": "autolog.php",
